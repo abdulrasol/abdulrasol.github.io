@@ -24,7 +24,7 @@ body {
     position: relative;
     width: 85%;
     height: 480px;
-    margin: 10px auto;
+    margin: 25px auto;
     transform-style: preserve-3d;
     transition: all .65s ease-in-out;
     border: 2px solid #b74545;
