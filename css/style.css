@@ -222,7 +222,7 @@ footer span:last-child {
 }
 
 
-/* PC and large */
+/* pc and larger */
 
 @media(min-width:769px) {
     .card {
