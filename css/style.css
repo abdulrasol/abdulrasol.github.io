@@ -20,122 +20,108 @@ body {
 
 /* Mobile */
 
-.card {
-    position: relative;
-    width: 85%;
-    height: 480px;
-    margin: 25px auto;
-    transform-style: preserve-3d;
-    transition: all .65s ease-in-out;
-    border: 2px solid #b74545;
-    border-radius: 12px;
-    background-color: #f3efef
-}
-
-.card:hover {
-    transform: rotateY(180deg);
-}
-
-.card>div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    font-family: 'Comfortaa', cursive;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 12px;
-    color: #303030;
-}
-
-.card .front {
-    z-index: 2;
-    backface-visibility: hidden;
-}
-
-.front header {
-    display: block;
-    width: 100%;
-    height: 150px;
-    background-color: #b74545;
-    border-bottom: 3px solid;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
-
-.front header img {
-    width: 180px;
-    margin-top: 20px;
-    border-radius: 50%;
-    border: 3px solid #303030;
-    background-color: #e18e8a;
-}
-
-.front h3 {
-    margin-top: 65px;
-    font-size: 25px;
-    font-family: 'Palanquin', sans-serif;
-    font-weight: bolder;
-    color: #303030;
-}
-
-.front p {
-    text-align: left;
-    margin: 10px;
-    line-height: 25px;
-    font-weight: bold;
-    color: #303030;
-}
-
-.front footer {
-    margin: 20px 10px;
-    bottom: 10px;
-}
-
-footer span:last-child {
-    display: none;
-}
-
-
-/* back div */
-
-.back {
-    position: absolute;
-    z-index: 1;
-    transform: rotateY(180deg);
-    padding: 10px;
-}
-
-.card .back ul {
-    list-style: none;
-    margin: 10px 0;
-}
-
-.card .back li {
-    margin: 20px 0;
-}
-
-.card .back a {
-    font-size: 30px;
-    text-decoration: none;
-    color: #303030;
-}
-
-.card .back i {
-    display: block;
-    margin: 2px 10px;
-    font-size: 40px;
+@media (max-width: 576px) {
+    .card {
+        position: relative;
+        width: 85%;
+        height: 480px;
+        margin: 25px auto;
+        transform-style: preserve-3d;
+        transition: all .65s ease-in-out;
+        border: 2px solid #b74545;
+        border-radius: 12px;
+        background-color: #f3efef
+    }
+    .card:hover {
+        transform: rotateY(180deg);
+    }
+    .card>div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-family: 'Comfortaa', cursive;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 12px;
+        color: #303030;
+    }
+    .card .front {
+        z-index: 2;
+        backface-visibility: hidden;
+    }
+    .front header {
+        display: block;
+        width: 100%;
+        height: 150px;
+        background-color: #b74545;
+        border-bottom: 3px solid;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .front header img {
+        width: 180px;
+        margin-top: 20px;
+        border-radius: 50%;
+        border: 3px solid #303030;
+        background-color: #e18e8a;
+    }
+    .front h3 {
+        margin-top: 65px;
+        font-size: 25px;
+        font-family: 'Palanquin', sans-serif;
+        font-weight: bolder;
+        color: #303030;
+    }
+    .front p {
+        text-align: left;
+        margin: 10px;
+        line-height: 25px;
+        font-weight: bold;
+        color: #303030;
+    }
+    .front footer {
+        margin: 20px 10px;
+        bottom: 10px;
+    }
+    footer span:last-child {
+        display: none;
+    }
+    /* back div */
+    .back {
+        position: absolute;
+        z-index: 1;
+        transform: rotateY(180deg);
+        padding: 10px;
+    }
+    .card .back ul {
+        list-style: none;
+        margin: 10px 0;
+    }
+    .card .back li {
+        margin: 20px 0;
+    }
+    .card .back a {
+        font-size: 30px;
+        text-decoration: none;
+        color: #303030;
+    }
+    .card .back i {
+        display: block;
+        margin: 2px 10px;
+        font-size: 40px;
+    }
 }
 
 
 /* Tablet and medum devices */
 
-@media(min-width:591px) and (max-width:768px) {
+@media(min-width:577px) and (max-width:768px) {
     .card {
         position: relative;
         width: 65%;
         height: 480px;
-        margin: 10px auto;
+        margin: 20px auto;
         transform-style: preserve-3d;
         transition: all .65s ease-in-out;
         border: 3px solid #b74545;
@@ -232,7 +218,7 @@ footer span:last-child {
         position: relative;
         width: 400px;
         height: 500px;
-        margin: 10px auto;
+        margin: 20px auto;
         transform-style: preserve-3d;
         transition: all .65s ease-in-out;
         border: 3px solid #b74545;
