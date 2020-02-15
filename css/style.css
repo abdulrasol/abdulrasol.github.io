@@ -1,3 +1,9 @@
+/*
+
+
+
+*/
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -9,17 +15,17 @@ body {
 }
 
 
-/* For mobile phones: */
+/* Extra small devices (phones, 600px and down) */
 
 .card {
     position: relative;
     width: 85%;
     height: 480px;
-    margin: 25px auto;
+    margin: 10px auto;
     transform-style: preserve-3d;
     transition: all .65s ease-in-out;
     border: 2px solid #b74545;
-    border-radius: 12px;
+    border-radius: 14px;
     background-color: #f3efef
 }
 
@@ -34,8 +40,7 @@ body {
     width: 100%;
     font-family: 'Comfortaa', cursive;
     text-align: center;
-    font-size: 16px;
-    border-radius: 12px;
+    border-radius: 11px;
     color: #303030;
 }
 
@@ -47,48 +52,52 @@ body {
 .front header {
     display: block;
     width: 100%;
-    height: 150px;
+    height: 130px;
     background-color: #b74545;
-    border-bottom: 3px solid;
+    border-bottom: 2px solid;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
 
 .front header img {
-    width: 180px;
-    margin-top: 20px;
+    width: 150px;
+    margin-top: 18px;
     border-radius: 50%;
-    border: 3px solid #303030;
+    border: 2px solid #303030;
     background-color: #e18e8a;
 }
 
 .front h3 {
-    margin-top: 65px;
+    margin-top: 35px;
     font-size: 25px;
     font-family: 'Palanquin', sans-serif;
-    font-weight: bolder;
+    font-weight: bold;
     color: #303030;
 }
 
 .front p {
     text-align: left;
-    margin: 10px;
+    margin: 10px 7px;
+    ;
     line-height: 25px;
     font-weight: bold;
+    font-size: 16px;
     color: #303030;
 }
 
 .front footer {
-    margin: 20px 10px;
+    margin: 60px 10px 20px 10px;
     bottom: 10px;
+    font-weight: 600;
+    line-height: 25px;
 }
 
 footer span:first-child {
-    display: none;
+    display: blocl;
 }
 
 footer span:last-child {
-    display: block;
+    display: none;
 }
 
 
@@ -123,14 +132,14 @@ footer span:last-child {
 }
 
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 571px) {
     .card {
         position: relative;
-        width: 65%;
+        width: 430px;
         height: 480px;
-        margin: 20px auto;
+        margin: 10px auto;
         transform-style: preserve-3d;
         transition: all .65s ease-in-out;
         border: 3px solid #b74545;
@@ -157,14 +166,14 @@ footer span:last-child {
     .front header {
         display: block;
         width: 100%;
-        height: 180px;
+        height: 150px;
         background-color: #b74545;
         border-bottom: 3px solid;
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
     }
     .front header img {
-        width: 200px;
+        width: 180px;
         margin-top: 25px;
         border-radius: 50%;
         border: 3px solid #303030;
@@ -193,6 +202,9 @@ footer span:last-child {
     footer span:first-child {
         display: none;
     }
+    footer span:last-child {
+        display: block;
+    }
     /* back div */
     .back {
         position: absolute;
@@ -220,14 +232,14 @@ footer span:last-child {
 }
 
 
-/* pc and larger */
+/* Medium devices (landscape tablets, 768px and up) */
 
-@media(min-width:769px) {
+@media only screen and (min-width: 768px) {
     .card {
         position: relative;
-        width: 400px;
-        height: 500px;
-        margin: 20px auto;
+        width: 430px;
+        height: 480px;
+        margin: 10px auto;
         transform-style: preserve-3d;
         transition: all .65s ease-in-out;
         border: 3px solid #b74545;
@@ -254,14 +266,14 @@ footer span:last-child {
     .front header {
         display: block;
         width: 100%;
-        height: 180px;
+        height: 150px;
         background-color: #b74545;
         border-bottom: 3px solid;
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
     }
     .front header img {
-        width: 200px;
+        width: 180px;
         margin-top: 25px;
         border-radius: 50%;
         border: 3px solid #303030;
@@ -271,7 +283,7 @@ footer span:last-child {
         margin-top: 65px;
         font-size: 30px;
         font-family: 'Palanquin', sans-serif;
-        font-weight: bold;
+        font-weight: bolder;
         color: #303030;
     }
     .front p {
@@ -279,7 +291,7 @@ footer span:last-child {
         margin: 10px;
         line-height: 25px;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 18px;
         color: #303030;
     }
     .front footer {
@@ -289,6 +301,209 @@ footer span:last-child {
     }
     footer span:first-child {
         display: none;
+    }
+    footer span:last-child {
+        display: block;
+    }
+    /* back div */
+    .back {
+        position: absolute;
+        z-index: 1;
+        transform: rotateY(180deg);
+        padding: 10px;
+    }
+    .card .back ul {
+        list-style: none;
+        margin: 10px 0;
+    }
+    .card .back li {
+        margin: 20px 0;
+    }
+    .card .back a {
+        font-size: 30px;
+        text-decoration: none;
+        color: #303030;
+    }
+    .card .back i {
+        display: block;
+        margin: 2px 10px;
+        font-size: 40px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .card {
+        position: relative;
+        width: 430px;
+        height: 480px;
+        margin: 10px auto;
+        transform-style: preserve-3d;
+        transition: all .65s ease-in-out;
+        border: 3px solid #b74545;
+        border-radius: 14px;
+        background-color: #f3efef
+    }
+    .card:hover {
+        transform: rotateY(180deg);
+    }
+    .card>div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-family: 'Comfortaa', cursive;
+        text-align: center;
+        border-radius: 12px;
+        color: #303030;
+    }
+    .card .front {
+        z-index: 2;
+        backface-visibility: hidden;
+    }
+    .front header {
+        display: block;
+        width: 100%;
+        height: 150px;
+        background-color: #b74545;
+        border-bottom: 3px solid;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .front header img {
+        width: 180px;
+        margin-top: 25px;
+        border-radius: 50%;
+        border: 3px solid #303030;
+        background-color: #e18e8a;
+    }
+    .front h3 {
+        margin-top: 65px;
+        font-size: 30px;
+        font-family: 'Palanquin', sans-serif;
+        font-weight: bolder;
+        color: #303030;
+    }
+    .front p {
+        text-align: left;
+        margin: 10px;
+        line-height: 25px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #303030;
+    }
+    .front footer {
+        margin: 20px 10px;
+        bottom: 10px;
+        font-weight: 600;
+    }
+    footer span:first-child {
+        display: none;
+    }
+    footer span:last-child {
+        display: block;
+    }
+    /* back div */
+    .back {
+        position: absolute;
+        z-index: 1;
+        transform: rotateY(180deg);
+        padding: 10px;
+    }
+    .card .back ul {
+        list-style: none;
+        margin: 10px 0;
+    }
+    .card .back li {
+        margin: 20px 0;
+    }
+    .card .back a {
+        font-size: 30px;
+        text-decoration: none;
+        color: #303030;
+    }
+    .card .back i {
+        display: block;
+        margin: 2px 10px;
+        font-size: 40px;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    .card {
+        position: relative;
+        width: 430px;
+        height: 480px;
+        margin: 10px auto;
+        transform-style: preserve-3d;
+        transition: all .65s ease-in-out;
+        border: 3px solid #b74545;
+        border-radius: 14px;
+        background-color: #f3efef
+    }
+    .card:hover {
+        transform: rotateY(180deg);
+    }
+    .card>div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-family: 'Comfortaa', cursive;
+        text-align: center;
+        border-radius: 12px;
+        color: #303030;
+    }
+    .card .front {
+        z-index: 2;
+        backface-visibility: hidden;
+    }
+    .front header {
+        display: block;
+        width: 100%;
+        height: 150px;
+        background-color: #b74545;
+        border-bottom: 3px solid;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .front header img {
+        width: 180px;
+        margin-top: 25px;
+        border-radius: 50%;
+        border: 3px solid #303030;
+        background-color: #e18e8a;
+    }
+    .front h3 {
+        margin-top: 65px;
+        font-size: 30px;
+        font-family: 'Palanquin', sans-serif;
+        font-weight: bolder;
+        color: #303030;
+    }
+    .front p {
+        text-align: left;
+        margin: 10px;
+        line-height: 25px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #303030;
+    }
+    .front footer {
+        margin: 20px 10px;
+        bottom: 10px;
+        font-weight: 600;
+    }
+    footer span:first-child {
+        display: none;
+    }
+    footer span:last-child {
+        display: block;
     }
     /* back div */
     .back {
