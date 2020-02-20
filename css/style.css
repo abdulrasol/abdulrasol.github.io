@@ -835,7 +835,11 @@ body {
     /* End Experncee*/
 
     /* Footer */
-    footer {color: #f3efef;margin: 50px;padding-top: 30px}
+    footer {
+        color: #f3efef;
+        margin: 50px;
+        padding-top: 30px
+    }
     footer ul li {
         display: inline-block;
         width: 40px;
