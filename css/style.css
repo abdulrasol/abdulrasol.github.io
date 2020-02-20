@@ -283,6 +283,15 @@ footer h5 {
 
 /* End Footer */
 
+@media only screen and (max-width: 600px) {
+    .cards .card p {
+        font-size: 1.4em;
+        line-height: 1.4;
+        text-transform: capitalize;
+        font-weight: 500
+    }
+}
+
 @media (min-width:796px) and (max-width:970px) {
     .container {
         width: 95%
