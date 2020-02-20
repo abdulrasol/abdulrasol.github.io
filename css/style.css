@@ -1,532 +1,868 @@
-/*
-
-
-
-*/
-
+/* main rulez */
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: auto;
+    font-family: sans-serif;
+    transition: all .54s ease-out
 }
 
+.container {margin: auto}
 body {
-    perspective: 1500px;
-}
-
-
-/* Extra small devices (phones, 600px and down) */
-
-.card {
-    position: relative;
-    width: 85%;
-    height: 480px;
-    margin: 10px auto;
-    transform-style: preserve-3d;
-    transition: all .65s ease-in-out;
-    border: 2px solid #b74545;
-    border-radius: 14px;
-    background-color: #f3efef
-}
-
-.card:hover {
-    transform: rotateY(180deg);
-}
-
-.card>div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    font-family: 'Comfortaa', cursive;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #f3efef;
+    /* center element */
     text-align: center;
-    border-radius: 11px;
-    color: #303030;
+    height: 1000px
 }
+/* end rulez */
+/* background and body  */
 
-.card .front {
-    z-index: 2;
-    backface-visibility: hidden;
-}
+@media (max-width: 795px) {
+    /* header and profile image */
 
-.front header {
-    display: block;
-    width: 100%;
-    height: 130px;
-    background-color: #b74545;
-    border-bottom: 2px solid;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
+    header {padding: 150px}
+    header img {
+        width: 260px;
+        height: auto;
+        border-radius: 50%;
+        border: 5px solid #b74545;
+        box-shadow: 2px 2px 3px #111
+    }
+    header h2 {
+        font-family: 'Black Han Sans', sans-serif;
+        font-weight: normal;
+        color: #FFF;
+        text-shadow: 2px 2px 5px #000
+    }
+    /* End  header and profile image */
 
-.front header img {
-    width: 150px;
-    margin-top: 18px;
-    border-radius: 50%;
-    border: 2px solid #303030;
-    background-color: #e18e8a;
-}
+    /* Start Cards */
+    .cards {overflow: hidden;text-align: center;margin: auto}
+    .cards .card {
+        width: 90%;
+        margin: auto;
+        padding: 15px;
+        margin: 15px auto;
+        text-align: left
+    }
 
-.front h3 {
-    margin-top: 35px;
-    font-size: 25px;
-    font-family: 'Palanquin', sans-serif;
-    font-weight: bold;
-    color: #303030;
-}
+    .cards .card p {
+        font-size: 1em;
+        line-height: 1.4;
+        text-transform: capitalize;
+        font-weight: 500
+    }
 
-.front p {
-    text-align: left;
-    margin: 10px 7px;
-    ;
-    line-height: 25px;
-    font-weight: bold;
-    font-size: 16px;
-    color: #303030;
-}
+    /* Easy Profile */
+    .cards .easy {background-color: #f3efef;color: #e18e8a}
 
-.front footer {
-    margin: 60px 10px 20px 10px;
-    bottom: 10px;
-    font-weight: 600;
-    line-height: 25px;
-}
-
-footer span:first-child {
-    display: blocl;
-}
-
-footer span:last-child {
-    display: none;
-}
-
-
-/* back div */
-
-.back {
-    position: absolute;
-    z-index: 1;
-    transform: rotateY(180deg);
-    padding: 10px;
-}
-
-.card .back ul {
-    list-style: none;
-    margin: 10px 0;
-}
-
-.card .back li {
-    margin: 20px 0;
-}
-
-.card .back a {
-    font-size: 30px;
-    text-decoration: none;
-    color: #303030;
-}
-
-.card .back i {
-    display: block;
-    margin: 2px 10px;
-    font-size: 40px;
-}
-
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-
-@media only screen and (min-width: 571px) {
-    .card {
-        position: relative;
-        width: 430px;
-        height: 480px;
-        margin: 10px auto;
-        transform-style: preserve-3d;
-        transition: all .65s ease-in-out;
-        border: 3px solid #b74545;
-        border-radius: 14px;
+    /* Skills */
+    .skills {background-color: #e18e8a; color: #f3efef}
+    .cards .skills ul li {padding: 10px 10px}
+    .cards .skills ul li h4 {
+        padding: 1px 0;
+        margin: 5px 0;
+        display: inline-block;
+        text-transform: uppercase
+		}
+    .cards .skills ul li h4:last-of-type {float: right}
+    .cards .skills ul li div {
+        display: block;
+        width: 100%;
+        height: 5px;
         background-color: #f3efef
     }
-    .card:hover {
-        transform: rotateY(180deg);
-    }
-    .card>div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        font-family: 'Comfortaa', cursive;
-        text-align: center;
-        border-radius: 12px;
-        color: #303030;
-    }
-    .card .front {
-        z-index: 2;
-        backface-visibility: hidden;
-    }
-    .front header {
+    .cards .skills ul li:nth-of-type(1) div span {
         display: block;
-        width: 100%;
-        height: 150px;
+        width: 85%;
+        height: 100%;
         background-color: #b74545;
-        border-bottom: 3px solid;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
     }
-    .front header img {
-        width: 180px;
-        margin-top: 25px;
-        border-radius: 50%;
-        border: 3px solid #303030;
+    .cards .skills ul li:nth-of-type(2) div span {
+        display: block;
+        width: 65%;
+        height: 100%;
+        background-color: #b74545;
+    }
+    .cards .skills ul li:nth-of-type(3) div span {
+        display: block;
+        width: 60%;
+        height: 100%;
+        background-color: #b74545
+    }
+    .cards .skills ul li span {text-align: right}
+
+    /* Education */
+    .edu {background-color: #e18e8a; color: #f3efef}
+    .edu div h4 {padding: 0; margin: 0 0 10px 0}
+    /* End Education */
+
+    /* Languges  */
+    .lang {background: #f3efef;color: #e18e8a}
+    .lang ul {
+        padding-top: 20px;
+        list-style: disc;
+        list-style-position: outside;
+        margin-left: 30px;
+        font-weight: bold
+    }
+    .lang ul h6 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-left: 25px;
+        font-size: .8em;
+        font-weight: normal
+    }
+    /* End Languges */
+
+    /* Contact Me */
+    .contact {background-color: #f3efef;color: #e18e8a}
+    .contact ul li {margin-top: 25px}
+    .contact li {margin: 20px 0}
+    .contact ul li a {text-decoration: none;color: #e18e8a}
+    .contact ul li i {margin-right: 20px}
+	/* End Contact Me */
+	
+    /* Expresince */
+    .exp {
+        width: 58%;
+        margin-left: 2%;
         background-color: #e18e8a;
+        color: #f3efef;
+        padding: 0
     }
-    .front h3 {
-        margin-top: 65px;
-        font-size: 30px;
-        font-family: 'Palanquin', sans-serif;
-        font-weight: bolder;
-        color: #303030;
+    /* End Experncee*/
+
+    /* Footer */
+    footer {
+        color: #f3efef;
+        margin: 50px 0;
+        padding-top: 30px
     }
-    .front p {
-        text-align: left;
-        margin: 10px;
-        line-height: 25px;
-        font-weight: bold;
-        font-size: 18px;
-        color: #303030;
+
+    footer ul li {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #e18e8a;
+        text-align: center;
+        border-radius: 50%;
+        transition: all .54s ease-out
     }
-    .front footer {
-        margin: 20px 10px;
-        bottom: 10px;
-        font-weight: 600;
+
+    footer ul li:hover {
+        background: #000;
     }
-    footer span:first-child {
-        display: none;
-    }
-    footer span:last-child {
-        display: block;
-    }
-    /* back div */
-    .back {
-        position: absolute;
-        z-index: 1;
-        transform: rotateY(180deg);
-        padding: 10px;
-    }
-    .card .back ul {
-        list-style: none;
-        margin: 10px 0;
-    }
-    .card .back li {
-        margin: 20px 0;
-    }
-    .card .back a {
-        font-size: 30px;
+
+    footer ul li a {
         text-decoration: none;
-        color: #303030;
+        color: #f3efef;
+        font-size: 25px;
     }
-    .card .back i {
+
+    footer h3,
+    footer h5 {
+        text-shadow: 2px 2px 5px #000
+    }
+
+    /* End Footer */
+}
+
+@media (min-width : 796px) and (max-width : 970px) {
+
+    /* Main Contianer */
+    .warp {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: flex-end
+    }
+
+    /* header and profile image */
+
+    header {
+        padding: 150px;
+    }
+
+    header img {
+        width: 260px;
+        height: auto;
+        border-radius: 50%;
+        border: 5px solid #b74545;
+        box-shadow: 2px 2px 3px #111;
+    }
+
+    header h2 {
+        font-family: 'Black Han Sans', sans-serif;
+        font-weight: normal;
+        color: #FFF;
+        text-shadow: 2px 2px 5px #000
+    }
+
+    /* End  header and profile image */
+
+    /* Start Cards */
+
+    .cards {
+        overflow: hidden;
+    }
+
+    .cards .card {
+        float: left;
+        text-align: left;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 1px 1px 12px black;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .cards .card p {
+        font-size: 1em;
+        line-height: 1.4;
+        text-transform: capitalize;
+        font-weight: 500;
+
+    }
+
+    /* Easy Profile */
+    .cards .easy {
+        width: 48%;
+        margin-right: 2%;
+        background-color: #f3efef;
+        color: #e18e8a;
+
+    }
+
+    /* Skills */
+    .skills {
+        width: 48%;
+        background-color: #e18e8a;
+        color: #f3efef;
+        margin-left: 2%;
+    }
+
+    .cards .skills ul {}
+
+    .cards .skills ul li {
+        padding: 10px 10px;
+    }
+
+    .cards .skills ul li h4 {
+        padding: 1px 0;
+        margin: 5px 0;
+        display: inline-block;
+        text-transform: uppercase;
+    }
+
+    .cards .skills ul li h4:last-of-type {
+        float: right
+    }
+
+    .cards .skills ul li div {
         display: block;
-        margin: 2px 10px;
-        font-size: 40px;
+        width: 100%;
+        height: 5px;
+        background-color: #f3efef;
     }
+
+    .cards .skills ul li:nth-of-type(1) div span {
+        display: block;
+        width: 85%;
+        height: 100%;
+        background-color: #b74545;
+    }
+
+    .cards .skills ul li:nth-of-type(2) div span {
+        display: block;
+        width: 65%;
+        height: 100%;
+        background-color: #b74545;
+    }
+
+    .cards .skills ul li:nth-of-type(3) div span {
+        display: block;
+        width: 60%;
+        height: 100%;
+        background-color: #b74545;
+    }
+
+    .cards .skills ul li span {
+        text-align: right;
+    }
+
+
+    /* Education */
+
+    .edu {
+        width: 58%;
+        margin-right: 2%;
+        background-color: #e18e8a;
+        color: #f3efef;
+    }
+
+    .edu div {
+        overflow: hidden;
+    }
+
+    .edu div h4 {
+        padding: 0;
+        margin: 0 0 10px 0;
+    }
+
+    /* End Education */
+
+    /* Languges  */
+
+    .lang {
+        width: 38%;
+        margin-left: 2%;
+        background: #f3efef;
+        color: #e18e8a
+    }
+
+    .lang ul {
+        margin-top: 20px;
+        padding-top: 20px;
+        list-style: disc;
+        list-style-position: outside;
+        margin-left: 25px;
+        font-weight: bold
+    }
+
+    .lang ul h6 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-left: 25px;
+        font-size: .8em;
+        font-weight: normal;
+    }
+
+    /* End Languges */
+
+    /* Contact Me */
+
+    .contact {
+        width: 38%;
+        margin-right: 2%;
+        background-color: #f3efef;
+        color: #e18e8a;
+        padding: 0;
+    }
+
+    .contact ul li {
+        margin-top: 25px;
+    }
+
+    .contact li {
+        margin: 20px 0
+    }
+
+    .contact ul li a {
+        text-decoration: none;
+        color: #e18e8a
+    }
+
+    .contact ul li i {
+        margin-right: 20px
+    }
+
+    /* Expresince */
+
+    .exp {
+        width: 58%;
+        margin-left: 2%;
+        background-color: #e18e8a;
+        color: #f3efef;
+        padding: 0;
+    }
+
+    /* End Experncee*/
+
+    /* Footer */
+    footer {
+        color: #f3efef;
+        margin: 50px;
+        padding-top: 30px
+    }
+
+    footer ul li {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #e18e8a;
+        text-align: center;
+        border-radius: 50%;
+        transition: all .54s ease-out
+    }
+
+    footer ul li:hover {
+        background: #000;
+    }
+
+    footer ul li a {
+        text-decoration: none;
+        color: #f3efef;
+        font-size: 25px;
+    }
+
+    footer h3,
+    footer h5 {
+        text-shadow: 2px 2px 5px #000
+    }
+
+    /* End Footer */
+}
+
+@media (min-width: 971px) and (max-width: 1174px) {
+
+    /* Main Contianer */
+    .warp {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* header and profile image */
+
+    header {
+        padding: 150px;
+    }
+
+    header img {
+        width: 260px;
+        height: auto;
+        border-radius: 50%;
+        border: 5px solid #b74545;
+        box-shadow: 2px 2px 3px #111;
+    }
+
+    header h2 {
+        font-family: 'Black Han Sans', sans-serif;
+        font-weight: normal;
+        color: #FFF;
+        text-shadow: 2px 2px 5px #000
+    }
+
+    /* End  header and profile image */
+
+    /* Start Cards */
+
+    .cards {
+        overflow: hidden;
+    }
+
+    .cards .card {
+        min-height: 314px;
+        float: left;
+        text-align: left;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 1px 1px 12px black;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .cards .card p {
+        font-size: 1em;
+        line-height: 1.4;
+        text-transform: capitalize;
+        font-weight: 500;
+
+    }
+
+    /* Easy Profile */
+    .cards .easy {
+        width: 48%;
+        margin-right: 2%;
+        background-color: #f3efef;
+        color: #e18e8a;
+
+    }
+
+    /* Skills */
+    .skills {
+        width: 48%;
+        background-color: #e18e8a;
+        color: #f3efef;
+        margin-left: 2%;
+    }
+
+    .cards .skills ul {}
+
+    .cards .skills ul li {
+        padding: 10px 10px;
+    }
+
+    .cards .skills ul li h4 {
+        padding: 1px 0;
+        margin: 5px 0;
+        display: inline-block;
+        text-transform: uppercase;
+    }
+
+    .cards .skills ul li h4:last-of-type {
+        float: right
+    }
+
+    .cards .skills ul li div {
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: #f3efef;
+    }
+
+    .cards .skills ul li:nth-of-type(1) div span {
+        display: block;
+        width: 85%;
+        height: 100%;
+        background-color: #b74545;
+    }
+
+    .cards .skills ul li:nth-of-type(2) div span {
+        display: block;
+        width: 65%;
+        height: 100%;
+        background-color: #b74545;
+    }
+
+    .cards .skills ul li:nth-of-type(3) div span {
+        display: block;
+        width: 60%;
+        height: 100%;
+        background-color: #b74545;
+    }
+
+    .cards .skills ul li span {
+        text-align: right;
+    }
+
+
+    /* Education */
+
+    .edu {
+        width: 58%;
+        margin-right: 2%;
+        background-color: #e18e8a;
+        color: #f3efef;
+    }
+
+    .edu div {
+        overflow: hidden;
+    }
+
+    .edu div h4 {
+        padding: 0;
+        margin: 0 0 10px 0;
+    }
+
+    .edu div h4:first-of-type {
+        float: left;
+    }
+
+    .edu div h4:last-of-type {
+        float: right;
+        padding-right: 0;
+        margin-right: 5px;
+    }
+
+
+    /* End Education */
+
+    /* Languges  */
+
+    .lang {
+        width: 38%;
+        margin-left: 2%;
+        background: #f3efef;
+        color: #e18e8a
+    }
+
+    .lang ul {
+        margin-top: 20px;
+        padding-top: 20px;
+        list-style: disc;
+        list-style-position: outside;
+        margin-left: 25px;
+        font-weight: bold
+    }
+
+    .lang ul h6 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-left: 25px;
+        font-size: .8em;
+        font-weight: normal;
+    }
+
+    /* End Languges */
+
+    /* Contact Me */
+
+    .contact {
+        width: 38%;
+        margin-right: 2%;
+        background-color: #f3efef;
+        color: #e18e8a;
+        padding: 0;
+    }
+
+    .contact ul li {
+        margin-top: 25px;
+    }
+
+    .contact li {
+        margin: 20px 0
+    }
+
+    .contact ul li a {
+        text-decoration: none;
+        color: #e18e8a
+    }
+
+    .contact ul li i {
+        margin-right: 20px
+    }
+
+    /* Expresince */
+
+    .exp {
+        width: 58%;
+        margin-left: 2%;
+        background-color: #e18e8a;
+        color: #f3efef;
+        padding: 0;
+    }
+
+    /* End Experncee*/
+
+    /* Footer */
+    footer {
+        color: #f3efef;
+        margin: 50px;
+        padding-top: 30px
+    }
+
+    footer ul li {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #e18e8a;
+        text-align: center;
+        border-radius: 50%;
+        transition: all .54s ease-out
+    }
+
+    footer ul li:hover {
+        background: #000;
+    }
+
+    footer ul li a {
+        text-decoration: none;
+        color: #f3efef;
+        font-size: 25px;
+    }
+
+    footer h3,
+    footer h5 {
+        text-shadow: 2px 2px 5px #000
+    }
+
+    /* End Footer */
 }
 
 
-/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 1175px) {
 
-@media only screen and (min-width: 768px) {
-    .card {
-        position: relative;
-        width: 430px;
-        height: 480px;
-        margin: 10px auto;
-        transform-style: preserve-3d;
-        transition: all .65s ease-in-out;
-        border: 3px solid #b74545;
-        border-radius: 14px;
+    /* Main Contianer */
+    .container {
+        width: 1170px
+    }
+
+    /* header and profile image */
+    header { padding: 150px}
+    header img {
+        width: 260px;
+        height: auto;
+        border-radius: 50%;
+        border: 5px solid #b74545;
+        box-shadow: 2px 2px 3px #111;
+    }
+    header h2 {
+        font-family: 'Black Han Sans', sans-serif;
+        font-weight: normal;
+        color: #FFF;
+        text-shadow: 2px 2px 5px #000
+    }
+    /* End  header and profile image */
+	
+    /* Start Cards */
+    .cards {overflow: hidden}
+    .cards .card {
+        min-height: 314px;
+        float: left;
+        text-align: left;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 1px 1px 12px black;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .cards .card p {
+        font-size: 1em;
+        line-height: 1.4;
+        text-transform: capitalize;
+        font-weight: 500
+    }
+	/* End Card */
+	
+    /* Easy Profile */
+    .cards .easy {
+        width: 48%;
+        margin-right: 2%;
+        background-color: #f3efef;
+        color: #e18e8a
+	}
+	/* EndEasy Profile */
+	
+    /* Skills */
+    .skills {
+        width: 48%;
+        background-color: #e18e8a;
+        color: #f3efef;
+        margin-left: 2%
+    }
+    .cards .skills ul li {padding: 10px 10px}
+    .cards .skills ul li h4 {
+        padding: 1px 0;
+        margin: 5px 0;
+        display: inline-block;
+        text-transform: uppercase
+    }
+    .cards .skills ul li h4:last-of-type {float: right}
+    .cards .skills ul li div {
+        display: block;
+        width: 100%;
+        height: 5px;
         background-color: #f3efef
     }
-    .card:hover {
-        transform: rotateY(180deg);
-    }
-    .card>div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        font-family: 'Comfortaa', cursive;
-        text-align: center;
-        border-radius: 12px;
-        color: #303030;
-    }
-    .card .front {
-        z-index: 2;
-        backface-visibility: hidden;
-    }
-    .front header {
+    .cards .skills ul li:nth-of-type(1) div span {
         display: block;
-        width: 100%;
-        height: 150px;
+        width: 85%;
+        height: 100%;
+        background-color: #b7454
+    }
+    .cards .skills ul li:nth-of-type(2) div span {
+        display: block;
+        width: 65%;
+        height: 100%;
+        background-color: #b74545
+    }
+    .cards .skills ul li:nth-of-type(3) div span {
+        display: block;
+        width: 60%;
+        height: 100%;
         background-color: #b74545;
-        border-bottom: 3px solid;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
     }
-    .front header img {
-        width: 180px;
-        margin-top: 25px;
-        border-radius: 50%;
-        border: 3px solid #303030;
+    .cards .skills ul li span {text-align: right}
+    /* End Skills */
+
+    /* Education */
+    .edu {
+        width: 58%;
+        margin-right: 2%;
         background-color: #e18e8a;
+        color: #f3efef
     }
-    .front h3 {
-        margin-top: 65px;
-        font-size: 30px;
-        font-family: 'Palanquin', sans-serif;
-        font-weight: bolder;
-        color: #303030;
+    .edu div {overflow: hidden}
+    .edu div h4 {padding: 0;margin: 0 0 10px 0}
+    .edu div h4:first-of-type {float: left}
+    .edu div h4:last-of-type {
+        float: right;
+        padding-right: 20px;
+        margin-right: 20px
     }
-    .front p {
-        text-align: left;
-        margin: 10px;
-        line-height: 25px;
-        font-weight: bold;
-        font-size: 18px;
-        color: #303030;
+    /* End Education */
+
+    /* Languges  */
+    .lang {
+        width: 38%;
+        margin-left: 2%;
+        background: #f3efef;
+        color: #e18e8a
     }
-    .front footer {
-        margin: 20px 10px;
-        bottom: 10px;
-        font-weight: 600;
+    .lang ul {
+        margin-top: 20px;
+        padding-top: 20px;
+        list-style: disc;
+        list-style-position: outside;
+        margin-left: 25px;
+        font-weight: bold
     }
-    footer span:first-child {
-        display: none;
+    .lang ul h6 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-left: 25px;
+        font-size: .8em;
+        font-weight: normal;
     }
-    footer span:last-child {
-        display: block;
+    /* End Languges */
+
+    /* Contact Me */
+    .contact {
+        width: 38%;
+        margin-right: 2%;
+        background-color: #f3efef;
+        color: #e18e8a
     }
-    /* back div */
-    .back {
-        position: absolute;
-        z-index: 1;
-        transform: rotateY(180deg);
-        padding: 10px;
+    .contact ul li {margin-top: 25px;}
+    .contact li {margin: 20px 0}
+    .contact ul li a {text-decoration: none;color: #e18e8a}
+    .contact ul li i {
+        margin-right: 20px
     }
-    .card .back ul {
-        list-style: none;
-        margin: 10px 0;
+
+    /* Expresince */
+    .exp {
+        width: 58%;
+        margin-left: 2%;
+        background-color: #e18e8a;
+        color: #f3efef
     }
-    .card .back li {
-        margin: 20px 0;
+    /* End Experncee*/
+
+    /* Footer */
+    footer {color: #f3efef;margin: 50px;padding-top: 30px}
+    footer ul li {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #e18e8a;
+        text-align: center;
+        border-radius: 50%;
+        transition: all .54s ease-out
     }
-    .card .back a {
-        font-size: 30px;
-        text-decoration: none;
-        color: #303030;
-    }
-    .card .back i {
-        display: block;
-        margin: 2px 10px;
-        font-size: 40px;
-    }
+    footer ul li:hover {background: #000}
+    footer ul li a {text-decoration: none;color: #f3efef;font-size: 25px}
+    footer h3, footer h5 {text-shadow: 2px 2px 5px #000}
+    /* End Footer */
 }
 
+/* My Framework */
+ul {padding: 0; margin: 0;list-style: none}
+h1, h2, h3, h4, h5, h6 {font-family: 'Lato', sans-serif}
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Heebo', sans-serif;
+font-family: 'Oxygen', sans-serif;
+font-family: 'Cabin', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Black Han Sans', sans-serif;
 
-/* Large devices (laptops/desktops, 992px and up) */
-
-@media only screen and (min-width: 992px) {
-    .card {
-        position: relative;
-        width: 430px;
-        height: 480px;
-        margin: 10px auto;
-        transform-style: preserve-3d;
-        transition: all .65s ease-in-out;
-        border: 3px solid #b74545;
-        border-radius: 14px;
-        background-color: #f3efef
-    }
-    .card:hover {
-        transform: rotateY(180deg);
-    }
-    .card>div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        font-family: 'Comfortaa', cursive;
-        text-align: center;
-        border-radius: 12px;
-        color: #303030;
-    }
-    .card .front {
-        z-index: 2;
-        backface-visibility: hidden;
-    }
-    .front header {
-        display: block;
-        width: 100%;
-        height: 150px;
-        background-color: #b74545;
-        border-bottom: 3px solid;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-    }
-    .front header img {
-        width: 180px;
-        margin-top: 25px;
-        border-radius: 50%;
-        border: 3px solid #303030;
-        background-color: #e18e8a;
-    }
-    .front h3 {
-        margin-top: 65px;
-        font-size: 30px;
-        font-family: 'Palanquin', sans-serif;
-        font-weight: bolder;
-        color: #303030;
-    }
-    .front p {
-        text-align: left;
-        margin: 10px;
-        line-height: 25px;
-        font-weight: bold;
-        font-size: 18px;
-        color: #303030;
-    }
-    .front footer {
-        margin: 20px 10px;
-        bottom: 10px;
-        font-weight: 600;
-    }
-    footer span:first-child {
-        display: none;
-    }
-    footer span:last-child {
-        display: block;
-    }
-    /* back div */
-    .back {
-        position: absolute;
-        z-index: 1;
-        transform: rotateY(180deg);
-        padding: 10px;
-    }
-    .card .back ul {
-        list-style: none;
-        margin: 10px 0;
-    }
-    .card .back li {
-        margin: 20px 0;
-    }
-    .card .back a {
-        font-size: 30px;
-        text-decoration: none;
-        color: #303030;
-    }
-    .card .back i {
-        display: block;
-        margin: 2px 10px;
-        font-size: 40px;
-    }
-}
-
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-
-@media only screen and (min-width: 1200px) {
-    .card {
-        position: relative;
-        width: 430px;
-        height: 480px;
-        margin: 10px auto;
-        transform-style: preserve-3d;
-        transition: all .65s ease-in-out;
-        border: 3px solid #b74545;
-        border-radius: 14px;
-        background-color: #f3efef
-    }
-    .card:hover {
-        transform: rotateY(180deg);
-    }
-    .card>div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        font-family: 'Comfortaa', cursive;
-        text-align: center;
-        border-radius: 12px;
-        color: #303030;
-    }
-    .card .front {
-        z-index: 2;
-        backface-visibility: hidden;
-    }
-    .front header {
-        display: block;
-        width: 100%;
-        height: 150px;
-        background-color: #b74545;
-        border-bottom: 3px solid;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-    }
-    .front header img {
-        width: 180px;
-        margin-top: 25px;
-        border-radius: 50%;
-        border: 3px solid #303030;
-        background-color: #e18e8a;
-    }
-    .front h3 {
-        margin-top: 65px;
-        font-size: 30px;
-        font-family: 'Palanquin', sans-serif;
-        font-weight: bolder;
-        color: #303030;
-    }
-    .front p {
-        text-align: left;
-        margin: 10px;
-        line-height: 25px;
-        font-weight: bold;
-        font-size: 18px;
-        color: #303030;
-    }
-    .front footer {
-        margin: 20px 10px;
-        bottom: 10px;
-        font-weight: 600;
-    }
-    footer span:first-child {
-        display: none;
-    }
-    footer span:last-child {
-        display: block;
-    }
-    /* back div */
-    .back {
-        position: absolute;
-        z-index: 1;
-        transform: rotateY(180deg);
-        padding: 10px;
-    }
-    .card .back ul {
-        list-style: none;
-        margin: 10px 0;
-    }
-    .card .back li {
-        margin: 20px 0;
-    }
-    .card .back a {
-        font-size: 30px;
-        text-decoration: none;
-        color: #303030;
-    }
-    .card .back i {
-        display: block;
-        margin: 2px 10px;
-        font-size: 40px;
-    }
-}
+*/
