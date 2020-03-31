@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Spimebook, Site for readers</title>
+        <title>Spimebook, a site for readers</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/uikit.min.css" />
@@ -23,7 +23,7 @@
 
         <div class="uk-navbar-right">
           <!-- Search icon -->
-          <a class="uk-navbar-toggle" uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
+          <a class="uk-navbar-toggle uk-visible@s" uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
           <ul class="uk-navbar-nav">
             <!-- User Name and Icon  -->
 
@@ -53,6 +53,14 @@
             <div class="uk-offcanvas-bar">
                 <button class="uk-offcanvas-close" type="button" uk-close></button>
                 <ul class="uk-nav uk-nav-default">
+                  <li>
+                    <div class="uk-margin">
+                        <form class="uk-search uk-search-default">
+                            <a href="" uk-search-icon></a>
+                            <input class="uk-search-input" type="search" placeholder="Search...">
+                        </form>
+                    </div>
+                  </li>
                   <li class="uk-nav-header">Main</li>
                   <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: home; ratio: 1.5"></span>Home</a></li>
                   <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails; ratio: 1.5"></span> Articles</a></li>
@@ -197,6 +205,22 @@
                           </div>
                       </article>
                     </div>
+                    <!-- End View Comments -->
+                    <!-- Start Add Comments -->
+                    <div id="add-reply" class="uk-margin-small-top uk-margin-small-bottom" hidden>
+                      <form>
+                          <div class="uk-flex uk-grid-small uk-flex-middle" uk-grid>
+                             <div class="uk-width-expand">
+                               <input class="uk-input" type="text" placeholder="Some text...">
+                             </div>
+                             <div class="uk-width-auto">
+                               <a href="#" class="uk-link uk-link-muted">Reply</a>
+                             </div>
+                             </div>
+                      </form>
+                    </div>
+                    <!-- End Add Comments -->
+                    <!-- End Comments  -->
                     <div class="uk-flex uk-grid-small" uk-grid>
                       <div>
                           <a class="uk-button uk-button-text uk-text-meta" uk-toggle="target: #post-comment; animation: uk-animation-slide-top-small" href="#">2 Comments</a>
@@ -207,7 +231,7 @@
                     </div>
                     <div class="reaction">
                       <span uk-tooltip="Log In First"><a  href="#" class="uk-icon uk-margin-small-right uk-disabled" uk-icon="icon: heart"></a></span>
-                      <span uk-tooltip="Log In First"><a href="#" class="uk-icon uk-margin-small-right uk-disabled" uk-icon="icon: reply"></a></span>
+                      <span uk-tooltip="Log In First"><a href="#" class="uk-icon uk-margin-small-right" uk-icon="icon: reply" uk-toggle="target: #add-reply; animation: uk-animation-slide-top-small" type="button"></a></span>
                       <a href="#share-modal" class="uk-icon uk-margin-small-right" uk-icon="icon: social" uk-toggle></a>
 
                       <a type="button" href="#" class="uk-icon uk-float-right" uk-icon="icon: more"></a>
@@ -283,10 +307,10 @@
                     <fieldset class="uk-fieldset">
                         <legend class="uk-legend">Sign In</legend>
                         <div class="uk-margin">
-                            <input class="uk-input uk-form-width-medium" type="text" placeholder="Username">
+                            <input class="uk-input" type="text" placeholder="Username">
                         </div>
                         <div class="uk-margin">
-                            <input class="uk-input uk-form-width-medium" type="password" placeholder="Username">
+                            <input class="uk-input" type="password" placeholder="Username">
                         </div>
                         <div class="uk-margin">
                             <button class="uk-button uk-width-1-1 uk-button-primary">Sign In</button>
