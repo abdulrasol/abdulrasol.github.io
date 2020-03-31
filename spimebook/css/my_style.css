@@ -9,17 +9,34 @@
   */
 }
 body {
-  
+
   color: #666
 }
+.uk-card .uk-card-header .book-img img{
+  max-height: 150px;
+}
 
-.uk-card .uk-card-footer .tags {
+.uk-card .uk-card-header .book-img img{height: 100%}
+
+.uk-card .uk-card-header .book-genres a:hover{
+  text-decoration: none;
+  color: #FFF
+}
+
+.uk-card .uk-card-footer .tags span{
   opacity: 0.5
 }
 
 .uk-offcanvas-bar {
   background-color: #1e87f0;
 }
+
+nav .uk-logo{
+  padding-top: 10px
+}
+ .me-card {
+   box-shadow: 1px 1px 20px #CCC;
+ }
 
 
 /* Start Header */
@@ -125,7 +142,8 @@ body {
   font-size: 22px;
   line-height: 1.8
 }
-.responsive-img{width: 100%}
+
+.responsive-img{width: 100% }
 
 .classic-ul{
   margin: 0;
