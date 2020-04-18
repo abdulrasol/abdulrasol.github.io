@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Spimebook, a site for readers</title>
+    <title>Browser books, Spimebook</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/uikit.min.css" />
@@ -108,7 +108,7 @@
     <div class="uk-container">
         <div class="uk-flex uk-flex-wrap">
             <!-- Start Side -->
-            <div class="uk-width-auto uk-visible@s">
+            <div class="uk-width-auto uk-visible@m  uk-visible@s">
                 <div class="side-bar uk-padding-small">
                     <div class="uk-card uk-card-primary uk-card-body">
                         <ul class="uk-nav-default uk-nav-parent-icon uk-padding-small" uk-nav>
@@ -149,111 +149,116 @@
             <!-- Start Main -->
             <div class="uk-width-expand">
                 <div class="uk-container uk-padding-small">
-                    <!-- start post container -->
-                    <div class="uk-flex">
-                        <!-- Posts -->
-                        <div class="uk-card uk-card-primary uk-margin">
-                            <div class="uk-card-header">
-                                <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                    <div class="uk-width-auto">
-                                        <img class="uk-border-circle" width="40" height="40" src="img/icon.png">
-                                    </div>
-                                    <div class="uk-width-expand">
-                                        <h3 class="uk-card-title uk-margin-remove-bottom">Title</h3>
-                                        <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
-                                    </div>
-                                </div>
-                            </div><!-- End header -->
-                            <div class="uk-card-body uk-padding">
-                                <q class="">
-                                    duis amet quorum export nisi velit minim culpa quae quae veniam veniam quis
-                                    veniam sunt dolore malis nulla labore minim ipsum minim aliqua quis duis tempor
-                                    elit esse quae anim export cillum ipsum fugiat illum fore quis dolor tamen aute
-                                    legam enim fore elit multos aliqua labore multos multos tempor.
-                                </q>
-                            </div><!-- End body -->
-                            <div class="uk-card-footer">
-                                <!-- start commnets -->
-                                <div id="post-comment" hidden>
-                                    <article class="uk-comment  uk-padding-small uk-padding-remove-horizontal">
-                                        <hr>
-                                        <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-                                            <div class="uk-width-auto">
-                                                <img class="uk-comment-avatar" src="img/img.png" width="30" height="30" alt="">
-                                            </div>
-                                            <div class="uk-width-expand">
-                                                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Jone Snow</a></h4>
-                                                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                                    <li><a href="#">12 days ago</a></li>
-                                                </ul>
-                                            </div>
-                                        </header>
-                                        <div class="uk-comment-body">
-                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                                        </div>
-                                    </article>
-                                    <article class="uk-comment uk-padding-small uk-padding-remove-horizontal">
-                                        <hr>
-                                        <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-                                            <div class="uk-width-auto">
-                                                <img class="uk-comment-avatar" src="img/img.png" width="30" height="30" alt="">
-                                            </div>
-                                            <div class="uk-width-expand">
-                                                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Jone Snow</a></h4>
-                                                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                                    <li><a href="#">12 days ago</a></li>
-                                                </ul>
-                                            </div>
-                                        </header>
-                                        <div class="uk-comment-body">
-                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                                        </div>
-                                    </article>
-                                </div>
-                                <!-- End View Comments -->
-                                <!-- Start Add Comments -->
-                                <div id="add-reply" class="uk-margin-small-top uk-margin-small-bottom" hidden>
-                                    <form>
-                                        <div class="uk-flex uk-grid-small uk-flex-middle" uk-grid>
-                                            <div class="uk-width-expand">
-                                                <input class="uk-input" type="text" placeholder="Some text...">
-                                            </div>
-                                            <div class="uk-width-auto">
-                                                <a href="#" class="uk-link uk-link-muted">Reply</a>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- End Add Comments -->
-                                <!-- End Comments  -->
-                                <div class="uk-flex uk-grid-small" uk-grid>
-                                    <div>
-                                        <a class="uk-button uk-button-text uk-text-meta" uk-toggle="target: #post-comment; animation: uk-animation-slide-top-small" href="#">2 Comments</a>
-                                    </div>
-                                    <div class="tags uk-margin-bottom">
-                                        <span class="uk-icon" uk-icon="quote-right"></span>
-                                        <a href="#" class="uk-label">Alchemist</a>
-                                    </div>
-                                </div>
-                                <div class="reaction">
-                                    <span uk-tooltip="Log In First"><a href="#" class="uk-icon uk-margin-small-right uk-disabled" uk-icon="icon: heart"></a></span>
-                                    <span uk-tooltip="Log In First"><a href="#" class="uk-icon uk-margin-small-right" uk-icon="icon: reply" uk-toggle="target: #add-reply; animation: uk-animation-slide-top-small" type="button"></a></span>
-                                    <a href="#share-modal" class="uk-icon uk-margin-small-right" uk-icon="icon: social" uk-toggle></a>
-
-                                    <a type="button" href="#" class="uk-icon uk-float-right" uk-icon="icon: more"></a>
-                                    <!-- dropdown more options -->
-                                    <div class="uk-padding-remove" uk-dropdown="pos: top-justify">
-                                        <ul class="uk-nav uk-dropdown-nav uk-card uk-card-default uk-card-body">
-                                            <li uk-tooltip="Log In First"><a class="uk-disabled" style="color:#999" href="#"><span class="uk-icon uk-padding-small" uk-icon="icon: bookmark"></span>Save</a></li>
-                                            <li><a style="color:#999" href="#"><span class="uk-icon uk-padding-small" uk-icon="icon: warning"></span>Report</a></li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                            </div><!-- End footer -->
-                        </div><!-- End Post -->
+                  <!-- Start Books Categoty -->
+                  <button class="uk-button uk-button-primary" uk-toggle="target:#book-category; animation: uk-animation-fade">Categoty</button>
+                  <div id="book-category" class="category" hidden>
+                    <div class="uk-padding-small uk-margin-small-top">
+                        <a class="uk-label" href="#">Novel</a>
+                        <a class="uk-label" href="#">Drama</a>
+                        <a class="uk-label" href="#">Fantasy</a>
+                        <a class="uk-label" href="#">Quest</a>
+                        <a class="uk-label" href="#">Fantasy</a>
+                        <a class="uk-label" href="#">Fiction</a>
+                        <a class="uk-label" href="#">Adventure</a>
+                        <a class="uk-label" href="#">fiction</a>
                     </div>
-                    <!-- end post container -->
+                  </div>
+                  <!-- End Books Categoty -->
+                    <!-- start Books container -->
+                    <div class="books uk-grid-small uk-child-width-1-2@m uk-text-center" uk-grid>
+                        <div class="book">
+                          <div class="uk-card-header">
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-border-rounded" src="img/alchemist.jpg" alt="book-name">
+                                </div>
+                                <div class="uk-width-expand uk-text-left">
+                                    <h3 class="uk-margin-small"><a href="#">Alchemist</a></h3>
+                                    <h4 class="uk-margin-small uk-text-meta"><a class="uk-h4" href="#">Book Author</a></h4>
+                                    <h5 class="uk-margin-small uk-text-meta"><a href="#">Book Categoty</a></h5>
+                                    <a class="uk-label" href="#">Novel</a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="book">
+                          <div class="uk-card-header">
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-border-rounded" src="img/02.jpg" alt="book-name">
+                                </div>
+                                <div class="uk-width-expand uk-text-left">
+                                    <h3 class="uk-margin-small"><a href="#">Book Title</a></h3>
+                                    <h4 class="uk-margin-small uk-text-meta"><a class="uk-h4" href="#">Book Author</a></h4>
+                                    <h5 class="uk-margin-small uk-text-meta"><a href="#">Book Categoty</a></h5>
+                                    <a class="uk-label" href="#">Novel</a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="book">
+                          <div class="uk-card-header">
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-border-rounded" src="img/03.jpg" alt="book-name">
+                                </div>
+                                <div class="uk-width-expand uk-text-left">
+                                    <h3 class="uk-margin-small"><a href="#">Book Title</a></h3>
+                                    <h4 class="uk-margin-small uk-text-meta"><a class="uk-h4" href="#">Book Author</a></h4>
+                                    <h5 class="uk-margin-small uk-text-meta"><a href="#">Book Categoty</a></h5>
+                                    <a class="uk-label" href="#">Novel</a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="book ">
+                          <div class="uk-card-header">
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-border-rounded" src="img/04.jpg" alt="book-name">
+                                </div>
+                                <div class="uk-width-expand uk-text-left">
+                                    <h3 class="uk-margin-small"><a href="#">Book Title</a></h3>
+                                    <h4 class="uk-margin-small uk-text-meta"><a class="uk-h4" href="#">Book Author</a></h4>
+                                    <h5 class="uk-margin-small uk-text-meta"><a href="#">Book Categoty</a></h5>
+                                    <a class="uk-label" href="#">Novel</a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="book ">
+                          <div class="uk-card-header">
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-border-rounded" src="img/05.jpg" alt="book-name">
+                                </div>
+                                <div class="uk-width-expand uk-text-left">
+                                    <h3 class="uk-margin-small"><a href="#">Book Title</a></h3>
+                                    <h4 class="uk-margin-small uk-text-meta"><a class="uk-h4" href="#">Book Author</a></h4>
+                                    <h5 class="uk-margin-small uk-text-meta"><a href="#">Book Categoty</a></h5>
+                                    <a class="uk-label" href="#">Novel</a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="book ">
+                          <div class="uk-card-header">
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-border-rounded" src="img/06.jpg" alt="book-name">
+                                </div>
+                                <div class="uk-width-expand uk-text-left">
+                                    <h3 class="uk-margin-small"><a href="#">Book Title</a></h3>
+                                    <h4 class="uk-margin-small uk-text-meta"><a class="uk-h4" href="#">Book Author</a></h4>
+                                    <h5 class="uk-margin-small uk-text-meta"><a href="#">Book Categoty</a></h5>
+                                    <a class="uk-label" href="#">Novel</a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- end Books container -->
                 </div>
             </div>
             <!-- End Main -->
@@ -276,7 +281,7 @@
     </div>
     <!-- End Share Model -->
     <!-- New Post Modal -->
-    <div id="new-post" class="" uk-modal>
+    <div id="new-post" class="uk-disabled" uk-modal>
         <div class="uk-modal-dialog uk-modal-body">
 
             <form>

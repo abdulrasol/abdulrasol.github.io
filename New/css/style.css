@@ -38,10 +38,6 @@ nav .uk-logo{
    box-shadow: 1px 1px 20px #CCC;
  }
 
-.books .book img {
-  height: 190px
-}
-
 
 /* Start Header */
 @media (max-width:500px ) { /* this not found in bootstrap */
