@@ -21,4 +21,16 @@ $('document').ready(function () {
     }
 
   });
+
+  //
+
+//
 });
+
+var waypoints = $('#handler-first').waypoint(function(direction) {
+  notify()
+  UIkit.notification({message: 'this.element.id + ' hit 25% from top of window', status: 'primary'});
+},
+{
+  offset: '25%'
+})
