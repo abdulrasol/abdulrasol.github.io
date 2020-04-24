@@ -13,11 +13,17 @@ body {
 
   color: #666
 }
+.uk-card .uk-card-header .book-img > div{
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  
+}
 .uk-card .uk-card-header .book-img img{
-  max-height: 150px;
+  border-radius: 50%;
 }
 
-.uk-card .uk-card-header .book-img img{height: 100%}
+
 
 .uk-card .uk-card-header .book-genres a:hover{
   text-decoration: none;
@@ -76,6 +82,9 @@ nav .uk-logo{
      font-size: 20px!important;
      line-height: 1.6!important;
    }
+   .me-text-center-m {
+    text-align: center;
+}
 }
 
 
@@ -90,6 +99,9 @@ nav .uk-logo{
      font-size: 20px!important;
      line-height: 1.6!important;
    }
+   .me-text-center-m {
+    text-align: center;
+}
 
 }
 
@@ -99,6 +111,9 @@ nav .uk-logo{
   }
   .visible-sm { display: block !important}
   .hidden-sm {display: none !important}
+  .me-text-center-m {
+    text-align: center;
+}
 }
 
 @media (min-width:992px ) and (max-width:1199px ){ /* Meduim display */
