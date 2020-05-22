@@ -1,0 +1,81 @@
+* {
+	box-sizing: border-box;
+}
+.slider {
+	
+}
+.slider .slide {
+	min-height: 250px;
+	padding: 10px;
+	text-align: center;
+	border-bottom: 2px solid #CCD;
+
+}
+.slider .slide .text {
+	position: fixed;
+	top: 20px;
+	right: 10px;
+}
+.slider .slide button{
+	position: fixed;
+	bottom: 40px;
+	left: 20px;
+}
+.search {
+	padding: 20px 10px;
+	text-align: center;
+	margin: 20px 0;
+}
+.search form{
+	border: 1px solid #a199b1;
+	padding: 0 15px;
+	border-radius: 60px;
+}
+.search form input{
+	padding: 15px 5px;
+	color: #061659;
+	border: none;
+	font-size: 2em;
+	text-align: center;
+	width: 100%
+}
+.search form #search-btn{
+	cursor: pointer;
+}
+.journals .journal{
+	border: 2px solid #ccc; 
+	padding: 0px;
+	margin: 10px;
+
+}
+.journals .journal > div {
+	width: 100%;
+}
+.journals .journal img{
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+}
+.journals .journal .text{
+	padding:10px;
+}
+.journals .journal .more{
+	text-align: center;
+	font-size: 18px;
+	padding: 5px 0;
+}
+.news{
+	padding: 10px;
+	text-align: center;
+}
+footer {
+	padding: 40px 0;
+	min-height: 200px;
+	background-color: #ccc
+}
+@media (max-width: 640px){
+	.center-s{
+		text-align: center;
+	}
+}
+

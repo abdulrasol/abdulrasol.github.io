@@ -16,7 +16,7 @@
 </head>
 
 <body style="">
-    <nav id="me-main-navbar" class="uk-navbar-container uk-padding-small uk-padding-remove-vertical" uk-navbar>
+    <nav id="-main-navbar" class="uk-navbar-container uk-padding-small uk-padding-remove-vertical" uk-navbar>
         <!-- Start Logo -->
         <div class="uk-navbar-left">
             <a href="" class="uk-navbar-item uk-margin-small-left uk-logo">
@@ -104,28 +104,50 @@
         </div>
     </nav>
     <div id="me-mobile-navbar" class="uk-width-1-1 uk-navbar-container uk-hidden@m">
-      <div class="uk-container uk-container-small">
-        <ul class="uk-iconnav uk-padding-small uk-flex uk-flex-center uk-text-center">
-            <div class="uk-width-1-4">
-              <a class="uk-icon"  uk-icon="icon:home; ratio:2"></a>
-            </div>
-            <div class="uk-width-1-4">
-              <a class="uk-icon" uk-icon="icon:pencil; ratio:2"></a>
-            </div>
-            <div class="uk-width-1-4">
-              <a class="uk-icon" uk-icon="icon:search; ratio:2"></a>
-            </div>
-            <div class="uk-width-1-4">
-              <a href="#mobile-slide-menu" uk-toggle class="uk-icon" uk-icon="icon:menu; ratio:2"></a>
-            </div>
+        <div class="uk-container uk-container-small">
+            <ul class="uk-iconnav uk-padding-small uk-flex uk-flex-center uk-text-center">
+                <div class="uk-width-1-4">
+                    <a class="uk-icon" uk-icon="icon:home; ratio:2"></a>
+                </div>
+                <div class="uk-width-1-4">
+                    <a class="uk-icon" uk-icon="icon:pencil; ratio:2"></a>
+                </div>
+                <div class="uk-width-1-4">
+                    <a href="#search-mobile" class="uk-icon" uk-icon="icon:search; ratio:2" uk-toggle=" animation: uk-animation-slide-top-medium"></a>
+                </div>
+                <div class="uk-width-1-4">
+                    <a href="#mobile-slide-menu" uk-toggle class="uk-icon" uk-icon="icon:menu; ratio:2"></a>
+                </div>
 
-        </ul>
-      </div>
+            </ul>
+        </div>
+        <div id="search-mobile" class="uk-container uk-container-small uk-padding-small" hidden>
+            <form class="uk-search uk-width-1-1 uk-search-default ">
+                <a href="" uk-search-icon></a>
+                <input id="book-sear" data-url="{% url 'search-book' %}" class="uk-search-input" type="search" placeholder="Search...">
+            </form>
+        </div>
     </div>
     <div id="handler-first" style="height:4000px">
-      
     </div>
-    </div>
-</body>
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
 
-</html>
+        // Get the header
+        var header = document.querySelector("#me-mobile-navbar");
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+</body></html>
