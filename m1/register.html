@@ -16,11 +16,11 @@
 			<form class="uk-form-horizontal">
 				<fieldset class="uk-fieldset">
 					<div class="uk-padding-small according-parent">
-						<div class="uk-flex uk-flex-middle uk-margin-bottom" uk-grid>
+						<div class="collapse uk-flex uk-flex-middle uk-margin-bottom" uk-grid>
 							<legend class="uk-legend uk-width-auto">Personal Information</legend>
 							<div class="uk-width-expand">
 								<h5 class="uk-heading-line uk-text-right">
-									<span uk-icon="icon: chevron-down
+									<span class="icon" uk-icon="icon: chevron-down
 									; ratio: 1.5"></span>
 								</h5>
 							</div>
@@ -81,11 +81,11 @@
 						
 					</div>
 					<div class="uk-padding-small according-parent">
-						<div class="uk-flex uk-flex-middle uk-margin-bottom" uk-grid>
+						<div class="collapse uk-flex uk-flex-middle uk-margin-bottom" uk-grid>
 							<legend class="uk-legend uk-width-auto">Degree And Institution</legend>
 							<div class="uk-width-expand">
 								<h5 class="uk-heading-line uk-text-right">
-									<span uk-icon="icon: chevron-down
+									<span class="icon" uk-icon="icon: chevron-down
 									; ratio: 1.5"></span>
 								</h5>
 							</div>
@@ -129,11 +129,11 @@
 						</div>
 					</div>
 					<div class="uk-padding-small according-parent">
-						<div class="uk-flex uk-flex-middle uk-margin-bottom" uk-grid>
+						<div class="collapse uk-flex uk-flex-middle uk-margin-bottom" uk-grid>
 							<legend class="uk-legend uk-width-auto">Email And Password</legend>
 							<div class="uk-width-expand">
 								<h5 class="uk-heading-line uk-text-right">
-									<span uk-icon="icon: chevron-down
+									<span class="icon" uk-icon="icon: chevron-down
 									; ratio: 1.5"></span>
 								</h5>
 							</div>
@@ -171,29 +171,51 @@
 									</div>
 								</div>
 							</div>
-
-							<p class="uk-text-right">
-								<a class="uk-button uk-button-primary">Next</a>
-							</p>
+							<div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+								<label><input class="uk-checkbox" type="checkbox" checked> I have read and agree to the
+									<a href="/insight/static/pdf/end-user-terms.pdf" target="_blank" title="A PDF with our full end user terms and conditions">Terms and Conditions</a>
+									<span>and</span>
+									<a href="/insight/site-policies" target="_blank" title="Our site policies page">Privacy Policy</a>.</label>
+								</div>
+								<p class="uk-text-right">
+									<a href="#modal-next" id="register" class="uk-button uk-button-primary" uk-toggle>Register</a>
+								</p>
+							</div>
 						</div>
-					</div>
-				</fieldset>
-			</form>
+					</fieldset>
+				</form>
+			</div>
 		</div>
-	</div>
-	<script src="js/uikit.min.js"></script>
-	<script src="js/uikit-icons.min.js"></script>
-	<script src="js/jquery.js"></script>
-	<script type="text/javascript" src="slick/slick.min.js"></script>
-	<script src="js/plugin.js"></script>
-	<script type="text/javascript" charset="utf-8" async defer>
-	$(document).ready(function(){
-		$('form').find('.according-parent:first').siblings().find('.according').slideUp();
-		$('from .next').click(function(event) {
-			/* Act on the event */
-			$(this).parents('.according-parent').find('.according').slideUp('slow');
+		<script src="js/uikit.min.js"></script>
+		<script src="js/uikit-icons.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript" src="slick/slick.min.js"></script>
+		<script src="js/plugin.js"></script>
+		<script type="text/javascript" charset="utf-8" async defer>
+		$(document).ready(function(){
+			$('form').find('.according-parent:first').siblings().find('.according').slideUp();
+			$('form .next').click(function(event) {
+				/* Act on the event */
+				$(this).parents('.according-parent').find('.according').slideUp('slow');
+				$(this).parents('.according-parent').next().find('.according').slideDown('slow');
+			});
+			$('.collapse').click(function(event) {
+				$(this).parent().find('.according').slideToggle('slow');
+			});
+
 		});
-	});
-	</script>
-</body>
-</html>
+		</script>
+		<!-- This is the modal -->
+		<div id="modal-next" class="uk-flex-top" uk-modal="bg-close:false">
+			<div class="uk-modal-dialog uk-modal-body">
+				<h2 class="uk-modal-title">‫‪Registering‬‬ Done</h2>
+				<p>
+					Thank‬‬ ‫‪you‬‬ ‫‪for‬‬ ‫‪registering‬‬ ‫‪on‬‬ ‫‪the‬‬ ‫‪journal,‬‬ ‫‪your‬‬ ‫‪personal‬‬ information‬‬ ‫‪was‬‬ sent‬‬ ‫‪to‬‬ ‫‪your‬‬ ‫‪email,‬‬ ‫‪in‬‬ ‫‪the‬‬ ‫‪next‬‬ ‫‪step,‬‬ ‫‪please‬‬ ‫‪upload‬‬ ‫‪your‬‬ ‫‪papers,‬‬ ‫‪and‬‬ ‫‪check‬‬ your‬‬ ‫‪email‬‬ ‫‪addresses‬‬
+				</p>
+				<p class="uk-text-right">
+					<button class="uk-button uk-button-primary" type="button">Next</button>
+				</p>
+			</div>
+		</div>
+	</body>
+	</html>
