@@ -2,110 +2,306 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>AbdulRasol</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Cabin|Heebo|Josefin+Sans|Lato|Montserrat|Open+Sans|Oxygen&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/3500a49cf7.js" crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AbdulRasol Coder</title>
+	<!--<style>
+		@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+	</style>-->
+	<link rel="icon" href="images/My Logo.png">
+
+	<link rel="stylesheet" href="css/uikit.min.css"/>
+	<link rel="stylesheet" href="css/style.css" />
 </head>
+<body style="height: 1000px">
+	<nav class="nav">
+		<div class="logo-container">
+			<span class="logo">AbdulRasol <span>Al-Hilo</span></span> 
+		</div>
+	</nav>
+	<div class="navbar-container">
+		<div class="navbar">
+			<div class="navbar-control uk-grid-small" uk-grid>
+				<div class="uk-width-auto ">
+					<span id="mobile-nav-btn" class="uk-icon" uk-icon="icon:menu;ratio :3">
+					</span>
+				</div>
+				<div class="text">
+					<span>
+						Dot.IT
+					</span>
+				</div>
+			</div>
+			<div class="navbar-list">
+				<ul class="uk-list">
+					<li data-id="home" class="uk-padding-small active">Home</li>
+					<li data-id="about-me" class="uk-padding-small">About Me</li>
+					<li data-id="servies" class="uk-padding-small">Servies</li>
+					<li data-id="portfolio" class="uk-padding-small">Portfolio</li>
+					<li data-id="contact-me" class="uk-padding-small">Contact Me</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id='home' class="uk-padding">
+		<div class="uk-container">
+			<div class="uk-flex uk-flex-center uk-flex-middle center-s" uk-grid>
+				<div class="feature uk-width-1-3@s ">
+					<h3 class="">Freelancer</h3>
+					<p>
+						Quick Deploy, Fast Develpoment, Always Online to listen to You, keep simple & efficient...
+					</p>
+				</div>
+				<div class="feature uk-width-1-3@s">
+					<h3>Competitve Prices</h3>
+					<p>
+						Pay only for what jobs are accompilshed, And More Free Support...
+					</p>
+				</div>
+				<div class="feature uk-width-1-3@s">
+					<h3>Experts</h3>
+					<p>
+						Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="about-me" class="about-me">
+		<div class="uk-container">
+			<div class="uk-flex uk-flex-middle uk-flex-center uk-child-width-auto@s" uk-grid>
+				<div class="about-img">
+					<img class="uk-border-circle" src="images/img.png" alt="abdulrasol">
+				</div>
+				<div class="about-name uk-text-center">
+					<h2 class="uk-margin-small">AbdulRasol S. Al-Hilo</h2>
+					<h3 class="uk-margin-small">Full Stack Developer</h3>
+					<div class="uk-width-1-1 uk-text-center uk-margin-top">
+						<span id="move-to-skills" class="uk-icon-button  uk-margin-small-right" uk-icon="icon:chevron-down">
+						</span>	
+					</div>
+				</div>
+			</div>
 
-<body>
+			<div id="skills" class="skills uk-flex uk-flex-middle uk-flex-center uk-child-width-1-2@s" uk-grid>
+				<div class="skill">
+					<p>html & css</p>
+					<div class="skill-bar uk-box-shadow-medium">
+						<span class="prec uk-display-block">90%</span>
+					</div>
+				</div>
+				<div class="skill">
+					<p>JS & jQuery</p>
+					<div class="skill-bar uk-box-shadow-medium">
+						<span class="prec uk-display-block">80%</span>
+					</div>
+				</div>
+				<div class="skill">
+					<p>Python</p>
+					<div class="skill-bar uk-box-shadow-medium">
+						<span class="prec uk-display-block">80%</span>
+					</div>
+				</div>
+				<div class="skill">
+					<p>Django Framework</p>
+					<div class="skill-bar uk-box-shadow-medium">
+						<span class="prec uk-display-block">90%</span>
+					</div>
+				</div>
+			</div>
+			<div class="uk-flex uk-flex-middle uk-flex-center cv">
+				<button class="uk-box-shadow-small">
+					Download CV
+				</button>
+			</div>
+		</div>
+	</div>
+	<div id="servies" class="servies">
+		<div class="uk-container">
+			<div class="uk-text-center">
+				<div class="uk-flex uk-flex-center" uk-grid>
+					<div class="serv">
+						<h2>Designs</h2>
+						<h4>Website & Graphics Design</h4>
+						<div class="img-container">
+							<img src="images/servies/01.png">
+						</div>
+					</div>
+					<div class="serv">
+						<h2>Websites</h2>
+						<h4>Website Coding for all Purpose</h4>
+						<div class="img-container">
+							<img src="images/servies/05.jpg">
+						</div>
+					</div>
 
-    <!-- Header -->
+					<div class="serv">
+						<h2>Online Marketing</h2>
+						<h4>Social Media Advertising</h4>
+						<div class="img-container">
+							<img src="images/servies/07.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="portfolio" class="port">
+		<div class="uk-container">
+			<h2 class="center-s section-title">My Works</h2>
+			<div id='shuflle'>
+				<ul class="filter-tags">
+					<li data-filter="all" class="active" uk-filter-control>All</li>
+					<li data-filter="tag-web">Web Development</li>
+					<li data-filter="tag-design">Graphics Design</li>
+					<li data-filter="tag-other">Others</li>
+				</ul>
+				<ul class="filter uk-flex uk-flex-center uk-child-width-auto@s uk-text-center" uk-grid>
+					<li filter="tag-design" class="tag-web">
+						<div class="item">
+							<img src="images/ports/d01.png" alt="Img">
+							<a href="https://suar.me/Q28mK" target="_blank">
+								<div class="overlay uk-animation-fade">
+									<span>Logo Design</span>
+									<span>Visit</span>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li filter="tag-web" class="tag-ads">
+						<div class="item">
+							<img src="images/ports/w02.png" alt="Img">
+							<a>
+								<div class="overlay uk-animation-fade">
+									<span>Spimebook, site for readers</span>
+									<span>Visit</span>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li filter="tag-design" class="tag-web">
+						<div class="item">
+							<img src="images/ports/d02.png" alt="Img">
+							<a href="https://suar.me/Q28mK" target="_blank">
+								<div class="overlay uk-animation-fade">
+									<span>Logo Design for Customuers</span>
+									<span>Visit</span>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li filter="tag-design" class="tag-web">
+						<div class="item">
+							<img src="images/ports/d03.png" alt="Img">
+							<a href="https://suar.me/Q28mK" target="_blank">
+								<div class="overlay uk-animation-fade">
+									<span>Logo Design for Customuers</span>
+									<span>Visit</span>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li filter="tag-other" class="tag-web">
+						<div class="item">
+							<img src="images/ports/o01.jpg" alt="Img">
+							<a href="https://suar.me/ezled" target="_blank">
+								<div class="overlay uk-animation-fade">
+									<span>CV & Resume Design</span>
+									<span>View More</span>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li filter="tag-web" class="tag-web">
+						<div class="item">
+							<img src="images/01.jpg" alt="Img">
+							<a>
+								<div class="overlay uk-animation-fade">
+									<span>Spimebook, site for readers</span>
+									<span>Visit</span>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li filter="tag-web" class="tag-ads">
+						<div class="item">
+							<img src="images/04.jpg" alt="Img">
+							<a>
+								<div class="overlay uk-animation-fade">
+									<span>Spimebook, site for readers</span>
+									<span>Visit</span>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li filter="tag-design" class="tag-design">
+						<div class="item">
+							<img src="images/01.jpg" alt="Img">
+							<a>
+								<div class="overlay uk-animation-fade">
+									<span>Spimebook, site for readers</span>
+									<span>Visit</span>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li filter="tag-web" class="tag-web">
+						<div class="item">
+							<img src="images/servies/02.jpg" alt="Img">
+							<a>
+								<div class="overlay uk-animation-fade">
+									<span>Spimebook, site for readers</span>
+									<span>Visit</span>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="contact-me" class="contact">
+		<div class="uk-container">
+			<h2 class="section-title">Contact Me</h2>
+			<div class="uk-flex uk-flex-middle uk-child-width-1-2@s" uk-grid>
+				<div class="form">
+					<form class="center-s">
+						<input class="uk-input" type="text" name="name" value="" placeholder="Your Name">
+						<input class="uk-input" type="email" name="email" value="" placeholder="Your Email">
+						<textarea class="uk-textarea" placeholder="Your Messege.." rows="5"></textarea>
+						<button type="submet">Send</button>
+					</form>
+				</div>
+				<div class="request uk-text-center">
+					<h2 class="">OR</h2>
+					<h3 class="">Request Servies</h3>
+					<div class="uk-width-1-1 uk-text-center uk-margin-top">
+						<span id="move-to-skills" class="uk-icon-button  uk-margin-small-right" uk-icon="icon:cart">
+						</span>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <header>
-        <div class="container">
-            <img src="images/profile-1.jpg">
-            <h2 style="color:#7964cb">Hi, I'm AbdulRasol</h2>
-            <h2 style="color:#f3efef">Mechanical Engineer & IT </h2>
-        </div>
-    </header>
-
-    <!-- End Header -->
-
-    <!-- Main Content // Cards -->
-    <div class="cards">
-        <div class="container warp">
-            <div class="card easy">
-                <h2>Easy Profile</h2>
-                <h1>AbdulRasol S. Al-Hilo</h1>
-                <p>I'm 23 years from Najaf, I studied the techniques of automotive mechanics engineering at technical college in Najaf, I have graduated by getting the first rank. I'm good at work in the computer, engineering and office programs, as well
-                    as working in a team. also, I'm a web developer at my rest time. usually, build sites for personal uses.</p>
-            </div>
-            <div class="card skills">
-                <ul>
-                    <h2>Skills</h2>
-                    <li>
-                        <h4>HTML & CSS</h4>
-                        <h4>60%</h4>
-                        <h4>85%</h4>
-                        <div> <span>
-                                <!-- Bar --></span></div>
-                    </li>
-                    <li>
-                        <h4>Python & Django</h4>
-                        <h4>65%</h4>
-                        <div><span>
-                                <!-- Bar --></span></div>
-                    </li>
-                    <li>
-                        <h4>photoshop</h4>
-                        <div><span>
-                                <!-- Bar --></span></div>
-                    </li>
-                </ul>
-            </div>
-            <div class="card edu">
-                <h2>Education</h2>
-                <h1>Automotive Engineering</h1>
-                <div>
-                    <h4>Technical College of Engineering / Najaf</h4>
-                    <h4>Dec 2015 - Jul 2019</h4>
-                </div>
-                <p>Bachelor of Automotive Engineering from the Technical College of Engineering / Najaf Al-Furat Al-Awsat Technical University, Where I have graduated by getting the first rank.and 81.765 rate.</p>
-            </div>
-            <div class="card lang">
-                <h2>Languages</h2>
-                <ul>
-                    <li>Arabic</li>
-                    <h6>Arabic is Native language of me</h6>
-                    <li>Engilsh</li>
-                    <h6>Good listening and writing skills and talking </h6>
-                </ul>
-            </div>
-            <div class="card contact">
-                <h2>Contact Me</h2>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i>Rahmah, Najaf, Iraq</li>
-                    <li><i class="fas fa-phone-alt"></i><a href="#">+964 770 093 7034</a></li>
-                    <li><i class="fas fa-envelope"></i><a href="#">abdulrsol97@gmail.com</a></li>
-                    <li><i class="fas fa-globe-africa"></i><a href="#">www.abdularsol.github.io</a></li>
-                </ul>
-            </div>
-            <div class="card exp"></div>
-        </div>
-    </div>
-
-    <!-- Main Content // Cards -->
-
-    <!-- Footer -->
-
-    <footer>
-        <h3>Copyright © 2020 AbdulRasol</h3>
-        <ul>
-
-            <!-- Social Link -->
-            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-github"></i></a></li>
-
-        </ul>
-        <h5>This HTML5/CSS3 template design by someone and recoded by me!</h5>
-    </footer>
-    <!-- End Footer -->
+	<footer class="uk-text-center">
+		<div class="uk-flex uk-flex-center uk-flex-middle">
+			<a href="https://fb.com/dot.it" target="_black" title="Facebook">
+				<span class="uk-icon" uk-icon='icon:facebook;ratio:1.5'>
+				</span>
+			</a>
+			<a href="" title=""><span class="uk-icon" uk-icon='icon:instagram;ratio:1.5'></span></a>
+			<a href="" title=""><span class="uk-icon" uk-icon='icon:github;ratio:1.5'></span></a>
+			<a href="" title=""><span class="uk-icon" uk-icon='icon:youtube;ratio:1.5'></span></a>
+		</div>
+		<div class="uk-width-1-1">
+			<p>Made with <span uk-icon='heart'></span> and Hard Working - Copyrigth 2020 <span class="logo">Dot.IT</span></p>
+		</div>
+	</footer>
+	<script src="js/uikit.min.js"></script>
+	<script src="js/uikit-icons.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/plugin.js"></script>
 </body>
-
 </html>
