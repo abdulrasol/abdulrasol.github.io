@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Star, Users } from "lucide-react";
+import { ExternalLink, Github, Star, Users, Play } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -9,12 +9,24 @@ const Projects = () => {
   
   const projects = [
     {
+      title: "Madarik: Knowledge Journey",
+      description: "An engaging and educational quiz game designed to test and expand your knowledge with a focus on Islamic history and culture. Journey through levels, unlock achievements, and compete globally.",
+      image: "/madarik_logo.png",
+      technologies: ["Flutter", "Dart", "Riverpod", "Hive"],
+      githubUrl: "https://github.com/abdulrasol/madarik_knowledge_jounrny",
+      liveUrl: "https://abdulrasol.github.io/#madarik",
+      googlePlayUrl: "#",
+      featured: true,
+      stats: { stars: 0 }
+    },
+    {
       title: "Store Management",
       description: "Store Management App is your all-in-one solution for effortless store management. Track inventory, manage invoices, analyze sales, and stay connected with customers and suppliers. Simplify your business operations and boost your profits today!.",
       image: "/app_store_managment.png",
       technologies: ["Flutter", "Dart", "Getx", "ObjectBox"],
       githubUrl: "https://github.com/abdulrasol/store_management",
       liveUrl: null,
+      googlePlayUrl: "https://play.google.com/store/apps/details?id=io.github.abdulrasol.store_mangment",
       featured: true,
       stats: { stars: 4 }
     },
@@ -180,7 +192,20 @@ const Projects = () => {
                     >
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-4 h-4 mr-2" />
-                        {t('projects.liveDemo')}
+                        {project.title === "Madarik: Knowledge Journey" ? "Landing Page" : t('projects.liveDemo')}
+                      </a>
+                    </Button>
+                  )}
+                  
+                  {project.googlePlayUrl && (
+                    <Button
+                      size="sm"
+                      className="flex-1 bg-accent hover:opacity-90"
+                      asChild
+                    >
+                      <a href={project.googlePlayUrl} target="_blank" rel="noopener noreferrer">
+                        <Play className="w-4 h-4 mr-2" />
+                        Google Play
                       </a>
                     </Button>
                   )}
