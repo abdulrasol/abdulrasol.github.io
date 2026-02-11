@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madarik: Knowledge Journey | مدارك: رحلة المعرفة</title>
+    <meta name="description" content="Embark on an epic quiz journey! Test your knowledge, earn rewards & compete globally. | انطلق في رحلة ملحمية من المعرفة! اختبر ثقافتك، اربح الجوائز، وتصدر القائمة.">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #f59e0b;
+            --accent: #10b981;
+            --bg: #0f172a;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --card-bg: rgba(30, 41, 59, 0.7);
+        }
+
+        [dir="rtl"] {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', 'Cairo', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .lang-switch {
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            border: none;
+            color: white;
+            background: var(--primary);
+        }
+
+        .lang-switch:hover {
+            transform: scale(1.05);
+            background: var(--primary-dark);
+        }
+
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            margin: 1rem 0;
+            color: var(--secondary);
+        }
+
+        .screenshots {
+            overflow: hidden;
+        }
+
+        .screenshots-scroll {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem 0;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+        }
+
+        .screenshots-scroll img {
+            height: 500px;
+            border-radius: 2rem;
+            scroll-snap-align: center;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+            font-size: 1.5rem;
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+        }
+
+        footer {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ar { display: none; }
+
+        body.lang-ar {
+            direction: rtl;
+        }
+        body.lang-ar .en { display: none; }
+        body.lang-ar .ar { display: block; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .screenshots-scroll img { height: 400px; }
+        }
+    </style>
+</head>
+<body id="body">
+    <header class="glass">
+        <div class="logo">
+            <img src="/logo.png" alt="Madarik Logo">
+            <span class="en">Madarik</span>
+            <span class="ar">مدارك</span>
+        </div>
+        <button class="lang-switch" onclick="toggleLang()">
+            <span class="en">العربية</span>
+            <span class="ar">English</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 class="en">Knowledge Journey</h1>
+            <h1 class="ar">رحلة المعرفة</h1>
+            <p class="en">Embark on an epic quiz journey! Test your knowledge across Islamic history, science, and more. Compete globally and unlock achievements.</p>
+            <p class="ar">انطلق في رحلة ملحمية من المعرفة! اختبر ثقافتك في التاريخ الإسلامي، العلوم، والمزيد. نافس عالمياً واجمع الإنجازات.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">
+                    <span class="en">Download on Google Play</span>
+                    <span class="ar">تحميل من Google Play</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2 class="en" style="text-align: center;">Amazing Features</h2>
+            <h2 class="ar" style="text-align: center;">مميزات رائعة</h2>
+            <div class="features-grid">
+                <div class="feature-card glass">
+                    <span style="font-size: 2rem;">🗺️</span>
+                    <h3 class="en">Interactive Roadmap</h3>
+                    <h3 class="ar">خارطة تفاعلية</h3>
+                    <p class="en">Progress through structured stages, unlocking new levels as you master previous ones.</p>
+                    <p class="ar">تقدم عبر مراحل منظمة، وافتح مستويات جديدة كلما أتقنت السابقة.</p>
+                </div>
+                <div class="feature-card glass">
+                    <span style="font-size: 2rem;">🧠</span>
+                    <h3 class="en">Diverse Categories</h3>
+                    <h3 class="ar">فئات متنوعة</h3>
+                    <p class="en">Culture, History, Science, and Geography - challenge yourself in every field.</p>
+                    <p class="ar">ثقافة، تاريخ، علوم، وجغرافيا - تحدَّ نفسك في كل المجالات.</p>
+                </div>
+                <div class="feature-card glass">
+                    <span style="font-size: 2rem;">🏆</span>
+                    <h3 class="en">Global Leaderboards</h3>
+                    <h3 class="ar">لوحة المتصدرين</h3>
+                    <p class="en">See your rank among the best minds worldwide and prove your dominance.</p>
+                    <p class="ar">شاهد ترتيبك بين أفضل العقول حول العالم وأثبت تفوقك.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="screenshots" class="screenshots">
+            <h2 class="en" style="text-align: center; margin-bottom: 2rem;">Game Screenshots</h2>
+            <h2 class="ar" style="text-align: center; margin-bottom: 2rem;">لقطات من اللعبة</h2>
+            <div class="screenshots-scroll">
+                <img src="/assets/madarik/home_page.jpg" alt="Home Screen">
+                <img src="/assets/madarik/roadmap_page.jpg" alt="Roadmap">
+                <img src="/assets/madarik/quiz_page.jpg" alt="Quiz">
+                <img src="/assets/madarik/aheveiments_page.jpg" alt="Achievements">
+            </div>
+        </section>
+
+        <section id="connect">
+            <h2 class="en" style="text-align: center;">Connect With Us</h2>
+            <h2 class="ar" style="text-align: center;">تواصل معنا</h2>
+            <div class="social-links">
+                <a href="#" title="Facebook">FB</a>
+                <a href="#" title="Instagram">IG</a>
+                <a href="https://github.com/abdulrasol" title="GitHub">GH</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass">
+        <p class="en">&copy; 2026 Abdulrasol - Madarik: Knowledge Journey. All rights reserved.</p>
+        <p class="ar">&copy; 2026 عبد الرسول - مدارك: رحلة المعرفة. جميع الحقوق محفوظة.</p>
+        <div style="margin-top: 1rem;">
+            <a href="/madarik/privacy_policy/" style="color: var(--primary); text-decoration: none;">
+                <span class="en">Privacy Policy</span>
+                <span class="ar">سياسة الخصوصية</span>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLang() {
+            const body = document.getElementById('body');
+            body.classList.toggle('lang-ar');
+            const isAr = body.classList.contains('lang-ar');
+            document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+            document.documentElement.lang = isAr ? 'ar' : 'en';
+        }
+    </script>
+</body>
+</html>
