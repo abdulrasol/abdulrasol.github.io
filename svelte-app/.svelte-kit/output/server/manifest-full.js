@@ -10,7 +10,7 @@ return {
 	assets: new Set(["app_store_managment.png","logo.png","madarik_banar.png","madarik_logo.png","placeholder.svg"]),
 	mimeTypes: {".png":"image/png",".svg":"image/svg+xml"},
 	_: {
-		client: {start:"_app/immutable/entry/start.DmjS0Cf5.js",app:"_app/immutable/entry/app.DuqUB4BH.js",imports:["_app/immutable/entry/start.DmjS0Cf5.js","_app/immutable/chunks/nqsHTWCS.js","_app/immutable/chunks/BAGG94wi.js","_app/immutable/entry/app.DuqUB4BH.js","_app/immutable/chunks/BAGG94wi.js","_app/immutable/chunks/IXiYDxfQ.js","_app/immutable/chunks/B5x0efmV.js","_app/immutable/chunks/BnPNT7l0.js","_app/immutable/chunks/2a7XO0a2.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
+		client: {start:"_app/immutable/entry/start.CdK-efLo.js",app:"_app/immutable/entry/app.CFMBQ7fj.js",imports:["_app/immutable/entry/start.CdK-efLo.js","_app/immutable/chunks/DcdbdKQC.js","_app/immutable/chunks/BAGG94wi.js","_app/immutable/entry/app.CFMBQ7fj.js","_app/immutable/chunks/BAGG94wi.js","_app/immutable/chunks/IXiYDxfQ.js","_app/immutable/chunks/B5x0efmV.js","_app/immutable/chunks/BnPNT7l0.js","_app/immutable/chunks/2a7XO0a2.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
