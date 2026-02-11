@@ -11,10 +11,10 @@ const Projects = () => {
     {
       title: "Madarik: Knowledge Journey",
       description: "An engaging and educational quiz game designed to test and expand your knowledge with a focus on Islamic history and culture. Journey through levels, unlock achievements, and compete globally.",
-      image: "/madarik_logo.png",
+      image: "/madarik_banar.png",
       technologies: ["Flutter", "Dart", "Riverpod", "Hive"],
       githubUrl: "https://github.com/abdulrasol/madarik_knowledge_jounrny",
-      liveUrl: "https://abdulrasol.github.io/#madarik",
+      liveUrl: "/madarik/",
       googlePlayUrl: "#",
       featured: true,
       stats: { stars: 0 }
@@ -178,7 +178,7 @@ const Projects = () => {
                     className="flex-1 border-primary/30 text-primary hover:bg-primary/10"
                     asChild
                   >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <a href={project.githubUrl}>
                       <Github className="w-4 h-4 mr-2" />
                       {t('projects.code')}
                     </a>
@@ -190,7 +190,7 @@ const Projects = () => {
                       className="flex-1 bg-hero-gradient hover:shadow-glow"
                       asChild
                     >
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <a href={project.liveUrl}>
                         <ExternalLink className="w-4 h-4 mr-2" />
                         {project.title === "Madarik: Knowledge Journey" ? "Landing Page" : t('projects.liveDemo')}
                       </a>
@@ -203,7 +203,7 @@ const Projects = () => {
                       className="flex-1 bg-accent hover:opacity-90"
                       asChild
                     >
-                      <a href={project.googlePlayUrl} target="_blank" rel="noopener noreferrer">
+                      <a href={project.googlePlayUrl}>
                         <Play className="w-4 h-4 mr-2" />
                         Google Play
                       </a>

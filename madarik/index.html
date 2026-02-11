@@ -1,322 +1,490 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madarik: Knowledge Journey | مدارك: رحلة المعرفة</title>
-    <meta name="description" content="Embark on an epic quiz journey! Test your knowledge, earn rewards & compete globally. | انطلق في رحلة ملحمية من المعرفة! اختبر ثقافتك، اربح الجوائز، وتصدر القائمة.">
-    <link rel="icon" type="image/png" href="/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <title>مدارك: رحلة المعرفة</title>
+    <meta name="description" content="انطلق في رحلة ملحمية من المعرفة! اختبر ثقافتك في التاريخ الإسلامي، العلوم، والمزيد. نافس عالمياً واجمع الإنجازات.">
+    <link rel="icon" type="image/png" href="/assets/madarik/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1e40af;
-            --secondary: #f59e0b;
-            --accent: #10b981;
-            --bg: #0f172a;
-            --text: #f8fafc;
+            --primary: #f59e0b;
+            --primary-dark: #d97706;
+            --accent: #3b82f6;
+            --accent-dark: #1d4ed8;
+            --bg-dark: #0a0e1a;
+            --bg-section: #0f1629;
+            --card-bg: rgba(15, 22, 41, 0.85);
+            --text: #f1f5f9;
             --text-muted: #94a3b8;
-            --card-bg: rgba(30, 41, 59, 0.7);
+            --green: #10b981;
+            --border: rgba(255, 255, 255, 0.08);
         }
 
-        [dir="rtl"] {
-            font-family: 'Cairo', sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'Outfit', 'Cairo', sans-serif;
-            background-color: var(--bg);
+            font-family: 'Cairo', sans-serif;
+            background: var(--bg-dark);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.8;
             overflow-x: hidden;
         }
 
-        .glass {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* ===== Animations ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(245, 158, 11, 0.6); }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .animate-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        .delay-1 { animation-delay: 0.15s; }
+        .delay-2 { animation-delay: 0.3s; }
+        .delay-3 { animation-delay: 0.45s; }
+        .delay-4 { animation-delay: 0.6s; }
 
+        /* ===== Header ===== */
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            z-index: 1000;
+            z-index: 100;
             padding: 1rem 2rem;
+            background: rgba(10, 14, 26, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+        .logo-area {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
-
-        .logo img {
-            height: 40px;
+        .logo-area img {
+            height: 42px;
+            border-radius: 10px;
         }
-
-        .lang-switch {
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: bold;
-            border: none;
-            color: white;
-            background: var(--primary);
+        .logo-area span {
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
-        .lang-switch:hover {
-            transform: scale(1.05);
-            background: var(--primary-dark);
+        header nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            font-weight: 600;
+            transition: color 0.3s;
         }
+        header nav a:hover { color: var(--primary); }
 
-        section {
-            padding: 6rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
+        /* ===== Hero ===== */
         .hero {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             text-align: center;
-            background: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+            padding: 8rem 2rem 4rem;
+            background:
+                radial-gradient(ellipse at 30% 20%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
+                var(--bg-dark);
+            position: relative;
+            overflow: hidden;
         }
-
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('/assets/madarik/banar.png') center/cover no-repeat;
+            opacity: 0.12;
+        }
+        .hero-content { position: relative; z-index: 2; }
+        .hero-logo {
+            width: 140px;
+            height: 140px;
+            border-radius: 28px;
+            margin-bottom: 2rem;
+            animation: float 4s ease-in-out infinite;
+            box-shadow: 0 20px 60px rgba(245, 158, 11, 0.25);
+        }
         .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #fff 0%, var(--primary) 100%);
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #fff 0%, var(--primary) 80%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        .hero p {
-            font-size: 1.25rem;
+        .hero .tagline {
+            font-size: 1.3rem;
             color: var(--text-muted);
-            max-width: 700px;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
         }
-
-        .cta-buttons {
+        .hero-buttons {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
             justify-content: center;
         }
 
+        /* ===== Buttons ===== */
         .btn {
-            padding: 0.75rem 2rem;
-            border-radius: 0.75rem;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            padding: 0.85rem 2rem;
+            border-radius: 14px;
+            font-weight: 700;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
-
         .btn-primary {
-            background: var(--primary);
-            color: white;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
         }
-
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(245, 158, 11, 0.4);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--text);
+            border: 2px solid rgba(255,255,255,0.15);
+        }
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        .btn-green {
+            background: linear-gradient(135deg, var(--green), #059669);
+            color: #fff;
+        }
+        .btn-green:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(16, 185, 129, 0.4);
         }
 
+        /* ===== Section Title ===== */
+        section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* ===== Features ===== */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
         }
-
         .feature-card {
-            padding: 2rem;
-            border-radius: 1.5rem;
-            transition: transform 0.3s ease;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
         }
-
         .feature-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
+            border-color: rgba(245, 158, 11, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
-
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
         .feature-card h3 {
-            margin: 1rem 0;
-            color: var(--secondary);
-        }
-
-        .screenshots {
-            overflow: hidden;
-        }
-
-        .screenshots-scroll {
-            display: flex;
-            gap: 2rem;
-            padding: 2rem 0;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: thin;
-        }
-
-        .screenshots-scroll img {
-            height: 500px;
-            border-radius: 2rem;
-            scroll-snap-align: center;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            color: var(--text-muted);
-            transition: color 0.3s ease;
-            font-size: 1.5rem;
-        }
-
-        .social-links a:hover {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
             color: var(--primary);
         }
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
 
-        footer {
-            padding: 4rem 2rem;
+        /* ===== Screenshots ===== */
+        .screenshots-section {
+            background: var(--bg-section);
+            padding: 5rem 0;
+            max-width: 100%;
+        }
+        .screenshots-section .section-title,
+        .screenshots-section .screenshots-scroll {
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 2rem;
+        }
+        .screenshots-scroll {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 1rem;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) transparent;
+        }
+        .screenshots-scroll::-webkit-scrollbar { height: 6px; }
+        .screenshots-scroll::-webkit-scrollbar-track { background: transparent; }
+        .screenshots-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+        .screenshot-item {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            position: relative;
+        }
+        .screenshot-item img {
+            height: 480px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+        .screenshot-item img:hover {
+            transform: scale(1.03);
+        }
+        .screenshot-item .label {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(8px);
+            padding: 0.4rem 1rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* ===== Download ===== */
+        .download-section {
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 6rem 2rem;
+            background:
+                radial-gradient(ellipse at center, rgba(245, 158, 11, 0.06) 0%, transparent 60%);
+        }
+        .download-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .download-section p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        .download-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .ar { display: none; }
-
-        body.lang-ar {
-            direction: rtl;
+        /* ===== Footer ===== */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
-        body.lang-ar .en { display: none; }
-        body.lang-ar .ar { display: block; }
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        footer a:hover { text-decoration: underline; }
 
+        /* ===== Responsive ===== */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .screenshots-scroll img { height: 400px; }
+            header { padding: 0.75rem 1rem; }
+            header nav { display: none; }
+            .hero { padding: 7rem 1.5rem 3rem; }
+            .hero-logo { width: 100px; height: 100px; }
+            .screenshot-item img { height: 380px; }
+            .features-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
-<body id="body">
-    <header class="glass">
-        <div class="logo">
-            <img src="/logo.png" alt="Madarik Logo">
-            <span class="en">Madarik</span>
-            <span class="ar">مدارك</span>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="/assets/madarik/logo.png" alt="مدارك">
+            <span>مدارك</span>
         </div>
-        <button class="lang-switch" onclick="toggleLang()">
-            <span class="en">العربية</span>
-            <span class="ar">English</span>
-        </button>
+        <nav>
+            <a href="#features">المميزات</a>
+            <a href="#screenshots">لقطات</a>
+            <a href="#download">تحميل</a>
+        </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1 class="en">Knowledge Journey</h1>
-            <h1 class="ar">رحلة المعرفة</h1>
-            <p class="en">Embark on an epic quiz journey! Test your knowledge across Islamic history, science, and more. Compete globally and unlock achievements.</p>
-            <p class="ar">انطلق في رحلة ملحمية من المعرفة! اختبر ثقافتك في التاريخ الإسلامي، العلوم، والمزيد. نافس عالمياً واجمع الإنجازات.</p>
-            <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">
-                    <span class="en">Download on Google Play</span>
-                    <span class="ar">تحميل من Google Play</span>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="/assets/madarik/logo.png" alt="مدارك" class="hero-logo animate-in">
+            <h1 class="animate-in delay-1">مدارك: رحلة المعرفة</h1>
+            <p class="tagline animate-in delay-2">المعرفة رحلة... وأنت بطلّها! اختبر ثقافتك في التاريخ الإسلامي، العلوم، الجغرافيا والمزيد.</p>
+            <div class="hero-buttons animate-in delay-3">
+                <a href="#" class="btn btn-green">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    Google Play
+                </a>
+                <a href="https://github.com/abdulrasol/madarik_knowledge_jounrny" class="btn btn-outline">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
                 </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="features">
-            <h2 class="en" style="text-align: center;">Amazing Features</h2>
-            <h2 class="ar" style="text-align: center;">مميزات رائعة</h2>
-            <div class="features-grid">
-                <div class="feature-card glass">
-                    <span style="font-size: 2rem;">🗺️</span>
-                    <h3 class="en">Interactive Roadmap</h3>
-                    <h3 class="ar">خارطة تفاعلية</h3>
-                    <p class="en">Progress through structured stages, unlocking new levels as you master previous ones.</p>
-                    <p class="ar">تقدم عبر مراحل منظمة، وافتح مستويات جديدة كلما أتقنت السابقة.</p>
-                </div>
-                <div class="feature-card glass">
-                    <span style="font-size: 2rem;">🧠</span>
-                    <h3 class="en">Diverse Categories</h3>
-                    <h3 class="ar">فئات متنوعة</h3>
-                    <p class="en">Culture, History, Science, and Geography - challenge yourself in every field.</p>
-                    <p class="ar">ثقافة، تاريخ، علوم، وجغرافيا - تحدَّ نفسك في كل المجالات.</p>
-                </div>
-                <div class="feature-card glass">
-                    <span style="font-size: 2rem;">🏆</span>
-                    <h3 class="en">Global Leaderboards</h3>
-                    <h3 class="ar">لوحة المتصدرين</h3>
-                    <p class="en">See your rank among the best minds worldwide and prove your dominance.</p>
-                    <p class="ar">شاهد ترتيبك بين أفضل العقول حول العالم وأثبت تفوقك.</p>
-                </div>
+    <!-- Features -->
+    <section id="features">
+        <div class="section-title animate-in">
+            <h2>🌟 مميزات اللعبة</h2>
+            <p>تجربة تعليمية ممتعة مصممة لتحدّي عقلك وتوسيع معارفك</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card animate-in delay-1">
+                <span class="feature-icon">🗺️</span>
+                <h3>خارطة تفاعلية</h3>
+                <p>تقدم عبر مراحل منظمة وافتح مستويات جديدة كلما أتقنت السابقة في رحلة مثيرة.</p>
             </div>
-        </section>
-
-        <section id="screenshots" class="screenshots">
-            <h2 class="en" style="text-align: center; margin-bottom: 2rem;">Game Screenshots</h2>
-            <h2 class="ar" style="text-align: center; margin-bottom: 2rem;">لقطات من اللعبة</h2>
-            <div class="screenshots-scroll">
-                <img src="/assets/madarik/home_page.jpg" alt="Home Screen">
-                <img src="/assets/madarik/roadmap_page.jpg" alt="Roadmap">
-                <img src="/assets/madarik/quiz_page.jpg" alt="Quiz">
-                <img src="/assets/madarik/aheveiments_page.jpg" alt="Achievements">
+            <div class="feature-card animate-in delay-2">
+                <span class="feature-icon">🧠</span>
+                <h3>فئات متنوعة</h3>
+                <p>تاريخ إسلامي، علوم عامة، جغرافيا، أدب والمزيد - تحدَّ نفسك في كل المجالات.</p>
             </div>
-        </section>
-
-        <section id="connect">
-            <h2 class="en" style="text-align: center;">Connect With Us</h2>
-            <h2 class="ar" style="text-align: center;">تواصل معنا</h2>
-            <div class="social-links">
-                <a href="#" title="Facebook">FB</a>
-                <a href="#" title="Instagram">IG</a>
-                <a href="https://github.com/abdulrasol" title="GitHub">GH</a>
+            <div class="feature-card animate-in delay-3">
+                <span class="feature-icon">🏆</span>
+                <h3>لوحة المتصدرين</h3>
+                <p>نافس لاعبين من حول العالم واعرف ترتيبك بين أفضل العقول.</p>
             </div>
-        </section>
-    </main>
+            <div class="feature-card animate-in delay-1">
+                <span class="feature-icon">🏅</span>
+                <h3>نظام الإنجازات</h3>
+                <p>احصل على أوسمة ومكافآت عند إكمال المهام وإثبات خبرتك.</p>
+            </div>
+            <div class="feature-card animate-in delay-2">
+                <span class="feature-icon">👤</span>
+                <h3>ملف اللاعب</h3>
+                <p>خصص ملفك الشخصي بصور رمزية فريدة وتتبع تقدمك في الرحلة.</p>
+            </div>
+            <div class="feature-card animate-in delay-3">
+                <span class="feature-icon">🎨</span>
+                <h3>تصميم عصري</h3>
+                <p>واجهة مستخدم جذابة مستوحاة من الثقافة العربية تجعل التعلم ممتعاً.</p>
+            </div>
+        </div>
+    </section>
 
-    <footer class="glass">
-        <p class="en">&copy; 2026 Abdulrasol - Madarik: Knowledge Journey. All rights reserved.</p>
-        <p class="ar">&copy; 2026 عبد الرسول - مدارك: رحلة المعرفة. جميع الحقوق محفوظة.</p>
-        <div style="margin-top: 1rem;">
-            <a href="/madarik/privacy_policy/" style="color: var(--primary); text-decoration: none;">
-                <span class="en">Privacy Policy</span>
-                <span class="ar">سياسة الخصوصية</span>
+    <!-- Screenshots -->
+    <section class="screenshots-section" id="screenshots">
+        <div class="section-title animate-in">
+            <h2>📸 لقطات من اللعبة</h2>
+            <p>استكشف أجواء مدارك من خلال هذه اللقطات</p>
+        </div>
+        <div class="screenshots-scroll">
+            <div class="screenshot-item">
+                <img src="/assets/madarik/home_page.jpg" alt="الشاشة الرئيسية">
+                <span class="label">الرئيسية</span>
+            </div>
+            <div class="screenshot-item">
+                <img src="/assets/madarik/roadmap_page.jpg" alt="خارطة الطريق">
+                <span class="label">الخارطة</span>
+            </div>
+            <div class="screenshot-item">
+                <img src="/assets/madarik/quiz_page.jpg" alt="صفحة الأسئلة">
+                <span class="label">الأسئلة</span>
+            </div>
+            <div class="screenshot-item">
+                <img src="/assets/madarik/aheveiments_page.jpg" alt="الإنجازات">
+                <span class="label">الإنجازات</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download -->
+    <section class="download-section" id="download">
+        <h2 class="animate-in">📱 حمّل مدارك الآن</h2>
+        <p class="animate-in delay-1">انطلق في رحلتك نحو إتقان المعرفة!</p>
+        <div class="download-buttons animate-in delay-2">
+            <a href="#" class="btn btn-green" style="font-size:1.1rem; padding: 1rem 2.5rem;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                تحميل من Google Play
             </a>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 عبد الرسول الحلو - مدارك: رحلة المعرفة. جميع الحقوق محفوظة.</p>
+        <p style="margin-top: 0.75rem;">
+            <a href="/madarik/privacy_policy/">سياسة الخصوصية</a>
+            &nbsp;|&nbsp;
+            <a href="/">المعرض الشخصي</a>
+        </p>
     </footer>
 
     <script>
-        function toggleLang() {
-            const body = document.getElementById('body');
-            body.classList.toggle('lang-ar');
-            const isAr = body.classList.contains('lang-ar');
-            document.documentElement.dir = isAr ? 'rtl' : 'ltr';
-            document.documentElement.lang = isAr ? 'ar' : 'en';
-        }
+        // Simple scroll animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.animate-in').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+        // Allow hero animations to play immediately
+        document.querySelectorAll('.hero .animate-in').forEach(el => {
+            el.style.animationPlayState = 'running';
+        });
     </script>
 </body>
 </html>
