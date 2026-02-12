@@ -39,9 +39,11 @@ cd svelte-app
 ```bash
 cd ..
 cp svelte-app/build/index.html .
+cp svelte-app/build/404.html .
 cp -r svelte-app/build/_app .
 cp svelte-app/build/*.png .
 cp svelte-app/build/*.svg .
+touch .nojekyll # مهم جداً لتشغيل الـ CSS والـ JS
 ```
 
 ### 5. ادفع للـ GitHub | Push
