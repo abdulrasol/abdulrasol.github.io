@@ -88,7 +88,7 @@ export const translations = {
             users: 'مستخدم',
             code: 'الكود',
             liveDemo: 'عرض مباشر',
-            landingPage: 'الصفحة',
+            landingPage: 'صفحة الهبوط',
             googlePlay: 'Google Play'
         },
         contact: {

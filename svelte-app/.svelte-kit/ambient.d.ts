@@ -58,6 +58,7 @@ declare module '$env/static/private' {
 	export const GEMINI_CLI_IDE_AUTH_TOKEN: string;
 	export const QWEN_CODE_IDE_SERVER_PORT: string;
 	export const QWEN_CODE_IDE_WORKSPACE_PATH: string;
+	export const CLAUDE_CODE_SSE_PORT: string;
 	export const GIT_ASKPASS: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
@@ -132,6 +133,7 @@ declare module '$env/dynamic/private' {
 		GEMINI_CLI_IDE_AUTH_TOKEN: string;
 		QWEN_CODE_IDE_SERVER_PORT: string;
 		QWEN_CODE_IDE_WORKSPACE_PATH: string;
+		CLAUDE_CODE_SSE_PORT: string;
 		GIT_ASKPASS: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;

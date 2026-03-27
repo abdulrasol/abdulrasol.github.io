@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>قارئ الـ Multimeter الذكي | Smart Multimeter Reader</title>
-    <meta name="description" content="اقرأ بيانات الـ Multimeter تلقائياً بالذكاء الاصطناعي - سريع، دقيق، وآمن تماماً.">
+    <meta name="description" content="اقرأ بيانات الـ Multimeter تلقائياً بالذكاء الاصطناعي - سريع، دقيق، وآمن تماماً. | AI-powered multimeter reader - Auto capture, OCR recognition, offline & private.">
     <link rel="icon" type="image/png" href="/assets/meter_log/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -29,7 +29,14 @@
             color: var(--text);
             line-height: 1.8;
             overflow-x: hidden;
+            transition: background 0.3s;
         }
+
+        /* Bilingual Toggle */
+        [lang="en"] { direction: ltr; }
+        [lang="ar"] { direction: rtl; }
+        [lang="en"] .ar { display: none !important; }
+        [lang="ar"] .en { display: none !important; }
 
         /* ===== Animations ===== */
         @keyframes fadeInUp {
@@ -77,6 +84,18 @@
             color: var(--primary);
         }
 
+        .lang-toggle {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .lang-toggle:hover { background: rgba(0, 229, 255, 0.1); border-color: var(--primary); }
+
         /* ===== Hero ===== */
         .hero {
             min-height: 90vh;
@@ -96,7 +115,7 @@
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background: url('/assets/poster.png') center/cover no-repeat;
-            opacity: 0.15;
+            opacity: 0.12;
             z-index: 0;
         }
         .hero-content { position: relative; z-index: 2; }
@@ -175,9 +194,12 @@
             overflow-x: auto;
             padding: 2rem 0;
             scroll-snap-type: x mandatory;
-            scrollbar-width: none;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) transparent;
         }
-        .screenshots-scroll::-webkit-scrollbar { display: none; }
+        .screenshots-scroll::-webkit-scrollbar { height: 6px; }
+        .screenshots-scroll::-webkit-scrollbar-track { background: transparent; }
+        .screenshots-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
         .screenshot-item { flex: 0 0 auto; scroll-snap-align: center; }
         .screenshot-item img {
             height: 450px;
@@ -195,25 +217,37 @@
         }
     </style>
 </head>
-<body>
+<body lang="ar">
 
     <header>
         <div class="logo-area">
             <img src="/assets/meter_log/logo.png" alt="Meter Log">
-            <span>Meter Log</span>
+            <span class="ar">ميتر لوغ</span>
+            <span class="en">Meter Log</span>
         </div>
+        <button class="lang-toggle" onclick="toggleLang()">
+            <span class="ar">English</span>
+            <span class="en">عربي</span>
+        </button>
     </header>
 
     <section class="hero">
         <div class="hero-banner"></div>
         <div class="hero-content">
             <img src="/assets/meter_log/logo.png" alt="Logo" class="hero-logo animate-in">
-            <h1 class="animate-in delay-1">قارئ الـ Multimeter الذكي</h1>
-            <p class="tagline animate-in delay-2">أول تطبيق ذكاء اصطناعي لقراءة بيانات أجهزة الـ Multimeter تلقائياً عبر الكاميرا. دقة عالية، أرشفة ذكية، وتقارير Excel فورية.</p>
+            <h1 class="animate-in delay-1">
+                <span class="ar">قارئ الـ Multimeter الذكي</span>
+                <span class="en">Smart Multimeter Reader</span>
+            </h1>
+            <p class="tagline animate-in delay-2">
+                <span class="ar">أول تطبيق ذكاء اصطناعي لقراءة بيانات أجهزة الـ Multimeter تلقائياً عبر الكاميرا. دقة عالية، أرشفة ذكية، وتقارير Excel فورية.</span>
+                <span class="en">The ultimate AI-powered tool for engineers and technicians. Automatically recognize readings, log data offline, and export professional reports.</span>
+            </p>
             <div class="animate-in delay-3">
-                <a href="#" class="btn btn-primary">
+                <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log" class="btn btn-primary">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
-                    قريباً على Google Play
+                    <span class="ar">تحميل من Google Play</span>
+                    <span class="en">Download on Google Play</span>
                 </a>
             </div>
         </div>
@@ -221,29 +255,39 @@
 
     <section id="features">
         <div class="section-title animate-in">
-            <h2>لماذا Meter Log؟</h2>
-            <p>الحل الأمثل للمهندسين والفنيين لتوثيق القراءات بسهولة</p>
+            <h2 class="ar">لماذا Meter Log؟</h2>
+            <h2 class="en">Why Meter Log?</h2>
+            <p class="ar">الحل الأمثل للمهندسين والفنيين لتوثيق القراءات بسهولة</p>
+            <p class="en">Optimized for productivity, accuracy, and complete privacy.</p>
         </div>
         <div class="features-grid">
             <div class="feature-card animate-in delay-1">
                 <span class="feature-icon">🤖</span>
-                <h3>ذكاء اصطناعي OCR</h3>
-                <p>تعرف تلقائي على الأرقام والوحدات بدقة فائقة بمجرد توجيه الكاميرا.</p>
+                <h3 class="ar">ذكاء اصطناعي OCR</h3>
+                <h3 class="en">AI-Powered OCR</h3>
+                <p class="ar">تعرف تلقائي على الأرقام والوحدات بدقة فائقة بمجرد توجيه الكاميرا.</p>
+                <p class="en">Advanced recognition of numbers and units under various lighting conditions.</p>
             </div>
             <div class="feature-card animate-in delay-2">
                 <span class="feature-icon">📸</span>
-                <h3>التقاط مجدول</h3>
-                <p>إمكانية برمجة التطبيق لالتقاط القراءات تلقائياً كل فترة زمنية محددة.</p>
+                <h3 class="ar">التقاط مجدول</h3>
+                <h3 class="en">Scheduled Capture</h3>
+                <p class="ar">إمكانية برمجة التطبيق لالتقاط القراءات تلقائياً كل فترة زمنية محددة.</p>
+                <p class="en">Automatically record readings at set intervals, even in the background.</p>
             </div>
             <div class="feature-card animate-in delay-3">
                 <span class="feature-icon">📁</span>
-                <h3>تصدير Excel/CSV</h3>
-                <p>حول قراءاتك إلى تقارير احترافية بضغطة زر واحدة لمشاركتها مع فريقك.</p>
+                <h3 class="ar">تصدير Excel/CSV</h3>
+                <h3 class="en">Enterprise Export</h3>
+                <p class="ar">حول قراءاتك إلى تقارير احترافية بضغطة زر واحدة لمشاركتها مع فريقك.</p>
+                <p class="en">Export your entire history to high-quality Excel and CSV files instantly.</p>
             </div>
             <div class="feature-card animate-in delay-1">
                 <span class="feature-icon">🔒</span>
-                <h3>خصوصية تامة</h3>
-                <p>يعمل بدون إنترنت تماماً، جميع بياناتك وصورك محفوظة محلياً على جهازك فقط.</p>
+                <h3 class="ar">خصوصية تامة</h3>
+                <h3 class="en">Privacy First</h3>
+                <p class="ar">يعمل بدون إنترنت تماماً، جميع بياناتك وصورك محفوظة محلياً على جهازك فقط.</p>
+                <p class="en">Works 100% offline. No accounts, no servers, no data collection.</p>
             </div>
         </div>
     </section>
@@ -251,7 +295,8 @@
     <section class="screenshots-section">
         <div class="screenshots-container">
             <div class="section-title">
-                <h2>لقطات من التطبيق</h2>
+                <h2 class="ar">لقطات من التطبيق</h2>
+                <h2 class="en">App Screenshots</h2>
             </div>
             <div class="screenshots-scroll">
                 <div class="screenshot-item"><img src="/assets/meter_log/screenshots/01.jpg" alt="Screen 1"></div>
@@ -266,14 +311,38 @@
     </section>
 
     <footer>
-        <p>© 2026 عبد الرسول الحلو. جميع الحقوق محفوظة.</p>
+        <p class="ar">© 2026 عبد الرسول الحلو. جميع الحقوق محفوظة.</p>
+        <p class="en">© 2026 AbdulRasol Al-Hilo. All rights reserved.</p>
         <p style="margin-top: 1rem;">
-            <a href="/meterlog/privacy_policy/">سياسة الخصوصية</a> | 
-            <a href="/">المعرض الشخصي</a>
+            <a href="/meterlog/privacy_policy/">
+                <span class="ar">سياسة الخصوصية</span>
+                <span class="en">Privacy Policy</span>
+            </a> | 
+            <a href="/">
+                <span class="ar">المعرض الشخصي</span>
+                <span class="en">Personal Portfolio</span>
+            </a>
         </p>
     </footer>
 
     <script>
+        function toggleLang() {
+            const body = document.body;
+            const current = body.getAttribute('lang');
+            const next = current === 'ar' ? 'en' : 'ar';
+            body.setAttribute('lang', next);
+            body.setAttribute('dir', next === 'ar' ? 'rtl' : 'ltr');
+            localStorage.setItem('meterlog_lang', next);
+        }
+
+        // Auto-detect or restore
+        const savedLang = localStorage.getItem('meterlog_lang');
+        if (savedLang) {
+            document.body.setAttribute('lang', savedLang);
+            document.body.setAttribute('dir', savedLang === 'ar' ? 'rtl' : 'ltr');
+        }
+
+        // Simple scroll animation observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {

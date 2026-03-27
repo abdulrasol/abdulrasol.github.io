@@ -34,7 +34,7 @@ export const projects = [
         technologies: ["Flutter", "Dart", "AI/OCR", "Isar Database"],
         githubUrl: "https://github.com/abdulrasol",
         liveUrl: "/meterlog/",
-        googlePlayUrl: "#",
+        googlePlayUrl: "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log",
         featured: true,
         stars: 0
     },
