@@ -45,6 +45,8 @@ declare module '$env/static/private' {
 	export const OLDPWD: string;
 	export const LANG: string;
 	export const ANDROID_HOME: string;
+	export const EDITOR: string;
+	export const PNPM_HOME: string;
 	export const PAGER: string;
 	export const ANTIGRAVITY_AGENT: string;
 	export const TERM_PROGRAM: string;
@@ -117,6 +119,8 @@ declare module '$env/dynamic/private' {
 		OLDPWD: string;
 		LANG: string;
 		ANDROID_HOME: string;
+		EDITOR: string;
+		PNPM_HOME: string;
 		PAGER: string;
 		ANTIGRAVITY_AGENT: string;
 		TERM_PROGRAM: string;

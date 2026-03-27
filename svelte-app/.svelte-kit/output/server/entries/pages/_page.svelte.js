@@ -73,6 +73,19 @@ function Skills($$renderer, $$props) {
 }
 const projects = [
   {
+    title_en: "Smart Multimeter Reader (Meter Log)",
+    title_ar: "قارئ الـ Multimeter الذكي (Meter Log)",
+    desc_en: "AI-powered multimeter reader with OCR recognition, scheduled auto capture, and professional Excel/CSV data export.",
+    desc_ar: "تطبيق ذكاء اصطناعي لقراءة بيانات أجهزة الـ Multimeter تلقائياً عبر الكاميرا مع ميزة الجدولة وتصدير التقارير بصيغ Excel و CSV.",
+    image: "/meter_log_banner.png",
+    technologies: ["Flutter", "Dart", "AI/OCR", "Isar Database"],
+    githubUrl: "https://github.com/abdulrasol",
+    liveUrl: "/meterlog/",
+    googlePlayUrl: "#",
+    featured: true,
+    stars: 0
+  },
+  {
     title_en: "Madarik: Knowledge Journey",
     title_ar: "مدارك: رحلة المعرفة",
     desc_en: "An engaging and educational quiz game designed to test and expand your knowledge with a focus on Islamic history and culture. Journey through levels, unlock achievements, and compete globally.",
