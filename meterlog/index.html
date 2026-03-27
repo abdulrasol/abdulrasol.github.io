@@ -32,11 +32,11 @@
             transition: background 0.3s;
         }
 
-        /* Bilingual Toggle */
-        [lang="en"] { direction: ltr; }
-        [lang="ar"] { direction: rtl; }
-        [lang="en"] .ar { display: none !important; }
-        [lang="ar"] .en { display: none !important; }
+        /* Bilingual Toggle Logic */
+        body.lang-en { direction: ltr; }
+        body.lang-ar { direction: rtl; }
+        body.lang-en .ar { display: none !important; }
+        body.lang-ar .en { display: none !important; }
 
         /* ===== Animations ===== */
         @keyframes fadeInUp {
@@ -190,13 +190,18 @@
         .screenshots-container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
         .screenshots-scroll {
             display: flex;
-            justify-content: center;
             gap: 1.5rem;
             overflow-x: auto;
-            padding: 2rem 0;
+            padding: 2rem 10%;
             scroll-snap-type: x mandatory;
             scrollbar-width: thin;
             scrollbar-color: var(--primary) transparent;
+        }
+        .screenshots-scroll::before,
+        .screenshots-scroll::after {
+            content: '';
+            flex: 1 0 0;
+            min-width: 0;
         }
         .screenshots-scroll::-webkit-scrollbar { height: 6px; }
         .screenshots-scroll::-webkit-scrollbar-track { background: transparent; }
@@ -329,19 +334,19 @@
     <script>
         function toggleLang() {
             const body = document.body;
-            const current = body.getAttribute('lang');
+            const current = body.classList.contains('lang-ar') ? 'ar' : 'en';
             const next = current === 'ar' ? 'en' : 'ar';
-            body.setAttribute('lang', next);
+            
+            body.classList.remove('lang-ar', 'lang-en');
+            body.classList.add('lang-' + next);
             body.setAttribute('dir', next === 'ar' ? 'rtl' : 'ltr');
             localStorage.setItem('meterlog_lang', next);
         }
 
         // Auto-detect or restore
-        const savedLang = localStorage.getItem('meterlog_lang');
-        if (savedLang) {
-            document.body.setAttribute('lang', savedLang);
-            document.body.setAttribute('dir', savedLang === 'ar' ? 'rtl' : 'ltr');
-        }
+        const savedLang = localStorage.getItem('meterlog_lang') || 'ar';
+        document.body.classList.add('lang-' + savedLang);
+        document.body.setAttribute('dir', savedLang === 'ar' ? 'rtl' : 'ltr');
 
         // Simple scroll animation observer
         const observer = new IntersectionObserver((entries) => {
