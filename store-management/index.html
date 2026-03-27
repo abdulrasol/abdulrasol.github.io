@@ -32,10 +32,17 @@
         }
 
         /* Bilingual Toggle Logic */
-        body.lang-en { direction: ltr; }
+        .ar, .en { display: none; }
+        body.lang-ar .ar { display: block; }
+        body.lang-en .en { display: block; }
+        
         body.lang-ar { direction: rtl; }
-        body.lang-en .ar { display: none !important; }
-        body.lang-ar .en { display: none !important; }
+        body.lang-en { direction: ltr; }
+
+        /* Mirrored 3D tilt for screenshots */
+        body.lang-ar .screenshot-item { transform: rotateY(15deg) scale(0.9); }
+        body.lang-en .screenshot-item { transform: rotateY(-15deg) scale(0.9); }
+        .screenshot-item:hover { transform: rotateY(0deg) scale(1.05) !important; }
 
         /* ===== Animations ===== */
         @keyframes fadeInUp {
@@ -48,7 +55,6 @@
         }
         .animate-in {
             animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0;
         }
         .delay-1 { animation-delay: 0.15s; }
         .delay-2 { animation-delay: 0.3s; }
@@ -452,35 +458,16 @@
             const body = document.body;
             const current = body.classList.contains('lang-ar') ? 'ar' : 'en';
             const next = current === 'ar' ? 'en' : 'ar';
-            
             body.classList.remove('lang-ar', 'lang-en');
             body.classList.add('lang-' + next);
-            body.setAttribute('dir', next === 'ar' ? 'rtl' : 'ltr');
             localStorage.setItem('sm_lang', next);
         }
 
         // Auto-detect or restore
         const browserLang = navigator.language.startsWith('ar') ? 'ar' : 'en';
         const savedLang = localStorage.getItem('sm_lang') || browserLang;
-
         document.body.classList.remove('lang-ar', 'lang-en');
         document.body.classList.add('lang-' + savedLang);
-        document.body.setAttribute('dir', savedLang === 'ar' ? 'rtl' : 'ltr');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                }
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.animate-in').forEach(el => {
-            el.style.animationPlayState = 'paused';
-            observer.observe(el);
-        });
-        document.querySelectorAll('.hero .animate-in').forEach(el => {
-            el.style.animationPlayState = 'running';
-        });
     </script>
 </body>
 </html>
