@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مدارك: رحلة المعرفة</title>
-    <meta name="description" content="انطلق في رحلة ملحمية من المعرفة! اختبر ثقافتك في التاريخ الإسلامي، العلوم، والمزيد. نافس عالمياً واجمع الإنجازات.">
+    <title>مدارك: رحلة المعرفة | Madarik: Knowledge Journey</title>
+    <meta name="description" content="انطلق في رحلة ملحمية من المعرفة! اختبر ثقافتك في التاريخ الإسلامي، العلوم، والمزيد. نافس عالمياً واجمع الإنجازات. | Explore the wonders of science and technology through an interactive educational journey.">
     <link rel="icon" type="image/png" href="/assets/madarik/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -12,7 +12,6 @@
             --primary: #f59e0b;
             --primary-dark: #d97706;
             --accent: #3b82f6;
-            --accent-dark: #1d4ed8;
             --bg-dark: #0a0e1a;
             --bg-section: #0f1629;
             --card-bg: rgba(15, 22, 41, 0.85);
@@ -30,7 +29,14 @@
             color: var(--text);
             line-height: 1.8;
             overflow-x: hidden;
+            transition: background 0.3s;
         }
+
+        /* Bilingual Toggle Logic */
+        body.lang-en { direction: ltr; }
+        body.lang-ar { direction: rtl; }
+        body.lang-en .ar { display: none !important; }
+        body.lang-ar .en { display: none !important; }
 
         /* ===== Animations ===== */
         @keyframes fadeInUp {
@@ -41,14 +47,6 @@
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(245, 158, 11, 0.6); }
-        }
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        }
         .animate-in {
             animation: fadeInUp 0.8s ease-out forwards;
             opacity: 0;
@@ -56,7 +54,6 @@
         .delay-1 { animation-delay: 0.15s; }
         .delay-2 { animation-delay: 0.3s; }
         .delay-3 { animation-delay: 0.45s; }
-        .delay-4 { animation-delay: 0.6s; }
 
         /* ===== Header ===== */
         header {
@@ -66,8 +63,7 @@
             z-index: 100;
             padding: 1rem 2rem;
             background: rgba(10, 14, 26, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
@@ -79,25 +75,29 @@
             gap: 0.75rem;
         }
         .logo-area img {
-            height: 42px;
-            border-radius: 10px;
+            height: 38px;
+            border-radius: 8px;
         }
         .logo-area span {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 800;
             background: linear-gradient(135deg, var(--primary), #fbbf24);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        header nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin: 0 0.75rem;
+
+        .lang-toggle {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
             font-weight: 600;
-            transition: color 0.3s;
+            transition: background 0.3s;
         }
-        header nav a:hover { color: var(--primary); }
+        .lang-toggle:hover { background: rgba(245, 158, 11, 0.1); border-color: var(--primary); }
 
         /* ===== Hero ===== */
         .hero {
@@ -108,34 +108,34 @@
             justify-content: center;
             text-align: center;
             padding: 8rem 2rem 4rem;
-            background:
-                radial-gradient(ellipse at 30% 20%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 80%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
                 var(--bg-dark);
             position: relative;
-            overflow: hidden;
         }
         .hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background: url('/assets/madarik/banar.png') center/cover no-repeat;
-            opacity: 0.12;
+            opacity: 0.15;
+            z-index: 0;
         }
         .hero-content { position: relative; z-index: 2; }
         .hero-logo {
-            width: 140px;
-            height: 140px;
+            width: 130px;
+            height: 130px;
             border-radius: 28px;
             margin-bottom: 2rem;
             animation: float 4s ease-in-out infinite;
-            box-shadow: 0 20px 60px rgba(245, 158, 11, 0.25);
+            box-shadow: 0 10px 40px rgba(245, 158, 11, 0.3);
         }
         .hero h1 {
             font-size: clamp(2.5rem, 7vw, 4.5rem);
             font-weight: 900;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #fff 0%, var(--primary) 80%);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff, var(--primary));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -143,48 +143,22 @@
         .hero .tagline {
             font-size: 1.3rem;
             color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            max-width: 600px;
+            margin-bottom: 3rem;
+            max-width: 650px;
         }
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        /* ===== Buttons ===== */
+        
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.85rem 2rem;
+            gap: 0.75rem;
+            padding: 1rem 2.2rem;
             border-radius: 14px;
             font-weight: 700;
-            font-family: 'Cairo', sans-serif;
-            font-size: 1rem;
+            font-size: 1.1rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            border: none;
             cursor: pointer;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: #fff;
-        }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(245, 158, 11, 0.4);
-        }
-        .btn-outline {
-            background: transparent;
-            color: var(--text);
-            border: 2px solid rgba(255,255,255,0.15);
-        }
-        .btn-outline:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            transform: translateY(-3px);
+            border: none;
         }
         .btn-green {
             background: linear-gradient(135deg, var(--green), #059669);
@@ -194,284 +168,278 @@
             transform: translateY(-3px);
             box-shadow: 0 12px 30px rgba(16, 185, 129, 0.4);
         }
-
-        /* ===== Section Title ===== */
-        section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
-        .section-title {
-            text-align: center;
-            margin-bottom: 3.5rem;
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.15);
         }
-        .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-        .section-title p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-3px);
         }
 
         /* ===== Features ===== */
+        section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 4rem; }
+        .section-title h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .section-title p { color: var(--text-muted); }
+
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
         .feature-card {
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 20px;
-            padding: 2.5rem 2rem;
+            padding: 2.5rem;
             text-align: center;
+            transition: all 0.3s;
             backdrop-filter: blur(8px);
-            transition: all 0.3s ease;
         }
-        .feature-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(245, 158, 11, 0.3);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        .feature-card h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
+        .feature-card:hover { transform: translateY(-7px); border-color: var(--primary); }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 1.2rem; display: block; }
+        .feature-card h3 { color: var(--primary); margin-bottom: 0.75rem; font-size: 1.4rem; }
+        .feature-card p { font-size: 1rem; color: var(--text-muted); }
 
-        /* ===== Screenshots ===== */
-        .screenshots-section {
-            background: var(--bg-section);
-            padding: 5rem 0;
-            max-width: 100%;
+        /* ===== Screenshots Redesign (Premium Device Frames) ===== */
+        .screenshots-section { 
+            background: radial-gradient(circle at center, #0f1629 0%, #0a0e1a 100%);
+            padding: 7rem 0; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; 
+            overflow: hidden;
         }
-        .screenshots-section .section-title,
-        .screenshots-section .screenshots-scroll {
-            max-width: 1100px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 2rem;
-        }
+        .screenshots-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
         .screenshots-scroll {
             display: flex;
-            gap: 1.5rem;
+            gap: 3rem;
             overflow-x: auto;
+            padding: 4rem 10%;
             scroll-snap-type: x mandatory;
-            padding-bottom: 1rem;
-            scrollbar-width: thin;
-            scrollbar-color: var(--primary) transparent;
+            scrollbar-width: none;
+            perspective: 1200px;
         }
-        .screenshots-scroll::-webkit-scrollbar { height: 6px; }
-        .screenshots-scroll::-webkit-scrollbar-track { background: transparent; }
-        .screenshots-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
-        .screenshot-item {
-            flex: 0 0 auto;
+        .screenshots-scroll::-webkit-scrollbar { display: none; }
+        
+        .screenshot-item { 
+            flex: 0 0 auto; 
             scroll-snap-align: center;
-            position: relative;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: rotateY(-20deg) scale(0.9);
+            filter: brightness(0.6);
         }
-        .screenshot-item img {
-            height: 480px;
-            border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease;
-        }
-        .screenshot-item img:hover {
-            transform: scale(1.03);
-        }
-        .screenshot-item .label {
-            position: absolute;
-            bottom: 16px;
-            right: 16px;
-            background: rgba(0,0,0,0.7);
-            backdrop-filter: blur(8px);
-            padding: 0.4rem 1rem;
-            border-radius: 10px;
-            font-size: 0.85rem;
-            font-weight: 600;
+        .screenshot-item:hover, .screenshot-item:focus-within {
+            transform: rotateY(0deg) scale(1.05);
+            filter: brightness(1);
+            z-index: 10;
         }
 
-        /* ===== Download ===== */
-        .download-section {
-            text-align: center;
-            padding: 6rem 2rem;
-            background:
-                radial-gradient(ellipse at center, rgba(245, 158, 11, 0.06) 0%, transparent 60%);
+        /* Phone Frame */
+        .phone-frame {
+            width: 280px;
+            height: 580px;
+            background: #000;
+            border-radius: 42px;
+            padding: 12px;
+            position: relative;
+            box-shadow: 
+                0 0 0 4px #1e293b,
+                0 30px 60px rgba(0,0,0,0.8),
+                0 0 50px rgba(245, 158, 11, 0.15);
         }
-        .download-section h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
+        .phone-frame::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 100px; height: 30px;
+            background: #000;
+            border-bottom-left-radius: 18px;
+            border-bottom-right-radius: 18px;
+            z-index: 5;
         }
-        .download-section p {
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
+        .phone-content {
+            width: 100%; height: 100%;
+            background: #111;
+            border-radius: 32px;
+            overflow: hidden;
+            position: relative;
         }
-        .download-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
+        .phone-content img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+        
+        .screenshots-scroll::before,
+        .screenshots-scroll::after {
+            content: '';
+            flex: 1 0 0;
+            min-width: 0;
         }
 
         /* ===== Footer ===== */
-        footer {
-            text-align: center;
-            padding: 3rem 2rem;
-            border-top: 1px solid var(--border);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        footer a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--border); color: var(--text-muted); }
+        footer a { color: var(--primary); text-decoration: none; margin: 0 0.5rem; font-weight: 600; }
 
-        /* ===== Responsive ===== */
         @media (max-width: 768px) {
-            header { padding: 0.75rem 1rem; }
-            header nav { display: none; }
-            .hero { padding: 7rem 1.5rem 3rem; }
-            .hero-logo { width: 100px; height: 100px; }
-            .screenshot-item img { height: 380px; }
-            .features-grid { grid-template-columns: 1fr; }
+            .phone-frame { width: 230px; height: 480px; }
+            .screenshots-scroll { gap: 2rem; padding: 2rem 5%; }
+            .hero h1 { font-size: 2.8rem; }
         }
     </style>
 </head>
-<body>
+<body class="lang-ar">
 
     <header>
         <div class="logo-area">
             <img src="/assets/madarik/logo.png" alt="مدارك">
-            <span>مدارك</span>
+            <span class="ar">مدارك</span>
+            <span class="en">Madarik</span>
         </div>
-        <nav>
-            <a href="#features">المميزات</a>
-            <a href="#screenshots">لقطات</a>
-            <a href="#download">تحميل</a>
-        </nav>
+        <button class="lang-toggle" onclick="toggleLang()">
+            <span class="ar">English</span>
+            <span class="en">عربي</span>
+        </button>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
             <img src="/assets/madarik/logo.png" alt="مدارك" class="hero-logo animate-in">
-            <h1 class="animate-in delay-1">مدارك: رحلة المعرفة</h1>
-            <p class="tagline animate-in delay-2">المعرفة رحلة... وأنت بطلّها! اختبر ثقافتك في التاريخ الإسلامي، العلوم، الجغرافيا والمزيد.</p>
-            <div class="hero-buttons animate-in delay-3">
+            <h1 class="animate-in delay-1">
+                <span class="ar">مدارك: رحلة المعرفة</span>
+                <span class="en">Madarik: Knowledge Journey</span>
+            </h1>
+            <p class="tagline animate-in delay-2">
+                <span class="ar">المعرفة رحلة... وأنت بطلّها! اختبر ثقافتك في التاريخ الإسلامي، العلوم، الجغرافيا والمزيد في تجربة تعليمية فريدة.</span>
+                <span class="en">Knowledge is a journey... and you are its hero! Test your skills in Islamic history, science, geography, and more in a unique learning experience.</span>
+            </p>
+            <div class="animate-in delay-3" style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
                 <a href="#" class="btn btn-green">
-                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-play-store-icon.png" alt="Google Play" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                    Google Play
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
+                    <span class="ar">تحميل من Google Play</span>
+                    <span class="en">Download on Google Play</span>
                 </a>
                 <a href="https://github.com/abdulrasol/madarik_knowledge_jounrny" class="btn btn-outline">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    GitHub
+                    <span class="ar">المشروع على GitHub</span>
+                    <span class="en">View on GitHub</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Features -->
     <section id="features">
         <div class="section-title animate-in">
-            <h2>🌟 مميزات اللعبة</h2>
-            <p>تجربة تعليمية ممتعة مصممة لتحدّي عقلك وتوسيع معارفك</p>
+            <h2 class="ar">🌟 مميزات مدارك</h2>
+            <h2 class="en">🌟 Madarik Features</h2>
+            <p class="ar">تجربة تعليمية متكاملة تهدف لإثراء معرفتك ومهاراتك</p>
+            <p class="en">A comprehensive educational experience designed to expand your horizons.</p>
         </div>
         <div class="features-grid">
             <div class="feature-card animate-in delay-1">
                 <span class="feature-icon">🗺️</span>
-                <h3>خارطة تفاعلية</h3>
-                <p>تقدم عبر مراحل منظمة وافتح مستويات جديدة كلما أتقنت السابقة في رحلة مثيرة.</p>
+                <h3 class="ar">خارطة تفاعلية</h3>
+                <h3 class="en">Interactive Roadmap</h3>
+                <p class="ar">تجاوز التحديات وافتح مستويات جديدة في رحلة منظمة ومشوقة.</p>
+                <p class="en">Unlock new levels and challenges through an engaging and structured journey.</p>
             </div>
             <div class="feature-card animate-in delay-2">
                 <span class="feature-icon">🧠</span>
-                <h3>فئات متنوعة</h3>
-                <p>تاريخ إسلامي، علوم عامة، جغرافيا، أدب والمزيد - تحدَّ نفسك في كل المجالات.</p>
+                <h3 class="ar">فئات متنوعة</h3>
+                <h3 class="en">Diverse Categories</h3>
+                <p class="ar">تاريخ، علوم، جغرافيا، وأدب - محتوى متجدد يغطي كافة المجالات.</p>
+                <p class="en">History, science, geography, and literature - constantly updated content.</p>
             </div>
             <div class="feature-card animate-in delay-3">
                 <span class="feature-icon">🏆</span>
-                <h3>لوحة المتصدرين</h3>
-                <p>نافس لاعبين من حول العالم واعرف ترتيبك بين أفضل العقول.</p>
+                <h3 class="ar">لوحة المتصدرين</h3>
+                <h3 class="en">Global Leaderboard</h3>
+                <p class="ar">نافس المتعلمين من مختلف أنحاء العالم وأثبت جدارتك.</p>
+                <p class="en">Compete with learners worldwide and show your absolute mastery.</p>
             </div>
             <div class="feature-card animate-in delay-1">
                 <span class="feature-icon">🏅</span>
-                <h3>نظام الإنجازات</h3>
-                <p>احصل على أوسمة ومكافآت عند إكمال المهام وإثبات خبرتك.</p>
+                <h3 class="ar">نظام الإنجازات</h3>
+                <h3 class="en">Achievements</h3>
+                <p class="ar">احصل على أوسمة فريدة ومكافآت عند إكمال المهام الصعبة.</p>
+                <p class="en">Earn unique medals and rewards as you complete challenging milestones.</p>
             </div>
             <div class="feature-card animate-in delay-2">
                 <span class="feature-icon">👤</span>
-                <h3>ملف اللاعب</h3>
-                <p>خصص ملفك الشخصي بصور رمزية فريدة وتتبع تقدمك في الرحلة.</p>
+                <h3 class="ar">ملف شخصي</h3>
+                <h3 class="en">Player Profile</h3>
+                <p class="ar">خصص شخصيتك الرمزية وتتبع مسار تقدمك المعرفي بدقة.</p>
+                <p class="en">Customize your avatar and track your educational progress in detail.</p>
             </div>
             <div class="feature-card animate-in delay-3">
                 <span class="feature-icon">🎨</span>
-                <h3>تصميم عصري</h3>
-                <p>واجهة مستخدم جذابة مستوحاة من الثقافة العربية تجعل التعلم ممتعاً.</p>
+                <h3 class="ar">تصميم عصري</h3>
+                <h3 class="en">Modern Design</h3>
+                <p class="ar">واجهة مستخدم جذابة مستوحاة من عراقة الثقافة العربية.</p>
+                <p class="en">A stunning UI inspired by the richness of Arabic cultural heritage.</p>
             </div>
         </div>
     </section>
 
-    <!-- Screenshots -->
-    <section class="screenshots-section" id="screenshots">
-        <div class="section-title animate-in">
-            <h2>📸 لقطات من اللعبة</h2>
-            <p>استكشف أجواء مدارك من خلال هذه اللقطات</p>
-        </div>
-        <div class="screenshots-scroll">
-            <div class="screenshot-item">
-                <img src="/assets/madarik/home_page.jpg" alt="الشاشة الرئيسية">
-                <span class="label">الرئيسية</span>
+    <section class="screenshots-section">
+        <div class="screenshots-container">
+            <div class="section-title animate-in">
+                <h2 class="ar">📸 لقطات من التطبيق</h2>
+                <h2 class="en">📸 App Screenshots</h2>
             </div>
-            <div class="screenshot-item">
-                <img src="/assets/madarik/roadmap_page.jpg" alt="خارطة الطريق">
-                <span class="label">الخارطة</span>
-            </div>
-            <div class="screenshot-item">
-                <img src="/assets/madarik/quiz_page.jpg" alt="صفحة الأسئلة">
-                <span class="label">الأسئلة</span>
-            </div>
-            <div class="screenshot-item">
-                <img src="/assets/madarik/aheveiments_page.jpg" alt="الإنجازات">
-                <span class="label">الإنجازات</span>
+            <div class="screenshots-scroll">
+                <div class="screenshot-item">
+                    <div class="phone-frame"><div class="phone-content"><img src="/assets/madarik/home_page.jpg" alt="Home"></div></div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="phone-frame"><div class="phone-content"><img src="/assets/madarik/roadmap_page.jpg" alt="Roadmap"></div></div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="phone-frame"><div class="phone-content"><img src="/assets/madarik/quiz_page.jpg" alt="Quiz"></div></div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="phone-frame"><div class="phone-content"><img src="/assets/madarik/aheveiments_page.jpg" alt="Achievements"></div></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Download -->
-    <section class="download-section" id="download">
-        <h2 class="animate-in">📱 حمّل مدارك الآن</h2>
-        <p class="animate-in delay-1">انطلق في رحلتك نحو إتقان المعرفة!</p>
-        <div class="download-buttons animate-in delay-2">
-            <a href="#" class="btn btn-green" style="font-size:1.1rem; padding: 1rem 2.5rem;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                تحميل من Google Play
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 عبد الرسول الحلو - مدارك: رحلة المعرفة. جميع الحقوق محفوظة.</p>
-        <p style="margin-top: 0.75rem;">
-            <a href="/madarik/privacy_policy/">سياسة الخصوصية</a>
-            &nbsp;|&nbsp;
-            <a href="/">المعرض الشخصي</a>
+        <p class="ar">© 2026 عبد الرسول الحلو - مدارك: رحلة المعرفة. جميع الحقوق محفوظة.</p>
+        <p class="en">© 2026 AbdulRasol Al-Hilo - Madarik: Knowledge Journey. All rights reserved.</p>
+        <p style="margin-top: 1rem;">
+            <a href="/madarik/privacy_policy/">
+                <span class="ar">سياسة الخصوصية</span>
+                <span class="en">Privacy Policy</span>
+            </a> |
+            <a href="/">
+                <span class="ar">المعرض الشخصي</span>
+                <span class="en">Personal Portfolio</span>
+            </a>
         </p>
     </footer>
 
     <script>
-        // Simple scroll animation observer
+        function toggleLang() {
+            const body = document.body;
+            const current = body.classList.contains('lang-ar') ? 'ar' : 'en';
+            const next = current === 'ar' ? 'en' : 'ar';
+            
+            body.classList.remove('lang-ar', 'lang-en');
+            body.classList.add('lang-' + next);
+            body.setAttribute('dir', next === 'ar' ? 'rtl' : 'ltr');
+            localStorage.setItem('madarik_lang', next);
+        }
+
+        // Auto-detect or restore
+        const browserLang = navigator.language.startsWith('ar') ? 'ar' : 'en';
+        const savedLang = localStorage.getItem('madarik_lang') || browserLang;
+
+        document.body.classList.remove('lang-ar', 'lang-en');
+        document.body.classList.add('lang-' + savedLang);
+        document.body.setAttribute('dir', savedLang === 'ar' ? 'rtl' : 'ltr');
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -483,7 +451,6 @@
             el.style.animationPlayState = 'paused';
             observer.observe(el);
         });
-        // Allow hero animations to play immediately
         document.querySelectorAll('.hero .animate-in').forEach(el => {
             el.style.animationPlayState = 'running';
         });

@@ -28,7 +28,7 @@
             color: var(--text);
             line-height: 1.8;
             overflow-x: hidden;
-            transition: all 0.3s ease;
+            transition: background 0.3s;
         }
 
         /* Bilingual Toggle Logic */
@@ -94,7 +94,7 @@
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
-            transition: all 0.3s;
+            transition: background 0.3s;
         }
         .lang-toggle:hover { background: rgba(59, 130, 246, 0.1); border-color: var(--primary); }
 
@@ -195,7 +195,7 @@
         .platforms {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
             margin-top: 2rem;
         }
@@ -207,35 +207,82 @@
             padding: 0.6rem 1.2rem;
             border-radius: 10px;
             font-weight: 600;
+            border: 1px solid var(--border);
         }
 
-        /* ===== Screenshots ===== */
-        .screenshots-section { background: var(--bg-section); padding: 5rem 0; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
-        .screenshots-container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        /* ===== Screenshots Redesign (Premium Device Frames) ===== */
+        .screenshots-section { 
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            padding: 6rem 0; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; 
+            overflow: hidden;
+        }
+        .screenshots-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
         .screenshots-scroll {
             display: flex;
-            gap: 1.5rem;
+            gap: 3rem;
             overflow-x: auto;
-            padding: 2rem 10%;
+            padding: 4rem 10%;
             scroll-snap-type: x mandatory;
-            scrollbar-width: thin;
-            scrollbar-color: var(--primary) transparent;
+            scrollbar-width: none;
+            perspective: 1000px;
         }
+        .screenshots-scroll::-webkit-scrollbar { display: none; }
+        
+        .screenshot-item { 
+            flex: 0 0 auto; 
+            scroll-snap-align: center;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: rotateY(-15deg) scale(0.9);
+            filter: brightness(0.7);
+        }
+        .screenshot-item:hover, .screenshot-item:focus-within {
+            transform: rotateY(0deg) scale(1.05);
+            filter: brightness(1);
+            z-index: 10;
+        }
+
+        /* CSS Phone Frame */
+        .phone-frame {
+            width: 280px;
+            height: 560px;
+            background: #000;
+            border-radius: 40px;
+            padding: 12px;
+            position: relative;
+            box-shadow: 
+                0 0 0 4px #334155,
+                0 20px 50px rgba(0,0,0,0.8),
+                0 0 40px rgba(59, 130, 246, 0.15);
+            overflow: hidden;
+        }
+        .phone-frame::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 100px; height: 30px;
+            background: #000;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            z-index: 5;
+        }
+        .phone-content {
+            width: 100%; height: 100%;
+            background: #111;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+        .phone-content img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+        
         .screenshots-scroll::before,
         .screenshots-scroll::after {
             content: '';
             flex: 1 0 0;
             min-width: 0;
-        }
-        .screenshots-scroll::-webkit-scrollbar { height: 6px; }
-        .screenshots-scroll::-webkit-scrollbar-track { background: transparent; }
-        .screenshots-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
-        .screenshot-item { flex: 0 0 auto; scroll-snap-align: center; }
-        .screenshot-item img {
-            height: 480px;
-            border-radius: 16px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-            border: 4px solid var(--border);
         }
 
         /* ===== Footer ===== */
@@ -243,7 +290,8 @@
         footer a { color: var(--primary); text-decoration: none; margin: 0 0.5rem; }
 
         @media (max-width: 768px) {
-            .screenshot-item img { height: 350px; }
+            .phone-frame { width: 220px; height: 440px; border-radius: 30px; }
+            .screenshots-scroll { gap: 1.5rem; padding: 2rem 5%; }
             .platforms { gap: 1rem; }
         }
     </style>
@@ -298,7 +346,6 @@
             <p class="en">Everything you need to grow your business in one place.</p>
         </div>
         <div class="features-grid">
-            <!-- 1. Inventory -->
             <div class="feature-card animate-in delay-1">
                 <span class="feature-icon">📦</span>
                 <h3 class="ar">إدارة المخزون</h3>
@@ -306,7 +353,6 @@
                 <p class="ar">تتبع كميات المنتجات في الوقت الفعلي، مع تنبيهات عند اقتراب نفاذ المخزون.</p>
                 <p class="en">Track stock in real-time. Manage item availability and receive low-stock alerts.</p>
             </div>
-            <!-- 2. Invoices -->
             <div class="feature-card animate-in delay-2">
                 <span class="feature-icon">🧾</span>
                 <h3 class="ar">نظام الفواتير</h3>
@@ -314,7 +360,6 @@
                 <p class="ar">أصدر فواتير PDF احترافية في ثوانٍ. تتبع سجلات البيع والديون بسهولة.</p>
                 <p class="en">Create and issue professional PDF invoices in seconds. Manage billing history effortlessly.</p>
             </div>
-            <!-- 3. Transactions -->
             <div class="feature-card animate-in delay-3">
                 <span class="feature-icon">💰</span>
                 <h3 class="ar">تتبع المعاملات</h3>
@@ -322,7 +367,6 @@
                 <p class="ar">راقب جميع المبيعات والمدفوعات والاشتراكات في مكان مركزي واحد.</p>
                 <p class="en">Monitor all your sales and payment transactions in one centralized place.</p>
             </div>
-            <!-- 4. Expenses -->
             <div class="feature-card animate-in delay-1">
                 <span class="feature-icon">💸</span>
                 <h3 class="ar">إدارة المصاريف</h3>
@@ -330,7 +374,6 @@
                 <p class="ar">سجل مصاريف عملك بدقة للتحكم المالي الكامل وتحسين الإنفاق.</p>
                 <p class="en">Track business expenses to maintain better financial control and optimize spending.</p>
             </div>
-            <!-- 5. Partners -->
             <div class="feature-card animate-in delay-2">
                 <span class="feature-icon">👥</span>
                 <h3 class="ar">العملاء والموردين</h3>
@@ -338,7 +381,6 @@
                 <p class="ar">احتفظ بسجلات رقمية منظمة لجميع شركائك لسهولة الوصول والتواصل.</p>
                 <p class="en">Maintain organized digital records of all your partners and clients.</p>
             </div>
-            <!-- 6. Profits -->
             <div class="feature-card animate-in delay-3">
                 <span class="feature-icon">📊</span>
                 <h3 class="ar">تحليل السلع والأرباح</h3>
@@ -346,7 +388,6 @@
                 <p class="ar">احصل على رؤى واضحة حول أداء عملك مع تقارير أرباح مفصلة ورسوم بيانية.</p>
                 <p class="en">Gain clear insights into your business performance with detailed reports.</p>
             </div>
-            <!-- 7. Analytics -->
             <div class="feature-card animate-in delay-1">
                 <span class="feature-icon">📉</span>
                 <h3 class="ar">إحصائيات متقدمة</h3>
@@ -354,7 +395,6 @@
                 <p class="ar">رسوم بيانية تفاعلية للمبيعات والأرباح والمصاريف (أسبوعي، شهري، سنوي).</p>
                 <p class="en">Interactive charts for Sales, Profits, and Expenses with multiple views.</p>
             </div>
-            <!-- 8. Backup -->
             <div class="feature-card animate-in delay-2">
                 <span class="feature-icon">☁️</span>
                 <h3 class="ar">نسخ احتياطي واستعادة</h3>
@@ -362,7 +402,6 @@
                 <p class="ar">احمِ بياناتك من الفقدان. احفظ بيانات متجرك واستعدها في أي وقت ومكان.</p>
                 <p class="en">Securely save your store data and restore it whenever needed.</p>
             </div>
-            <!-- 9. Languages -->
             <div class="feature-card animate-in delay-3">
                 <span class="feature-icon">🌍</span>
                 <h3 class="ar">دعم لغات متعددة</h3>
@@ -375,22 +414,24 @@
 
     <section class="screenshots-section">
         <div class="screenshots-container">
-            <div class="section-title">
+            <div class="section-title animate-in">
                 <h2 class="ar">لقطات من الشاشة</h2>
                 <h2 class="en">App Screenshots</h2>
+                <p class="ar">واجهة مستخدم عصرية وسهلة الاستخدام</p>
+                <p class="en">Intuitive user interface built for productivity.</p>
             </div>
             <div class="screenshots-scroll">
-                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/1.jpg" alt="1"></div>
-                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/2.jpg" alt="2"></div>
-                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/3.jpg" alt="3"></div>
-                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/4.jpg" alt="4"></div>
-                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/5.jpg" alt="5"></div>
-                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/6.jpg" alt="6"></div>
-                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/7.jpg" alt="7"></div>
-                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/8.jpg" alt="8"></div>
-                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/9.jpg" alt="9"></div>
-                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/10.jpg" alt="10"></div>
-                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/11.jpg" alt="11"></div>
+                <div class="screenshot-item"><div class="phone-frame"><div class="phone-content"><img src="/assets/store_mangement/screenshots/1.jpg" alt="1"></div></div></div>
+                <div class="screenshot-item"><div class="phone-frame"><div class="phone-content"><img src="/assets/store_mangement/screenshots/2.jpg" alt="2"></div></div></div>
+                <div class="screenshot-item"><div class="phone-frame"><div class="phone-content"><img src="/assets/store_mangement/screenshots/3.jpg" alt="3"></div></div></div>
+                <div class="screenshot-item"><div class="phone-frame"><div class="phone-content"><img src="/assets/store_mangement/screenshots/4.jpg" alt="4"></div></div></div>
+                <div class="screenshot-item"><div class="phone-frame"><div class="phone-content"><img src="/assets/store_mangement/screenshots/5.jpg" alt="5"></div></div></div>
+                <div class="screenshot-item"><div class="phone-frame"><div class="phone-content"><img src="/assets/store_mangement/screenshots/6.jpg" alt="6"></div></div></div>
+                <div class="screenshot-item"><div class="phone-frame"><div class="phone-content"><img src="/assets/store_mangement/screenshots/7.jpg" alt="7"></div></div></div>
+                <div class="screenshot-item"><div class="phone-frame"><div class="phone-content"><img src="/assets/store_mangement/screenshots/8.jpg" alt="8"></div></div></div>
+                <div class="screenshot-item"><div class="phone-frame"><div class="phone-content"><img src="/assets/store_mangement/screenshots/9.jpg" alt="9"></div></div></div>
+                <div class="screenshot-item"><div class="phone-frame"><div class="phone-content"><img src="/assets/store_mangement/screenshots/10.jpg" alt="10"></div></div></div>
+                <div class="screenshot-item"><div class="phone-frame"><div class="phone-content"><img src="/assets/store_mangement/screenshots/11.jpg" alt="11"></div></div></div>
             </div>
         </div>
     </section>
@@ -419,7 +460,10 @@
         }
 
         // Auto-detect or restore
-        const savedLang = localStorage.getItem('sm_lang') || 'ar';
+        const browserLang = navigator.language.startsWith('ar') ? 'ar' : 'en';
+        const savedLang = localStorage.getItem('sm_lang') || browserLang;
+
+        document.body.classList.remove('lang-ar', 'lang-en');
         document.body.classList.add('lang-' + savedLang);
         document.body.setAttribute('dir', savedLang === 'ar' ? 'rtl' : 'ltr');
 
