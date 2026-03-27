@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المتجر | Store Management App</title>
+    <meta name="description" content="الحل الشامل لإدارة متجرك بسهولة. تتبع المخزون، الفواتير، المبيعات والعملاء في تطبيق واحد قوي. | Your all-in-one solution for effortless store management. Track inventory, invoices, sales, and customers in one powerful app.">
+    <link rel="icon" type="image/png" href="/assets/store_mangement/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --accent: #10b981;
+            --bg-dark: #0f172a;
+            --bg-section: #1e293b;
+            --card-bg: rgba(30, 41, 59, 0.85);
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.8;
+            overflow-x: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* Bilingual Toggle Logic */
+        [lang="en"] { direction: ltr; }
+        [lang="ar"] { direction: rtl; }
+        [lang="en"] .ar { display: none !important; }
+        [lang="ar"] .en { display: none !important; }
+
+        /* ===== Animations ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        .delay-1 { animation-delay: 0.15s; }
+        .delay-2 { animation-delay: 0.3s; }
+        .delay-3 { animation-delay: 0.45s; }
+
+        /* ===== Header ===== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .logo-area img {
+            height: 36px;
+            border-radius: 8px;
+        }
+        .logo-area span {
+            font-size: 1.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .lang-toggle {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .lang-toggle:hover { background: rgba(59, 130, 246, 0.1); border-color: var(--primary); }
+
+        /* ===== Hero ===== */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+                var(--bg-dark);
+            position: relative;
+        }
+        .hero-banner {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('/assets/store_mangement/cover.png') center/cover no-repeat;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        .hero-content { position: relative; z-index: 2; }
+        .hero-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            margin-bottom: 1.5rem;
+            animation: float 4s ease-in-out infinite;
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .hero .tagline {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.85rem 2rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        /* ===== Features ===== */
+        section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .section-title p { color: var(--text-muted); }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            backdrop-filter: blur(8px);
+        }
+        .feature-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+        .feature-card h3 { color: var(--primary); margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .feature-card p { font-size: 0.95rem; color: var(--text-muted); }
+
+        /* ===== Platform Support ===== */
+        .platforms {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .platform-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.05);
+            padding: 0.6rem 1.2rem;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        /* ===== Screenshots ===== */
+        .screenshots-section { background: var(--bg-section); padding: 5rem 0; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
+        .screenshots-container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        .screenshots-scroll {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            padding: 2rem 0;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) transparent;
+        }
+        .screenshots-scroll::-webkit-scrollbar { height: 6px; }
+        .screenshots-scroll::-webkit-scrollbar-track { background: transparent; }
+        .screenshots-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+        .screenshot-item { flex: 0 0 auto; scroll-snap-align: center; }
+        .screenshot-item img {
+            height: 480px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            border: 4px solid var(--border);
+        }
+
+        /* ===== Footer ===== */
+        footer { text-align: center; padding: 3rem 2rem; border-top: 1px solid var(--border); color: var(--text-muted); }
+        footer a { color: var(--primary); text-decoration: none; margin: 0 0.5rem; }
+
+        @media (max-width: 768px) {
+            .screenshot-item img { height: 350px; }
+            .platforms { gap: 1rem; }
+        }
+    </style>
+</head>
+<body lang="ar">
+
+    <header>
+        <div class="logo-area">
+            <img src="/assets/store_mangement/logo.png" alt="Logo">
+            <span class="ar">إدارة المتجر</span>
+            <span class="en">Store Management</span>
+        </div>
+        <button class="lang-toggle" onclick="toggleLang()">
+            <span class="ar">English</span>
+            <span class="en">عربي</span>
+        </button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-banner"></div>
+        <div class="hero-content">
+            <img src="/assets/store_mangement/logo.png" alt="Logo" class="hero-logo animate-in">
+            <h1 class="animate-in delay-1">
+                <span class="ar">تطبيق إدارة المتجر</span>
+                <span class="en">Store Management App</span>
+            </h1>
+            <p class="tagline animate-in delay-2">
+                <span class="ar">الحل المتكامل لإدارة عملك بسهولة. تتبع المخزون، أصدر الفواتير، وحلل الأرباح في تطبيق واحد قوي يدعم جميع لغاتك.</span>
+                <span class="en">Your all-in-one solution for effortless store management. Designed to simplify your business operations, track inventory, manage invoices, and analyze performance.</span>
+            </p>
+            <div class="animate-in delay-3">
+                <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.store_mangment" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
+                    <span class="ar">تحميل من Google Play</span>
+                    <span class="en">Download on Google Play</span>
+                </a>
+            </div>
+            
+            <div class="platforms animate-in delay-3">
+                <div class="platform-item">🤖 Android</div>
+                <div class="platform-item">🍎 iOS</div>
+                <div class="platform-item">💻 Desktop</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="section-title animate-in">
+            <h2 class="ar">المميزات الرئيسية</h2>
+            <h2 class="en">Key Features</h2>
+            <p class="ar">كل ما تحتاجه لنمو تجارتك في مكان واحد</p>
+            <p class="en">Everything you need to grow your business in one place.</p>
+        </div>
+        <div class="features-grid">
+            <!-- 1. Inventory -->
+            <div class="feature-card animate-in delay-1">
+                <span class="feature-icon">📦</span>
+                <h3 class="ar">إدارة المخزون</h3>
+                <h3 class="en">Inventory Management</h3>
+                <p class="ar">تتبع كميات المنتجات في الوقت الفعلي، مع تنبيهات عند اقتراب نفاذ المخزون.</p>
+                <p class="en">Track stock in real-time. Manage item availability and receive low-stock alerts.</p>
+            </div>
+            <!-- 2. Invoices -->
+            <div class="feature-card animate-in delay-2">
+                <span class="feature-icon">🧾</span>
+                <h3 class="ar">نظام الفواتير</h3>
+                <h3 class="en">Invoice Management</h3>
+                <p class="ar">أصدر فواتير PDF احترافية في ثوانٍ. تتبع سجلات البيع والديون بسهولة.</p>
+                <p class="en">Create and issue professional PDF invoices in seconds. Manage billing history effortlessly.</p>
+            </div>
+            <!-- 3. Transactions -->
+            <div class="feature-card animate-in delay-3">
+                <span class="feature-icon">💰</span>
+                <h3 class="ar">تتبع المعاملات</h3>
+                <h3 class="en">Transaction Tracking</h3>
+                <p class="ar">راقب جميع المبيعات والمدفوعات والاشتراكات في مكان مركزي واحد.</p>
+                <p class="en">Monitor all your sales and payment transactions in one centralized place.</p>
+            </div>
+            <!-- 4. Expenses -->
+            <div class="feature-card animate-in delay-1">
+                <span class="feature-icon">💸</span>
+                <h3 class="ar">إدارة المصاريف</h3>
+                <h3 class="en">Expense Management</h3>
+                <p class="ar">سجل مصاريف عملك بدقة للتحكم المالي الكامل وتحسين الإنفاق.</p>
+                <p class="en">Track business expenses to maintain better financial control and optimize spending.</p>
+            </div>
+            <!-- 5. Partners -->
+            <div class="feature-card animate-in delay-2">
+                <span class="feature-icon">👥</span>
+                <h3 class="ar">العملاء والموردين</h3>
+                <h3 class="en">Customer & Supplier</h3>
+                <p class="ar">احتفظ بسجلات رقمية منظمة لجميع شركائك لسهولة الوصول والتواصل.</p>
+                <p class="en">Maintain organized digital records of all your partners and clients.</p>
+            </div>
+            <!-- 6. Profits -->
+            <div class="feature-card animate-in delay-3">
+                <span class="feature-icon">📊</span>
+                <h3 class="ar">تحليل السلع والأرباح</h3>
+                <h3 class="en">Profit Analysis</h3>
+                <p class="ar">احصل على رؤى واضحة حول أداء عملك مع تقارير أرباح مفصلة ورسوم بيانية.</p>
+                <p class="en">Gain clear insights into your business performance with detailed reports.</p>
+            </div>
+            <!-- 7. Analytics -->
+            <div class="feature-card animate-in delay-1">
+                <span class="feature-icon">📉</span>
+                <h3 class="ar">إحصائيات متقدمة</h3>
+                <h3 class="en">Advanced Analytics</h3>
+                <p class="ar">رسوم بيانية تفاعلية للمبيعات والأرباح والمصاريف (أسبوعي، شهري، سنوي).</p>
+                <p class="en">Interactive charts for Sales, Profits, and Expenses with multiple views.</p>
+            </div>
+            <!-- 8. Backup -->
+            <div class="feature-card animate-in delay-2">
+                <span class="feature-icon">☁️</span>
+                <h3 class="ar">نسخ احتياطي واستعادة</h3>
+                <h3 class="en">Backup & Restore</h3>
+                <p class="ar">احمِ بياناتك من الفقدان. احفظ بيانات متجرك واستعدها في أي وقت ومكان.</p>
+                <p class="en">Securely save your store data and restore it whenever needed.</p>
+            </div>
+            <!-- 9. Languages -->
+            <div class="feature-card animate-in delay-3">
+                <span class="feature-icon">🌍</span>
+                <h3 class="ar">دعم لغات متعددة</h3>
+                <h3 class="en">Multi-Language</h3>
+                <p class="ar">التطبيق يدعم العربية، الإنجليزية، التركية، الفارسية، والصينية.</p>
+                <p class="en">Full support for English, Arabic, Turkish, Persian, and Chinese.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots-section">
+        <div class="screenshots-container">
+            <div class="section-title">
+                <h2 class="ar">لقطات من الشاشة</h2>
+                <h2 class="en">App Screenshots</h2>
+            </div>
+            <div class="screenshots-scroll">
+                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/1.jpg" alt="1"></div>
+                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/2.jpg" alt="2"></div>
+                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/3.jpg" alt="3"></div>
+                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/4.jpg" alt="4"></div>
+                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/5.jpg" alt="5"></div>
+                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/6.jpg" alt="6"></div>
+                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/7.jpg" alt="7"></div>
+                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/8.jpg" alt="8"></div>
+                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/9.jpg" alt="9"></div>
+                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/10.jpg" alt="10"></div>
+                <div class="screenshot-item"><img src="/assets/store_mangement/screenshots/11.jpg" alt="11"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="ar">© 2026 عبد الرسول الحلو. جميع الحقوق محفوظة.</p>
+        <p class="en">© 2026 AbdulRasol Al-Hilo. All rights reserved.</p>
+        <p style="margin-top: 1rem;">
+            <a href="/">
+                <span class="ar">المعرض الشخصي</span>
+                <span class="en">Personal Portfolio</span>
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        function toggleLang() {
+            const body = document.body;
+            const current = body.getAttribute('lang');
+            const next = current === 'ar' ? 'en' : 'ar';
+            body.setAttribute('lang', next);
+            body.setAttribute('dir', next === 'ar' ? 'rtl' : 'ltr');
+            localStorage.setItem('sm_lang', next);
+        }
+
+        // Auto-detect or restore
+        const savedLang = localStorage.getItem('sm_lang');
+        if (savedLang) {
+            document.body.setAttribute('lang', savedLang);
+            document.body.setAttribute('dir', savedLang === 'ar' ? 'rtl' : 'ltr');
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.animate-in').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+        document.querySelectorAll('.hero .animate-in').forEach(el => {
+            el.style.animationPlayState = 'running';
+        });
+    </script>
+</body>
+</html>

@@ -36,6 +36,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/app_store_managment.png" | "/logo.png" | "/madarik_banar.png" | "/madarik_logo.png" | "/meter_log_banner.png" | "/meter_log_logo.png" | "/placeholder.svg" | string & {};
+		Asset(): "/app_store_managment.png" | "/logo.png" | "/madarik_banar.png" | "/madarik_logo.png" | "/meter_log_banner.png" | "/meter_log_logo.png" | "/placeholder.svg" | "/store_management_cover.png" | "/store_management_logo.png" | string & {};
 	}
 }

@@ -56,10 +56,10 @@ export const projects = [
         title_ar: "إدارة المتجر",
         desc_en: "Store Management App is your all-in-one solution for effortless store management. Track inventory, manage invoices, analyze sales, and stay connected with customers and suppliers.",
         desc_ar: "تطبيق إدارة المتجر هو الحل الشامل لإدارة المتجر بسهولة. تتبع المخزون، إدارة الفواتير، تحليل المبيعات، والبقاء على اتصال مع العملاء والموردين.",
-        image: "/app_store_managment.png",
+        image: "/store_management_cover.png",
         technologies: ["Flutter", "Dart", "Getx", "ObjectBox"],
         githubUrl: "https://github.com/abdulrasol/store_management",
-        liveUrl: null,
+        liveUrl: "/store-management/",
         googlePlayUrl: "https://play.google.com/store/apps/details?id=io.github.abdulrasol.store_mangment",
         featured: true,
         stars: 4
