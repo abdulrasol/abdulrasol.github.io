@@ -125,14 +125,14 @@ const projects = [
     stars: 1
   },
   {
-    title_en: "Solar Hub",
-    title_ar: "مركز الطاقة الشمسية",
-    desc_en: "App to design and calculate solar panel systems, share problems and solutions with the community and buying solar equipment.",
-    desc_ar: "تطبيق لتصميم وحساب أنظمة الألواح الشمسية، مشاركة المشاكل والحلول مع المجتمع وشراء معدات الطاقة الشمسية.",
-    image: "/placeholder.svg",
-    technologies: ["Flutter", "Amazon Web Services"],
-    githubUrl: "https://github.com/abdulrasol/solar-hub",
-    liveUrl: null,
+    title_en: "Watt, Solar app calculator",
+    title_ar: "وات، حاسبة أنظمة الطاقة الشمسية",
+    desc_en: "Solar system calculator for designing systems and requesting price offers. Calculate panels, batteries, and everything you need for your solar project.",
+    desc_ar: "حاسبة أنظمة الطاقة الشمسية لتصميم الأنظمة وطلب عروض الأسعار. احسب الألواح والبطاريات وكل ما تحتاجه لمشروعك الشمسي.",
+    image: "/assets/watt/logo.png",
+    technologies: ["Flutter", "Riverpod", "Firebase", "FL Chart"],
+    githubUrl: null,
+    liveUrl: "/watt/",
     googlePlayUrl: null,
     featured: true,
     stars: 0
