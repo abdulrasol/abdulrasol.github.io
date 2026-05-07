@@ -73,6 +73,19 @@ function Skills($$renderer, $$props) {
 }
 const projects = [
   {
+    title_en: "Baytraq Sales Manager",
+    title_ar: "مدير مبيعات بيترق",
+    desc_en: "Baytraq Sales Manager is your all-in-one sales operations workspace. Run invoicing and POS sales, track inventory, monitor profits and expenses, and stay connected with customers and suppliers.",
+    desc_ar: "مدير مبيعات بيترق هو مساحة عملك الشاملة لعمليات المبيعات. أدر فواتيرك ومبيعات نقاط البيع، تتبع المخزون، راقب الأرباح والمصروفات، وابق على تواصل مع العملاء والموردين.",
+    image: "/baytraq/poster.png",
+    technologies: ["Flutter", "Dart", "Getx", "ObjectBox"],
+    githubUrl: null,
+    liveUrl: "/baytraq/",
+    googlePlayUrl: null,
+    featured: true,
+    stars: 0
+  },
+  {
     title_en: "Smart Multimeter Reader (Meter Log)",
     title_ar: "قارئ الـ Multimeter الذكي (Meter Log)",
     desc_en: "AI-powered multimeter reader with OCR recognition, scheduled auto capture, and professional Excel/CSV data export.",

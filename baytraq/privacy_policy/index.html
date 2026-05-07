@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Baytraq Sales Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Cairo:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --bg: #0f172a;
+            --surface: rgba(30, 41, 59, 0.7);
+            --surface-border: rgba(255, 255, 255, 0.1);
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --font-en: 'Inter', sans-serif;
+            --font-ar: 'Cairo', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-en);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        body[dir="rtl"] {
+            font-family: var(--font-ar);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-light);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        p, ul {
+            margin-bottom: 15px;
+            color: var(--text-muted);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        body[dir="rtl"] ul {
+            padding-left: 0;
+            padding-right: 20px;
+        }
+
+        .lang-toggle {
+            display: block;
+            margin: 0 auto 30px auto;
+            background: transparent;
+            border: 2px solid var(--primary-light);
+            color: var(--primary-light);
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .lang-toggle:hover {
+            background: var(--primary-light);
+            color: #fff;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        [data-ar] { display: none; }
+        body[dir="rtl"] [data-en] { display: none; }
+        body[dir="rtl"] [data-ar] { display: block; }
+        body[dir="rtl"] span[data-ar] { display: inline; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="/baytraq/" class="back-link">
+            <span data-en>&larr; Back to Home</span>
+            <span data-ar>العودة للرئيسية &rarr;</span>
+        </a>
+
+        <button class="lang-toggle" onclick="toggleLanguage()">عربي / English</button>
+
+        <h1 data-en>Privacy Policy</h1>
+        <h1 data-ar>سياسة الخصوصية</h1>
+
+        <div data-en>
+            <p>Last updated: May 7, 2026</p>
+
+            <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+            <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
+
+            <h2>Information Collection and Use</h2>
+            <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
+            <ul>
+                <li>Email address</li>
+                <li>First name and last name</li>
+                <li>Usage Data</li>
+            </ul>
+
+            <h2>Cloud Sync and Firebase</h2>
+            <p>Baytraq Sales Manager uses Firebase (a Google service) to provide cloud synchronization, authentication, and database services across your devices. Your data is securely stored on Firebase servers. We do not sell your personal data or store data to third parties.</p>
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+            <ul>
+                <li>By email: abdulrsol97@gmail.com</li>
+            </ul>
+        </div>
+
+        <div data-ar>
+            <p>آخر تحديث: 7 مايو 2026</p>
+
+            <p>تصف سياسة الخصوصية هذه سياساتنا وإجراءاتنا بشأن جمع واستخدام والكشف عن معلوماتك عند استخدامك للخدمة وتخبرك بحقوق الخصوصية الخاصة بك وكيف يحميك القانون.</p>
+            <p>نحن نستخدم بياناتك الشخصية لتوفير الخدمة وتحسينها. باستخدامك للخدمة، فإنك توافق على جمع واستخدام المعلومات وفقًا لسياسة الخصوصية هذه.</p>
+
+            <h2>جمع المعلومات واستخدامها</h2>
+            <p>أثناء استخدام خدمتنا، قد نطلب منك تزويدنا بمعلومات تعريف شخصية معينة يمكن استخدامها للاتصال بك أو تحديد هويتك. قد تشمل معلومات التعريف الشخصية، على سبيل المثال لا الحصر:</p>
+            <ul>
+                <li>عنوان البريد الإلكتروني</li>
+                <li>الاسم الأول والاسم الأخير</li>
+                <li>بيانات الاستخدام</li>
+            </ul>
+
+            <h2>المزامنة السحابية و Firebase</h2>
+            <p>يستخدم تطبيق بيترق خدمة Firebase (المقدمة من شركة Google) لتوفير خدمات المزامنة السحابية والمصادقة وقواعد البيانات عبر أجهزتك. يتم تخزين بياناتك بشكل آمن على خوادم Firebase. نحن لا نبيع بياناتك الشخصية أو بيانات متجرك لأطراف ثالثة.</p>
+
+            <h2>اتصل بنا</h2>
+            <p>إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، يمكنك الاتصال بنا:</p>
+            <ul>
+                <li>عبر البريد الإلكتروني: abdulrsol97@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            const currentDir = document.body.getAttribute('dir') || 'ltr';
+            if (currentDir === 'ltr') {
+                document.body.setAttribute('dir', 'rtl');
+            } else {
+                document.body.setAttribute('dir', 'ltr');
+            }
+        }
+    </script>
+</body>
+</html>

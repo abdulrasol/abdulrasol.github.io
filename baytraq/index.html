@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baytraq Sales Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Cairo:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --accent: #10b981;
+            --bg: #0f172a;
+            --surface: rgba(30, 41, 59, 0.7);
+            --surface-border: rgba(255, 255, 255, 0.1);
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --font-en: 'Inter', sans-serif;
+            --font-ar: 'Cairo', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-en);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: all 0.3s ease;
+        }
+
+        body[dir="rtl"] {
+            font-family: var(--font-ar);
+        }
+
+        .bg-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            filter: blur(100px);
+            opacity: 0.5;
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out alternate;
+        }
+
+        .shape-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: var(--primary); }
+        .shape-2 { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: var(--primary-light); animation-delay: -5s; }
+        .shape-3 { top: 40%; left: 60%; width: 30vw; height: 30vw; background: var(--accent); animation-delay: -10s; }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(50px, 50px) scale(1.1); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #fff, var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .lang-toggle {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            color: var(--text);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .lang-toggle:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            background: linear-gradient(to right, #fff, var(--primary-light), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        .platforms {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .platform-badge {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            padding: 8px 16px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.5);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text);
+            border: 2px solid var(--surface-border);
+        }
+
+        .btn-outline:hover {
+            background: var(--surface);
+            border-color: var(--text);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            font-weight: 800;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-light);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+        }
+
+        .screenshots {
+            padding: 50px 0;
+            overflow: hidden;
+        }
+
+        .screenshot-grid {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) var(--bg);
+        }
+
+        .screenshot-grid::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .screenshot-grid::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+
+        .screenshot-grid::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        .screenshot {
+            flex: 0 0 auto;
+            width: 250px;
+            border-radius: 20px;
+            border: 2px solid var(--surface-border);
+            scroll-snap-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.05);
+            border-color: var(--primary-light);
+        }
+
+        .pricing {
+            background: var(--surface);
+            border: 1px solid var(--primary);
+            border-radius: 30px;
+            padding: 50px;
+            text-align: center;
+            margin: 50px 0;
+            position: relative;
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+        
+        .pricing::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .price-amount {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 20px 0;
+            color: var(--accent);
+        }
+
+        .pricing-details {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .pricing-disclaimer {
+            font-size: 0.85rem;
+            color: #ef4444;
+            margin-top: 15px;
+            background: rgba(239, 68, 68, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--surface-border);
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: var(--primary-light);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        [data-ar] { display: none; }
+        body[dir="rtl"] [data-en] { display: none; }
+        body[dir="rtl"] [data-ar] { display: inline-block; }
+        body[dir="rtl"] p[data-ar], body[dir="rtl"] h1[data-ar], body[dir="rtl"] h2[data-ar], body[dir="rtl"] h3[data-ar], body[dir="rtl"] div[data-ar] { display: block; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="/assets/baytraq/logo.png" alt="Baytraq Logo" class="logo">
+                <span class="logo-text" data-en>Baytraq</span>
+                <span class="logo-text" data-ar>بيترق</span>
+            </div>
+            <button class="lang-toggle" onclick="toggleLanguage()">عربي / English</button>
+        </header>
+
+        <section class="hero">
+            <h1 data-en>The Ultimate Sales <br>& Management Workspace</h1>
+            <h1 data-ar>مساحة العمل المتكاملة <br>للمبيعات والإدارة</h1>
+            
+            <p data-en>Run invoicing, POS sales, track inventory, monitor profits and expenses, and stay connected with customers. One application for all your business needs.</p>
+            <p data-ar>إدارة الفواتير ومبيعات نقاط البيع، تتبع المخزون، مراقبة الأرباح والمصروفات، والبقاء على تواصل مع عملائك. تطبيق واحد لجميع احتياجات عملك.</p>
+
+            <div class="platforms">
+                <div class="platform-badge">📱 iOS</div>
+                <div class="platform-badge">🤖 Android</div>
+                <div class="platform-badge">💻 Windows</div>
+                <div class="platform-badge">🍏 macOS</div>
+                <div class="platform-badge">🐧 Linux</div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#pricing" class="btn btn-primary" data-en>Get Baytraq Now</a>
+                <a href="#pricing" class="btn btn-primary" data-ar>احصل على بيترق الآن</a>
+                <a href="mailto:abdulrsol97@gmail.com" class="btn btn-outline" data-en>Contact Support</a>
+                <a href="mailto:abdulrsol97@gmail.com" class="btn btn-outline" data-ar>تواصل مع الدعم</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3 data-en>Inventory Management</h3>
+                <h3 data-ar>إدارة المخزون</h3>
+                <p data-en>Easily track available items, set alerts for low stock, and manage your warehouse effortlessly.</p>
+                <p data-ar>تتبع العناصر المتاحة بسهولة، تعيين تنبيهات لنقص المخزون، وإدارة مستودعك دون عناء.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧾</div>
+                <h3 data-en>Invoice & POS</h3>
+                <h3 data-ar>الفواتير ونقاط البيع</h3>
+                <p data-en>Create, edit, print, and manage professional invoices and run smooth point-of-sale operations.</p>
+                <p data-ar>إنشاء وتحرير وطباعة وإدارة الفواتير الاحترافية وتشغيل عمليات نقاط البيع السلسة.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3 data-en>Profit Analysis</h3>
+                <h3 data-ar>تحليل الأرباح</h3>
+                <p data-en>Gain clear insights into your profits with detailed interactive reports and charts.</p>
+                <p data-ar>احصل على رؤى واضحة حول أرباحك مع تقارير ورسوم بيانية تفاعلية مفصلة.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3 data-en>Customer & Supplier</h3>
+                <h3 data-ar>العملاء والموردين</h3>
+                <p data-en>Maintain organized records of your contacts, track their debts, and manage relationships.</p>
+                <p data-ar>احتفظ بسجلات منظمة لجهات الاتصال الخاصة بك، وتتبع ديونهم، وإدارة العلاقات.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💳</div>
+                <h3 data-en>Expense & Vouchers</h3>
+                <h3 data-ar>المصروفات والسندات</h3>
+                <p data-en>Keep track of your business expenses and handle payment and receipt vouchers efficiently.</p>
+                <p data-ar>تتبع مصروفات عملك وتعامل مع سندات الدفع والقبض بكفاءة عالية.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">☁️</div>
+                <h3 data-en>Cloud Sync & Backup</h3>
+                <h3 data-ar>المزامنة السحابية</h3>
+                <p data-en>Securely sync your data across all your devices and restore it whenever needed.</p>
+                <p data-ar>قم بمزامنة بياناتك بأمان عبر جميع أجهزتك واستعادتها وقتما تشاء.</p>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <h2 class="section-title" data-en>App Interface</h2>
+            <h2 class="section-title" data-ar>واجهة التطبيق</h2>
+            <div class="screenshot-grid" id="screenshotContainer">
+                <!-- Javascript will load images here -->
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <h2 data-en>Simple, Transparent Pricing</h2>
+            <h2 data-ar>تسعير بسيط وشفاف</h2>
+            
+            <div class="price-amount">$50</div>
+            
+            <div class="pricing-details" data-en>
+                <strong>One-time payment per store/project.</strong><br>
+                Invite your team members to join your store for <strong>Free</strong>!
+            </div>
+            <div class="pricing-details" data-ar>
+                <strong>دفعة لمرة واحدة لكل متجر / مشروع.</strong><br>
+                قم بدعوة أعضاء فريقك للانضمام إلى متجرك <strong>مجاناً</strong>!
+            </div>
+
+            <a href="mailto:abdulrsol97@gmail.com?subject=Baytraq Purchase Request" class="btn btn-primary" data-en>Contact to Purchase</a>
+            <a href="mailto:abdulrsol97@gmail.com?subject=Baytraq Purchase Request" class="btn btn-primary" data-ar>تواصل معنا للشراء</a>
+            
+            <br>
+            <div class="pricing-disclaimer" data-en>
+                * Note: App uses Firebase for cloud sync. Additional charges may apply by Firebase only if your usage exceeds their generous free plan.
+            </div>
+            <div class="pricing-disclaimer" data-ar>
+                * ملاحظة: يستخدم التطبيق منصة Firebase للمزامنة السحابية. قد يتم تطبيق رسوم إضافية من قبل Firebase فقط إذا تجاوز استخدامك خطتهم المجانية.
+            </div>
+        </section>
+
+        <footer>
+            <div class="logo-container" style="justify-content: center; margin-bottom: 20px;">
+                <img src="/assets/baytraq/logo.png" alt="Baytraq Logo" class="logo" style="width: 30px; height: 30px;">
+                <span class="logo-text" style="font-size: 1.2rem;" data-en>Baytraq</span>
+                <span class="logo-text" style="font-size: 1.2rem;" data-ar>بيترق</span>
+            </div>
+            <p style="margin-bottom: 15px;">© 2026 AbdulRasol Al-Hilo. All rights reserved.</p>
+            <div>
+                <a href="/baytraq/privacy_policy/" data-en>Privacy Policy</a>
+                <a href="/baytraq/privacy_policy/" data-ar>سياسة الخصوصية</a>
+                <span style="color: var(--surface-border)">|</span>
+                <a href="mailto:abdulrsol97@gmail.com" data-en>Support</a>
+                <a href="mailto:abdulrsol97@gmail.com" data-ar>الدعم الفني</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Language Toggle
+        function toggleLanguage() {
+            const currentDir = document.body.getAttribute('dir') || 'ltr';
+            if (currentDir === 'ltr') {
+                document.body.setAttribute('dir', 'rtl');
+            } else {
+                document.body.setAttribute('dir', 'ltr');
+            }
+        }
+
+        // Load Screenshots
+        const screenshotContainer = document.getElementById('screenshotContainer');
+        for (let i = 1; i <= 11; i++) {
+            const img = document.createElement('img');
+            img.src = `/assets/baytraq/screenshots/${i}.png`;
+            img.alt = `Baytraq Screenshot ${i}`;
+            img.className = 'screenshot';
+            img.loading = 'lazy';
+            screenshotContainer.appendChild(img);
+        }
+    </script>
+</body>
+</html>
