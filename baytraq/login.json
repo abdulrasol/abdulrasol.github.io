@@ -1,0 +1,50 @@
+{
+    "storeId": "emily-books-library",
+    "storeName": "Emily Bookstore",
+    "bundleVersion": "1",
+    "supportedPlatforms": [
+        "android",
+        "ios"
+    ],
+    "platformConfigs": {
+        "ios": {
+            "apiKey": "AIzaSyCLSpEcutcaMnTyAJqNHrTNc6iyEhN9IV4",
+            "appId": "1:277436337482:ios:e95535f2578a7d4cbf85b3",
+            "projectId": "emily-books-library",
+            "messagingSenderId": "277436337482",
+            "authDomain": null,
+            "databaseURL": null,
+            "storageBucket": null,
+            "measurementId": null,
+            "storeId": "emily-books-library",
+            "platform": "ios",
+            "supportedPlatforms": [
+                "android",
+                "ios"
+            ],
+            "iosBundleId": "io.github.abdulrasol.baytraqsalesmanager",
+            "iosClientId": null
+        },
+        "android": {
+            "apiKey": "AIzaSyCYhfOWowcMKcR99wdVhbPt0-bwxN7d0fA",
+            "appId": "1:277436337482:android:afb6e5aef70022b5bf85b3",
+            "projectId": "emily-books-library",
+            "messagingSenderId": "277436337482",
+            "authDomain": null,
+            "databaseURL": null,
+            "storageBucket": null,
+            "measurementId": null,
+            "storeId": "emily-books-library",
+            "platform": "android",
+            "supportedPlatforms": [
+                "android",
+                "ios"
+            ],
+            "iosBundleId": "io.github.abdulrasol.baytraqsalesmanager",
+            "iosClientId": null
+        }
+    },
+    "staffId": "admin",
+    "accessCode": "112233",
+    "issuedAt": "2026-05-07T12:10:31.880853"
+}
