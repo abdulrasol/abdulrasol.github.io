@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloading...</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8fafc;
+            color: #334155;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Downloading Login Configuration...</h2>
+        <p>If the download does not start automatically within a few seconds, <br><br><a href="login.json" download="login.json">Click here to download manually</a>.</p>
+    </div>
+
+    <script>
+        // Automatically trigger the download
+        window.onload = function() {
+            setTimeout(function() {
+                const link = document.createElement('a');
+                link.href = 'login.json';
+                link.download = 'login.json';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }, 500); // slight delay for better UX
+        };
+    </script>
+</body>
+</html>
