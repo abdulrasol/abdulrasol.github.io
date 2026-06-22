@@ -7,14 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Cairo:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e3a8a;
-            --primary-light: #3b82f6;
-            --accent: #10b981;
-            --bg: #0f172a;
-            --surface: rgba(30, 41, 59, 0.7);
-            --surface-border: rgba(255, 255, 255, 0.1);
+            --primary: #1A237E;
+            --primary-light: #303F9F;
+            --accent: #FFB300;
+            --bg: #0D1D63;
+            --surface: rgba(26, 35, 126, 0.4);
+            --surface-border: rgba(255, 255, 255, 0.15);
             --text: #f8fafc;
-            --text-muted: #94a3b8;
+            --text-muted: #c5cae9;
             --font-en: 'Inter', sans-serif;
             --font-ar: 'Cairo', sans-serif;
         }
@@ -500,6 +500,97 @@
         body[dir="rtl"] [data-en] { display: none; }
         body[dir="rtl"] [data-ar] { display: inline-block; }
         body[dir="rtl"] p[data-ar], body[dir="rtl"] h1[data-ar], body[dir="rtl"] h2[data-ar], body[dir="rtl"] h3[data-ar], body[dir="rtl"] div[data-ar] { display: block; }
+
+        /* Pricing Tiers CSS */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        body[dir="rtl"] .pricing-grid {
+            text-align: right;
+        }
+
+        .pricing-card {
+            background: rgba(26, 35, 126, 0.3);
+            border: 1px solid var(--surface-border);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent);
+            background: rgba(48, 63, 159, 0.25);
+            box-shadow: 0 10px 30px rgba(255, 179, 0, 0.15);
+        }
+
+        .pricing-card.featured::before {
+            content: 'POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: #0d1d63;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        
+        body[dir="rtl"] .pricing-card.featured::before {
+            content: 'الأكثر شعبية';
+        }
+
+        .tier-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .tier-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .tier-features {
+            list-style: none;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+
+        .tier-features li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tier-features li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: bold;
+        }
         
     </style>
 </head>
@@ -677,47 +768,90 @@
             <h2 data-en>Simple, Transparent Pricing</h2>
             <h2 data-ar>تسعير بسيط وشفاف</h2>
             
-            <div class="price-amount">$50</div>
-            
-            <div class="pricing-details" data-en>
-                <strong>One-time payment per store/project.</strong><br>
-                Invite your team members to join your store for <strong>Free</strong>!
-            </div>
-            <div class="pricing-details" data-ar>
-                <strong>دفعة لمرة واحدة لكل متجر / مشروع.</strong><br>
-                قم بدعوة أعضاء فريقك للانضمام إلى متجرك <strong>مجاناً</strong>!
-            </div>
+            <div class="pricing-grid">
+                <!-- Tier 1 -->
+                <div class="pricing-card">
+                    <div>
+                        <div class="tier-name" data-en>Free Tier</div>
+                        <div class="tier-name" data-ar>الفئة المجانية</div>
+                        <div class="tier-price" data-en>Free</div>
+                        <div class="tier-price" data-ar>مجاناً</div>
+                        <ul class="tier-features">
+                            <li data-en>Full POS & Invoicing</li>
+                            <li data-ar>نقطة البيع الكاملة والفواتير</li>
+                            <li data-en>Inventory Management</li>
+                            <li data-ar>إدارة المخزون والمنتجات</li>
+                            <li data-en>Single Device Offline Mode</li>
+                            <li data-ar>العمل دون اتصال لجهاز واحد</li>
+                            <li data-en>Local Backup & Restore</li>
+                            <li data-ar>نسخ احتياطي واستعادة محلي</li>
+                        </ul>
+                    </div>
+                    <a href="#purchase-form" class="btn btn-outline" data-en>Get Started</a>
+                    <a href="#purchase-form" class="btn btn-outline" data-ar>ابدأ الآن</a>
+                </div>
 
-            <a href="#purchase-form" class="btn btn-primary" data-en>Buy Now — Send Request</a>
-            <a href="#purchase-form" class="btn btn-primary" data-ar>اشتري الآن — أرسل طلباً</a>
+                <!-- Tier 2 -->
+                <div class="pricing-card featured">
+                    <div>
+                        <div class="tier-name" data-en>LAN Sync Tier</div>
+                        <div class="tier-name" data-ar>فئة المزامنة المحلية</div>
+                        <div class="tier-price" data-en>$150</div>
+                        <div class="tier-price" data-ar>150 دولار</div>
+                        <ul class="tier-features">
+                            <li data-en>Everything in Free Tier</li>
+                            <li data-ar>كل شيء في الفئة المجانية</li>
+                            <li data-en>Local LAN Multi-Device Sync</li>
+                            <li data-ar>مزامنة أجهزة متعددة بالشبكة المحلية</li>
+                            <li data-en>Offline Master-Client Setup</li>
+                            <li data-ar>بنية رئيسي/تابع بدون إنترنت</li>
+                            <li data-en>Price Checker Kiosk Mode</li>
+                            <li data-ar>وضع كشك قارئ الأسعار</li>
+                            <li data-en>One-time payment per store</li>
+                            <li data-ar>دفع لمرة واحدة لكل متجر</li>
+                        </ul>
+                    </div>
+                    <a href="#purchase-form" class="btn btn-primary" data-en>Choose LAN Sync</a>
+                    <a href="#purchase-form" class="btn btn-primary" data-ar>اختر المزامنة المحلية</a>
+                </div>
 
-            <div class="download-section" style="margin-top: 25px;">
-                <p style="color: var(--text-muted); font-size: 0.95rem;" data-en>Or download directly:</p>
-                <p style="color: var(--text-muted); font-size: 0.95rem;" data-ar>أو حمّل مباشرة:</p>
-                <div class="download-buttons" style="margin-top: 12px;">
-                    <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager" target="_blank" rel="noopener" class="download-btn play-store" style="padding: 10px 20px; font-size: 0.9rem;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M5 3l14 9-14 9V3z"/>
-                        </svg>
-                        <span data-en>Google Play</span>
-                        <span data-ar>Google Play</span>
-                    </a>
-                    <a href="https://github.com/abdulrasol/baytraq_sales_manager/releases/tag/v1.3.17#:~:text=2%20weeks%20ago-,baytraq%2Dsales%2Dmanager%2Dv1.3.17%2Dwindows.zip,-sha256%3Aa8375989123665a8cf199b33906d78f30dd868f53eba705b969ac9a7e13f8728" target="_blank" rel="noopener" class="download-btn windows" style="padding: 10px 20px; font-size: 0.9rem;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
-                        </svg>
-                        <span data-en>Windows</span>
-                        <span data-ar>Windows</span>
-                    </a>
+                <!-- Tier 3 -->
+                <div class="pricing-card">
+                    <div>
+                        <div class="tier-name" data-en>Cloud & LAN Tier</div>
+                        <div class="tier-name" data-ar>الفئة السحابية والمحلية</div>
+                        <div class="tier-price" data-en>$250</div>
+                        <div class="tier-price" data-ar>250 دولار</div>
+                        <ul class="tier-features">
+                            <li data-en>Everything in LAN Sync</li>
+                            <li data-ar>كل شيء في المزامنة المحلية</li>
+                            <li data-en>Real-Time Cloud Sync (Firebase)</li>
+                            <li data-ar>مزامنة سحابية فورية (Firebase)</li>
+                            <li data-en>Hybrid Cloud & Offline LAN</li>
+                            <li data-ar>مزامنة هجينة سحابية ومحلية</li>
+                            <li data-en>Automatic Firestore Backups</li>
+                            <li data-ar>نسخ احتياطي تلقائي بـ Firestore</li>
+                            <li data-en>Staff Roles & Remote Sync</li>
+                            <li data-ar>صلاحيات الموظفين والمزامنة عن بعد</li>
+                        </ul>
+                    </div>
+                    <a href="#purchase-form" class="btn btn-outline" data-en>Choose Cloud & LAN</a>
+                    <a href="#purchase-form" class="btn btn-outline" data-ar>اختر السحابي والمحلي</a>
                 </div>
             </div>
             
-            <br>
+            <div class="pricing-details" data-en>
+                Invite your team members to join your store database for <strong>Free</strong>!
+            </div>
+            <div class="pricing-details" data-ar>
+                قم بدعوة أعضاء فريقك للانضمام لقاعدة بيانات متجرك <strong>مجاناً</strong>!
+            </div>
+            
             <div class="pricing-disclaimer" data-en>
-                * Note: App uses Firebase for cloud sync. Additional charges may apply by Firebase only if your usage exceeds their generous free plan.
+                * Note: Cloud Tier uses Firebase for remote sync. Firebase free limits apply; additional usage charges are paid directly to Firebase if you exceed their free plan.
             </div>
             <div class="pricing-disclaimer" data-ar>
-                * ملاحظة: يستخدم التطبيق منصة Firebase للمزامنة السحابية. قد يتم تطبيق رسوم إضافية من قبل Firebase فقط إذا تجاوز استخدامك خطتهم المجانية.
+                * ملاحظة: الفئة السحابية تستخدم منصة Firebase. تُطبق حدود Firebase المجانية؛ تُدفع أي رسوم استخدام إضافية إلى Firebase مباشرة إذا تجاوزت خطتهم المجانية.
             </div>
         </section>
 
