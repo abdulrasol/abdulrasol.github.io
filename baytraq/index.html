@@ -327,6 +327,133 @@
             display: inline-block;
         }
 
+        .download-section {
+            text-align: center;
+            padding: 30px 0 10px;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            color: var(--text);
+            backdrop-filter: blur(10px);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-light);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .download-btn.play-store {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            border: none;
+            color: #fff;
+        }
+
+        .download-btn.play-store:hover {
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .download-btn.windows {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            border: none;
+            color: #fff;
+        }
+
+        .download-btn.windows:hover {
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4);
+        }
+
+        .purchase-form {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 24px;
+            padding: 50px;
+            margin: 50px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 14px 18px;
+            border-radius: 12px;
+            border: 1px solid var(--surface-border);
+            background: rgba(15, 23, 42, 0.6);
+            color: var(--text);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        body[dir="rtl"] .form-group input,
+        body[dir="rtl"] .form-group textarea {
+            font-family: var(--font-ar);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .form-note {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 15px;
+        }
+
         footer {
             text-align: center;
             padding: 40px 0;
@@ -342,6 +469,31 @@
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+            .pricing {
+                padding: 30px 20px;
+            }
+            .purchase-form {
+                padding: 30px 20px;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .download-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .download-btn {
+                justify-content: center;
+            }
         }
 
         [data-ar] { display: none; }
@@ -385,10 +537,31 @@
             </div>
 
             <div class="cta-buttons">
-                <a href="#pricing" class="btn btn-primary" data-en>Get Baytraq Now</a>
-                <a href="#pricing" class="btn btn-primary" data-ar>احصل على بيترق الآن</a>
+                <a href="#purchase-form" class="btn btn-primary" data-en>Get Baytraq Now</a>
+                <a href="#purchase-form" class="btn btn-primary" data-ar>احصل على بيترق الآن</a>
                 <a href="mailto:abdulrsol97@gmail.com" class="btn btn-outline" data-en>Contact Support</a>
                 <a href="mailto:abdulrsol97@gmail.com" class="btn btn-outline" data-ar>تواصل مع الدعم</a>
+            </div>
+
+            <div class="download-section">
+                <p style="color: var(--text-muted); margin-bottom: 10px;" data-en>Download the app</p>
+                <p style="color: var(--text-muted); margin-bottom: 10px;" data-ar>حمّل التطبيق</p>
+                <div class="download-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager" target="_blank" rel="noopener" class="download-btn play-store">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M5 3l14 9-14 9V3z"/>
+                        </svg>
+                        <span data-en>Get it on Google Play</span>
+                        <span data-ar>احصل عليه من Google Play</span>
+                    </a>
+                    <a href="https://github.com/abdulrasol/baytraq_sales_manager/releases/tag/v1.3.17#:~:text=2%20weeks%20ago-,baytraq%2Dsales%2Dmanager%2Dv1.3.17%2Dwindows.zip,-sha256%3Aa8375989123665a8cf199b33906d78f30dd868f53eba705b969ac9a7e13f8728" target="_blank" rel="noopener" class="download-btn windows">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                        </svg>
+                        <span data-en>Download for Windows</span>
+                        <span data-ar>تحميل لنظام Windows</span>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -397,43 +570,85 @@
                 <div class="feature-icon">📦</div>
                 <h3 data-en>Inventory Management</h3>
                 <h3 data-ar>إدارة المخزون</h3>
-                <p data-en>Easily track available items, set alerts for low stock, and manage your warehouse effortlessly.</p>
-                <p data-ar>تتبع العناصر المتاحة بسهولة، تعيين تنبيهات لنقص المخزون، وإدارة مستودعك دون عناء.</p>
+                <p data-en>Track items, quantities, buy/sell prices, low-stock alerts, and supplier links in one place.</p>
+                <p data-ar>تتبع المنتجات والكميات وأسعار الشراء/البيع وتنبيهات انخفاض المخزون وروابط الموردين في مكان واحد.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🧾</div>
-                <h3 data-en>Invoice & POS</h3>
-                <h3 data-ar>الفواتير ونقاط البيع</h3>
-                <p data-en>Create, edit, print, and manage professional invoices and run smooth point-of-sale operations.</p>
-                <p data-ar>إنشاء وتحرير وطباعة وإدارة الفواتير الاحترافية وتشغيل عمليات نقاط البيع السلسة.</p>
+                <h3 data-en>Point of Sale (POS)</h3>
+                <h3 data-ar>نقطة البيع</h3>
+                <p data-en>Fast checkout with barcode scanning, cart management, discount support, and thermal receipt printing.</p>
+                <p data-ar>دفع سريع مع مسح الباركود وإدارة السلة ودعم الخصومات وطباعة الإيصالات الحرارية.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">📈</div>
-                <h3 data-en>Profit Analysis</h3>
-                <h3 data-ar>تحليل الأرباح</h3>
-                <p data-en>Gain clear insights into your profits with detailed interactive reports and charts.</p>
-                <p data-ar>احصل على رؤى واضحة حول أرباحك مع تقارير ورسوم بيانية تفاعلية مفصلة.</p>
+                <div class="feature-icon">🏷️</div>
+                <h3 data-en>Barcode Generation & Printing</h3>
+                <h3 data-ar>إنشاء وطباعة الباركود</h3>
+                <p data-en>Generate Code 128 barcodes for items without one, print A4 label sheets or thermal labels, then scan them at POS.</p>
+                <p data-ar>أنشئ باركود Code 128 للمنتجات بدون باركود، واطبع ملصقات A4 أو حرارية، ثم امسحها عند نقطة البيع.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📄</div>
+                <h3 data-en>Invoices & Sales</h3>
+                <h3 data-ar>الفواتير والمبيعات</h3>
+                <p data-en>Create professional invoices, manage credit/partial payments, print PDFs, and track every sale.</p>
+                <p data-ar>أنشئ فواتير احترافية وإدارة المدفوعات الآجلة/الجزئية وطباعة PDF وتتبع كل عملية بيع.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">👥</div>
-                <h3 data-en>Customer & Supplier</h3>
+                <h3 data-en>Customers & Suppliers</h3>
                 <h3 data-ar>العملاء والموردين</h3>
-                <p data-en>Maintain organized records of your contacts, track their debts, and manage relationships.</p>
-                <p data-ar>احتفظ بسجلات منظمة لجهات الاتصال الخاصة بك، وتتبع ديونهم، وإدارة العلاقات.</p>
+                <p data-en>Maintain detailed contact records, track debts and credits, and manage business relationships.</p>
+                <p data-ar>احتفظ بسجلات تفصيلية لجهات الاتصال، وتتبع الديون والاعتمادات، وإدارة علاقات العمل.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3 data-en>Debts & Payments</h3>
+                <h3 data-ar>الديون والمدفوعات</h3>
+                <p data-en>Record payments, settlements, refunds, and discounts with full transaction history per contact.</p>
+                <p data-ar>سجل المدفوعات والتسويات والاستردادات والخصومات مع سجل كامل للمعاملات لكل جهة اتصال.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">💳</div>
-                <h3 data-en>Expense & Vouchers</h3>
+                <h3 data-en>Expenses & Vouchers</h3>
                 <h3 data-ar>المصروفات والسندات</h3>
-                <p data-en>Keep track of your business expenses and handle payment and receipt vouchers efficiently.</p>
-                <p data-ar>تتبع مصروفات عملك وتعامل مع سندات الدفع والقبض بكفاءة عالية.</p>
+                <p data-en>Track business expenses, recurring costs, and manage payment/receipt vouchers efficiently.</p>
+                <p data-ar>تتبع مصروفات العمل والتكاليف المتكررة وإدارة سندات الدفع والقبض بكفاءة.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📥</div>
+                <h3 data-en>Purchase Intake & Receipts</h3>
+                <h3 data-ar>استلام المشتريات والفواتير</h3>
+                <p data-en>Record supplier purchases, attach receipt images, and update inventory automatically.</p>
+                <p data-ar>سجل مشتريات الموردين وأرفق صور الفواتير وحدّث المخزون تلقائياً.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 data-en>Profit Analysis & Insights</h3>
+                <h3 data-ar>تحليل الأرباح والرؤى</h3>
+                <p data-en>Visual dashboards, sales trends, product performance, and profit reports to guide your decisions.</p>
+                <p data-ar>لوحات معلومات مرئية واتجاهات المبيعات وأداء المنتجات وتقارير الأرباح لإرشاد قراراتك.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h3 data-en>Staff Roles & Permissions</h3>
+                <h3 data-ar>أدوار وصلاحيات الموظفين</h3>
+                <p data-en>Invite team members with role-based access: Admin, Manager, Accountant, or Cashier.</p>
+                <p data-ar>دعوة أعضاء الفريق بصلاحيات مبنية على الأدوار: مدير أو محاسب أو كاشير.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">☁️</div>
                 <h3 data-en>Cloud Sync & Backup</h3>
-                <h3 data-ar>المزامنة السحابية</h3>
-                <p data-en>Securely sync your data across all your devices and restore it whenever needed.</p>
-                <p data-ar>قم بمزامنة بياناتك بأمان عبر جميع أجهزتك واستعادتها وقتما تشاء.</p>
+                <h3 data-ar>المزامنة السحابية والنسخ الاحتياطي</h3>
+                <p data-en>Sync data across devices with Firebase, create JSON backups, and restore when needed.</p>
+                <p data-ar>زامن البيانات عبر الأجهزة باستخدام Firebase وأنشئ نسخاً احتياطية JSON واستعدها عند الحاجة.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3 data-en>Multi-Language Support</h3>
+                <h3 data-ar>دعم متعدد اللغات</h3>
+                <p data-en>Built-in support for 16 languages including English, Arabic, Persian, Turkish, and more.</p>
+                <p data-ar>دعم مدمج لـ 16 لغة بما في ذلك الإنجليزية والعربية والفارسية والتركية والمزيد.</p>
             </div>
         </section>
 
@@ -460,8 +675,29 @@
                 قم بدعوة أعضاء فريقك للانضمام إلى متجرك <strong>مجاناً</strong>!
             </div>
 
-            <a href="mailto:abdulrsol97@gmail.com?subject=Baytraq Purchase Request" class="btn btn-primary" data-en>Contact to Purchase</a>
-            <a href="mailto:abdulrsol97@gmail.com?subject=Baytraq Purchase Request" class="btn btn-primary" data-ar>تواصل معنا للشراء</a>
+            <a href="#purchase-form" class="btn btn-primary" data-en>Buy Now — Send Request</a>
+            <a href="#purchase-form" class="btn btn-primary" data-ar>اشتري الآن — أرسل طلباً</a>
+
+            <div class="download-section" style="margin-top: 25px;">
+                <p style="color: var(--text-muted); font-size: 0.95rem;" data-en>Or download directly:</p>
+                <p style="color: var(--text-muted); font-size: 0.95rem;" data-ar>أو حمّل مباشرة:</p>
+                <div class="download-buttons" style="margin-top: 12px;">
+                    <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager" target="_blank" rel="noopener" class="download-btn play-store" style="padding: 10px 20px; font-size: 0.9rem;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M5 3l14 9-14 9V3z"/>
+                        </svg>
+                        <span data-en>Google Play</span>
+                        <span data-ar>Google Play</span>
+                    </a>
+                    <a href="https://github.com/abdulrasol/baytraq_sales_manager/releases/tag/v1.3.17#:~:text=2%20weeks%20ago-,baytraq%2Dsales%2Dmanager%2Dv1.3.17%2Dwindows.zip,-sha256%3Aa8375989123665a8cf199b33906d78f30dd868f53eba705b969ac9a7e13f8728" target="_blank" rel="noopener" class="download-btn windows" style="padding: 10px 20px; font-size: 0.9rem;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                        </svg>
+                        <span data-en>Windows</span>
+                        <span data-ar>Windows</span>
+                    </a>
+                </div>
+            </div>
             
             <br>
             <div class="pricing-disclaimer" data-en>
@@ -470,6 +706,57 @@
             <div class="pricing-disclaimer" data-ar>
                 * ملاحظة: يستخدم التطبيق منصة Firebase للمزامنة السحابية. قد يتم تطبيق رسوم إضافية من قبل Firebase فقط إذا تجاوز استخدامك خطتهم المجانية.
             </div>
+        </section>
+
+        <section id="purchase-form" class="purchase-form">
+            <h2 class="section-title" style="margin-bottom: 10px;" data-en>Request to Purchase Baytraq</h2>
+            <h2 class="section-title" style="margin-bottom: 10px;" data-ar>طلب شراء بيترق</h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 10px;" data-en>
+                Fill out the form below and we will contact you shortly with payment instructions and your license key.
+            </p>
+            <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 10px;" data-ar>
+                املأ النموذج أدناه وسنتواصل معك قريباً بتعليمات الدفع ومفتاح الترخيص الخاص بك.
+            </p>
+
+            <form id="baytraqPurchaseForm" onsubmit="submitPurchaseRequest(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName" data-en>Full Name *</label>
+                        <label for="fullName" data-ar>الاسم الكامل *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-en>Email Address *</label>
+                        <label for="email" data-ar>البريد الإلكتروني *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="storeName" data-en>Store / Business Name *</label>
+                        <label for="storeName" data-ar>اسم المتجر / النشاط التجاري *</label>
+                        <input type="text" id="storeName" name="storeName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" data-en>Phone Number</label>
+                        <label for="phone" data-ar>رقم الهاتف</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message" data-en>Message / Notes</label>
+                        <label for="message" data-ar>الرسالة / ملاحظات</label>
+                        <textarea id="message" name="message" placeholder="Tell us how many stores or team members you need..."></textarea>
+                    </div>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary" style="min-width: 220px;" data-en>Send Purchase Request</button>
+                    <button type="submit" class="btn btn-primary" style="min-width: 220px;" data-ar>إرسال طلب الشراء</button>
+                    <p class="form-note" data-en>
+                        This opens your email app with the details pre-filled. You can also reach us directly at <a href="mailto:abdulrsol97@gmail.com" style="color: var(--primary-light);">abdulrsol97@gmail.com</a>.
+                    </p>
+                    <p class="form-note" data-ar>
+                        سيفتح هذا تطبيق البريد الإلكتروني الخاص بك مع تفاصيل مملوءة مسبقاً. يمكنك أيضاً التواصل معنا مباشرة على <a href="mailto:abdulrsol97@gmail.com" style="color: var(--primary-light);">abdulrsol97@gmail.com</a>.
+                    </p>
+                </div>
+            </form>
         </section>
 
         <footer>
@@ -493,11 +780,61 @@
         // Language Toggle
         function toggleLanguage() {
             const currentDir = document.body.getAttribute('dir') || 'ltr';
-            if (currentDir === 'ltr') {
-                document.body.setAttribute('dir', 'rtl');
-            } else {
-                document.body.setAttribute('dir', 'ltr');
+            const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
+            document.body.setAttribute('dir', newDir);
+
+            const messageTextarea = document.getElementById('message');
+            if (messageTextarea) {
+                messageTextarea.placeholder = newDir === 'rtl'
+                    ? 'أخبرنا بعدد المتاجر أو أعضاء الفريق الذين تحتاجهم...'
+                    : 'Tell us how many stores or team members you need...';
             }
+        }
+
+        // Purchase Request Form
+        function submitPurchaseRequest(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('baytraqPurchaseForm');
+            const formData = new FormData(form);
+
+            const fullName = formData.get('fullName')?.toString().trim() || '';
+            const email = formData.get('email')?.toString().trim() || '';
+            const storeName = formData.get('storeName')?.toString().trim() || '';
+            const phone = formData.get('phone')?.toString().trim() || '';
+            const message = formData.get('message')?.toString().trim() || '';
+
+            const isRtl = document.body.getAttribute('dir') === 'rtl';
+
+            const subject = isRtl
+                ? 'طلب شراء بيترق - ' + storeName
+                : 'Baytraq Purchase Request - ' + storeName;
+
+            const bodyLines = isRtl
+                ? [
+                    'اسم المشتري: ' + fullName,
+                    'البريد الإلكتروني: ' + email,
+                    'اسم المتجر: ' + storeName,
+                    'رقم الهاتف: ' + (phone || 'غير متوفر'),
+                    '',
+                    'الرسالة:',
+                    message || 'لا توجد ملاحظات إضافية'
+                ]
+                : [
+                    'Buyer Name: ' + fullName,
+                    'Email: ' + email,
+                    'Store/Business: ' + storeName,
+                    'Phone: ' + (phone || 'Not provided'),
+                    '',
+                    'Message:',
+                    message || 'No additional notes'
+                ];
+
+            const mailtoLink = 'mailto:abdulrsol97@gmail.com'
+                + '?subject=' + encodeURIComponent(subject)
+                + '&body=' + encodeURIComponent(bodyLines.join('\n'));
+
+            window.location.href = mailtoLink;
         }
 
         // Load Screenshots

@@ -34,7 +34,7 @@ export const projects = [
         technologies: ["Flutter", "Dart", "Getx", "ObjectBox"],
         githubUrl: null,
         liveUrl: "/baytraq/",
-        googlePlayUrl: null,
+        googlePlayUrl: "https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager",
         featured: true,
         stars: 0
     },
