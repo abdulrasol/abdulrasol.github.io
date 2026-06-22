@@ -807,8 +807,8 @@
                             <li data-ar>نسخ احتياطي واستعادة محلي</li>
                         </ul>
                     </div>
-                    <a href="#purchase-form" class="btn btn-outline" data-en>Get Started</a>
-                    <a href="#purchase-form" class="btn btn-outline" data-ar>ابدأ الآن</a>
+                    <a href="#purchase-form" onclick="selectPlan('free')" class="btn btn-outline" data-en>Get Started</a>
+                    <a href="#purchase-form" onclick="selectPlan('free')" class="btn btn-outline" data-ar>ابدأ الآن</a>
                 </div>
 
                 <!-- Tier 2 -->
@@ -831,8 +831,8 @@
                             <li data-ar>دفع لمرة واحدة لكل متجر</li>
                         </ul>
                     </div>
-                    <a href="#purchase-form" class="btn btn-primary" data-en>Choose LAN Sync</a>
-                    <a href="#purchase-form" class="btn btn-primary" data-ar>اختر المزامنة المحلية</a>
+                    <a href="#purchase-form" onclick="selectPlan('lan')" class="btn btn-primary" data-en>Choose LAN Sync</a>
+                    <a href="#purchase-form" onclick="selectPlan('lan')" class="btn btn-primary" data-ar>اختر المزامنة المحلية</a>
                 </div>
 
                 <!-- Tier 3 -->
@@ -855,8 +855,8 @@
                             <li data-ar>صلاحيات الموظفين والمزامنة عن بعد</li>
                         </ul>
                     </div>
-                    <a href="#purchase-form" class="btn btn-outline" data-en>Choose Cloud & LAN</a>
-                    <a href="#purchase-form" class="btn btn-outline" data-ar>اختر السحابي والمحلي</a>
+                    <a href="#purchase-form" onclick="selectPlan('cloud')" class="btn btn-outline" data-en>Choose Cloud & LAN</a>
+                    <a href="#purchase-form" onclick="selectPlan('cloud')" class="btn btn-outline" data-ar>اختر السحابي والمحلي</a>
                 </div>
             </div>
             
@@ -907,6 +907,15 @@
                         <label for="phone" data-ar>رقم الهاتف</label>
                         <input type="tel" id="phone" name="phone">
                     </div>
+                    <div class="form-group">
+                        <label for="plan" data-en>Selected Plan *</label>
+                        <label for="plan" data-ar>الباقة المختارة *</label>
+                        <select id="plan" name="plan" required style="padding: 16px 20px; border-radius: 14px; border: 1px solid var(--surface-border); background: rgba(10, 14, 41, 0.6); color: var(--text); font-family: inherit; font-size: 1rem; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
+                            <option value="Free Tier">Free Tier / الفئة المجانية</option>
+                            <option value="LAN Sync Tier ($150)">LAN Sync Tier ($150) / فئة المزامنة المحلية (150$)</option>
+                            <option value="Cloud & LAN Tier ($250)">Cloud & LAN Tier ($250) / الفئة السحابية والمحلية (250$)</option>
+                        </select>
+                    </div>
                     <div class="form-group full-width">
                         <label for="message" data-en>Message / Notes</label>
                         <label for="message" data-ar>الرسالة / ملاحظات</label>
@@ -917,10 +926,10 @@
                     <button type="submit" class="btn btn-primary" style="min-width: 220px;" data-en>Send Purchase Request</button>
                     <button type="submit" class="btn btn-primary" style="min-width: 220px;" data-ar>إرسال طلب الشراء</button>
                     <p class="form-note" data-en>
-                        This opens your email app with the details pre-filled. You can also reach us directly at <a href="mailto:abdulrsol97@gmail.com" style="color: var(--primary-light);">abdulrsol97@gmail.com</a>.
+                        This opens your email app with the details pre-filled. You can also reach us directly at <a href="mailto:abdulrsol97@gmail.com" style="color: var(--accent);">abdulrsol97@gmail.com</a>.
                     </p>
                     <p class="form-note" data-ar>
-                        سيفتح هذا تطبيق البريد الإلكتروني الخاص بك مع تفاصيل مملوءة مسبقاً. يمكنك أيضاً التواصل معنا مباشرة على <a href="mailto:abdulrsol97@gmail.com" style="color: var(--primary-light);">abdulrsol97@gmail.com</a>.
+                        سيفتح هذا تطبيق البريد الإلكتروني الخاص بك مع تفاصيل مملوءة مسبقاً. يمكنك أيضاً التواصل معنا مباشرة على <a href="mailto:abdulrsol97@gmail.com" style="color: var(--accent);">abdulrsol97@gmail.com</a>.
                     </p>
                 </div>
             </form>
@@ -958,6 +967,21 @@
             }
         }
 
+        // Plan Selection Helper
+        function selectPlan(planId) {
+            const planSelect = document.getElementById('plan');
+            if (planSelect) {
+                if (planId === 'free') planSelect.value = 'Free Tier';
+                else if (planId === 'lan') planSelect.value = 'LAN Sync Tier ($150)';
+                else if (planId === 'cloud') planSelect.value = 'Cloud & LAN Tier ($250)';
+            }
+            // Smooth scroll to form
+            const formElement = document.getElementById('purchase-form');
+            if (formElement) {
+                formElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
         // Purchase Request Form
         function submitPurchaseRequest(event) {
             event.preventDefault();
@@ -969,13 +993,14 @@
             const email = formData.get('email')?.toString().trim() || '';
             const storeName = formData.get('storeName')?.toString().trim() || '';
             const phone = formData.get('phone')?.toString().trim() || '';
+            const selectedPlan = formData.get('plan')?.toString().trim() || '';
             const message = formData.get('message')?.toString().trim() || '';
 
             const isRtl = document.body.getAttribute('dir') === 'rtl';
 
             const subject = isRtl
-                ? 'طلب شراء بيترق - ' + storeName
-                : 'Baytraq Purchase Request - ' + storeName;
+                ? 'طلب شراء بيترق - ' + storeName + ' (' + selectedPlan + ')'
+                : 'Baytraq Purchase Request - ' + storeName + ' (' + selectedPlan + ')';
 
             const bodyLines = isRtl
                 ? [
@@ -983,6 +1008,7 @@
                     'البريد الإلكتروني: ' + email,
                     'اسم المتجر: ' + storeName,
                     'رقم الهاتف: ' + (phone || 'غير متوفر'),
+                    'الباقة المطلوبة: ' + selectedPlan,
                     '',
                     'الرسالة:',
                     message || 'لا توجد ملاحظات إضافية'
@@ -992,6 +1018,7 @@
                     'Email: ' + email,
                     'Store/Business: ' + storeName,
                     'Phone: ' + (phone || 'Not provided'),
+                    'Requested Plan: ' + selectedPlan,
                     '',
                     'Message:',
                     message || 'No additional notes'
