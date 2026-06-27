@@ -73,6 +73,19 @@ function Skills($$renderer, $$props) {
 }
 const projects = [
   {
+    title_en: "MEAAD",
+    title_ar: "ميعاد",
+    desc_en: "An intuitive periodic payment and subscriber management app designed to streamline recurring dues. Features smart automated reminders and Google Sheets integration.",
+    desc_ar: "تطبيق بديهي لإدارة المدفوعات الدورية والمشتركين لتسهيل المستحقات المتكررة. يتميز بتذكيرات ذكية تلقائية وتكامل مع جداول بيانات جوجل.",
+    image: "/meaad/logo.png",
+    technologies: ["Web", "Google Cloud", "Google Sheets"],
+    githubUrl: null,
+    liveUrl: "/meaad/",
+    googlePlayUrl: null,
+    featured: true,
+    stars: 0
+  },
+  {
     title_en: "Baytraq Sales Manager",
     title_ar: "مدير مبيعات بيترق",
     desc_en: "Baytraq Sales Manager is your all-in-one sales operations workspace. Run invoicing and POS sales, track inventory, monitor profits and expenses, and stay connected with customers and suppliers.",
@@ -81,7 +94,7 @@ const projects = [
     technologies: ["Flutter", "Dart", "Getx", "ObjectBox"],
     githubUrl: null,
     liveUrl: "/baytraq/",
-    googlePlayUrl: null,
+    googlePlayUrl: "https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager",
     featured: true,
     stars: 0
   },
