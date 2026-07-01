@@ -1,4 +1,0 @@
-.git\
-.qodo\
-node_modules\
-production\
