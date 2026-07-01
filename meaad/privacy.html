@@ -145,9 +145,18 @@
 
         // Load saved language
         window.onload = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
             const savedLang = localStorage.getItem('meaad_lang');
-            if (savedLang === 'en') {
-                toggleLanguage(); // Switch to English since default is Arabic
+            
+            if (urlLang === 'en' || (!urlLang && savedLang === 'en')) {
+                if (document.documentElement.getAttribute('lang') !== 'en' && typeof toggleLanguage === 'function') {
+                    toggleLanguage();
+                }
+            } else if (urlLang === 'ar' || (!urlLang && savedLang === 'ar')) {
+                if (document.documentElement.getAttribute('lang') !== 'ar' && typeof toggleLanguage === 'function') {
+                    toggleLanguage();
+                }
             }
         };
     </script>
