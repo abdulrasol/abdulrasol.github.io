@@ -18,6 +18,7 @@
                 <a href="index.html" id="nav-home">الرئيسية</a>
                 <a href="privacy.html" id="nav-privacy">سياسة الخصوصية</a>
                 <a href="terms.html" id="nav-terms">شروط الخدمة</a>
+                <a href="changelogs.html" id="nav-changelog">سجل التحديثات</a>
                 <button class="lang-btn" onclick="toggleLanguage()" id="lang-btn">English</button>
             </nav>
         </div>
@@ -56,6 +57,7 @@
             <div class="footer-links">
                 <a href="privacy.html" id="footer-privacy">سياسة الخصوصية</a>
                 <a href="terms.html" id="footer-terms">شروط الخدمة</a>
+                <a href="changelogs.html" id="footer-changelog">سجل التحديثات</a>
             </div>
             <p id="footer-copy">&copy; 2026 ميعاد. جميع الحقوق محفوظة.</p>
             <p id="footer-contact">تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a></p>
@@ -78,10 +80,12 @@
                 document.getElementById('nav-home').innerText = 'Home';
                 document.getElementById('nav-privacy').innerText = 'Privacy Policy';
                 document.getElementById('nav-terms').innerText = 'Terms of Service';
+                document.getElementById('nav-changelog').innerText = 'Changelogs';
                 document.getElementById('lang-btn').innerText = 'العربية';
                 
                 document.getElementById('footer-privacy').innerText = 'Privacy Policy';
                 document.getElementById('footer-terms').innerText = 'Terms of Service';
+                document.getElementById('footer-changelog').innerText = 'Changelogs';
                 document.getElementById('footer-copy').innerHTML = '&copy; 2026 MEAAD. All rights reserved.';
                 document.getElementById('footer-contact').innerHTML = 'Contact us: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
             } else {
@@ -95,10 +99,12 @@
                 document.getElementById('nav-home').innerText = 'الرئيسية';
                 document.getElementById('nav-privacy').innerText = 'سياسة الخصوصية';
                 document.getElementById('nav-terms').innerText = 'شروط الخدمة';
+                document.getElementById('nav-changelog').innerText = 'سجل التحديثات';
                 document.getElementById('lang-btn').innerText = 'English';
                 
                 document.getElementById('footer-privacy').innerText = 'سياسة الخصوصية';
                 document.getElementById('footer-terms').innerText = 'شروط الخدمة';
+                document.getElementById('footer-changelog').innerText = 'سجل التحديثات';
                 document.getElementById('footer-copy').innerHTML = '&copy; 2026 ميعاد. جميع الحقوق محفوظة.';
                 document.getElementById('footer-contact').innerHTML = 'تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
             }
