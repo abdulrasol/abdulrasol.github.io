@@ -1,65 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEAAD - Privacy Policy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>ميعاد - سياسة الخصوصية</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body>
     <header>
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="logo.png" alt="MEAAD Logo">
-                MEAAD
+                <img src="logo.png" alt="ميعاد Logo">
+                <span id="logo-text">ميعاد</span>
             </a>
             <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
+                <a href="index.html" id="nav-home">الرئيسية</a>
+                <a href="privacy.html" id="nav-privacy">سياسة الخصوصية</a>
+                <a href="terms.html" id="nav-terms">شروط الخدمة</a>
+                <button class="lang-btn" onclick="toggleLanguage()" id="lang-btn">English</button>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="content-section">
-            <h1>Privacy Policy</h1>
-            <p>Last updated: June 27, 2026</p>
-            
-            <h2>1. Information We Collect</h2>
-            <p>When you use MEAAD, we may collect certain information from your Google account to provide our services, including:</p>
-            <ul>
-                <li>Basic profile information via Google Login</li>
-                <li>Email address</li>
-                <li>Access to your Google Sheets to store and manage your data</li>
-            </ul>
+        <div id="content-ar">
+            <section class="content-section">
+                <h1>سياسة الخصوصية</h1>
+                <p>آخر تحديث: 27 يونيو 2026</p>
+                
+                <h2>1. المعلومات التي نجمعها</h2>
+                <p>عند استخدام تطبيق ميعاد، قد نقوم بجمع بعض المعلومات من حساب Google الخاص بك لتقديم خدماتنا، بما في ذلك:</p>
+                <ul>
+                    <li>معلومات الملف الشخصي الأساسية عبر تسجيل الدخول بحساب Google.</li>
+                    <li>عنوان البريد الإلكتروني.</li>
+                    <li>الوصول إلى جداول بيانات Google (Google Sheets) الخاصة بك لتخزين وإدارة بياناتك.</li>
+                </ul>
 
-            <h2>2. How We Use Your Information</h2>
-            <p>We use the information we collect to:</p>
-            <ul>
-                <li>Provide, maintain, and improve our periodic payment and subscriber management services</li>
-                <li>Communicate with you regarding updates or support</li>
-                <li>Ensure the security of your account</li>
-            </ul>
+                <h2>2. كيف نستخدم معلوماتك</h2>
+                <p>نحن نستخدم المعلومات التي نجمعها من أجل:</p>
+                <ul>
+                    <li>توفير وصيانة وتحسين خدماتنا لإدارة المدفوعات الدورية وإدارة المشتركين.</li>
+                    <li>التواصل معك بخصوص التحديثات أو الدعم الفني.</li>
+                    <li>ضمان أمان حسابك.</li>
+                </ul>
 
-            <h2>3. Data Storage and Developer Access</h2>
-            <p>MEAAD stores your subscriber and payment data in Google Sheets that you create through the application. To ensure the application operates correctly, maintain service quality, and implement future improvements, these specific Google Sheets are shared with the MEAAD developer. We do not sell your personal information or your stored data to third parties.</p>
+                <h2>3. تخزين البيانات ووصول المطور</h2>
+                <p>يقوم تطبيق ميعاد بتخزين بيانات المشتركين والمدفوعات الخاصة بك في جداول بيانات Google (Google Sheets) التي تقوم بإنشائها من خلال التطبيق. لضمان عمل التطبيق بشكل صحيح، والحفاظ على جودة الخدمة، وتنفيذ التحسينات المستقبلية، تتم مشاركة جداول بيانات Google المحددة هذه مع مطور تطبيق ميعاد. نحن لا نبيع معلوماتك الشخصية أو بياناتك المخزنة لأطراف ثالثة.</p>
 
-            <h2>4. Data Protection</h2>
-            <p>We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.</p>
+                <h2>4. حماية البيانات</h2>
+                <p>نحن نتخذ الإجراءات الأمنية المناسبة لحماية معلوماتك الشخصية من الوصول غير المصرح به أو التعديل أو الإفصاح أو التدمير.</p>
 
-            <h2>5. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us.</p>
-        </section>
+                <h2>5. تواصل معنا</h2>
+                <p>إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى التواصل معنا عبر البريد الإلكتروني: meaad.application@gmail.com</p>
+            </section>
+        </div>
+
+        <div id="content-en" class="hidden">
+            <section class="content-section">
+                <h1>Privacy Policy</h1>
+                <p>Last updated: June 27, 2026</p>
+                
+                <h2>1. Information We Collect</h2>
+                <p>When you use MEAAD, we may collect certain information from your Google account to provide our services, including:</p>
+                <ul>
+                    <li>Basic profile information via Google Login</li>
+                    <li>Email address</li>
+                    <li>Access to your Google Sheets to store and manage your data</li>
+                </ul>
+
+                <h2>2. How We Use Your Information</h2>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Provide, maintain, and improve our periodic payment and subscriber management services</li>
+                    <li>Communicate with you regarding updates or support</li>
+                    <li>Ensure the security of your account</li>
+                </ul>
+
+                <h2>3. Data Storage and Developer Access</h2>
+                <p>MEAAD stores your subscriber and payment data in Google Sheets that you create through the application. To ensure the application operates correctly, maintain service quality, and implement future improvements, these specific Google Sheets are shared with the MEAAD developer. We do not sell your personal information or your stored data to third parties.</p>
+
+                <h2>4. Data Protection</h2>
+                <p>We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.</p>
+
+                <h2>5. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us at: meaad.application@gmail.com</p>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 MEAAD. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="privacy.html" id="footer-privacy">سياسة الخصوصية</a>
+                <a href="terms.html" id="footer-terms">شروط الخدمة</a>
+            </div>
+            <p id="footer-copy">&copy; 2026 ميعاد. جميع الحقوق محفوظة.</p>
+            <p id="footer-contact">تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a></p>
         </div>
     </footer>
+
+    <script>
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const currentLang = html.getAttribute('lang');
+            
+            if (currentLang === 'ar') {
+                html.setAttribute('lang', 'en');
+                html.setAttribute('dir', 'ltr');
+                document.title = 'MEAAD - Privacy Policy';
+                document.getElementById('content-ar').classList.add('hidden');
+                document.getElementById('content-en').classList.remove('hidden');
+                
+                document.getElementById('logo-text').innerText = 'MEAAD';
+                document.getElementById('nav-home').innerText = 'Home';
+                document.getElementById('nav-privacy').innerText = 'Privacy Policy';
+                document.getElementById('nav-terms').innerText = 'Terms of Service';
+                document.getElementById('lang-btn').innerText = 'العربية';
+                
+                document.getElementById('footer-privacy').innerText = 'Privacy Policy';
+                document.getElementById('footer-terms').innerText = 'Terms of Service';
+                document.getElementById('footer-copy').innerHTML = '&copy; 2026 MEAAD. All rights reserved.';
+                document.getElementById('footer-contact').innerHTML = 'Contact us: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
+            } else {
+                html.setAttribute('lang', 'ar');
+                html.setAttribute('dir', 'rtl');
+                document.title = 'ميعاد - سياسة الخصوصية';
+                document.getElementById('content-en').classList.add('hidden');
+                document.getElementById('content-ar').classList.remove('hidden');
+                
+                document.getElementById('logo-text').innerText = 'ميعاد';
+                document.getElementById('nav-home').innerText = 'الرئيسية';
+                document.getElementById('nav-privacy').innerText = 'سياسة الخصوصية';
+                document.getElementById('nav-terms').innerText = 'شروط الخدمة';
+                document.getElementById('lang-btn').innerText = 'English';
+                
+                document.getElementById('footer-privacy').innerText = 'سياسة الخصوصية';
+                document.getElementById('footer-terms').innerText = 'شروط الخدمة';
+                document.getElementById('footer-copy').innerHTML = '&copy; 2026 ميعاد. جميع الحقوق محفوظة.';
+                document.getElementById('footer-contact').innerHTML = 'تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
+            }
+            localStorage.setItem('meaad_lang', currentLang === 'ar' ? 'en' : 'ar');
+        }
+
+        // Load saved language
+        window.onload = () => {
+            const savedLang = localStorage.getItem('meaad_lang');
+            if (savedLang === 'en') {
+                toggleLanguage(); // Switch to English since default is Arabic
+            }
+        };
+    </script>
 </body>
 </html>
