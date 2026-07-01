@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html :lang="lang" :dir="dir">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg" />
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Abdulrasol - Professional Mobile Developer (Flutter) and Web Developer (Django). Expert in building high-performance cross-platform apps.">
-    <meta name="keywords" content="Flutter Developer, Mobile App Developer, Django Developer, Vue.js, Firebase, Software Engineer, iOS, Android, Programmer, مطور تطبيقات, مبرمج فلاتر, مهندس برمجيات">
+    <meta name="description"
+        content="Abdulrasol - Professional Mobile Developer (Flutter) and Web Developer (Django). Expert in building high-performance cross-platform apps.">
+    <meta name="keywords"
+        content="Flutter Developer, Mobile App Developer, Django Developer, Vue.js, Firebase, Software Engineer, iOS, Android, Programmer, مطور تطبيقات, مبرمج فلاتر, مهندس برمجيات">
     <meta name="author" content="Abdulrasol">
-    
+
     <title>{{ t.pageTitle }}</title>
-    
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
-    
+
     <!-- FontAwesome & Vue 3 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <style>
-        [v-cloak] { display: none; }
+        [v-cloak] {
+            display: none;
+        }
     </style>
 </head>
+
 <body>
     <div id="app" v-cloak>
         <!-- Header -->
@@ -32,7 +38,7 @@
                     <img src="logo.png" alt="Abdulrasol Logo">
                     <span>{{ t.appName }}</span>
                 </a>
-                
+
                 <!-- Desktop Nav -->
                 <nav class="nav-links desktop-nav">
                     <a href="#hero" class="active">{{ t.navHome }}</a>
@@ -68,15 +74,18 @@
             <section id="hero" class="hero">
                 <div class="hero-container">
                     <div class="hero-content">
-                        <div class="hero-badge"><i class="fas fa-check-circle" style="margin-inline-end: 8px;"></i> {{ t.heroBadge }}</div>
+                        <div class="hero-badge"><i class="fas fa-check-circle" style="margin-inline-end: 8px;"></i> {{
+                            t.heroBadge }}</div>
                         <h1 class="hero-title">
                             {{ t.heroTitle }}<br>
                             <span>{{ t.heroTitleHighlight }}</span>
                         </h1>
                         <p class="hero-subtitle">{{ t.heroSubtitle }}</p>
                         <div class="hero-actions">
-                            <a href="#projects" class="btn-primary"><i class="fas fa-rocket"></i> {{ t.btnProjects }}</a>
-                            <a href="#contact" class="btn-secondary"><i class="fas fa-envelope"></i> {{ t.btnContact }}</a>
+                            <a href="#projects" class="btn-primary"><i class="fas fa-rocket"></i> {{ t.btnProjects
+                                }}</a>
+                            <a href="#contact" class="btn-secondary"><i class="fas fa-envelope"></i> {{ t.btnContact
+                                }}</a>
                         </div>
                     </div>
                     <div class="hero-image">
@@ -106,7 +115,8 @@
                             <h3 class="project-title">{{ project.title }}</h3>
                             <p class="project-desc">{{ project.desc }}</p>
                             <div class="project-links">
-                                <a :href="project.link" class="btn-primary" style="font-size: 0.9rem; padding: 8px 20px;">
+                                <a :href="project.link" class="btn-primary"
+                                    style="font-size: 0.9rem; padding: 8px 20px;">
                                     <i class="fas fa-external-link-alt"></i> عرض التفاصيل
                                 </a>
                             </div>
@@ -120,13 +130,15 @@
                 <h2 class="section-title">{{ t.contactTitle }}</h2>
                 <div class="glass-panel contact-container">
                     <div class="contact-info">
-                        <p style="font-size: 1.2rem; margin-bottom: 30px; color: var(--primary);">{{ t.contactDesc }}</p>
-                        
+                        <p style="font-size: 1.2rem; margin-bottom: 30px; color: var(--primary);">{{ t.contactDesc }}
+                        </p>
+
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                             <div class="contact-text">
                                 <h3>{{ t.emailMe }}</h3>
-                                <p><a href="mailto:er7mne@gmail.com" style="color: inherit; text-decoration: none;">er7mne@gmail.com</a></p>
+                                <p><a href="mailto:abdulrsol97@gmail.com"
+                                        style="color: inherit; text-decoration: none;">abdulrsol97@gmail.com</a></p>
                             </div>
                         </div>
 
@@ -134,20 +146,24 @@
                             <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
                             <div class="contact-text">
                                 <h3>{{ t.whatsappMe }}</h3>
-                                <p><a href="https://wa.me/9647833333333" style="color: inherit; text-decoration: none;" target="_blank">Contact via WhatsApp</a></p>
+                                <p><a href="https://wa.me/9647833333333" style="color: inherit; text-decoration: none;"
+                                        target="_blank">Contact via WhatsApp</a></p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fab fa-github"></i></div>
                             <div class="contact-text">
                                 <h3>GitHub</h3>
-                                <p><a href="https://github.com/abdulrasol" style="color: inherit; text-decoration: none;" target="_blank">github.com/abdulrasol</a></p>
+                                <p><a href="https://github.com/abdulrasol"
+                                        style="color: inherit; text-decoration: none;"
+                                        target="_blank">github.com/abdulrasol</a></p>
                             </div>
                         </div>
                     </div>
                     <div style="padding: 20px; display: flex; justify-content: center; align-items: center;">
-                        <img src="logo.png" alt="Contact" style="max-width: 80%; opacity: 0.8; border-radius: 20px; mix-blend-mode: multiply;">
+                        <img src="logo.png" alt="Contact"
+                            style="max-width: 80%; opacity: 0.8; border-radius: 20px; mix-blend-mode: multiply;">
                     </div>
                 </div>
             </section>
@@ -155,12 +171,15 @@
 
         <!-- Footer -->
         <footer>
-            <div class="footer-content" style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+            <div class="footer-content"
+                style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px;">
                 <div class="footer-brand" style="display: flex; flex-direction: column; align-items: center;">
-                    <img src="logo.png" alt="Abdulrasol" style="height: 50px; border-radius: 10px; margin-bottom: 10px;">
+                    <img src="logo.png" alt="Abdulrasol"
+                        style="height: 50px; border-radius: 10px; margin-bottom: 10px;">
                     <p>{{ t.footerDesc }}</p>
                 </div>
-                <div class="footer-bottom" style="margin-top: 20px; border-top: 1px solid var(--glass-border); padding-top: 20px; width: 100%;">
+                <div class="footer-bottom"
+                    style="margin-top: 20px; border-top: 1px solid var(--glass-border); padding-top: 20px; width: 100%;">
                     <p>&copy; 2026 {{ t.appName }}. {{ t.allRights }}</p>
                 </div>
             </div>
@@ -170,4 +189,5 @@
     <!-- Init App -->
     <script src="js/portfolio.js"></script>
 </body>
+
 </html>
