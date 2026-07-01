@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سجل التحديثات - تطبيق ميعاد</title>
+    <link rel="icon" type="image/png" href="logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,22 +15,105 @@
             --text-main: #1e293b;
             --text-muted: #64748b;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Cairo', sans-serif; background-color: var(--bg); color: var(--text-main); line-height: 1.6; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; }
-        header { text-align: center; margin-bottom: 40px; }
-        h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 10px; }
-        .version-card { background: var(--card-bg); border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; }
-        .version-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px; }
-        .version-number { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
-        .version-date { color: var(--text-muted); font-size: 0.95rem; }
-        .tag { background: #dbeafe; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 10px; }
-        ul { list-style-type: none; padding-right: 10px; }
-        li { margin-bottom: 12px; position: relative; padding-right: 25px; }
-        li::before { content: '•'; color: var(--primary); font-size: 1.5em; position: absolute; right: 0; top: -5px; }
-        .footer { text-align: center; margin-top: 50px; color: var(--text-muted); font-size: 0.9rem; }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .version-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .version-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 15px;
+        }
+
+        .version-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .version-date {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .tag {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-right: 10px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-right: 25px;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--primary);
+            font-size: 1.5em;
+            position: absolute;
+            right: 0;
+            top: -5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -45,17 +130,25 @@
                 <span class="version-date">يوليو 2026</span>
             </div>
             <ul>
-                <li><strong>إدارة متكاملة:</strong> إضافة ديون واشتراكات العملاء ومتابعتها بسهولة فائقة وبدون تعقيد.</li>
-                <li><strong>واجهة عصرية:</strong> تصميم UI حديث، سريع الاستجابة، مع دعم كامل للوضع الليلي (Dark Mode).</li>
-                <li><strong>أمان ومزامنة:</strong> خصوصية تامة لبياناتك بفضل تقنيات المزامنة الذكية التي تحمي معلوماتك من الفقدان.</li>
-                <li><strong>تصدير وطباعة:</strong> دعم كامل لطباعة الفواتير الخاصة بالعملاء وتصدير تقارير الديون بصيغة PDF و Excel.</li>
-                <li><strong>لوحة تحكم ذكية (Dashboard):</strong> شاشة رئيسية شاملة تعرض إحصائيات الديون والمبالغ المحصلة في الوقت الفعلي.</li>
-                <li><strong>شاشة البوابة (Portal):</strong> إطلاق بوابة ذكية للعملاء مزودة بماسح QR Code لتسهيل الوصول للفواتير عبر المتصفح.</li>
-                <li><strong>إدارة الصلاحيات:</strong> دعم خاصية الإدارة المتعددة (Multiple Admins) للتحكم السهل في التطبيق.</li>
-                <li><strong>الربط مع بيترك:</strong> توفير بيئة متكاملة تدعم التوسع باستخدام تطبيقنا الشقيق (Baytraq Sales Manager).</li>
+                <li><strong>إدارة متكاملة:</strong> إضافة ديون واشتراكات العملاء ومتابعتها بسهولة فائقة وبدون تعقيد.
+                </li>
+                <li><strong>واجهة عصرية:</strong> تصميم UI حديث، سريع الاستجابة، مع دعم كامل للوضع الليلي (Dark Mode).
+                </li>
+                <li><strong>أمان ومزامنة:</strong> خصوصية تامة لبياناتك بفضل تقنيات المزامنة الذكية التي تحمي معلوماتك
+                    من الفقدان.</li>
+                <li><strong>تصدير وطباعة:</strong> دعم كامل لطباعة الفواتير الخاصة بالعملاء وتصدير تقارير الديون بصيغة
+                    PDF و Excel.</li>
+                <li><strong>لوحة تحكم ذكية (Dashboard):</strong> شاشة رئيسية شاملة تعرض إحصائيات الديون والمبالغ المحصلة
+                    في الوقت الفعلي.</li>
+                <li><strong>شاشة البوابة (Portal):</strong> إطلاق بوابة ذكية للعملاء مزودة بماسح QR Code لتسهيل الوصول
+                    للفواتير عبر المتصفح.</li>
+                <li><strong>إدارة الصلاحيات:</strong> دعم خاصية الإدارة المتعددة (Multiple Admins) للتحكم السهل في
+                    التطبيق.</li>
+                <li><strong>الربط مع بيترك:</strong> توفير بيئة متكاملة تدعم التوسع باستخدام تطبيقنا الشقيق (Baytraq
+                    Sales Manager).</li>
             </ul>
         </div>
-        
+
         <div class="footer">
             <p>© 2026 ميعاد - تطوير عبدالرسول. جميع الحقوق محفوظة.</p>
         </div>
@@ -72,4 +165,5 @@
     </script>
 
 </body>
+
 </html>
