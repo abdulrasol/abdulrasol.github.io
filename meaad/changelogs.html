@@ -1,169 +1,183 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سجل التحديثات - تطبيق ميعاد</title>
+    <title>ميعاد - سجل التحديثات</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #3b82f6;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            color: var(--primary);
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .version-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e2e8f0;
-        }
-
-        .version-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 15px;
-        }
-
-        .version-number {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary);
-        }
-
-        .version-date {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .tag {
-            background: #dbeafe;
-            color: #1e40af;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-right: 10px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding-right: 10px;
-        }
-
-        li {
-            margin-bottom: 12px;
-            position: relative;
-            padding-right: 25px;
-        }
-
-        li::before {
-            content: '•';
-            color: var(--primary);
-            font-size: 1.5em;
-            position: absolute;
-            right: 0;
-            top: -5px;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
+        .version-card { background: var(--card-bg); border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; }
+        .version-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px; }
+        .version-number { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        .version-date { color: var(--text-muted); font-size: 0.95rem; }
+        .tag { background: #dbeafe; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 10px; }
+        ul.changelog-list { list-style-type: none; padding-inline-start: 10px; }
+        ul.changelog-list li { margin-bottom: 12px; position: relative; padding-inline-start: 25px; }
+        ul.changelog-list li::before { content: '•'; color: var(--primary); font-size: 1.5em; position: absolute; inset-inline-start: 0; top: -5px; }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1>سجل التحديثات</h1>
-            <p>تابع أحدث الميزات والتحسينات في تطبيق ميعاد</p>
-        </header>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="ميعاد Logo">
+                <span id="logo-text">ميعاد</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" id="nav-home">الرئيسية</a>
+                <a href="privacy.html" id="nav-privacy">سياسة الخصوصية</a>
+                <a href="terms.html" id="nav-terms">شروط الخدمة</a>
+                <a href="changelogs.html" id="nav-changelog">سجل التحديثات</a>
+                <button class="lang-btn" onclick="toggleLanguage()" id="lang-btn">English</button>
+            </nav>
+        </div>
+    </header>
 
-        <div class="version-card">
-            <div class="version-header">
-                <div>
-                    <span class="version-number">الإصدار 1.0.0</span>
-                    <span class="tag">الإصدار الأول 🎉</span>
+    <main>
+        <div id="content-ar">
+            <section class="content-section">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 10px;">سجل التحديثات</h1>
+                    <p>تابع أحدث الميزات والتحسينات في تطبيق ميعاد</p>
                 </div>
-                <span class="version-date">يوليو 2026</span>
-            </div>
-            <ul>
-                <li><strong>إدارة متكاملة:</strong> إضافة ديون واشتراكات العملاء ومتابعتها بسهولة فائقة وبدون تعقيد.
-                </li>
-                <li><strong>واجهة عصرية:</strong> تصميم UI حديث، سريع الاستجابة، مع دعم كامل للوضع الليلي (Dark Mode).
-                </li>
-                <li><strong>أمان ومزامنة:</strong> خصوصية تامة لبياناتك بفضل تقنيات المزامنة الذكية التي تحمي معلوماتك
-                    من الفقدان.</li>
-                <li><strong>تصدير وطباعة:</strong> دعم كامل لطباعة الفواتير الخاصة بالعملاء وتصدير تقارير الديون بصيغة
-                    PDF و Excel.</li>
-                <li><strong>لوحة تحكم ذكية (Dashboard):</strong> شاشة رئيسية شاملة تعرض إحصائيات الديون والمبالغ المحصلة
-                    في الوقت الفعلي.</li>
-                <li><strong>شاشة البوابة (Portal):</strong> إطلاق بوابة ذكية للعملاء مزودة بماسح QR Code لتسهيل الوصول
-                    للفواتير عبر المتصفح.</li>
-                <li><strong>إدارة الصلاحيات:</strong> دعم خاصية الإدارة المتعددة (Multiple Admins) للتحكم السهل في
-                    التطبيق.</li>
-                <li><strong>الربط مع بيترك:</strong> توفير بيئة متكاملة تدعم التوسع باستخدام تطبيقنا الشقيق (Baytraq
-                    Sales Manager).</li>
-            </ul>
+
+                <div class="version-card">
+                    <div class="version-header">
+                        <div>
+                            <span class="version-number">الإصدار 1.0.0</span>
+                            <span class="tag">الإصدار الأول 🎉</span>
+                        </div>
+                        <span class="version-date">يوليو 2026</span>
+                    </div>
+                    <ul class="changelog-list">
+                        <li><strong>إدارة متكاملة:</strong> إضافة ديون واشتراكات العملاء ومتابعتها بسهولة فائقة وبدون تعقيد.</li>
+                        <li><strong>واجهة عصرية:</strong> تصميم UI حديث، سريع الاستجابة، مع دعم كامل للوضع الليلي (Dark Mode).</li>
+                        <li><strong>أمان ومزامنة:</strong> خصوصية تامة لبياناتك بفضل تقنيات المزامنة الذكية التي تحمي معلوماتك من الفقدان.</li>
+                        <li><strong>تصدير وطباعة:</strong> دعم كامل لطباعة الفواتير الخاصة بالعملاء وتصدير تقارير الديون بصيغة PDF و Excel.</li>
+                        <li><strong>لوحة تحكم ذكية (Dashboard):</strong> شاشة رئيسية شاملة تعرض إحصائيات الديون والمبالغ المحصلة في الوقت الفعلي.</li>
+                        <li><strong>شاشة البوابة (Portal):</strong> إطلاق بوابة ذكية للعملاء مزودة بماسح QR Code لتسهيل الوصول للفواتير عبر المتصفح.</li>
+                        <li><strong>إدارة الصلاحيات:</strong> دعم خاصية الإدارة المتعددة (Multiple Admins) للتحكم السهل في التطبيق.</li>
+                        <li><strong>الربط مع بيترك:</strong> توفير بيئة متكاملة تدعم التوسع باستخدام تطبيقنا الشقيق (Baytraq Sales Manager).</li>
+                    </ul>
+                </div>
+            </section>
         </div>
 
-        <div class="footer">
-            <p>© 2026 ميعاد - تطوير عبدالرسول. جميع الحقوق محفوظة.</p>
+        <div id="content-en" class="hidden">
+            <section class="content-section">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 10px;">Changelogs</h1>
+                    <p>Follow the latest features and improvements in MEAAD</p>
+                </div>
+
+                <div class="version-card">
+                    <div class="version-header">
+                        <div>
+                            <span class="version-number">Version 1.0.0</span>
+                            <span class="tag">First Release 🎉</span>
+                        </div>
+                        <span class="version-date">July 2026</span>
+                    </div>
+                    <ul class="changelog-list">
+                        <li><strong>Integrated Management:</strong> Add and track customer debts and subscriptions effortlessly.</li>
+                        <li><strong>Modern Interface:</strong> Fast, responsive modern UI with full Dark Mode support.</li>
+                        <li><strong>Security & Sync:</strong> Complete data privacy with smart syncing to prevent data loss.</li>
+                        <li><strong>Export & Print:</strong> Full support for printing customer receipts and exporting reports to PDF/Excel.</li>
+                        <li><strong>Smart Dashboard:</strong> Comprehensive home screen showing real-time debt and collection stats.</li>
+                        <li><strong>Portal Screen:</strong> A smart web portal for customers with QR Code scanning for quick receipt access.</li>
+                        <li><strong>Roles Management:</strong> Support for Multiple Admins for easy app control.</li>
+                        <li><strong>Baytraq Integration:</strong> Seamless expansion capabilities with our sister app (Baytraq Sales Manager).</li>
+                    </ul>
+                </div>
+            </section>
         </div>
-    </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="privacy.html" id="footer-privacy">سياسة الخصوصية</a>
+                <a href="terms.html" id="footer-terms">شروط الخدمة</a>
+                <a href="changelogs.html" id="footer-changelog">سجل التحديثات</a>
+            </div>
+            <p id="footer-copy">&copy; 2026 ميعاد. جميع الحقوق محفوظة.</p>
+            <p id="footer-contact">تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const currentLang = html.getAttribute('lang');
+            
+            if (currentLang === 'ar') {
+                html.setAttribute('lang', 'en');
+                html.setAttribute('dir', 'ltr');
+                document.title = 'MEAAD - Changelogs';
+                document.getElementById('content-ar').classList.add('hidden');
+                document.getElementById('content-en').classList.remove('hidden');
+                
+                document.getElementById('logo-text').innerText = 'MEAAD';
+                document.getElementById('nav-home').innerText = 'Home';
+                document.getElementById('nav-privacy').innerText = 'Privacy Policy';
+                document.getElementById('nav-terms').innerText = 'Terms of Service';
+                document.getElementById('nav-changelog').innerText = 'Changelogs';
+                document.getElementById('lang-btn').innerText = 'العربية';
+                
+                document.getElementById('footer-privacy').innerText = 'Privacy Policy';
+                document.getElementById('footer-terms').innerText = 'Terms of Service';
+                document.getElementById('footer-changelog').innerText = 'Changelogs';
+                document.getElementById('footer-copy').innerHTML = '&copy; 2026 MEAAD. All rights reserved.';
+                document.getElementById('footer-contact').innerHTML = 'Contact us: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
+            } else {
+                html.setAttribute('lang', 'ar');
+                html.setAttribute('dir', 'rtl');
+                document.title = 'ميعاد - سجل التحديثات';
+                document.getElementById('content-en').classList.add('hidden');
+                document.getElementById('content-ar').classList.remove('hidden');
+                
+                document.getElementById('logo-text').innerText = 'ميعاد';
+                document.getElementById('nav-home').innerText = 'الرئيسية';
+                document.getElementById('nav-privacy').innerText = 'سياسة الخصوصية';
+                document.getElementById('nav-terms').innerText = 'شروط الخدمة';
+                document.getElementById('nav-changelog').innerText = 'سجل التحديثات';
+                document.getElementById('lang-btn').innerText = 'English';
+                
+                document.getElementById('footer-privacy').innerText = 'سياسة الخصوصية';
+                document.getElementById('footer-terms').innerText = 'شروط الخدمة';
+                document.getElementById('footer-changelog').innerText = 'سجل التحديثات';
+                document.getElementById('footer-copy').innerHTML = '&copy; 2026 ميعاد. جميع الحقوق محفوظة.';
+                document.getElementById('footer-contact').innerHTML = 'تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
+            }
+            localStorage.setItem('meaad_lang', currentLang === 'ar' ? 'en' : 'ar');
+        }
+
+        window.onload = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            const savedLang = localStorage.getItem('meaad_lang');
+            
+            if (urlLang === 'en' || (!urlLang && savedLang === 'en')) {
+                if (document.documentElement.getAttribute('lang') !== 'en' && typeof toggleLanguage === 'function') {
+                    toggleLanguage();
+                }
+            } else if (urlLang === 'ar' || (!urlLang && savedLang === 'ar')) {
+                if (document.documentElement.getAttribute('lang') !== 'ar' && typeof toggleLanguage === 'function') {
+                    toggleLanguage();
+                }
+            }
+        };
+    </script>
     <script>
         if (window.location.hash.includes("hideappbar")) {
             const header = document.querySelector("header");
-            if (header) {
+            if (header && header.querySelector(".nav-container")) {
                 header.style.display = "none";
             }
             const footer = document.querySelector("footer") || document.querySelector(".footer");
             if (footer) footer.style.display = "none";
         }
     </script>
-
 </body>
-
 </html>
