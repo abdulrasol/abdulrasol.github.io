@@ -10,8 +10,8 @@ const translations = {
         navChangelog: 'سجل التحديثات',
         toggleTheme: 'تبديل المظهر',
         heroBadge: 'تحديث جديد 1.1.0 🚀',
-        heroTitle: 'تطبيقك الأمثل لإدارة <br><span class="highlight">الديون والأقساط</span>',
-        heroSubtitle: 'يسمح ميعاد للشركات والأفراد بتتبع الاشتراكات الشهرية، الأقساط الدورية، والديون المتراكمة بكل سهولة وسلاسة.',
+        heroTitle: 'مساحة العمل المتكاملة <br>للمبيعات والإدارة',
+        heroSubtitle: '',
         getItOn: 'احصل عليه من',
         downloadOn: 'حمله من',
         featuresTitle: 'مميزات تطبيق ميعاد',
@@ -38,8 +38,8 @@ const translations = {
         navChangelog: 'Changelogs',
         toggleTheme: 'Toggle Theme',
         heroBadge: 'New Update 1.1.0 🚀',
-        heroTitle: 'Your ultimate app for managing <br><span class="highlight">Debts & Installments</span>',
-        heroSubtitle: 'MEAAD allows businesses and individuals to track monthly subscriptions, periodic installments, and accumulated debts seamlessly.',
+        heroTitle: 'The Ultimate Sales <br>& Management Workspace',
+        heroSubtitle: '',
         getItOn: 'GET IT ON',
         downloadOn: 'Download on the',
         featuresTitle: 'MEAAD Features',
@@ -73,20 +73,30 @@ const app = Vue.createApp({
 
             // Arrays for Features and Testimonials
             featuresAr: [
-                { icon: 'fas fa-bell', color: '#3b82f6', title: 'إشعارات ذكية', desc: 'تذكير تلقائي بمواعيد الدفع والأقساط لك وللزبون لتجنب التأخير.' },
-                { icon: 'fas fa-file-pdf', color: '#ef4444', title: 'تقارير PDF', desc: 'توليد تقارير مالية مفصلة واحترافية بصيغة PDF بضغطة زر.' },
-                { icon: 'fas fa-qrcode', color: '#10b981', title: 'بوابة رقمية بالـ QR', desc: 'يستطيع الزبون مسح الكود الخاص به لمتابعة رصيده وتحديثاته.' },
-                { icon: 'fas fa-cloud', color: '#8b5cf6', title: 'مزامنة آمنة', desc: 'بياناتك محفوظة بشكل آمن في حسابك الشخصي على Google Drive.' },
-                { icon: 'fas fa-fingerprint', color: '#f59e0b', title: 'قفل التطبيق', desc: 'حماية التطبيق بالبصمة أو رمز المرور لضمان خصوصية حساباتك.' },
-                { icon: 'fas fa-wifi', color: '#06b6d4', title: 'يعمل بدون إنترنت', desc: 'أضف زبائنك وحساباتك حتى بدون إنترنت، وستتم المزامنة لاحقاً.' }
+                { icon: '🛒', title: 'نقطة البيع', desc: 'واجهة ثنائية اللغة محسّنة للإجراءات السريعة مع مسح الباركود/QR المدمج، ونافذة كاميرا مرنة لتجنب التداخل، وسلة مشتريات متعددة وسريعة.' },
+                { icon: '📦', title: 'إدارة المخزون', desc: 'تتبع المخزون بالوقت الفعلي مع خصم تلقائي للمبيعات، وتنبيهات انخفاض المخزون بالألوان، ودعم المنتجات والخدمات، وربط الموردين.' },
+                { icon: '📄', title: 'فواتير متقدمة', desc: 'إنشاء فواتير مخصصة بخصومات متنوعة، وتتبع حالة الدفع (مدفوعة، غير مدفوعة، جزئية)، والاطلاع على سجل التعديلات، وطباعة PDF مع شعار المتجر.' },
+                { icon: '📈', title: 'لوحة تحكم التحليلات', desc: 'مؤشرات مالية فورية للمبيعات، صافي وإجمالي الأرباح، المصروفات، والديون مع فلاتر للفترات الزمنية ورسوم بيانية لأكثر المنتجات مبيعاً.' },
+                { icon: '💸', title: 'تتبع المصروفات', desc: 'تسجيل المصروفات لمرة واحدة (إيجار، لوجستيات، رواتب) وإعداد قوالب مصروفات دورية مع احتساب تلقائي للمستحقات والتنبيهات.' },
+                { icon: '🏛️', title: 'الديون والائتمان', desc: 'حسابات جارية لأرصدة العملاء، وتسجيل تلقائي للديون والائتمان بالفواتير، ومحرك قاعدة بيانات يقوم تلقائياً بإصلاح اختلافات المزامنة.' },
+                { icon: '🌍', title: 'المزامنة السحابية', desc: 'مزامنة سحابية سلسة ومتعددة المتاجر مدعومة بقواعد Firestore الآمنة وتسجيل الدخول المجهول الاحتياطي لحماية بياناتك.' },
+                { icon: '📶', title: 'المزامنة المحلية بدون إنترنت', desc: 'هيكلية رئيسي/تابِع للشبكة المحلية عبر Wi-Fi باستخدام WebSockets، وتخزين SQLite محلي مع معالجة تعارض المزامنة بالطوابع الزمنية.' },
+                { icon: '🔍', title: 'قارئ الأسعار', desc: 'محطة مخصصة للعملاء للبحث ومسح المنتجات لمعرفة الأسعار، مع وضع عدم الاتصال الذي يستعلم من نسخة قاعدة البيانات المحلية عند انقطاع الشبكة.' },
+                { icon: '👥', title: 'إدارة الموظفين والصلاحيات', desc: 'التحكم في الوصول بناءً على الأدوار (مدير، محاسب، كاشير، موظف) مع حماية الشاشات وتسجيل دخول آمن برمز PIN أو رمز الاستجابة السريعة.' },
+                { icon: '🛠️', title: 'حزمة الأدوات والتخصيص', desc: 'نسخ احتياطي واستعادة بصيغة JSON، دعم 12 لغة مدمجة، تخصيص الهوية التجارية (تفاصيل المتجر، العملة، الكسور العشرية) ومظهر داكن/فاتح.' }
             ],
             featuresEn: [
-                { icon: 'fas fa-bell', color: '#3b82f6', title: 'Smart Notifications', desc: 'Automatic reminders for due dates to avoid any delays.' },
-                { icon: 'fas fa-file-pdf', color: '#ef4444', title: 'PDF Reports', desc: 'Generate detailed and professional financial PDF reports with one click.' },
-                { icon: 'fas fa-qrcode', color: '#10b981', title: 'Digital QR Portal', desc: 'Customers can scan their QR code to track their balance instantly.' },
-                { icon: 'fas fa-cloud', color: '#8b5cf6', title: 'Secure Sync', desc: 'Data is safely stored in your own personal Google Drive account.' },
-                { icon: 'fas fa-fingerprint', color: '#f59e0b', title: 'App Lock', desc: 'Protect the app with Biometrics or Passcode to secure your accounts.' },
-                { icon: 'fas fa-wifi', color: '#06b6d4', title: 'Offline Mode', desc: 'Add accounts offline, and it will sync automatically later.' }
+                { icon: '🛒', title: 'Point of Sale (POS)', desc: 'Bilingual interface optimized for quick actions with integrated camera/QR scanning, collapsible scanner feed to avoid layout overflows, and express multi-cart system.' },
+                { icon: '📦', title: 'Inventory Management', desc: 'Real-time stock tracking with auto-deductions on sales, color-coded low stock alerts, support for physical products & service items, and supplier/vendor linking.' },
+                { icon: '📄', title: 'Advanced Invoicing', desc: 'Create custom invoices with item/invoice-level discounts, track paid/unpaid/partial states, view mutation history, and print formatted PDFs with store logos.' },
+                { icon: '📈', title: 'Insights Dashboard', desc: 'Real-time metrics showing Total Sales, Net/Gross Profits, Expenses, and Debts with multi-period filters (Week, Month, Year) and top-sellers charts.' },
+                { icon: '💸', title: 'Expense Tracking', desc: 'Log one-time expenses (Rent, Logistics, Salaries) and set up recurring expense templates with automated due calculation and alerts.' },
+                { icon: '🏛️', title: 'Debt & Credit Management', desc: 'Running customer ledger balances, automatic debit/credit posting on invoices, and a self-healing database engine that auto-repairs sync anomalies.' },
+                { icon: '🌍', title: 'Real-Time Cloud Sync', desc: 'Seamless multi-tenant synchronization powered by Cloud Firestore with secure custom rules and anonymous authentication fallbacks.' },
+                { icon: '📶', title: 'Local LAN Sync (Offline-First)', desc: 'Master-Slave LAN architecture over Wi-Fi using shelf WebSockets, Drift SQLite local storage, and Last-Write-Wins (LWW) conflict resolution.' },
+                { icon: '🔍', title: 'Price Checker (Kiosk Mode)', desc: 'Dedicated station for customer membership kiosk scanning, with offline fallback mode querying local replica database if connection drops.' },
+                { icon: '👥', title: 'Staff Roles (RBAC)', desc: 'Role-Based Access Control (Admin, Manager, Cashier, Staff, PriceViewer) with screen guarding and secure PIN or QR-code logins.' },
+                { icon: '🛠️', title: 'Utility & Customization Suite', desc: 'JSON Backup/Restore, 12 built-in languages, custom branding (company details, decimal limits, currency symbols), and fully responsive Light/Dark theme support.' }
             ],
 
             testimonialsAr: [

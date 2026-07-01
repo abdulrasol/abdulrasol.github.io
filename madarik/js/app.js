@@ -10,8 +10,8 @@ const translations = {
         navChangelog: 'سجل التحديثات',
         toggleTheme: 'تبديل المظهر',
         heroBadge: 'تحديث جديد 1.1.0 🚀',
-        heroTitle: 'تطبيقك الأمثل لإدارة <br><span class="highlight">الديون والأقساط</span>',
-        heroSubtitle: 'يسمح ميعاد للشركات والأفراد بتتبع الاشتراكات الشهرية، الأقساط الدورية، والديون المتراكمة بكل سهولة وسلاسة.',
+        heroTitle: '',
+        heroSubtitle: '',
         getItOn: 'احصل عليه من',
         downloadOn: 'حمله من',
         featuresTitle: 'مميزات تطبيق ميعاد',
@@ -38,8 +38,8 @@ const translations = {
         navChangelog: 'Changelogs',
         toggleTheme: 'Toggle Theme',
         heroBadge: 'New Update 1.1.0 🚀',
-        heroTitle: 'Your ultimate app for managing <br><span class="highlight">Debts & Installments</span>',
-        heroSubtitle: 'MEAAD allows businesses and individuals to track monthly subscriptions, periodic installments, and accumulated debts seamlessly.',
+        heroTitle: '',
+        heroSubtitle: '',
         getItOn: 'GET IT ON',
         downloadOn: 'Download on the',
         featuresTitle: 'MEAAD Features',
@@ -73,20 +73,10 @@ const app = Vue.createApp({
 
             // Arrays for Features and Testimonials
             featuresAr: [
-                { icon: 'fas fa-bell', color: '#3b82f6', title: 'إشعارات ذكية', desc: 'تذكير تلقائي بمواعيد الدفع والأقساط لك وللزبون لتجنب التأخير.' },
-                { icon: 'fas fa-file-pdf', color: '#ef4444', title: 'تقارير PDF', desc: 'توليد تقارير مالية مفصلة واحترافية بصيغة PDF بضغطة زر.' },
-                { icon: 'fas fa-qrcode', color: '#10b981', title: 'بوابة رقمية بالـ QR', desc: 'يستطيع الزبون مسح الكود الخاص به لمتابعة رصيده وتحديثاته.' },
-                { icon: 'fas fa-cloud', color: '#8b5cf6', title: 'مزامنة آمنة', desc: 'بياناتك محفوظة بشكل آمن في حسابك الشخصي على Google Drive.' },
-                { icon: 'fas fa-fingerprint', color: '#f59e0b', title: 'قفل التطبيق', desc: 'حماية التطبيق بالبصمة أو رمز المرور لضمان خصوصية حساباتك.' },
-                { icon: 'fas fa-wifi', color: '#06b6d4', title: 'يعمل بدون إنترنت', desc: 'أضف زبائنك وحساباتك حتى بدون إنترنت، وستتم المزامنة لاحقاً.' }
+                
             ],
             featuresEn: [
-                { icon: 'fas fa-bell', color: '#3b82f6', title: 'Smart Notifications', desc: 'Automatic reminders for due dates to avoid any delays.' },
-                { icon: 'fas fa-file-pdf', color: '#ef4444', title: 'PDF Reports', desc: 'Generate detailed and professional financial PDF reports with one click.' },
-                { icon: 'fas fa-qrcode', color: '#10b981', title: 'Digital QR Portal', desc: 'Customers can scan their QR code to track their balance instantly.' },
-                { icon: 'fas fa-cloud', color: '#8b5cf6', title: 'Secure Sync', desc: 'Data is safely stored in your own personal Google Drive account.' },
-                { icon: 'fas fa-fingerprint', color: '#f59e0b', title: 'App Lock', desc: 'Protect the app with Biometrics or Passcode to secure your accounts.' },
-                { icon: 'fas fa-wifi', color: '#06b6d4', title: 'Offline Mode', desc: 'Add accounts offline, and it will sync automatically later.' }
+                
             ],
 
             testimonialsAr: [

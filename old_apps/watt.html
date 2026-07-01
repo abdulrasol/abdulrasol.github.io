@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وات | حاسبة أنظمة الطاقة الشمسية - Watt Solar Calculator</title>
+    <meta name="description" content="صمم نظامك الشمسي، احسب احتياجاتك، واطلب عروض أسعار من أفضل الشركات. | Design your solar system, calculate needs, and request offers from top providers.">
+    <link rel="icon" type="image/png" href="/assets/watt/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FFD600;
+            --primary-dark: #FFC400;
+            --accent: #f59e0b;
+            --bg-dark: #0f172a;
+            --bg-section: #1e293b;
+            --card-bg: rgba(30, 41, 59, 0.8);
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --green: #10b981;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.8;
+            overflow-x: hidden;
+            transition: background 0.3s;
+        }
+
+        /* Bilingual Toggle Logic */
+        .ar, .en { display: none; }
+        body.lang-ar .ar { display: block; }
+        body.lang-en .en { display: block; }
+        
+        body.lang-ar { direction: rtl; }
+        body.lang-en { direction: ltr; }
+
+        /* ===== Animations ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .delay-1 { animation-delay: 0.15s; }
+        .delay-2 { animation-delay: 0.3s; }
+        .delay-3 { animation-delay: 0.45s; }
+
+        /* ===== Header ===== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .logo-area img {
+            height: 36px;
+            border-radius: 8px;
+        }
+        .logo-area span {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .lang-toggle {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .lang-toggle:hover { background: rgba(255, 214, 0, 0.1); border-color: var(--primary); }
+
+        /* ===== Hero ===== */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 214, 0, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+                var(--bg-dark);
+            position: relative;
+        }
+        .hero-content { position: relative; z-index: 2; }
+        .hero-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            margin-bottom: 1.5rem;
+            animation: float 4s ease-in-out infinite;
+            box-shadow: 0 10px 40px rgba(255, 214, 0, 0.3);
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .hero .tagline {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.85rem 2rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: #0f172a;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 214, 0, 0.4);
+        }
+
+        /* ===== Features ===== */
+        section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .section-title p { color: var(--text-muted); }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .feature-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+        .feature-card h3 { color: var(--primary); margin-bottom: 0.75rem; }
+
+        /* ===== Footer ===== */
+        footer { text-align: center; padding: 3rem 2rem; border-top: 1px solid var(--border); color: var(--text-muted); }
+        footer a { color: var(--primary); text-decoration: none; margin: 0 0.5rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body class="lang-ar">
+
+    <header>
+        <div class="logo-area">
+            <img src="/assets/watt/logo.png" alt="Watt Logo">
+            <span class="ar">وات</span>
+            <span class="en">Watt</span>
+        </div>
+        <button class="lang-toggle" onclick="toggleLang()">
+            <span class="ar">English</span>
+            <span class="en">عربي</span>
+        </button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="/assets/watt/logo.png" alt="Logo" class="hero-logo animate-in">
+            <h1 class="animate-in delay-1">
+                <span class="ar">مستقبلك مشرق مع الطاقة الشمسية</span>
+                <span class="en">Your Bright Future with Solar Energy</span>
+            </h1>
+            <p class="tagline animate-in delay-2">
+                <span class="ar">تطبيق "وات" هو دليلك المتكامل لتصميم وحساب أنظمة الطاقة الشمسية. احسب احتياجاتك، قارن الأسعار، واطلب أفضل العروض من الشركات الموثوقة.</span>
+                <span class="en">Watt is your all-in-one guide to design and calculate solar panel systems. Calculate your needs, compare prices, and request the best offers from trusted companies.</span>
+            </p>
+            <div class="animate-in delay-3">
+                <a href="#" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
+                    <span class="ar">قريباً على Google Play</span>
+                    <span class="en">Coming Soon on Google Play</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="section-title animate-in">
+            <h2 class="ar">مميزات تطبيق وات</h2>
+            <h2 class="en">Watt App Features</h2>
+            <p class="ar">كل ما تحتاجه للتحول إلى الطاقة النظيفة في مكان واحد</p>
+            <p class="en">Everything you need to switch to clean energy in one place.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card animate-in delay-1">
+                <span class="feature-icon">☀️</span>
+                <h3 class="ar">حاسبة ذكية</h3>
+                <h3 class="en">Smart Calculator</h3>
+                <p class="ar">احسب عدد الألواح والبطاريات والمحولات المطلوبة لمنزلك أو مشروعك بدقة.</p>
+                <p class="en">Calculate the number of panels, batteries, and inverters needed for your home or project accurately.</p>
+            </div>
+            <div class="feature-card animate-in delay-2">
+                <span class="feature-icon">📝</span>
+                <h3 class="ar">طلب عروض أسعار</h3>
+                <h3 class="en">Request Offers</h3>
+                <p class="ar">أرسل تفاصيل نظامك للشركات المختصة واحصل على أفضل عروض الأسعار المنافسة.</p>
+                <p class="en">Send your system details to specialized companies and receive the best competitive price offers.</p>
+            </div>
+            <div class="feature-card animate-in delay-3">
+                <span class="feature-icon">🛒</span>
+                <h3 class="ar">سوق المعدات</h3>
+                <h3 class="en">Equipment Market</h3>
+                <p class="ar">تصفح واشترِ أحدث معدات الطاقة الشمسية من ألواح وبطاريات بجودة عالية.</p>
+                <p class="en">Browse and buy the latest solar energy equipment, including high-quality panels and batteries.</p>
+            </div>
+            <div class="feature-card animate-in delay-1">
+                <span class="feature-icon">📊</span>
+                <h3 class="ar">إدارة الشركات</h3>
+                <h3 class="en">Company Management</h3>
+                <p class="ar">لوحة تحكم كاملة للشركات لإدارة الطلبات والمنتجات والتواصل مع العملاء.</p>
+                <p class="en">A complete dashboard for companies to manage requests, products, and communicate with customers.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="ar">© 2026 عبد الرسول الحلو. جميع الحقوق محفوظة.</p>
+        <p class="en">© 2026 AbdulRasol Al-Hilo. All rights reserved.</p>
+        <p style="margin-top: 1rem;">
+            <a href="/watt/privacy_policy/">
+                <span class="ar">سياسة الخصوصية</span>
+                <span class="en">Privacy Policy</span>
+            </a> | 
+            <a href="/">
+                <span class="ar">المعرض الشخصي</span>
+                <span class="en">Personal Portfolio</span>
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        function toggleLang() {
+            const body = document.body;
+            const current = body.classList.contains('lang-ar') ? 'ar' : 'en';
+            const next = current === 'ar' ? 'en' : 'ar';
+            body.classList.remove('lang-ar', 'lang-en');
+            body.classList.add('lang-' + next);
+            localStorage.setItem('watt_lang', next);
+        }
+
+        // Auto-detect or restore
+        const browserLang = navigator.language.startsWith('ar') ? 'ar' : 'en';
+        const savedLang = localStorage.getItem('watt_lang') || browserLang;
+        document.body.classList.remove('lang-ar', 'lang-en');
+        document.body.classList.add('lang-' + savedLang);
+    </script>
+</body>
+</html>

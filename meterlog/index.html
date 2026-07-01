@@ -27,7 +27,7 @@
                 <nav class="nav-links desktop-nav">
                     <a href="index.html" class="active">{{ t.navHome }}</a>
                     <a href="#features">{{ t.navFeatures }}</a>
-                    <a href="#testimonials">{{ t.navTestimonials }}</a>
+                    
                     <a href="privacy.html">{{ t.navPrivacy }}</a>
                     <a href="terms.html">{{ t.navTerms }}</a>
                 </nav>
@@ -50,7 +50,7 @@
             <div class="mobile-nav" :class="{ 'open': mobileMenuOpen }">
                 <a href="index.html" @click="mobileMenuOpen = false">{{ t.navHome }}</a>
                 <a href="#features" @click="mobileMenuOpen = false">{{ t.navFeatures }}</a>
-                <a href="#testimonials" @click="mobileMenuOpen = false">{{ t.navTestimonials }}</a>
+                
                 <a href="privacy.html">{{ t.navPrivacy }}</a>
                 <a href="terms.html">{{ t.navTerms }}</a>
                 <a href="changelogs.html">{{ t.navChangelog }}</a>
@@ -125,28 +125,7 @@
             </section>
 
             <!-- Testimonials -->
-            <section id="testimonials" class="section">
-                <div class="section-header">
-                    <h2>{{ t.testimonialsTitle }}</h2>
-                    <p>{{ t.testimonialsSubtitle }}</p>
-                </div>
-                
-                <div class="testimonials-grid">
-                    <div v-for="(review, index) in testimonialsList" :key="index" class="testimonial-card glass-panel">
-                        <div class="stars">
-                            <i v-for="n in 5" :key="n" class="fas fa-star" :class="{ 'active': n <= review.rating }"></i>
-                        </div>
-                        <p class="review-text">"{{ review.text }}"</p>
-                        <div class="user-info">
-                            <div class="avatar">{{ review.name.charAt(0) }}</div>
-                            <div class="details">
-                                <h4>{{ review.name }}</h4>
-                                <span>{{ review.role }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
         </main>
 
         <!-- Footer -->
