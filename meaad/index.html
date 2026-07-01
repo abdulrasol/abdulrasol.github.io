@@ -1,160 +1,179 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html :lang="lang" :dir="dir">
 <head>
     <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ميعاد - الصفحة الرئيسية</title>
+    <title>{{ t.pageTitle }}</title>
+    <meta name="description" content="تطبيق ميعاد لإدارة الزبائن والأقساط" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Vue 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
-<body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="logo.png" alt="ميعاد Logo">
-                <span id="logo-text">ميعاد</span>
-            </a>
-            <nav class="nav-links">
-                <a href="index.html" id="nav-home">الرئيسية</a>
-                <a href="privacy.html" id="nav-privacy">سياسة الخصوصية</a>
-                <a href="terms.html" id="nav-terms">شروط الخدمة</a>
-                <a href="changelogs.html" id="nav-changelog">سجل التحديثات</a>
-                <button class="lang-btn" onclick="toggleLanguage()" id="lang-btn">English</button>
-            </nav>
-        </div>
-    </header>
+<body :class="{ 'dark-mode': isDarkMode }">
+    <div id="app" v-cloak>
+        <!-- Header / Nav -->
+        <header :class="{ 'scrolled': isScrolled }">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="ميعاد Logo">
+                    <span>{{ t.appName }}</span>
+                </a>
+                
+                <!-- Desktop Nav -->
+                <nav class="nav-links desktop-nav">
+                    <a href="index.html" class="active">{{ t.navHome }}</a>
+                    <a href="#features">{{ t.navFeatures }}</a>
+                    <a href="#testimonials">{{ t.navTestimonials }}</a>
+                    <a href="privacy.html">{{ t.navPrivacy }}</a>
+                    <a href="terms.html">{{ t.navTerms }}</a>
+                </nav>
 
-    <main>
-        <div id="content-ar">
-            <section class="hero">
-                <h1>مرحباً بك في ميعاد</h1>
-                <p>تطبيقك الأمثل والأسهل لإدارة ديون الزبائن والأقساط الشهرية لأصحاب المحلات التجارية.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>عن تطبيق ميعاد</h2>
-                <p>ميعاد يسمح للشركات والأفراد بتتبع الاشتراكات الشهرية، والأقساط الدورية، والديون المتراكمة بكل سهولة وسلاسة.</p>
-                <p>يتميز التطبيق بنظام إشعارات ذكي، وتقارير PDF مفصلة، وبوابة رقمية للزبائن عبر مسح الـ QR Code لتسهيل متابعة وتحديث أرصدتهم.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>لماذا يطلب التطبيق الوصول إلى حساب Google الخاص بك؟ (Google Drive & Sheets)</h2>
-                <p>تطبيق ميعاد يضع الخصوصية والأمان في المقام الأول. نحن <strong>لا نمتلك أي خوادم (Servers) خارجية</strong> لحفظ بياناتك، ولا نشاركها مع أي جهة خارجية.</p>
-                <p>لتوفير ميزة المزامنة السحابية وضمان عدم ضياع ديونك وحساباتك، يطلب التطبيق صلاحية الوصول إلى <strong>Google Drive / Google Sheets</strong> لكي يقوم بإنشاء ملف جداول (Spreadsheet) مخفي <strong>داخل حسابك الشخصي أنت فقط</strong>.</p>
-                <p><strong>استخدام البيانات:</strong> يتم استخدام هذه الصلاحية حصراً لقراءة وكتابة بياناتك الخاصة (الزبائن، الديون، المدفوعات) داخل حسابك، مما يتيح لك استرجاع بياناتك متى ما أردت ومن أي جهاز، وتبقى أنت المالك الوحيد والوحيد القادر على الوصول لهذه البيانات.</p>
-                <p>للمزيد من التفاصيل، يرجى قراءة <a href="privacy.html" style="color: var(--primary); text-decoration: underline;">سياسة الخصوصية</a>.</p>
-            </section>
-        </div>
-
-        <div id="content-en" class="hidden">
-            <section class="hero">
-                <h1>Welcome to MEAAD</h1>
-                <p>Your ultimate, easy-to-use app for managing customer debts and monthly installments for businesses.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>About MEAAD</h2>
-                <p>MEAAD allows businesses and individuals to track monthly subscriptions, periodic installments, and accumulated debts seamlessly.</p>
-                <p>The app features smart notifications, detailed PDF reports, and a digital customer portal via QR code scanning to easily track their balances.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>Why does the app request access to your Google Account? (Google Drive & Sheets)</h2>
-                <p>MEAAD puts privacy and security first. We <strong>do not own any external servers</strong> to store your data, and we do not share it with any third party.</p>
-                <p>To provide cloud synchronization and ensure your debts and accounts are never lost, the app requests access to <strong>Google Drive / Google Sheets</strong> to create a hidden spreadsheet <strong>strictly inside your own personal account</strong>.</p>
-                <p><strong>Data Usage:</strong> This permission is used exclusively to read and write your own data (customers, debts, payments) inside your account, allowing you to restore your data whenever you want from any device. You remain the sole owner and the only person with access to this data.</p>
-                <p>For more details, please read our <a href="privacy.html" style="color: var(--primary); text-decoration: underline;">Privacy Policy</a>.</p>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="privacy.html" id="footer-privacy">سياسة الخصوصية</a>
-                <a href="terms.html" id="footer-terms">شروط الخدمة</a>
-                <a href="changelogs.html" id="footer-changelog">سجل التحديثات</a>
+                <div class="nav-actions">
+                    <button class="icon-btn" @click="toggleTheme" :title="t.toggleTheme">
+                        <i :class="isDarkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
+                    </button>
+                    <button class="lang-btn" @click="toggleLanguage">
+                        <i class="fas fa-globe"></i> {{ lang === 'ar' ? 'English' : 'العربية' }}
+                    </button>
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-btn" @click="mobileMenuOpen = !mobileMenuOpen">
+                        <i :class="mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
+                    </button>
+                </div>
             </div>
-            <p id="footer-copy">&copy; 2026 ميعاد. جميع الحقوق محفوظة.</p>
-            <p id="footer-contact">تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a></p>
-        </div>
-    </footer>
 
-    <script>
-        function toggleLanguage() {
-            const html = document.documentElement;
-            const currentLang = html.getAttribute('lang');
-            
-            if (currentLang === 'ar') {
-                html.setAttribute('lang', 'en');
-                html.setAttribute('dir', 'ltr');
-                document.title = 'MEAAD - Home';
-                document.getElementById('content-ar').classList.add('hidden');
-                document.getElementById('content-en').classList.remove('hidden');
-                
-                document.getElementById('logo-text').innerText = 'MEAAD';
-                document.getElementById('nav-home').innerText = 'Home';
-                document.getElementById('nav-privacy').innerText = 'Privacy Policy';
-                document.getElementById('nav-terms').innerText = 'Terms of Service';
-                document.getElementById('nav-changelog').innerText = 'Changelogs';
-                document.getElementById('lang-btn').innerText = 'العربية';
-                
-                document.getElementById('footer-privacy').innerText = 'Privacy Policy';
-                document.getElementById('footer-terms').innerText = 'Terms of Service';
-                document.getElementById('footer-changelog').innerText = 'Changelogs';
-                document.getElementById('footer-copy').innerHTML = '&copy; 2026 MEAAD. All rights reserved.';
-                document.getElementById('footer-contact').innerHTML = 'Contact us: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
-            } else {
-                html.setAttribute('lang', 'ar');
-                html.setAttribute('dir', 'rtl');
-                document.title = 'ميعاد - الصفحة الرئيسية';
-                document.getElementById('content-en').classList.add('hidden');
-                document.getElementById('content-ar').classList.remove('hidden');
-                
-                document.getElementById('logo-text').innerText = 'ميعاد';
-                document.getElementById('nav-home').innerText = 'الرئيسية';
-                document.getElementById('nav-privacy').innerText = 'سياسة الخصوصية';
-                document.getElementById('nav-terms').innerText = 'شروط الخدمة';
-                document.getElementById('nav-changelog').innerText = 'سجل التحديثات';
-                document.getElementById('lang-btn').innerText = 'English';
-                
-                document.getElementById('footer-privacy').innerText = 'سياسة الخصوصية';
-                document.getElementById('footer-terms').innerText = 'شروط الخدمة';
-                document.getElementById('footer-changelog').innerText = 'سجل التحديثات';
-                document.getElementById('footer-copy').innerHTML = '&copy; 2026 ميعاد. جميع الحقوق محفوظة.';
-                document.getElementById('footer-contact').innerHTML = 'تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
-            }
-            localStorage.setItem('meaad_lang', currentLang === 'ar' ? 'en' : 'ar');
-        }
+            <!-- Mobile Nav -->
+            <div class="mobile-nav" :class="{ 'open': mobileMenuOpen }">
+                <a href="index.html" @click="mobileMenuOpen = false">{{ t.navHome }}</a>
+                <a href="#features" @click="mobileMenuOpen = false">{{ t.navFeatures }}</a>
+                <a href="#testimonials" @click="mobileMenuOpen = false">{{ t.navTestimonials }}</a>
+                <a href="privacy.html">{{ t.navPrivacy }}</a>
+                <a href="terms.html">{{ t.navTerms }}</a>
+                <a href="changelogs.html">{{ t.navChangelog }}</a>
+            </div>
+        </header>
 
-        // Load saved language
-        window.onload = () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlLang = urlParams.get('lang');
-            const savedLang = localStorage.getItem('meaad_lang');
-            
-            if (urlLang === 'en' || (!urlLang && savedLang === 'en')) {
-                if (document.documentElement.getAttribute('lang') !== 'en' && typeof toggleLanguage === 'function') {
-                    toggleLanguage();
-                }
-            } else if (urlLang === 'ar' || (!urlLang && savedLang === 'ar')) {
-                if (document.documentElement.getAttribute('lang') !== 'ar' && typeof toggleLanguage === 'function') {
-                    toggleLanguage();
-                }
-            }
-        };
-    </script>
-    <script>
-        if (window.location.hash.includes("hideappbar")) {
-            const header = document.querySelector("header");
-            if (header && header.querySelector(".nav-container")) {
-                header.style.display = "none";
-            }
-            const footer = document.querySelector("footer") || document.querySelector(".footer");
-            if (footer) footer.style.display = "none";
-        }
-    </script>
+        <main>
+            <!-- Hero Section -->
+            <section class="hero-section glass-panel">
+                <div class="hero-content">
+                    <div class="badge-pill">{{ t.heroBadge }}</div>
+                    <h1 v-html="t.heroTitle"></h1>
+                    <p class="hero-subtitle">{{ t.heroSubtitle }}</p>
+                    
+                    <div class="download-buttons">
+                        <a :href="links.googlePlay" target="_blank" class="store-btn google-play">
+                            <i class="fab fa-google-play"></i>
+                            <div class="btn-text">
+                                <span>{{ t.getItOn }}</span>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                        <!-- Add App Store when ready -->
+                        <a v-if="links.appStore" :href="links.appStore" target="_blank" class="store-btn app-store">
+                            <i class="fab fa-apple"></i>
+                            <div class="btn-text">
+                                <span>{{ t.downloadOn }}</span>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder for App Mockup -->
+                    <div class="mockup-placeholder">
+                        <img src="logo.png" alt="App Preview" class="floating-img" />
+                    </div>
+                </div>
+            </section>
 
+            <!-- Features Section -->
+            <section id="features" class="section">
+                <div class="section-header">
+                    <h2>{{ t.featuresTitle }}</h2>
+                    <p>{{ t.featuresSubtitle }}</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div v-for="(feature, index) in featuresList" :key="index" class="feature-card glass-panel hover-lift">
+                        <div class="feature-icon" :style="{ backgroundColor: feature.color }">
+                            <i :class="feature.icon"></i>
+                        </div>
+                        <h3>{{ feature.title }}</h3>
+                        <p>{{ feature.desc }}</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Data Privacy (Google Requirement) -->
+            <section class="section">
+                <div class="privacy-alert glass-panel">
+                    <div class="alert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="alert-content">
+                        <h3>{{ t.dataTitle }}</h3>
+                        <p v-html="t.dataDesc1"></p>
+                        <p v-html="t.dataDesc2"></p>
+                        <a href="privacy.html" class="learn-more">{{ t.readPrivacy }} <i :class="lang === 'ar' ? 'fas fa-arrow-left' : 'fas fa-arrow-right'"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section id="testimonials" class="section">
+                <div class="section-header">
+                    <h2>{{ t.testimonialsTitle }}</h2>
+                    <p>{{ t.testimonialsSubtitle }}</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div v-for="(review, index) in testimonialsList" :key="index" class="testimonial-card glass-panel">
+                        <div class="stars">
+                            <i v-for="n in 5" :key="n" class="fas fa-star" :class="{ 'active': n <= review.rating }"></i>
+                        </div>
+                        <p class="review-text">"{{ review.text }}"</p>
+                        <div class="user-info">
+                            <div class="avatar">{{ review.name.charAt(0) }}</div>
+                            <div class="details">
+                                <h4>{{ review.name }}</h4>
+                                <span>{{ review.role }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="ميعاد" class="footer-logo">
+                    <p>{{ t.footerDesc }}</p>
+                </div>
+                <div class="footer-links">
+                    <h4>{{ t.quickLinks }}</h4>
+                    <a href="privacy.html">{{ t.navPrivacy }}</a>
+                    <a href="terms.html">{{ t.navTerms }}</a>
+                    <a href="changelogs.html">{{ t.navChangelog }}</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>{{ t.contactUs }}</h4>
+                    <a href="mailto:meaad.application@gmail.com"><i class="fas fa-envelope"></i> meaad.application@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 {{ t.appName }}. {{ t.allRights }}</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Init App -->
+    <script src="js/app.js"></script>
 </body>
 </html>
