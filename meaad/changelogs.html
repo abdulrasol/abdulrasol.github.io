@@ -60,5 +60,16 @@
             <p>© 2026 ميعاد - تطوير عبدالرسول. جميع الحقوق محفوظة.</p>
         </div>
     </div>
+    <script>
+        if (window.location.hash.includes("hideappbar")) {
+            const header = document.querySelector("header");
+            if (header && header.querySelector(".nav-container")) {
+                header.style.display = "none";
+            }
+            const footer = document.querySelector("footer") || document.querySelector(".footer");
+            if (footer) footer.style.display = "none";
+        }
+    </script>
+
 </body>
 </html>
