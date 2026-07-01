@@ -122,6 +122,11 @@ const app = Vue.createApp({
         toggleTheme() {
             this.isDarkMode = !this.isDarkMode;
             localStorage.setItem('meaad_theme', this.isDarkMode ? 'dark' : 'light');
+            if (this.isDarkMode) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
         },
         handleScroll() {
             this.isScrolled = window.scrollY > 20;
@@ -155,6 +160,11 @@ const app = Vue.createApp({
                 // Auto detect system theme
                 this.isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
             }
+            if (this.isDarkMode) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
         }
     },
     mounted() {
@@ -166,6 +176,11 @@ const app = Vue.createApp({
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
             if (!localStorage.getItem('meaad_theme')) {
                 this.isDarkMode = e.matches;
+                if (this.isDarkMode) {
+                    document.body.classList.add('dark-mode');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                }
             }
         });
     },

@@ -637,3 +637,5 @@ body[dir="rtl"] .footer-contact i {
         display: none;
     }
 }
+
+.hidden { display: none !important; }

@@ -1,155 +1,136 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html :lang="lang" :dir="dir">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ميعاد - شروط الخدمة</title>
+    <title>{{ t.pageTitle }} - {{ t.navTerms }}</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="logo.png" alt="ميعاد Logo">
-                <span id="logo-text">ميعاد</span>
-            </a>
-            <nav class="nav-links">
-                <a href="index.html" id="nav-home">الرئيسية</a>
-                <a href="privacy.html" id="nav-privacy">سياسة الخصوصية</a>
-                <a href="terms.html" id="nav-terms">شروط الخدمة</a>
-                <button class="lang-btn" onclick="toggleLanguage()" id="lang-btn">English</button>
-            </nav>
-        </div>
-    </header>
+    <div id="app" v-cloak>
+        <!-- Header -->
+        <header :class="{ 'scrolled': isScrolled }">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="ميعاد Logo">
+                    <span>{{ t.appName }}</span>
+                </a>
+                
+                <!-- Desktop Nav -->
+                <nav class="nav-links desktop-nav">
+                    <a href="index.html">{{ t.navHome }}</a>
+                    <a href="index.html#features">{{ t.navFeatures }}</a>
+                    <a href="index.html#testimonials">{{ t.navTestimonials }}</a>
+                    <a href="privacy.html">{{ t.navPrivacy }}</a>
+                    <a href="terms.html" class="active">{{ t.navTerms }}</a>
+                </nav>
 
-    <main>
-        <div id="content-ar">
-            <section class="content-section">
-                <h1>شروط الخدمة</h1>
-                <p>آخر تحديث: 27 يونيو 2026</p>
-
-                <h2>1. قبول الشروط</h2>
-                <p>من خلال الوصول إلى تطبيق ميعاد واستخدامه، فإنك توافق على الالتزام بشروط الخدمة هذه. إذا كنت لا توافق على هذه الشروط، يرجى عدم استخدام خدماتنا.</p>
-
-                <h2>2. وصف الخدمة</h2>
-                <p>ميعاد هو تطبيق لإدارة الدفعات الدورية والمشتركين. لتقديم هذه الخدمات، نستخدم ميزة تسجيل الدخول عبر Google للمصادقة، و Google Sheets لتخزين البيانات. باستخدامك لتطبيق ميعاد، فإنك تفوض التطبيق لإنشاء جداول بيانات Google في حساب Google الخاص بك لتخزين بياناتك ومشاركة هذه الجداول المحددة مع مطور تطبيق ميعاد لأغراض الصيانة وحل المشكلات وتحسين الخدمة. نحن نحتفظ بالحق في تعديل أو إيقاف أي جزء من الخدمة في أي وقت.</p>
-
-                <h2>3. مسؤوليات المستخدم</h2>
-                <p>أنت مسؤول عن الحفاظ على سرية بيانات اعتماد حساب Google الخاص بك وعن جميع الأنشطة التي تحدث تحت حسابك. أنت توافق على عدم استخدام الخدمة لأي غرض غير قانوني أو غير مصرح به.</p>
-
-                <h2>4. حدود المسؤولية</h2>
-                <p>لا يتحمل تطبيق ميعاد أي مسؤولية عن أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو تأديبية ناتجة عن استخدامك للخدمة أو عدم قدرتك على استخدامها.</p>
-
-                <h2>5. تغيير الشروط</h2>
-                <p>نحتفظ بالحق في تحديث شروط الخدمة هذه في أي وقت. استمرارك في استخدام الخدمة بعد أي تغييرات يشكل قبولاً للشروط الجديدة.</p>
-            </section>
-        </div>
-
-        <div id="content-en" class="hidden">
-            <section class="content-section">
-                <h1>Terms of Service</h1>
-                <p>Last updated: June 27, 2026</p>
-
-                <h2>1. Acceptance of Terms</h2>
-                <p>By accessing and using MEAAD, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
-
-                <h2>2. Description of Service</h2>
-                <p>MEAAD is a periodic payment and subscriber management application. To provide these services, we utilize Google Login for authentication and Google Sheets for data storage. By using MEAAD, you authorize the application to create Google Sheets in your Google account to store your data and to share these specific sheets with the MEAAD developer for the purposes of maintenance, troubleshooting, and service improvement. We reserve the right to modify or discontinue any part of the service at any time.</p>
-
-                <h2>3. User Responsibilities</h2>
-                <p>You are responsible for maintaining the confidentiality of your Google account credentials and for all activities that occur under your account. You agree not to use the service for any illegal or unauthorized purpose.</p>
-
-                <h2>4. Limitation of Liability</h2>
-                <p>MEAAD shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service.</p>
-
-                <h2>5. Changes to Terms</h2>
-                <p>We reserve the right to update these Terms of Service at any time. Continued use of the service after any changes constitutes acceptance of the new terms.</p>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="privacy.html" id="footer-privacy">سياسة الخصوصية</a>
-                <a href="terms.html" id="footer-terms">شروط الخدمة</a>
+                <div class="nav-actions">
+                    <button class="icon-btn" @click="toggleTheme" :title="t.toggleTheme">
+                        <i :class="isDarkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
+                    </button>
+                    <button class="lang-btn" @click="toggleLanguage">
+                        <i class="fas fa-globe"></i> {{ lang === 'ar' ? 'English' : 'العربية' }}
+                    </button>
+                    <button class="mobile-menu-btn" @click="mobileMenuOpen = !mobileMenuOpen">
+                        <i :class="mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
+                    </button>
+                </div>
             </div>
-            <p id="footer-copy">&copy; 2026 ميعاد. جميع الحقوق محفوظة.</p>
-            <p id="footer-contact">تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a></p>
-        </div>
-    </footer>
 
-    <script>
-        function toggleLanguage() {
-            const html = document.documentElement;
-            const currentLang = html.getAttribute('lang');
-            
-            if (currentLang === 'ar') {
-                html.setAttribute('lang', 'en');
-                html.setAttribute('dir', 'ltr');
-                document.title = 'MEAAD - Terms of Service';
-                document.getElementById('content-ar').classList.add('hidden');
-                document.getElementById('content-en').classList.remove('hidden');
-                
-                document.getElementById('logo-text').innerText = 'MEAAD';
-                document.getElementById('nav-home').innerText = 'Home';
-                document.getElementById('nav-privacy').innerText = 'Privacy Policy';
-                document.getElementById('nav-terms').innerText = 'Terms of Service';
-                document.getElementById('lang-btn').innerText = 'العربية';
-                
-                document.getElementById('footer-privacy').innerText = 'Privacy Policy';
-                document.getElementById('footer-terms').innerText = 'Terms of Service';
-                document.getElementById('footer-copy').innerHTML = '&copy; 2026 MEAAD. All rights reserved.';
-                document.getElementById('footer-contact').innerHTML = 'Contact us: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
-            } else {
-                html.setAttribute('lang', 'ar');
-                html.setAttribute('dir', 'rtl');
-                document.title = 'ميعاد - شروط الخدمة';
-                document.getElementById('content-en').classList.add('hidden');
-                document.getElementById('content-ar').classList.remove('hidden');
-                
-                document.getElementById('logo-text').innerText = 'ميعاد';
-                document.getElementById('nav-home').innerText = 'الرئيسية';
-                document.getElementById('nav-privacy').innerText = 'سياسة الخصوصية';
-                document.getElementById('nav-terms').innerText = 'شروط الخدمة';
-                document.getElementById('lang-btn').innerText = 'English';
-                
-                document.getElementById('footer-privacy').innerText = 'سياسة الخصوصية';
-                document.getElementById('footer-terms').innerText = 'شروط الخدمة';
-                document.getElementById('footer-copy').innerHTML = '&copy; 2026 ميعاد. جميع الحقوق محفوظة.';
-                document.getElementById('footer-contact').innerHTML = 'تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
-            }
-            localStorage.setItem('meaad_lang', currentLang === 'ar' ? 'en' : 'ar');
-        }
+            <!-- Mobile Nav -->
+            <div class="mobile-nav" :class="{ 'open': mobileMenuOpen }">
+                <a href="index.html" @click="mobileMenuOpen = false">{{ t.navHome }}</a>
+                <a href="index.html#features" @click="mobileMenuOpen = false">{{ t.navFeatures }}</a>
+                <a href="index.html#testimonials" @click="mobileMenuOpen = false">{{ t.navTestimonials }}</a>
+                <a href="privacy.html">{{ t.navPrivacy }}</a>
+                <a href="terms.html">{{ t.navTerms }}</a>
+                <a href="changelogs.html">{{ t.navChangelog }}</a>
+            </div>
+        </header>
 
-        // Load saved language
-        window.onload = () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlLang = urlParams.get('lang');
-            const savedLang = localStorage.getItem('meaad_lang');
-            
-            if (urlLang === 'en' || (!urlLang && savedLang === 'en')) {
-                if (document.documentElement.getAttribute('lang') !== 'en' && typeof toggleLanguage === 'function') {
-                    toggleLanguage();
-                }
-            } else if (urlLang === 'ar' || (!urlLang && savedLang === 'ar')) {
-                if (document.documentElement.getAttribute('lang') !== 'ar' && typeof toggleLanguage === 'function') {
-                    toggleLanguage();
-                }
-            }
-        };
-    </script>
+        <main>
+            <!-- Content -->
+            <section class="section">
+                <!-- ARABIC CONTENT -->
+                <div v-if="lang === 'ar'" class="content-section glass-panel" style="padding: 3rem;">
+                    <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 0.5rem;">شروط الخدمة</h1>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">آخر تحديث: 27 يونيو 2026</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">1. قبول الشروط</h2>
+                    <p>من خلال الوصول إلى تطبيق ميعاد واستخدامه، فإنك توافق على الالتزام بشروط الخدمة هذه. إذا كنت لا توافق على هذه الشروط، يرجى عدم استخدام خدماتنا.</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">2. وصف الخدمة</h2>
+                    <p>ميعاد هو تطبيق لإدارة الدفعات الدورية والمشتركين. لتقديم هذه الخدمات، نستخدم ميزة تسجيل الدخول عبر Google للمصادقة، و Google Sheets لتخزين البيانات. باستخدامك لتطبيق ميعاد، فإنك تفوض التطبيق لإنشاء جداول بيانات Google في حساب Google الخاص بك لتخزين بياناتك ومشاركة هذه الجداول المحددة مع مطور تطبيق ميعاد لأغراض الصيانة وحل المشكلات وتحسين الخدمة. نحن نحتفظ بالحق في تعديل أو إيقاف أي جزء من الخدمة في أي وقت.</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">3. مسؤوليات المستخدم</h2>
+                    <p>أنت مسؤول عن الحفاظ على سرية بيانات اعتماد حساب Google الخاص بك وعن جميع الأنشطة التي تحدث تحت حسابك. أنت توافق على عدم استخدام الخدمة لأي غرض غير قانوني أو غير مصرح به.</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">4. حدود المسؤولية</h2>
+                    <p>لا يتحمل تطبيق ميعاد أي مسؤولية عن أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو تأديبية ناتجة عن استخدامك للخدمة أو عدم قدرتك على استخدامها.</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">5. تغيير الشروط</h2>
+                    <p>نحتفظ بالحق في تحديث شروط الخدمة هذه في أي وقت. استمرارك في استخدام الخدمة بعد أي تغييرات يشكل قبولاً للشروط الجديدة.</p>
+                </div>
+
+                <!-- ENGLISH CONTENT -->
+                <div v-else class="content-section glass-panel" style="padding: 3rem;">
+                    <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 0.5rem;">Terms of Service</h1>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Last updated: June 27, 2026</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">1. Acceptance of Terms</h2>
+                    <p>By accessing and using MEAAD, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">2. Description of Service</h2>
+                    <p>MEAAD is a periodic payment and subscriber management application. To provide these services, we utilize Google Login for authentication and Google Sheets for data storage. By using MEAAD, you authorize the application to create Google Sheets in your Google account to store your data and to share these specific sheets with the MEAAD developer for the purposes of maintenance, troubleshooting, and service improvement. We reserve the right to modify or discontinue any part of the service at any time.</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">3. User Responsibilities</h2>
+                    <p>You are responsible for maintaining the confidentiality of your Google account credentials and for all activities that occur under your account. You agree not to use the service for any illegal or unauthorized purpose.</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">4. Limitation of Liability</h2>
+                    <p>MEAAD shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service.</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">5. Changes to Terms</h2>
+                    <p>We reserve the right to update these Terms of Service at any time. Continued use of the service after any changes constitutes acceptance of the new terms.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="ميعاد" class="footer-logo">
+                    <p>{{ t.footerDesc }}</p>
+                </div>
+                <div class="footer-links">
+                    <h4>{{ t.quickLinks }}</h4>
+                    <a href="privacy.html">{{ t.navPrivacy }}</a>
+                    <a href="terms.html">{{ t.navTerms }}</a>
+                    <a href="changelogs.html">{{ t.navChangelog }}</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>{{ t.contactUs }}</h4>
+                    <a href="mailto:meaad.application@gmail.com"><i class="fas fa-envelope"></i> meaad.application@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 {{ t.appName }}. {{ t.allRights }}</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Init App -->
+    <script src="js/app.js"></script>
     <script>
         if (window.location.hash.includes("hideappbar")) {
-            const header = document.querySelector("header");
-            if (header && header.querySelector(".nav-container")) {
-                header.style.display = "none";
-            }
-            const footer = document.querySelector("footer") || document.querySelector(".footer");
-            if (footer) footer.style.display = "none";
+            const style = document.createElement('style');
+            style.innerHTML = 'header { display: none !important; } footer { display: none !important; } main { padding-top: 2rem !important; }';
+            document.head.appendChild(style);
         }
     </script>
-
 </body>
 </html>

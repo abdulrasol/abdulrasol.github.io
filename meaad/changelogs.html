@@ -1,216 +1,188 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html :lang="lang" :dir="dir">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ميعاد - سجل التحديثات</title>
+    <title>{{ t.pageTitle }} - {{ t.navChangelog }}</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <style>
-        .version-card { background: var(--card-bg); border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; }
-        .version-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px; }
+        .version-card { background: var(--glass-bg); border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: var(--card-shadow); border: 1px solid var(--glass-border); }
+        .version-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--glass-border); padding-bottom: 15px; flex-wrap: wrap; gap: 10px; }
         .version-number { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
         .version-date { color: var(--text-muted); font-size: 0.95rem; }
-        .tag { background: #dbeafe; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 10px; }
-        ul.changelog-list { list-style-type: none; padding-inline-start: 10px; }
-        ul.changelog-list li { margin-bottom: 12px; position: relative; padding-inline-start: 25px; }
+        .tag { background: rgba(59, 130, 246, 0.1); color: var(--primary); padding: 4px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-inline-end: 10px; }
+        ul.changelog-list { list-style-type: none; padding-inline-start: 10px; margin-top: 10px; }
+        ul.changelog-list li { margin-bottom: 12px; position: relative; padding-inline-start: 25px; color: var(--text-main); }
         ul.changelog-list li::before { content: '•'; color: var(--primary); font-size: 1.5em; position: absolute; inset-inline-start: 0; top: -5px; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="logo.png" alt="ميعاد Logo">
-                <span id="logo-text">ميعاد</span>
-            </a>
-            <nav class="nav-links">
-                <a href="index.html" id="nav-home">الرئيسية</a>
-                <a href="privacy.html" id="nav-privacy">سياسة الخصوصية</a>
-                <a href="terms.html" id="nav-terms">شروط الخدمة</a>
-                <a href="changelogs.html" id="nav-changelog">سجل التحديثات</a>
-                <button class="lang-btn" onclick="toggleLanguage()" id="lang-btn">English</button>
-            </nav>
-        </div>
-    </header>
+    <div id="app" v-cloak>
+        <!-- Header -->
+        <header :class="{ 'scrolled': isScrolled }">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="ميعاد Logo">
+                    <span>{{ t.appName }}</span>
+                </a>
+                
+                <!-- Desktop Nav -->
+                <nav class="nav-links desktop-nav">
+                    <a href="index.html">{{ t.navHome }}</a>
+                    <a href="index.html#features">{{ t.navFeatures }}</a>
+                    <a href="index.html#testimonials">{{ t.navTestimonials }}</a>
+                    <a href="privacy.html">{{ t.navPrivacy }}</a>
+                    <a href="terms.html">{{ t.navTerms }}</a>
+                </nav>
 
-    <main>
-        <div id="content-ar">
-            <section class="content-section">
-                <div style="text-align: center; margin-bottom: 40px;">
-                    <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 10px;">سجل التحديثات</h1>
-                    <p>تابع أحدث الميزات والتحسينات في تطبيق ميعاد</p>
+                <div class="nav-actions">
+                    <button class="icon-btn" @click="toggleTheme" :title="t.toggleTheme">
+                        <i :class="isDarkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
+                    </button>
+                    <button class="lang-btn" @click="toggleLanguage">
+                        <i class="fas fa-globe"></i> {{ lang === 'ar' ? 'English' : 'العربية' }}
+                    </button>
+                    <button class="mobile-menu-btn" @click="mobileMenuOpen = !mobileMenuOpen">
+                        <i :class="mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
+                    </button>
                 </div>
-
-                <div class="version-card">
-                    <div class="version-header">
-                        <div>
-                            <span class="version-number">الإصدار 1.1.0</span>
-                            <span class="tag" style="background: #dcfce7; color: #166534;">أحدث إصدار ✨</span>
-                        </div>
-                        <span class="version-date">يوليو 2026</span>
-                    </div>
-                    <ul class="changelog-list">
-                        <li><strong>قفل التطبيق:</strong> إضافة حماية بالبصمة أو الرمز (Biometric App Lock) لزيادة أمان بياناتك.</li>
-                        <li><strong>تحسينات الأداء:</strong> معالجة تسريب الذاكرة (Memory Leaks) في واجهات اختيار التاريخ والوقت لضمان سرعة التطبيق.</li>
-                        <li><strong>مزامنة ذكية:</strong> تطوير محرك المزامنة لحماية البيانات من الضياع عند استخدام التطبيق بدون إنترنت ومزامنتها لاحقاً.</li>
-                        <li><strong>إشعارات دقيقة:</strong> تحسين آلية جدولة الإشعارات لضمان وصولها في الوقت المحدد بدون تداخل.</li>
-                        <li><strong>تحسينات عامة:</strong> تحسين سرعة البحث وتقليل حجم التطبيق وإصلاحات لمشاكل شريط التنقل.</li>
-                    </ul>
-                </div>
-
-                <div class="version-card">
-                    <div class="version-header">
-                        <div>
-                            <span class="version-number">الإصدار 1.0.0</span>
-                            <span class="tag">الإصدار الأول 🎉</span>
-                        </div>
-                        <span class="version-date">يوليو 2026</span>
-                    </div>
-                    <ul class="changelog-list">
-                        <li><strong>إدارة متكاملة:</strong> إضافة ديون واشتراكات العملاء ومتابعتها بسهولة فائقة وبدون تعقيد.</li>
-                        <li><strong>واجهة عصرية:</strong> تصميم UI حديث، سريع الاستجابة، مع دعم كامل للوضع الليلي (Dark Mode).</li>
-                        <li><strong>أمان ومزامنة:</strong> خصوصية تامة لبياناتك بفضل تقنيات المزامنة الذكية التي تحمي معلوماتك من الفقدان.</li>
-                        <li><strong>تصدير وطباعة:</strong> دعم كامل لطباعة الفواتير الخاصة بالعملاء وتصدير تقارير الديون بصيغة PDF و Excel.</li>
-                        <li><strong>لوحة تحكم ذكية (Dashboard):</strong> شاشة رئيسية شاملة تعرض إحصائيات الديون والمبالغ المحصلة في الوقت الفعلي.</li>
-                        <li><strong>شاشة البوابة (Portal):</strong> إطلاق بوابة ذكية للعملاء مزودة بماسح QR Code لتسهيل الوصول للفواتير عبر المتصفح.</li>
-                        <li><strong>إدارة الصلاحيات:</strong> دعم خاصية الإدارة المتعددة (Multiple Admins) للتحكم السهل في التطبيق.</li>
-                        <li><strong>الربط مع بيترك:</strong> توفير بيئة متكاملة تدعم التوسع باستخدام تطبيقنا الشقيق (Baytraq Sales Manager).</li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-
-        <div id="content-en" class="hidden">
-            <section class="content-section">
-                <div style="text-align: center; margin-bottom: 40px;">
-                    <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 10px;">Changelogs</h1>
-                    <p>Follow the latest features and improvements in MEAAD</p>
-                </div>
-
-                <div class="version-card">
-                    <div class="version-header">
-                        <div>
-                            <span class="version-number">Version 1.1.0</span>
-                            <span class="tag" style="background: #dcfce7; color: #166534;">Latest ✨</span>
-                        </div>
-                        <span class="version-date">July 2026</span>
-                    </div>
-                    <ul class="changelog-list">
-                        <li><strong>App Lock:</strong> Added Biometric & PIN lock for enhanced security and privacy.</li>
-                        <li><strong>Performance:</strong> Fixed memory leaks in date/time pickers to ensure a smooth experience.</li>
-                        <li><strong>Smart Sync:</strong> Improved offline synchronization to prevent data loss when offline.</li>
-                        <li><strong>Accurate Notifications:</strong> Upgraded the notification scheduler for reliable and precise delivery.</li>
-                        <li><strong>General Improvements:</strong> Faster search, reduced app size, and fixed navigation bar issues.</li>
-                    </ul>
-                </div>
-
-                <div class="version-card">
-                    <div class="version-header">
-                        <div>
-                            <span class="version-number">Version 1.0.0</span>
-                            <span class="tag">First Release 🎉</span>
-                        </div>
-                        <span class="version-date">July 2026</span>
-                    </div>
-                    <ul class="changelog-list">
-                        <li><strong>Integrated Management:</strong> Add and track customer debts and subscriptions effortlessly.</li>
-                        <li><strong>Modern Interface:</strong> Fast, responsive modern UI with full Dark Mode support.</li>
-                        <li><strong>Security & Sync:</strong> Complete data privacy with smart syncing to prevent data loss.</li>
-                        <li><strong>Export & Print:</strong> Full support for printing customer receipts and exporting reports to PDF/Excel.</li>
-                        <li><strong>Smart Dashboard:</strong> Comprehensive home screen showing real-time debt and collection stats.</li>
-                        <li><strong>Portal Screen:</strong> A smart web portal for customers with QR Code scanning for quick receipt access.</li>
-                        <li><strong>Roles Management:</strong> Support for Multiple Admins for easy app control.</li>
-                        <li><strong>Baytraq Integration:</strong> Seamless expansion capabilities with our sister app (Baytraq Sales Manager).</li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="privacy.html" id="footer-privacy">سياسة الخصوصية</a>
-                <a href="terms.html" id="footer-terms">شروط الخدمة</a>
-                <a href="changelogs.html" id="footer-changelog">سجل التحديثات</a>
             </div>
-            <p id="footer-copy">&copy; 2026 ميعاد. جميع الحقوق محفوظة.</p>
-            <p id="footer-contact">تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a></p>
-        </div>
-    </footer>
 
-    <script>
-        function toggleLanguage() {
-            const html = document.documentElement;
-            const currentLang = html.getAttribute('lang');
-            
-            if (currentLang === 'ar') {
-                html.setAttribute('lang', 'en');
-                html.setAttribute('dir', 'ltr');
-                document.title = 'MEAAD - Changelogs';
-                document.getElementById('content-ar').classList.add('hidden');
-                document.getElementById('content-en').classList.remove('hidden');
-                
-                document.getElementById('logo-text').innerText = 'MEAAD';
-                document.getElementById('nav-home').innerText = 'Home';
-                document.getElementById('nav-privacy').innerText = 'Privacy Policy';
-                document.getElementById('nav-terms').innerText = 'Terms of Service';
-                document.getElementById('nav-changelog').innerText = 'Changelogs';
-                document.getElementById('lang-btn').innerText = 'العربية';
-                
-                document.getElementById('footer-privacy').innerText = 'Privacy Policy';
-                document.getElementById('footer-terms').innerText = 'Terms of Service';
-                document.getElementById('footer-changelog').innerText = 'Changelogs';
-                document.getElementById('footer-copy').innerHTML = '&copy; 2026 MEAAD. All rights reserved.';
-                document.getElementById('footer-contact').innerHTML = 'Contact us: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
-            } else {
-                html.setAttribute('lang', 'ar');
-                html.setAttribute('dir', 'rtl');
-                document.title = 'ميعاد - سجل التحديثات';
-                document.getElementById('content-en').classList.add('hidden');
-                document.getElementById('content-ar').classList.remove('hidden');
-                
-                document.getElementById('logo-text').innerText = 'ميعاد';
-                document.getElementById('nav-home').innerText = 'الرئيسية';
-                document.getElementById('nav-privacy').innerText = 'سياسة الخصوصية';
-                document.getElementById('nav-terms').innerText = 'شروط الخدمة';
-                document.getElementById('nav-changelog').innerText = 'سجل التحديثات';
-                document.getElementById('lang-btn').innerText = 'English';
-                
-                document.getElementById('footer-privacy').innerText = 'سياسة الخصوصية';
-                document.getElementById('footer-terms').innerText = 'شروط الخدمة';
-                document.getElementById('footer-changelog').innerText = 'سجل التحديثات';
-                document.getElementById('footer-copy').innerHTML = '&copy; 2026 ميعاد. جميع الحقوق محفوظة.';
-                document.getElementById('footer-contact').innerHTML = 'تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
-            }
-            localStorage.setItem('meaad_lang', currentLang === 'ar' ? 'en' : 'ar');
-        }
+            <!-- Mobile Nav -->
+            <div class="mobile-nav" :class="{ 'open': mobileMenuOpen }">
+                <a href="index.html" @click="mobileMenuOpen = false">{{ t.navHome }}</a>
+                <a href="index.html#features" @click="mobileMenuOpen = false">{{ t.navFeatures }}</a>
+                <a href="index.html#testimonials" @click="mobileMenuOpen = false">{{ t.navTestimonials }}</a>
+                <a href="privacy.html">{{ t.navPrivacy }}</a>
+                <a href="terms.html">{{ t.navTerms }}</a>
+                <a href="changelogs.html">{{ t.navChangelog }}</a>
+            </div>
+        </header>
 
-        window.onload = () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlLang = urlParams.get('lang');
-            const savedLang = localStorage.getItem('meaad_lang');
-            
-            if (urlLang === 'en' || (!urlLang && savedLang === 'en')) {
-                if (document.documentElement.getAttribute('lang') !== 'en' && typeof toggleLanguage === 'function') {
-                    toggleLanguage();
-                }
-            } else if (urlLang === 'ar' || (!urlLang && savedLang === 'ar')) {
-                if (document.documentElement.getAttribute('lang') !== 'ar' && typeof toggleLanguage === 'function') {
-                    toggleLanguage();
-                }
-            }
-        };
-    </script>
+        <main>
+            <!-- Content -->
+            <section class="section">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 10px;">{{ t.navChangelog }}</h1>
+                    <p style="color: var(--text-muted);">{{ lang === 'ar' ? 'تابع أحدث الميزات والتحسينات في تطبيق ميعاد' : 'Follow the latest features and improvements in MEAAD' }}</p>
+                </div>
+
+                <!-- ARABIC CONTENT -->
+                <div v-if="lang === 'ar'">
+                    <div class="version-card">
+                        <div class="version-header">
+                            <div>
+                                <span class="version-number">الإصدار 1.1.0</span>
+                                <span class="tag" style="background: rgba(16, 185, 129, 0.1); color: var(--success);">أحدث إصدار ✨</span>
+                            </div>
+                            <span class="version-date">يوليو 2026</span>
+                        </div>
+                        <ul class="changelog-list">
+                            <li><strong>قفل التطبيق:</strong> إضافة حماية بالبصمة أو الرمز (Biometric App Lock) لزيادة أمان بياناتك.</li>
+                            <li><strong>تحسينات الأداء:</strong> معالجة تسريب الذاكرة (Memory Leaks) في واجهات اختيار التاريخ والوقت لضمان سرعة التطبيق.</li>
+                            <li><strong>مزامنة ذكية:</strong> تطوير محرك المزامنة لحماية البيانات من الضياع عند استخدام التطبيق بدون إنترنت ومزامنتها لاحقاً.</li>
+                            <li><strong>إشعارات دقيقة:</strong> تحسين آلية جدولة الإشعارات لضمان وصولها في الوقت المحدد بدون تداخل.</li>
+                            <li><strong>تحسينات عامة:</strong> تحسين سرعة البحث وتقليل حجم التطبيق وإصلاحات لمشاكل شريط التنقل.</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <div class="version-header">
+                            <div>
+                                <span class="version-number">الإصدار 1.0.0</span>
+                                <span class="tag">الإصدار الأول 🎉</span>
+                            </div>
+                            <span class="version-date">يوليو 2026</span>
+                        </div>
+                        <ul class="changelog-list">
+                            <li><strong>إدارة متكاملة:</strong> إضافة ديون واشتراكات العملاء ومتابعتها بسهولة فائقة وبدون تعقيد.</li>
+                            <li><strong>واجهة عصرية:</strong> تصميم UI حديث، سريع الاستجابة، مع دعم كامل للوضع الليلي (Dark Mode).</li>
+                            <li><strong>أمان ومزامنة:</strong> خصوصية تامة لبياناتك بفضل تقنيات المزامنة الذكية التي تحمي معلوماتك من الفقدان.</li>
+                            <li><strong>تصدير وطباعة:</strong> دعم كامل لطباعة الفواتير الخاصة بالعملاء وتصدير تقارير الديون بصيغة PDF و Excel.</li>
+                            <li><strong>لوحة تحكم ذكية (Dashboard):</strong> شاشة رئيسية شاملة تعرض إحصائيات الديون والمبالغ المحصلة في الوقت الفعلي.</li>
+                            <li><strong>شاشة البوابة (Portal):</strong> إطلاق بوابة ذكية للعملاء مزودة بماسح QR Code لتسهيل الوصول للفواتير عبر المتصفح.</li>
+                            <li><strong>إدارة الصلاحيات:</strong> دعم خاصية الإدارة المتعددة (Multiple Admins) للتحكم السهل في التطبيق.</li>
+                            <li><strong>الربط مع بيترك:</strong> توفير بيئة متكاملة تدعم التوسع باستخدام تطبيقنا الشقيق (Baytraq Sales Manager).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ENGLISH CONTENT -->
+                <div v-else>
+                    <div class="version-card">
+                        <div class="version-header">
+                            <div>
+                                <span class="version-number">Version 1.1.0</span>
+                                <span class="tag" style="background: rgba(16, 185, 129, 0.1); color: var(--success);">Latest ✨</span>
+                            </div>
+                            <span class="version-date">July 2026</span>
+                        </div>
+                        <ul class="changelog-list">
+                            <li><strong>App Lock:</strong> Added Biometric & PIN lock for enhanced security and privacy.</li>
+                            <li><strong>Performance:</strong> Fixed memory leaks in date/time pickers to ensure a smooth experience.</li>
+                            <li><strong>Smart Sync:</strong> Improved offline synchronization to prevent data loss when offline.</li>
+                            <li><strong>Accurate Notifications:</strong> Upgraded the notification scheduler for reliable and precise delivery.</li>
+                            <li><strong>General Improvements:</strong> Faster search, reduced app size, and fixed navigation bar issues.</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <div class="version-header">
+                            <div>
+                                <span class="version-number">Version 1.0.0</span>
+                                <span class="tag">First Release 🎉</span>
+                            </div>
+                            <span class="version-date">July 2026</span>
+                        </div>
+                        <ul class="changelog-list">
+                            <li><strong>Integrated Management:</strong> Add and track customer debts and subscriptions effortlessly.</li>
+                            <li><strong>Modern Interface:</strong> Fast, responsive modern UI with full Dark Mode support.</li>
+                            <li><strong>Security & Sync:</strong> Complete data privacy with smart syncing to prevent data loss.</li>
+                            <li><strong>Export & Print:</strong> Full support for printing customer receipts and exporting reports to PDF/Excel.</li>
+                            <li><strong>Smart Dashboard:</strong> Comprehensive home screen showing real-time debt and collection stats.</li>
+                            <li><strong>Portal Screen:</strong> A smart web portal for customers with QR Code scanning for quick receipt access.</li>
+                            <li><strong>Roles Management:</strong> Support for Multiple Admins for easy app control.</li>
+                            <li><strong>Baytraq Integration:</strong> Seamless expansion capabilities with our sister app (Baytraq Sales Manager).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="ميعاد" class="footer-logo">
+                    <p>{{ t.footerDesc }}</p>
+                </div>
+                <div class="footer-links">
+                    <h4>{{ t.quickLinks }}</h4>
+                    <a href="privacy.html">{{ t.navPrivacy }}</a>
+                    <a href="terms.html">{{ t.navTerms }}</a>
+                    <a href="changelogs.html">{{ t.navChangelog }}</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>{{ t.contactUs }}</h4>
+                    <a href="mailto:meaad.application@gmail.com"><i class="fas fa-envelope"></i> meaad.application@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 {{ t.appName }}. {{ t.allRights }}</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Init App -->
+    <script src="js/app.js"></script>
     <script>
         if (window.location.hash.includes("hideappbar")) {
-            const header = document.querySelector("header");
-            if (header && header.querySelector(".nav-container")) {
-                header.style.display = "none";
-            }
-            const footer = document.querySelector("footer") || document.querySelector(".footer");
-            if (footer) footer.style.display = "none";
+            const style = document.createElement('style');
+            style.innerHTML = 'header { display: none !important; } footer { display: none !important; } main { padding-top: 2rem !important; }';
+            document.head.appendChild(style);
         }
     </script>
 </body>

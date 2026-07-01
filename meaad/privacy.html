@@ -1,177 +1,158 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html :lang="lang" :dir="dir">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ميعاد - سياسة الخصوصية</title>
+    <title>{{ t.pageTitle }} - {{ t.navPrivacy }}</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="logo.png" alt="ميعاد Logo">
-                <span id="logo-text">ميعاد</span>
-            </a>
-            <nav class="nav-links">
-                <a href="index.html" id="nav-home">الرئيسية</a>
-                <a href="privacy.html" id="nav-privacy">سياسة الخصوصية</a>
-                <a href="terms.html" id="nav-terms">شروط الخدمة</a>
-                <button class="lang-btn" onclick="toggleLanguage()" id="lang-btn">English</button>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <div id="content-ar">
-            <section class="content-section">
-                <h1>سياسة الخصوصية</h1>
-                <p>آخر تحديث: 27 يونيو 2026</p>
+    <div id="app" v-cloak>
+        <!-- Header -->
+        <header :class="{ 'scrolled': isScrolled }">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="ميعاد Logo">
+                    <span>{{ t.appName }}</span>
+                </a>
                 
-                <h2>1. المعلومات التي نجمعها</h2>
-                <p>عند استخدام تطبيق ميعاد، قد نقوم بجمع بعض المعلومات من حساب Google الخاص بك لتقديم خدماتنا، بما في ذلك:</p>
-                <ul>
-                    <li>معلومات الملف الشخصي الأساسية عبر تسجيل الدخول بحساب Google.</li>
-                    <li>عنوان البريد الإلكتروني.</li>
-                    <li>الوصول إلى جداول بيانات Google (Google Sheets) الخاصة بك لتخزين وإدارة بياناتك.</li>
-                </ul>
+                <!-- Desktop Nav -->
+                <nav class="nav-links desktop-nav">
+                    <a href="index.html">{{ t.navHome }}</a>
+                    <a href="index.html#features">{{ t.navFeatures }}</a>
+                    <a href="index.html#testimonials">{{ t.navTestimonials }}</a>
+                    <a href="privacy.html" class="active">{{ t.navPrivacy }}</a>
+                    <a href="terms.html">{{ t.navTerms }}</a>
+                </nav>
 
-                <h2>2. كيف نستخدم معلوماتك</h2>
-                <p>نحن نستخدم المعلومات التي نجمعها من أجل:</p>
-                <ul>
-                    <li>توفير وصيانة وتحسين خدماتنا لإدارة المدفوعات الدورية وإدارة المشتركين.</li>
-                    <li>التواصل معك بخصوص التحديثات أو الدعم الفني.</li>
-                    <li>ضمان أمان حسابك.</li>
-                </ul>
-
-                <h2>3. تخزين البيانات وحمايتها (Google Drive)</h2>
-                <p>تطبيق ميعاد يضع بياناتك تحت سيطرتك الكاملة. جميع بيانات المشتركين والمدفوعات يتم تخزينها مباشرة في حسابك الشخصي على <strong>Google Drive</strong> في شكل ملفات <strong>Google Sheets</strong>.</p>
-                <p><strong>الوصول إلى البيانات:</strong> يطلب التطبيق صلاحية الوصول إلى Google Drive حصراً لإنشاء وقراءة وتعديل ملف البيانات الخاص بالتطبيق داخل حسابك لتوفير ميزة المزامنة. <strong>مطور التطبيق لا يملك أي صلاحية للوصول إلى بياناتك، ولا يتم إرسالها إلى أي خوادم خارجية.</strong> أنت المالك الوحيد لبياناتك ونحن لا نبيعها أو نشاركها مع أي جهة خارجية.</p>
-
-                <h2>4. حماية البيانات</h2>
-                <p>نحن نتخذ الإجراءات الأمنية المناسبة لحماية معلوماتك الشخصية من الوصول غير المصرح به أو التعديل أو الإفصاح أو التدمير.</p>
-
-                <h2>5. تواصل معنا</h2>
-                <p>إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى التواصل معنا عبر البريد الإلكتروني: meaad.application@gmail.com</p>
-            </section>
-        </div>
-
-        <div id="content-en" class="hidden">
-            <section class="content-section">
-                <h1>Privacy Policy</h1>
-                <p>Last updated: June 27, 2026</p>
-                
-                <h2>1. Information We Collect</h2>
-                <p>When you use MEAAD, we may collect certain information from your Google account to provide our services, including:</p>
-                <ul>
-                    <li>Basic profile information via Google Login</li>
-                    <li>Email address</li>
-                    <li>Access to your Google Sheets to store and manage your data</li>
-                </ul>
-
-                <h2>2. How We Use Your Information</h2>
-                <p>We use the information we collect to:</p>
-                <ul>
-                    <li>Provide, maintain, and improve our periodic payment and subscriber management services</li>
-                    <li>Communicate with you regarding updates or support</li>
-                    <li>Ensure the security of your account</li>
-                </ul>
-
-                <h2>3. Data Storage and Protection (Google Drive)</h2>
-                <p>MEAAD puts your data completely under your control. All subscriber and payment data is stored directly in your personal <strong>Google Drive</strong> account as a <strong>Google Sheet</strong>.</p>
-                <p><strong>Data Access:</strong> The app requests access to Google Drive exclusively to create, read, and modify its own data file within your account to provide the cloud synchronization feature. <strong>The app developer has no access to your data, and it is never sent to any external servers.</strong> You are the sole owner of your data and we do not sell or share it with any third parties.</p>
-
-                <h2>4. Data Protection</h2>
-                <p>We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.</p>
-
-                <h2>5. Contact Us</h2>
-                <p>If you have any questions about this Privacy Policy, please contact us at: meaad.application@gmail.com</p>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="privacy.html" id="footer-privacy">سياسة الخصوصية</a>
-                <a href="terms.html" id="footer-terms">شروط الخدمة</a>
+                <div class="nav-actions">
+                    <button class="icon-btn" @click="toggleTheme" :title="t.toggleTheme">
+                        <i :class="isDarkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
+                    </button>
+                    <button class="lang-btn" @click="toggleLanguage">
+                        <i class="fas fa-globe"></i> {{ lang === 'ar' ? 'English' : 'العربية' }}
+                    </button>
+                    <button class="mobile-menu-btn" @click="mobileMenuOpen = !mobileMenuOpen">
+                        <i :class="mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
+                    </button>
+                </div>
             </div>
-            <p id="footer-copy">&copy; 2026 ميعاد. جميع الحقوق محفوظة.</p>
-            <p id="footer-contact">تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a></p>
-        </div>
-    </footer>
 
-    <script>
-        function toggleLanguage() {
-            const html = document.documentElement;
-            const currentLang = html.getAttribute('lang');
-            
-            if (currentLang === 'ar') {
-                html.setAttribute('lang', 'en');
-                html.setAttribute('dir', 'ltr');
-                document.title = 'MEAAD - Privacy Policy';
-                document.getElementById('content-ar').classList.add('hidden');
-                document.getElementById('content-en').classList.remove('hidden');
-                
-                document.getElementById('logo-text').innerText = 'MEAAD';
-                document.getElementById('nav-home').innerText = 'Home';
-                document.getElementById('nav-privacy').innerText = 'Privacy Policy';
-                document.getElementById('nav-terms').innerText = 'Terms of Service';
-                document.getElementById('lang-btn').innerText = 'العربية';
-                
-                document.getElementById('footer-privacy').innerText = 'Privacy Policy';
-                document.getElementById('footer-terms').innerText = 'Terms of Service';
-                document.getElementById('footer-copy').innerHTML = '&copy; 2026 MEAAD. All rights reserved.';
-                document.getElementById('footer-contact').innerHTML = 'Contact us: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
-            } else {
-                html.setAttribute('lang', 'ar');
-                html.setAttribute('dir', 'rtl');
-                document.title = 'ميعاد - سياسة الخصوصية';
-                document.getElementById('content-en').classList.add('hidden');
-                document.getElementById('content-ar').classList.remove('hidden');
-                
-                document.getElementById('logo-text').innerText = 'ميعاد';
-                document.getElementById('nav-home').innerText = 'الرئيسية';
-                document.getElementById('nav-privacy').innerText = 'سياسة الخصوصية';
-                document.getElementById('nav-terms').innerText = 'شروط الخدمة';
-                document.getElementById('lang-btn').innerText = 'English';
-                
-                document.getElementById('footer-privacy').innerText = 'سياسة الخصوصية';
-                document.getElementById('footer-terms').innerText = 'شروط الخدمة';
-                document.getElementById('footer-copy').innerHTML = '&copy; 2026 ميعاد. جميع الحقوق محفوظة.';
-                document.getElementById('footer-contact').innerHTML = 'تواصل معنا: <a href="mailto:meaad.application@gmail.com">meaad.application@gmail.com</a>';
-            }
-            localStorage.setItem('meaad_lang', currentLang === 'ar' ? 'en' : 'ar');
-        }
+            <!-- Mobile Nav -->
+            <div class="mobile-nav" :class="{ 'open': mobileMenuOpen }">
+                <a href="index.html" @click="mobileMenuOpen = false">{{ t.navHome }}</a>
+                <a href="index.html#features" @click="mobileMenuOpen = false">{{ t.navFeatures }}</a>
+                <a href="index.html#testimonials" @click="mobileMenuOpen = false">{{ t.navTestimonials }}</a>
+                <a href="privacy.html">{{ t.navPrivacy }}</a>
+                <a href="terms.html">{{ t.navTerms }}</a>
+                <a href="changelogs.html">{{ t.navChangelog }}</a>
+            </div>
+        </header>
 
-        // Load saved language
-        window.onload = () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlLang = urlParams.get('lang');
-            const savedLang = localStorage.getItem('meaad_lang');
-            
-            if (urlLang === 'en' || (!urlLang && savedLang === 'en')) {
-                if (document.documentElement.getAttribute('lang') !== 'en' && typeof toggleLanguage === 'function') {
-                    toggleLanguage();
-                }
-            } else if (urlLang === 'ar' || (!urlLang && savedLang === 'ar')) {
-                if (document.documentElement.getAttribute('lang') !== 'ar' && typeof toggleLanguage === 'function') {
-                    toggleLanguage();
-                }
-            }
-        };
-    </script>
+        <main>
+            <!-- Content -->
+            <section class="section">
+                <!-- ARABIC CONTENT -->
+                <div v-if="lang === 'ar'" class="content-section glass-panel" style="padding: 3rem;">
+                    <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 0.5rem;">سياسة الخصوصية</h1>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">آخر تحديث: 27 يونيو 2026</p>
+                    
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">1. المعلومات التي نجمعها</h2>
+                    <p>عند استخدام تطبيق ميعاد، قد نقوم بجمع بعض المعلومات من حساب Google الخاص بك لتقديم خدماتنا، بما في ذلك:</p>
+                    <ul style="margin-right: 2rem; margin-bottom: 1rem;">
+                        <li>معلومات الملف الشخصي الأساسية عبر تسجيل الدخول بحساب Google.</li>
+                        <li>عنوان البريد الإلكتروني.</li>
+                        <li>الوصول إلى جداول بيانات Google (Google Sheets) الخاصة بك لتخزين وإدارة بياناتك.</li>
+                    </ul>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">2. كيف نستخدم معلوماتك</h2>
+                    <p>نحن نستخدم المعلومات التي نجمعها من أجل:</p>
+                    <ul style="margin-right: 2rem; margin-bottom: 1rem;">
+                        <li>توفير وصيانة وتحسين خدماتنا لإدارة المدفوعات الدورية وإدارة المشتركين.</li>
+                        <li>التواصل معك بخصوص التحديثات أو الدعم الفني.</li>
+                        <li>ضمان أمان حسابك.</li>
+                    </ul>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">3. تخزين البيانات وحمايتها (Google Drive)</h2>
+                    <p style="margin-bottom: 1rem;">تطبيق ميعاد يضع بياناتك تحت سيطرتك الكاملة. جميع بيانات المشتركين والمدفوعات يتم تخزينها مباشرة في حسابك الشخصي على <strong>Google Drive</strong> في شكل ملفات <strong>Google Sheets</strong>.</p>
+                    <p style="margin-bottom: 1rem;"><strong>الوصول إلى البيانات:</strong> يطلب التطبيق صلاحية الوصول إلى Google Drive حصراً لإنشاء وقراءة وتعديل ملف البيانات الخاص بالتطبيق داخل حسابك لتوفير ميزة المزامنة. <strong>مطور التطبيق لا يملك أي صلاحية للوصول إلى بياناتك، ولا يتم إرسالها إلى أي خوادم خارجية.</strong> أنت المالك الوحيد لبياناتك ونحن لا نبيعها أو نشاركها مع أي جهة خارجية.</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">4. حماية البيانات</h2>
+                    <p>نحن نتخذ الإجراءات الأمنية المناسبة لحماية معلوماتك الشخصية من الوصول غير المصرح به أو التعديل أو الإفصاح أو التدمير.</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">5. تواصل معنا</h2>
+                    <p>إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى التواصل معنا عبر البريد الإلكتروني: <a href="mailto:meaad.application@gmail.com" style="color: var(--accent);">meaad.application@gmail.com</a></p>
+                </div>
+
+                <!-- ENGLISH CONTENT -->
+                <div v-else class="content-section glass-panel" style="padding: 3rem;">
+                    <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 0.5rem;">Privacy Policy</h1>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Last updated: June 27, 2026</p>
+                    
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">1. Information We Collect</h2>
+                    <p>When you use MEAAD, we may collect certain information from your Google account to provide our services, including:</p>
+                    <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                        <li>Basic profile information via Google Login</li>
+                        <li>Email address</li>
+                        <li>Access to your Google Sheets to store and manage your data</li>
+                    </ul>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">2. How We Use Your Information</h2>
+                    <p>We use the information we collect to:</p>
+                    <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                        <li>Provide, maintain, and improve our periodic payment and subscriber management services</li>
+                        <li>Communicate with you regarding updates or support</li>
+                        <li>Ensure the security of your account</li>
+                    </ul>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">3. Data Storage and Protection (Google Drive)</h2>
+                    <p style="margin-bottom: 1rem;">MEAAD puts your data completely under your control. All subscriber and payment data is stored directly in your personal <strong>Google Drive</strong> account as a <strong>Google Sheet</strong>.</p>
+                    <p style="margin-bottom: 1rem;"><strong>Data Access:</strong> The app requests access to Google Drive exclusively to create, read, and modify its own data file within your account to provide the cloud synchronization feature. <strong>The app developer has no access to your data, and it is never sent to any external servers.</strong> You are the sole owner of your data and we do not sell or share it with any third parties.</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">4. Data Protection</h2>
+                    <p>We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.</p>
+
+                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">5. Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:meaad.application@gmail.com" style="color: var(--accent);">meaad.application@gmail.com</a></p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="ميعاد" class="footer-logo">
+                    <p>{{ t.footerDesc }}</p>
+                </div>
+                <div class="footer-links">
+                    <h4>{{ t.quickLinks }}</h4>
+                    <a href="privacy.html">{{ t.navPrivacy }}</a>
+                    <a href="terms.html">{{ t.navTerms }}</a>
+                    <a href="changelogs.html">{{ t.navChangelog }}</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>{{ t.contactUs }}</h4>
+                    <a href="mailto:meaad.application@gmail.com"><i class="fas fa-envelope"></i> meaad.application@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 {{ t.appName }}. {{ t.allRights }}</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Init App -->
+    <script src="js/app.js"></script>
     <script>
         if (window.location.hash.includes("hideappbar")) {
-            const header = document.querySelector("header");
-            if (header && header.querySelector(".nav-container")) {
-                header.style.display = "none";
-            }
-            const footer = document.querySelector("footer") || document.querySelector(".footer");
-            if (footer) footer.style.display = "none";
+            const style = document.createElement('style');
+            style.innerHTML = 'header { display: none !important; } footer { display: none !important; } main { padding-top: 2rem !important; }';
+            document.head.appendChild(style);
         }
     </script>
-
 </body>
 </html>
