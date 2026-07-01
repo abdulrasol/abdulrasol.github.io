@@ -156,7 +156,7 @@
     <script>
         if (window.location.hash.includes("hideappbar")) {
             const header = document.querySelector("header");
-            if (header && header.querySelector(".nav-container")) {
+            if (header) {
                 header.style.display = "none";
             }
             const footer = document.querySelector("footer") || document.querySelector(".footer");
