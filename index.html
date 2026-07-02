@@ -1,193 +1,753 @@
 <!DOCTYPE html>
-<html :lang="lang" :dir="dir">
-
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Abdulrasol - Professional Mobile Developer (Flutter) and Web Developer (Django). Expert in building high-performance cross-platform apps.">
-    <meta name="keywords"
-        content="Flutter Developer, Mobile App Developer, Django Developer, Vue.js, Firebase, Software Engineer, iOS, Android, Programmer, مطور تطبيقات, مبرمج فلاتر, مهندس برمجيات">
-    <meta name="author" content="Abdulrasol">
+  <title>Abdulrasol Al-Hilo — Flutter &amp; Django Developer</title>
+  <meta name="description" content="Professional Flutter &amp; Django developer building cross-platform mobile apps, web platforms, and AI-powered tools. Available for freelance and full-time opportunities.">
+  <meta name="keywords" content="Flutter Developer, Mobile App Developer, Django Developer, Python, Cross-Platform Apps, Software Engineer, Iraq">
+  <meta name="author" content="Abdulrasol Al-Hilo">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#36ADA3">
 
-    <title>{{ t.pageTitle }}</title>
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="logo.png">
+  <!-- Canonical & Alternate Languages -->
+  <link rel="canonical" href="https://abdulrasol.github.io/">
+  <link rel="alternate" hreflang="en" href="https://abdulrasol.github.io/">
+  <link rel="alternate" hreflang="ar" href="https://abdulrasol.github.io/ar/">
+  <link rel="alternate" hreflang="x-default" href="https://abdulrasol.github.io/">
 
-    <!-- FontAwesome & Vue 3 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <style>
-        [v-cloak] {
-            display: none;
-        }
-    </style>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Abdulrasol Al-Hilo — Flutter &amp; Django Developer">
+  <meta property="og:description" content="Professional Flutter &amp; Django developer building cross-platform mobile apps, web platforms, and AI-powered tools. Available for freelance and full-time opportunities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abdulrasol.github.io/">
+  <meta property="og:image" content="https://abdulrasol.github.io/logo.png">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Abdulrasol Al-Hilo — Flutter &amp; Django Developer">
+  <meta name="twitter:description" content="Professional Flutter &amp; Django developer building cross-platform mobile apps, web platforms, and AI-powered tools. Available for freelance and full-time opportunities.">
+  <meta name="twitter:image" content="https://abdulrasol.github.io/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="apple-touch-icon" href="/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/static/css/style.css">
+
+<script data-goatcounter="https://abdulrasol.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdulrasol Al-Hilo",
+    "jobTitle": "Flutter &amp; Django Developer",
+    "url": "https://abdulrasol.github.io",
+    "email": "mailto:abdulrsol97@gmail.com",
+    "sameAs": [
+"https://github.com/abdulrasol"    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    }
+  }
+  </script>
 </head>
+<body data-lang="en">
 
-<body>
-    <div id="app" v-cloak>
-        <!-- Header -->
-        <header :class="{ 'scrolled': isScrolled }">
-            <div class="nav-container">
-                <a href="#" class="logo">
-                    <img src="logo.png" alt="Abdulrasol Logo">
-                    <span>{{ t.appName }}</span>
-                </a>
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <img src="/logo.png" alt="Abdulrasol Al-Hilo logo" width="40" height="40">
+        <span>Abdulrasol Al-Hilo</span>
+      </a>
 
-                <!-- Desktop Nav -->
-                <nav class="nav-links desktop-nav">
-                    <a href="#hero" class="active">{{ t.navHome }}</a>
-                    <a href="#skills">{{ t.navSkills }}</a>
-                    <a href="#projects">{{ t.navProjects }}</a>
-                    <a href="#contact">{{ t.navContact }}</a>
-                </nav>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="/resume.html" class="nav-resume">Resume</a>
+      </nav>
 
-                <div class="nav-actions">
-                    <button class="icon-btn" @click="toggleTheme" :title="t.toggleTheme">
-                        <i :class="isDarkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
-                    </button>
-                    <button class="lang-btn" @click="toggleLanguage">
-                        <i class="fas fa-globe"></i> {{ lang === 'ar' ? 'English' : 'العربية' }}
-                    </button>
-                    <button class="mobile-menu-btn" @click="mobileMenuOpen = !mobileMenuOpen">
-                        <i :class="mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Nav -->
-            <div class="mobile-nav" :class="{ 'open': mobileMenuOpen }">
-                <a href="#hero" @click="mobileMenuOpen = false">{{ t.navHome }}</a>
-                <a href="#skills" @click="mobileMenuOpen = false">{{ t.navSkills }}</a>
-                <a href="#projects" @click="mobileMenuOpen = false">{{ t.navProjects }}</a>
-                <a href="#contact" @click="mobileMenuOpen = false">{{ t.navContact }}</a>
-            </div>
-        </header>
-
-        <main>
-            <!-- Hero Section -->
-            <section id="hero" class="hero">
-                <div class="hero-container">
-                    <div class="hero-content">
-                        <div class="hero-badge"><i class="fas fa-check-circle" style="margin-inline-end: 8px;"></i> {{
-                            t.heroBadge }}</div>
-                        <h1 class="hero-title">
-                            {{ t.heroTitle }}<br>
-                            <span>{{ t.heroTitleHighlight }}</span>
-                        </h1>
-                        <p class="hero-subtitle">{{ t.heroSubtitle }}</p>
-                        <div class="hero-actions">
-                            <a href="#projects" class="btn-primary"><i class="fas fa-rocket"></i> {{ t.btnProjects
-                                }}</a>
-                            <a href="#contact" class="btn-secondary"><i class="fas fa-envelope"></i> {{ t.btnContact
-                                }}</a>
-                        </div>
-                    </div>
-                    <div class="hero-image">
-                        <img src="logo.png" alt="Abdulrasol Avatar" style="max-width: 300px; border-radius: 50%;">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Skills Section -->
-            <section id="skills" class="section">
-                <h2 class="section-title">{{ t.skillsTitle }}</h2>
-                <div class="skills-grid">
-                    <div v-for="(skill, index) in t.skills" :key="index" class="glass-panel skill-card">
-                        <i :class="skill.icon"></i>
-                        <span class="skill-name">{{ skill.name }}</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="section">
-                <h2 class="section-title">{{ t.projectsTitle }}</h2>
-                <div class="projects-grid">
-                    <div v-for="(project, index) in t.projects" :key="index" class="glass-panel project-card">
-                        <img :src="project.img" :alt="project.title" class="project-img">
-                        <div class="project-info">
-                            <h3 class="project-title">{{ project.title }}</h3>
-                            <p class="project-desc">{{ project.desc }}</p>
-                            <div class="project-links">
-                                <a :href="project.link" class="btn-primary"
-                                    style="font-size: 0.9rem; padding: 8px 20px;">
-                                    <i class="fas fa-external-link-alt"></i> عرض التفاصيل
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="section">
-                <h2 class="section-title">{{ t.contactTitle }}</h2>
-                <div class="glass-panel contact-container">
-                    <div class="contact-info">
-                        <p style="font-size: 1.2rem; margin-bottom: 30px; color: var(--primary);">{{ t.contactDesc }}
-                        </p>
-
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="contact-text">
-                                <h3>{{ t.emailMe }}</h3>
-                                <p><a href="mailto:abdulrsol97@gmail.com"
-                                        style="color: inherit; text-decoration: none;">abdulrsol97@gmail.com</a></p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-                            <div class="contact-text">
-                                <h3>{{ t.whatsappMe }}</h3>
-                                <p><a href="https://wa.me/9647833333333" style="color: inherit; text-decoration: none;"
-                                        target="_blank">Contact via WhatsApp</a></p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fab fa-github"></i></div>
-                            <div class="contact-text">
-                                <h3>GitHub</h3>
-                                <p><a href="https://github.com/abdulrasol"
-                                        style="color: inherit; text-decoration: none;"
-                                        target="_blank">github.com/abdulrasol</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding: 20px; display: flex; justify-content: center; align-items: center;">
-                        <img src="logo.png" alt="Contact"
-                            style="max-width: 80%; opacity: 0.8; border-radius: 20px; mix-blend-mode: multiply;">
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer-content"
-                style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px;">
-                <div class="footer-brand" style="display: flex; flex-direction: column; align-items: center;">
-                    <img src="logo.png" alt="Abdulrasol"
-                        style="height: 50px; border-radius: 10px; margin-bottom: 10px;">
-                    <p>{{ t.footerDesc }}</p>
-                </div>
-                <div class="footer-bottom"
-                    style="margin-top: 20px; border-top: 1px solid var(--glass-border); padding-top: 20px; width: 100%;">
-                    <p>&copy; 2026 {{ t.appName }}. {{ t.allRights }}</p>
-                </div>
-            </div>
-        </footer>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="/ar/" class="lang-toggle" aria-label="Switch to Arabic">
+          <i class="fas fa-globe"></i>
+          <span>العربية</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
 
-    <!-- Init App -->
-    <script src="js/portfolio.js"></script>
-</body>
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="/resume.html">Resume</a>
+      <a href="/ar/">العربية</a>
+    </div>
+  </header>
 
+  <!-- Main Content -->
+  <main>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-text">
+      <span class="hero-badge">Available for work</span>
+      <h1 class="hero-title">
+        Building Cross-Platform Apps &amp; Web Platforms
+        <span class="gradient-text">That Solve Real Problems</span>
+      </h1>
+      <p class="hero-subtitle">I&#39;m a software engineer specializing in Flutter mobile apps, Django web development, and AI-powered tools. I help businesses turn ideas into fast, scalable, and beautiful digital products.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i>
+          View My Work
+        </a>
+        <a href="/resume.html" class="btn btn-secondary">
+          <i class="fas fa-file-alt"></i>
+          Download Resume
+        </a>
+      </div>
+      <div class="hero-social">
+        <a href="https://github.com/abdulrasol" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <div class="image-frame">
+        <img src="/static/images/progile.JPEG" alt="Abdulrasol Al-Hilo" loading="eager">
+        <div class="image-glow"></div>
+      </div>
+      <div class="floating-card card-1">
+        <i class="fas fa-mobile-alt"></i>
+        <span>Flutter</span>
+      </div>
+      <div class="floating-card card-2">
+        <i class="fas fa-globe"></i>
+        <span>Django</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">About Me</span>
+      <h2 class="section-title">About Me</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="lead">I&#39;m a passionate software engineer with deep experience in mobile and web development. Over the years, I&#39;ve built and shipped multiple production-ready applications — from AI-powered utility apps to full business management systems.</p>
+        <div class="about-actions">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>
+            Contact
+          </a>
+        </div>
+      </div>
+
+      <div class="about-stats">
+        <div class="stat-card">
+          <span class="stat-value">7+</span>
+          <span class="stat-label">Apps Shipped</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">5+</span>
+          <span class="stat-label">Years Coding</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">12</span>
+          <span class="stat-label">Languages Supported</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="section skills" id="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Skills &amp; Technologies</span>
+      <h2 class="section-title">Skills &amp; Technologies</h2>
+      <p class="section-subtitle">Technologies I use to build modern, scalable applications.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3 class="category-title">Mobile Development</h3>
+        <div class="skill-items">
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Flutter</span>
+              <span class="skill-level">95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Dart</span>
+              <span class="skill-level">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Android</span>
+              <span class="skill-level">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">iOS</span>
+              <span class="skill-level">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3 class="category-title">Web Development</h3>
+        <div class="skill-items">
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Django</span>
+              <span class="skill-level">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Python</span>
+              <span class="skill-level">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">HTML/CSS</span>
+              <span class="skill-level">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3 class="category-title">Backend &amp; Cloud</h3>
+        <div class="skill-items">
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Firebase</span>
+              <span class="skill-level">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Google Cloud</span>
+              <span class="skill-level">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">REST APIs</span>
+              <span class="skill-level">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">SQLite</span>
+              <span class="skill-level">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3 class="category-title">AI &amp; Tools</h3>
+        <div class="skill-items">
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">AI</span>
+              <span class="skill-level">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">UI/UX Design</span>
+              <span class="skill-level">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Git</span>
+              <span class="skill-level">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section (only if data exists) -->
+
+<!-- Projects Section -->
+<section class="section projects" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Featured Projects</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">A selection of apps and platforms I&#39;ve designed and built.</p>
+    </div>
+
+    <div class="project-filters" role="tablist" aria-label="Project filters">
+      <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+        All
+      </button>
+      <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false">
+        Mobile
+      </button>
+      <button class="filter-btn" data-filter="business" role="tab" aria-selected="false">
+        Business
+      </button>
+      <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">
+        AI
+      </button>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card" data-category="business">
+        <div class="project-image">
+          <img src="/assets/baytraq/logo.png" alt="Baytraq" loading="lazy">
+          <span class="project-badge">Featured</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Baytraq</h3>
+          <p class="project-desc">The ultimate sales and management workspace. Run invoicing, POS sales, track inventory, monitor profits and expenses, with LAN and cloud sync.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Dart</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">ObjectBox</span>
+          </div>
+          <div class="project-links">
+            <a href="/baytraq/?ref=portfolio"
+               data-goatcounter-click="portfolio-project-baytraq"
+               class="project-link"
+               aria-label="View project">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager"
+               data-goatcounter-click="google-play-baytraq"
+               class="project-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="Google Play">
+              <i class="fab fa-google-play"></i>
+            </a>
+            <a href="https://github.com/abdulrasol/baytraq_sales_manager"
+               data-goatcounter-click="github-baytraq"
+               class="project-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="project-card" data-category="business">
+        <div class="project-image">
+          <img src="/assets/meaad/logo.png" alt="MEAAD" loading="lazy">
+          <span class="project-badge">Featured</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">MEAAD</h3>
+          <p class="project-desc">The easiest and most secure app to manage debts, installments, and subscriptions for your business.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Dart</span>
+            <span class="tech-tag">Google Sheets</span>
+            <span class="tech-tag">Google Drive</span>
+          </div>
+          <div class="project-links">
+            <a href="/meaad/?ref=portfolio"
+               data-goatcounter-click="portfolio-project-meaad"
+               class="project-link"
+               aria-label="View project">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.meaad"
+               data-goatcounter-click="google-play-meaad"
+               class="project-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="Google Play">
+              <i class="fab fa-google-play"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="project-card" data-category="ai">
+        <div class="project-image">
+          <img src="/assets/meter_log/logo.png" alt="MeterLog" loading="lazy">
+          <span class="project-badge">Featured</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">MeterLog</h3>
+          <p class="project-desc">AI-powered multimeter reader with OCR recognition, scheduled capture, and professional Excel/CSV export. Works 100% offline.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Dart</span>
+            <span class="tech-tag">AI/OCR</span>
+            <span class="tech-tag">Isar</span>
+          </div>
+          <div class="project-links">
+            <a href="/meterlog/?ref=portfolio"
+               data-goatcounter-click="portfolio-project-meterlog"
+               class="project-link"
+               aria-label="View project">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log"
+               data-goatcounter-click="google-play-meterlog"
+               class="project-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="Google Play">
+              <i class="fab fa-google-play"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="project-card" data-category="mobile">
+        <div class="project-image">
+          <img src="/assets/madarik/logo.png" alt="Madarik" loading="lazy">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Madarik</h3>
+          <p class="project-desc">An engaging educational quiz game to test and expand your knowledge in Islamic history, science, geography, and more.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Dart</span>
+            <span class="tech-tag">Riverpod</span>
+            <span class="tech-tag">Hive</span>
+          </div>
+          <div class="project-links">
+            <a href="/madarik/?ref=portfolio"
+               data-goatcounter-click="portfolio-project-madarik"
+               class="project-link"
+               aria-label="View project">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://github.com/abdulrasol/madarik_knowledge_jounrny"
+               data-goatcounter-click="github-madarik"
+               class="project-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="project-card" data-category="business">
+        <div class="project-image">
+          <img src="/assets/store_mangement/logo.png" alt="Store Management" loading="lazy">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Store Management</h3>
+          <p class="project-desc">Your all-in-one solution for effortless store management. Track inventory, manage invoices, analyze sales, and stay connected with customers and suppliers.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Dart</span>
+            <span class="tech-tag">GetX</span>
+            <span class="tech-tag">ObjectBox</span>
+          </div>
+          <div class="project-links">
+            <a href="/store-management/?ref=portfolio"
+               data-goatcounter-click="portfolio-project-store-management"
+               class="project-link"
+               aria-label="View project">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.store_mangment"
+               data-goatcounter-click="google-play-store-management"
+               class="project-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="Google Play">
+              <i class="fab fa-google-play"></i>
+            </a>
+            <a href="https://github.com/abdulrasol/store_management"
+               data-goatcounter-click="github-store-management"
+               class="project-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="project-card" data-category="mobile">
+        <div class="project-image">
+          <img src="/assets/watt/logo.png" alt="Watt" loading="lazy">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Watt</h3>
+          <p class="project-desc">Experience the future of AI with Watt. Chat with advanced AI, generate stunning images, and manage your files seamlessly in one powerful app.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Dart</span>
+            <span class="tech-tag">Firebase</span>
+          </div>
+          <div class="project-links">
+            <a href="/watt/?ref=portfolio"
+               data-goatcounter-click="portfolio-project-watt"
+               class="project-link"
+               aria-label="View project">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.example.watt"
+               data-goatcounter-click="google-play-watt"
+               class="project-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="Google Play">
+              <i class="fab fa-google-play"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="project-card" data-category="mobile">
+        <div class="project-image">
+          <img src="/logo.png" alt="Spimebook" loading="lazy">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Spimebook</h3>
+          <p class="project-desc">Social network platform with geospatial features. (Coming soon)</p>
+          <div class="project-tech">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Firebase</span>
+          </div>
+          <div class="project-links">
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section (only if data exists) -->
+
+<!-- Contact Section -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Have a project in mind or want to hire me? Send a message and I&#39;ll respond as soon as possible.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Email</h3>
+            <a href="mailto:abdulrsol97@gmail.com">abdulrsol97@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div class="contact-details">
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/9647813639721" target="_blank" rel="noopener">
+              Quick chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Location</h3>
+            <span>Iraq</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New message from portfolio - Abdulrasol Al-Hilo">
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i>
+            Send Message
+          </button>
+
+          <div class="form-status" id="form-status" data-success="Thank you! Your message has been sent successfully." data-error="Something went wrong. Please try again or contact me directly."></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <img src="/logo.png" alt="Abdulrasol Al-Hilo logo" width="36" height="36">
+          <span>Abdulrasol Al-Hilo</span>
+        </a>
+        <p>Building digital products with passion and precision.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a href="mailto:abdulrsol97@gmail.com"><i class="fas fa-envelope"></i> abdulrsol97@gmail.com</a>
+        <a href="https://wa.me/9647813639721" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://github.com/abdulrasol" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Abdulrasol Al-Hilo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/9647813639721?text="
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="/static/js/main.js"></script>
+</body>
 </html>

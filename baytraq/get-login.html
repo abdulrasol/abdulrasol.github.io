@@ -1,55 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Downloading...</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f8fafc;
-            color: #334155;
-            margin: 0;
-            text-align: center;
-        }
-        .container {
-            padding: 2rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
-        a {
-            color: #3b82f6;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downloading Login Configuration...</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/png" href="/assets/baytraq/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --project-primary: #1A237E;
+      --bg: #0B0F1F;
+      --surface: rgba(17, 24, 39, 0.7);
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 48px;
+      max-width: 500px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    }
+    .card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+      margin: 0 auto 24px;
+    }
+    h2 { font-size: 1.5rem; margin-bottom: 16px; }
+    p { color: var(--text-muted); margin-bottom: 24px; line-height: 1.6; }
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, var(--project-primary), #2F578A);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    a:hover { transform: translateY(-2px); }
+    @media (max-width: 480px) {
+      .card { padding: 32px 24px; }
+      h2 { font-size: 1.25rem; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Downloading Login Configuration...</h2>
-        <p>If the download does not start automatically within a few seconds, <br><br><a href="login.json" download="login.json">Click here to download manually</a>.</p>
-    </div>
+  <div class="card">
+    <img src="/assets/baytraq/logo.png" alt="Baytraq">
+    <h2>Downloading Login Configuration...</h2>
+    <p>Your login configuration file will download automatically. If it does not start within a few seconds, use the button below.</p>
+    <a href="login.json" download="login.json">
+      <i class="fas fa-download"></i>
+      Download
+    </a>
+  </div>
 
-    <script>
-        // Automatically trigger the download
-        window.onload = function() {
-            setTimeout(function() {
-                const link = document.createElement('a');
-                link.href = 'login.json';
-                link.download = 'login.json';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }, 500); // slight delay for better UX
-        };
-    </script>
+  <script>
+    window.onload = function() {
+      setTimeout(function() {
+        const link = document.createElement('a');
+        link.href = 'login.json';
+        link.download = 'login.json';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }, 500);
+    };
+  </script>
 </body>
 </html>

@@ -1,0 +1,148 @@
+{
+  "id": "store-management",
+  "site": {
+    "title_en": "Store Management App",
+    "title_ar": "تطبيق إدارة المتجر",
+    "description_en": "Your all-in-one solution for effortless store management. Track inventory, manage invoices, analyze sales, and stay connected with customers and suppliers.",
+    "description_ar": "الحل الشامل لإدارة متجرك بسهولة. تتبع المخزون، إدارة الفواتير، تحليل المبيعات، والبقاء على اتصال مع العملاء والموردين.",
+    "keywords_en": "Store Management, Inventory, Invoices, Sales, Flutter, Business App",
+    "keywords_ar": "إدارة المتجر, المخزون, الفواتير, المبيعات, فلاتر, تطبيق أعمال"
+  },
+  "settings": {
+    "default_lang": "ar",
+    "default_theme": "dark",
+    "primary_color": "#3b82f6",
+    "secondary_color": "#10b981"
+  },
+  "brand": {
+    "name_en": "Store Management",
+    "name_ar": "إدارة المتجر",
+    "tagline_en": "Complete store operations in one app",
+    "tagline_ar": "عمليات المتجر الكاملة في تطبيق واحد",
+    "logo": "/assets/store_mangement/logo.png",
+    "banner": "/assets/store_mangement/cover.png",
+    "favicon": "/assets/store_mangement/logo.png"
+  },
+  "links": {
+    "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.store_mangment",
+    "appStore": null,
+    "github": "https://github.com/abdulrasol/store_management",
+    "facebook": null,
+    "instagram": null,
+    "support_email": "abdulrsol97@gmail.com"
+  },
+  "hero": {
+    "title_en": "Store Management App",
+    "title_ar": "تطبيق إدارة المتجر",
+    "subtitle_en": "Your all-in-one solution for effortless store management. Track inventory, manage invoices, and analyze performance.",
+    "subtitle_ar": "الحل المتكامل لإدارة عملك بسهولة. تتبع المخزون، أصدر الفواتير، وحلل الأرباح في تطبيق واحد قوي يدعم جميع لغاتك.",
+    "cta_en": "Download on Google Play",
+    "cta_ar": "تحميل من Google Play"
+  },
+  "platforms": [
+    "Android",
+    "iOS",
+    "Desktop"
+  ],
+  "category": "business",
+  "featured": false,
+  "technologies": [
+    "Flutter",
+    "Dart",
+    "GetX",
+    "ObjectBox"
+  ],
+  "features": {
+    "title_en": "Key Features",
+    "title_ar": "المميزات الرئيسية",
+    "items": [
+      {
+        "icon": "📦",
+        "title_en": "Inventory Management",
+        "title_ar": "إدارة المخزون",
+        "desc_en": "Track stock in real-time. Manage item availability and receive low-stock alerts.",
+        "desc_ar": "تتبع كميات المنتجات في الوقت الفعلي، مع تنبيهات عند اقتراب نفاذ المخزون."
+      },
+      {
+        "icon": "🧾",
+        "title_en": "Invoice Management",
+        "title_ar": "نظام الفواتير",
+        "desc_en": "Create and issue professional PDF invoices in seconds. Manage billing history effortlessly.",
+        "desc_ar": "أصدر فواتير PDF احترافية في ثوانٍ. تتبع سجلات البيع والديون بسهولة."
+      },
+      {
+        "icon": "💰",
+        "title_en": "Transaction Tracking",
+        "title_ar": "تتبع المعاملات",
+        "desc_en": "Monitor all your sales and payment transactions in one centralized place.",
+        "desc_ar": "راقب جميع المبيعات والمدفوعات والاشتراكات في مكان مركزي واحد."
+      },
+      {
+        "icon": "💸",
+        "title_en": "Expense Management",
+        "title_ar": "إدارة المصاريف",
+        "desc_en": "Track business expenses to maintain better financial control and optimize spending.",
+        "desc_ar": "سجل مصاريف عملك بدقة للتحكم المالي الكامل وتحسين الإنفاق."
+      },
+      {
+        "icon": "👥",
+        "title_en": "Customer & Supplier",
+        "title_ar": "العملاء والموردين",
+        "desc_en": "Maintain organized digital records of all your partners and clients.",
+        "desc_ar": "احتفظ بسجلات رقمية منظمة لجميع شركائك لسهولة الوصول والتواصل."
+      },
+      {
+        "icon": "📊",
+        "title_en": "Profit Analysis",
+        "title_ar": "تحليل السلع والأرباح",
+        "desc_en": "Gain clear insights into your business performance with detailed reports.",
+        "desc_ar": "احصل على رؤى واضحة حول أداء عملك مع تقارير أرباح مفصلة ورسوم بيانية."
+      },
+      {
+        "icon": "📉",
+        "title_en": "Advanced Analytics",
+        "title_ar": "إحصائيات متقدمة",
+        "desc_en": "Interactive charts for Sales, Profits, and Expenses with multiple views.",
+        "desc_ar": "رسوم بيانية تفاعلية للمبيعات والأرباح والمصاريف (أسبوعي، شهري، سنوي)."
+      },
+      {
+        "icon": "☁️",
+        "title_en": "Backup & Restore",
+        "title_ar": "نسخ احتياطي واستعادة",
+        "desc_en": "Securely save your store data and restore it whenever needed.",
+        "desc_ar": "احمِ بياناتك من الفقدان. احفظ بيانات متجرك واستعدها في أي وقت ومكان."
+      },
+      {
+        "icon": "🌍",
+        "title_en": "Multi-Language",
+        "title_ar": "دعم لغات متعددة",
+        "desc_en": "Full support for English, Arabic, Turkish, Persian, and Chinese.",
+        "desc_ar": "التطبيق يدعم العربية، الإنجليزية، التركية، الفارسية، والصينية."
+      }
+    ]
+  },
+  "screenshots": {
+    "title_en": "App Screenshots",
+    "title_ar": "لقطات من الشاشة",
+    "items": [
+      "/assets/store_mangement/screenshots/2.jpg",
+      "/assets/store_mangement/screenshots/1.jpg",
+      "/assets/store_mangement/screenshots/3.jpg",
+      "/assets/store_mangement/screenshots/4.jpg",
+      "/assets/store_mangement/screenshots/5.jpg",
+      "/assets/store_mangement/screenshots/6.jpg",
+      "/assets/store_mangement/screenshots/7.jpg",
+      "/assets/store_mangement/screenshots/8.jpg",
+      "/assets/store_mangement/screenshots/9.jpg",
+      "/assets/store_mangement/screenshots/10.jpg",
+      "/assets/store_mangement/screenshots/11.jpg"
+    ]
+  },
+  "testimonials": [],
+  "privacy": null,
+  "terms": null,
+  "changelog": null,
+  "pricing": null,
+  "purchase_form": null,
+  "get_login": null
+}

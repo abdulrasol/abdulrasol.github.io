@@ -1,0 +1,248 @@
+{
+  "id": "project_id",
+  "site": {
+    "title_en": "App Name - Short Description",
+    "title_ar": "اسم التطبيق - وصف قصير",
+    "description_en": "A professional mobile app built with Flutter for managing your business efficiently.",
+    "description_ar": "تطبيق موبايل احترافي مبني بـ Flutter لإدارة عملك بكفاءة.",
+    "keywords_en": "Flutter, Mobile App, Business, Android, iOS",
+    "keywords_ar": "فلاتر, تطبيق موبايل, أعمال, أندرويد, آيفون"
+  },
+  "settings": {
+    "default_lang": "en",
+    "default_theme": "dark",
+    "primary_color": "#36ADA3",
+    "secondary_color": "#2F578A"
+  },
+  "brand": {
+    "name_en": "App Name",
+    "name_ar": "اسم التطبيق",
+    "tagline_en": "Your smart business companion",
+    "tagline_ar": "رفيقك الذكي لإدارة عملك",
+    "logo": "/assets/project_id/logo.png",
+    "banner": "/assets/project_id/banner.png",
+    "favicon": "/assets/project_id/logo.png"
+  },
+  "links": {
+    "googlePlay": "https://play.google.com/store/apps/details?id=com.example.app",
+    "appStore": null,
+    "github": null,
+    "facebook": null,
+    "instagram": null,
+    "support_email": "support@example.com"
+  },
+  "hero": {
+    "title_en": "Manage Your Business Smarter",
+    "title_ar": "أدر عملك بذكاء",
+    "subtitle_en": "A powerful and easy-to-use solution for tracking sales, inventory, and invoices.",
+    "subtitle_ar": "حل قوي وسهل الاستخدام لتتبع المبيعات والمخزون والفواتير.",
+    "cta_en": "Download on Google Play",
+    "cta_ar": "تحميل من Google Play"
+  },
+  "platforms": ["Android", "iOS", "Desktop"],
+  "category": "business",
+  "featured": false,
+  "technologies": ["Flutter", "Dart", "Firebase"],
+  "features": {
+    "title_en": "Why Choose App Name?",
+    "title_ar": "لماذا تختار اسم التطبيق؟",
+    "items": [
+      {
+        "icon": "📊",
+        "title_en": "Smart Analytics",
+        "title_ar": "تحليلات ذكية",
+        "desc_en": "Get real-time insights into your business performance with beautiful charts.",
+        "desc_ar": "احصل على رؤى فورية حول أداء عملك مع رسوم بيانية جميلة."
+      },
+      {
+        "icon": "☁️",
+        "title_en": "Cloud Sync",
+        "title_ar": "مزامنة سحابية",
+        "desc_en": "Sync your data securely across all your devices.",
+        "desc_ar": "زامن بياناتك بأمان عبر جميع أجهزتك."
+      },
+      {
+        "icon": "🔒",
+        "title_en": "Privacy First",
+        "title_ar": "الخصوصية أولاً",
+        "desc_en": "Your data stays safe and private with end-to-end encryption.",
+        "desc_ar": "بياناتك تبقى آمنة وخاصة مع التشفير من الطرف إلى الطرف."
+      }
+    ]
+  },
+  "screenshots": {
+    "title_en": "App Screenshots",
+    "title_ar": "لقطات من التطبيق",
+    "items": [
+      "/assets/project_id/screenshots/01.jpg",
+      "/assets/project_id/screenshots/02.jpg",
+      "/assets/project_id/screenshots/03.jpg"
+    ]
+  },
+  "testimonials": {
+    "title_en": "What Our Users Say",
+    "title_ar": "آراء المستخدمين",
+    "items": [
+      {
+        "name_en": "Ahmed Ali",
+        "name_ar": "أحمد علي",
+        "role_en": "Supermarket Owner",
+        "role_ar": "صاحب سوبر ماركت",
+        "rating": 5,
+        "text_en": "This app made managing my store so much easier. Highly recommended!",
+        "text_ar": "هذا التطبيق سهل علي إدارة متجري كثيراً. أنصح به بشدة!"
+      }
+    ]
+  },
+  "privacy": {
+    "last_updated": "2026-07-02",
+    "email": "support@example.com",
+    "sections": [
+      {
+        "title_en": "1. Information We Collect",
+        "title_ar": "1. المعلومات التي نجمعها",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "We do not collect any personally identifiable information from our users.",
+            "text_ar": "نحن لا نجمع أي معلومات شخصية قد تؤدي إلى تحديد هوية مستخدمينا."
+          },
+          {
+            "type": "list",
+            "items_en": [
+              "No account required",
+              "No email collection",
+              "No third-party tracking"
+            ],
+            "items_ar": [
+              "لا يحتاج حساب",
+              "لا يتم جمع البريد الإلكتروني",
+              "لا يوجد تتبع من طرف ثالث"
+            ]
+          }
+        ]
+      },
+      {
+        "title_en": "2. Data Storage",
+        "title_ar": "2. تخزين البيانات",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "All your data is stored locally on your device.",
+            "text_ar": "جميع بياناتك مخزنة محلياً على جهازك."
+          }
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "last_updated": "2026-07-02",
+    "sections": [
+      {
+        "title_en": "1. Acceptance of Terms",
+        "title_ar": "1. قبول الشروط",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "By using this app, you agree to these terms of service.",
+            "text_ar": "باستخدامك لهذا التطبيق، فإنك توافق على شروط الخدمة هذه."
+          }
+        ]
+      }
+    ]
+  },
+  "changelog": {
+    "title_en": "Changelog",
+    "title_ar": "سجل التحديثات",
+    "items": [
+      {
+        "version": "1.1.0",
+        "date_en": "July 2026",
+        "date_ar": "يوليو 2026",
+        "tag_en": "Latest ✨",
+        "tag_ar": "أحدث إصدار ✨",
+        "changes_en": [
+          "Added dark mode support",
+          "Improved sync performance",
+          "Fixed reported bugs"
+        ],
+        "changes_ar": [
+          "إضافة دعم الوضع الليلي",
+          "تحسين أداء المزامنة",
+          "إصلاح الأخطاء المبلغ عنها"
+        ]
+      },
+      {
+        "version": "1.0.0",
+        "date_en": "June 2026",
+        "date_ar": "يونيو 2026",
+        "tag_en": "First Release 🎉",
+        "tag_ar": "الإصدار الأول 🎉",
+        "changes_en": [
+          "First official release",
+          "Core features implemented"
+        ],
+        "changes_ar": [
+          "الإصدار الرسمي الأول",
+          "تنفيذ الميزات الأساسية"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title_en": "Simple, Transparent Pricing",
+    "title_ar": "تسعير بسيط وشفاف",
+    "subtitle_en": "Choose the plan that fits your business.",
+    "subtitle_ar": "اختر الخطة التي تناسب عملك.",
+    "note_en": "One-time payment per store.",
+    "note_ar": "دفع لمرة واحدة لكل متجر.",
+    "tiers": [
+      {
+        "id": "free",
+        "name_en": "Free",
+        "name_ar": "مجاني",
+        "price_en": "Free",
+        "price_ar": "مجاناً",
+        "featured": false,
+        "cta_en": "Get Started",
+        "cta_ar": "ابدأ الآن",
+        "features_en": ["Basic features", "Single device"],
+        "features_ar": ["الميزات الأساسية", "جهاز واحد"]
+      },
+      {
+        "id": "pro",
+        "name_en": "Pro",
+        "name_ar": "احترافي",
+        "price_en": "$50",
+        "price_ar": "50 دولار",
+        "featured": true,
+        "cta_en": "Choose Pro",
+        "cta_ar": "اختر الاحترافي",
+        "features_en": ["All features", "Multi-device sync", "Priority support"],
+        "features_ar": ["جميع الميزات", "مزامنة عدة أجهزة", "دعم أولوية"]
+      }
+    ]
+  },
+  "purchase_form": {
+    "title_en": "Request to Purchase",
+    "title_ar": "طلب شراء",
+    "subtitle_en": "Fill out the form below and we will contact you shortly.",
+    "subtitle_ar": "املأ النموذج أدناه وسنتواصل معك قريباً.",
+    "fields": ["fullName", "email", "storeName", "phone", "plan", "message"],
+    "plans": [
+      { "value": "Free", "label_en": "Free", "label_ar": "مجاني" },
+      { "value": "Pro ($50)", "label_en": "Pro ($50)", "label_ar": "احترافي (50$)" }
+    ],
+    "submit_en": "Send Request",
+    "submit_ar": "إرسال الطلب",
+    "note_en": "This opens your email app with the details pre-filled.",
+    "note_ar": "سيفتح هذا تطبيق البريد الإلكتروني الخاص بك مع تفاصيل مملوءة مسبقاً."
+  },
+  "get_login": {
+    "filename": "login.json",
+    "title_en": "Downloading Login Configuration...",
+    "title_ar": "جاري تحميل إعدادات تسجيل الدخول...",
+    "description_en": "Your login configuration file will download automatically. If it does not start within a few seconds, use the button below.",
+    "description_ar": "سيتم تحميل ملف إعدادات تسجيل الدخول تلقائياً. إذا لم يبدأ خلال ثوانٍ قليلة، استخدم الزر أدناه."
+  }
+}

@@ -1,136 +1,196 @@
 <!DOCTYPE html>
-<html :lang="lang" :dir="dir">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ t.pageTitle }} - {{ t.navTerms }}</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>MEAAD - Debt &amp; Installment Manager</title>
+  <meta name="description" content="The easiest and most secure app to manage debts, installments, and subscriptions for your business.">
+  <meta name="keywords" content="Debt Management, Installments, Subscriptions, Google Sheets, Flutter, Business">
+  <meta name="author" content="Abdulrasol Al-Hilo">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#3b82f6">
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
+
+  <!-- Canonical & Alternate Languages -->
+  <link rel="canonical" href="https://abdulrasol.github.io/meaad/terms.html">
+  <link rel="alternate" hreflang="en" href="https://abdulrasol.github.io/meaad/terms.html">
+  <link rel="alternate" hreflang="ar" href="https://abdulrasol.github.io/ar/meaad/terms.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MEAAD - Debt &amp; Installment Manager">
+  <meta property="og:description" content="The easiest and most secure app to manage debts, installments, and subscriptions for your business.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abdulrasol.github.io/meaad/terms.html">
+  <meta property="og:image" content="https://abdulrasol.github.io/assets/meaad/logo.png">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MEAAD - Debt &amp; Installment Manager">
+  <meta name="twitter:description" content="The easiest and most secure app to manage debts, installments, and subscriptions for your business.">
+  <meta name="twitter:image" content="https://abdulrasol.github.io/assets/meaad/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/meaad/logo.png">
+  <link rel="apple-touch-icon" href="/assets/meaad/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Project Colors -->
+  <style>
+    :root {
+      --project-primary: #3b82f6;
+      --project-secondary: #8b5cf6;
+    }
+  </style>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/static/css/project.css">
+
+<script data-goatcounter="https://abdulrasol.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MEAAD",
+    "applicationCategory": "MobileApplication",
+    "operatingSystem": "Android, iOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "The easiest and most secure app to manage debts, installments, and subscriptions for your business.",
+"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meaad",    "image": "https://abdulrasol.github.io/assets/meaad/logo.png"
+  }
+  </script>
 </head>
-<body>
-    <div id="app" v-cloak>
-        <!-- Header -->
-        <header :class="{ 'scrolled': isScrolled }">
-            <div class="nav-container">
-                <a href="index.html" class="logo">
-                    <img src="logo.png" alt="ميعاد Logo">
-                    <span>{{ t.appName }}</span>
-                </a>
-                
-                <!-- Desktop Nav -->
-                <nav class="nav-links desktop-nav">
-                    <a href="index.html">{{ t.navHome }}</a>
-                    <a href="index.html#features">{{ t.navFeatures }}</a>
-                    <a href="index.html#testimonials">{{ t.navTestimonials }}</a>
-                    <a href="privacy.html">{{ t.navPrivacy }}</a>
-                    <a href="terms.html" class="active">{{ t.navTerms }}</a>
-                </nav>
+<body data-lang="en">
 
-                <div class="nav-actions">
-                    <button class="icon-btn" @click="toggleTheme" :title="t.toggleTheme">
-                        <i :class="isDarkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
-                    </button>
-                    <button class="lang-btn" @click="toggleLanguage">
-                        <i class="fas fa-globe"></i> {{ lang === 'ar' ? 'English' : 'العربية' }}
-                    </button>
-                    <button class="mobile-menu-btn" @click="mobileMenuOpen = !mobileMenuOpen">
-                        <i :class="mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
-                    </button>
-                </div>
-            </div>
+  <!-- Header -->
+  <header class="project-header" id="project-header">
+    <div class="container header-inner">
+      <a href="/meaad/terms.html" class="brand">
+        <img src="/assets/meaad/logo.png" alt="MEAAD logo">
+        <span>MEAAD</span>
+      </a>
 
-            <!-- Mobile Nav -->
-            <div class="mobile-nav" :class="{ 'open': mobileMenuOpen }">
-                <a href="index.html" @click="mobileMenuOpen = false">{{ t.navHome }}</a>
-                <a href="index.html#features" @click="mobileMenuOpen = false">{{ t.navFeatures }}</a>
-                <a href="index.html#testimonials" @click="mobileMenuOpen = false">{{ t.navTestimonials }}</a>
-                <a href="privacy.html">{{ t.navPrivacy }}</a>
-                <a href="terms.html">{{ t.navTerms }}</a>
-                <a href="changelogs.html">{{ t.navChangelog }}</a>
-            </div>
-        </header>
+      <a href="/" class="back-link desktop-back">
+        <i class="fas fa-arrow-left"></i>
+        ← Back to Portfolio
+      </a>
 
-        <main>
-            <!-- Content -->
-            <section class="section">
-                <!-- ARABIC CONTENT -->
-                <div v-if="lang === 'ar'" class="content-section glass-panel" style="padding: 3rem;">
-                    <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 0.5rem;">شروط الخدمة</h1>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem;">آخر تحديث: 27 يونيو 2026</p>
-
-                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">1. قبول الشروط</h2>
-                    <p>من خلال الوصول إلى تطبيق ميعاد واستخدامه، فإنك توافق على الالتزام بشروط الخدمة هذه. إذا كنت لا توافق على هذه الشروط، يرجى عدم استخدام خدماتنا.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">2. وصف الخدمة</h2>
-                    <p>ميعاد هو تطبيق لإدارة الدفعات الدورية والمشتركين. لتقديم هذه الخدمات، نستخدم ميزة تسجيل الدخول عبر Google للمصادقة، و Google Sheets لتخزين البيانات. باستخدامك لتطبيق ميعاد، فإنك تفوض التطبيق لإنشاء جداول بيانات Google في حساب Google الخاص بك لتخزين بياناتك ومشاركة هذه الجداول المحددة مع مطور تطبيق ميعاد لأغراض الصيانة وحل المشكلات وتحسين الخدمة. نحن نحتفظ بالحق في تعديل أو إيقاف أي جزء من الخدمة في أي وقت.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">3. مسؤوليات المستخدم</h2>
-                    <p>أنت مسؤول عن الحفاظ على سرية بيانات اعتماد حساب Google الخاص بك وعن جميع الأنشطة التي تحدث تحت حسابك. أنت توافق على عدم استخدام الخدمة لأي غرض غير قانوني أو غير مصرح به.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">4. حدود المسؤولية</h2>
-                    <p>لا يتحمل تطبيق ميعاد أي مسؤولية عن أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو تأديبية ناتجة عن استخدامك للخدمة أو عدم قدرتك على استخدامها.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">5. تغيير الشروط</h2>
-                    <p>نحتفظ بالحق في تحديث شروط الخدمة هذه في أي وقت. استمرارك في استخدام الخدمة بعد أي تغييرات يشكل قبولاً للشروط الجديدة.</p>
-                </div>
-
-                <!-- ENGLISH CONTENT -->
-                <div v-else class="content-section glass-panel" style="padding: 3rem;">
-                    <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 0.5rem;">Terms of Service</h1>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Last updated: June 27, 2026</p>
-
-                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">1. Acceptance of Terms</h2>
-                    <p>By accessing and using MEAAD, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">2. Description of Service</h2>
-                    <p>MEAAD is a periodic payment and subscriber management application. To provide these services, we utilize Google Login for authentication and Google Sheets for data storage. By using MEAAD, you authorize the application to create Google Sheets in your Google account to store your data and to share these specific sheets with the MEAAD developer for the purposes of maintenance, troubleshooting, and service improvement. We reserve the right to modify or discontinue any part of the service at any time.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">3. User Responsibilities</h2>
-                    <p>You are responsible for maintaining the confidentiality of your Google account credentials and for all activities that occur under your account. You agree not to use the service for any illegal or unauthorized purpose.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">4. Limitation of Liability</h2>
-                    <p>MEAAD shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;">5. Changes to Terms</h2>
-                    <p>We reserve the right to update these Terms of Service at any time. Continued use of the service after any changes constitutes acceptance of the new terms.</p>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="logo.png" alt="ميعاد" class="footer-logo">
-                    <p>{{ t.footerDesc }}</p>
-                </div>
-                <div class="footer-links">
-                    <h4>{{ t.quickLinks }}</h4>
-                    <a href="privacy.html">{{ t.navPrivacy }}</a>
-                    <a href="terms.html">{{ t.navTerms }}</a>
-                    <a href="changelogs.html">{{ t.navChangelog }}</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>{{ t.contactUs }}</h4>
-                    <a href="mailto:meaad.application@gmail.com"><i class="fas fa-envelope"></i> meaad.application@gmail.com</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 {{ t.appName }}. {{ t.allRights }}</p>
-            </div>
-        </footer>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="/ar/meaad/" class="lang-toggle" aria-label="Switch to Arabic">
+          <i class="fas fa-globe"></i>
+          <span>العربية</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
 
-    <!-- Init App -->
-    <script src="js/app.js"></script>
-    <script>
-        if (window.location.hash.includes("hideappbar")) {
-            const style = document.createElement('style');
-            style.innerHTML = 'header { display: none !important; } footer { display: none !important; } main { padding-top: 2rem !important; }';
-            document.head.appendChild(style);
-        }
-    </script>
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="/">← Back to Portfolio</a>
+      <a href="/meaad/terms.html">Home</a>
+<a href="/meaad/privacy_policy/">Privacy Policy</a><a href="/meaad/terms.html">Terms of Service</a><a href="/meaad/changelogs.html">Changelog</a>      <a href="/ar/meaad/">العربية</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+<section class="content-page">
+  <div class="container">
+    <div class="content-container">
+      <div class="content-header">
+        <img src="/assets/meaad/logo.png" alt="MEAAD" class="content-logo">
+        <h1>Terms of Service</h1>
+        <p class="app-name">MEAAD</p>
+        <p class="date">Last updated: 2026-06-27</p>
+      </div>
+
+      <div class="content-section">
+        <h2>1. Acceptance of Terms</h2>
+          <p>By accessing and using MEAAD, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
+      </div>
+      <div class="content-section">
+        <h2>2. Description of Service</h2>
+          <p>MEAAD is a periodic payment and subscriber management application. To provide these services, we utilize Google Login for authentication and Google Sheets for data storage. By using MEAAD, you authorize the application to create Google Sheets in your Google account to store your data and to share these specific sheets with the MEAAD developer for the purposes of maintenance, troubleshooting, and service improvement. We reserve the right to modify or discontinue any part of the service at any time.</p>
+      </div>
+      <div class="content-section">
+        <h2>3. User Responsibilities</h2>
+          <p>You are responsible for maintaining the confidentiality of your Google account credentials and for all activities that occur under your account. You agree not to use the service for any illegal or unauthorized purpose.</p>
+      </div>
+      <div class="content-section">
+        <h2>4. Limitation of Liability</h2>
+          <p>MEAAD shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service.</p>
+      </div>
+      <div class="content-section">
+        <h2>5. Changes to Terms</h2>
+          <p>We reserve the right to update these Terms of Service at any time. Continued use of the service after any changes constitutes acceptance of the new terms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="project-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/meaad/terms.html" class="brand">
+          <img src="/assets/meaad/logo.png" alt="MEAAD" width="36" height="36">
+          <span>MEAAD</span>
+        </a>
+        <p>Your ultimate app for managing debts and installments</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Legal</h4>
+<a href="/meaad/privacy_policy/">Privacy Policy</a><a href="/meaad/terms.html">Terms of Service</a><a href="/meaad/changelogs.html">Changelog</a>      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a href="mailto:meaad.application@gmail.com"><i class="fas fa-envelope"></i> meaad.application@gmail.com</a>
+        <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.meaad" data-goatcounter-click="footer-google-play-meaad" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 MEAAD. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/9647813639721?text=Hello%20Abdulrasol%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="/static/js/project.js"></script>
 </body>
 </html>

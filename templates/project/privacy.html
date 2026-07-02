@@ -1,0 +1,55 @@
+{% extends "project/base.html" %}
+
+{% block content %}
+
+<section class="content-page">
+  <div class="container">
+    <div class="content-container">
+      <div class="content-header">
+        <img src="{{ brand.logo }}" alt="{{ brand.name }}" class="content-logo">
+        <h1>{{ nav.privacy }}</h1>
+        <p class="app-name">{{ brand.name }}</p>
+        {% if privacy.last_updated %}
+        <p class="date">{{ nav.last_updated }}: {{ privacy.last_updated }}</p>
+        {% endif %}
+      </div>
+
+      {% for section in privacy.sections %}
+      <div class="content-section">
+        <h2>{{ section.title }}</h2>
+        {% for block in section.blocks %}
+          {% if block.type == 'paragraph' %}
+          <p>{{ block.text }}</p>
+          {% elif block.type == 'list' %}
+          <ul>
+            {% for item in block['items'] %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endfor %}
+
+      {% if analytics and analytics.enabled %}
+      <div class="content-section">
+        <h2>{{ 'Analytics' if lang == 'en' else 'التحليلات' }}</h2>
+        {% if analytics.provider == 'goatcounter' %}
+        <p>{{ 'We use GoatCounter to collect anonymous traffic statistics (such as page views and referral sources). GoatCounter does not use cookies and does not collect any personally identifiable information.' if lang == 'en' else 'نستخدم GoatCounter لجمع إحصائيات حركة المرور بشكل مجهول (مثل عدد المشاهدات ومصادر الزيارات). GoatCounter لا يستخدم الكوكيز ولا يجمع أي معلومات شخصية قد تؤدي إلى تحديد الهوية.' }}</p>
+        {% else %}
+        <p>{{ 'We use analytics tools to collect anonymous traffic statistics to improve our services.' if lang == 'en' else 'نستخدم أدوات تحليلية لجمع إحصائيات حركة المرور بشكل مجهون لتحسين خدماتنا.' }}</p>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% if privacy.email %}
+      <div class="content-section">
+        <h2>{{ nav.contact_us }}</h2>
+        <p>{{ nav.contact_privacy_text }}: <a href="mailto:{{ privacy.email }}">{{ privacy.email }}</a></p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

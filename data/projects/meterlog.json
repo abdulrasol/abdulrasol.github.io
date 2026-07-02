@@ -1,0 +1,209 @@
+{
+  "id": "meterlog",
+  "site": {
+    "title_en": "Smart Multimeter Reader | MeterLog",
+    "title_ar": "قارئ الـ Multimeter الذكي | ميتر لوغ",
+    "description_en": "AI-powered multimeter reader with OCR recognition, scheduled capture, and professional Excel/CSV export. Works 100% offline.",
+    "description_ar": "قارئ Multimeter ذكي بالذكاء الاصطناعي مع التعرف الضوئي، الالتقاط المجدول، وتصدير احترافي بصيغ Excel/CSV. يعمل 100% بدون إنترنت.",
+    "keywords_en": "Multimeter, OCR, AI, Flutter, Android, iOS, MeterLog, Offline",
+    "keywords_ar": "مولتيميتر, قارئ, ذكاء اصطناعي, فلاتر, أندرويد, آيفون, ميتر لوغ, بدون إنترنت"
+  },
+  "settings": {
+    "default_lang": "ar",
+    "default_theme": "dark",
+    "primary_color": "#00E5FF",
+    "secondary_color": "#3b82f6"
+  },
+  "brand": {
+    "name_en": "MeterLog",
+    "name_ar": "ميتر لوغ",
+    "tagline_en": "Smart multimeter readings with AI",
+    "tagline_ar": "قراءات Multimeter ذكية بالذكاء الاصطناعي",
+    "logo": "/assets/meter_log/logo.png",
+    "banner": "/assets/poster.png",
+    "favicon": "/assets/meter_log/logo.png"
+  },
+  "links": {
+    "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log",
+    "appStore": null,
+    "github": null,
+    "facebook": null,
+    "instagram": null,
+    "support_email": "abdulrsol97@gmail.com"
+  },
+  "hero": {
+    "title_en": "Smart Multimeter Reader",
+    "title_ar": "قارئ الـ Multimeter الذكي",
+    "subtitle_en": "The ultimate AI-powered tool for engineers and technicians. Automatically recognize readings, log data offline, and export professional reports.",
+    "subtitle_ar": "أول تطبيق ذكاء اصطناعي لقراءة بيانات أجهزة الـ Multimeter تلقائياً عبر الكاميرا. دقة عالية، أرشفة ذكية، وتقارير Excel فورية.",
+    "cta_en": "Download on Google Play",
+    "cta_ar": "تحميل من Google Play"
+  },
+  "platforms": ["Android", "iOS"],
+  "category": "ai",
+  "featured": true,
+  "technologies": ["Flutter", "Dart", "AI/OCR", "Isar"],
+  "features": {
+    "title_en": "Why Meter Log?",
+    "title_ar": "لماذا Meter Log؟",
+    "items": [
+      {
+        "icon": "🤖",
+        "title_en": "AI-Powered OCR",
+        "title_ar": "ذكاء اصطناعي OCR",
+        "desc_en": "Advanced recognition of numbers and units under various lighting conditions.",
+        "desc_ar": "تعرف تلقائي على الأرقام والوحدات بدقة فائقة بمجرد توجيه الكاميرا."
+      },
+      {
+        "icon": "📸",
+        "title_en": "Scheduled Capture",
+        "title_ar": "التقاط مجدول",
+        "desc_en": "Automatically record readings at set intervals, even in the background.",
+        "desc_ar": "إمكانية برمجة التطبيق لالتقاط القراءات تلقائياً كل فترة زمنية محددة."
+      },
+      {
+        "icon": "📁",
+        "title_en": "Excel / CSV Export",
+        "title_ar": "تصدير Excel/CSV",
+        "desc_en": "Export your entire history to high-quality Excel and CSV files instantly.",
+        "desc_ar": "حول قراءاتك إلى تقارير احترافية بضغطة زر واحدة لمشاركتها مع فريقك."
+      },
+      {
+        "icon": "🔒",
+        "title_en": "Privacy First",
+        "title_ar": "خصوصية تامة",
+        "desc_en": "Works 100% offline. No accounts, no servers, no data collection.",
+        "desc_ar": "يعمل بدون إنترنت تماماً، جميع بياناتك وصورك محفوظة محلياً على جهازك فقط."
+      }
+    ]
+  },
+  "screenshots": {
+    "title_en": "App Screenshots",
+    "title_ar": "نظرة على التطبيق",
+    "items": [
+      "/assets/meter_log/screenshots/01.jpg",
+      "/assets/meter_log/screenshots/02.jpg",
+      "/assets/meter_log/screenshots/03.jpg",
+      "/assets/meter_log/screenshots/04.jpg",
+      "/assets/meter_log/screenshots/05.jpg",
+      "/assets/meter_log/screenshots/06.jpg",
+      "/assets/meter_log/screenshots/07.jpg"
+    ]
+  },
+  "testimonials": [],
+  "privacy": {
+    "last_updated": "2026-03-27",
+    "email": "abdulrsol97@gmail.com",
+    "sections": [
+      {
+        "title_en": "1. Information Collection and Use",
+        "title_ar": "1. جمع المعلومات واستخدامها",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Smart Multimeter Reader (the \"App\") is developed by Abdulrasol (\"we\", \"us\", or \"our\"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our App.",
+            "text_ar": "تم تطوير تطبيق Smart Multimeter Reader (\"التطبيق\") بواسطة Abdulrasol (\"نحن\"). تشرح هذه الصفحة سياساتنا بخصوص جمع واستخدام والكشف عن البيانات الشخصية عند استخدامك لتطبيقنا."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "We do not collect any personally identifiable information from our users. The App is designed to recognize and log multimeter readings using AI technology completely offline.",
+            "text_ar": "نحن لا نجمع أي معلومات شخصية قد تؤدي إلى تحديد هوية مستخدمينا. تم تصميم التطبيق للتعرف على قراءات Multimeter وتسجيلها باستخدام تقنية الذكاء الاصطناعي بشكل كامل بدون إنترنت."
+          }
+        ]
+      },
+      {
+        "title_en": "2. Locally Stored Data",
+        "title_ar": "2. البيانات المخزنة محلياً",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "The App stores your captured readings, dates, times, and units locally on your device's secure database. This data remains on your device and is not transmitted to our servers or any third parties.",
+            "text_ar": "يخزن التطبيق قراءاتك الملتقطة والتواريخ والأوقات والوحدات محلياً في قاعدة بيانات آمنة على جهازك. تبقى هذه البيانات على جهازك ولا يتم إرسالها إلى خوادمنا أو أي جهات خارجية."
+          }
+        ]
+      },
+      {
+        "title_en": "3. Camera Access",
+        "title_ar": "3. الوصول إلى الكاميرا",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "The App requires camera access to capture images of your multimeter display for AI-powered OCR recognition. Images are processed locally and are not uploaded to the internet.",
+            "text_ar": "يتطلب التطبيق الوصول إلى الكاميرا لالتقاط صور لشاشة Multimeter الخاصة بك للتعرف الضوئي المدعوم بالذكاء الاصطناعي. تتم معالجة الصور محلياً ولا يتم رفعها إلى الإنترنت."
+          }
+        ]
+      },
+      {
+        "title_en": "4. Storage Access",
+        "title_ar": "4. الوصول إلى التخزين",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "The App requires storage access to save exported Excel (.xlsx) and CSV files to your device's Documents folder at your request.",
+            "text_ar": "يتطلب التطبيق الوصول إلى التخزين لحفظ ملفات Excel (.xlsx) و CSV المصدرة إلى مجلد Documents على جهازك بناءً على طلبك."
+          }
+        ]
+      },
+      {
+        "title_en": "5. Third-Party Services",
+        "title_ar": "5. خدمات الطرف الثالث",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "The App works completely offline and does not use third-party analytics or tracking services that collect personal data.",
+            "text_ar": "يعمل التطبيق بشكل كامل بدون إنترنت ولا يستخدم خدمات تحليلات أو تتبع من طرف ثالث تجمع بيانات شخصية."
+          }
+        ]
+      },
+      {
+        "title_en": "6. Children's Privacy",
+        "title_ar": "6. خصوصية الأطفال",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Our App does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.",
+            "text_ar": "تطبيقنا لا يستهدف أي شخص under سن 13 عاماً. نحن لا نجمع عن علم أي معلومات شخصية من الأطفال under سن 13."
+          }
+        ]
+      },
+      {
+        "title_en": "7. Responsibilities",
+        "title_ar": "7. المسؤوليات",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Users are responsible for the physical security of their device and the data stored within the App.",
+            "text_ar": "المستخدمون مسؤولون عن الأمن الفيزيائي لأجهزتهم والبيانات المخزنة داخل التطبيق."
+          }
+        ]
+      },
+      {
+        "title_en": "8. Changes to This Privacy Policy",
+        "title_ar": "8. التغييرات على سياسة الخصوصية",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.",
+            "text_ar": "قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. ننصحك بمراجعة هذه الصفحة دورياً لأي تغييرات. تسري التغييرات على سياسة الخصوصية هذه عند نشرها على هذه الصفحة."
+          }
+        ]
+      },
+      {
+        "title_en": "9. Contact Us",
+        "title_ar": "9. اتصل بنا",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "If you have any questions about this Privacy Policy, please contact us at:",
+            "text_ar": "إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى التواصل معنا على:"
+          }
+        ]
+      }
+    ]
+  },
+  "terms": null,
+  "changelog": null,
+  "pricing": null,
+  "purchase_form": null,
+  "get_login": null
+}

@@ -1,0 +1,380 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-text">
+      <span class="hero-badge">{{ hero.badge }}</span>
+      <h1 class="hero-title">
+        {{ hero.headline }}
+        <span class="gradient-text">{{ hero.highlight }}</span>
+      </h1>
+      <p class="hero-subtitle">{{ hero.subtitle }}</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i>
+          {{ hero.cta_primary }}
+        </a>
+        <a href="{{ '/resume.html' if lang == 'en' else '/ar/resume.html' }}" class="btn btn-secondary">
+          <i class="fas fa-file-alt"></i>
+          {{ hero.cta_secondary }}
+        </a>
+      </div>
+      <div class="hero-social">
+        {% if personal.social.github %}
+        <a href="{{ personal.social.github }}" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        {% endif %}
+        {% if personal.social.linkedin %}
+        <a href="{{ personal.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        {% endif %}
+        {% if personal.social.play_store %}
+        <a href="{{ personal.social.play_store }}" target="_blank" rel="noopener" aria-label="Google Play">
+          <i class="fab fa-google-play"></i>
+        </a>
+        {% endif %}
+        {% if personal.social.facebook %}
+        <a href="{{ personal.social.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        {% endif %}
+        {% if personal.social.instagram %}
+        <a href="{{ personal.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <div class="image-frame">
+        <img src="{{ personal.photo }}" alt="{{ personal.name }}" loading="eager">
+        <div class="image-glow"></div>
+      </div>
+      <div class="floating-card card-1">
+        <i class="fas fa-mobile-alt"></i>
+        <span>Flutter</span>
+      </div>
+      <div class="floating-card card-2">
+        <i class="fas fa-globe"></i>
+        <span>Django</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ about.title }}</span>
+      <h2 class="section-title">{{ about.title }}</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="lead">{{ about.text }}</p>
+        <div class="about-actions">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>
+            {{ nav.contact }}
+          </a>
+        </div>
+      </div>
+
+      <div class="about-stats">
+        {% for stat in about.stats %}
+        <div class="stat-card">
+          <span class="stat-value">{{ stat.value }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="section skills" id="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ skills.title }}</span>
+      <h2 class="section-title">{{ skills.title }}</h2>
+      <p class="section-subtitle">{{ skills.subtitle }}</p>
+    </div>
+
+    <div class="skills-grid">
+      {% for category in skills.categories %}
+      <div class="skill-category">
+        <h3 class="category-title">{{ category.name }}</h3>
+        <div class="skill-items">
+          {% for item in category.skills %}
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">{{ item.name }}</span>
+              <span class="skill-level">{{ item.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: {{ item.level }}%"></div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section (only if data exists) -->
+{% if experience and experience|length > 0 %}
+<section class="section experience" id="experience">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ nav.experience }}</span>
+      <h2 class="section-title">{{ nav.experience }}</h2>
+    </div>
+
+    <div class="timeline">
+      {% for job in experience %}
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <span class="timeline-period">{{ job.period }}</span>
+          <h3 class="timeline-role">{{ job.role }}</h3>
+          <span class="timeline-company">{{ job.company }}</span>
+          <p>{{ job.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Projects Section -->
+<section class="section projects" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ projects.title }}</span>
+      <h2 class="section-title">{{ projects.title }}</h2>
+      <p class="section-subtitle">{{ projects.subtitle }}</p>
+    </div>
+
+    <div class="project-filters" role="tablist" aria-label="Project filters">
+      <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+        {{ projects.filter_all }}
+      </button>
+      <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false">
+        {{ projects.filter_mobile }}
+      </button>
+      <button class="filter-btn" data-filter="business" role="tab" aria-selected="false">
+        {{ projects.filter_business }}
+      </button>
+      <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">
+        {{ projects.filter_ai }}
+      </button>
+    </div>
+
+    <div class="projects-grid">
+      {% for project in projects.list %}
+      <article class="project-card" data-category="{{ project.category }}">
+        <div class="project-image">
+          <img src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+          {% if project.featured %}
+          <span class="project-badge">{{ projects.featured_badge }}</span>
+          {% endif %}
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-desc">{{ project.desc }}</p>
+          <div class="project-tech">
+            {% for tech in project.technologies %}
+            <span class="tech-tag">{{ tech }}</span>
+            {% endfor %}
+          </div>
+          <div class="project-links">
+            {% set project_id = project.id or project.title | lower | replace(' ', '-') %}
+            {% if project.links.page %}
+            <a href="{{ project.links.page }}?ref=portfolio"
+               data-goatcounter-click="portfolio-project-{{ project_id }}"
+               class="project-link"
+               aria-label="View project">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            {% endif %}
+            {% if project.links.googlePlay %}
+            <a href="{{ project.links.googlePlay }}"
+               data-goatcounter-click="google-play-{{ project_id }}"
+               class="project-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="Google Play">
+              <i class="fab fa-google-play"></i>
+            </a>
+            {% endif %}
+            {% if project.links.github %}
+            <a href="{{ project.links.github }}"
+               data-goatcounter-click="github-{{ project_id }}"
+               class="project-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            {% endif %}
+            {% if project.links.facebook %}
+            <a href="{{ project.links.facebook }}"
+               data-goatcounter-click="facebook-{{ project_id }}"
+               class="project-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            {% endif %}
+            {% if project.links.instagram %}
+            <a href="{{ project.links.instagram }}"
+               data-goatcounter-click="instagram-{{ project_id }}"
+               class="project-link"
+               target="_blank"
+               rel="noopener"
+               aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section (only if data exists) -->
+{% if testimonials and testimonials|length > 0 %}
+<section class="section testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ nav.testimonials }}</span>
+      <h2 class="section-title">{{ nav.testimonials }}</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      {% for testimonial in testimonials %}
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          {% for n in range(5) %}
+          <i class="fas fa-star {% if n < testimonial.rating %}active{% endif %}"></i>
+          {% endfor %}
+        </div>
+        <p class="testimonial-text">"{{ testimonial.text }}"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">{{ testimonial.name[0] }}</div>
+          <div class="author-info">
+            <h4>{{ testimonial.name }}</h4>
+            <span>{{ testimonial.role }}</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Contact Section -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ contact.title }}</span>
+      <h2 class="section-title">{{ contact.title }}</h2>
+      <p class="section-subtitle">{{ contact.subtitle }}</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h3>{{ contact.info.email_title }}</h3>
+            <a href="mailto:{{ personal.email }}">{{ personal.email }}</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div class="contact-details">
+            <h3>{{ contact.info.whatsapp_title }}</h3>
+            <a href="https://wa.me/{{ personal.whatsapp }}" target="_blank" rel="noopener">
+              {{ contact.info.whatsapp_desc }}
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-details">
+            <h3>{{ contact.info.location_title }}</h3>
+            <span>{{ personal.location }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <form class="contact-form" id="contact-form" action="{{ contact.form.endpoint }}" method="POST">
+          <input type="hidden" name="access_key" value="{{ contact.form.access_key }}">
+          <input type="hidden" name="subject" value="New message from portfolio - {{ personal.name }}">
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">{{ contact.form.name_label }}</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">{{ contact.form.email_label }}</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">{{ contact.form.subject_label }}</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">{{ contact.form.message_label }}</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i>
+            {{ contact.form.submit }}
+          </button>
+
+          <div class="form-status" id="form-status" data-success="{{ contact.form.success }}" data-error="{{ contact.form.error }}"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

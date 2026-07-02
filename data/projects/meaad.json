@@ -1,0 +1,346 @@
+{
+  "id": "meaad",
+  "site": {
+    "title_en": "MEAAD - Debt & Installment Manager",
+    "title_ar": "ميعاد - إدارة الديون والأقساط",
+    "description_en": "The easiest and most secure app to manage debts, installments, and subscriptions for your business.",
+    "description_ar": "التطبيق الأسهل والأكثر أماناً لإدارة الديون والأقساط والاشتراكات لعملك التجاري.",
+    "keywords_en": "Debt Management, Installments, Subscriptions, Google Sheets, Flutter, Business",
+    "keywords_ar": "إدارة الديون, أقساط, اشتراكات, جداول Google, فلاتر, أعمال"
+  },
+  "settings": {
+    "default_lang": "ar",
+    "default_theme": "dark",
+    "primary_color": "#3b82f6",
+    "secondary_color": "#8b5cf6"
+  },
+  "brand": {
+    "name_en": "MEAAD",
+    "name_ar": "ميعاد",
+    "tagline_en": "Your ultimate app for managing debts and installments",
+    "tagline_ar": "تطبيقك الأمثل لإدارة الديون والأقساط",
+    "logo": "/assets/meaad/logo.png",
+    "banner": "/assets/meaad/banar.png",
+    "favicon": "/assets/meaad/logo.png"
+  },
+  "links": {
+    "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meaad",
+    "appStore": null,
+    "github": null,
+    "facebook": null,
+    "instagram": null,
+    "support_email": "meaad.application@gmail.com"
+  },
+  "hero": {
+    "title_en": "Your ultimate app for managing <span class=\"highlight\">Debts &amp; Installments</span>",
+    "title_ar": "تطبيقك الأمثل لإدارة <span class=\"highlight\">الديون والأقساط</span>",
+    "subtitle_en": "MEAAD allows businesses and individuals to track monthly subscriptions, periodic installments, and accumulated debts seamlessly.",
+    "subtitle_ar": "يسمح ميعاد للشركات والأفراد بتتبع الاشتراكات الشهرية، الأقساط الدورية، والديون المتراكمة بكل سهولة وسلاسة.",
+    "cta_en": "GET IT ON Google Play",
+    "cta_ar": "احصل عليه من Google Play"
+  },
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "category": "business",
+  "featured": true,
+  "technologies": [
+    "Flutter",
+    "Dart",
+    "Google Sheets",
+    "Google Drive"
+  ],
+  "features": {
+    "title_en": "MEAAD Features",
+    "title_ar": "مميزات تطبيق ميعاد",
+    "items": [
+      {
+        "icon": "🔔",
+        "title_en": "Smart Notifications",
+        "title_ar": "إشعارات ذكية",
+        "desc_en": "Automatic reminders for due dates for you and your customers to avoid delays.",
+        "desc_ar": "تذكير تلقائي بمواعيد الدفع والأقساط لك وللزبون لتجنب التأخير."
+      },
+      {
+        "icon": "📄",
+        "title_en": "PDF Reports",
+        "title_ar": "تقارير PDF",
+        "desc_en": "Generate detailed and professional financial PDF reports with one click.",
+        "desc_ar": "توليد تقارير مالية مفصلة واحترافية بصيغة PDF بضغطة زر."
+      },
+      {
+        "icon": "🔳",
+        "title_en": "Digital QR Portal",
+        "title_ar": "بوابة رقمية بالـ QR",
+        "desc_en": "Customers can scan their QR code to track their balance and updates instantly.",
+        "desc_ar": "يستطيع الزبون مسح الكود الخاص به لمتابعة رصيده وتحديثاته."
+      },
+      {
+        "icon": "☁️",
+        "title_en": "Secure Sync",
+        "title_ar": "مزامنة آمنة",
+        "desc_en": "Data is safely stored in your own personal Google Drive account as Google Sheets.",
+        "desc_ar": "بياناتك محفوظة بشكل آمن في حسابك الشخصي على Google Drive على شكل جداول."
+      },
+      {
+        "icon": "🔐",
+        "title_en": "App Lock",
+        "title_ar": "قفل التطبيق",
+        "desc_en": "Protect the app with Biometrics or Passcode to secure your accounts.",
+        "desc_ar": "حماية التطبيق بالبصمة أو رمز المرور لضمان خصوصية حساباتك."
+      },
+      {
+        "icon": "📶",
+        "title_en": "Offline Mode",
+        "title_ar": "يعمل بدون إنترنت",
+        "desc_en": "Add accounts offline, and they will sync automatically later.",
+        "desc_ar": "أضف زبائنك وحساباتك حتى بدون إنترنت، وستتم المزامنة لاحقاً."
+      }
+    ]
+  },
+  "screenshots": {
+    "title_en": "App Screenshots",
+    "title_ar": "لقطات من التطبيق",
+    "items": [
+      "/assets/meaad/screenshots/sc0.png",
+      "/assets/meaad/screenshots/sc1.png",
+      "/assets/meaad/screenshots/sc2.png",
+      "/assets/meaad/screenshots/sc3.png",
+      "/assets/meaad/screenshots/sc4.png",
+      "/assets/meaad/screenshots/sc5.png",
+      "/assets/meaad/screenshots/sc6.png",
+      "/assets/meaad/screenshots/sc7.png",
+      "/assets/meaad/screenshots/sc8.png",
+      "/assets/meaad/screenshots/sc9.png"
+    ]
+  },
+  "testimonials": {
+    "title_en": "What Our Clients Say",
+    "title_ar": "ماذا يقول عملاؤنا",
+    "items": [
+      {
+        "name_en": "Ahmed Ali",
+        "name_ar": "أحمد علي",
+        "role_en": "Supermarket Owner",
+        "role_ar": "صاحب سوبر ماركت",
+        "rating": 5,
+        "text_en": "The app made bookkeeping so much easier, and the best feature is data security in Drive.",
+        "text_ar": "التطبيق سهل عليّ الكثير من الحسابات الدفترية، وأفضل ميزة هي الأمان وحفظ البيانات في درايف."
+      },
+      {
+        "name_en": "Mohamed Qasim",
+        "name_ar": "محمد قاسم",
+        "role_en": "Wholesaler",
+        "role_ar": "تاجر جملة",
+        "rating": 5,
+        "text_en": "Reports and smart notifications ensure I never miss a debt. Deserves 5 stars.",
+        "text_ar": "التقارير والإشعارات الذكية خلتني ما أنسى أي ديون. تطبيق يستحق 5 نجوم."
+      }
+    ]
+  },
+  "privacy": {
+    "last_updated": "2026-06-27",
+    "email": "meaad.application@gmail.com",
+    "sections": [
+      {
+        "title_en": "1. Information We Collect",
+        "title_ar": "1. المعلومات التي نجمعها",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "When you use MEAAD, we may collect certain information from your Google account to provide our services, including:",
+            "text_ar": "عند استخدام تطبيق ميعاد، قد نقوم بجمع بعض المعلومات من حساب Google الخاص بك لتقديم خدماتنا، بما في ذلك:"
+          },
+          {
+            "type": "list",
+            "items_en": [
+              "Basic profile information via Google Login",
+              "Email address",
+              "Access to your Google Sheets to store and manage your data"
+            ],
+            "items_ar": [
+              "معلومات الملف الشخصي الأساسية عبر تسجيل الدخول بحساب Google",
+              "عنوان البريد الإلكتروني",
+              "الوصول إلى جداول بيانات Google (Google Sheets) الخاصة بك لتخزين وإدارة بياناتك"
+            ]
+          }
+        ]
+      },
+      {
+        "title_en": "2. How We Use Your Information",
+        "title_ar": "2. كيف نستخدم معلوماتك",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "We use the information we collect to:",
+            "text_ar": "نحن نستخدم المعلومات التي نجمعها من أجل:"
+          },
+          {
+            "type": "list",
+            "items_en": [
+              "Provide, maintain, and improve our periodic payment and subscriber management services",
+              "Communicate with you regarding updates or support",
+              "Ensure the security of your account"
+            ],
+            "items_ar": [
+              "توفير وصيانة وتحسين خدماتنا لإدارة المدفوعات الدورية وإدارة المشتركين",
+              "التواصل معك بخصوص التحديثات أو الدعم الفني",
+              "ضمان أمان حسابك"
+            ]
+          }
+        ]
+      },
+      {
+        "title_en": "3. Data Storage and Protection (Google Drive)",
+        "title_ar": "3. تخزين البيانات وحمايتها (Google Drive)",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "MEAAD puts your data completely under your control. All subscriber and payment data is stored directly in your personal Google Drive account as a Google Sheet. The app requests access to Google Drive exclusively to create, read, and modify its own data file within your account to provide the cloud synchronization feature. The app developer has no access to your data, and it is never sent to any external servers. You are the sole owner of your data and we do not sell or share it with any third parties.",
+            "text_ar": "تطبيق ميعاد يضع بياناتك تحت سيطرتك الكاملة. جميع بيانات المشتركين والمدفوعات يتم تخزينها مباشرة في حسابك الشخصي على Google Drive في شكل ملفات Google Sheets. يطلب التطبيق صلاحية الوصول إلى Google Drive حصراً لإنشاء وقراءة وتعديل ملف البيانات الخاص بالتطبيق داخل حسابك لتوفير ميزة المزامنة. مطور التطبيق لا يملك أي صلاحية للوصول إلى بياناتك، ولا يتم إرسالها إلى أي خوادم خارجية. أنت المالك الوحيد لبياناتك ونحن لا نبيعها أو نشاركها مع أي جهة خارجية."
+          }
+        ]
+      },
+      {
+        "title_en": "4. Data Protection",
+        "title_ar": "4. حماية البيانات",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.",
+            "text_ar": "نحن نتخذ الإجراءات الأمنية المناسبة لحماية معلوماتك الشخصية من الوصول غير المصرح به أو التعديل أو الإفصاح أو التدمير."
+          }
+        ]
+      },
+      {
+        "title_en": "5. Contact Us",
+        "title_ar": "5. تواصل معنا",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "If you have any questions about this Privacy Policy, please contact us at:",
+            "text_ar": "إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى التواصل معنا عبر البريد الإلكتروني:"
+          }
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "last_updated": "2026-06-27",
+    "sections": [
+      {
+        "title_en": "1. Acceptance of Terms",
+        "title_ar": "1. قبول الشروط",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "By accessing and using MEAAD, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.",
+            "text_ar": "من خلال الوصول إلى تطبيق ميعاد واستخدامه، فإنك توافق على الالتزام بشروط الخدمة هذه. إذا كنت لا توافق على هذه الشروط، يرجى عدم استخدام خدماتنا."
+          }
+        ]
+      },
+      {
+        "title_en": "2. Description of Service",
+        "title_ar": "2. وصف الخدمة",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "MEAAD is a periodic payment and subscriber management application. To provide these services, we utilize Google Login for authentication and Google Sheets for data storage. By using MEAAD, you authorize the application to create Google Sheets in your Google account to store your data and to share these specific sheets with the MEAAD developer for the purposes of maintenance, troubleshooting, and service improvement. We reserve the right to modify or discontinue any part of the service at any time.",
+            "text_ar": "ميعاد هو تطبيق لإدارة الدفعات الدورية والمشتركين. لتقديم هذه الخدمات، نستخدم ميزة تسجيل الدخول عبر Google للمصادقة، و Google Sheets لتخزين البيانات. باستخدامك لتطبيق ميعاد، فإنك تفوض التطبيق لإنشاء جداول بيانات Google في حساب Google الخاص بك لتخزين بياناتك ومشاركة هذه الجداول المحددة مع مطور تطبيق ميعاد لأغراض الصيانة وحل المشكلات وتحسين الخدمة. نحن نحتفظ بالحق في تعديل أو إيقاف أي جزء من الخدمة في أي وقت."
+          }
+        ]
+      },
+      {
+        "title_en": "3. User Responsibilities",
+        "title_ar": "3. مسؤوليات المستخدم",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "You are responsible for maintaining the confidentiality of your Google account credentials and for all activities that occur under your account. You agree not to use the service for any illegal or unauthorized purpose.",
+            "text_ar": "أنت مسؤول عن الحفاظ على سرية بيانات اعتماد حساب Google الخاص بك وعن جميع الأنشطة التي تحدث تحت حسابك. أنت توافق على عدم استخدام الخدمة لأي غرض غير قانوني أو غير مصرح به."
+          }
+        ]
+      },
+      {
+        "title_en": "4. Limitation of Liability",
+        "title_ar": "4. حدود المسؤولية",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "MEAAD shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service.",
+            "text_ar": "لا يتحمل تطبيق ميعاد أي مسؤولية عن أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو تأديبية ناتجة عن استخدامك للخدمة أو عدم قدرتك على استخدامها."
+          }
+        ]
+      },
+      {
+        "title_en": "5. Changes to Terms",
+        "title_ar": "5. تغيير الشروط",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "We reserve the right to update these Terms of Service at any time. Continued use of the service after any changes constitutes acceptance of the new terms.",
+            "text_ar": "نحتفظ بالحق في تحديث شروط الخدمة هذه في أي وقت. استمرارك في استخدام الخدمة بعد أي تغييرات يشكل قبولاً للشروط الجديدة."
+          }
+        ]
+      }
+    ]
+  },
+  "changelog": {
+    "title_en": "Changelogs",
+    "title_ar": "سجل التحديثات",
+    "items": [
+      {
+        "version": "1.1.0",
+        "date_en": "July 2026",
+        "date_ar": "يوليو 2026",
+        "tag_en": "Latest ✨",
+        "tag_ar": "أحدث إصدار ✨",
+        "changes_en": [
+          "App Lock: Added Biometric & PIN lock for enhanced security and privacy.",
+          "Performance: Fixed memory leaks in date/time pickers to ensure a smooth experience.",
+          "Smart Sync: Improved offline synchronization to prevent data loss when offline.",
+          "Accurate Notifications: Upgraded the notification scheduler for reliable and precise delivery.",
+          "General Improvements: Faster search, reduced app size, and fixed navigation bar issues."
+        ],
+        "changes_ar": [
+          "قفل التطبيق: إضافة حماية بالبصمة أو الرمز (Biometric App Lock) لزيادة أمان بياناتك.",
+          "تحسينات الأداء: معالجة تسريب الذاكرة (Memory Leaks) في واجهات اختيار التاريخ والوقت لضمان سرعة التطبيق.",
+          "مزامنة ذكية: تطوير محرك المزامنة لحماية البيانات من الضياع عند استخدام التطبيق بدون إنترنت ومزامنتها لاحقاً.",
+          "إشعارات دقيقة: تحسين آلية جدولة الإشعارات لضمان وصولها في الوقت المحدد بدون تداخل.",
+          "تحسينات عامة: تحسين سرعة البحث وتقليل حجم التطبيق وإصلاحات لمشاكل شريط التنقل."
+        ]
+      },
+      {
+        "version": "1.0.0",
+        "date_en": "July 2026",
+        "date_ar": "يوليو 2026",
+        "tag_en": "First Release 🎉",
+        "tag_ar": "الإصدار الأول 🎉",
+        "changes_en": [
+          "Integrated Management: Add and track customer debts and subscriptions effortlessly.",
+          "Modern Interface: Fast, responsive modern UI with full Dark Mode support.",
+          "Security & Sync: Complete data privacy with smart syncing to prevent data loss.",
+          "Export & Print: Full support for printing customer receipts and exporting reports to PDF/Excel.",
+          "Smart Dashboard: Comprehensive home screen showing real-time debt and collection stats.",
+          "Portal Screen: A smart web portal for customers with QR Code scanning for quick receipt access.",
+          "Roles Management: Support for Multiple Admins for easy app control.",
+          "Baytraq Integration: Seamless expansion capabilities with our sister app (Baytraq Sales Manager)."
+        ],
+        "changes_ar": [
+          "إدارة متكاملة: إضافة ديون واشتراكات العملاء ومتابعتها بسهولة فائقة وبدون تعقيد.",
+          "واجهة عصرية: تصميم UI حديث، سريع الاستجابة، مع دعم كامل للوضع الليلي (Dark Mode).",
+          "أمان ومزامنة: خصوصية تامة لبياناتك بفضل تقنيات المزامنة الذكية التي تحمي معلوماتك من الفقدان.",
+          "تصدير وطباعة: دعم كامل لطباعة الفواتير الخاصة بالعملاء وتصدير تقارير الديون بصيغة PDF و Excel.",
+          "لوحة تحكم ذكية (Dashboard): شاشة رئيسية شاملة تعرض إحصائيات الديون والمبالغ المحصلة في الوقت الفعلي.",
+          "شاشة البوابة (Portal): إطلاق بوابة ذكية للعملاء مزودة بماسح QR Code لتسهيل الوصول للفواتير عبر المتصفح.",
+          "إدارة الصلاحيات: دعم خاصية الإدارة المتعددة (Multiple Admins) للتحكم السهل في التطبيق.",
+          "الربط مع بيترك: توفير بيئة متكاملة تدعم التوسع باستخدام تطبيقنا الشقيق (Baytraq Sales Manager)."
+        ]
+      }
+    ]
+  },
+  "pricing": null,
+  "purchase_form": null,
+  "get_login": null
+}

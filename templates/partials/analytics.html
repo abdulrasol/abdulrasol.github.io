@@ -1,0 +1,4 @@
+{% if analytics and analytics.enabled and analytics.provider == 'goatcounter' %}
+<script data-goatcounter="https://{{ analytics.goatcounter_code }}.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+{% endif %}

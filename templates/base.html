@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ dir }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>{{ site_title }}</title>
+  <meta name="description" content="{{ site_description }}">
+  <meta name="keywords" content="{{ site_keywords }}">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#36ADA3">
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+
+  <!-- Canonical & Alternate Languages -->
+  <link rel="canonical" href="{{ site.url }}{{ page_path }}">
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/">
+  <link rel="alternate" hreflang="ar" href="{{ site.url }}/ar/">
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ site_title }}">
+  <meta property="og:description" content="{{ site_description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page_path }}">
+  <meta property="og:image" content="{{ site.url }}/logo.png">
+  <meta property="og:locale" content="{{ 'en_US' if lang == 'en' else 'ar_AR' }}">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ site_title }}">
+  <meta name="twitter:description" content="{{ site_description }}">
+  <meta name="twitter:image" content="{{ site.url }}/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="apple-touch-icon" href="/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/static/css/style.css">
+
+  {% include "partials/analytics.html" %}
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ personal.name }}",
+    "jobTitle": "{{ personal.tagline }}",
+    "url": "{{ site.url }}",
+    "email": "mailto:{{ personal.email }}",
+    "sameAs": [
+      {% if personal.social.github %}"{{ personal.social.github }}"{% endif %}
+      {% if personal.social.linkedin %}{% if personal.social.github %},{% endif %}"{{ personal.social.linkedin }}"{% endif %}
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    }
+  }
+  </script>
+</head>
+<body data-lang="{{ lang }}">
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="{{ '/' if lang == 'en' else '/ar/' }}" class="logo">
+        <img src="/logo.png" alt="{{ personal.name }} logo" width="40" height="40">
+        <span>{{ personal.name }}</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#about">{{ nav.about }}</a>
+        <a href="#skills">{{ nav.skills }}</a>
+        <a href="#projects">{{ nav.projects }}</a>
+        <a href="#contact">{{ nav.contact }}</a>
+        <a href="{{ '/resume.html' if lang == 'en' else '/ar/resume.html' }}" class="nav-resume">{{ nav.resume }}</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="{{ nav.toggle_theme }}">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="{{ other_page }}" class="lang-toggle" aria-label="{{ nav.switch_language }}">
+          <i class="fas fa-globe"></i>
+          <span>{{ other_lang_label }}</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="{{ nav.menu }}">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#about">{{ nav.about }}</a>
+      <a href="#skills">{{ nav.skills }}</a>
+      <a href="#projects">{{ nav.projects }}</a>
+      <a href="#contact">{{ nav.contact }}</a>
+      <a href="{{ '/resume.html' if lang == 'en' else '/ar/resume.html' }}">{{ nav.resume }}</a>
+      <a href="{{ other_page }}">{{ other_lang_label }}</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="{{ '/' if lang == 'en' else '/ar/' }}" class="logo">
+          <img src="/logo.png" alt="{{ personal.name }} logo" width="36" height="36">
+          <span>{{ personal.name }}</span>
+        </a>
+        <p>{{ footer.tagline }}</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>{{ footer.quick_links_title }}</h4>
+        <a href="#about">{{ nav.about }}</a>
+        <a href="#skills">{{ nav.skills }}</a>
+        <a href="#projects">{{ nav.projects }}</a>
+        <a href="#contact">{{ nav.contact }}</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>{{ footer.contact_title }}</h4>
+        <a href="mailto:{{ personal.email }}"><i class="fas fa-envelope"></i> {{ personal.email }}</a>
+        <a href="https://wa.me/{{ personal.whatsapp }}" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        {% if personal.social.github %}
+        <a href="{{ personal.social.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ current_year }} {{ personal.name }}. {{ footer.copyright }}</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/{{ personal.whatsapp }}?text={{ whatsapp_message | urlencode }}"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

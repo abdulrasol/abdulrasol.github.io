@@ -1,53 +1,106 @@
-<!doctype html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AbdulRasol Al-Hilo — Software Engineer</title>
-  <meta name="description" content="Professional Software Engineer specializing in building beautiful and performant applications." />
-  <meta name="author" content="AbdulRasol Al-Hilo" />
-  <meta name="keywords" content="Software Engineer, Flutter Developer, mobile apps, web development" />
-  <link rel="icon" type="image/png" href="/logo.png" />
-  <meta property="og:title" content="AbdulRasol Al-Hilo — Software Engineer" />
-  <meta property="og:description" content="Professional Software Engineer specializing in building beautiful and performant applications." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/logo.png" />
-  <script>
-    // Hash redirects (runs before SvelteKit boots)
-    if (window.location.hash === '#store_managment') {
-      window.location.href = 'https://github.com/abdulrasol/store_management';
-    } else if (window.location.hash === '#madarik') {
-      window.location.href = '/madarik/';
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | Abdulrasol Al-Hilo</title>
+  <meta name="description" content="The page you are looking for does not exist.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #36ADA3;
+      --secondary: #2F578A;
+      --bg: #0B0F1F;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
     }
-  </script>
-  
-		<link rel="modulepreload" href="/_app/immutable/entry/start.DtkPgegu.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/eBwTuhJO.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/BAGG94wi.js">
-		<link rel="modulepreload" href="/_app/immutable/entry/app.rjoFDhyd.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/IXiYDxfQ.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/B5x0efmV.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/BnPNT7l0.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/2a7XO0a2.js">
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    body::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: var(--primary);
+      filter: blur(120px);
+      opacity: 0.15;
+      border-radius: 50%;
+      top: -100px;
+      left: -100px;
+    }
+    body::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: var(--secondary);
+      filter: blur(120px);
+      opacity: 0.12;
+      border-radius: 50%;
+      bottom: -100px;
+      right: -100px;
+    }
+    .container { position: relative; z-index: 1; max-width: 600px; }
+    .logo { margin-bottom: 40px; display: inline-block; }
+    .logo img { height: 60px; border-radius: 12px; }
+    h1 { font-size: 6rem; font-weight: 800; line-height: 1; margin-bottom: 16px; }
+    h1 span { color: var(--primary); }
+    h2 { font-size: 1.75rem; margin-bottom: 16px; }
+    p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 32px; }
+    .actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+    }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-secondary {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+    .btn-secondary:hover { background: rgba(54, 173, 163, 0.1); }
+    @media (max-width: 480px) {
+      h1 { font-size: 4rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
 </head>
-<body data-sveltekit-preload-data="hover">
-  <div style="display: contents">
-			<script>
-				{
-					__sveltekit_1879a4w = {
-						base: ""
-					};
-
-					const element = document.currentScript.parentElement;
-
-					Promise.all([
-						import("/_app/immutable/entry/start.DtkPgegu.js"),
-						import("/_app/immutable/entry/app.rjoFDhyd.js")
-					]).then(([kit, app]) => {
-						kit.start(app, element);
-					});
-				}
-			</script>
-		</div>
+<body>
+  <div class="container">
+    <a href="/" class="logo">
+      <img src="/logo.png" alt="Abdulrasol Al-Hilo">
+    </a>
+    <h1>4<span>0</span>4</h1>
+    <h2>Page Not Found</h2>
+    <p>Sorry, the page you are looking for doesn't exist or has been moved.</p>
+    <div class="actions">
+      <a href="/" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
+      <a href="/ar/" class="btn btn-secondary">الصفحة الرئيسية</a>
+    </div>
+  </div>
 </body>
 </html>

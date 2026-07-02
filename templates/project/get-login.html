@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ dir }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ get_login.title or 'Download Login Configuration' }}</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/png" href="{{ brand.favicon or brand.logo }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --project-primary: {{ settings.primary_color }};
+      --bg: #0B0F1F;
+      --surface: rgba(17, 24, 39, 0.7);
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 48px;
+      max-width: 500px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    }
+    .card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+      margin: 0 auto 24px;
+    }
+    h2 { font-size: 1.5rem; margin-bottom: 16px; }
+    p { color: var(--text-muted); margin-bottom: 24px; line-height: 1.6; }
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, var(--project-primary), #2F578A);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    a:hover { transform: translateY(-2px); }
+    @media (max-width: 480px) {
+      .card { padding: 32px 24px; }
+      h2 { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="{{ brand.logo }}" alt="{{ brand.name }}">
+    <h2>{{ get_login.title or 'Download Login Configuration' }}</h2>
+    <p>{{ get_login.description or 'Your login configuration file will download automatically. If not, use the button below.' }}</p>
+    <a href="{{ get_login.filename }}" download="{{ get_login.filename }}">
+      <i class="fas fa-download"></i>
+      {{ nav.download }}
+    </a>
+  </div>
+
+  <script>
+    window.onload = function() {
+      setTimeout(function() {
+        const link = document.createElement('a');
+        link.href = '{{ get_login.filename }}';
+        link.download = '{{ get_login.filename }}';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }, 500);
+    };
+  </script>
+</body>
+</html>

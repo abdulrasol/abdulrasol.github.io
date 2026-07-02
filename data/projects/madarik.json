@@ -1,0 +1,203 @@
+{
+  "id": "madarik",
+  "site": {
+    "title_en": "Madarik: Knowledge Journey",
+    "title_ar": "مدارك: رحلة المعرفة",
+    "description_en": "An engaging educational quiz game to test and expand your knowledge in Islamic history, science, geography, and more.",
+    "description_ar": "لعبة تثقيفية وتعليمية مصممة لاختبار معارفك وتوسيعها في التاريخ الإسلامي، العلوم، الجغرافيا، والمزيد.",
+    "keywords_en": "Education, Quiz, Islamic History, Science, Geography, Flutter, Mobile Game",
+    "keywords_ar": "تعليم, اختبار, تاريخ إسلامي, علوم, جغرافيا, فلاتر, لعبة موبايل"
+  },
+  "settings": {
+    "default_lang": "ar",
+    "default_theme": "dark",
+    "primary_color": "#f59e0b",
+    "secondary_color": "#3b82f6"
+  },
+  "brand": {
+    "name_en": "Madarik",
+    "name_ar": "مدارك",
+    "tagline_en": "A journey of knowledge and discovery",
+    "tagline_ar": "رحلة من المعرفة والاكتشاف",
+    "logo": "/assets/madarik/logo.png",
+    "banner": "/assets/madarik/banar.png",
+    "favicon": "/assets/madarik/logo.png"
+  },
+  "links": {
+    "googlePlay": null,
+    "appStore": null,
+    "github": "https://github.com/abdulrasol/madarik_knowledge_jounrny",
+    "facebook": null,
+    "instagram": null,
+    "support_email": "abdulrsol97@gmail.com"
+  },
+  "hero": {
+    "title_en": "Madarik: Knowledge Journey",
+    "title_ar": "مدارك: رحلة المعرفة",
+    "subtitle_en": "Knowledge is a journey... and you are its hero! Test your skills in Islamic history, science, geography, and more in a unique learning experience.",
+    "subtitle_ar": "المعرفة رحلة... وأنت بطلّها! اختبر ثقافتك في التاريخ الإسلامي، العلوم، الجغرافيا والمزيد في تجربة تعليمية فريدة.",
+    "cta_en": "View on GitHub",
+    "cta_ar": "المشروع على GitHub"
+  },
+  "platforms": ["Android", "iOS"],
+  "category": "mobile",
+  "featured": false,
+  "technologies": ["Flutter", "Dart", "Riverpod", "Hive"],
+  "features": {
+    "title_en": "Madarik Features",
+    "title_ar": "مميزات مدارك",
+    "items": [
+      {
+        "icon": "🗺️",
+        "title_en": "Interactive Roadmap",
+        "title_ar": "خارطة تفاعلية",
+        "desc_en": "Unlock new levels and challenges through an engaging and structured journey.",
+        "desc_ar": "تجاوز التحديات وافتح مستويات جديدة في رحلة منظمة ومشوقة."
+      },
+      {
+        "icon": "🧠",
+        "title_en": "Diverse Categories",
+        "title_ar": "فئات متنوعة",
+        "desc_en": "History, science, geography, and literature - constantly updated content.",
+        "desc_ar": "تاريخ، علوم، جغرافيا، وأدب - محتوى متجدد يغطي كافة المجالات."
+      },
+      {
+        "icon": "🏆",
+        "title_en": "Global Leaderboard",
+        "title_ar": "لوحة المتصدرين",
+        "desc_en": "Compete with learners worldwide and show your absolute mastery.",
+        "desc_ar": "نافس المتعلمين من مختلف أنحاء العالم وأثبت جدارتك."
+      },
+      {
+        "icon": "🏅",
+        "title_en": "Achievements",
+        "title_ar": "نظام الإنجازات",
+        "desc_en": "Earn unique medals and rewards as you complete challenging milestones.",
+        "desc_ar": "احصل على أوسمة فريدة ومكافآت عند إكمال المهام الصعبة."
+      },
+      {
+        "icon": "👤",
+        "title_en": "Player Profile",
+        "title_ar": "ملف شخصي",
+        "desc_en": "Customize your avatar and track your educational progress in detail.",
+        "desc_ar": "خصص شخصيتك الرمزية وتتبع مسار تقدمك المعرفي بدقة."
+      },
+      {
+        "icon": "🎨",
+        "title_en": "Modern Design",
+        "title_ar": "تصميم عصري",
+        "desc_en": "A stunning UI inspired by the richness of Arabic cultural heritage.",
+        "desc_ar": "واجهة مستخدم جذابة مستوحاة من عراقة الثقافة العربية."
+      }
+    ]
+  },
+  "screenshots": {
+    "title_en": "App Screenshots",
+    "title_ar": "لقطات من التطبيق",
+    "items": [
+      "/assets/madarik/home_page.jpg",
+      "/assets/madarik/roadmap_page.jpg",
+      "/assets/madarik/quiz_page.jpg",
+      "/assets/madarik/aheveiments_page.jpg"
+    ]
+  },
+  "testimonials": [],
+  "privacy": {
+    "last_updated": "2026-02-11",
+    "email": "abdulrsol97@gmail.com",
+    "sections": [
+      {
+        "title_en": "1. Information Collection and Use",
+        "title_ar": "1. جمع المعلومات واستخدامها",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Madarik: Knowledge Journey (the \"App\") is developed by Abdulrasol (\"we\", \"us\", or \"our\"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our App.",
+            "text_ar": "تم تطوير تطبيق مدارك: رحلة المعرفة (\"التطبيق\") بواسطة Abdulrasol (\"نحن\"). تشرح هذه الصفحة سياساتنا بخصوص جمع واستخدام والكشف عن البيانات الشخصية عند استخدامك لتطبيقنا."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "We do not collect any personally identifiable information from our users. The App is designed to provide an educational quiz experience without requiring you to share personal details.",
+            "text_ar": "نحن لا نجمع أي معلومات شخصية قد تؤدي إلى تحديد هوية مستخدمينا. تم تصميم التطبيق لتقديم تجربة اختبار تعليمية بدون مطالبتك بمشاركة تفاصيل شخصية."
+          }
+        ]
+      },
+      {
+        "title_en": "2. Locally Stored Data",
+        "title_ar": "2. البيانات المخزنة محلياً",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "The App may store your progress, levels unlocked, and achievements locally on your device. This data remains on your device and is not transmitted to our servers.",
+            "text_ar": "قد يقوم التطبيق بتخزين تقدمك والمستويات التي تم فتحها وإنجازاتك محلياً على جهازك. تبقى هذه البيانات على جهازك ولا يتم إرسالها إلى خوادمنا."
+          }
+        ]
+      },
+      {
+        "title_en": "3. Third-Party Services",
+        "title_ar": "3. خدمات الطرف الثالث",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "The App may use third-party services that may collect information used to identify you:",
+            "text_ar": "قد يستخدم التطبيق خدمات طرف ثالث قد تجمع معلومات تستخدم لتحديد هويتك:"
+          },
+          {
+            "type": "list",
+            "items_en": ["Google Play Services", "Firebase Analytics (for improving app performance)"],
+            "items_ar": ["خدمات Google Play", "Firebase Analytics (لتحسين أداء التطبيق)"]
+          }
+        ]
+      },
+      {
+        "title_en": "4. Children's Privacy",
+        "title_ar": "4. خصوصية الأطفال",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.",
+            "text_ar": "هذه الخدمات لا تستهدف أي شخص under سن 13 عاماً. نحن لا نجمع عن علم أي معلومات شخصية من الأطفال under سن 13."
+          }
+        ]
+      },
+      {
+        "title_en": "5. Responsibilities",
+        "title_ar": "5. المسؤوليات",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Users are responsible for any device-level permissions they grant to the App.",
+            "text_ar": "المستخدمون مسؤولون عن أي أذونات على مستوى الجهاز يمنحونها للتطبيق."
+          }
+        ]
+      },
+      {
+        "title_en": "6. Changes to This Privacy Policy",
+        "title_ar": "6. التغييرات على سياسة الخصوصية",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes.",
+            "text_ar": "قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. ننصحك بمراجعة هذه الصفحة دورياً لأي تغييرات."
+          }
+        ]
+      },
+      {
+        "title_en": "7. Contact Us",
+        "title_ar": "7. اتصل بنا",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "If you have any questions about this Privacy Policy, please contact us at:",
+            "text_ar": "إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى التواصل معنا على:"
+          }
+        ]
+      }
+    ]
+  },
+  "terms": null,
+  "changelog": null,
+  "pricing": null,
+  "purchase_form": null,
+  "get_login": null
+}

@@ -1,0 +1,114 @@
+{
+  "id": "watt",
+  "site": {
+    "title_en": "Watt: Your AI Assistant",
+    "title_ar": "واط: مساعدك الذكي بالذكاء الاصطناعي",
+    "description_en": "Experience the future of AI with Watt. Chat with advanced AI, generate stunning images, and manage your files seamlessly in one powerful app.",
+    "description_ar": "جرب مستقبل الذكاء الاصطناعي مع واط. دردش مع نماذج لغوية متقدمة، أنشئ صوراً مذهلة، واستمتع بتجربة سلسة في تطبيق واحد قوي.",
+    "keywords_en": "AI, Chatbot, Image Generation, Assistant, Flutter, OpenAI, GPT",
+    "keywords_ar": "ذكاء اصطناعي, دردشة ذكية, توليد صور, مساعد, فلاتر, OpenAI, GPT"
+  },
+  "settings": {
+    "default_lang": "ar",
+    "default_theme": "dark",
+    "primary_color": "#10b981",
+    "secondary_color": "#0ea5e9"
+  },
+  "brand": {
+    "name_en": "Watt",
+    "name_ar": "واط",
+    "tagline_en": "Your AI assistant for chat, images, and more",
+    "tagline_ar": "مساعدك الذكي للدردشة، الصور، والمزيد",
+    "logo": "/assets/watt/logo.png",
+    "banner": "/assets/watt/banar.png",
+    "favicon": "/assets/watt/logo.png"
+  },
+  "links": {
+    "googlePlay": "https://play.google.com/store/apps/details?id=com.example.watt",
+    "appStore": null,
+    "github": null,
+    "facebook": null,
+    "instagram": null,
+    "support_email": "abdulrsol97@gmail.com"
+  },
+  "hero": {
+    "title_en": "Watt: Your AI Assistant",
+    "title_ar": "واط: مساعدك الذكي بالذكاء الاصطناعي",
+    "subtitle_en": "Chat with advanced AI, generate stunning images, and manage your files seamlessly.",
+    "subtitle_ar": "دردش مع نماذج لغوية متقدمة، أنشئ صوراً مذهلة، ونظّم ملفاتك بسلاسة في تطبيق واحد.",
+    "cta_en": "Download on Google Play",
+    "cta_ar": "تحميل من Google Play"
+  },
+  "platforms": ["Android", "iOS"],
+  "category": "mobile",
+  "featured": false,
+  "technologies": ["Flutter", "Dart", "Firebase"],
+  "features": {
+    "title_en": "Watt Features",
+    "title_ar": "مميزات واط",
+    "items": [
+      {
+        "icon": "💬",
+        "title_en": "AI Chat",
+        "title_ar": "دردشة ذكية",
+        "desc_en": "Engage in intelligent conversations with powerful AI models.",
+        "desc_ar": "أجرِ محادثات ذكية مع نماذج لغوية قوية وفريدة."
+      },
+      {
+        "icon": "🎨",
+        "title_en": "Image Generation",
+        "title_ar": "توليد الصور",
+        "desc_en": "Turn your ideas into stunning visuals with AI-powered image creation.",
+        "desc_ar": "حوّل أفكارك إلى صور مذهلة باستخدام الذكاء الاصطناعي."
+      },
+      {
+        "icon": "🔤",
+        "title_en": "Realistic Text-to-Speech",
+        "title_ar": "تحويل نص إلى كلام",
+        "desc_en": "Listen to AI responses with natural-sounding voice synthesis.",
+        "desc_ar": "استمع إلى ردود الذكاء الاصطناعي بأصوات واقعية وطبيعية."
+      },
+      {
+        "icon": "📁",
+        "title_en": "File Management",
+        "title_ar": "إدارة الملفات",
+        "desc_en": "Organize and access your documents and media with ease.",
+        "desc_ar": "نظّم وصولك إلى المستندات والملفات والوسائط بسهولة."
+      },
+      {
+        "icon": "🌐",
+        "title_en": "Multi-Language Support",
+        "title_ar": "دعم متعدد اللغات",
+        "desc_en": "Communicate in multiple languages with a smooth localized experience.",
+        "desc_ar": "تواصل بأكثر من لغة مع تجربة مترجمة بسلاسة."
+      },
+      {
+        "icon": "🎨",
+        "title_en": "Modern UI",
+        "title_ar": "تصميم عصري",
+        "desc_en": "A clean, intuitive interface designed for productivity.",
+        "desc_ar": "واجهة نظيفة وبديهية مصممة لتعزيز الإنتاجية."
+      }
+    ]
+  },
+  "screenshots": {
+    "title_en": "App Screenshots",
+    "title_ar": "لقطات من التطبيق",
+    "items": [
+      "/assets/watt/screenshots/1.jpg",
+      "/assets/watt/screenshots/2.jpg",
+      "/assets/watt/screenshots/3.jpg",
+      "/assets/watt/screenshots/4.jpg",
+      "/assets/watt/screenshots/5.jpg",
+      "/assets/watt/screenshots/6.jpg",
+      "/assets/watt/screenshots/7.jpg"
+    ]
+  },
+  "testimonials": [],
+  "privacy": null,
+  "terms": null,
+  "changelog": null,
+  "pricing": null,
+  "purchase_form": null,
+  "get_login": null
+}

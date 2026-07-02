@@ -1,179 +1,369 @@
 <!DOCTYPE html>
-<html :lang="lang" :dir="dir">
+<html lang="en" dir="ltr">
 <head>
-    <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ t.pageTitle }}</title>
-    <meta name="description" content="تطبيق ميعاد لإدارة الزبائن والأقساط" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="logo.png">
-    <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Vue 3 -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>MEAAD - Debt &amp; Installment Manager</title>
+  <meta name="description" content="The easiest and most secure app to manage debts, installments, and subscriptions for your business.">
+  <meta name="keywords" content="Debt Management, Installments, Subscriptions, Google Sheets, Flutter, Business">
+  <meta name="author" content="Abdulrasol Al-Hilo">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#3b82f6">
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
+
+  <!-- Canonical & Alternate Languages -->
+  <link rel="canonical" href="https://abdulrasol.github.io/meaad/">
+  <link rel="alternate" hreflang="en" href="https://abdulrasol.github.io/meaad/">
+  <link rel="alternate" hreflang="ar" href="https://abdulrasol.github.io/ar/meaad/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MEAAD - Debt &amp; Installment Manager">
+  <meta property="og:description" content="The easiest and most secure app to manage debts, installments, and subscriptions for your business.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abdulrasol.github.io/meaad/">
+  <meta property="og:image" content="https://abdulrasol.github.io/assets/meaad/logo.png">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MEAAD - Debt &amp; Installment Manager">
+  <meta name="twitter:description" content="The easiest and most secure app to manage debts, installments, and subscriptions for your business.">
+  <meta name="twitter:image" content="https://abdulrasol.github.io/assets/meaad/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/meaad/logo.png">
+  <link rel="apple-touch-icon" href="/assets/meaad/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Project Colors -->
+  <style>
+    :root {
+      --project-primary: #3b82f6;
+      --project-secondary: #8b5cf6;
+    }
+  </style>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/static/css/project.css">
+
+<script data-goatcounter="https://abdulrasol.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MEAAD",
+    "applicationCategory": "MobileApplication",
+    "operatingSystem": "Android, iOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "The easiest and most secure app to manage debts, installments, and subscriptions for your business.",
+"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meaad",    "image": "https://abdulrasol.github.io/assets/meaad/logo.png"
+  }
+  </script>
 </head>
-<body :class="{ 'dark-mode': isDarkMode }">
-    <div id="app" v-cloak>
-        <!-- Header / Nav -->
-        <header :class="{ 'scrolled': isScrolled }">
-            <div class="nav-container">
-                <a href="index.html" class="logo">
-                    <img src="logo.png" alt="ميعاد Logo">
-                    <span>{{ t.appName }}</span>
-                </a>
-                
-                <!-- Desktop Nav -->
-                <nav class="nav-links desktop-nav">
-                    <a href="index.html" class="active">{{ t.navHome }}</a>
-                    <a href="#features">{{ t.navFeatures }}</a>
-                    <a href="#testimonials">{{ t.navTestimonials }}</a>
-                    <a href="privacy.html">{{ t.navPrivacy }}</a>
-                    <a href="terms.html">{{ t.navTerms }}</a>
-                </nav>
+<body data-lang="en">
 
-                <div class="nav-actions">
-                    <button class="icon-btn" @click="toggleTheme" :title="t.toggleTheme">
-                        <i :class="isDarkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
-                    </button>
-                    <button class="lang-btn" @click="toggleLanguage">
-                        <i class="fas fa-globe"></i> {{ lang === 'ar' ? 'English' : 'العربية' }}
-                    </button>
-                    <!-- Mobile Menu Toggle -->
-                    <button class="mobile-menu-btn" @click="mobileMenuOpen = !mobileMenuOpen">
-                        <i :class="mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
-                    </button>
-                </div>
-            </div>
+  <!-- Header -->
+  <header class="project-header" id="project-header">
+    <div class="container header-inner">
+      <a href="/meaad/" class="brand">
+        <img src="/assets/meaad/logo.png" alt="MEAAD logo">
+        <span>MEAAD</span>
+      </a>
 
-            <!-- Mobile Nav -->
-            <div class="mobile-nav" :class="{ 'open': mobileMenuOpen }">
-                <a href="index.html" @click="mobileMenuOpen = false">{{ t.navHome }}</a>
-                <a href="#features" @click="mobileMenuOpen = false">{{ t.navFeatures }}</a>
-                <a href="#testimonials" @click="mobileMenuOpen = false">{{ t.navTestimonials }}</a>
-                <a href="privacy.html">{{ t.navPrivacy }}</a>
-                <a href="terms.html">{{ t.navTerms }}</a>
-                <a href="changelogs.html">{{ t.navChangelog }}</a>
-            </div>
-        </header>
+      <a href="/" class="back-link desktop-back">
+        <i class="fas fa-arrow-left"></i>
+        ← Back to Portfolio
+      </a>
 
-        <main>
-            <!-- Hero Section -->
-            <section class="hero-section glass-panel">
-                <div class="hero-content">
-                    <div class="badge-pill">{{ t.heroBadge }}</div>
-                    <h1 v-html="t.heroTitle"></h1>
-                    <p class="hero-subtitle">{{ t.heroSubtitle }}</p>
-                    
-                    <div class="download-buttons">
-                        <a :href="links.googlePlay" target="_blank" class="store-btn google-play">
-                            <i class="fab fa-google-play"></i>
-                            <div class="btn-text">
-                                <span>{{ t.getItOn }}</span>
-                                <strong>Google Play</strong>
-                            </div>
-                        </a>
-                        <!-- Add App Store when ready -->
-                        <a v-if="links.appStore" :href="links.appStore" target="_blank" class="store-btn app-store">
-                            <i class="fab fa-apple"></i>
-                            <div class="btn-text">
-                                <span>{{ t.downloadOn }}</span>
-                                <strong>App Store</strong>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <!-- Placeholder for App Mockup -->
-                    <div class="mockup-placeholder">
-                        <img src="logo.png" alt="App Preview" class="floating-img" />
-                    </div>
-                </div>
-            </section>
-
-            <!-- Features Section -->
-            <section id="features" class="section">
-                <div class="section-header">
-                    <h2>{{ t.featuresTitle }}</h2>
-                    <p>{{ t.featuresSubtitle }}</p>
-                </div>
-                
-                <div class="features-grid">
-                    <div v-for="(feature, index) in featuresList" :key="index" class="feature-card glass-panel hover-lift">
-                        <div class="feature-icon" :style="{ backgroundColor: feature.color }">
-                            <i :class="feature.icon"></i>
-                        </div>
-                        <h3>{{ feature.title }}</h3>
-                        <p>{{ feature.desc }}</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Data Privacy (Google Requirement) -->
-            <section class="section">
-                <div class="privacy-alert glass-panel">
-                    <div class="alert-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="alert-content">
-                        <h3>{{ t.dataTitle }}</h3>
-                        <p v-html="t.dataDesc1"></p>
-                        <p v-html="t.dataDesc2"></p>
-                        <a href="privacy.html" class="learn-more">{{ t.readPrivacy }} <i :class="lang === 'ar' ? 'fas fa-arrow-left' : 'fas fa-arrow-right'"></i></a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Testimonials -->
-            <section id="testimonials" class="section">
-                <div class="section-header">
-                    <h2>{{ t.testimonialsTitle }}</h2>
-                    <p>{{ t.testimonialsSubtitle }}</p>
-                </div>
-                
-                <div class="testimonials-grid">
-                    <div v-for="(review, index) in testimonialsList" :key="index" class="testimonial-card glass-panel">
-                        <div class="stars">
-                            <i v-for="n in 5" :key="n" class="fas fa-star" :class="{ 'active': n <= review.rating }"></i>
-                        </div>
-                        <p class="review-text">"{{ review.text }}"</p>
-                        <div class="user-info">
-                            <div class="avatar">{{ review.name.charAt(0) }}</div>
-                            <div class="details">
-                                <h4>{{ review.name }}</h4>
-                                <span>{{ review.role }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="logo.png" alt="ميعاد" class="footer-logo">
-                    <p>{{ t.footerDesc }}</p>
-                </div>
-                <div class="footer-links">
-                    <h4>{{ t.quickLinks }}</h4>
-                    <a href="privacy.html">{{ t.navPrivacy }}</a>
-                    <a href="terms.html">{{ t.navTerms }}</a>
-                    <a href="changelogs.html">{{ t.navChangelog }}</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>{{ t.contactUs }}</h4>
-                    <a href="mailto:meaad.application@gmail.com"><i class="fas fa-envelope"></i> meaad.application@gmail.com</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 {{ t.appName }}. {{ t.allRights }}</p>
-            </div>
-        </footer>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="/ar/meaad/" class="lang-toggle" aria-label="Switch to Arabic">
+          <i class="fas fa-globe"></i>
+          <span>العربية</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
 
-    <!-- Init App -->
-    <script src="js/app.js"></script>
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="/">← Back to Portfolio</a>
+      <a href="/meaad/">Home</a>
+<a href="/meaad/privacy_policy/">Privacy Policy</a><a href="/meaad/terms.html">Terms of Service</a><a href="/meaad/changelogs.html">Changelog</a>      <a href="/ar/meaad/">العربية</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-banner" style="background-image: url('/assets/meaad/banar.png')"></div>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-text">
+      <img src="/assets/meaad/logo.png" alt="MEAAD" class="hero-logo">
+      <h1 class="hero-title">Your ultimate app for managing <span class="highlight">Debts &amp; Installments</span></h1>
+      <p class="hero-subtitle">MEAAD allows businesses and individuals to track monthly subscriptions, periodic installments, and accumulated debts seamlessly.</p>
+
+      <div class="hero-actions">
+        <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.meaad"
+           data-goatcounter-click="project-google-play-meaad"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener">
+          <i class="fab fa-google-play"></i>
+          GET IT ON Google Play
+        </a>
+      </div>
+
+      <div class="platforms">
+        <span class="platform-badge">Android</span>
+        <span class="platform-badge">iOS</span>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="/assets/meaad/screenshots/sc0.png" alt="MEAAD screenshot">
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="section features" id="features">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">MEAAD Features</h2>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">🔔</span>
+        <h3>Smart Notifications</h3>
+        <p>Automatic reminders for due dates for you and your customers to avoid delays.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📄</span>
+        <h3>PDF Reports</h3>
+        <p>Generate detailed and professional financial PDF reports with one click.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔳</span>
+        <h3>Digital QR Portal</h3>
+        <p>Customers can scan their QR code to track their balance and updates instantly.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">☁️</span>
+        <h3>Secure Sync</h3>
+        <p>Data is safely stored in your own personal Google Drive account as Google Sheets.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔐</span>
+        <h3>App Lock</h3>
+        <p>Protect the app with Biometrics or Passcode to secure your accounts.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📶</span>
+        <h3>Offline Mode</h3>
+        <p>Add accounts offline, and they will sync automatically later.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots Section -->
+<section class="section screenshots-section" id="screenshots">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">App Screenshots</h2>
+    </div>
+    <div class="screenshots-scroll">
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="/assets/meaad/screenshots/sc0.png" alt="MEAAD screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="/assets/meaad/screenshots/sc1.png" alt="MEAAD screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="/assets/meaad/screenshots/sc2.png" alt="MEAAD screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="/assets/meaad/screenshots/sc3.png" alt="MEAAD screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="/assets/meaad/screenshots/sc4.png" alt="MEAAD screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="/assets/meaad/screenshots/sc5.png" alt="MEAAD screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="/assets/meaad/screenshots/sc6.png" alt="MEAAD screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="/assets/meaad/screenshots/sc7.png" alt="MEAAD screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="/assets/meaad/screenshots/sc8.png" alt="MEAAD screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="/assets/meaad/screenshots/sc9.png" alt="MEAAD screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">What Our Clients Say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star active"></i>
+          <i class="fas fa-star active"></i>
+          <i class="fas fa-star active"></i>
+          <i class="fas fa-star active"></i>
+          <i class="fas fa-star active"></i>
+        </div>
+        <p class="testimonial-text">"The app made bookkeeping so much easier, and the best feature is data security in Drive."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div class="author-info">
+            <h4>Ahmed Ali</h4>
+            <span>Supermarket Owner</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star active"></i>
+          <i class="fas fa-star active"></i>
+          <i class="fas fa-star active"></i>
+          <i class="fas fa-star active"></i>
+          <i class="fas fa-star active"></i>
+        </div>
+        <p class="testimonial-text">"Reports and smart notifications ensure I never miss a debt. Deserves 5 stars."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">M</div>
+          <div class="author-info">
+            <h4>Mohamed Qasim</h4>
+            <span>Wholesaler</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+
+<!-- Purchase Form Section -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="project-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/meaad/" class="brand">
+          <img src="/assets/meaad/logo.png" alt="MEAAD" width="36" height="36">
+          <span>MEAAD</span>
+        </a>
+        <p>Your ultimate app for managing debts and installments</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Legal</h4>
+<a href="/meaad/privacy_policy/">Privacy Policy</a><a href="/meaad/terms.html">Terms of Service</a><a href="/meaad/changelogs.html">Changelog</a>      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a href="mailto:meaad.application@gmail.com"><i class="fas fa-envelope"></i> meaad.application@gmail.com</a>
+        <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.meaad" data-goatcounter-click="footer-google-play-meaad" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 MEAAD. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/9647813639721?text=Hello%20Abdulrasol%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="/static/js/project.js"></script>
 </body>
 </html>

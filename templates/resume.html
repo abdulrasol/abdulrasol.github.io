@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="resume-page">
+  <div class="container resume-container">
+    <div class="resume-actions no-print">
+      <a href="{{ '/' if lang == 'en' else '/ar/' }}" class="btn btn-secondary">
+        <i class="fas fa-arrow-{{ 'left' if lang == 'en' else 'right' }}"></i>
+        {{ nav.back_to_site }}
+      </a>
+      <button class="btn btn-primary" onclick="window.print()">
+        <i class="fas fa-print"></i>
+        {{ nav.print_resume }}
+      </button>
+    </div>
+
+    <header class="resume-header">
+      <div class="resume-photo">
+        <img src="{{ personal.photo }}" alt="{{ personal.name }}">
+      </div>
+      <div class="resume-intro">
+        <h1>{{ personal.name }}</h1>
+        <p class="resume-title">{{ personal.tagline }}</p>
+        <p class="resume-location">
+          <i class="fas fa-map-marker-alt"></i> {{ personal.location }}
+          <span class="separator">•</span>
+          <span class="resume-availability">{{ personal.availability }}</span>
+        </p>
+        <div class="resume-contacts">
+          <a href="mailto:{{ personal.email }}"><i class="fas fa-envelope"></i> {{ personal.email }}</a>
+          <a href="https://wa.me/{{ personal.whatsapp }}"><i class="fab fa-whatsapp"></i> +{{ personal.whatsapp }}</a>
+          {% if personal.social.github %}
+          <a href="{{ personal.social.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+          {% endif %}
+          {% if personal.social.linkedin %}
+          <a href="{{ personal.social.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          {% endif %}
+        </div>
+      </div>
+    </header>
+
+    <section class="resume-section">
+      <h2>{{ nav.about }}</h2>
+      <p>{{ about.text }}</p>
+    </section>
+
+    <section class="resume-section">
+      <h2>{{ nav.skills }}</h2>
+      <div class="resume-skills">
+        {% for category in skills.categories %}
+        <div class="resume-skill-group">
+          <h3>{{ category.name }}</h3>
+          <ul>
+            {% for item in category.skills %}
+            <li>{{ item.name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    {% if experience and experience|length > 0 %}
+    <section class="resume-section">
+      <h2>{{ nav.experience }}</h2>
+      {% for job in experience %}
+      <div class="resume-item">
+        <div class="resume-item-header">
+          <h3>{{ job.role }}</h3>
+          <span class="resume-period">{{ job.period }}</span>
+        </div>
+        <p class="resume-company">{{ job.company }}</p>
+        <p>{{ job.description }}</p>
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    <section class="resume-section">
+      <h2>{{ nav.projects }}</h2>
+      {% for project in projects.list %}
+      <div class="resume-item">
+        <div class="resume-item-header">
+          <h3>{{ project.title }}</h3>
+        </div>
+        <p>{{ project.desc }}</p>
+        <div class="resume-tech">
+          {% for tech in project.technologies %}
+          <span>{{ tech }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+  </div>
+</section>
+
+{% endblock %}

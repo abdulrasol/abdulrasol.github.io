@@ -1,0 +1,36 @@
+{% extends "project/base.html" %}
+
+{% block content %}
+
+<section class="content-page">
+  <div class="container">
+    <div class="content-container">
+      <div class="content-header">
+        <img src="{{ brand.logo }}" alt="{{ brand.name }}" class="content-logo">
+        <h1>{{ nav.changelog }}</h1>
+        <p class="app-name">{{ brand.name }}</p>
+      </div>
+
+      {% for version in changelog['items'] %}
+      <div class="version-card">
+        <div class="version-header">
+          <div>
+            <span class="version-number">{{ nav.version }} {{ version.version }}</span>
+            {% if version.tag %}
+            <span class="tag">{{ version.tag }}</span>
+            {% endif %}
+          </div>
+          <span class="version-date">{{ version.date }}</span>
+        </div>
+        <ul class="changelog-list">
+          {% for change in version['changes'] %}
+          <li>{{ change }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

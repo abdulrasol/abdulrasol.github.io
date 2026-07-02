@@ -1,0 +1,251 @@
+{% extends "project/base.html" %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    {% if brand.banner %}
+    <div class="hero-banner" style="background-image: url('{{ brand.banner }}')"></div>
+    {% endif %}
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-text">
+      <img src="{{ brand.logo }}" alt="{{ brand.name }}" class="hero-logo">
+      <h1 class="hero-title">{{ hero.title | safe }}</h1>
+      <p class="hero-subtitle">{{ hero.subtitle }}</p>
+
+      <div class="hero-actions">
+        {% if links.googlePlay %}
+        <a href="{{ links.googlePlay }}"
+           data-goatcounter-click="project-google-play-{{ id }}"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener">
+          <i class="fab fa-google-play"></i>
+          {{ hero.cta }}
+        </a>
+        {% endif %}
+        {% if links.github %}
+        <a href="{{ links.github }}"
+           data-goatcounter-click="project-github-{{ id }}"
+           class="btn btn-secondary"
+           target="_blank"
+           rel="noopener">
+          <i class="fab fa-github"></i>
+          {{ nav.view_github }}
+        </a>
+        {% endif %}
+      </div>
+
+      {% if platforms %}
+      <div class="platforms">
+        {% for platform in platforms %}
+        <span class="platform-badge">{{ platform }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="hero-image">
+      {% if screenshots and screenshots['items'] %}
+      <img src="{{ screenshots['items'][0] }}" alt="{{ brand.name }} screenshot">
+      {% else %}
+      <img src="{{ brand.logo }}" alt="{{ brand.name }}">
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+{% if features %}
+<section class="section features" id="features">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ features.title }}</h2>
+    </div>
+
+    {% if features.groups %}
+      {% for group in features.groups %}
+      <h3 class="feature-group-title">{{ group.title }}</h3>
+      <div class="features-grid">
+        {% for feature in group['items'] %}
+        <div class="feature-card">
+          <span class="feature-icon">{{ feature.icon }}</span>
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    {% elif features['items'] %}
+    <div class="features-grid">
+      {% for feature in features['items'] %}
+      <div class="feature-card">
+        <span class="feature-icon">{{ feature.icon }}</span>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+<!-- Screenshots Section -->
+{% if screenshots and screenshots['items'] %}
+<section class="section screenshots-section" id="screenshots">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ screenshots.title }}</h2>
+    </div>
+    <div class="screenshots-scroll">
+      {% for screenshot in screenshots['items'] %}
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="{{ screenshot }}" alt="{{ brand.name }} screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Testimonials Section -->
+{% if testimonials and testimonials['items'] %}
+<section class="section testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ testimonials.title }}</h2>
+    </div>
+    <div class="testimonials-grid">
+      {% for testimonial in testimonials['items'] %}
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          {% for n in range(5) %}
+          <i class="fas fa-star {% if n < testimonial.rating %}active{% endif %}"></i>
+          {% endfor %}
+        </div>
+        <p class="testimonial-text">"{{ testimonial.text }}"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">{{ testimonial.name[0] }}</div>
+          <div class="author-info">
+            <h4>{{ testimonial.name }}</h4>
+            <span>{{ testimonial.role }}</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Pricing Section -->
+{% if pricing and pricing['tiers'] %}
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ pricing.title }}</h2>
+      {% if pricing.subtitle %}<p class="section-subtitle">{{ pricing.subtitle }}</p>{% endif %}
+    </div>
+
+    <div class="pricing-grid">
+      {% for tier in pricing['tiers'] %}
+      <div class="pricing-card {% if tier.featured %}featured{% endif %}">
+        <h3>{{ tier.name }}</h3>
+        <div class="pricing-price">{{ tier.price }}</div>
+        <ul class="pricing-features">
+          {% for feature in tier['features'] %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+        </ul>
+        <a href="#purchase-form" class="btn {% if tier.featured %}btn-primary{% else %}btn-secondary{% endif %}">
+          {{ nav.choose_plan }}
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if pricing.note %}
+    <p class="pricing-note">{{ pricing.note | safe }}</p>
+    {% endif %}
+    {% if pricing.disclaimer %}
+    <p class="pricing-disclaimer">{{ pricing.disclaimer | safe }}</p>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+<!-- Purchase Form Section -->
+{% if purchase_form %}
+<section class="section purchase" id="purchase-form">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ purchase_form.title }}</h2>
+      {% if purchase_form.subtitle %}<p class="section-subtitle">{{ purchase_form.subtitle }}</p>{% endif %}
+    </div>
+
+    <form class="purchase-form" id="purchase-form" action="{{ contact_form_endpoint }}" method="POST">
+      <input type="hidden" name="access_key" value="{{ contact_form_access_key }}">
+      <input type="hidden" name="subject" value="{{ purchase_form.title }} - {{ brand.name }}">
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+      <div class="form-grid">
+        {% for field in purchase_form.fields %}
+          {% if field is string %}
+            {% set field_name = field %}
+            {% set field_label = field | replace('_', ' ') | title %}
+            {% set field_type = 'textarea' if field == 'message' else ('select' if field == 'plan' else ('tel' if field == 'phone' else ('email' if field == 'email' else 'text'))) %}
+            {% set field_required = field in ['fullName', 'email', 'storeName', 'plan'] %}
+          {% else %}
+            {% set field_name = field.name %}
+            {% set field_label = field.label %}
+            {% set field_type = field.type %}
+            {% set field_required = field.required | default(True) %}
+          {% endif %}
+
+          {% set is_full_width = field_type == 'textarea' %}
+        <div class="form-group {% if is_full_width %}full-width{% endif %}">
+          <label for="{{ field_name }}">{{ field_label }}</label>
+          {% if field_type == 'textarea' %}
+          <textarea id="{{ field_name }}" name="{{ field_name }}" rows="4" {% if field_required %}required{% endif %}></textarea>
+          {% elif field_type == 'select' %}
+          <select id="{{ field_name }}" name="{{ field_name }}" {% if field_required %}required{% endif %}>
+            {% if field is string and purchase_form.plans %}
+              {% for option in purchase_form.plans %}
+              <option value="{{ option.value }}">{{ option.label }}</option>
+              {% endfor %}
+            {% elif field.options %}
+              {% for option in field.options %}
+              <option value="{{ option }}">{{ option }}</option>
+              {% endfor %}
+            {% endif %}
+          </select>
+          {% else %}
+          <input type="{{ field_type }}" id="{{ field_name }}" name="{{ field_name }}" {% if field_required %}required{% endif %}>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full">
+        <i class="fas fa-paper-plane"></i>
+        {{ purchase_form.submit or nav.send_request }}
+      </button>
+
+      <div class="form-status" id="purchase-status" data-success="{{ nav.form_success }}" data-error="{{ nav.form_error }}"></div>
+      {% if purchase_form.note %}
+      <p class="form-note">{{ purchase_form.note | safe }}</p>
+      {% endif %}
+    </form>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,406 @@
+{
+  "site": {
+    "url": "https://abdulrasol.github.io",
+    "title_en": "Abdulrasol Al-Hilo — Flutter & Django Developer",
+    "title_ar": "عبدالرسول الحلو — مطور Flutter و Django",
+    "description_en": "Professional Flutter & Django developer building cross-platform mobile apps, web platforms, and AI-powered tools. Available for freelance and full-time opportunities.",
+    "description_ar": "مطور Flutter و Django محترف، أبني تطبيقات موبايل متعددة المنصات، منصات ويب، وأدوات مدعومة بالذكاء الاصطناعي. متاح للعمل الحر والدوام الكامل.",
+    "keywords_en": "Flutter Developer, Mobile App Developer, Django Developer, Python, Cross-Platform Apps, Software Engineer, Iraq",
+    "keywords_ar": "مطور فلاتر, مطور تطبيقات, مطور Django, مبرمج, مهندس برمجيات, العراق",
+    "author": "Abdulrasol Al-Hilo",
+    "google_site_verification": "rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg"
+  },
+  "analytics": {
+    "provider": "goatcounter",
+    "goatcounter_code": "abdulrasol",
+    "enabled": true,
+    "track_outbound": true
+  },
+  "settings": {
+    "default_lang": "en",
+    "default_theme": "dark",
+    "currency": "$"
+  },
+  "personal": {
+    "name_en": "Abdulrasol Al-Hilo",
+    "name_ar": "عبدالرسول الحلو",
+    "tagline_en": "Flutter & Django Developer",
+    "tagline_ar": "مطور Flutter و Django",
+    "location_en": "Iraq",
+    "location_ar": "العراق",
+    "availability_en": "Available for work",
+    "availability_ar": "متاح للعمل",
+    "email": "abdulrsol97@gmail.com",
+    "whatsapp": "9647813639721",
+    "whatsapp_message_en": "Hello Abdulrasol, I visited your portfolio and would like to discuss a project.",
+    "whatsapp_message_ar": "مرحباً عبدالرسول، زرت موقعك الشخصي وأرغب في مناقشة مشروع.",
+    "photo": "/static/images/progile.JPEG",
+    "resume_pdf": "/static/resume.pdf",
+    "social": {
+      "github": "https://github.com/abdulrasol",
+      "linkedin": null,
+      "twitter": null,
+      "play_store": null,
+      "facebook": null,
+      "instagram": null
+    }
+  },
+  "hero": {
+    "badge_en": "Available for work",
+    "badge_ar": "متاح للعمل",
+    "headline_en": "Building Cross-Platform Apps & Web Platforms",
+    "headline_ar": "أبني تطبيقات متعددة المنصات ومنصات ويب",
+    "highlight_en": "That Solve Real Problems",
+    "highlight_ar": "تحل مشاكل حقيقية",
+    "subtitle_en": "I'm a software engineer specializing in Flutter mobile apps, Django web development, and AI-powered tools. I help businesses turn ideas into fast, scalable, and beautiful digital products.",
+    "subtitle_ar": "أنا مهندس برمجيات متخصص في تطبيقات Flutter، تطوير الويب بـ Django، والأدوات المدعومة بالذكاء الاصطناعي. أساعد الشركات على تحويل الأفكار إلى منتجات رقمية سريعة وقابلة للتوسع وجميلة.",
+    "cta_primary_en": "View My Work",
+    "cta_primary_ar": "تصفح أعمالي",
+    "cta_secondary_en": "Download Resume",
+    "cta_secondary_ar": "تحميل السيرة الذاتية"
+  },
+  "about": {
+    "title_en": "About Me",
+    "title_ar": "من أنا",
+    "text_en": "I'm a passionate software engineer with deep experience in mobile and web development. Over the years, I've built and shipped multiple production-ready applications — from AI-powered utility apps to full business management systems.",
+    "text_ar": "أنا مهندس برمجيات شغوف بخبرة عميقة في تطوير الموبايل والويب. على مر السنين، قمت ببناء وإطلاق العديد من التطبيقات الجاهزة للإنتاج — من تطبيقات الأدوات المدعومة بالذكاء الاصطناعي إلى أنظمة إدارة الأعمال الكاملة.",
+    "stats": [
+      {
+        "value_en": "7+",
+        "value_ar": "٧+",
+        "label_en": "Apps Shipped",
+        "label_ar": "تطبيق مطلق"
+      },
+      {
+        "value_en": "5+",
+        "value_ar": "٥+",
+        "label_en": "Years Coding",
+        "label_ar": "سنوات برمجة"
+      },
+      {
+        "value_en": "12",
+        "value_ar": "١٢",
+        "label_en": "Languages Supported",
+        "label_ar": "لغة مدعومة"
+      }
+    ]
+  },
+  "skills": {
+    "title_en": "Skills & Technologies",
+    "title_ar": "المهارات والتقنيات",
+    "subtitle_en": "Technologies I use to build modern, scalable applications.",
+    "subtitle_ar": "التقنيات التي أستخدمها لبناء تطبيقات حديثة وقابلة للتوسع.",
+    "categories": [
+      {
+        "name_en": "Mobile Development",
+        "name_ar": "تطوير الموبايل",
+        "skills": [
+          {
+            "name": "Flutter",
+            "icon": "flutter",
+            "level": 95
+          },
+          {
+            "name": "Dart",
+            "icon": "dart",
+            "level": 90
+          },
+          {
+            "name": "Android",
+            "icon": "android",
+            "level": 80
+          },
+          {
+            "name": "iOS",
+            "icon": "apple",
+            "level": 75
+          }
+        ]
+      },
+      {
+        "name_en": "Web Development",
+        "name_ar": "تطوير الويب",
+        "skills": [
+          {
+            "name": "Django",
+            "icon": "python",
+            "level": 85
+          },
+          {
+            "name": "Python",
+            "icon": "python",
+            "level": 85
+          },
+          {
+            "name": "HTML/CSS",
+            "icon": "html5",
+            "level": 85
+          }
+        ]
+      },
+      {
+        "name_en": "Backend & Cloud",
+        "name_ar": "الخلفية والسحابة",
+        "skills": [
+          {
+            "name": "Firebase",
+            "icon": "firebase",
+            "level": 85
+          },
+          {
+            "name": "Google Cloud",
+            "icon": "google",
+            "level": 70
+          },
+          {
+            "name": "REST APIs",
+            "icon": "server",
+            "level": 80
+          },
+          {
+            "name": "SQLite",
+            "icon": "database",
+            "level": 80
+          }
+        ]
+      },
+      {
+        "name_en": "AI & Tools",
+        "name_ar": "الذكاء الاصطناعي والأدوات",
+        "skills": [
+          {
+            "name": "AI",
+            "icon": "brain",
+            "level": 75
+          },
+          {
+            "name": "UI/UX Design",
+            "icon": "pen-nib",
+            "level": 75
+          },
+          {
+            "name": "Git",
+            "icon": "git-alt",
+            "level": 80
+          }
+        ]
+      }
+    ]
+  },
+  "experience": [],
+  "projects": {
+    "title_en": "Featured Projects",
+    "title_ar": "أبرز المشاريع",
+    "subtitle_en": "A selection of apps and platforms I've designed and built.",
+    "subtitle_ar": "مجموعة من التطبيقات والمنصات التي صممتها وبنيتها.",
+    "filter_all_en": "All",
+    "filter_all_ar": "الكل",
+    "filter_mobile_en": "Mobile",
+    "filter_mobile_ar": "موبايل",
+    "filter_business_en": "Business",
+    "filter_business_ar": "أعمال",
+    "filter_ai_en": "AI",
+    "filter_ai_ar": "ذكاء اصطناعي",
+    "featured_badge_en": "Featured",
+    "featured_badge_ar": "مميز",
+    "list": [
+      {
+        "title_en": "Baytraq Sales Manager",
+        "title_ar": "مدير مبيعات بيترق",
+        "desc_en": "All-in-one sales operations workspace with POS, invoicing, inventory, multi-device sync, and staff roles.",
+        "desc_ar": "مساحة عمل شاملة لعمليات المبيعات مع نقاط البيع، الفواتير، المخزون، المزامنة بين الأجهزة، وأدوار الموظفين.",
+        "image": "/assets/baytraq/logo.png",
+        "category": "business",
+        "featured": true,
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "Firebase",
+          "ObjectBox"
+        ],
+        "links": {
+          "page": "/baytraq/",
+          "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager",
+          "github": null,
+          "facebook": null,
+          "instagram": null
+        }
+      },
+      {
+        "title_en": "MeterLog",
+        "title_ar": "ميتر لوغ",
+        "desc_en": "AI-powered multimeter reader with OCR recognition, scheduled capture, and Excel/CSV export.",
+        "desc_ar": "قارئ Multimeter ذكي بالذكاء الاصطناعي مع التعرف الضوئي، الالتقاط المجدول، وتصدير Excel/CSV.",
+        "image": "/assets/meter_log/logo.png",
+        "category": "ai",
+        "featured": true,
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "AI/OCR",
+          "Isar"
+        ],
+        "links": {
+          "page": "/meterlog/",
+          "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log",
+          "github": null,
+          "facebook": null,
+          "instagram": null
+        }
+      },
+      {
+        "title_en": "MEAAD",
+        "title_ar": "ميعاد",
+        "desc_en": "Periodic payment and subscriber management app with smart reminders, PDF reports, and Google Drive sync.",
+        "desc_ar": "تطبيق لإدارة المدفوعات الدورية والمشتركين مع تذكيرات ذكية، تقارير PDF، ومزامنة Google Drive.",
+        "image": "/meaad/logo.png",
+        "category": "business",
+        "featured": true,
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "Google Sheets",
+          "Google Drive"
+        ],
+        "links": {
+          "page": "/meaad/",
+          "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meaad",
+          "github": null,
+          "facebook": null,
+          "instagram": null
+        }
+      },
+      {
+        "title_en": "Store Management",
+        "title_ar": "إدارة المتجر",
+        "desc_en": "Complete store management system for inventory, invoices, customers, suppliers, expenses, and analytics.",
+        "desc_ar": "نظام كامل لإدارة المتجر يشمل المخزون، الفواتير، العملاء، الموردين، المصاريف، والتحليلات.",
+        "image": "/assets/store_mangement/logo.png",
+        "category": "business",
+        "featured": false,
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "GetX",
+          "ObjectBox"
+        ],
+        "links": {
+          "page": "/store-management/",
+          "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.store_mangment",
+          "github": "https://github.com/abdulrasol/store_management",
+          "facebook": null,
+          "instagram": null
+        }
+      },
+      {
+        "title_en": "Madarik",
+        "title_ar": "مدارك",
+        "desc_en": "Interactive educational quiz platform focused on Islamic history, science, and culture with achievements and leaderboards.",
+        "desc_ar": "منصة تعليمية تفاعلية للاختبارات تركز على التاريخ الإسلامي والعلوم والثقافة مع الإنجازات ولوحات المتصدرين.",
+        "image": "/assets/madarik/logo.png",
+        "category": "mobile",
+        "featured": false,
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "Riverpod",
+          "Hive"
+        ],
+        "links": {
+          "page": "/madarik/",
+          "googlePlay": null,
+          "github": "https://github.com/abdulrasol/madarik_knowledge_jounrny",
+          "facebook": null,
+          "instagram": null
+        }
+      },
+      {
+        "title_en": "Watt",
+        "title_ar": "وات",
+        "desc_en": "Solar system calculator and equipment marketplace for designing clean energy solutions.",
+        "desc_ar": "حاسبة أنظمة الطاقة الشمسية وسوق معدات لتصميم حلول الطاقة النظيفة.",
+        "image": "/assets/watt/logo.png",
+        "category": "mobile",
+        "featured": false,
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "Firebase"
+        ],
+        "links": {
+          "page": "/watt/",
+          "googlePlay": null,
+          "github": null,
+          "facebook": null,
+          "instagram": null
+        }
+      },
+      {
+        "title_en": "Spimebook",
+        "title_ar": "سبايم بوك",
+        "desc_en": "Social network platform with geospatial features. (Coming soon)",
+        "desc_ar": "شبكة تواصل اجتماعي مع ميزات تحديد المواقع الجغرافية. (قريباً)",
+        "image": "/logo.png",
+        "category": "mobile",
+        "featured": false,
+        "technologies": [
+          "Flutter",
+          "Firebase"
+        ],
+        "links": {
+          "page": null,
+          "googlePlay": null,
+          "github": null,
+          "facebook": null,
+          "instagram": null
+        }
+      }
+    ]
+  },
+  "testimonials": [],
+  "contact": {
+    "title_en": "Get In Touch",
+    "title_ar": "تواصل معي",
+    "subtitle_en": "Have a project in mind or want to hire me? Send a message and I'll respond as soon as possible.",
+    "subtitle_ar": "هل لديك مشروع في بالك أو ترغب في توظيفي؟ أرسل رسالة وسأرد في أقرب وقت ممكن.",
+    "form": {
+      "provider": "web3forms",
+      "endpoint": "https://api.web3forms.com/submit",
+      "access_key": "YOUR_WEB3FORMS_ACCESS_KEY",
+      "name_label_en": "Name",
+      "name_label_ar": "الاسم",
+      "email_label_en": "Email",
+      "email_label_ar": "البريد الإلكتروني",
+      "subject_label_en": "Subject",
+      "subject_label_ar": "الموضوع",
+      "message_label_en": "Message",
+      "message_label_ar": "الرسالة",
+      "submit_en": "Send Message",
+      "submit_ar": "إرسال الرسالة",
+      "success_en": "Thank you! Your message has been sent successfully.",
+      "success_ar": "شكراً! تم إرسال رسالتك بنجاح.",
+      "error_en": "Something went wrong. Please try again or contact me directly.",
+      "error_ar": "حدث خطأ ما. يرجى المحاولة مرة أخرى أو التواصل معي مباشرة."
+    },
+    "info": {
+      "email_title_en": "Email",
+      "email_title_ar": "البريد الإلكتروني",
+      "whatsapp_title_en": "WhatsApp",
+      "whatsapp_title_ar": "واتساب",
+      "whatsapp_desc_en": "Quick chat on WhatsApp",
+      "whatsapp_desc_ar": "محادثة سريعة على واتساب",
+      "location_title_en": "Location",
+      "location_title_ar": "الموقع"
+    }
+  },
+  "footer": {
+    "tagline_en": "Building digital products with passion and precision.",
+    "tagline_ar": "بناء منتجات رقمية بشغف ودقة.",
+    "quick_links_title_en": "Quick Links",
+    "quick_links_title_ar": "روابط سريعة",
+    "contact_title_en": "Contact",
+    "contact_title_ar": "تواصل",
+    "copyright_en": "All rights reserved.",
+    "copyright_ar": "جميع الحقوق محفوظة."
+  }
+}

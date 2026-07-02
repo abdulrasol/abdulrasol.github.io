@@ -1,0 +1,294 @@
+{
+  "id": "baytraq",
+  "site": {
+    "title_en": "Baytraq Sales Manager",
+    "title_ar": "بيترق - مدير المبيعات",
+    "description_en": "The ultimate sales and management workspace. Run invoicing, POS sales, track inventory, monitor profits and expenses, with LAN and cloud sync.",
+    "description_ar": "مساحة العمل المتكاملة للمبيعات والإدارة. أدِر الفواتير ومبيعات نقاط البيع، تتبع المخزون، راقب الأرباح والمصروفات مع المزامنة المحلية والسحابية.",
+    "keywords_en": "POS, Inventory, Invoicing, Sales Manager, Desktop App, Cloud Sync, Flutter",
+    "keywords_ar": "نقطة بيع, مخزون, فواتير, إدارة مبيعات, تطبيق سطح مكتب, مزامنة سحابية, فلاتر"
+  },
+  "settings": {
+    "default_lang": "en",
+    "default_theme": "dark",
+    "primary_color": "#1A237E",
+    "secondary_color": "#FFB300"
+  },
+  "brand": {
+    "name_en": "Baytraq",
+    "name_ar": "بيترق",
+    "tagline_en": "The ultimate sales & management workspace",
+    "tagline_ar": "مساحة العمل المتكاملة للمبيعات والإدارة",
+    "logo": "/assets/baytraq/logo.png",
+    "banner": "/assets/baytraq/banar.png",
+    "favicon": "/assets/baytraq/logo.png"
+  },
+  "links": {
+    "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager",
+    "appStore": null,
+    "github": "https://github.com/abdulrasol/baytraq_sales_manager",
+    "facebook": null,
+    "instagram": null,
+    "support_email": "abdulrsol97@gmail.com"
+  },
+  "hero": {
+    "title_en": "The Ultimate Sales <br>& Management Workspace",
+    "title_ar": "مساحة العمل المتكاملة <br>للمبيعات والإدارة",
+    "subtitle_en": "Run invoicing, POS sales, track inventory, monitor profits and expenses, and stay connected with customers. Optimized for Desktop/PC first, with full support for Tablets and Mobile devices.",
+    "subtitle_ar": "إدارة الفواتير ومبيعات نقاط البيع، تتبع المخزون، مراقبة الأرباح والمصروفات، والبقاء على تواصل مع عملائك. مُحسّن لأجهزة الكمبيوتر والمكتب أولاً، مع دعم كامل للأجهزة اللوحية والهواتف الذكية.",
+    "cta_en": "Get Baytraq Now",
+    "cta_ar": "احصل على بيترق الآن"
+  },
+  "platforms": ["Windows", "macOS", "Linux", "Android", "iOS"],
+  "category": "business",
+  "featured": true,
+  "technologies": ["Flutter", "Dart", "Firebase", "ObjectBox"],
+  "features": {
+    "title_en": "Key Features",
+    "title_ar": "المميزات الرئيسية",
+    "groups": [
+      {
+        "title_en": "Core Operations",
+        "title_ar": "العمليات الأساسية",
+        "items": [
+          {
+            "icon": "🛒",
+            "title_en": "Point of Sale (POS)",
+            "title_ar": "نقطة البيع",
+            "desc_en": "Bilingual interface optimized for quick actions with integrated camera/QR scanning and express multi-cart system.",
+            "desc_ar": "واجهة ثنائية اللغة محسّنة للإجراءات السريعة مع مسح الباركود/QR المدمج وسلة مشتريات متعددة وسريعة."
+          },
+          {
+            "icon": "📦",
+            "title_en": "Inventory Management",
+            "title_ar": "إدارة المخزون",
+            "desc_en": "Real-time stock tracking with auto-deductions on sales, low-stock alerts, products & services, and supplier linking.",
+            "desc_ar": "تتبع المخزون بالوقت الفعلي مع خصم تلقائي للمبيعات، وتنبيهات انخفاض المخزون، ودعم المنتجات والخدمات، وربط الموردين."
+          },
+          {
+            "icon": "📄",
+            "title_en": "Advanced Invoicing",
+            "title_ar": "فواتير متقدمة",
+            "desc_en": "Create custom invoices with discounts, track paid/unpaid/partial states, view history, and print formatted PDFs.",
+            "desc_ar": "إنشاء فواتير مخصصة بخصومات متنوعة، وتتبع حالة الدفع، والاطلاع على سجل التعديلات، وطباعة PDF مع شعار المتجر."
+          }
+        ]
+      },
+      {
+        "title_en": "Financials & Analytics",
+        "title_ar": "المالية والتحليلات",
+        "items": [
+          {
+            "icon": "📈",
+            "title_en": "Insights Dashboard",
+            "title_ar": "لوحة تحكم التحليلات",
+            "desc_en": "Real-time metrics for sales, net/gross profits, expenses, and debts with multi-period filters and top-sellers charts.",
+            "desc_ar": "مؤشرات مالية فورية للمبيعات، صافي وإجمالي الأرباح، المصروفات، والديون مع فلاتر للفترات الزمنية ورسوم بيانية."
+          },
+          {
+            "icon": "💸",
+            "title_en": "Expense Tracking",
+            "title_ar": "تتبع المصروفات",
+            "desc_en": "Log one-time and recurring expenses with automated due calculation and alerts.",
+            "desc_ar": "تسجيل المصروفات لمرة واحدة ودورية مع احتساب تلقائي للمستحقات والتنبيهات."
+          },
+          {
+            "icon": "🏛️",
+            "title_en": "Debt & Credit Management",
+            "title_ar": "الديون والائتمان",
+            "desc_en": "Running customer ledger balances, automatic debit/credit posting on invoices, and self-healing sync engine.",
+            "desc_ar": "حسابات جارية لأرصدة العملاء، وتسجيل تلقائي للديون والائتمان بالفواتير، ومحرك قاعدة بيانات يصلح اختلافات المزامنة."
+          }
+        ]
+      },
+      {
+        "title_en": "Networking, Sync & Multi-Device",
+        "title_ar": "المزامنة وتعدد الأجهزة",
+        "items": [
+          {
+            "icon": "🌍",
+            "title_en": "Real-Time Cloud Sync",
+            "title_ar": "المزامنة السحابية",
+            "desc_en": "Seamless multi-tenant synchronization powered by Cloud Firestore with secure rules and anonymous authentication fallback.",
+            "desc_ar": "مزامنة سحابية سلسة ومتعددة المتاجر مدعومة بقواعد Firestore الآمنة وتسجيل الدخول المجهول الاحتياطي."
+          },
+          {
+            "icon": "📶",
+            "title_en": "Local LAN Sync (Offline-First)",
+            "title_ar": "المزامنة المحلية بدون إنترنت",
+            "desc_en": "Master-Slave LAN architecture over Wi-Fi using WebSockets, Drift SQLite local storage, and LWW conflict resolution.",
+            "desc_ar": "هيكلية رئيسي/تابِع للشبكة المحلية عبر Wi-Fi باستخدام WebSockets، وتخزين SQLite محلي مع معالجة تعارض المزامنة."
+          },
+          {
+            "icon": "🔍",
+            "title_en": "Price Checker (Kiosk Mode)",
+            "title_ar": "قارئ الأسعار",
+            "desc_en": "Dedicated station for customer membership kiosk scanning with offline fallback querying local replica database.",
+            "desc_ar": "محطة مخصصة للعملاء للبحث ومسح المنتجات لمعرفة الأسعار، مع وضع عدم الاتصال الذي يستعلم من نسخة قاعدة البيانات المحلية."
+          }
+        ]
+      },
+      {
+        "title_en": "Identity & Access Control",
+        "title_ar": "الهوية والصلاحيات",
+        "items": [
+          {
+            "icon": "👥",
+            "title_en": "Staff Roles (RBAC)",
+            "title_ar": "إدارة الموظفين والصلاحيات",
+            "desc_en": "Role-Based Access Control (Admin, Manager, Cashier, Staff, PriceViewer) with screen guarding and secure PIN/QR logins.",
+            "desc_ar": "التحكم في الوصول بناءً على الأدوار (مدير، محاسب، كاشير، موظف) مع حماية الشاشات وتسجيل دخول آمن برمز PIN أو QR."
+          }
+        ]
+      },
+      {
+        "title_en": "System Utilities",
+        "title_ar": "أدوات النظام",
+        "items": [
+          {
+            "icon": "🛠️",
+            "title_en": "Utility & Customization Suite",
+            "title_ar": "حزمة الأدوات والتخصيص",
+            "desc_en": "JSON Backup/Restore, 12 built-in languages, custom branding, currency/decimals, and responsive Light/Dark themes.",
+            "desc_ar": "نسخ احتياطي واستعادة بصيغة JSON، دعم 12 لغة مدمجة، تخصيص الهوية التجارية والعملة والكسور العشرية ومظهر داكن/فاتح."
+          }
+        ]
+      }
+    ]
+  },
+  "screenshots": null,
+  "testimonials": null,
+  "privacy": {
+    "last_updated": "2026-05-07",
+    "email": "abdulrsol97@gmail.com",
+    "sections": [
+      {
+        "title_en": "Information Collection and Use",
+        "title_ar": "جمع المعلومات واستخدامها",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service.",
+            "text_ar": "تصف سياسة الخصوصية هذه سياساتنا وإجراءاتنا بشأن جمع واستخدام والكشف عن معلوماتك عند استخدامك للخدمة."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.",
+            "text_ar": "نحن نستخدم بياناتك الشخصية لتوفير الخدمة وتحسينها. باستخدامك للخدمة، فإنك توافق على جمع واستخدام المعلومات وفقًا لسياسة الخصوصية هذه."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:",
+            "text_ar": "أثناء استخدام خدمتنا، قد نطلب منك تزويدنا بمعلومات تعريف شخصية معينة يمكن استخدامها للاتصال بك أو تحديد هويتك. قد تشمل معلومات التعريف الشخصية، على سبيل المثال لا الحصر:"
+          },
+          {
+            "type": "list",
+            "items_en": ["Email address", "First name and last name", "Usage Data"],
+            "items_ar": ["عنوان البريد الإلكتروني", "الاسم الأول والاسم الأخير", "بيانات الاستخدام"]
+          }
+        ]
+      },
+      {
+        "title_en": "Cloud Sync and Firebase",
+        "title_ar": "المزامنة السحابية و Firebase",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Baytraq Sales Manager uses Firebase (a Google service) to provide cloud synchronization, authentication, and database services across your devices. Your data is securely stored on Firebase servers. We do not sell your personal data or store data to third parties.",
+            "text_ar": "يستخدم تطبيق بيترق خدمة Firebase (المقدمة من شركة Google) لتوفير خدمات المزامنة السحابية والمصادقة وقواعد البيانات عبر أجهزتك. يتم تخزين بياناتك بشكل آمن على خوادم Firebase. نحن لا نبيع بياناتك الشخصية أو بيانات متجرك لأطراف ثالثة."
+          }
+        ]
+      },
+      {
+        "title_en": "Contact Us",
+        "title_ar": "اتصل بنا",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "If you have any questions about this Privacy Policy, you can contact us at:",
+            "text_ar": "إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، يمكنك الاتصال بنا على:"
+          }
+        ]
+      }
+    ]
+  },
+  "terms": null,
+  "changelog": null,
+  "pricing": {
+    "title_en": "Simple, Transparent Pricing",
+    "title_ar": "تسعير بسيط وشفاف",
+    "note_en": "Invite your team members to join your store database for Free!",
+    "note_ar": "قم بدعوة أعضاء فريقك للانضمام لقاعدة بيانات متجرك مجاناً!",
+    "disclaimer_en": "* Note: Cloud Tier uses Firebase for remote sync. Firebase free limits apply; additional usage charges are paid directly to Firebase if you exceed their free plan.",
+    "disclaimer_ar": "* ملاحظة: الفئة السحابية تستخدم منصة Firebase. تُطبق حدود Firebase المجانية؛ تُدفع أي رسوم استخدام إضافية إلى Firebase مباشرة إذا تجاوزت خطتهم المجانية.",
+    "tiers": [
+      {
+        "id": "free",
+        "name_en": "Free Tier",
+        "name_ar": "الفئة المجانية",
+        "price_en": "Free",
+        "price_ar": "مجاناً",
+        "featured": false,
+        "cta_en": "Get Started",
+        "cta_ar": "ابدأ الآن",
+        "features_en": ["Full POS & Invoicing", "Inventory Management", "Single Device Offline Mode", "Local Backup & Restore"],
+        "features_ar": ["نقطة البيع الكاملة والفواتير", "إدارة المخزون والمنتجات", "العمل دون اتصال لجهاز واحد", "نسخ احتياطي واستعادة محلي"]
+      },
+      {
+        "id": "lan",
+        "name_en": "LAN Sync Tier",
+        "name_ar": "فئة المزامنة المحلية",
+        "price_en": "$150",
+        "price_ar": "150 دولار",
+        "featured": true,
+        "cta_en": "Choose LAN Sync",
+        "cta_ar": "اختر المزامنة المحلية",
+        "features_en": ["Everything in Free Tier", "Local LAN Multi-Device Sync", "Offline Master-Client Setup", "Price Checker Kiosk Mode", "One-time payment per store"],
+        "features_ar": ["كل شيء في الفئة المجانية", "مزامنة أجهزة متعددة بالشبكة المحلية", "بنية رئيسي/تابع بدون إنترنت", "وضع كشك قارئ الأسعار", "دفع لمرة واحدة لكل متجر"]
+      },
+      {
+        "id": "cloud",
+        "name_en": "Cloud & LAN Tier",
+        "name_ar": "الفئة السحابية والمحلية",
+        "price_en": "$250",
+        "price_ar": "250 دولار",
+        "featured": false,
+        "cta_en": "Choose Cloud & LAN",
+        "cta_ar": "اختر السحابي والمحلي",
+        "features_en": ["Everything in LAN Sync", "Real-Time Cloud Sync (Firebase)", "Hybrid Cloud & Offline LAN", "Automatic Firestore Backups", "Staff Roles & Remote Sync"],
+        "features_ar": ["كل شيء في المزامنة المحلية", "مزامنة سحابية فورية (Firebase)", "مزامنة هجينة سحابية ومحلية", "نسخ احتياطي تلقائي بـ Firestore", "صلاحيات الموظفين والمزامنة عن بعد"]
+      }
+    ]
+  },
+  "purchase_form": {
+    "title_en": "Request to Purchase Baytraq",
+    "title_ar": "طلب شراء بيترق",
+    "subtitle_en": "Fill out the form below and we will contact you shortly with payment instructions and your license key.",
+    "subtitle_ar": "املأ النموذج أدناه وسنتواصل معك قريباً بتعليمات الدفع ومفتاح الترخيص الخاص بك.",
+    "fields": [
+      { "name": "fullName", "label_en": "Full Name", "label_ar": "الاسم الكامل", "type": "text", "required": true },
+      { "name": "email", "label_en": "Email Address", "label_ar": "البريد الإلكتروني", "type": "email", "required": true },
+      { "name": "storeName", "label_en": "Store / Business Name", "label_ar": "اسم المتجر / النشاط التجاري", "type": "text", "required": true },
+      { "name": "phone", "label_en": "Phone Number", "label_ar": "رقم الهاتف", "type": "tel", "required": false },
+      { "name": "plan", "label_en": "Selected Plan", "label_ar": "الباقة المختارة", "type": "select", "required": true },
+      { "name": "message", "label_en": "Message / Notes", "label_ar": "الرسالة / ملاحظات", "type": "textarea", "required": false }
+    ],
+    "plans": [
+      { "value": "Free Tier", "label_en": "Free Tier", "label_ar": "الفئة المجانية" },
+      { "value": "LAN Sync Tier ($150)", "label_en": "LAN Sync Tier ($150)", "label_ar": "فئة المزامنة المحلية (150$)" },
+      { "value": "Cloud & LAN Tier ($250)", "label_en": "Cloud & LAN Tier ($250)", "label_ar": "الفئة السحابية والمحلية (250$)" }
+    ],
+    "submit_en": "Send Purchase Request",
+    "submit_ar": "إرسال طلب الشراء",
+    "note_en": "This opens your email app with the details pre-filled. You can also reach us directly at abdulrsol97@gmail.com.",
+    "note_ar": "سيفتح هذا تطبيق البريد الإلكتروني الخاص بك مع تفاصيل مملوءة مسبقاً. يمكنك أيضاً التواصل معنا مباشرة على abdulrsol97@gmail.com."
+  },
+  "get_login": {
+    "filename": "login.json",
+    "source": "https://abdulrasol.github.io/baytraq/login.json",
+    "title_en": "Downloading Login Configuration...",
+    "title_ar": "جاري تحميل إعدادات تسجيل الدخول...",
+    "description_en": "Your login configuration file will download automatically. If it does not start within a few seconds, use the button below.",
+    "description_ar": "سيتم تحميل ملف إعدادات تسجيل الدخول تلقائياً. إذا لم يبدأ خلال ثوانٍ قليلة، استخدم الزر أدناه."
+  }
+}
