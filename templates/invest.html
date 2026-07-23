@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-hero invest-hero">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ 'Investment Opportunities' if lang == 'en' else 'فرص الاستثمار' }}</span>
+      <h1 class="section-title">{{ 'Investment Opportunities' if lang == 'en' else 'فرص الاستثمار' }}</h1>
+      <p class="section-subtitle">
+        {{ 'Explore our projects open for investment and partnership.' if lang == 'en' else 'استكشف مشاريعنا المفتوحة للاستثمار والشراكة.' }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section invest-list" id="invest">
+  <div class="container">
+    <div class="invest-grid">
+      {% for opp in investments.opportunities %}
+      <article class="invest-card">
+        <div class="invest-header">
+          {% set project = projects_dict[opp.project_id] if projects_dict else None %}
+          {% if project %}
+          <img src="{{ project.brand.logo }}" alt="{{ opp.title }}" class="invest-logo" loading="lazy">
+          {% endif %}
+          <span class="invest-status">{{ opp.seeking.type }}</span>
+        </div>
+        <div class="invest-body">
+          <h3>{{ opp.title }}</h3>
+          <p class="invest-tagline">{{ opp.tagline }}</p>
+          <div class="invest-meta">
+            <span class="invest-seeking">{{ opp.seeking.amount }}</span>
+            <span class="invest-traction">{{ opp.traction.status }}</span>
+          </div>
+          <a href="{{ link('/invest/' + opp.id + '/') }}" class="btn btn-primary btn-full">
+            {{ 'View Details' if lang == 'en' else 'عرض التفاصيل' }}
+          </a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

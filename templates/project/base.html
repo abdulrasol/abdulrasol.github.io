@@ -88,7 +88,7 @@
         <span>{{ brand.name }}</span>
       </a>
 
-      <a href="{{ '/' if lang == 'en' else '/ar/' }}" class="back-link desktop-back">
+      <a href="{{ home_url }}" class="back-link desktop-back">
         <i class="fas fa-arrow-{{ 'left' if lang == 'en' else 'right' }}"></i>
         {{ nav.back_to_portfolio }}
       </a>
@@ -109,7 +109,7 @@
 
     <!-- Mobile Nav -->
     <div class="mobile-nav" id="mobile-nav">
-      <a href="{{ '/' if lang == 'en' else '/ar/' }}">{{ nav.back_to_portfolio }}</a>
+      <a href="{{ home_url }}">{{ nav.back_to_portfolio }}</a>
       <a href="{{ page_url }}">{{ nav.home }}</a>
       {% if has_privacy %}<a href="{{ privacy_url }}">{{ nav.privacy }}</a>{% endif %}
       {% if has_terms %}<a href="{{ terms_url }}">{{ nav.terms }}</a>{% endif %}

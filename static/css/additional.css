@@ -1,0 +1,752 @@
+/* ========================================
+   Meaad Tech — Additional Styles
+   Services, Team, Invest, Careers, Timeline
+   ======================================== */
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius);
+  background: rgba(54, 173, 163, 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Experience Timeline */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--primary);
+  opacity: 0.3;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2rem;
+  top: 0.25rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid var(--bg);
+  margin-left: -5px;
+}
+
+.timeline-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.timeline-period {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-role {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-company {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* Team Section */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.team-photo {
+  position: relative;
+  padding: 2rem 2rem 0;
+}
+
+.team-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  border: 3px solid var(--primary);
+}
+
+.team-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.team-info {
+  padding: 1.5rem;
+}
+
+.team-info h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.team-role {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.team-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.team-skills .skill-tag {
+  font-size: 0.8rem;
+  padding: 3px 10px;
+}
+
+.team-hiring {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 3rem;
+  background: var(--surface);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+}
+
+.team-hiring h2 {
+  margin-bottom: 0.5rem;
+}
+
+.team-hiring p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Member Page */
+.member-hero {
+  padding: calc(var(--header-height) + 60px) 0 60px;
+  background: var(--bg-alt);
+}
+
+.member-hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.member-photo-large img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary);
+}
+
+.member-intro h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.member-role {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.member-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.member-social a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.member-social a:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.member-content {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 3rem;
+}
+
+.member-main h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.member-main h2:first-child {
+  margin-top: 0;
+}
+
+.member-skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.member-skills-grid .skill-tag.large {
+  font-size: 0.95rem;
+  padding: 6px 14px;
+}
+
+.member-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.sidebar-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.member-projects-list {
+  list-style: none;
+}
+
+.member-projects-list li {
+  margin-bottom: 0.5rem;
+}
+
+.member-projects-list a {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.member-projects-list a:hover {
+  color: var(--primary);
+}
+
+.member-cta {
+  padding: 3rem 0;
+}
+
+/* Invest Pages */
+.invest-hero {
+  background: var(--bg-alt);
+}
+
+.invest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.invest-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.invest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.invest-header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+
+.invest-logo {
+  height: 48px;
+  width: auto;
+}
+
+.invest-status {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background: rgba(54, 173, 163, 0.1);
+  color: var(--primary);
+}
+
+.invest-body {
+  padding: 1.5rem;
+}
+
+.invest-body h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.invest-tagline {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.invest-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.invest-meta span {
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--bg-alt);
+  color: var(--text-muted);
+}
+
+/* Invest Detail Page */
+.invest-hero-detail {
+  padding: calc(var(--header-height) + 60px) 0 60px;
+  background: var(--bg-alt);
+  text-align: center;
+}
+
+.invest-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.invest-logo-large {
+  height: 80px;
+  width: auto;
+  margin-bottom: 1.5rem;
+}
+
+.invest-hero-detail h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.invest-hero-detail .invest-tagline {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.invest-hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--primary);
+  color: white;
+}
+
+.badge-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.invest-section {
+  padding: 60px 0;
+}
+
+.invest-section-alt {
+  background: var(--bg-alt);
+}
+
+.invest-section-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.invest-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.invest-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.invest-feature-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.invest-feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.invest-feature-item h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.invest-seeking-box {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  text-align: center;
+  border: 2px solid var(--primary);
+}
+
+.invest-seeking-box h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.invest-amount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.invest-team {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.invest-team-card {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.invest-team-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 2px solid var(--primary);
+}
+
+.invest-cta {
+  padding: 80px 0;
+  background: var(--bg-alt);
+  text-align: center;
+}
+
+.invest-cta h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.invest-cta p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* Careers Page */
+.careers-empty {
+  text-align: center;
+  padding: 4rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-strong);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+}
+
+.careers-empty h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.careers-empty > p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.careers-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.careers-form h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.careers-form p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.notify-form .form-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.notify-form .form-input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+}
+
+/* Language Detection Toast */
+.lang-toast {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.lang-toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.lang-toast-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(12px);
+  max-width: 90vw;
+  flex-wrap: wrap;
+}
+
+.lang-toast-message {
+  font-size: 0.95rem;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.lang-toast-link {
+  background: var(--primary);
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.lang-toast-link:hover {
+  background: var(--primary-dark);
+}
+
+.lang-toast-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px;
+  margin-inline-start: 0.5rem;
+}
+
+.lang-toast-close:hover {
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .lang-toast-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .lang-toast-message {
+    white-space: normal;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .member-hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .member-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .invest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .invest-hero-detail h1 {
+    font-size: 1.75rem;
+  }
+
+  .invest-features {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-marker {
+    left: -1.5rem;
+  }
+}

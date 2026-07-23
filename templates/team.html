@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ nav.team }}</span>
+      <h1 class="section-title">{{ nav.team }}</h1>
+      <p class="section-subtitle">
+        {{ team.hiring_message }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section team" id="team">
+  <div class="container">
+    <div class="team-grid">
+      {% for member in team.members %}
+      <article class="team-card {% if member.featured %}featured{% endif %}">
+        <div class="team-photo">
+          <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+          {% if member.featured %}
+          <span class="team-badge">{{ 'Founder' if lang == 'en' else 'المؤسس' }}</span>
+          {% endif %}
+        </div>
+        <div class="team-info">
+          <h3>{{ member.name }}</h3>
+          <p class="team-role">{{ member.role }}</p>
+          <div class="team-skills">
+            {% for skill in member.skills[:4] %}
+            <span class="skill-tag">{{ skill }}</span>
+            {% endfor %}
+          </div>
+          <div class="team-actions">
+            <a href="{{ link('/team/' + member.id + '/') }}" class="btn btn-sm btn-primary">
+              {{ 'View Profile' if lang == 'en' else 'عرض الملف' }}
+            </a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    {% if team.open_positions %}
+    <div class="team-hiring">
+      <h2>{{ 'Join Our Team' if lang == 'en' else 'انضم إلى فريقنا' }}</h2>
+      <p>{{ team.hiring_message }}</p>
+      <a href="{{ link('/careers/') }}" class="btn btn-primary">
+        {{ 'View Open Positions' if lang == 'en' else 'عرض الوظائف المتاحة' }}
+      </a>
+    </div>
+    {% else %}
+    <div class="team-hiring team-hiring-placeholder">
+      <h2>{{ 'We are Growing' if lang == 'en' else 'نحن ننمو' }}</h2>
+      <p>{{ team.hiring_message }}</p>
+      <a href="{{ link('/careers/') }}" class="btn btn-secondary">
+        {{ 'Future Opportunities' if lang == 'en' else 'الفرص المستقبلية' }}
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}

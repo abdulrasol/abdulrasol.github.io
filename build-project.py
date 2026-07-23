@@ -187,6 +187,18 @@ def build_projects():
                     return f"/ar/{project_id}/{page}"
                 return f"/ar/{project_id}/"
 
+            def make_link(path):
+                """Return a URL with the correct language prefix for project pages."""
+                if lang == "ar":
+                    if path == "/":
+                        return "/ar/"
+                    if path.startswith("/"):
+                        return f"/ar{path}"
+                    return path
+                return path
+
+            home_url = "/" if lang == "en" else "/ar/"
+
             base_context = {
                 "lang": lang,
                 "dir": dir_value,
@@ -196,14 +208,16 @@ def build_projects():
                 "current_year": current_year,
                 "nav": nav_labels[lang],
                 "site": localized["site"],
-                "site_title": localized["site"]["title"],
-                "site_description": localized["site"]["description"],
-                "site_keywords": localized["site"]["keywords"],
+                "site_title": localized["site"].get("title", ""),
+                "site_description": localized["site"].get("description", ""),
+                "site_keywords": localized["site"].get("keywords", ""),
                 "whatsapp_number": whatsapp_number,
                 "whatsapp_message": whatsapp_message_en if lang == "en" else whatsapp_message_ar,
                 "contact_form_endpoint": contact_form_endpoint,
                 "contact_form_access_key": contact_form_access_key,
                 "analytics": portfolio.get("analytics", {}),
+                "link": make_link,
+                "home_url": home_url,
                 **localized,
             }
 

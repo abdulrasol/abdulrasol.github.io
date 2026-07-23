@@ -1,0 +1,103 @@
+{
+  "id": "sweep",
+  "site": {
+    "title_en": "SWEEP — Mac Cleaner for Developers",
+    "title_ar": "SWEEP — منظف ماك للمطورين",
+    "description_en": "High-performance Mac cleaning utility for developers. Built with Rust, Tauri v2, and React. Automatically finds and removes hidden development artifacts to reclaim disk space.",
+    "description_ar": "أداة عالية الأداء لتنظيف أجهزة Mac للمطورين. مبنية بـ Rust و Tauri v2 و React. تجد وتزيل تلقائياً الملفات المخفية للتطوير لاسترداد مساحة القرص.",
+    "keywords_en": "Mac Cleaner, Developer Tools, Rust, Tauri, React, Disk Cleanup, Utility",
+    "keywords_ar": "منظف ماك, أدوات المطورين, Rust, Tauri, React, تنظيف القرص, أدوات"
+  },
+  "settings": {
+    "default_lang": "en",
+    "default_theme": "dark",
+    "primary_color": "#1a1a2e",
+    "secondary_color": "#e94560"
+  },
+  "brand": {
+    "name_en": "SWEEP",
+    "name_ar": "SWEEP",
+    "tagline_en": "Reclaim your disk, one artifact at a time",
+    "tagline_ar": "استرد مساحة قرصك، ملفاً تلو الآخر",
+    "logo": "/assets/sweep/logo.png",
+    "banner": "/assets/sweep/banner.png",
+    "favicon": "/assets/sweep/logo.png"
+  },
+  "links": {
+    "googlePlay": null,
+    "appStore": null,
+    "github": "https://github.com/abdulrasol/sweep",
+    "facebook": null,
+    "instagram": null,
+    "support_email": "abdulrasol.alhilo@gmail.com"
+  },
+  "hero": {
+    "title_en": "SWEEP: Reclaim Your Workspace",
+    "title_ar": "SWEEP: استرد مساحة عملك",
+    "subtitle_en": "A professional command center to clean hidden developer artifacts. Built with Rust, Tauri v2, and React. Cross-platform for macOS, Windows, and Linux.",
+    "subtitle_ar": "مركز قيادة احترافي لتنظيف الملفات المخفية للمطورين. مبنى بـ Rust و Tauri v2 و React. متعدد المنصات لـ macOS و Windows و Linux.",
+    "cta_en": "View on GitHub",
+    "cta_ar": "المشروع على GitHub"
+  },
+  "platforms": ["macOS", "Windows", "Linux"],
+  "category": "developer_tools",
+  "featured": false,
+  "technologies": ["Rust", "Tauri", "React", "TypeScript", "Tailwind CSS"],
+  "features": {
+    "title_en": "SWEEP Features",
+    "title_ar": "مميزات SWEEP",
+    "items": [
+      {
+        "icon": "🧹",
+        "title_en": "Deep Multi-Environment Clean",
+        "title_ar": "تنظيف عميق متعدد البيئات",
+        "desc_en": "Cleans Flutter, Android (AVD/Gradle), Xcode (DerivedData), Node.js, Rust (Cargo), Python (Conda/Pip), Docker, Unity, Unreal Engine, and Adobe caches.",
+        "desc_ar": "ينظف Flutter و Android (AVD/Gradle) و Xcode (DerivedData) و Node.js و Rust (Cargo) و Python (Conda/Pip) و Docker و Unity و Unreal Engine و Adobe caches."
+      },
+      {
+        "icon": "📊",
+        "title_en": "Real-Time Dashboard",
+        "title_ar": "لوحة تحكم فورية",
+        "desc_en": "Live CPU, RAM, and disk space monitoring in a premium glassmorphism UI.",
+        "desc_ar": "مراقبة فورية للمعالج والذاكرة ومساحة القرص بواجهة زجاجية متميزة."
+      },
+      {
+        "icon": "🔍",
+        "title_en": "Smart Target Scan",
+        "title_ar": "فحص ذكي مستهدف",
+        "desc_en": "Select your development directory and let SWEEP intelligently find garbage artifacts automatically.",
+        "desc_ar": "اختر مجلد التطوير ودع SWEEP يجد الملفات الزائدة تلقائياً بذكاء."
+      },
+      {
+        "icon": "🛡️",
+        "title_en": "Safety First",
+        "title_ar": "الأمان أولاً",
+        "desc_en": "Review every file before deletion. No accidental data loss. Permanent deletions are clearly flagged.",
+        "desc_ar": "راجع كل ملف قبل الحذف. لا فقدان بيانات عرضي. الحذف الدائم موضح بوضوح."
+      },
+      {
+        "icon": "🖥️",
+        "title_en": "Cross-Platform",
+        "title_ar": "متعدد المنصات",
+        "desc_en": "Native builds for macOS (.dmg), Windows (.msi), and Linux (.deb) using Tauri v2 and Rust.",
+        "desc_ar": "بنيات أصلية لـ macOS (.dmg) و Windows (.msi) و Linux (.deb) باستخدام Tauri v2 و Rust."
+      }
+    ]
+  },
+  "screenshots": {
+    "title_en": "Screenshots",
+    "title_ar": "لقطات الشاشة",
+    "items": [
+      "/assets/sweep/screenshots/01.png",
+      "/assets/sweep/screenshots/02.png",
+      "/assets/sweep/screenshots/03.png"
+    ]
+  },
+  "testimonials": [],
+  "privacy": null,
+  "terms": null,
+  "changelog": null,
+  "pricing": null,
+  "purchase_form": null,
+  "get_login": null
+}

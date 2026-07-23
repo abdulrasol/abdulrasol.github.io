@@ -24,7 +24,7 @@
     "favicon": "/assets/madarik/logo.png"
   },
   "links": {
-    "googlePlay": null,
+    "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.madarik",
     "appStore": null,
     "github": "https://github.com/abdulrasol/madarik_knowledge_jounrny",
     "facebook": null,

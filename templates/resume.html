@@ -5,8 +5,8 @@
 <section class="resume-page">
   <div class="container resume-container">
     <div class="resume-actions no-print">
-      <a href="{{ '/' if lang == 'en' else '/ar/' }}" class="btn btn-secondary">
-        <i class="fas fa-arrow-{{ 'left' if lang == 'en' else 'right' }}"></i>
+      <a href="{{ link('/') }}" class="btn btn-secondary">
+        <i class="fas fa-arrow-left"></i>
         {{ nav.back_to_site }}
       </a>
       <button class="btn btn-primary" onclick="window.print()">
@@ -28,25 +28,21 @@
           <span class="resume-availability">{{ personal.availability }}</span>
         </p>
         <div class="resume-contacts">
-          <a href="mailto:{{ personal.email }}"><i class="fas fa-envelope"></i> {{ personal.email }}</a>
-          <a href="https://wa.me/{{ personal.whatsapp }}"><i class="fab fa-whatsapp"></i> +{{ personal.whatsapp }}</a>
-          {% if personal.social.github %}
+          <a href="mailto:{{ company.email }}"><i class="fas fa-envelope"></i> {{ company.email }}</a>
+          <a href="https://wa.me/{{ company.whatsapp }}"><i class="fab fa-whatsapp"></i> +{{ company.whatsapp }}</a>
           <a href="{{ personal.social.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-          {% endif %}
-          {% if personal.social.linkedin %}
           <a href="{{ personal.social.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          {% endif %}
         </div>
       </div>
     </header>
 
     <section class="resume-section">
-      <h2>{{ nav.about }}</h2>
+      <h2>{{ 'About the Founder' if lang == 'en' else 'عن المؤسس' }}</h2>
       <p>{{ about.text }}</p>
     </section>
 
     <section class="resume-section">
-      <h2>{{ nav.skills }}</h2>
+      <h2>{{ skills.title }}</h2>
       <div class="resume-skills">
         {% for category in skills.categories %}
         <div class="resume-skill-group">
@@ -63,7 +59,7 @@
 
     {% if experience and experience|length > 0 %}
     <section class="resume-section">
-      <h2>{{ nav.experience }}</h2>
+      <h2>{{ 'Experience' if lang == 'en' else 'الخبرات' }}</h2>
       {% for job in experience %}
       <div class="resume-item">
         <div class="resume-item-header">
@@ -78,7 +74,7 @@
     {% endif %}
 
     <section class="resume-section">
-      <h2>{{ nav.projects }}</h2>
+      <h2>{{ projects.title }}</h2>
       {% for project in projects.list %}
       <div class="resume-item">
         <div class="resume-item-header">

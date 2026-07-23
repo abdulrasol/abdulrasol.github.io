@@ -1,0 +1,35 @@
+{
+  "opportunities": [
+    {
+      "id": "watt",
+      "project_id": "watt",
+      "status": "seeking_investor",
+      "title_en": "Watt — Solar Energy Platform",
+      "title_ar": "واط — منصة الطاقة الشمسية",
+      "tagline_en": "The first comprehensive solar energy platform for Iraq, ready to scale globally.",
+      "tagline_ar": "أول منصة شاملة للطاقة الشمسية في العراق، جاهزة للتوسع عالمياً.",
+      "seeking": {
+        "amount_en": "Seed Investment for Marketing & Operations",
+        "amount_ar": "استثمار أولي للتسويق والتشغيل",
+        "type_en": "Equity / Strategic Partnership",
+        "type_ar": "حصة ملكية / شراكة استراتيجية"
+      },
+      "market": {
+        "size_en": "Iraq's solar market is rapidly growing with increasing government and private sector investment in renewable energy. The residential and commercial sectors show high demand for reliable solar solutions. The platform can also serve global markets with its universal calculation features.",
+        "size_ar": "سوق الطاقة الشمسية في العراق ينمو بسرعة مع زيادة استثمارات الحكومة والقطاع الخاص في الطاقة المتجددة. القطاعات السكنية والتجارية تظهر طلباً عالياً على حلول الطاقة الشمسية الموثوقة. المنصة يمكنها أيضاً خدمة الأسواق العالمية بميزات الحسابات العالمية."
+      },
+      "traction": {
+        "status_en": "Pre-launch. Beta testing complete. App is live on Google Play. Ready for market entry with the right partner.",
+        "status_ar": "قبل الإطلاق. اكتملت مرحلة الاختبار التجريبي. التطبيق متاح على Google Play. جاهز للدخول إلى السوق مع الشريك المناسب."
+      },
+      "team": ["abdulrasol"],
+      "competition_en": "Existing apps are either limited to basic calculators or focused only on equipment sales. Watt uniquely combines system design, marketplace, sales management, and advertising in one integrated platform for both end-users and companies.",
+      "competition_ar": "التطبيقات الموجودة إما محدودة بحاسبات بسيطة أو تركز فقط على بيع المعدات. واط بشكل فريد يجمع تصميم الأنظمة، السوق، إدارة المبيعات، والإعلانات في منصة متكاملة للمستخدمين النهائيين والشركات.",
+      "monetization_en": "In-app purchases, subscription tiers for professionals and companies, advertising space for equipment suppliers, commission on marketplace transactions.",
+      "monetization_ar": "عمليات شراء داخل التطبيق، مستويات اشتراك للمحترفين والشركات، مساحات إعلانية لموردي المعدات، عمولة على معاملات السوق.",
+      "cta_en": "Interested in investing? Let's talk.",
+      "cta_ar": "مهتم بالاستثمار؟ دعنا نتحدث.",
+      "contact_email": "abdulrasol.alhilo@gmail.com"
+    }
+  ]
+}

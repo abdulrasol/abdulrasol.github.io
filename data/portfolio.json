@@ -1,13 +1,13 @@
 {
   "site": {
     "url": "https://abdulrasol.github.io",
-    "title_en": "Abdulrasol Al-Hilo — Flutter & Django Developer",
-    "title_ar": "عبدالرسول الحلو — مطور Flutter و Django",
-    "description_en": "Professional Flutter & Django developer building cross-platform mobile apps, web platforms, and AI-powered tools. Available for freelance and full-time opportunities.",
-    "description_ar": "مطور Flutter و Django محترف، أبني تطبيقات موبايل متعددة المنصات، منصات ويب، وأدوات مدعومة بالذكاء الاصطناعي. متاح للعمل الحر والدوام الكامل.",
-    "keywords_en": "Flutter Developer, Mobile App Developer, Django Developer, Python, Cross-Platform Apps, Software Engineer, Iraq",
-    "keywords_ar": "مطور فلاتر, مطور تطبيقات, مطور Django, مبرمج, مهندس برمجيات, العراق",
-    "author": "Abdulrasol Al-Hilo",
+    "title_en": "Meaad Tech — Software & Solar Solutions",
+    "title_ar": "ميعاد تكنلوجي — حلول برمجية وطاقة شمسية",
+    "description_en": "Meaad Tech builds cross-platform mobile apps, business management systems, and solar energy tools. From POS systems to solar calculators, we deliver innovative digital products.",
+    "description_ar": "ميعاد تكنلوجي تبني تطبيقات الموبايل متعددة المنصات، أنظمة إدارة الأعمال، وأدوات الطاقة الشمسية. من أنظمة نقاط البيع إلى حاسبات الطاقة الشمسية، نقدم منتجات رقمية مبتكرة.",
+    "keywords_en": "Meaad Tech, Flutter Developer, Mobile Apps, Solar Energy, B2B Solutions, POS, Iraq Tech, Software Company",
+    "keywords_ar": "ميعاد تكنلوجي, مطور فلاتر, تطبيقات موبايل, طاقة شمسية, حلول أعمال, نقاط بيع, تقنية العراق, شركة برمجيات",
+    "author": "Meaad Tech",
     "google_site_verification": "rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg"
   },
   "analytics": {
@@ -22,23 +22,23 @@
     "currency": "$"
   },
   "personal": {
-    "name_en": "Abdulrasol Al-Hilo",
+    "name_en": "AbdulRasol Al-Hilo",
     "name_ar": "عبدالرسول الحلو",
-    "tagline_en": "Flutter & Django Developer",
-    "tagline_ar": "مطور Flutter و Django",
+    "tagline_en": "Founder & Lead Developer",
+    "tagline_ar": "المؤسس والمطور الرئيسي",
     "location_en": "Iraq",
     "location_ar": "العراق",
-    "availability_en": "Available for work",
-    "availability_ar": "متاح للعمل",
-    "email": "abdulrsol97@gmail.com",
+    "availability_en": "Open for partnerships",
+    "availability_ar": "مفتوح للشراكات",
+    "email": "abdulrasol.alhilo@gmail.com",
     "whatsapp": "9647813639721",
-    "whatsapp_message_en": "Hello Abdulrasol, I visited your portfolio and would like to discuss a project.",
-    "whatsapp_message_ar": "مرحباً عبدالرسول، زرت موقعك الشخصي وأرغب في مناقشة مشروع.",
+    "whatsapp_message_en": "Hello Meaad Tech, I visited your website and would like to discuss a project or partnership.",
+    "whatsapp_message_ar": "مرحباً ميعاد تكنلوجي، زرت موقعكم وأرغب في مناقشة مشروع أو شراكة.",
     "photo": "/static/images/progile.JPEG",
     "resume_pdf": "/static/resume.pdf",
     "social": {
       "github": "https://github.com/abdulrasol",
-      "linkedin": null,
+      "linkedin": "http://linkedin.com/in/abdulrasoolal-hilo/",
       "twitter": null,
       "play_store": null,
       "facebook": null,
@@ -46,24 +46,24 @@
     }
   },
   "hero": {
-    "badge_en": "Available for work",
-    "badge_ar": "متاح للعمل",
-    "headline_en": "Building Cross-Platform Apps & Web Platforms",
-    "headline_ar": "أبني تطبيقات متعددة المنصات ومنصات ويب",
-    "highlight_en": "That Solve Real Problems",
-    "highlight_ar": "تحل مشاكل حقيقية",
-    "subtitle_en": "I'm a software engineer specializing in Flutter mobile apps, Django web development, and AI-powered tools. I help businesses turn ideas into fast, scalable, and beautiful digital products.",
-    "subtitle_ar": "أنا مهندس برمجيات متخصص في تطبيقات Flutter، تطوير الويب بـ Django، والأدوات المدعومة بالذكاء الاصطناعي. أساعد الشركات على تحويل الأفكار إلى منتجات رقمية سريعة وقابلة للتوسع وجميلة.",
-    "cta_primary_en": "View My Work",
-    "cta_primary_ar": "تصفح أعمالي",
-    "cta_secondary_en": "Download Resume",
-    "cta_secondary_ar": "تحميل السيرة الذاتية"
+    "badge_en": "Meaad Tech",
+    "badge_ar": "ميعاد تكنلوجي",
+    "headline_en": "Building Digital Products & Solar Solutions",
+    "headline_ar": "نبني منتجات رقمية وحلول طاقة شمسية",
+    "highlight_en": "For Tomorrow",
+    "highlight_ar": "للمستقبل",
+    "subtitle_en": "We are a software company specializing in cross-platform mobile apps, business management systems, and solar energy tools. We help businesses and individuals turn ideas into fast, scalable, and innovative digital products.",
+    "subtitle_ar": "نحن شركة برمجيات متخصصة في تطبيقات الموبايل متعددة المنصات، أنظمة إدارة الأعمال، وأدوات الطاقة الشمسية. نساعد الشركات والأفراد على تحويل الأفكار إلى منتجات رقمية سريعة وقابلة للتوسع ومبتكرة.",
+    "cta_primary_en": "Explore Our Products",
+    "cta_primary_ar": "استكشف منتجاتنا",
+    "cta_secondary_en": "Meet the Founder",
+    "cta_secondary_ar": "تعرف على المؤسس"
   },
   "about": {
-    "title_en": "About Me",
-    "title_ar": "من أنا",
-    "text_en": "I'm a passionate software engineer with deep experience in mobile and web development. Over the years, I've built and shipped multiple production-ready applications — from AI-powered utility apps to full business management systems.",
-    "text_ar": "أنا مهندس برمجيات شغوف بخبرة عميقة في تطوير الموبايل والويب. على مر السنين، قمت ببناء وإطلاق العديد من التطبيقات الجاهزة للإنتاج — من تطبيقات الأدوات المدعومة بالذكاء الاصطناعي إلى أنظمة إدارة الأعمال الكاملة.",
+    "title_en": "About Us",
+    "title_ar": "من نحن",
+    "text_en": "Meaad Tech is a software and solar energy solutions company founded by AbdulRasol Al-Hilo. With 6+ years of experience in designing and installing PV systems, and 5+ years building cross-platform apps and web backends, we bridge the gap between clean energy and modern technology. From POS systems for Iraqi businesses to solar calculators for the global market, we deliver practical, innovative tools.",
+    "text_ar": "ميعاد تكنلوجي هي شركة حلول برمجية وطاقة شمسية أسسها عبدالرسول الحلو. مع 6+ سنوات من الخبرة في تصميم وتركيب أنظمة الطاقة الشمسية، و5+ سنوات في بناء تطبيقات متعددة المنصات وأنظمة ويب، نجسر الفجوة بين الطاقة النظيفة والتقنية الحديثة. من أنظمة نقاط البيع للشركات العراقية إلى حاسبات الطاقة الشمسية للسوق العالمي، نقدم أدوات عملية ومبتكرة.",
     "stats": [
       {
         "value_en": "7+",
@@ -72,135 +72,114 @@
         "label_ar": "تطبيق مطلق"
       },
       {
+        "value_en": "6+",
+        "value_ar": "٦+",
+        "label_en": "Years Solar Experience",
+        "label_ar": "سنوات خبرة شمسية"
+      },
+      {
         "value_en": "5+",
         "value_ar": "٥+",
         "label_en": "Years Coding",
         "label_ar": "سنوات برمجة"
-      },
-      {
-        "value_en": "12",
-        "value_ar": "١٢",
-        "label_en": "Languages Supported",
-        "label_ar": "لغة مدعومة"
       }
     ]
   },
   "skills": {
     "title_en": "Skills & Technologies",
     "title_ar": "المهارات والتقنيات",
-    "subtitle_en": "Technologies I use to build modern, scalable applications.",
-    "subtitle_ar": "التقنيات التي أستخدمها لبناء تطبيقات حديثة وقابلة للتوسع.",
+    "subtitle_en": "Technologies we use to build modern, scalable applications.",
+    "subtitle_ar": "التقنيات التي نستخدمها لبناء تطبيقات حديثة وقابلة للتوسع.",
     "categories": [
       {
         "name_en": "Mobile Development",
         "name_ar": "تطوير الموبايل",
         "skills": [
-          {
-            "name": "Flutter",
-            "icon": "flutter",
-            "level": 95
-          },
-          {
-            "name": "Dart",
-            "icon": "dart",
-            "level": 90
-          },
-          {
-            "name": "Android",
-            "icon": "android",
-            "level": 80
-          },
-          {
-            "name": "iOS",
-            "icon": "apple",
-            "level": 75
-          }
+          { "name": "Flutter", "icon": "flutter", "level": 95 },
+          { "name": "Dart", "icon": "dart", "level": 90 },
+          { "name": "Android", "icon": "android", "level": 80 },
+          { "name": "iOS", "icon": "apple", "level": 75 }
         ]
       },
       {
-        "name_en": "Web Development",
-        "name_ar": "تطوير الويب",
+        "name_en": "Web & Backend",
+        "name_ar": "الويب والخلفية",
         "skills": [
-          {
-            "name": "Django",
-            "icon": "python",
-            "level": 85
-          },
-          {
-            "name": "Python",
-            "icon": "python",
-            "level": 85
-          },
-          {
-            "name": "HTML/CSS",
-            "icon": "html5",
-            "level": 85
-          }
+          { "name": "Django", "icon": "python", "level": 85 },
+          { "name": "Python", "icon": "python", "level": 85 },
+          { "name": "Firebase", "icon": "firebase", "level": 85 },
+          { "name": "REST APIs", "icon": "server", "level": 80 }
         ]
       },
       {
-        "name_en": "Backend & Cloud",
-        "name_ar": "الخلفية والسحابة",
+        "name_en": "Solar & Engineering",
+        "name_ar": "الطاقة الشمسية والهندسة",
         "skills": [
-          {
-            "name": "Firebase",
-            "icon": "firebase",
-            "level": 85
-          },
-          {
-            "name": "Google Cloud",
-            "icon": "google",
-            "level": 70
-          },
-          {
-            "name": "REST APIs",
-            "icon": "server",
-            "level": 80
-          },
-          {
-            "name": "SQLite",
-            "icon": "database",
-            "level": 80
-          }
+          { "name": "Solar PV Design", "icon": "solar-panel", "level": 90 },
+          { "name": "On-grid/Off-grid", "icon": "bolt", "level": 85 },
+          { "name": "System Sizing", "icon": "calculator", "level": 85 },
+          { "name": "Installation", "icon": "tools", "level": 80 }
         ]
       },
       {
-        "name_en": "AI & Tools",
-        "name_ar": "الذكاء الاصطناعي والأدوات",
+        "name_en": "Tools & Platforms",
+        "name_ar": "الأدوات والمنصات",
         "skills": [
-          {
-            "name": "AI",
-            "icon": "brain",
-            "level": 75
-          },
-          {
-            "name": "UI/UX Design",
-            "icon": "pen-nib",
-            "level": 75
-          },
-          {
-            "name": "Git",
-            "icon": "git-alt",
-            "level": 80
-          }
+          { "name": "Linux", "icon": "linux", "level": 80 },
+          { "name": "Git", "icon": "git-alt", "level": 80 },
+          { "name": "WordPress", "icon": "wordpress", "level": 70 },
+          { "name": "Inkscape", "icon": "pen-nib", "level": 70 }
         ]
       }
     ]
   },
-  "experience": [],
+  "experience": [
+    {
+      "period_en": "2024 — Present",
+      "period_ar": "٢٠٢٤ — الحاضر",
+      "role_en": "Software Developer",
+      "role_ar": "مطور برمجيات",
+      "company_en": "Meaad Tech",
+      "company_ar": "ميعاد تكنلوجي",
+      "description_en": "Founder and lead developer. Building cross-platform mobile apps with Flutter, web backends with Django, and solar energy tools. Products include Baytraq, MEAAD, MeterLog, Watt, and Sweep.",
+      "description_ar": "المؤسس والمطور الرئيسي. بناء تطبيقات موبايل متعددة المنصات بـ Flutter، وأنظمة ويب بـ Django، وأدوات الطاقة الشمسية. المنتجات تشمل بيترق، ميعاد، ميتر لوغ، واط، و SWEEP."
+    },
+    {
+      "period_en": "2020 — Present",
+      "period_ar": "٢٠٢٠ — الحاضر",
+      "role_en": "Solar PV Engineer",
+      "role_ar": "مهندس طاقة شمسية",
+      "company_en": "Freelance / Private Sector",
+      "company_ar": "عمل حر / قطاع خاص",
+      "description_en": "Designing and installing on-grid and off-grid solar PV systems for residential and commercial clients in Iraq. System sizing, component selection, and performance optimization.",
+      "description_ar": "تصميم وتركيب أنظمة الطاقة الشمسية المتصلة وغير المتصلة بالشبكة للعملاء السكنيين والتجاريين في العراق. تحديد حجم الأنظمة، اختيار المكونات، وتحسين الأداء."
+    },
+    {
+      "period_en": "2018 — 2020",
+      "period_ar": "٢٠١٨ — ٢٠٢٠",
+      "role_en": "Network Technician",
+      "role_ar": "فني شبكات",
+      "company_en": "Wireless ISP Companies",
+      "company_ar": "شركات إنترنت لاسلكي",
+      "description_en": "Worked with wireless internet service providers in Iraq. Installation, maintenance, and troubleshooting of wireless network equipment and infrastructure.",
+      "description_ar": "العمل مع مزودي خدمات الإنترنت اللاسلكي في العراق. تركيب وصيانة وإصلاح معدات الشبكات اللاسلكية والبنية التحتية."
+    }
+  ],
   "projects": {
-    "title_en": "Featured Projects",
-    "title_ar": "أبرز المشاريع",
-    "subtitle_en": "A selection of apps and platforms I've designed and built.",
-    "subtitle_ar": "مجموعة من التطبيقات والمنصات التي صممتها وبنيتها.",
+    "title_en": "Our Products",
+    "title_ar": "منتجاتنا",
+    "subtitle_en": "A selection of apps and platforms we've designed and built.",
+    "subtitle_ar": "مجموعة من التطبيقات والمنصات التي صممناها وبنيناها.",
     "filter_all_en": "All",
     "filter_all_ar": "الكل",
     "filter_mobile_en": "Mobile",
     "filter_mobile_ar": "موبايل",
     "filter_business_en": "Business",
     "filter_business_ar": "أعمال",
-    "filter_ai_en": "AI",
-    "filter_ai_ar": "ذكاء اصطناعي",
+    "filter_ai_en": "AI & Tools",
+    "filter_ai_ar": "ذكاء اصطناعي وأدوات",
+    "filter_solar_en": "Solar",
+    "filter_solar_ar": "طاقة شمسية",
     "featured_badge_en": "Featured",
     "featured_badge_ar": "مميز",
     "list": [
@@ -212,12 +191,7 @@
         "image": "/assets/baytraq/logo.png",
         "category": "business",
         "featured": true,
-        "technologies": [
-          "Flutter",
-          "Dart",
-          "Firebase",
-          "ObjectBox"
-        ],
+        "technologies": ["Flutter", "Dart", "Firebase", "ObjectBox"],
         "links": {
           "page": "/baytraq/",
           "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager",
@@ -234,12 +208,7 @@
         "image": "/assets/meter_log/logo.png",
         "category": "ai",
         "featured": true,
-        "technologies": [
-          "Flutter",
-          "Dart",
-          "AI/OCR",
-          "Isar"
-        ],
+        "technologies": ["Flutter", "Dart", "AI/OCR", "Isar"],
         "links": {
           "page": "/meterlog/",
           "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log",
@@ -256,15 +225,27 @@
         "image": "/meaad/logo.png",
         "category": "business",
         "featured": true,
-        "technologies": [
-          "Flutter",
-          "Dart",
-          "Google Sheets",
-          "Google Drive"
-        ],
+        "technologies": ["Flutter", "Dart", "Google Sheets", "Google Drive"],
         "links": {
           "page": "/meaad/",
-          "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meaad",
+          "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meadd",
+          "github": null,
+          "facebook": null,
+          "instagram": null
+        }
+      },
+      {
+        "title_en": "Watt",
+        "title_ar": "واط",
+        "desc_en": "Solar system calculator and equipment marketplace. Design clean energy solutions, compare equipment, and manage solar projects.",
+        "desc_ar": "حاسبة أنظمة الطاقة الشمسية وسوق معدات. صمم حلول الطاقة النظيفة، قارن المعدات، وأدر مشاريع الطاقة الشمسية.",
+        "image": "/assets/watt/logo.png",
+        "category": "solar",
+        "featured": false,
+        "technologies": ["Flutter", "Dart", "Firebase"],
+        "links": {
+          "page": "/watt/",
+          "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",
           "github": null,
           "facebook": null,
           "instagram": null
@@ -278,12 +259,7 @@
         "image": "/assets/store_mangement/logo.png",
         "category": "business",
         "featured": false,
-        "technologies": [
-          "Flutter",
-          "Dart",
-          "GetX",
-          "ObjectBox"
-        ],
+        "technologies": ["Flutter", "Dart", "GetX", "ObjectBox"],
         "links": {
           "page": "/store-management/",
           "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.store_mangment",
@@ -300,57 +276,28 @@
         "image": "/assets/madarik/logo.png",
         "category": "mobile",
         "featured": false,
-        "technologies": [
-          "Flutter",
-          "Dart",
-          "Riverpod",
-          "Hive"
-        ],
+        "technologies": ["Flutter", "Dart", "Riverpod", "Hive"],
         "links": {
           "page": "/madarik/",
-          "googlePlay": null,
+          "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.madarik",
           "github": "https://github.com/abdulrasol/madarik_knowledge_jounrny",
           "facebook": null,
           "instagram": null
         }
       },
       {
-        "title_en": "Watt",
-        "title_ar": "وات",
-        "desc_en": "Solar system calculator and equipment marketplace for designing clean energy solutions.",
-        "desc_ar": "حاسبة أنظمة الطاقة الشمسية وسوق معدات لتصميم حلول الطاقة النظيفة.",
-        "image": "/assets/watt/logo.png",
-        "category": "mobile",
+        "title_en": "SWEEP",
+        "title_ar": "SWEEP",
+        "desc_en": "High-performance Mac cleaner for developers. Built with Rust and Tauri. Reclaim disk space from hidden development artifacts.",
+        "desc_ar": "منظف Mac عالي الأداء للمطورين. مبني بـ Rust و Tauri. استرد مساحة القرص من الملفات المخفية للتطوير.",
+        "image": "/assets/sweep/logo.png",
+        "category": "ai",
         "featured": false,
-        "technologies": [
-          "Flutter",
-          "Dart",
-          "Firebase"
-        ],
+        "technologies": ["Rust", "Tauri", "React", "TypeScript"],
         "links": {
-          "page": "/watt/",
+          "page": "/sweep/",
           "googlePlay": null,
-          "github": null,
-          "facebook": null,
-          "instagram": null
-        }
-      },
-      {
-        "title_en": "Spimebook",
-        "title_ar": "سبايم بوك",
-        "desc_en": "Social network platform with geospatial features. (Coming soon)",
-        "desc_ar": "شبكة تواصل اجتماعي مع ميزات تحديد المواقع الجغرافية. (قريباً)",
-        "image": "/logo.png",
-        "category": "mobile",
-        "featured": false,
-        "technologies": [
-          "Flutter",
-          "Firebase"
-        ],
-        "links": {
-          "page": null,
-          "googlePlay": null,
-          "github": null,
+          "github": "https://github.com/abdulrasol/sweep",
           "facebook": null,
           "instagram": null
         }
@@ -360,13 +307,13 @@
   "testimonials": [],
   "contact": {
     "title_en": "Get In Touch",
-    "title_ar": "تواصل معي",
-    "subtitle_en": "Have a project in mind or want to hire me? Send a message and I'll respond as soon as possible.",
-    "subtitle_ar": "هل لديك مشروع في بالك أو ترغب في توظيفي؟ أرسل رسالة وسأرد في أقرب وقت ممكن.",
+    "title_ar": "تواصل معنا",
+    "subtitle_en": "Have a project in mind, want to invest, or looking for a partnership? Send us a message and we'll respond as soon as possible.",
+    "subtitle_ar": "هل لديك مشروع في بالك، ترغب في الاستثمار، أو تبحث عن شراكة؟ أرسل لنا رسالة وسنرد في أقرب وقت ممكن.",
     "form": {
       "provider": "web3forms",
       "endpoint": "https://api.web3forms.com/submit",
-      "access_key": "YOUR_WEB3FORMS_ACCESS_KEY",
+      "access_key": "b021f978-fd94-4809-94c8-584f3f6f8bb3",
       "name_label_en": "Name",
       "name_label_ar": "الاسم",
       "email_label_en": "Email",
@@ -379,8 +326,8 @@
       "submit_ar": "إرسال الرسالة",
       "success_en": "Thank you! Your message has been sent successfully.",
       "success_ar": "شكراً! تم إرسال رسالتك بنجاح.",
-      "error_en": "Something went wrong. Please try again or contact me directly.",
-      "error_ar": "حدث خطأ ما. يرجى المحاولة مرة أخرى أو التواصل معي مباشرة."
+      "error_en": "Something went wrong. Please try again or contact us directly.",
+      "error_ar": "حدث خطأ ما. يرجى المحاولة مرة أخرى أو التواصل معنا مباشرة."
     },
     "info": {
       "email_title_en": "Email",
@@ -394,8 +341,8 @@
     }
   },
   "footer": {
-    "tagline_en": "Building digital products with passion and precision.",
-    "tagline_ar": "بناء منتجات رقمية بشغف ودقة.",
+    "tagline_en": "Building software & solar solutions with passion and precision.",
+    "tagline_ar": "نبني حلول برمجية وطاقة شمسية بشغف ودقة.",
     "quick_links_title_en": "Quick Links",
     "quick_links_title_ar": "روابط سريعة",
     "contact_title_en": "Contact",
