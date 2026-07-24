@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Unified build script for Meaad Tech website.
+Unified build script for Subul Technology website.
 
 Runs:
     1. build.py         — main site pages (index, resume, team, invest, careers, EN/AR)

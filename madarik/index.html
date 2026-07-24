@@ -8,7 +8,7 @@
   <title>Madarik: Knowledge Journey</title>
   <meta name="description" content="An engaging educational quiz game to test and expand your knowledge in Islamic history, science, geography, and more.">
   <meta name="keywords" content="Education, Quiz, Islamic History, Science, Geography, Flutter, Mobile Game">
-  <meta name="author" content="Meaad Tech">
+  <meta name="author" content="Subul Technology">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#f59e0b">
 
@@ -41,7 +41,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -97,40 +97,42 @@
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-moon"></i>
         </button>
-        <a href="/ar/madarik/" class="lang-toggle" aria-label="Switch to Arabic">
+        <a href="/ar/madarik/" class="lang-toggle" data-lang-switch aria-label="Switch to Arabic">
           <i class="fas fa-globe"></i>
           <span>العربية</span>
         </a>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu">
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Nav -->
-    <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav" id="mobile-nav" hidden>
       <a href="/">← Back to Portfolio</a>
       <a href="/madarik/">Home</a>
-<a href="/madarik/privacy_policy/">Privacy Policy</a>      <a href="/ar/madarik/">العربية</a>
+<a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="/madarik/privacy_policy/">Privacy Policy</a>      <a href="/ar/madarik/" data-lang-switch>العربية</a>
     </div>
   </header>
 
   <!-- Main Content -->
   <main>
 
-<!-- Hero Section -->
 <section class="hero" id="hero">
   <div class="hero-bg">
     <div class="hero-banner" style="background-image: url('/assets/madarik/banar.png')"></div>
+    <div class="hero-orb hero-orb-primary"></div>
+    <div class="hero-orb hero-orb-secondary"></div>
   </div>
 
   <div class="container hero-content">
     <div class="hero-text">
-      <img src="/assets/madarik/logo.png" alt="Madarik" class="hero-logo">
-      <h1 class="hero-title">Madarik: Knowledge Journey</h1>
-      <p class="hero-subtitle">Knowledge is a journey... and you are its hero! Test your skills in Islamic history, science, geography, and more in a unique learning experience.</p>
 
-      <div class="hero-actions">
+      <img src="/assets/madarik/logo.png" alt="Madarik" class="hero-logo reveal">
+      <h1 class="hero-title reveal">Madarik: Knowledge Journey</h1>
+      <p class="hero-subtitle reveal">Knowledge is a journey... and you are its hero! Test your skills in Islamic history, science, geography, and more in a unique learning experience.</p>
+
+      <div class="hero-actions reveal">
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.madarik"
            data-goatcounter-click="project-google-play-madarik"
            class="btn btn-primary"
@@ -149,89 +151,89 @@
         </a>
       </div>
 
-      <div class="platforms">
+      <div class="platforms reveal">
         <span class="platform-badge">Android</span>
         <span class="platform-badge">iOS</span>
       </div>
+
+
+      <div class="hero-trust-line reveal">
+        <span>Built around real operating workflows</span>
+        <span>Bilingual-ready delivery</span>
+        <span>Direct product execution</span>
+      </div>
     </div>
 
-    <div class="hero-image">
-      <img src="/assets/madarik/home_page.jpg" alt="Madarik screenshot">
+    <div class="hero-visual reveal">
+      <div class="hero-device-stack">
+        <div class="device device-back">
+          <img src="/assets/madarik/home_page.jpg" alt="Madarik screenshot">
+        </div>
+        <div class="device device-front">
+          <img src="/assets/madarik/roadmap_page.jpg" alt="Madarik screenshot">
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Features Section -->
+
+
+
 <section class="section features" id="features">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Madarik Features</span>
       <h2 class="section-title">Madarik Features</h2>
     </div>
 
     <div class="features-grid">
-      <div class="feature-card">
-        <span class="feature-icon">🗺️</span>
-        <h3>Interactive Roadmap</h3>
-        <p>Unlock new levels and challenges through an engaging and structured journey.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🧠</span>
-        <h3>Diverse Categories</h3>
-        <p>History, science, geography, and literature - constantly updated content.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🏆</span>
-        <h3>Global Leaderboard</h3>
-        <p>Compete with learners worldwide and show your absolute mastery.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🏅</span>
-        <h3>Achievements</h3>
-        <p>Earn unique medals and rewards as you complete challenging milestones.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">👤</span>
-        <h3>Player Profile</h3>
-        <p>Customize your avatar and track your educational progress in detail.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🎨</span>
-        <h3>Modern Design</h3>
-        <p>A stunning UI inspired by the richness of Arabic cultural heritage.</p>
-      </div>
+      <article class="feature-card reveal">
+<span class="feature-icon">🗺️</span><h3>Interactive Roadmap</h3><p>Unlock new levels and challenges through an engaging and structured journey.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🧠</span><h3>Diverse Categories</h3><p>History, science, geography, and literature - constantly updated content.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🏆</span><h3>Global Leaderboard</h3><p>Compete with learners worldwide and show your absolute mastery.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🏅</span><h3>Achievements</h3><p>Earn unique medals and rewards as you complete challenging milestones.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">👤</span><h3>Player Profile</h3><p>Customize your avatar and track your educational progress in detail.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🎨</span><h3>Modern Design</h3><p>A stunning UI inspired by the richness of Arabic cultural heritage.</p>      </article>
     </div>
   </div>
 </section>
 
-<!-- Screenshots Section -->
+
 <section class="section screenshots-section" id="screenshots">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Preview</span>
       <h2 class="section-title">App Screenshots</h2>
     </div>
     <div class="screenshots-scroll">
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/madarik/home_page.jpg" alt="Madarik screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/madarik/roadmap_page.jpg" alt="Madarik screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/madarik/quiz_page.jpg" alt="Madarik screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/madarik/aheveiments_page.jpg" alt="Madarik screenshot" loading="lazy">
@@ -242,11 +244,10 @@
   </div>
 </section>
 
-<!-- Testimonials Section -->
 
-<!-- Pricing Section -->
 
-<!-- Purchase Form Section -->
+
+
 
   </main>
 
@@ -267,7 +268,7 @@
 
       <div class="footer-contact">
         <h4>Contact</h4>
-        <a href="mailto:abdulrsol97@gmail.com"><i class="fas fa-envelope"></i> abdulrsol97@gmail.com</a>
+        <a href="mailto:info@subultech.top"><i class="fas fa-envelope"></i> info@subultech.top</a>
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.madarik" data-goatcounter-click="footer-google-play-madarik" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
         <a href="https://github.com/abdulrasol/madarik_knowledge_jounrny" data-goatcounter-click="footer-github-madarik" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
       </div>
@@ -279,7 +280,7 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/9647813639721?text=Hello%20Meaad%20Tech%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%20or%20partnership."
+  <a href="https://wa.me/9647813639721?text=Hello%20Subul%20Technology%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%2C%20product%2C%20or%20partnership."
      class="whatsapp-float"
      target="_blank"
      rel="noopener"

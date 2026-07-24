@@ -8,7 +8,7 @@
   <title>Baytraq Sales Manager</title>
   <meta name="description" content="The ultimate sales and management workspace. Run invoicing, POS sales, track inventory, monitor profits and expenses, with LAN and cloud sync.">
   <meta name="keywords" content="POS, Inventory, Invoicing, Sales Manager, Desktop App, Cloud Sync, Flutter">
-  <meta name="author" content="Meaad Tech">
+  <meta name="author" content="Subul Technology">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#1A237E">
 
@@ -41,7 +41,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -97,40 +97,42 @@
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-moon"></i>
         </button>
-        <a href="/ar/baytraq/" class="lang-toggle" aria-label="Switch to Arabic">
+        <a href="/ar/baytraq/" class="lang-toggle" data-lang-switch aria-label="Switch to Arabic">
           <i class="fas fa-globe"></i>
           <span>العربية</span>
         </a>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu">
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Nav -->
-    <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav" id="mobile-nav" hidden>
       <a href="/">← Back to Portfolio</a>
       <a href="/baytraq/">Home</a>
-<a href="/baytraq/privacy_policy/">Privacy Policy</a>      <a href="/ar/baytraq/">العربية</a>
+<a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#purchase-form">Request to Purchase</a><a href="/baytraq/privacy_policy/">Privacy Policy</a>      <a href="/ar/baytraq/" data-lang-switch>العربية</a>
     </div>
   </header>
 
   <!-- Main Content -->
   <main>
 
-<!-- Hero Section -->
 <section class="hero" id="hero">
   <div class="hero-bg">
     <div class="hero-banner" style="background-image: url('/assets/baytraq/banar.png')"></div>
+    <div class="hero-orb hero-orb-primary"></div>
+    <div class="hero-orb hero-orb-secondary"></div>
   </div>
 
   <div class="container hero-content">
     <div class="hero-text">
-      <img src="/assets/baytraq/logo.png" alt="Baytraq" class="hero-logo">
-      <h1 class="hero-title">The Ultimate Sales <br>& Management Workspace</h1>
-      <p class="hero-subtitle">Run invoicing, POS sales, track inventory, monitor profits and expenses, and stay connected with customers. Optimized for Desktop/PC first, with full support for Tablets and Mobile devices.</p>
 
-      <div class="hero-actions">
+      <img src="/assets/baytraq/logo.png" alt="Baytraq" class="hero-logo reveal">
+      <h1 class="hero-title reveal">The Ultimate Sales <br>& Management Workspace</h1>
+      <p class="hero-subtitle reveal">Run invoicing, POS sales, track inventory, monitor profits and expenses, and stay connected with customers. Optimized for Desktop/PC first, with full support for Tablets and Mobile devices.</p>
+
+      <div class="hero-actions reveal">
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager"
            data-goatcounter-click="project-google-play-baytraq"
            class="btn btn-primary"
@@ -149,114 +151,99 @@
         </a>
       </div>
 
-      <div class="platforms">
+      <div class="platforms reveal">
         <span class="platform-badge">Windows</span>
         <span class="platform-badge">macOS</span>
         <span class="platform-badge">Linux</span>
         <span class="platform-badge">Android</span>
         <span class="platform-badge">iOS</span>
       </div>
+
+
+      <div class="hero-trust-line reveal">
+        <span>Built around real operating workflows</span>
+        <span>Bilingual-ready delivery</span>
+        <span>Direct product execution</span>
+      </div>
     </div>
 
-    <div class="hero-image">
-      <img src="/assets/baytraq/logo.png" alt="Baytraq">
+    <div class="hero-visual reveal">
+      <div class="hero-brand-card">
+        <img src="/assets/baytraq/logo.png" alt="Baytraq">
+        <p>The ultimate sales &amp; management workspace</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Features Section -->
+
+
+
 <section class="section features" id="features">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Key Features</span>
       <h2 class="section-title">Key Features</h2>
     </div>
 
-      <h3 class="feature-group-title">Core Operations</h3>
-      <div class="features-grid">
-        <div class="feature-card">
-          <span class="feature-icon">🛒</span>
-          <h3>Point of Sale (POS)</h3>
-          <p>Bilingual interface optimized for quick actions with integrated camera/QR scanning and express multi-cart system.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">📦</span>
-          <h3>Inventory Management</h3>
-          <p>Real-time stock tracking with auto-deductions on sales, low-stock alerts, products &amp; services, and supplier linking.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">📄</span>
-          <h3>Advanced Invoicing</h3>
-          <p>Create custom invoices with discounts, track paid/unpaid/partial states, view history, and print formatted PDFs.</p>
+      <div class="feature-group reveal">
+<h3 class="feature-group-title">Core Operations</h3>        <div class="features-grid">
+          <article class="feature-card">
+<span class="feature-icon">🛒</span><h3>Point of Sale (POS)</h3><p>Bilingual interface optimized for quick actions with integrated camera/QR scanning and express multi-cart system.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">📦</span><h3>Inventory Management</h3><p>Real-time stock tracking with auto-deductions on sales, low-stock alerts, products &amp; services, and supplier linking.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">📄</span><h3>Advanced Invoicing</h3><p>Create custom invoices with discounts, track paid/unpaid/partial states, view history, and print formatted PDFs.</p>          </article>
         </div>
       </div>
-      <h3 class="feature-group-title">Financials &amp; Analytics</h3>
-      <div class="features-grid">
-        <div class="feature-card">
-          <span class="feature-icon">📈</span>
-          <h3>Insights Dashboard</h3>
-          <p>Real-time metrics for sales, net/gross profits, expenses, and debts with multi-period filters and top-sellers charts.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">💸</span>
-          <h3>Expense Tracking</h3>
-          <p>Log one-time and recurring expenses with automated due calculation and alerts.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">🏛️</span>
-          <h3>Debt &amp; Credit Management</h3>
-          <p>Running customer ledger balances, automatic debit/credit posting on invoices, and self-healing sync engine.</p>
+      <div class="feature-group reveal">
+<h3 class="feature-group-title">Financials &amp; Analytics</h3>        <div class="features-grid">
+          <article class="feature-card">
+<span class="feature-icon">📈</span><h3>Insights Dashboard</h3><p>Real-time metrics for sales, net/gross profits, expenses, and debts with multi-period filters and top-sellers charts.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">💸</span><h3>Expense Tracking</h3><p>Log one-time and recurring expenses with automated due calculation and alerts.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🏛️</span><h3>Debt &amp; Credit Management</h3><p>Running customer ledger balances, automatic debit/credit posting on invoices, and self-healing sync engine.</p>          </article>
         </div>
       </div>
-      <h3 class="feature-group-title">Networking, Sync &amp; Multi-Device</h3>
-      <div class="features-grid">
-        <div class="feature-card">
-          <span class="feature-icon">🌍</span>
-          <h3>Real-Time Cloud Sync</h3>
-          <p>Seamless multi-tenant synchronization powered by Cloud Firestore with secure rules and anonymous authentication fallback.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">📶</span>
-          <h3>Local LAN Sync (Offline-First)</h3>
-          <p>Master-Slave LAN architecture over Wi-Fi using WebSockets, Drift SQLite local storage, and LWW conflict resolution.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">🔍</span>
-          <h3>Price Checker (Kiosk Mode)</h3>
-          <p>Dedicated station for customer membership kiosk scanning with offline fallback querying local replica database.</p>
+      <div class="feature-group reveal">
+<h3 class="feature-group-title">Networking, Sync &amp; Multi-Device</h3>        <div class="features-grid">
+          <article class="feature-card">
+<span class="feature-icon">🌍</span><h3>Real-Time Cloud Sync</h3><p>Seamless multi-tenant synchronization powered by Cloud Firestore with secure rules and anonymous authentication fallback.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">📶</span><h3>Local LAN Sync (Offline-First)</h3><p>Master-Slave LAN architecture over Wi-Fi using WebSockets, Drift SQLite local storage, and LWW conflict resolution.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🔍</span><h3>Price Checker (Kiosk Mode)</h3><p>Dedicated station for customer membership kiosk scanning with offline fallback querying local replica database.</p>          </article>
         </div>
       </div>
-      <h3 class="feature-group-title">Identity &amp; Access Control</h3>
-      <div class="features-grid">
-        <div class="feature-card">
-          <span class="feature-icon">👥</span>
-          <h3>Staff Roles (RBAC)</h3>
-          <p>Role-Based Access Control (Admin, Manager, Cashier, Staff, PriceViewer) with screen guarding and secure PIN/QR logins.</p>
+      <div class="feature-group reveal">
+<h3 class="feature-group-title">Identity &amp; Access Control</h3>        <div class="features-grid">
+          <article class="feature-card">
+<span class="feature-icon">👥</span><h3>Staff Roles (RBAC)</h3><p>Role-Based Access Control (Admin, Manager, Cashier, Staff, PriceViewer) with screen guarding and secure PIN/QR logins.</p>          </article>
         </div>
       </div>
-      <h3 class="feature-group-title">System Utilities</h3>
-      <div class="features-grid">
-        <div class="feature-card">
-          <span class="feature-icon">🛠️</span>
-          <h3>Utility &amp; Customization Suite</h3>
-          <p>JSON Backup/Restore, 12 built-in languages, custom branding, currency/decimals, and responsive Light/Dark themes.</p>
+      <div class="feature-group reveal">
+<h3 class="feature-group-title">System Utilities</h3>        <div class="features-grid">
+          <article class="feature-card">
+<span class="feature-icon">🛠️</span><h3>Utility &amp; Customization Suite</h3><p>JSON Backup/Restore, 12 built-in languages, custom branding, currency/decimals, and responsive Light/Dark themes.</p>          </article>
         </div>
       </div>
   </div>
 </section>
 
-<!-- Screenshots Section -->
 
-<!-- Testimonials Section -->
 
-<!-- Pricing Section -->
+
+
 <section class="section pricing" id="pricing">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Pricing</span>
       <h2 class="section-title">Simple, Transparent Pricing</h2>
     </div>
 
     <div class="pricing-grid">
-      <div class="pricing-card ">
+      <div class="pricing-card  reveal">
         <h3>Free Tier</h3>
         <div class="pricing-price">Free</div>
         <ul class="pricing-features">
@@ -269,7 +256,7 @@
           Choose Plan
         </a>
       </div>
-      <div class="pricing-card featured">
+      <div class="pricing-card featured reveal">
         <h3>LAN Sync Tier</h3>
         <div class="pricing-price">$150</div>
         <ul class="pricing-features">
@@ -283,7 +270,7 @@
           Choose Plan
         </a>
       </div>
-      <div class="pricing-card ">
+      <div class="pricing-card  reveal">
         <h3>Cloud &amp; LAN Tier</h3>
         <div class="pricing-price">$250</div>
         <ul class="pricing-features">
@@ -304,14 +291,14 @@
   </div>
 </section>
 
-<!-- Purchase Form Section -->
 <section class="section purchase" id="purchase-form">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Request to Purchase</span>
       <h2 class="section-title">Request to Purchase Baytraq</h2>
 <p class="section-subtitle">Fill out the form below and we will contact you shortly with payment instructions and your license key.</p>    </div>
 
-    <form class="purchase-form" id="purchase-form" action="https://api.web3forms.com/submit" method="POST">
+    <form class="purchase-form reveal" id="purchase-form" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="b021f978-fd94-4809-94c8-584f3f6f8bb3">
       <input type="hidden" name="subject" value="Request to Purchase Baytraq - Baytraq">
       <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
@@ -356,10 +343,11 @@
       </button>
 
       <div class="form-status" id="purchase-status" data-success="Thank you! Your request has been sent successfully." data-error="Something went wrong. Please try again."></div>
-      <p class="form-note">This opens your email app with the details pre-filled. You can also reach us directly at abdulrsol97@gmail.com.</p>
+      <p class="form-note">This opens your email app with the details pre-filled. You can also reach us directly at info@subultech.top.</p>
     </form>
   </div>
 </section>
+
 
   </main>
 
@@ -380,7 +368,7 @@
 
       <div class="footer-contact">
         <h4>Contact</h4>
-        <a href="mailto:abdulrsol97@gmail.com"><i class="fas fa-envelope"></i> abdulrsol97@gmail.com</a>
+        <a href="mailto:info@subultech.top"><i class="fas fa-envelope"></i> info@subultech.top</a>
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager" data-goatcounter-click="footer-google-play-baytraq" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
         <a href="https://github.com/abdulrasol/baytraq_sales_manager" data-goatcounter-click="footer-github-baytraq" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
       </div>
@@ -392,7 +380,7 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/9647813639721?text=Hello%20Meaad%20Tech%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%20or%20partnership."
+  <a href="https://wa.me/9647813639721?text=Hello%20Subul%20Technology%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%2C%20product%2C%20or%20partnership."
      class="whatsapp-float"
      target="_blank"
      rel="noopener"

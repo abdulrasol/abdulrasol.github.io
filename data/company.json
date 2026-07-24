@@ -1,15 +1,15 @@
 {
-  "name_en": "Meaad Tech",
-  "name_ar": "ميعاد تكنلوجي",
-  "tagline_en": "Software & Solar Solutions",
-  "tagline_ar": "حلول برمجية وطاقة شمسية",
-  "description_en": "Meaad Tech builds cross-platform mobile applications, business management systems, and solar energy tools for the Iraqi market and beyond.",
-  "description_ar": "ميعاد تكنلوجي تبني تطبيقات الموبايل متعددة المنصات، أنظمة إدارة الأعمال، وأدوات الطاقة الشمسية للسوق العراقي وما وراءه.",
+  "name_en": "Subul Technology",
+  "name_ar": "سبل التكنلوجيا",
+  "tagline_en": "Software, AI & Solar Solutions",
+  "tagline_ar": "حلول برمجية وذكاء اصطناعي وطاقة شمسية",
+  "description_en": "Subul Technology builds mobile apps, web platforms, AI solutions, business systems, and solar tools for Iraq and beyond.",
+  "description_ar": "سبل التكنلوجيا تبني تطبيقات موبايل، منصات ويب، حلول ذكاء اصطناعي، أنظمة أعمال، وأدوات طاقة شمسية للعراق وما بعده.",
   "founded_en": "2024",
   "founded_ar": "٢٠٢٤",
   "location_en": "Iraq",
   "location_ar": "العراق",
-  "email": "abdulrasol.alhilo@gmail.com",
+  "email": "info@subultech.top",
   "whatsapp": "9647813639721",
   "social": {
     "github": "https://github.com/abdulrasol",
@@ -21,31 +21,38 @@
   "services": [
     {
       "icon": "mobile-alt",
-      "title_en": "Mobile Apps",
-      "title_ar": "تطبيقات الموبايل",
-      "desc_en": "Cross-platform Flutter apps for iOS, Android, and Desktop with bilingual support.",
-      "desc_ar": "تطبيقات Flutter متعددة المنصات لـ iOS و Android وسطح المكتب مع دعم ثنائي اللغة."
+      "title_en": "Mobile App Development",
+      "title_ar": "تطوير تطبيقات الموبايل",
+      "desc_en": "Cross-platform mobile apps with Flutter for Android, iOS, and desktop experiences that scale.",
+      "desc_ar": "تطبيقات موبايل متعددة المنصات مبنية لتخدم التشغيل الفعلي، من الفكرة إلى الإطلاق والتوسع."
     },
     {
-      "icon": "cash-register",
-      "title_en": "B2B Solutions",
-      "title_ar": "حلول الأعمال",
-      "desc_en": "POS, inventory, invoicing, and sales management systems for retail and wholesale.",
-      "desc_ar": "أنظمة نقاط البيع، المخزون، الفواتير، وإدارة المبيعات للتجزئة والجملة."
+      "icon": "globe",
+      "title_en": "Web Platforms & Websites",
+      "title_ar": "منصات الويب والمواقع",
+      "desc_en": "Business websites, dashboards, admin panels, and custom web platforms with modern backend integrations.",
+      "desc_ar": "مواقع أعمال، لوحات تحكم، وأنظمة ويب مخصصة تربط الواجهة بالتشغيل والبيانات بشكل واضح."
+    },
+    {
+      "icon": "brain",
+      "title_en": "AI Solutions & Automation",
+      "title_ar": "حلول الذكاء الاصطناعي والأتمتة",
+      "desc_en": "AI-powered tools, OCR workflows, assistants, and practical automation for businesses and technical teams.",
+      "desc_ar": "أدوات ذكاء اصطناعي، OCR، ومساعدات وأتمتة عملية تختصر الوقت وترفع دقة العمل."
+    },
+    {
+      "icon": "diagram-project",
+      "title_en": "Digital Transformation",
+      "title_ar": "التحول الرقمي",
+      "desc_en": "Move manual operations into connected digital systems for sales, operations, reporting, and customer workflows.",
+      "desc_ar": "نقل العمليات اليدوية إلى أنظمة رقمية مترابطة للمبيعات، التشغيل، التقارير، وسير عمل العملاء."
     },
     {
       "icon": "solar-panel",
-      "title_en": "Solar Tools",
-      "title_ar": "أدوات الطاقة الشمسية",
-      "desc_en": "Solar system calculators, equipment marketplaces, and project management for clean energy.",
-      "desc_ar": "حاسبات أنظمة الطاقة الشمسية، أسواق المعدات، وإدارة المشاريع للطاقة النظيفة."
-    },
-    {
-      "icon": "code",
-      "title_en": "Developer Tools",
-      "title_ar": "أدوات المطورين",
-      "desc_en": "High-performance utilities built with Rust, Tauri, and modern frameworks.",
-      "desc_ar": "أدوات عالية الأداء مبنية بـ Rust و Tauri وأطر العمل الحديثة."
+      "title_en": "Solar Tools & Solutions",
+      "title_ar": "أدوات وحلول الطاقة الشمسية",
+      "desc_en": "Solar calculators, proposal tools, and product platforms that connect clean-energy demand with execution.",
+      "desc_ar": "حاسبات شمسية، أدوات عروض أسعار، ومنصات منتجات تربط الطلب على الطاقة النظيفة بالتنفيذ العملي."
     }
   ]
 }

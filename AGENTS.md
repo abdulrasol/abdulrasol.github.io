@@ -1,4 +1,4 @@
-# Meaad Tech — Project Agent Guide
+# Subul Technology — Project Agent Guide
 
 > **For AI Agents / Developers:** This file explains the project architecture so you can add, modify, or extend any section without confusion.
 
@@ -6,7 +6,7 @@
 
 ## 1. What Is This Project?
 
-A **bilingual (EN/AR) static website** for **Meaad Tech** — a software and solar energy solutions company based in Iraq. The site is generated using **Python + Jinja2** templates and deployed to **GitHub Pages**.
+A **bilingual (EN/AR) static website** for **Subul Technology** — a software, AI, and solar solutions company based in Iraq. The site is generated using **Python + Jinja2** templates and deployed to **GitHub Pages**.
 
 ---
 
@@ -226,9 +226,9 @@ python -m http.server 8000
 
 ## 8. Contact & Maintainer
 
-- **Company:** Meaad Tech
+- **Company:** Subul Technology
 - **Founder:** AbdulRasol Al-Hilo
-- **Email:** abdulrasol.alhilo@gmail.com
+- **Email:** info@subultech.top
 - **GitHub:** @abdulrasol
 
 ---

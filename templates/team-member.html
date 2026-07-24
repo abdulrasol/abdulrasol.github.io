@@ -6,11 +6,15 @@
   <div class="container">
     <div class="member-hero-inner">
       <div class="member-photo-large">
-        <img src="{{ member.photo }}" alt="{{ member.name }}" loading="eager">
+        <img src="{{ member.photo }}" alt="{{ member.name }}" width="320" height="320" loading="eager" decoding="async">
       </div>
       <div class="member-intro">
         <h1>{{ member.name }}</h1>
         <p class="member-role">{{ member.role }}</p>
+        <p class="member-trust-copy">
+          {{ 'Hands-on product execution, bilingual delivery, and practical systems built for real operating environments.' if lang == 'en' else 'تنفيذ منتجي عملي، وتسليم ثنائي اللغة، وأنظمة مصممة لبيئات تشغيل حقيقية.' }}
+        </p>
+        {% if member_has_social %}
         <div class="member-social">
           {% if member.social.github %}
           <a href="{{ member.social.github }}" target="_blank" rel="noopener" aria-label="GitHub">
@@ -23,6 +27,7 @@
           </a>
           {% endif %}
         </div>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -32,35 +37,45 @@
   <div class="container">
     <div class="member-content">
       <div class="member-main">
+        {% if member.bio %}
         <h2>{{ 'About' if lang == 'en' else 'نبذة' }}</h2>
         <p class="lead">{{ member.bio }}</p>
+        {% endif %}
 
+        {% if member.skills %}
         <h2>{{ 'Skills' if lang == 'en' else 'المهارات' }}</h2>
         <div class="member-skills-grid">
           {% for skill in member.skills %}
           <span class="skill-tag large">{{ skill }}</span>
           {% endfor %}
         </div>
+        {% endif %}
       </div>
 
       <div class="member-sidebar">
-        {% if member.projects %}
+        <div class="sidebar-box">
+          <h3>{{ 'Why work with us' if lang == 'en' else 'لماذا العمل معنا' }}</h3>
+          <p>{{ 'Direct communication, practical scoping, and product-minded delivery from discovery to launch.' if lang == 'en' else 'تواصل مباشر، وتحديد عملي للنطاق، وتنفيذ يركز على المنتج من الاكتشاف حتى الإطلاق.' }}</p>
+        </div>
+        {% if member_projects %}
         <div class="sidebar-box">
           <h3>{{ 'Projects' if lang == 'en' else 'المشاريع' }}</h3>
           <ul class="member-projects-list">
-            {% for project_id in member.projects %}
+            {% for project in member_projects %}
             <li>
-              <a href="{{ link('/' + project_id + '/') }}">{{ project_id | title }}</a>
+              <a href="{{ link('/' + project.id + '/') }}">{{ project.brand.name }}</a>
             </li>
             {% endfor %}
           </ul>
         </div>
         {% endif %}
 
+        {% if company.email %}
         <div class="sidebar-box">
           <h3>{{ 'Connect' if lang == 'en' else 'تواصل' }}</h3>
           <p>{{ 'Email:' if lang == 'en' else 'البريد:' }} <a href="mailto:{{ company.email }}">{{ company.email }}</a></p>
         </div>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -68,6 +83,18 @@
 
 <section class="section member-cta">
   <div class="container text-center">
+    <h2>{{ 'Need a similar project built?' if lang == 'en' else 'تحتاج بناء مشروع مشابه؟' }}</h2>
+    <p>{{ 'Start with a short conversation about your product, workflow, or technical problem.' if lang == 'en' else 'ابدأ بمحادثة قصيرة حول منتجك أو سير العمل أو المشكلة التقنية التي تريد حلها.' }}</p>
+    <div class="hero-actions" style="justify-content:center; margin-bottom: 1.5rem;">
+      <a href="mailto:{{ company.email }}" class="btn btn-primary">
+        <i class="fas fa-paper-plane"></i>
+        {{ 'Start a Project' if lang == 'en' else 'ابدأ مشروعك' }}
+      </a>
+      <a href="https://wa.me/{{ company.whatsapp }}" class="btn btn-secondary" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+        WhatsApp
+      </a>
+    </div>
     <a href="{{ link('/team/') }}" class="btn btn-secondary">
       <i class="fas fa-arrow-left"></i>
       {{ 'Back to Team' if lang == 'en' else 'العودة للفريق' }}

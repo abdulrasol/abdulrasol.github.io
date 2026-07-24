@@ -3,10 +3,10 @@
   "site": {
     "title_en": "Watt: Solar Energy Platform",
     "title_ar": "واط: منصة الطاقة الشمسية",
-    "description_en": "Solar system calculator and equipment marketplace for designing clean energy solutions. For homeowners, businesses, and solar professionals in Iraq and globally.",
-    "description_ar": "حاسبة أنظمة الطاقة الشمسية وسوق معدات لتصميم حلول الطاقة النظيفة. للمنازل، الشركات، والمحترفين في العراق وعالمياً.",
-    "keywords_en": "Solar Energy, PV System, Solar Calculator, Clean Energy, Equipment Marketplace, Flutter, Iraq",
-    "keywords_ar": "طاقة شمسية, نظام طاقة, حاسبة شمسية, طاقة نظيفة, سوق معدات, فلاتر, العراق"
+    "description_en": "A comprehensive solar platform for Iraq that combines system calculation, product marketplace, quotations, and business operations in one experience.",
+    "description_ar": "منصة شمسية متكاملة للعراق تجمع بين حساب الأنظمة، سوق المنتجات، عروض الأسعار، وعمليات الشركات في تجربة واحدة.",
+    "keywords_en": "Watt, Solar Energy Platform, Iraq Solar Marketplace, Solar Calculator, B2B B2C, Clean Energy, Flutter",
+    "keywords_ar": "واط, منصة طاقة شمسية, سوق شمسي العراق, حاسبة شمسية, B2B B2C, طاقة نظيفة, فلاتر"
   },
   "settings": {
     "default_lang": "ar",
@@ -17,8 +17,8 @@
   "brand": {
     "name_en": "Watt",
     "name_ar": "واط",
-    "tagline_en": "Solar system design made simple",
-    "tagline_ar": "تصميم أنظمة الطاقة الشمسية بكل بساطة",
+    "tagline_en": "Iraq's integrated solar platform",
+    "tagline_ar": "المنصة الشمسية المتكاملة للعراق",
     "logo": "/assets/watt/logo.png",
     "banner": "/assets/watt/banar.png",
     "favicon": "/assets/watt/logo.png"
@@ -29,65 +29,250 @@
     "github": null,
     "facebook": null,
     "instagram": null,
-    "support_email": "abdulrasol.alhilo@gmail.com"
+    "support_email": "watt@subultech.top"
   },
   "hero": {
-    "title_en": "Watt: Solar Energy Solutions",
-    "title_ar": "واط: حلول الطاقة الشمسية",
-    "subtitle_en": "Design solar systems, compare equipment, and manage your clean energy projects — all in one powerful app. Built for Iraq, ready for the world.",
-    "subtitle_ar": "صمم أنظمة الطاقة الشمسية، قارن المعدات، وأدر مشاريعك للطاقة النظيفة — كل ذلك في تطبيق واحد قوي. مبني للعراق، جاهز للعالم.",
+    "badge_en": "Iraq's first integrated solar marketplace",
+    "badge_ar": "أول سوق إلكتروني متكامل للطاقة الشمسية في العراق",
+    "title_en": "Turn Solar Demand Into <span class=\"highlight\">A Scalable Platform</span>",
+    "title_ar": "حوّل الطلب الشمسي إلى <span class=\"highlight\">منصة قابلة للتوسع</span>",
+    "subtitle_en": "Watt combines solar calculation, system design, supplier marketplace, quotations, and business operations in one platform for consumers and companies.",
+    "subtitle_ar": "واط تجمع بين الحساب الشمسي، تصميم الأنظمة، سوق الموردين، عروض الأسعار، وعمليات الشركات في منصة واحدة للمستهلكين والشركات.",
     "cta_en": "Download on Google Play",
-    "cta_ar": "تحميل من Google Play"
+    "cta_ar": "تحميل من Google Play",
+    "secondary_cta_en": "View Investment Case",
+    "secondary_cta_ar": "عرض فرصة الاستثمار",
+    "stats_en": [
+      { "value": "+300", "label": "Active users" },
+      { "value": "+50", "label": "Registered companies" },
+      { "value": "+25", "label": "Iraqi cities" },
+      { "value": "B2B + B2C", "label": "Dual business model" }
+    ],
+    "stats_ar": [
+      { "value": "+300", "label": "مستخدم نشط" },
+      { "value": "+50", "label": "شركة مسجلة" },
+      { "value": "+25", "label": "مدينة عراقية" },
+      { "value": "B2B + B2C", "label": "نموذج عمل مزدوج" }
+    ]
   },
   "platforms": ["Android", "iOS"],
   "category": "solar",
-  "featured": false,
-  "technologies": ["Flutter", "Dart", "Firebase"],
+  "featured": true,
+  "technologies": ["Flutter", "Dart", "Firebase", "Go", "Riverpod"],
+  "sections": {
+    "problem_en": {
+      "label": "The problem",
+      "title": "Iraq has a power gap and a fragmented solar market",
+      "subtitle": "Demand is real, but discovery, comparison, and execution are still difficult.",
+      "body": "Iraq faces chronic electricity shortages while having one of the strongest solar conditions in the region. Consumers and companies still struggle with an unstructured market, inconsistent pricing, and the lack of one trusted workflow from sizing to purchase and execution.",
+      "items": [
+        { "icon": "❌", "text": "8-12 hours of daily power outages in many areas" },
+        { "icon": "❌", "text": "High generator and fuel costs" },
+        { "icon": "❌", "text": "Unstructured market for solar distributors and installers" },
+        { "icon": "❌", "text": "Difficult price and specification comparison across suppliers" }
+      ],
+      "highlight": {
+        "value": "330+",
+        "label": "Sunny days per year in Iraq"
+      }
+    },
+    "problem_ar": {
+      "label": "المشكلة",
+      "title": "العراق يملك فجوة كهربائية وسوقاً شمسية مبعثرة",
+      "subtitle": "الطلب موجود، لكن الاكتشاف والمقارنة والتنفيذ ما زالت معقدة.",
+      "body": "يعاني العراق من نقص مزمن في الكهرباء رغم امتلاكه واحداً من أفضل الظروف الشمسية في المنطقة. ما يزال المستهلكون والشركات يواجهون سوقاً غير منظمة، وأسعاراً غير واضحة، وغياب مسار موثوق من حساب الاحتياج إلى الشراء والتنفيذ.",
+      "items": [
+        { "icon": "❌", "text": "انقطاع الكهرباء من 8 إلى 12 ساعة يومياً في كثير من المناطق" },
+        { "icon": "❌", "text": "تكاليف عالية للمولدات والوقود" },
+        { "icon": "❌", "text": "سوق غير منظمة للموزعين وشركات التركيب" },
+        { "icon": "❌", "text": "صعوبة مقارنة الأسعار والمواصفات بين الموردين" }
+      ],
+      "highlight": {
+        "value": "330+",
+        "label": "يوم مشمس سنوياً في العراق"
+      }
+    },
+    "solution_en": {
+      "label": "The solution",
+      "title": "Watt brings the whole solar journey into one platform",
+      "subtitle": "From first calculation to quotation, order, and business operations.",
+      "items": [
+        { "icon": "🔢", "title": "Smart solar calculator", "desc": "Calculate panels, batteries, inverters, and energy needs with practical accuracy." },
+        { "icon": "🏪", "title": "B2B + B2C marketplace", "desc": "A unified marketplace for consumers and companies to browse and compare equipment." },
+        { "icon": "📋", "title": "Quotation workflow", "desc": "Request and compare quotations from multiple companies inside one product flow." },
+        { "icon": "📊", "title": "Inventory and sales operations", "desc": "For companies, manage stock, orders, customers, and financial reporting." },
+        { "icon": "💳", "title": "Integrated accounting", "desc": "Invoices, ledgers, receivables, payables, and profitability in one operational system." },
+        { "icon": "✏️", "title": "System designer", "desc": "Professional system-design tooling with bill-of-material support." }
+      ]
+    },
+    "solution_ar": {
+      "label": "الحل",
+      "title": "واط تجمع الرحلة الشمسية كلها في منصة واحدة",
+      "subtitle": "من أول حساب إلى عرض السعر والطلب وعمليات الشركة.",
+      "items": [
+        { "icon": "🔢", "title": "حاسبة شمسية ذكية", "desc": "احسب الألواح والبطاريات والإنفرترات والاحتياج الطاقي بدقة عملية." },
+        { "icon": "🏪", "title": "متجر B2B + B2C", "desc": "سوق موحدة للمستهلكين والشركات لتصفح المعدات ومقارنتها." },
+        { "icon": "📋", "title": "مسار عروض أسعار", "desc": "اطلب وقارن عروض الأسعار من عدة شركات ضمن تدفق واحد." },
+        { "icon": "📊", "title": "إدارة المخزون والمبيعات", "desc": "للشركات: إدارة المخزون والطلبات والعملاء والتقارير المالية." },
+        { "icon": "💳", "title": "محاسبة متكاملة", "desc": "فواتير، دفاتر أستاذ، قبض وصرف، وربحية ضمن نظام تشغيلي واحد." },
+        { "icon": "✏️", "title": "مصمم أنظمة", "desc": "أداة احترافية لتصميم الأنظمة مع دعم فاتورة المواد." }
+      ]
+    },
+    "market_en": {
+      "label": "Market opportunity",
+      "title": "Why Iraq, and why now?",
+      "subtitle": "A high-demand energy market with digital readiness and low integrated competition.",
+      "items": [
+        { "icon": "☀️", "value": "3,000+", "label": "Hours of sun annually" },
+        { "icon": "🏠", "value": "40M+", "label": "Population with rising alternative-energy demand" },
+        { "icon": "⚡", "value": "~55%", "label": "Gap between grid output and real demand" },
+        { "icon": "📜", "value": "2024-2030", "label": "Renewable-energy momentum and policy window" },
+        { "icon": "💰", "value": "$500M+", "label": "Expected Iraqi solar-market size by 2027" },
+        { "icon": "📱", "value": "85%", "label": "Internet and smartphone penetration" }
+      ]
+    },
+    "market_ar": {
+      "label": "فرصة السوق",
+      "title": "لماذا العراق؟ ولماذا الآن؟",
+      "subtitle": "سوق طاقة عالي الطلب مع جاهزية رقمية ومنافسة متكاملة منخفضة.",
+      "items": [
+        { "icon": "☀️", "value": "3,000+", "label": "ساعة شمس سنوياً" },
+        { "icon": "🏠", "value": "40M+", "label": "عدد سكان مع طلب متزايد على الطاقة البديلة" },
+        { "icon": "⚡", "value": "~55%", "label": "فجوة بين إنتاج الشبكة والحاجة الفعلية" },
+        { "icon": "📜", "value": "2024-2030", "label": "نافذة تنظيمية وزخم للطاقة المتجددة" },
+        { "icon": "💰", "value": "$500M+", "label": "حجم سوق شمسي متوقع في العراق بحلول 2027" },
+        { "icon": "📱", "value": "85%", "label": "انتشار الإنترنت والهواتف الذكية" }
+      ]
+    },
+    "revenue_en": {
+      "label": "Revenue model",
+      "title": "How Watt generates revenue",
+      "subtitle": "Multiple revenue channels support both growth and resilience.",
+      "items": [
+        { "icon": "📋", "title": "Marketplace commission", "desc": "A commission on B2B and B2C sales completed through the platform.", "tag": "Core revenue" },
+        { "icon": "👑", "title": "Company subscriptions", "desc": "Recurring subscriptions for suppliers, installers, and professional operators.", "tag": "Recurring" },
+        { "icon": "📢", "title": "Promotions and advertising", "desc": "Paid visibility for suppliers, premium listings, and in-platform promotions.", "tag": "Expansion" }
+      ]
+    },
+    "revenue_ar": {
+      "label": "نموذج الربح",
+      "title": "كيف يحقق واط الإيرادات",
+      "subtitle": "قنوات إيراد متعددة تدعم النمو والاستدامة.",
+      "items": [
+        { "icon": "📋", "title": "عمولة السوق", "desc": "عمولة على مبيعات B2B وB2C التي تتم عبر المنصة.", "tag": "الإيراد الأساسي" },
+        { "icon": "👑", "title": "اشتراكات الشركات", "desc": "اشتراكات متكررة للموردين وشركات التركيب والمشغلين المحترفين.", "tag": "متكرر" },
+        { "icon": "📢", "title": "الترويج والإعلانات", "desc": "ظهور مدفوع للموردين، بطاقات مميزة، وحملات داخل المنصة.", "tag": "توسع" }
+      ]
+    },
+    "why_invest_en": {
+      "label": "Why invest",
+      "title": "Why Watt is the right investment",
+      "subtitle": "This is not another small utility app. It is platform infrastructure for a market.",
+      "items": [
+        { "number": "1", "title": "Underserved market", "desc": "No direct integrated competitor combines sizing, marketplace, quotations, and operations." },
+        { "number": "2", "title": "Scalable business model", "desc": "A dual B2B + B2C model with room to expand to regional markets." },
+        { "number": "3", "title": "Strong technical base", "desc": "Built with a modern stack and architecture ready for operational scale." },
+        { "number": "4", "title": "More than a store", "desc": "Combines calculations, design, commerce, operations, and business workflow in one product." },
+        { "number": "5", "title": "Market-native expertise", "desc": "Built with direct understanding of Iraqi market needs and solar realities." },
+        { "number": "6", "title": "Launch-ready direction", "desc": "The product direction is clear and the growth case is compelling with the right partner." }
+      ]
+    },
+    "why_invest_ar": {
+      "label": "لماذا الاستثمار",
+      "title": "لماذا واط هي الاستثمار الصحيح؟",
+      "subtitle": "هذا ليس تطبيقاً صغيراً آخر، بل بنية منصة لسوق كامل.",
+      "items": [
+        { "number": "1", "title": "سوق غير مخدوم كفاية", "desc": "لا يوجد منافس متكامل يجمع الحساب والسوق وعروض الأسعار والعمليات." },
+        { "number": "2", "title": "نموذج عمل قابل للتوسع", "desc": "نموذج مزدوج B2B + B2C مع مساحة للتوسع الإقليمي." },
+        { "number": "3", "title": "قاعدة تقنية قوية", "desc": "مبني بتقنيات حديثة ومعمارية جاهزة للنمو التشغيلي." },
+        { "number": "4", "title": "أكثر من مجرد متجر", "desc": "يجمع الحساب والتصميم والتجارة والعمليات وسير العمل التجاري في منتج واحد." },
+        { "number": "5", "title": "خبرة نابعة من السوق", "desc": "مبني بفهم مباشر لاحتياجات السوق العراقي وواقع الطاقة الشمسية." },
+        { "number": "6", "title": "اتجاه جاهز للإطلاق", "desc": "اتجاه المنتج واضح، وفرصة النمو قوية مع الشريك المناسب." }
+      ]
+    },
+    "cta_en": {
+      "label": "Start the conversation",
+      "title": "Ready to back Iraq's solar-product infrastructure?",
+      "subtitle": "Talk to Subul Technology about product rollout, strategic investment, or a market partnership for Watt.",
+      "primary_label": "Talk about investment",
+      "secondary_label": "Email Watt team"
+    },
+    "cta_ar": {
+      "label": "ابدأ الحوار",
+      "title": "مستعد لدعم البنية المنتجية للطاقة الشمسية في العراق؟",
+      "subtitle": "تحدث مع سبل التكنلوجيا حول إطلاق المنتج أو الاستثمار الاستراتيجي أو الشراكة السوقية لواط.",
+      "primary_label": "تحدث عن الاستثمار",
+      "secondary_label": "راسل فريق واط"
+    }
+  },
   "features": {
-    "title_en": "Watt Features",
-    "title_ar": "مميزات واط",
+    "title_en": "Platform features",
+    "title_ar": "ميزات المنصة",
+    "subtitle_en": "Watt serves both end users and solar businesses in one connected experience.",
+    "subtitle_ar": "واط تخدم المستخدم النهائي والشركات الشمسية في تجربة مترابطة واحدة.",
     "items": [
       {
-        "icon": "☀️",
-        "title_en": "Solar System Calculator",
-        "title_ar": "حاسبة النظام الشمسي",
-        "desc_en": "Calculate system size, panel count, battery capacity, and inverter requirements for on-grid and off-grid setups.",
-        "desc_ar": "احسب حجم النظام، عدد الألواح، سعة البطارية، ومتطلبات العاكس للأنظمة المتصلة وغير المتصلة بالشبكة."
+        "icon": "🧮",
+        "title_en": "Quick calculator",
+        "title_ar": "الحاسبة السريعة",
+        "desc_en": "Estimate usage, system size, component count, and cost within minutes.",
+        "desc_ar": "احسب الاستهلاك وحجم النظام وعدد المكونات والكلفة خلال دقائق."
       },
       {
         "icon": "🛒",
-        "title_en": "Equipment Marketplace",
-        "title_ar": "سوق المعدات",
-        "desc_en": "Browse and compare solar panels, batteries, inverters, and accessories from multiple suppliers.",
-        "desc_ar": "تصفح وقارن الألواح الشمسية، البطاريات، العاكسات، والملحقات من موردين متعددين."
+        "title_en": "B2B + B2C marketplace",
+        "title_ar": "متجر B2B + B2C",
+        "desc_en": "A product marketplace for both end customers and professional solar companies.",
+        "desc_ar": "سوق منتجات للمستهلك النهائي ولشركات الطاقة الشمسية المحترفة."
+      },
+      {
+        "icon": "🤝",
+        "title_en": "Quotation requests",
+        "title_ar": "طلبات عروض الأسعار",
+        "desc_en": "Let users create requests and compare multiple company offers before choosing.",
+        "desc_ar": "إنشاء طلبات عروض ومقارنة عروض عدة شركات قبل اتخاذ القرار."
+      },
+      {
+        "icon": "📦",
+        "title_en": "Order tracking",
+        "title_ar": "إدارة الطلبات",
+        "desc_en": "Follow the journey from request submission to delivery and installation.",
+        "desc_ar": "تابع المسار من تقديم الطلب إلى التوصيل والتركيب."
+      },
+      {
+        "icon": "👥",
+        "title_en": "Team management",
+        "title_ar": "إدارة الفريق",
+        "desc_en": "Add team members, manage permissions, and coordinate sales and operations.",
+        "desc_ar": "إضافة أعضاء الفريق وإدارة الصلاحيات وتنسيق المبيعات والعمليات."
+      },
+      {
+        "icon": "💬",
+        "title_en": "Community and advisory space",
+        "title_ar": "مجتمع ومساحة استشارية",
+        "desc_en": "Support discussion, educational content, and practical market trust building.",
+        "desc_ar": "دعم النقاش والمحتوى التعليمي وبناء الثقة السوقية عملياً."
+      },
+      {
+        "icon": "📐",
+        "title_en": "System designer",
+        "title_ar": "مصمم الأنظمة",
+        "desc_en": "Design systems with more professional logic and output-ready material structures.",
+        "desc_ar": "تصميم الأنظمة بمنطق أكثر احترافية مع مخرجات جاهزة للمواد."
       },
       {
         "icon": "📊",
-        "title_en": "Project Management",
-        "title_ar": "إدارة المشاريع",
-        "desc_en": "Track your solar installations, generate professional PDF quotes, and manage client proposals.",
-        "desc_ar": "تتبع تركيباتك الشمسية، أنشئ عروض أسعار PDF احترافية، وأدر مقترحات العملاء."
+        "title_en": "Reports and analytics",
+        "title_ar": "تقارير وتحليلات",
+        "desc_en": "Operational and financial visibility for companies running solar sales and projects.",
+        "desc_ar": "رؤية تشغيلية ومالية للشركات التي تدير مبيعات ومشاريع الطاقة الشمسية."
       },
       {
-        "icon": "🌍",
-        "title_en": "Global & Local Support",
-        "title_ar": "دعم عالمي ومحلي",
-        "desc_en": "Optimized for Iraqi conditions and pricing, with universal calculation engine for any location worldwide.",
-        "desc_ar": "محسن لظروف وأسعار العراق، مع محرك حسابات عالمي لأي موقع حول العالم."
-      },
-      {
-        "icon": "📱",
-        "title_en": "Works Offline",
-        "title_ar": "يعمل بدون إنترنت",
-        "desc_en": "Core calculations work without internet. Sync when connected for marketplace and cloud features.",
-        "desc_ar": "الحسابات الأساسية تعمل بدون إنترنت. تزامن عند الاتصال لميزات السوق والسحابة."
-      },
-      {
-        "icon": "🎨",
-        "title_en": "Modern UI",
-        "title_ar": "تصميم عصري",
-        "desc_en": "Clean, intuitive interface in both Arabic and English, with Dark Mode support.",
-        "desc_ar": "واجهة نظيفة وبديهية بالعربية والإنجليزية، مع دعم الوضع الليلي."
+        "icon": "🔔",
+        "title_en": "Smart notifications",
+        "title_ar": "إشعارات ذكية",
+        "desc_en": "Real-time updates for orders, offers, changes, and commercial activity.",
+        "desc_ar": "تحديثات لحظية للطلبات والعروض والتغييرات والنشاط التجاري."
       }
     ]
   },

@@ -1,0 +1,29 @@
+{
+  "members": [
+    {
+      "id": "",
+      "name_en": "",
+      "name_ar": "",
+      "role_en": "",
+      "role_ar": "",
+      "photo": "",
+      "bio_en": "",
+      "bio_ar": "",
+      "skills": [
+        ""
+      ],
+      "social": {
+        "github": null,
+        "linkedin": null
+      },
+      "projects": [
+        ""
+      ],
+      "featured": false,
+      "join_date": null
+    }
+  ],
+  "hiring_message_en": "",
+  "hiring_message_ar": "",
+  "open_positions": false
+}

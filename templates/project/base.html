@@ -41,7 +41,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -97,24 +97,33 @@
         <button class="theme-toggle" id="theme-toggle" aria-label="{{ nav.toggle_theme }}">
           <i class="fas fa-moon"></i>
         </button>
-        <a href="{{ other_page() }}" class="lang-toggle" aria-label="{{ nav.switch_language }}">
+        <a href="{{ other_page() }}" class="lang-toggle" data-lang-switch aria-label="{{ nav.switch_language }}">
           <i class="fas fa-globe"></i>
           <span>{{ other_lang_label }}</span>
         </a>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="{{ nav.menu }}">
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="{{ nav.menu }}" aria-expanded="false" aria-controls="mobile-nav">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Nav -->
-    <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav" id="mobile-nav" hidden>
       <a href="{{ home_url }}">{{ nav.back_to_portfolio }}</a>
       <a href="{{ page_url }}">{{ nav.home }}</a>
+      {% if has_problem %}<a href="#problem">{{ 'Problem' if lang == 'en' else 'المشكلة' }}</a>{% endif %}
+      {% if has_solution %}<a href="#solution">{{ 'Solution' if lang == 'en' else 'الحل' }}</a>{% endif %}
+      {% if has_market %}<a href="#market">{{ 'Market' if lang == 'en' else 'السوق' }}</a>{% endif %}
+      {% if has_features %}<a href="#features">{{ 'Features' if lang == 'en' else 'الميزات' }}</a>{% endif %}
+      {% if has_revenue %}<a href="#revenue">{{ 'Revenue' if lang == 'en' else 'الإيرادات' }}</a>{% endif %}
+      {% if has_why_invest %}<a href="#why-invest">{{ 'Why invest' if lang == 'en' else 'لماذا الاستثمار' }}</a>{% endif %}
+      {% if has_screenshots %}<a href="#screenshots">{{ 'Screenshots' if lang == 'en' else 'اللقطات' }}</a>{% endif %}
+      {% if has_pricing %}<a href="#pricing">{{ 'Pricing' if lang == 'en' else 'الأسعار' }}</a>{% endif %}
+      {% if has_purchase_form %}<a href="#purchase-form">{{ nav.request_purchase }}</a>{% endif %}
       {% if has_privacy %}<a href="{{ privacy_url }}">{{ nav.privacy }}</a>{% endif %}
       {% if has_terms %}<a href="{{ terms_url }}">{{ nav.terms }}</a>{% endif %}
       {% if has_changelog %}<a href="{{ changelog_url }}">{{ nav.changelog }}</a>{% endif %}
-      <a href="{{ other_page() }}">{{ other_lang_label }}</a>
+      <a href="{{ other_page() }}" data-lang-switch>{{ other_lang_label }}</a>
     </div>
   </header>
 
@@ -134,13 +143,16 @@
         <p>{{ brand.tagline }}</p>
       </div>
 
+      {% if has_privacy or has_terms or has_changelog %}
       <div class="footer-links">
         <h4>{{ nav.legal }}</h4>
         {% if has_privacy %}<a href="{{ privacy_url }}">{{ nav.privacy }}</a>{% endif %}
         {% if has_terms %}<a href="{{ terms_url }}">{{ nav.terms }}</a>{% endif %}
         {% if has_changelog %}<a href="{{ changelog_url }}">{{ nav.changelog }}</a>{% endif %}
       </div>
+      {% endif %}
 
+      {% if links.support_email or links.googlePlay or links.github %}
       <div class="footer-contact">
         <h4>{{ nav.contact }}</h4>
         {% if links.support_email %}
@@ -153,6 +165,7 @@
         <a href="{{ links.github }}" data-goatcounter-click="footer-github-{{ id }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
         {% endif %}
       </div>
+      {% endif %}
     </div>
 
     <div class="footer-bottom">

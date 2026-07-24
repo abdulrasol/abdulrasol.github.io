@@ -8,7 +8,7 @@
   <title>MEAAD - Debt &amp; Installment Manager</title>
   <meta name="description" content="The easiest and most secure app to manage debts, installments, and subscriptions for your business.">
   <meta name="keywords" content="Debt Management, Installments, Subscriptions, Google Sheets, Flutter, Business">
-  <meta name="author" content="Meaad Tech">
+  <meta name="author" content="Subul Technology">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#3b82f6">
 
@@ -41,7 +41,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -97,40 +97,42 @@
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-moon"></i>
         </button>
-        <a href="/ar/meaad/" class="lang-toggle" aria-label="Switch to Arabic">
+        <a href="/ar/meaad/" class="lang-toggle" data-lang-switch aria-label="Switch to Arabic">
           <i class="fas fa-globe"></i>
           <span>العربية</span>
         </a>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu">
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Nav -->
-    <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav" id="mobile-nav" hidden>
       <a href="/">← Back to Portfolio</a>
       <a href="/meaad/">Home</a>
-<a href="/meaad/privacy_policy/">Privacy Policy</a><a href="/meaad/terms.html">Terms of Service</a><a href="/meaad/changelogs.html">Changelog</a>      <a href="/ar/meaad/">العربية</a>
+<a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="/meaad/privacy_policy/">Privacy Policy</a><a href="/meaad/terms.html">Terms of Service</a><a href="/meaad/changelogs.html">Changelog</a>      <a href="/ar/meaad/" data-lang-switch>العربية</a>
     </div>
   </header>
 
   <!-- Main Content -->
   <main>
 
-<!-- Hero Section -->
 <section class="hero" id="hero">
   <div class="hero-bg">
     <div class="hero-banner" style="background-image: url('/assets/meaad/banar.png')"></div>
+    <div class="hero-orb hero-orb-primary"></div>
+    <div class="hero-orb hero-orb-secondary"></div>
   </div>
 
   <div class="container hero-content">
     <div class="hero-text">
-      <img src="/assets/meaad/logo.png" alt="MEAAD" class="hero-logo">
-      <h1 class="hero-title">Your ultimate app for managing <span class="highlight">Debts &amp; Installments</span></h1>
-      <p class="hero-subtitle">MEAAD allows businesses and individuals to track monthly subscriptions, periodic installments, and accumulated debts seamlessly.</p>
 
-      <div class="hero-actions">
+      <img src="/assets/meaad/logo.png" alt="MEAAD" class="hero-logo reveal">
+      <h1 class="hero-title reveal">Your ultimate app for managing <span class="highlight">Debts &amp; Installments</span></h1>
+      <p class="hero-subtitle reveal">MEAAD allows businesses and individuals to track monthly subscriptions, periodic installments, and accumulated debts seamlessly.</p>
+
+      <div class="hero-actions reveal">
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.meadd"
            data-goatcounter-click="project-google-play-meaad"
            class="btn btn-primary"
@@ -141,131 +143,131 @@
         </a>
       </div>
 
-      <div class="platforms">
+      <div class="platforms reveal">
         <span class="platform-badge">Android</span>
         <span class="platform-badge">iOS</span>
       </div>
+
+
+      <div class="hero-trust-line reveal">
+        <span>Built around real operating workflows</span>
+        <span>Bilingual-ready delivery</span>
+        <span>Direct product execution</span>
+      </div>
     </div>
 
-    <div class="hero-image">
-      <img src="/assets/meaad/screenshots/sc0.png" alt="MEAAD screenshot">
+    <div class="hero-visual reveal">
+      <div class="hero-device-stack">
+        <div class="device device-back">
+          <img src="/assets/meaad/screenshots/sc0.png" alt="MEAAD screenshot">
+        </div>
+        <div class="device device-front">
+          <img src="/assets/meaad/screenshots/sc1.png" alt="MEAAD screenshot">
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Features Section -->
+
+
+
 <section class="section features" id="features">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">MEAAD Features</span>
       <h2 class="section-title">MEAAD Features</h2>
     </div>
 
     <div class="features-grid">
-      <div class="feature-card">
-        <span class="feature-icon">🔔</span>
-        <h3>Smart Notifications</h3>
-        <p>Automatic reminders for due dates for you and your customers to avoid delays.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📄</span>
-        <h3>PDF Reports</h3>
-        <p>Generate detailed and professional financial PDF reports with one click.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🔳</span>
-        <h3>Digital QR Portal</h3>
-        <p>Customers can scan their QR code to track their balance and updates instantly.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">☁️</span>
-        <h3>Secure Sync</h3>
-        <p>Data is safely stored in your own personal Google Drive account as Google Sheets.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🔐</span>
-        <h3>App Lock</h3>
-        <p>Protect the app with Biometrics or Passcode to secure your accounts.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📶</span>
-        <h3>Offline Mode</h3>
-        <p>Add accounts offline, and they will sync automatically later.</p>
-      </div>
+      <article class="feature-card reveal">
+<span class="feature-icon">🔔</span><h3>Smart Notifications</h3><p>Automatic reminders for due dates for you and your customers to avoid delays.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">📄</span><h3>PDF Reports</h3><p>Generate detailed and professional financial PDF reports with one click.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🔳</span><h3>Digital QR Portal</h3><p>Customers can scan their QR code to track their balance and updates instantly.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">☁️</span><h3>Secure Sync</h3><p>Data is safely stored in your own personal Google Drive account as Google Sheets.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🔐</span><h3>App Lock</h3><p>Protect the app with Biometrics or Passcode to secure your accounts.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">📶</span><h3>Offline Mode</h3><p>Add accounts offline, and they will sync automatically later.</p>      </article>
     </div>
   </div>
 </section>
 
-<!-- Screenshots Section -->
+
 <section class="section screenshots-section" id="screenshots">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Preview</span>
       <h2 class="section-title">App Screenshots</h2>
     </div>
     <div class="screenshots-scroll">
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meaad/screenshots/sc0.png" alt="MEAAD screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meaad/screenshots/sc1.png" alt="MEAAD screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meaad/screenshots/sc2.png" alt="MEAAD screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meaad/screenshots/sc3.png" alt="MEAAD screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meaad/screenshots/sc4.png" alt="MEAAD screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meaad/screenshots/sc5.png" alt="MEAAD screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meaad/screenshots/sc6.png" alt="MEAAD screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meaad/screenshots/sc7.png" alt="MEAAD screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meaad/screenshots/sc8.png" alt="MEAAD screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meaad/screenshots/sc9.png" alt="MEAAD screenshot" loading="lazy">
@@ -276,14 +278,15 @@
   </div>
 </section>
 
-<!-- Testimonials Section -->
+
 <section class="section testimonials" id="testimonials">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">What Our Users Say</span>
       <h2 class="section-title">What Our Clients Say</h2>
     </div>
     <div class="testimonials-grid">
-      <div class="testimonial-card">
+      <div class="testimonial-card reveal">
         <div class="testimonial-stars">
           <i class="fas fa-star active"></i>
           <i class="fas fa-star active"></i>
@@ -296,11 +299,10 @@
           <div class="author-avatar">A</div>
           <div class="author-info">
             <h4>Ahmed Ali</h4>
-            <span>Supermarket Owner</span>
-          </div>
+<span>Supermarket Owner</span>          </div>
         </div>
       </div>
-      <div class="testimonial-card">
+      <div class="testimonial-card reveal">
         <div class="testimonial-stars">
           <i class="fas fa-star active"></i>
           <i class="fas fa-star active"></i>
@@ -313,17 +315,15 @@
           <div class="author-avatar">M</div>
           <div class="author-info">
             <h4>Mohamed Qasim</h4>
-            <span>Wholesaler</span>
-          </div>
+<span>Wholesaler</span>          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Pricing Section -->
 
-<!-- Purchase Form Section -->
+
 
   </main>
 
@@ -344,7 +344,7 @@
 
       <div class="footer-contact">
         <h4>Contact</h4>
-        <a href="mailto:meaad.application@gmail.com"><i class="fas fa-envelope"></i> meaad.application@gmail.com</a>
+        <a href="mailto:meaad@subultech.top"><i class="fas fa-envelope"></i> meaad@subultech.top</a>
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.meadd" data-goatcounter-click="footer-google-play-meaad" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
       </div>
     </div>
@@ -355,7 +355,7 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/9647813639721?text=Hello%20Meaad%20Tech%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%20or%20partnership."
+  <a href="https://wa.me/9647813639721?text=Hello%20Subul%20Technology%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%2C%20product%2C%20or%20partnership."
      class="whatsapp-float"
      target="_blank"
      rel="noopener"

@@ -8,7 +8,7 @@
   <title>تطبيق إدارة المتجر</title>
   <meta name="description" content="الحل الشامل لإدارة متجرك بسهولة. تتبع المخزون، إدارة الفواتير، تحليل المبيعات، والبقاء على اتصال مع العملاء والموردين.">
   <meta name="keywords" content="إدارة المتجر, المخزون, الفواتير, المبيعات, فلاتر, تطبيق أعمال">
-  <meta name="author" content="Meaad Tech">
+  <meta name="author" content="Subul Technology">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#3b82f6">
 
@@ -41,7 +41,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -97,40 +97,42 @@
         <button class="theme-toggle" id="theme-toggle" aria-label="تبديل المظهر">
           <i class="fas fa-moon"></i>
         </button>
-        <a href="/store-management/" class="lang-toggle" aria-label="Switch to English">
+        <a href="/store-management/" class="lang-toggle" data-lang-switch aria-label="Switch to English">
           <i class="fas fa-globe"></i>
           <span>English</span>
         </a>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="فتح القائمة">
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobile-nav">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Nav -->
-    <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav" id="mobile-nav" hidden>
       <a href="/ar/">العودة للمعرض →</a>
       <a href="/ar/store-management/">الرئيسية</a>
-      <a href="/store-management/">English</a>
+<a href="#features">الميزات</a><a href="#screenshots">اللقطات</a>      <a href="/store-management/" data-lang-switch>English</a>
     </div>
   </header>
 
   <!-- Main Content -->
   <main>
 
-<!-- Hero Section -->
 <section class="hero" id="hero">
   <div class="hero-bg">
     <div class="hero-banner" style="background-image: url('/assets/store_mangement/cover.png')"></div>
+    <div class="hero-orb hero-orb-primary"></div>
+    <div class="hero-orb hero-orb-secondary"></div>
   </div>
 
   <div class="container hero-content">
     <div class="hero-text">
-      <img src="/assets/store_mangement/logo.png" alt="إدارة المتجر" class="hero-logo">
-      <h1 class="hero-title">تطبيق إدارة المتجر</h1>
-      <p class="hero-subtitle">الحل المتكامل لإدارة عملك بسهولة. تتبع المخزون، أصدر الفواتير، وحلل الأرباح في تطبيق واحد قوي يدعم جميع لغاتك.</p>
 
-      <div class="hero-actions">
+      <img src="/assets/store_mangement/logo.png" alt="إدارة المتجر" class="hero-logo reveal">
+      <h1 class="hero-title reveal">تطبيق إدارة المتجر</h1>
+      <p class="hero-subtitle reveal">الحل المتكامل لإدارة عملك بسهولة. تتبع المخزون، أصدر الفواتير، وحلل الأرباح في تطبيق واحد قوي يدعم جميع لغاتك.</p>
+
+      <div class="hero-actions reveal">
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.store_mangment"
            data-goatcounter-click="project-google-play-store-management"
            class="btn btn-primary"
@@ -149,154 +151,145 @@
         </a>
       </div>
 
-      <div class="platforms">
+      <div class="platforms reveal">
         <span class="platform-badge">Android</span>
         <span class="platform-badge">iOS</span>
         <span class="platform-badge">Desktop</span>
       </div>
+
+
+      <div class="hero-trust-line reveal">
+        <span>مبني حول سير عمل تشغيلي حقيقي</span>
+        <span>تنفيذ جاهز للعربية والإنكليزية</span>
+        <span>تنفيذ منتجي مباشر</span>
+      </div>
     </div>
 
-    <div class="hero-image">
-      <img src="/assets/store_mangement/screenshots/2.jpg" alt="إدارة المتجر screenshot">
+    <div class="hero-visual reveal">
+      <div class="hero-device-stack">
+        <div class="device device-back">
+          <img src="/assets/store_mangement/screenshots/2.jpg" alt="إدارة المتجر screenshot">
+        </div>
+        <div class="device device-front">
+          <img src="/assets/store_mangement/screenshots/1.jpg" alt="إدارة المتجر screenshot">
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Features Section -->
+
+
+
 <section class="section features" id="features">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">المميزات الرئيسية</span>
       <h2 class="section-title">المميزات الرئيسية</h2>
     </div>
 
     <div class="features-grid">
-      <div class="feature-card">
-        <span class="feature-icon">📦</span>
-        <h3>إدارة المخزون</h3>
-        <p>تتبع كميات المنتجات في الوقت الفعلي، مع تنبيهات عند اقتراب نفاذ المخزون.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🧾</span>
-        <h3>نظام الفواتير</h3>
-        <p>أصدر فواتير PDF احترافية في ثوانٍ. تتبع سجلات البيع والديون بسهولة.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">💰</span>
-        <h3>تتبع المعاملات</h3>
-        <p>راقب جميع المبيعات والمدفوعات والاشتراكات في مكان مركزي واحد.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">💸</span>
-        <h3>إدارة المصاريف</h3>
-        <p>سجل مصاريف عملك بدقة للتحكم المالي الكامل وتحسين الإنفاق.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">👥</span>
-        <h3>العملاء والموردين</h3>
-        <p>احتفظ بسجلات رقمية منظمة لجميع شركائك لسهولة الوصول والتواصل.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📊</span>
-        <h3>تحليل السلع والأرباح</h3>
-        <p>احصل على رؤى واضحة حول أداء عملك مع تقارير أرباح مفصلة ورسوم بيانية.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📉</span>
-        <h3>إحصائيات متقدمة</h3>
-        <p>رسوم بيانية تفاعلية للمبيعات والأرباح والمصاريف (أسبوعي، شهري، سنوي).</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">☁️</span>
-        <h3>نسخ احتياطي واستعادة</h3>
-        <p>احمِ بياناتك من الفقدان. احفظ بيانات متجرك واستعدها في أي وقت ومكان.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🌍</span>
-        <h3>دعم لغات متعددة</h3>
-        <p>التطبيق يدعم العربية، الإنجليزية، التركية، الفارسية، والصينية.</p>
-      </div>
+      <article class="feature-card reveal">
+<span class="feature-icon">📦</span><h3>إدارة المخزون</h3><p>تتبع كميات المنتجات في الوقت الفعلي، مع تنبيهات عند اقتراب نفاذ المخزون.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🧾</span><h3>نظام الفواتير</h3><p>أصدر فواتير PDF احترافية في ثوانٍ. تتبع سجلات البيع والديون بسهولة.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">💰</span><h3>تتبع المعاملات</h3><p>راقب جميع المبيعات والمدفوعات والاشتراكات في مكان مركزي واحد.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">💸</span><h3>إدارة المصاريف</h3><p>سجل مصاريف عملك بدقة للتحكم المالي الكامل وتحسين الإنفاق.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">👥</span><h3>العملاء والموردين</h3><p>احتفظ بسجلات رقمية منظمة لجميع شركائك لسهولة الوصول والتواصل.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">📊</span><h3>تحليل السلع والأرباح</h3><p>احصل على رؤى واضحة حول أداء عملك مع تقارير أرباح مفصلة ورسوم بيانية.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">📉</span><h3>إحصائيات متقدمة</h3><p>رسوم بيانية تفاعلية للمبيعات والأرباح والمصاريف (أسبوعي، شهري، سنوي).</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">☁️</span><h3>نسخ احتياطي واستعادة</h3><p>احمِ بياناتك من الفقدان. احفظ بيانات متجرك واستعدها في أي وقت ومكان.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🌍</span><h3>دعم لغات متعددة</h3><p>التطبيق يدعم العربية، الإنجليزية، التركية، الفارسية، والصينية.</p>      </article>
     </div>
   </div>
 </section>
 
-<!-- Screenshots Section -->
+
 <section class="section screenshots-section" id="screenshots">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">استعراض</span>
       <h2 class="section-title">لقطات من الشاشة</h2>
     </div>
     <div class="screenshots-scroll">
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/store_mangement/screenshots/2.jpg" alt="إدارة المتجر screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/store_mangement/screenshots/1.jpg" alt="إدارة المتجر screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/store_mangement/screenshots/3.jpg" alt="إدارة المتجر screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/store_mangement/screenshots/4.jpg" alt="إدارة المتجر screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/store_mangement/screenshots/5.jpg" alt="إدارة المتجر screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/store_mangement/screenshots/6.jpg" alt="إدارة المتجر screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/store_mangement/screenshots/7.jpg" alt="إدارة المتجر screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/store_mangement/screenshots/8.jpg" alt="إدارة المتجر screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/store_mangement/screenshots/9.jpg" alt="إدارة المتجر screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/store_mangement/screenshots/10.jpg" alt="إدارة المتجر screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/store_mangement/screenshots/11.jpg" alt="إدارة المتجر screenshot" loading="lazy">
@@ -307,11 +300,10 @@
   </div>
 </section>
 
-<!-- Testimonials Section -->
 
-<!-- Pricing Section -->
 
-<!-- Purchase Form Section -->
+
+
 
   </main>
 
@@ -326,13 +318,10 @@
         <p>عمليات المتجر الكاملة في تطبيق واحد</p>
       </div>
 
-      <div class="footer-links">
-        <h4>قانوني</h4>
-      </div>
 
       <div class="footer-contact">
         <h4>تواصل</h4>
-        <a href="mailto:abdulrsol97@gmail.com"><i class="fas fa-envelope"></i> abdulrsol97@gmail.com</a>
+        <a href="mailto:info@subultech.top"><i class="fas fa-envelope"></i> info@subultech.top</a>
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.store_mangment" data-goatcounter-click="footer-google-play-store-management" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
         <a href="https://github.com/abdulrasol/store_management" data-goatcounter-click="footer-github-store-management" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
       </div>
@@ -344,7 +333,7 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/9647813639721?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D9%8A%D8%B9%D8%A7%D8%AF%20%D8%AA%D9%83%D9%86%D9%84%D9%88%D8%AC%D9%8A%D8%8C%20%D8%B2%D8%B1%D8%AA%20%D9%85%D9%88%D9%82%D8%B9%D9%83%D9%85%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A3%D9%88%20%D8%B4%D8%B1%D8%A7%D9%83%D8%A9."
+  <a href="https://wa.me/9647813639721?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B3%D8%A8%D9%84%20%D8%A7%D9%84%D8%AA%D9%83%D9%86%D9%84%D9%88%D8%AC%D9%8A%D8%A7%D8%8C%20%D8%B2%D8%B1%D8%AA%20%D9%85%D9%88%D9%82%D8%B9%D9%83%D9%85%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A3%D9%88%20%D9%85%D9%86%D8%AA%D8%AC%20%D8%A3%D9%88%20%D8%B4%D8%B1%D8%A7%D9%83%D8%A9."
      class="whatsapp-float"
      target="_blank"
      rel="noopener"

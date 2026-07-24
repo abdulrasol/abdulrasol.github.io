@@ -8,7 +8,7 @@
   <title>SWEEP — منظف ماك للمطورين</title>
   <meta name="description" content="أداة عالية الأداء لتنظيف أجهزة Mac للمطورين. مبنية بـ Rust و Tauri v2 و React. تجد وتزيل تلقائياً الملفات المخفية للتطوير لاسترداد مساحة القرص.">
   <meta name="keywords" content="منظف ماك, أدوات المطورين, Rust, Tauri, React, تنظيف القرص, أدوات">
-  <meta name="author" content="Meaad Tech">
+  <meta name="author" content="Subul Technology">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#1a1a2e">
 
@@ -41,7 +41,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -97,40 +97,42 @@
         <button class="theme-toggle" id="theme-toggle" aria-label="تبديل المظهر">
           <i class="fas fa-moon"></i>
         </button>
-        <a href="/sweep/" class="lang-toggle" aria-label="Switch to English">
+        <a href="/sweep/" class="lang-toggle" data-lang-switch aria-label="Switch to English">
           <i class="fas fa-globe"></i>
           <span>English</span>
         </a>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="فتح القائمة">
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobile-nav">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Nav -->
-    <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav" id="mobile-nav" hidden>
       <a href="/ar/">العودة للمعرض →</a>
       <a href="/ar/sweep/">الرئيسية</a>
-      <a href="/sweep/">English</a>
+<a href="#features">الميزات</a><a href="#screenshots">اللقطات</a>      <a href="/sweep/" data-lang-switch>English</a>
     </div>
   </header>
 
   <!-- Main Content -->
   <main>
 
-<!-- Hero Section -->
 <section class="hero" id="hero">
   <div class="hero-bg">
     <div class="hero-banner" style="background-image: url('/assets/sweep/banner.png')"></div>
+    <div class="hero-orb hero-orb-primary"></div>
+    <div class="hero-orb hero-orb-secondary"></div>
   </div>
 
   <div class="container hero-content">
     <div class="hero-text">
-      <img src="/assets/sweep/logo.png" alt="SWEEP" class="hero-logo">
-      <h1 class="hero-title">SWEEP: استرد مساحة عملك</h1>
-      <p class="hero-subtitle">مركز قيادة احترافي لتنظيف الملفات المخفية للمطورين. مبنى بـ Rust و Tauri v2 و React. متعدد المنصات لـ macOS و Windows و Linux.</p>
 
-      <div class="hero-actions">
+      <img src="/assets/sweep/logo.png" alt="SWEEP" class="hero-logo reveal">
+      <h1 class="hero-title reveal">SWEEP: استرد مساحة عملك</h1>
+      <p class="hero-subtitle reveal">مركز قيادة احترافي لتنظيف الملفات المخفية للمطورين. مبنى بـ Rust و Tauri v2 و React. متعدد المنصات لـ macOS و Windows و Linux.</p>
+
+      <div class="hero-actions reveal">
         <a href="https://github.com/abdulrasol/sweep"
            data-goatcounter-click="project-github-sweep"
            class="btn btn-secondary"
@@ -141,78 +143,81 @@
         </a>
       </div>
 
-      <div class="platforms">
+      <div class="platforms reveal">
         <span class="platform-badge">macOS</span>
         <span class="platform-badge">Windows</span>
         <span class="platform-badge">Linux</span>
       </div>
+
+
+      <div class="hero-trust-line reveal">
+        <span>مبني حول سير عمل تشغيلي حقيقي</span>
+        <span>تنفيذ جاهز للعربية والإنكليزية</span>
+        <span>تنفيذ منتجي مباشر</span>
+      </div>
     </div>
 
-    <div class="hero-image">
-      <img src="/assets/sweep/screenshots/01.png" alt="SWEEP screenshot">
+    <div class="hero-visual reveal">
+      <div class="hero-device-stack">
+        <div class="device device-back">
+          <img src="/assets/sweep/screenshots/01.png" alt="SWEEP screenshot">
+        </div>
+        <div class="device device-front">
+          <img src="/assets/sweep/screenshots/02.png" alt="SWEEP screenshot">
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Features Section -->
+
+
+
 <section class="section features" id="features">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">مميزات SWEEP</span>
       <h2 class="section-title">مميزات SWEEP</h2>
     </div>
 
     <div class="features-grid">
-      <div class="feature-card">
-        <span class="feature-icon">🧹</span>
-        <h3>تنظيف عميق متعدد البيئات</h3>
-        <p>ينظف Flutter و Android (AVD/Gradle) و Xcode (DerivedData) و Node.js و Rust (Cargo) و Python (Conda/Pip) و Docker و Unity و Unreal Engine و Adobe caches.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📊</span>
-        <h3>لوحة تحكم فورية</h3>
-        <p>مراقبة فورية للمعالج والذاكرة ومساحة القرص بواجهة زجاجية متميزة.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🔍</span>
-        <h3>فحص ذكي مستهدف</h3>
-        <p>اختر مجلد التطوير ودع SWEEP يجد الملفات الزائدة تلقائياً بذكاء.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🛡️</span>
-        <h3>الأمان أولاً</h3>
-        <p>راجع كل ملف قبل الحذف. لا فقدان بيانات عرضي. الحذف الدائم موضح بوضوح.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🖥️</span>
-        <h3>متعدد المنصات</h3>
-        <p>بنيات أصلية لـ macOS (.dmg) و Windows (.msi) و Linux (.deb) باستخدام Tauri v2 و Rust.</p>
-      </div>
+      <article class="feature-card reveal">
+<span class="feature-icon">🧹</span><h3>تنظيف عميق متعدد البيئات</h3><p>ينظف Flutter و Android (AVD/Gradle) و Xcode (DerivedData) و Node.js و Rust (Cargo) و Python (Conda/Pip) و Docker و Unity و Unreal Engine و Adobe caches.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">📊</span><h3>لوحة تحكم فورية</h3><p>مراقبة فورية للمعالج والذاكرة ومساحة القرص بواجهة زجاجية متميزة.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🔍</span><h3>فحص ذكي مستهدف</h3><p>اختر مجلد التطوير ودع SWEEP يجد الملفات الزائدة تلقائياً بذكاء.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🛡️</span><h3>الأمان أولاً</h3><p>راجع كل ملف قبل الحذف. لا فقدان بيانات عرضي. الحذف الدائم موضح بوضوح.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🖥️</span><h3>متعدد المنصات</h3><p>بنيات أصلية لـ macOS (.dmg) و Windows (.msi) و Linux (.deb) باستخدام Tauri v2 و Rust.</p>      </article>
     </div>
   </div>
 </section>
 
-<!-- Screenshots Section -->
+
 <section class="section screenshots-section" id="screenshots">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">استعراض</span>
       <h2 class="section-title">لقطات الشاشة</h2>
     </div>
     <div class="screenshots-scroll">
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/sweep/screenshots/01.png" alt="SWEEP screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/sweep/screenshots/02.png" alt="SWEEP screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/sweep/screenshots/03.png" alt="SWEEP screenshot" loading="lazy">
@@ -223,11 +228,10 @@
   </div>
 </section>
 
-<!-- Testimonials Section -->
 
-<!-- Pricing Section -->
 
-<!-- Purchase Form Section -->
+
+
 
   </main>
 
@@ -242,13 +246,10 @@
         <p>استرد مساحة قرصك، ملفاً تلو الآخر</p>
       </div>
 
-      <div class="footer-links">
-        <h4>قانوني</h4>
-      </div>
 
       <div class="footer-contact">
         <h4>تواصل</h4>
-        <a href="mailto:abdulrasol.alhilo@gmail.com"><i class="fas fa-envelope"></i> abdulrasol.alhilo@gmail.com</a>
+        <a href="mailto:info@subultech.top"><i class="fas fa-envelope"></i> info@subultech.top</a>
         <a href="https://github.com/abdulrasol/sweep" data-goatcounter-click="footer-github-sweep" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
       </div>
     </div>
@@ -259,7 +260,7 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/9647813639721?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D9%8A%D8%B9%D8%A7%D8%AF%20%D8%AA%D9%83%D9%86%D9%84%D9%88%D8%AC%D9%8A%D8%8C%20%D8%B2%D8%B1%D8%AA%20%D9%85%D9%88%D9%82%D8%B9%D9%83%D9%85%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A3%D9%88%20%D8%B4%D8%B1%D8%A7%D9%83%D8%A9."
+  <a href="https://wa.me/9647813639721?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B3%D8%A8%D9%84%20%D8%A7%D9%84%D8%AA%D9%83%D9%86%D9%84%D9%88%D8%AC%D9%8A%D8%A7%D8%8C%20%D8%B2%D8%B1%D8%AA%20%D9%85%D9%88%D9%82%D8%B9%D9%83%D9%85%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A3%D9%88%20%D9%85%D9%86%D8%AA%D8%AC%20%D8%A3%D9%88%20%D8%B4%D8%B1%D8%A7%D9%83%D8%A9."
      class="whatsapp-float"
      target="_blank"
      rel="noopener"

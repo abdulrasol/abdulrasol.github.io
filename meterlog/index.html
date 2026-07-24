@@ -8,7 +8,7 @@
   <title>Smart Multimeter Reader | MeterLog</title>
   <meta name="description" content="AI-powered multimeter reader with OCR recognition, scheduled capture, and professional Excel/CSV export. Works 100% offline.">
   <meta name="keywords" content="Multimeter, OCR, AI, Flutter, Android, iOS, MeterLog, Offline">
-  <meta name="author" content="Meaad Tech">
+  <meta name="author" content="Subul Technology">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#00E5FF">
 
@@ -41,7 +41,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -97,40 +97,42 @@
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-moon"></i>
         </button>
-        <a href="/ar/meterlog/" class="lang-toggle" aria-label="Switch to Arabic">
+        <a href="/ar/meterlog/" class="lang-toggle" data-lang-switch aria-label="Switch to Arabic">
           <i class="fas fa-globe"></i>
           <span>العربية</span>
         </a>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu">
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Nav -->
-    <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav" id="mobile-nav" hidden>
       <a href="/">← Back to Portfolio</a>
       <a href="/meterlog/">Home</a>
-<a href="/meterlog/privacy_policy/">Privacy Policy</a>      <a href="/ar/meterlog/">العربية</a>
+<a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="/meterlog/privacy_policy/">Privacy Policy</a>      <a href="/ar/meterlog/" data-lang-switch>العربية</a>
     </div>
   </header>
 
   <!-- Main Content -->
   <main>
 
-<!-- Hero Section -->
 <section class="hero" id="hero">
   <div class="hero-bg">
     <div class="hero-banner" style="background-image: url('/assets/poster.png')"></div>
+    <div class="hero-orb hero-orb-primary"></div>
+    <div class="hero-orb hero-orb-secondary"></div>
   </div>
 
   <div class="container hero-content">
     <div class="hero-text">
-      <img src="/assets/meter_log/logo.png" alt="MeterLog" class="hero-logo">
-      <h1 class="hero-title">Smart Multimeter Reader</h1>
-      <p class="hero-subtitle">The ultimate AI-powered tool for engineers and technicians. Automatically recognize readings, log data offline, and export professional reports.</p>
 
-      <div class="hero-actions">
+      <img src="/assets/meter_log/logo.png" alt="MeterLog" class="hero-logo reveal">
+      <h1 class="hero-title reveal">Smart Multimeter Reader</h1>
+      <p class="hero-subtitle reveal">The ultimate AI-powered tool for engineers and technicians. Automatically recognize readings, log data offline, and export professional reports.</p>
+
+      <div class="hero-actions reveal">
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log"
            data-goatcounter-click="project-google-play-meterlog"
            class="btn btn-primary"
@@ -141,100 +143,106 @@
         </a>
       </div>
 
-      <div class="platforms">
+      <div class="platforms reveal">
         <span class="platform-badge">Android</span>
         <span class="platform-badge">iOS</span>
       </div>
+
+
+      <div class="hero-trust-line reveal">
+        <span>Built around real operating workflows</span>
+        <span>Bilingual-ready delivery</span>
+        <span>Direct product execution</span>
+      </div>
     </div>
 
-    <div class="hero-image">
-      <img src="/assets/meter_log/screenshots/01.jpg" alt="MeterLog screenshot">
+    <div class="hero-visual reveal">
+      <div class="hero-device-stack">
+        <div class="device device-back">
+          <img src="/assets/meter_log/screenshots/01.jpg" alt="MeterLog screenshot">
+        </div>
+        <div class="device device-front">
+          <img src="/assets/meter_log/screenshots/02.jpg" alt="MeterLog screenshot">
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Features Section -->
+
+
+
 <section class="section features" id="features">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Why Meter Log?</span>
       <h2 class="section-title">Why Meter Log?</h2>
     </div>
 
     <div class="features-grid">
-      <div class="feature-card">
-        <span class="feature-icon">🤖</span>
-        <h3>AI-Powered OCR</h3>
-        <p>Advanced recognition of numbers and units under various lighting conditions.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📸</span>
-        <h3>Scheduled Capture</h3>
-        <p>Automatically record readings at set intervals, even in the background.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📁</span>
-        <h3>Excel / CSV Export</h3>
-        <p>Export your entire history to high-quality Excel and CSV files instantly.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🔒</span>
-        <h3>Privacy First</h3>
-        <p>Works 100% offline. No accounts, no servers, no data collection.</p>
-      </div>
+      <article class="feature-card reveal">
+<span class="feature-icon">🤖</span><h3>AI-Powered OCR</h3><p>Advanced recognition of numbers and units under various lighting conditions.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">📸</span><h3>Scheduled Capture</h3><p>Automatically record readings at set intervals, even in the background.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">📁</span><h3>Excel / CSV Export</h3><p>Export your entire history to high-quality Excel and CSV files instantly.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🔒</span><h3>Privacy First</h3><p>Works 100% offline. No accounts, no servers, no data collection.</p>      </article>
     </div>
   </div>
 </section>
 
-<!-- Screenshots Section -->
+
 <section class="section screenshots-section" id="screenshots">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Preview</span>
       <h2 class="section-title">App Screenshots</h2>
     </div>
     <div class="screenshots-scroll">
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meter_log/screenshots/01.jpg" alt="MeterLog screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meter_log/screenshots/02.jpg" alt="MeterLog screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meter_log/screenshots/03.jpg" alt="MeterLog screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meter_log/screenshots/04.jpg" alt="MeterLog screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meter_log/screenshots/05.jpg" alt="MeterLog screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meter_log/screenshots/06.jpg" alt="MeterLog screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/meter_log/screenshots/07.jpg" alt="MeterLog screenshot" loading="lazy">
@@ -245,11 +253,10 @@
   </div>
 </section>
 
-<!-- Testimonials Section -->
 
-<!-- Pricing Section -->
 
-<!-- Purchase Form Section -->
+
+
 
   </main>
 
@@ -270,7 +277,7 @@
 
       <div class="footer-contact">
         <h4>Contact</h4>
-        <a href="mailto:abdulrsol97@gmail.com"><i class="fas fa-envelope"></i> abdulrsol97@gmail.com</a>
+        <a href="mailto:info@subultech.top"><i class="fas fa-envelope"></i> info@subultech.top</a>
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log" data-goatcounter-click="footer-google-play-meterlog" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
       </div>
     </div>
@@ -281,7 +288,7 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/9647813639721?text=Hello%20Meaad%20Tech%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%20or%20partnership."
+  <a href="https://wa.me/9647813639721?text=Hello%20Subul%20Technology%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%2C%20product%2C%20or%20partnership."
      class="whatsapp-float"
      target="_blank"
      rel="noopener"

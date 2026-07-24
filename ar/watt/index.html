@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>واط: منصة الطاقة الشمسية</title>
-  <meta name="description" content="حاسبة أنظمة الطاقة الشمسية وسوق معدات لتصميم حلول الطاقة النظيفة. للمنازل، الشركات، والمحترفين في العراق وعالمياً.">
-  <meta name="keywords" content="طاقة شمسية, نظام طاقة, حاسبة شمسية, طاقة نظيفة, سوق معدات, فلاتر, العراق">
-  <meta name="author" content="Meaad Tech">
+  <meta name="description" content="منصة شمسية متكاملة للعراق تجمع بين حساب الأنظمة، سوق المنتجات، عروض الأسعار، وعمليات الشركات في تجربة واحدة.">
+  <meta name="keywords" content="واط, منصة طاقة شمسية, سوق شمسي العراق, حاسبة شمسية, B2B B2C, طاقة نظيفة, فلاتر">
+  <meta name="author" content="Subul Technology">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#f59e0b">
 
@@ -22,7 +22,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="واط: منصة الطاقة الشمسية">
-  <meta property="og:description" content="حاسبة أنظمة الطاقة الشمسية وسوق معدات لتصميم حلول الطاقة النظيفة. للمنازل، الشركات، والمحترفين في العراق وعالمياً.">
+  <meta property="og:description" content="منصة شمسية متكاملة للعراق تجمع بين حساب الأنظمة، سوق المنتجات، عروض الأسعار، وعمليات الشركات في تجربة واحدة.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://abdulrasol.github.io/ar/watt/">
   <meta property="og:image" content="https://abdulrasol.github.io/assets/watt/logo.png">
@@ -31,7 +31,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="واط: منصة الطاقة الشمسية">
-  <meta name="twitter:description" content="حاسبة أنظمة الطاقة الشمسية وسوق معدات لتصميم حلول الطاقة النظيفة. للمنازل، الشركات، والمحترفين في العراق وعالمياً.">
+  <meta name="twitter:description" content="منصة شمسية متكاملة للعراق تجمع بين حساب الأنظمة، سوق المنتجات، عروض الأسعار، وعمليات الشركات في تجربة واحدة.">
   <meta name="twitter:image" content="https://abdulrasol.github.io/assets/watt/logo.png">
 
   <!-- Favicon -->
@@ -41,7 +41,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -73,7 +73,7 @@
       "price": "0",
       "priceCurrency": "USD"
     },
-    "description": "حاسبة أنظمة الطاقة الشمسية وسوق معدات لتصميم حلول الطاقة النظيفة. للمنازل، الشركات، والمحترفين في العراق وعالمياً.",
+    "description": "منصة شمسية متكاملة للعراق تجمع بين حساب الأنظمة، سوق المنتجات، عروض الأسعار، وعمليات الشركات في تجربة واحدة.",
 "downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",    "image": "https://abdulrasol.github.io/assets/watt/logo.png"
   }
   </script>
@@ -97,40 +97,43 @@
         <button class="theme-toggle" id="theme-toggle" aria-label="تبديل المظهر">
           <i class="fas fa-moon"></i>
         </button>
-        <a href="/watt/" class="lang-toggle" aria-label="Switch to English">
+        <a href="/watt/" class="lang-toggle" data-lang-switch aria-label="Switch to English">
           <i class="fas fa-globe"></i>
           <span>English</span>
         </a>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="فتح القائمة">
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobile-nav">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Nav -->
-    <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav" id="mobile-nav" hidden>
       <a href="/ar/">العودة للمعرض →</a>
       <a href="/ar/watt/">الرئيسية</a>
-      <a href="/watt/">English</a>
+<a href="#problem">المشكلة</a><a href="#solution">الحل</a><a href="#market">السوق</a><a href="#features">الميزات</a><a href="#revenue">الإيرادات</a><a href="#why-invest">لماذا الاستثمار</a><a href="#screenshots">اللقطات</a>      <a href="/watt/" data-lang-switch>English</a>
     </div>
   </header>
 
   <!-- Main Content -->
   <main>
 
-<!-- Hero Section -->
 <section class="hero" id="hero">
   <div class="hero-bg">
     <div class="hero-banner" style="background-image: url('/assets/watt/banar.png')"></div>
+    <div class="hero-orb hero-orb-primary"></div>
+    <div class="hero-orb hero-orb-secondary"></div>
   </div>
 
   <div class="container hero-content">
     <div class="hero-text">
-      <img src="/assets/watt/logo.png" alt="واط" class="hero-logo">
-      <h1 class="hero-title">واط: حلول الطاقة الشمسية</h1>
-      <p class="hero-subtitle">صمم أنظمة الطاقة الشمسية، قارن المعدات، وأدر مشاريعك للطاقة النظيفة — كل ذلك في تطبيق واحد قوي. مبني للعراق، جاهز للعالم.</p>
+      <div class="hero-badge reveal">أول سوق إلكتروني متكامل للطاقة الشمسية في العراق</div>
 
-      <div class="hero-actions">
+      <img src="/assets/watt/logo.png" alt="واط" class="hero-logo reveal">
+      <h1 class="hero-title reveal">حوّل الطلب الشمسي إلى <span class="highlight">منصة قابلة للتوسع</span></h1>
+      <p class="hero-subtitle reveal">واط تجمع بين الحساب الشمسي، تصميم الأنظمة، سوق الموردين، عروض الأسعار، وعمليات الشركات في منصة واحدة للمستهلكين والشركات.</p>
+
+      <div class="hero-actions reveal">
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt"
            data-goatcounter-click="project-google-play-watt"
            class="btn btn-primary"
@@ -139,112 +142,229 @@
           <i class="fab fa-google-play"></i>
           تحميل من Google Play
         </a>
+        <a href="#project-cta" class="btn btn-secondary">
+          <i class="fas fa-arrow-down"></i>
+          عرض فرصة الاستثمار
+        </a>
+        <a href="mailto:watt@subultech.top" class="btn btn-secondary">
+          <i class="fas fa-paper-plane"></i>
+          تحتاج نظاماً مشابهاً؟
+        </a>
       </div>
 
-      <div class="platforms">
+      <div class="platforms reveal">
         <span class="platform-badge">Android</span>
         <span class="platform-badge">iOS</span>
       </div>
+
+      <div class="hero-stats reveal">
+        <div class="hero-stat">
+          <div class="hero-stat-value">+300</div>
+          <div class="hero-stat-label">مستخدم نشط</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">+50</div>
+          <div class="hero-stat-label">شركة مسجلة</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">+25</div>
+          <div class="hero-stat-label">مدينة عراقية</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">B2B + B2C</div>
+          <div class="hero-stat-label">نموذج عمل مزدوج</div>
+        </div>
+      </div>
+
+      <div class="hero-trust-line reveal">
+        <span>مبني حول سير عمل تشغيلي حقيقي</span>
+        <span>تنفيذ جاهز للعربية والإنكليزية</span>
+        <span>تنفيذ منتجي مباشر</span>
+      </div>
     </div>
 
-    <div class="hero-image">
-      <img src="/assets/watt/screenshots/1.jpg" alt="واط screenshot">
+    <div class="hero-visual reveal">
+      <div class="hero-device-stack">
+        <div class="device device-back">
+          <img src="/assets/watt/screenshots/1.jpg" alt="واط screenshot">
+        </div>
+        <div class="device device-front">
+          <img src="/assets/watt/screenshots/2.jpg" alt="واط screenshot">
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Features Section -->
+<section class="section story-section story-section-split" id="problem">
+  <div class="container story-grid">
+    <div class="story-copy reveal">
+<span class="section-eyebrow">المشكلة</span><h2 class="section-title">العراق يملك فجوة كهربائية وسوقاً شمسية مبعثرة</h2><p class="section-subtitle">الطلب موجود، لكن الاكتشاف والمقارنة والتنفيذ ما زالت معقدة.</p><p class="story-body">يعاني العراق من نقص مزمن في الكهرباء رغم امتلاكه واحداً من أفضل الظروف الشمسية في المنطقة. ما يزال المستهلكون والشركات يواجهون سوقاً غير منظمة، وأسعاراً غير واضحة، وغياب مسار موثوق من حساب الاحتياج إلى الشراء والتنفيذ.</p>
+      <div class="story-list">
+        <div class="story-list-item">
+<span class="story-list-icon">❌</span>          <span>انقطاع الكهرباء من 8 إلى 12 ساعة يومياً في كثير من المناطق</span>
+        </div>
+        <div class="story-list-item">
+<span class="story-list-icon">❌</span>          <span>تكاليف عالية للمولدات والوقود</span>
+        </div>
+        <div class="story-list-item">
+<span class="story-list-icon">❌</span>          <span>سوق غير منظمة للموزعين وشركات التركيب</span>
+        </div>
+        <div class="story-list-item">
+<span class="story-list-icon">❌</span>          <span>صعوبة مقارنة الأسعار والمواصفات بين الموردين</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-highlight reveal">
+      <div class="highlight-card">
+        <div class="highlight-value">330+</div>
+        <div class="highlight-label">يوم مشمس سنوياً في العراق</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cards-section cards-section-alt" id="solution">
+  <div class="container">
+    <div class="section-header reveal">
+<span class="section-eyebrow">الحل</span><h2 class="section-title">واط تجمع الرحلة الشمسية كلها في منصة واحدة</h2><p class="section-subtitle">من أول حساب إلى عرض السعر والطلب وعمليات الشركة.</p>    </div>
+
+    <div class="feature-showcase-grid">
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">🔢</span><h3>حاسبة شمسية ذكية</h3><p>احسب الألواح والبطاريات والإنفرترات والاحتياج الطاقي بدقة عملية.</p>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">🏪</span><h3>متجر B2B + B2C</h3><p>سوق موحدة للمستهلكين والشركات لتصفح المعدات ومقارنتها.</p>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">📋</span><h3>مسار عروض أسعار</h3><p>اطلب وقارن عروض الأسعار من عدة شركات ضمن تدفق واحد.</p>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">📊</span><h3>إدارة المخزون والمبيعات</h3><p>للشركات: إدارة المخزون والطلبات والعملاء والتقارير المالية.</p>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">💳</span><h3>محاسبة متكاملة</h3><p>فواتير، دفاتر أستاذ، قبض وصرف، وربحية ضمن نظام تشغيلي واحد.</p>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">✏️</span><h3>مصمم أنظمة</h3><p>أداة احترافية لتصميم الأنظمة مع دعم فاتورة المواد.</p>      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section metrics-section" id="market">
+  <div class="container">
+    <div class="section-header reveal">
+<span class="section-eyebrow">فرصة السوق</span><h2 class="section-title">لماذا العراق؟ ولماذا الآن؟</h2><p class="section-subtitle">سوق طاقة عالي الطلب مع جاهزية رقمية ومنافسة متكاملة منخفضة.</p>    </div>
+
+    <div class="metrics-grid">
+      <div class="metric-card reveal">
+<div class="metric-icon">☀️</div><div class="metric-value">3,000+</div><div class="metric-label">ساعة شمس سنوياً</div>      </div>
+      <div class="metric-card reveal">
+<div class="metric-icon">🏠</div><div class="metric-value">40M+</div><div class="metric-label">عدد سكان مع طلب متزايد على الطاقة البديلة</div>      </div>
+      <div class="metric-card reveal">
+<div class="metric-icon">⚡</div><div class="metric-value">~55%</div><div class="metric-label">فجوة بين إنتاج الشبكة والحاجة الفعلية</div>      </div>
+      <div class="metric-card reveal">
+<div class="metric-icon">📜</div><div class="metric-value">2024-2030</div><div class="metric-label">نافذة تنظيمية وزخم للطاقة المتجددة</div>      </div>
+      <div class="metric-card reveal">
+<div class="metric-icon">💰</div><div class="metric-value">$500M+</div><div class="metric-label">حجم سوق شمسي متوقع في العراق بحلول 2027</div>      </div>
+      <div class="metric-card reveal">
+<div class="metric-icon">📱</div><div class="metric-value">85%</div><div class="metric-label">انتشار الإنترنت والهواتف الذكية</div>      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section features" id="features">
   <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">مميزات واط</h2>
-    </div>
+    <div class="section-header reveal">
+      <span class="section-eyebrow">ميزات المنصة</span>
+      <h2 class="section-title">ميزات المنصة</h2>
+<p class="section-subtitle">واط تخدم المستخدم النهائي والشركات الشمسية في تجربة مترابطة واحدة.</p>    </div>
 
     <div class="features-grid">
-      <div class="feature-card">
-        <span class="feature-icon">☀️</span>
-        <h3>حاسبة النظام الشمسي</h3>
-        <p>احسب حجم النظام، عدد الألواح، سعة البطارية، ومتطلبات العاكس للأنظمة المتصلة وغير المتصلة بالشبكة.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🛒</span>
-        <h3>سوق المعدات</h3>
-        <p>تصفح وقارن الألواح الشمسية، البطاريات، العاكسات، والملحقات من موردين متعددين.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📊</span>
-        <h3>إدارة المشاريع</h3>
-        <p>تتبع تركيباتك الشمسية، أنشئ عروض أسعار PDF احترافية، وأدر مقترحات العملاء.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🌍</span>
-        <h3>دعم عالمي ومحلي</h3>
-        <p>محسن لظروف وأسعار العراق، مع محرك حسابات عالمي لأي موقع حول العالم.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📱</span>
-        <h3>يعمل بدون إنترنت</h3>
-        <p>الحسابات الأساسية تعمل بدون إنترنت. تزامن عند الاتصال لميزات السوق والسحابة.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🎨</span>
-        <h3>تصميم عصري</h3>
-        <p>واجهة نظيفة وبديهية بالعربية والإنجليزية، مع دعم الوضع الليلي.</p>
-      </div>
+      <article class="feature-card reveal">
+<span class="feature-icon">🧮</span><h3>الحاسبة السريعة</h3><p>احسب الاستهلاك وحجم النظام وعدد المكونات والكلفة خلال دقائق.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🛒</span><h3>متجر B2B + B2C</h3><p>سوق منتجات للمستهلك النهائي ولشركات الطاقة الشمسية المحترفة.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🤝</span><h3>طلبات عروض الأسعار</h3><p>إنشاء طلبات عروض ومقارنة عروض عدة شركات قبل اتخاذ القرار.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">📦</span><h3>إدارة الطلبات</h3><p>تابع المسار من تقديم الطلب إلى التوصيل والتركيب.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">👥</span><h3>إدارة الفريق</h3><p>إضافة أعضاء الفريق وإدارة الصلاحيات وتنسيق المبيعات والعمليات.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">💬</span><h3>مجتمع ومساحة استشارية</h3><p>دعم النقاش والمحتوى التعليمي وبناء الثقة السوقية عملياً.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">📐</span><h3>مصمم الأنظمة</h3><p>تصميم الأنظمة بمنطق أكثر احترافية مع مخرجات جاهزة للمواد.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">📊</span><h3>تقارير وتحليلات</h3><p>رؤية تشغيلية ومالية للشركات التي تدير مبيعات ومشاريع الطاقة الشمسية.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🔔</span><h3>إشعارات ذكية</h3><p>تحديثات لحظية للطلبات والعروض والتغييرات والنشاط التجاري.</p>      </article>
     </div>
   </div>
 </section>
 
-<!-- Screenshots Section -->
+<section class="section cards-section" id="revenue">
+  <div class="container">
+    <div class="section-header reveal">
+<span class="section-eyebrow">نموذج الربح</span><h2 class="section-title">كيف يحقق واط الإيرادات</h2><p class="section-subtitle">قنوات إيراد متعددة تدعم النمو والاستدامة.</p>    </div>
+
+    <div class="feature-showcase-grid">
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">📋</span><h3>عمولة السوق</h3><p>عمولة على مبيعات B2B وB2C التي تتم عبر المنصة.</p><span class="card-tag">الإيراد الأساسي</span>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">👑</span><h3>اشتراكات الشركات</h3><p>اشتراكات متكررة للموردين وشركات التركيب والمشغلين المحترفين.</p><span class="card-tag">متكرر</span>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">📢</span><h3>الترويج والإعلانات</h3><p>ظهور مدفوع للموردين، بطاقات مميزة، وحملات داخل المنصة.</p><span class="card-tag">توسع</span>      </article>
+    </div>
+  </div>
+</section>
+
 <section class="section screenshots-section" id="screenshots">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">استعراض</span>
       <h2 class="section-title">لقطات من التطبيق</h2>
     </div>
     <div class="screenshots-scroll">
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/1.jpg" alt="واط screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/2.jpg" alt="واط screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/3.jpg" alt="واط screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/4.jpg" alt="واط screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/5.jpg" alt="واط screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/6.jpg" alt="واط screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/7.jpg" alt="واط screenshot" loading="lazy">
@@ -255,11 +375,64 @@
   </div>
 </section>
 
-<!-- Testimonials Section -->
+<section class="section story-section" id="why-invest">
+  <div class="container">
+    <div class="section-header reveal">
+<span class="section-eyebrow">لماذا الاستثمار</span><h2 class="section-title">لماذا واط هي الاستثمار الصحيح؟</h2><p class="section-subtitle">هذا ليس تطبيقاً صغيراً آخر، بل بنية منصة لسوق كامل.</p>    </div>
 
-<!-- Pricing Section -->
+    <div class="why-grid">
+      <article class="why-card reveal">
+<div class="why-number">1</div>        <div class="why-copy">
+<h3>سوق غير مخدوم كفاية</h3><p>لا يوجد منافس متكامل يجمع الحساب والسوق وعروض الأسعار والعمليات.</p>        </div>
+      </article>
+      <article class="why-card reveal">
+<div class="why-number">2</div>        <div class="why-copy">
+<h3>نموذج عمل قابل للتوسع</h3><p>نموذج مزدوج B2B + B2C مع مساحة للتوسع الإقليمي.</p>        </div>
+      </article>
+      <article class="why-card reveal">
+<div class="why-number">3</div>        <div class="why-copy">
+<h3>قاعدة تقنية قوية</h3><p>مبني بتقنيات حديثة ومعمارية جاهزة للنمو التشغيلي.</p>        </div>
+      </article>
+      <article class="why-card reveal">
+<div class="why-number">4</div>        <div class="why-copy">
+<h3>أكثر من مجرد متجر</h3><p>يجمع الحساب والتصميم والتجارة والعمليات وسير العمل التجاري في منتج واحد.</p>        </div>
+      </article>
+      <article class="why-card reveal">
+<div class="why-number">5</div>        <div class="why-copy">
+<h3>خبرة نابعة من السوق</h3><p>مبني بفهم مباشر لاحتياجات السوق العراقي وواقع الطاقة الشمسية.</p>        </div>
+      </article>
+      <article class="why-card reveal">
+<div class="why-number">6</div>        <div class="why-copy">
+<h3>اتجاه جاهز للإطلاق</h3><p>اتجاه المنتج واضح، وفرصة النمو قوية مع الشريك المناسب.</p>        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-<!-- Purchase Form Section -->
+
+
+
+<section class="section project-cta-section" id="project-cta">
+  <div class="container">
+    <div class="project-cta-card reveal">
+<span class="section-eyebrow">ابدأ الحوار</span><h2 class="section-title">مستعد لدعم البنية المنتجية للطاقة الشمسية في العراق؟</h2><p class="section-subtitle">تحدث مع سبل التكنلوجيا حول إطلاق المنتج أو الاستثمار الاستراتيجي أو الشراكة السوقية لواط.</p>
+      <div class="hero-actions">
+        <a href="mailto:watt@subultech.top" class="btn btn-primary">
+          <i class="fas fa-envelope"></i>
+          تحدث عن الاستثمار
+        </a>
+        <a href="https://wa.me/9647813639721?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B3%D8%A8%D9%84%20%D8%A7%D9%84%D8%AA%D9%83%D9%86%D9%84%D9%88%D8%AC%D9%8A%D8%A7%D8%8C%20%D8%B2%D8%B1%D8%AA%20%D9%85%D9%88%D9%82%D8%B9%D9%83%D9%85%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A3%D9%88%20%D9%85%D9%86%D8%AA%D8%AC%20%D8%A3%D9%88%20%D8%B4%D8%B1%D8%A7%D9%83%D8%A9." class="btn btn-secondary" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+          راسل فريق واط
+        </a>
+        <a href="/ar/team/abdulrasol/" class="btn btn-secondary">
+          <i class="fas fa-user-tie"></i>
+          عرض ملف المؤسس
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
   </main>
 
@@ -271,16 +444,13 @@
           <img src="/assets/watt/logo.png" alt="واط" width="36" height="36">
           <span>واط</span>
         </a>
-        <p>تصميم أنظمة الطاقة الشمسية بكل بساطة</p>
+        <p>المنصة الشمسية المتكاملة للعراق</p>
       </div>
 
-      <div class="footer-links">
-        <h4>قانوني</h4>
-      </div>
 
       <div class="footer-contact">
         <h4>تواصل</h4>
-        <a href="mailto:abdulrasol.alhilo@gmail.com"><i class="fas fa-envelope"></i> abdulrasol.alhilo@gmail.com</a>
+        <a href="mailto:watt@subultech.top"><i class="fas fa-envelope"></i> watt@subultech.top</a>
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt" data-goatcounter-click="footer-google-play-watt" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
       </div>
     </div>
@@ -291,7 +461,7 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/9647813639721?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D9%8A%D8%B9%D8%A7%D8%AF%20%D8%AA%D9%83%D9%86%D9%84%D9%88%D8%AC%D9%8A%D8%8C%20%D8%B2%D8%B1%D8%AA%20%D9%85%D9%88%D9%82%D8%B9%D9%83%D9%85%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A3%D9%88%20%D8%B4%D8%B1%D8%A7%D9%83%D8%A9."
+  <a href="https://wa.me/9647813639721?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B3%D8%A8%D9%84%20%D8%A7%D9%84%D8%AA%D9%83%D9%86%D9%84%D9%88%D8%AC%D9%8A%D8%A7%D8%8C%20%D8%B2%D8%B1%D8%AA%20%D9%85%D9%88%D9%82%D8%B9%D9%83%D9%85%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A3%D9%88%20%D9%85%D9%86%D8%AA%D8%AC%20%D8%A3%D9%88%20%D8%B4%D8%B1%D8%A7%D9%83%D8%A9."
      class="whatsapp-float"
      target="_blank"
      rel="noopener"
