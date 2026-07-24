@@ -4,32 +4,32 @@
       "id": "watt",
       "project_id": "watt",
       "status": "seeking_investor",
-      "title_en": "Watt — Solar Energy Platform",
-      "title_ar": "واط — منصة الطاقة الشمسية",
-      "tagline_en": "The first comprehensive solar energy platform for Iraq, ready to scale globally.",
-      "tagline_ar": "أول منصة شاملة للطاقة الشمسية في العراق، جاهزة للتوسع عالمياً.",
+      "title_en": "Watt — Iraq Solar Platform",
+      "title_ar": "واط — منصة العراق للطاقة الشمسية",
+      "tagline_en": "A product platform connecting solar demand, system design, commerce, and business operations in Iraq.",
+      "tagline_ar": "منصة منتج تربط بين الطلب الشمسي، تصميم الأنظمة، التجارة، وعمليات الشركات في العراق.",
       "seeking": {
-        "amount_en": "Seed Investment for Marketing & Operations",
-        "amount_ar": "استثمار أولي للتسويق والتشغيل",
+        "amount_en": "Seed capital for growth, operations, and market rollout",
+        "amount_ar": "تمويل أولي للنمو والتشغيل والإطلاق السوقي",
         "type_en": "Equity / Strategic Partnership",
         "type_ar": "حصة ملكية / شراكة استراتيجية"
       },
       "market": {
-        "size_en": "Iraq's solar market is rapidly growing with increasing government and private sector investment in renewable energy. The residential and commercial sectors show high demand for reliable solar solutions. The platform can also serve global markets with its universal calculation features.",
-        "size_ar": "سوق الطاقة الشمسية في العراق ينمو بسرعة مع زيادة استثمارات الحكومة والقطاع الخاص في الطاقة المتجددة. القطاعات السكنية والتجارية تظهر طلباً عالياً على حلول الطاقة الشمسية الموثوقة. المنصة يمكنها أيضاً خدمة الأسواق العالمية بميزات الحسابات العالمية."
+        "size_en": "Iraq combines a severe electricity gap, strong solar conditions, rising user demand, and increasing digital readiness. That creates a rare opportunity for an integrated product platform serving both consumers and solar companies.",
+        "size_ar": "العراق يجمع بين فجوة كهربائية كبيرة، ظروف شمسية ممتازة، طلب متصاعد، وجاهزية رقمية متزايدة. هذا يخلق فرصة نادرة لمنصة منتج متكاملة تخدم المستهلكين وشركات الطاقة الشمسية معاً."
       },
       "traction": {
-        "status_en": "Pre-launch. Beta testing complete. App is live on Google Play. Ready for market entry with the right partner.",
-        "status_ar": "قبل الإطلاق. اكتملت مرحلة الاختبار التجريبي. التطبيق متاح على Google Play. جاهز للدخول إلى السوق مع الشريك المناسب."
+        "status_en": "Product direction validated. Beta work completed. Google Play presence exists, and the opportunity is positioned for stronger market entry with the right partner.",
+        "status_ar": "اتجاه المنتج مثبت. العمل التجريبي منجز. يوجد حضور على Google Play، والفرصة مهيأة لدخول أقوى إلى السوق مع الشريك المناسب."
       },
       "team": ["abdulrasol"],
-      "competition_en": "Existing apps are either limited to basic calculators or focused only on equipment sales. Watt uniquely combines system design, marketplace, sales management, and advertising in one integrated platform for both end-users and companies.",
-      "competition_ar": "التطبيقات الموجودة إما محدودة بحاسبات بسيطة أو تركز فقط على بيع المعدات. واط بشكل فريد يجمع تصميم الأنظمة، السوق، إدارة المبيعات، والإعلانات في منصة متكاملة للمستخدمين النهائيين والشركات.",
-      "monetization_en": "In-app purchases, subscription tiers for professionals and companies, advertising space for equipment suppliers, commission on marketplace transactions.",
-      "monetization_ar": "عمليات شراء داخل التطبيق، مستويات اشتراك للمحترفين والشركات، مساحات إعلانية لموردي المعدات، عمولة على معاملات السوق.",
-      "cta_en": "Interested in investing? Let's talk.",
-      "cta_ar": "مهتم بالاستثمار؟ دعنا نتحدث.",
-      "contact_email": "abdulrasol.alhilo@gmail.com"
+      "competition_en": "Most existing solutions either stop at simple solar calculators or act as narrow product catalogues. Watt combines calculation, design, supplier discovery, quotation flow, and business operations in one connected product experience.",
+      "competition_ar": "معظم الحلول الحالية إما تتوقف عند الحاسبات الشمسية البسيطة أو تعمل كفهارس منتجات محدودة. واط تجمع الحساب والتصميم واكتشاف الموردين ومسار عروض الأسعار وعمليات الشركات في تجربة منتج مترابطة.",
+      "monetization_en": "Marketplace commissions, recurring subscriptions for solar companies, and promoted visibility/advertising inside the platform.",
+      "monetization_ar": "عمولات السوق، اشتراكات متكررة لشركات الطاقة الشمسية، وظهور ترويجي/إعلاني داخل المنصة.",
+      "cta_en": "Interested in backing Watt? Let's talk.",
+      "cta_ar": "مهتم بدعم واط؟ لنتحدث.",
+      "contact_email": "watt@subultech.top"
     }
   ]
 }

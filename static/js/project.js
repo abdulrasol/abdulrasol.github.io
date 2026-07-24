@@ -11,6 +11,8 @@
   'use strict';
 
   const STORAGE_KEY_THEME = 'project_theme';
+  const STORAGE_KEY_LANG_PREFERENCE = 'portfolio_lang_preference';
+  const STORAGE_KEY_LANG_REDIRECTED = 'portfolio_lang_redirected';
   const html = document.documentElement;
   const body = document.body;
   const header = document.getElementById('project-header');
@@ -18,6 +20,7 @@
   const mobileToggle = document.getElementById('mobile-menu-toggle');
   const mobileNav = document.getElementById('mobile-nav');
   const purchaseForm = document.getElementById('purchase-form');
+  const langSwitches = Array.from(document.querySelectorAll('[data-lang-switch]'));
 
   /* Theme handling */
   function getPreferredTheme() {
@@ -43,6 +46,80 @@
     applyTheme(next);
   }
 
+  function getStoredLanguagePreference() {
+    try {
+      return localStorage.getItem(STORAGE_KEY_LANG_PREFERENCE);
+    } catch {
+      return null;
+    }
+  }
+
+  function setStoredLanguagePreference(language) {
+    try {
+      localStorage.setItem(STORAGE_KEY_LANG_PREFERENCE, language);
+    } catch {
+      // Ignore storage failures.
+    }
+  }
+
+  function getBrowserLanguagePreference() {
+    const browserLanguage = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    return browserLanguage.startsWith('ar') ? 'ar' : 'en';
+  }
+
+  function getCurrentLanguage() {
+    return html.getAttribute('lang') === 'ar' ? 'ar' : 'en';
+  }
+
+  function hasLanguageRedirected() {
+    try {
+      return sessionStorage.getItem(STORAGE_KEY_LANG_REDIRECTED) === 'true';
+    } catch {
+      return false;
+    }
+  }
+
+  function markLanguageRedirected() {
+    try {
+      sessionStorage.setItem(STORAGE_KEY_LANG_REDIRECTED, 'true');
+    } catch {
+      // Ignore storage failures.
+    }
+  }
+
+  function clearLanguageRedirected() {
+    try {
+      sessionStorage.removeItem(STORAGE_KEY_LANG_REDIRECTED);
+    } catch {
+      // Ignore storage failures.
+    }
+  }
+
+  function initLanguagePreference() {
+    const currentLanguage = getCurrentLanguage();
+    const preferredLanguage = getStoredLanguagePreference() || getBrowserLanguagePreference();
+
+    langSwitches.forEach((link) => {
+      link.addEventListener('click', () => {
+        const nextLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
+        setStoredLanguagePreference(nextLanguage);
+      });
+    });
+
+    if (preferredLanguage === currentLanguage) {
+      clearLanguageRedirected();
+      return;
+    }
+
+    if (hasLanguageRedirected()) return;
+
+    const targetLink = langSwitches[0];
+    if (!targetLink?.href) return;
+
+    markLanguageRedirected();
+    window.location.replace(targetLink.href);
+  }
+
   /* Header scroll effect */
   function handleScroll() {
     const scrolled = window.scrollY > 20;
@@ -53,7 +130,9 @@
 
   /* Mobile menu */
   function toggleMobileMenu() {
+    if (!mobileNav || !mobileToggle) return;
     const isOpen = mobileNav.classList.toggle('open');
+    mobileNav.hidden = !isOpen;
     const icon = mobileToggle.querySelector('i');
     if (icon) {
       icon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
@@ -62,8 +141,9 @@
   }
 
   function closeMobileMenu() {
-    if (!mobileNav) return;
+    if (!mobileNav || !mobileToggle) return;
     mobileNav.classList.remove('open');
+    mobileNav.hidden = true;
     const icon = mobileToggle.querySelector('i');
     if (icon) icon.className = 'fas fa-bars';
     mobileToggle.setAttribute('aria-expanded', 'false');
@@ -167,6 +247,8 @@
   function init() {
     applyTheme(getPreferredTheme());
     handleScroll();
+    closeMobileMenu();
+    initLanguagePreference();
 
     if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
     if (mobileToggle) mobileToggle.addEventListener('click', toggleMobileMenu);

@@ -22,13 +22,14 @@
       <div class="resume-intro">
         <h1>{{ personal.name }}</h1>
         <p class="resume-title">{{ personal.tagline }}</p>
+        <p class="resume-trust-copy">{{ 'Founder of Subul Technology. Builds operational software, AI-assisted tools, and solar products with direct execution involvement.' if lang == 'en' else 'مؤسس سبل التكنلوجيا. يبني برمجيات تشغيلية وأدوات مدعومة بالذكاء الاصطناعي ومنتجات شمسية بمشاركة تنفيذية مباشرة.' }}</p>
         <p class="resume-location">
           <i class="fas fa-map-marker-alt"></i> {{ personal.location }}
           <span class="separator">•</span>
           <span class="resume-availability">{{ personal.availability }}</span>
         </p>
         <div class="resume-contacts">
-          <a href="mailto:{{ company.email }}"><i class="fas fa-envelope"></i> {{ company.email }}</a>
+          <a href="mailto:{{ personal.email }}"><i class="fas fa-envelope"></i> {{ personal.email }}</a>
           <a href="https://wa.me/{{ company.whatsapp }}"><i class="fab fa-whatsapp"></i> +{{ company.whatsapp }}</a>
           <a href="{{ personal.social.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
           <a href="{{ personal.social.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -39,6 +40,16 @@
     <section class="resume-section">
       <h2>{{ 'About the Founder' if lang == 'en' else 'عن المؤسس' }}</h2>
       <p>{{ about.text }}</p>
+    </section>
+
+    <section class="resume-section">
+      <h2>{{ 'Why clients work with Subul' if lang == 'en' else 'لماذا يعمل العملاء مع سبل' }}</h2>
+      <div class="resume-tech">
+        <span>{{ 'Practical scoping' if lang == 'en' else 'تحديد عملي للنطاق' }}</span>
+        <span>{{ 'Direct founder communication' if lang == 'en' else 'تواصل مباشر مع المؤسس' }}</span>
+        <span>{{ 'Arabic + English delivery' if lang == 'en' else 'تنفيذ عربي + إنكليزي' }}</span>
+        <span>{{ 'Software + solar context' if lang == 'en' else 'سياق برمجي + شمسي' }}</span>
+      </div>
     </section>
 
     <section class="resume-section">
@@ -75,7 +86,7 @@
 
     <section class="resume-section">
       <h2>{{ projects.title }}</h2>
-      {% for project in projects.list %}
+      {% for project in projects.list[:4] %}
       <div class="resume-item">
         <div class="resume-item-header">
           <h3>{{ project.title }}</h3>
@@ -88,6 +99,21 @@
         </div>
       </div>
       {% endfor %}
+    </section>
+
+    <section class="resume-section">
+      <h2>{{ 'Let’s build something useful' if lang == 'en' else 'لنَبْنِ شيئاً مفيداً' }}</h2>
+      <p>{{ 'If you need a business system, AI workflow, mobile product, or solar-related platform, start with a short conversation.' if lang == 'en' else 'إذا كنت تحتاج نظام أعمال أو سير عمل ذكي أو منتج موبايل أو منصة مرتبطة بالطاقة الشمسية، ابدأ بمحادثة قصيرة.' }}</p>
+      <div class="resume-actions" style="margin-bottom: 0;">
+        <a href="mailto:{{ personal.email }}" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i>
+          {{ 'Start a Project' if lang == 'en' else 'ابدأ مشروعك' }}
+        </a>
+        <a href="https://wa.me/{{ company.whatsapp }}" class="btn btn-secondary" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp
+        </a>
+      </div>
     </section>
   </div>
 </section>

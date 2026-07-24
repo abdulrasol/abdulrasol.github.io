@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Meaad Tech Static Site Generator
+Subul Technology Static Site Generator
 
 Generates bilingual (EN/AR) static HTML files from data/*.json
 and Jinja2 templates.
@@ -74,6 +74,20 @@ def load_project_data(projects_dir="data/projects"):
         with open(file, "r", encoding="utf-8") as f:
             projects.append(json.load(f))
     return projects
+
+
+def has_visible_content(value):
+    if value is None:
+        return False
+    if isinstance(value, str):
+        return bool(value.strip())
+    if isinstance(value, (int, float, bool)):
+        return True
+    if isinstance(value, list):
+        return any(has_visible_content(item) for item in value)
+    if isinstance(value, dict):
+        return any(has_visible_content(item) for item in value.values())
+    return False
 
 
 def build_portfolio_project_list(project_jsons, manual_list):
@@ -169,6 +183,15 @@ def other_lang_path(path):
     if path.startswith("/ar/"):
         return path[3:]
     return f"/ar{path}"
+
+
+def base_langless_path(path):
+    """Normalize any localized path to its language-neutral form."""
+    if path == "/ar/":
+        return "/"
+    if path.startswith("/ar/"):
+        return path[3:]
+    return path
 
 
 def build_site():
@@ -278,7 +301,7 @@ def build_site():
             return lang_url(path, lang)
 
         def make_link_for(path, target_lang):
-            return lang_url(path, target_lang)
+            return lang_url(base_langless_path(path), target_lang)
 
         context = {
             "lang": lang,
@@ -305,7 +328,15 @@ def build_site():
 
         # Generate homepage
         home_path = "/" if lang == "en" else "/ar/"
-        home_ctx = {**context, "page_path": home_path, "other_page": other_lang_path(home_path)}
+        home_base_path = base_langless_path(home_path)
+        home_ctx = {
+            **context,
+            "page_name": "home",
+            "page_path": home_path,
+            "en_page_path": lang_url(home_base_path, "en"),
+            "ar_page_path": lang_url(home_base_path, "ar"),
+            "other_page": other_lang_path(home_path),
+        }
         html = templates["index"].render(home_ctx)
         output_path = Path("index.html") if lang == "en" else Path("ar") / "index.html"
         output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -314,7 +345,15 @@ def build_site():
 
         # Generate resume page
         resume_path_str = "/resume.html" if lang == "en" else "/ar/resume.html"
-        resume_ctx = {**context, "page_path": resume_path_str, "other_page": other_lang_path(resume_path_str)}
+        resume_base_path = base_langless_path(resume_path_str)
+        resume_ctx = {
+            **context,
+            "page_name": "resume",
+            "page_path": resume_path_str,
+            "en_page_path": lang_url(resume_base_path, "en"),
+            "ar_page_path": lang_url(resume_base_path, "ar"),
+            "other_page": other_lang_path(resume_path_str),
+        }
         resume_html = templates["resume"].render(resume_ctx)
         resume_path = Path("resume.html") if lang == "en" else Path("ar") / "resume.html"
         resume_path.parent.mkdir(parents=True, exist_ok=True)
@@ -323,7 +362,15 @@ def build_site():
 
         # Generate team listing page
         team_path_str = "/team/" if lang == "en" else "/ar/team/"
-        team_ctx = {**context, "page_path": team_path_str, "other_page": other_lang_path(team_path_str)}
+        team_base_path = base_langless_path(team_path_str)
+        team_ctx = {
+            **context,
+            "page_name": "team",
+            "page_path": team_path_str,
+            "en_page_path": lang_url(team_base_path, "en"),
+            "ar_page_path": lang_url(team_base_path, "ar"),
+            "other_page": other_lang_path(team_path_str),
+        }
         team_html = templates["team"].render(team_ctx)
         team_path = Path("team") / "index.html" if lang == "en" else Path("ar") / "team" / "index.html"
         team_path.parent.mkdir(parents=True, exist_ok=True)
@@ -333,12 +380,24 @@ def build_site():
 
         # Generate individual team member pages
         for member in team_data.get("members", []):
+            member_localized = localize(member, lang)
+            member_projects = []
+            for project_id in member.get("projects", []):
+                project_data = projects_dict.get(project_id)
+                if project_data:
+                    member_projects.append(localize(project_data, lang))
             member_path_str = f"/team/{member['id']}/" if lang == "en" else f"/ar/team/{member['id']}/"
+            member_base_path = base_langless_path(member_path_str)
             member_ctx = {
                 **context,
+                "page_name": "team-member",
                 "page_path": member_path_str,
+                "en_page_path": lang_url(member_base_path, "en"),
+                "ar_page_path": lang_url(member_base_path, "ar"),
                 "other_page": other_lang_path(member_path_str),
-                "member": localize(member, lang),
+                "member": member_localized,
+                "member_projects": member_projects,
+                "member_has_social": has_visible_content(member_localized.get("social")),
             }
             member_html = templates["team_member"].render(member_ctx)
             member_path = Path("team") / member["id"] / "index.html" if lang == "en" else Path("ar") / "team" / member["id"] / "index.html"
@@ -349,7 +408,15 @@ def build_site():
 
         # Generate investment listing page
         invest_path_str = "/invest/" if lang == "en" else "/ar/invest/"
-        invest_ctx = {**context, "page_path": invest_path_str, "other_page": other_lang_path(invest_path_str)}
+        invest_base_path = base_langless_path(invest_path_str)
+        invest_ctx = {
+            **context,
+            "page_name": "invest",
+            "page_path": invest_path_str,
+            "en_page_path": lang_url(invest_base_path, "en"),
+            "ar_page_path": lang_url(invest_base_path, "ar"),
+            "other_page": other_lang_path(invest_path_str),
+        }
         invest_html = templates["invest"].render(invest_ctx)
         invest_path = Path("invest") / "index.html" if lang == "en" else Path("ar") / "invest" / "index.html"
         invest_path.parent.mkdir(parents=True, exist_ok=True)
@@ -362,12 +429,17 @@ def build_site():
             opp_path_str = f"/invest/{opp['id']}/" if lang == "en" else f"/ar/invest/{opp['id']}/"
             opp_localized = localize(opp, lang)
             project_data = projects_dict.get(opp["project_id"])
+            opp_base_path = base_langless_path(opp_path_str)
             opp_ctx = {
                 **context,
+                "page_name": "invest-detail",
                 "page_path": opp_path_str,
+                "en_page_path": lang_url(opp_base_path, "en"),
+                "ar_page_path": lang_url(opp_base_path, "ar"),
                 "other_page": other_lang_path(opp_path_str),
                 "opportunity": opp_localized,
                 "project_data": localize(project_data, lang) if project_data else None,
+                "opportunity_has_team": has_visible_content(opp_localized.get("team")),
             }
             opp_html = templates["invest_detail"].render(opp_ctx)
             opp_path = Path("invest") / opp["id"] / "index.html" if lang == "en" else Path("ar") / "invest" / opp["id"] / "index.html"
@@ -378,7 +450,15 @@ def build_site():
 
         # Generate careers page
         careers_path_str = "/careers/" if lang == "en" else "/ar/careers/"
-        careers_ctx = {**context, "page_path": careers_path_str, "other_page": other_lang_path(careers_path_str)}
+        careers_base_path = base_langless_path(careers_path_str)
+        careers_ctx = {
+            **context,
+            "page_name": "careers",
+            "page_path": careers_path_str,
+            "en_page_path": lang_url(careers_base_path, "en"),
+            "ar_page_path": lang_url(careers_base_path, "ar"),
+            "other_page": other_lang_path(careers_path_str),
+        }
         careers_html = templates["careers"].render(careers_ctx)
         careers_path = Path("careers") / "index.html" if lang == "en" else Path("ar") / "careers" / "index.html"
         careers_path.parent.mkdir(parents=True, exist_ok=True)

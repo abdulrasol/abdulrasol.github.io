@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>Watt: Solar Energy Platform</title>
-  <meta name="description" content="Solar system calculator and equipment marketplace for designing clean energy solutions. For homeowners, businesses, and solar professionals in Iraq and globally.">
-  <meta name="keywords" content="Solar Energy, PV System, Solar Calculator, Clean Energy, Equipment Marketplace, Flutter, Iraq">
-  <meta name="author" content="Meaad Tech">
+  <meta name="description" content="A comprehensive solar platform for Iraq that combines system calculation, product marketplace, quotations, and business operations in one experience.">
+  <meta name="keywords" content="Watt, Solar Energy Platform, Iraq Solar Marketplace, Solar Calculator, B2B B2C, Clean Energy, Flutter">
+  <meta name="author" content="Subul Technology">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#f59e0b">
 
@@ -22,7 +22,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Watt: Solar Energy Platform">
-  <meta property="og:description" content="Solar system calculator and equipment marketplace for designing clean energy solutions. For homeowners, businesses, and solar professionals in Iraq and globally.">
+  <meta property="og:description" content="A comprehensive solar platform for Iraq that combines system calculation, product marketplace, quotations, and business operations in one experience.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://abdulrasol.github.io/watt/">
   <meta property="og:image" content="https://abdulrasol.github.io/assets/watt/logo.png">
@@ -31,7 +31,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Watt: Solar Energy Platform">
-  <meta name="twitter:description" content="Solar system calculator and equipment marketplace for designing clean energy solutions. For homeowners, businesses, and solar professionals in Iraq and globally.">
+  <meta name="twitter:description" content="A comprehensive solar platform for Iraq that combines system calculation, product marketplace, quotations, and business operations in one experience.">
   <meta name="twitter:image" content="https://abdulrasol.github.io/assets/watt/logo.png">
 
   <!-- Favicon -->
@@ -41,7 +41,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -73,7 +73,7 @@
       "price": "0",
       "priceCurrency": "USD"
     },
-    "description": "Solar system calculator and equipment marketplace for designing clean energy solutions. For homeowners, businesses, and solar professionals in Iraq and globally.",
+    "description": "A comprehensive solar platform for Iraq that combines system calculation, product marketplace, quotations, and business operations in one experience.",
 "downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",    "image": "https://abdulrasol.github.io/assets/watt/logo.png"
   }
   </script>
@@ -97,40 +97,43 @@
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-moon"></i>
         </button>
-        <a href="/ar/watt/" class="lang-toggle" aria-label="Switch to Arabic">
+        <a href="/ar/watt/" class="lang-toggle" data-lang-switch aria-label="Switch to Arabic">
           <i class="fas fa-globe"></i>
           <span>العربية</span>
         </a>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu">
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Nav -->
-    <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav" id="mobile-nav" hidden>
       <a href="/">← Back to Portfolio</a>
       <a href="/watt/">Home</a>
-      <a href="/ar/watt/">العربية</a>
+<a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#market">Market</a><a href="#features">Features</a><a href="#revenue">Revenue</a><a href="#why-invest">Why invest</a><a href="#screenshots">Screenshots</a>      <a href="/ar/watt/" data-lang-switch>العربية</a>
     </div>
   </header>
 
   <!-- Main Content -->
   <main>
 
-<!-- Hero Section -->
 <section class="hero" id="hero">
   <div class="hero-bg">
     <div class="hero-banner" style="background-image: url('/assets/watt/banar.png')"></div>
+    <div class="hero-orb hero-orb-primary"></div>
+    <div class="hero-orb hero-orb-secondary"></div>
   </div>
 
   <div class="container hero-content">
     <div class="hero-text">
-      <img src="/assets/watt/logo.png" alt="Watt" class="hero-logo">
-      <h1 class="hero-title">Watt: Solar Energy Solutions</h1>
-      <p class="hero-subtitle">Design solar systems, compare equipment, and manage your clean energy projects — all in one powerful app. Built for Iraq, ready for the world.</p>
+      <div class="hero-badge reveal">Iraq&#39;s first integrated solar marketplace</div>
 
-      <div class="hero-actions">
+      <img src="/assets/watt/logo.png" alt="Watt" class="hero-logo reveal">
+      <h1 class="hero-title reveal">Turn Solar Demand Into <span class="highlight">A Scalable Platform</span></h1>
+      <p class="hero-subtitle reveal">Watt combines solar calculation, system design, supplier marketplace, quotations, and business operations in one platform for consumers and companies.</p>
+
+      <div class="hero-actions reveal">
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt"
            data-goatcounter-click="project-google-play-watt"
            class="btn btn-primary"
@@ -139,112 +142,229 @@
           <i class="fab fa-google-play"></i>
           Download on Google Play
         </a>
+        <a href="#project-cta" class="btn btn-secondary">
+          <i class="fas fa-arrow-down"></i>
+          View Investment Case
+        </a>
+        <a href="mailto:watt@subultech.top" class="btn btn-secondary">
+          <i class="fas fa-paper-plane"></i>
+          Need a similar system?
+        </a>
       </div>
 
-      <div class="platforms">
+      <div class="platforms reveal">
         <span class="platform-badge">Android</span>
         <span class="platform-badge">iOS</span>
       </div>
+
+      <div class="hero-stats reveal">
+        <div class="hero-stat">
+          <div class="hero-stat-value">+300</div>
+          <div class="hero-stat-label">Active users</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">+50</div>
+          <div class="hero-stat-label">Registered companies</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">+25</div>
+          <div class="hero-stat-label">Iraqi cities</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">B2B + B2C</div>
+          <div class="hero-stat-label">Dual business model</div>
+        </div>
+      </div>
+
+      <div class="hero-trust-line reveal">
+        <span>Built around real operating workflows</span>
+        <span>Bilingual-ready delivery</span>
+        <span>Direct product execution</span>
+      </div>
     </div>
 
-    <div class="hero-image">
-      <img src="/assets/watt/screenshots/1.jpg" alt="Watt screenshot">
+    <div class="hero-visual reveal">
+      <div class="hero-device-stack">
+        <div class="device device-back">
+          <img src="/assets/watt/screenshots/1.jpg" alt="Watt screenshot">
+        </div>
+        <div class="device device-front">
+          <img src="/assets/watt/screenshots/2.jpg" alt="Watt screenshot">
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Features Section -->
+<section class="section story-section story-section-split" id="problem">
+  <div class="container story-grid">
+    <div class="story-copy reveal">
+<span class="section-eyebrow">The problem</span><h2 class="section-title">Iraq has a power gap and a fragmented solar market</h2><p class="section-subtitle">Demand is real, but discovery, comparison, and execution are still difficult.</p><p class="story-body">Iraq faces chronic electricity shortages while having one of the strongest solar conditions in the region. Consumers and companies still struggle with an unstructured market, inconsistent pricing, and the lack of one trusted workflow from sizing to purchase and execution.</p>
+      <div class="story-list">
+        <div class="story-list-item">
+<span class="story-list-icon">❌</span>          <span>8-12 hours of daily power outages in many areas</span>
+        </div>
+        <div class="story-list-item">
+<span class="story-list-icon">❌</span>          <span>High generator and fuel costs</span>
+        </div>
+        <div class="story-list-item">
+<span class="story-list-icon">❌</span>          <span>Unstructured market for solar distributors and installers</span>
+        </div>
+        <div class="story-list-item">
+<span class="story-list-icon">❌</span>          <span>Difficult price and specification comparison across suppliers</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-highlight reveal">
+      <div class="highlight-card">
+        <div class="highlight-value">330+</div>
+        <div class="highlight-label">Sunny days per year in Iraq</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cards-section cards-section-alt" id="solution">
+  <div class="container">
+    <div class="section-header reveal">
+<span class="section-eyebrow">The solution</span><h2 class="section-title">Watt brings the whole solar journey into one platform</h2><p class="section-subtitle">From first calculation to quotation, order, and business operations.</p>    </div>
+
+    <div class="feature-showcase-grid">
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">🔢</span><h3>Smart solar calculator</h3><p>Calculate panels, batteries, inverters, and energy needs with practical accuracy.</p>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">🏪</span><h3>B2B + B2C marketplace</h3><p>A unified marketplace for consumers and companies to browse and compare equipment.</p>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">📋</span><h3>Quotation workflow</h3><p>Request and compare quotations from multiple companies inside one product flow.</p>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">📊</span><h3>Inventory and sales operations</h3><p>For companies, manage stock, orders, customers, and financial reporting.</p>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">💳</span><h3>Integrated accounting</h3><p>Invoices, ledgers, receivables, payables, and profitability in one operational system.</p>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">✏️</span><h3>System designer</h3><p>Professional system-design tooling with bill-of-material support.</p>      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section metrics-section" id="market">
+  <div class="container">
+    <div class="section-header reveal">
+<span class="section-eyebrow">Market opportunity</span><h2 class="section-title">Why Iraq, and why now?</h2><p class="section-subtitle">A high-demand energy market with digital readiness and low integrated competition.</p>    </div>
+
+    <div class="metrics-grid">
+      <div class="metric-card reveal">
+<div class="metric-icon">☀️</div><div class="metric-value">3,000+</div><div class="metric-label">Hours of sun annually</div>      </div>
+      <div class="metric-card reveal">
+<div class="metric-icon">🏠</div><div class="metric-value">40M+</div><div class="metric-label">Population with rising alternative-energy demand</div>      </div>
+      <div class="metric-card reveal">
+<div class="metric-icon">⚡</div><div class="metric-value">~55%</div><div class="metric-label">Gap between grid output and real demand</div>      </div>
+      <div class="metric-card reveal">
+<div class="metric-icon">📜</div><div class="metric-value">2024-2030</div><div class="metric-label">Renewable-energy momentum and policy window</div>      </div>
+      <div class="metric-card reveal">
+<div class="metric-icon">💰</div><div class="metric-value">$500M+</div><div class="metric-label">Expected Iraqi solar-market size by 2027</div>      </div>
+      <div class="metric-card reveal">
+<div class="metric-icon">📱</div><div class="metric-value">85%</div><div class="metric-label">Internet and smartphone penetration</div>      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section features" id="features">
   <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Watt Features</h2>
-    </div>
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Platform features</span>
+      <h2 class="section-title">Platform features</h2>
+<p class="section-subtitle">Watt serves both end users and solar businesses in one connected experience.</p>    </div>
 
     <div class="features-grid">
-      <div class="feature-card">
-        <span class="feature-icon">☀️</span>
-        <h3>Solar System Calculator</h3>
-        <p>Calculate system size, panel count, battery capacity, and inverter requirements for on-grid and off-grid setups.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🛒</span>
-        <h3>Equipment Marketplace</h3>
-        <p>Browse and compare solar panels, batteries, inverters, and accessories from multiple suppliers.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📊</span>
-        <h3>Project Management</h3>
-        <p>Track your solar installations, generate professional PDF quotes, and manage client proposals.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🌍</span>
-        <h3>Global &amp; Local Support</h3>
-        <p>Optimized for Iraqi conditions and pricing, with universal calculation engine for any location worldwide.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📱</span>
-        <h3>Works Offline</h3>
-        <p>Core calculations work without internet. Sync when connected for marketplace and cloud features.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🎨</span>
-        <h3>Modern UI</h3>
-        <p>Clean, intuitive interface in both Arabic and English, with Dark Mode support.</p>
-      </div>
+      <article class="feature-card reveal">
+<span class="feature-icon">🧮</span><h3>Quick calculator</h3><p>Estimate usage, system size, component count, and cost within minutes.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🛒</span><h3>B2B + B2C marketplace</h3><p>A product marketplace for both end customers and professional solar companies.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🤝</span><h3>Quotation requests</h3><p>Let users create requests and compare multiple company offers before choosing.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">📦</span><h3>Order tracking</h3><p>Follow the journey from request submission to delivery and installation.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">👥</span><h3>Team management</h3><p>Add team members, manage permissions, and coordinate sales and operations.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">💬</span><h3>Community and advisory space</h3><p>Support discussion, educational content, and practical market trust building.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">📐</span><h3>System designer</h3><p>Design systems with more professional logic and output-ready material structures.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">📊</span><h3>Reports and analytics</h3><p>Operational and financial visibility for companies running solar sales and projects.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🔔</span><h3>Smart notifications</h3><p>Real-time updates for orders, offers, changes, and commercial activity.</p>      </article>
     </div>
   </div>
 </section>
 
-<!-- Screenshots Section -->
+<section class="section cards-section" id="revenue">
+  <div class="container">
+    <div class="section-header reveal">
+<span class="section-eyebrow">Revenue model</span><h2 class="section-title">How Watt generates revenue</h2><p class="section-subtitle">Multiple revenue channels support both growth and resilience.</p>    </div>
+
+    <div class="feature-showcase-grid">
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">📋</span><h3>Marketplace commission</h3><p>A commission on B2B and B2C sales completed through the platform.</p><span class="card-tag">Core revenue</span>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">👑</span><h3>Company subscriptions</h3><p>Recurring subscriptions for suppliers, installers, and professional operators.</p><span class="card-tag">Recurring</span>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">📢</span><h3>Promotions and advertising</h3><p>Paid visibility for suppliers, premium listings, and in-platform promotions.</p><span class="card-tag">Expansion</span>      </article>
+    </div>
+  </div>
+</section>
+
 <section class="section screenshots-section" id="screenshots">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Preview</span>
       <h2 class="section-title">App Screenshots</h2>
     </div>
     <div class="screenshots-scroll">
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/1.jpg" alt="Watt screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/2.jpg" alt="Watt screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/3.jpg" alt="Watt screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/4.jpg" alt="Watt screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/5.jpg" alt="Watt screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/6.jpg" alt="Watt screenshot" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="/assets/watt/screenshots/7.jpg" alt="Watt screenshot" loading="lazy">
@@ -255,11 +375,64 @@
   </div>
 </section>
 
-<!-- Testimonials Section -->
+<section class="section story-section" id="why-invest">
+  <div class="container">
+    <div class="section-header reveal">
+<span class="section-eyebrow">Why invest</span><h2 class="section-title">Why Watt is the right investment</h2><p class="section-subtitle">This is not another small utility app. It is platform infrastructure for a market.</p>    </div>
 
-<!-- Pricing Section -->
+    <div class="why-grid">
+      <article class="why-card reveal">
+<div class="why-number">1</div>        <div class="why-copy">
+<h3>Underserved market</h3><p>No direct integrated competitor combines sizing, marketplace, quotations, and operations.</p>        </div>
+      </article>
+      <article class="why-card reveal">
+<div class="why-number">2</div>        <div class="why-copy">
+<h3>Scalable business model</h3><p>A dual B2B + B2C model with room to expand to regional markets.</p>        </div>
+      </article>
+      <article class="why-card reveal">
+<div class="why-number">3</div>        <div class="why-copy">
+<h3>Strong technical base</h3><p>Built with a modern stack and architecture ready for operational scale.</p>        </div>
+      </article>
+      <article class="why-card reveal">
+<div class="why-number">4</div>        <div class="why-copy">
+<h3>More than a store</h3><p>Combines calculations, design, commerce, operations, and business workflow in one product.</p>        </div>
+      </article>
+      <article class="why-card reveal">
+<div class="why-number">5</div>        <div class="why-copy">
+<h3>Market-native expertise</h3><p>Built with direct understanding of Iraqi market needs and solar realities.</p>        </div>
+      </article>
+      <article class="why-card reveal">
+<div class="why-number">6</div>        <div class="why-copy">
+<h3>Launch-ready direction</h3><p>The product direction is clear and the growth case is compelling with the right partner.</p>        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-<!-- Purchase Form Section -->
+
+
+
+<section class="section project-cta-section" id="project-cta">
+  <div class="container">
+    <div class="project-cta-card reveal">
+<span class="section-eyebrow">Start the conversation</span><h2 class="section-title">Ready to back Iraq&#39;s solar-product infrastructure?</h2><p class="section-subtitle">Talk to Subul Technology about product rollout, strategic investment, or a market partnership for Watt.</p>
+      <div class="hero-actions">
+        <a href="mailto:watt@subultech.top" class="btn btn-primary">
+          <i class="fas fa-envelope"></i>
+          Talk about investment
+        </a>
+        <a href="https://wa.me/9647813639721?text=Hello%20Subul%20Technology%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%2C%20product%2C%20or%20partnership." class="btn btn-secondary" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+          Email Watt team
+        </a>
+        <a href="/team/abdulrasol/" class="btn btn-secondary">
+          <i class="fas fa-user-tie"></i>
+          View Founder Profile
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
   </main>
 
@@ -271,16 +444,13 @@
           <img src="/assets/watt/logo.png" alt="Watt" width="36" height="36">
           <span>Watt</span>
         </a>
-        <p>Solar system design made simple</p>
+        <p>Iraq&#39;s integrated solar platform</p>
       </div>
 
-      <div class="footer-links">
-        <h4>Legal</h4>
-      </div>
 
       <div class="footer-contact">
         <h4>Contact</h4>
-        <a href="mailto:abdulrasol.alhilo@gmail.com"><i class="fas fa-envelope"></i> abdulrasol.alhilo@gmail.com</a>
+        <a href="mailto:watt@subultech.top"><i class="fas fa-envelope"></i> watt@subultech.top</a>
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt" data-goatcounter-click="footer-google-play-watt" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
       </div>
     </div>
@@ -291,7 +461,7 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/9647813639721?text=Hello%20Meaad%20Tech%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%20or%20partnership."
+  <a href="https://wa.me/9647813639721?text=Hello%20Subul%20Technology%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%2C%20product%2C%20or%20partnership."
      class="whatsapp-float"
      target="_blank"
      rel="noopener"

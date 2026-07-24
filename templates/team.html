@@ -20,7 +20,7 @@
       {% for member in team.members %}
       <article class="team-card {% if member.featured %}featured{% endif %}">
         <div class="team-photo">
-          <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+          <img src="{{ member.photo }}" alt="{{ member.name }}" width="320" height="320" loading="lazy" decoding="async">
           {% if member.featured %}
           <span class="team-badge">{{ 'Founder' if lang == 'en' else 'المؤسس' }}</span>
           {% endif %}
@@ -52,7 +52,7 @@
       </a>
     </div>
     {% else %}
-    <div class="team-hiring team-hiring-placeholder">
+    <div class="team-hiring">
       <h2>{{ 'We are Growing' if lang == 'en' else 'نحن ننمو' }}</h2>
       <p>{{ team.hiring_message }}</p>
       <a href="{{ link('/careers/') }}" class="btn btn-secondary">
@@ -60,6 +60,13 @@
       </a>
     </div>
     {% endif %}
+
+    <div class="text-center" style="margin-top: 2rem;">
+      <a href="mailto:{{ company.email }}" class="btn btn-primary">
+        <i class="fas fa-paper-plane"></i>
+        {{ 'Discuss a Project' if lang == 'en' else 'ناقش مشروعك' }}
+      </a>
+    </div>
   </div>
 </section>
 

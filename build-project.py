@@ -66,6 +66,79 @@ def load_projects():
     return projects
 
 
+def has_visible_content(value):
+    """Return True when a value contains meaningful renderable content."""
+    if value is None:
+        return False
+    if isinstance(value, str):
+        return bool(value.strip())
+    if isinstance(value, (int, float, bool)):
+        return True
+    if isinstance(value, list):
+        return any(has_visible_content(item) for item in value)
+    if isinstance(value, dict):
+        return any(has_visible_content(item) for item in value.values())
+    return False
+
+
+def visible_list(items):
+    return [item for item in (items or []) if has_visible_content(item)]
+
+
+def normalize_features(features):
+    if not isinstance(features, dict):
+        return None
+
+    groups = []
+    for group in visible_list(features.get("groups", [])):
+        group_items = visible_list(group.get("items", []))
+        if group_items:
+            groups.append({**group, "items": group_items})
+
+    items = visible_list(features.get("items", []))
+    if not groups and not items:
+        return None
+
+    normalized = dict(features)
+    if groups:
+        normalized["groups"] = groups
+    else:
+        normalized.pop("groups", None)
+    if items:
+        normalized["items"] = items
+    else:
+        normalized.pop("items", None)
+    return normalized
+
+
+def normalize_items_section(section):
+    if not isinstance(section, dict):
+        return section if has_visible_content(section) else None
+
+    normalized = dict(section)
+    for key in ("items", "tiers", "fields", "plans"):
+        if key in normalized:
+            filtered = visible_list(normalized.get(key, []))
+            if filtered:
+                normalized[key] = filtered
+            else:
+                normalized.pop(key, None)
+
+    return normalized if has_visible_content(normalized) else None
+
+
+def normalize_sections(sections):
+    if not isinstance(sections, dict):
+        return {}
+
+    normalized = {}
+    for key, value in sections.items():
+        section_value = normalize_items_section(value)
+        if section_value is not None:
+            normalized[key] = section_value
+    return normalized
+
+
 def build_projects():
     portfolio = load_json("data/portfolio.json")
     projects = load_projects()
@@ -164,6 +237,12 @@ def build_projects():
             # Merge portfolio site (for url/author/verification) with project site metadata.
             localized["site"] = {**site, **project_site}
             localized["settings"] = project.get("settings", {})
+            localized["features"] = normalize_features(localized.get("features"))
+            localized["screenshots"] = normalize_items_section(localized.get("screenshots"))
+            localized["testimonials"] = normalize_items_section(localized.get("testimonials"))
+            localized["pricing"] = normalize_items_section(localized.get("pricing"))
+            localized["purchase_form"] = normalize_items_section(localized.get("purchase_form"))
+            localized["sections"] = normalize_sections(localized.get("sections"))
 
             def page_url(page="", is_ar=False):
                 lang_prefix = "ar/" if (is_ar or lang == "ar") else ""
@@ -218,6 +297,7 @@ def build_projects():
                 "analytics": portfolio.get("analytics", {}),
                 "link": make_link,
                 "home_url": home_url,
+                "hero_stats": visible_list(localized.get("hero", {}).get("stats", [])),
                 **localized,
             }
 
@@ -231,9 +311,21 @@ def build_projects():
                 "privacy_url": page_url("privacy_policy/"),
                 "terms_url": page_url("terms.html"),
                 "changelog_url": page_url("changelogs.html"),
-                "has_privacy": bool(localized.get("privacy")),
-                "has_terms": bool(localized.get("terms")),
-                "has_changelog": bool(localized.get("changelog")),
+                "has_privacy": has_visible_content(localized.get("privacy")),
+                "has_terms": has_visible_content(localized.get("terms")),
+                "has_changelog": has_visible_content(localized.get("changelog")),
+                "has_features": has_visible_content(localized.get("features")),
+                "has_screenshots": has_visible_content(localized.get("screenshots")),
+                "has_testimonials": has_visible_content(localized.get("testimonials")),
+                "has_pricing": has_visible_content(localized.get("pricing")),
+                "has_purchase_form": has_visible_content(localized.get("purchase_form")),
+                "has_problem": has_visible_content(localized.get("sections", {}).get("problem")),
+                "has_solution": has_visible_content(localized.get("sections", {}).get("solution")),
+                "has_market": has_visible_content(localized.get("sections", {}).get("market")),
+                "has_revenue": has_visible_content(localized.get("sections", {}).get("revenue")),
+                "has_why_invest": has_visible_content(localized.get("sections", {}).get("why_invest")),
+                "has_team_section": has_visible_content(localized.get("sections", {}).get("team")),
+                "has_project_cta": has_visible_content(localized.get("sections", {}).get("cta")),
             }
             html = templates["index"].render(index_context)
             output = Path(project_id) / "index.html" if lang == "en" else Path("ar") / project_id / "index.html"
@@ -242,7 +334,7 @@ def build_projects():
             print(f"Generated: {output}")
 
             # Privacy page
-            if localized.get("privacy"):
+            if has_visible_content(localized.get("privacy")):
                 privacy_context = {
                     **base_context,
                     "page_path": page_url("privacy_policy/"),
@@ -253,8 +345,8 @@ def build_projects():
                     "terms_url": page_url("terms.html"),
                     "changelog_url": page_url("changelogs.html"),
                     "has_privacy": True,
-                    "has_terms": bool(localized.get("terms")),
-                    "has_changelog": bool(localized.get("changelog")),
+                    "has_terms": has_visible_content(localized.get("terms")),
+                    "has_changelog": has_visible_content(localized.get("changelog")),
                 }
                 html = templates["privacy"].render(privacy_context)
                 output = Path(project_id) / "privacy_policy" / "index.html" if lang == "en" else Path("ar") / project_id / "privacy_policy" / "index.html"
@@ -263,7 +355,7 @@ def build_projects():
                 print(f"Generated: {output}")
 
             # Terms page
-            if localized.get("terms"):
+            if has_visible_content(localized.get("terms")):
                 terms_context = {
                     **base_context,
                     "page_path": page_url("terms.html"),
@@ -273,9 +365,9 @@ def build_projects():
                     "privacy_url": page_url("privacy_policy/"),
                     "terms_url": page_url("terms.html"),
                     "changelog_url": page_url("changelogs.html"),
-                    "has_privacy": bool(localized.get("privacy")),
+                    "has_privacy": has_visible_content(localized.get("privacy")),
                     "has_terms": True,
-                    "has_changelog": bool(localized.get("changelog")),
+                    "has_changelog": has_visible_content(localized.get("changelog")),
                 }
                 html = templates["terms"].render(terms_context)
                 output = Path(project_id) / "terms.html" if lang == "en" else Path("ar") / project_id / "terms.html"
@@ -284,7 +376,7 @@ def build_projects():
                 print(f"Generated: {output}")
 
             # Changelog page
-            if localized.get("changelog"):
+            if has_visible_content(localized.get("changelog")):
                 changelog_context = {
                     **base_context,
                     "page_path": page_url("changelogs.html"),
@@ -294,8 +386,8 @@ def build_projects():
                     "privacy_url": page_url("privacy_policy/"),
                     "terms_url": page_url("terms.html"),
                     "changelog_url": page_url("changelogs.html"),
-                    "has_privacy": bool(localized.get("privacy")),
-                    "has_terms": bool(localized.get("terms")),
+                    "has_privacy": has_visible_content(localized.get("privacy")),
+                    "has_terms": has_visible_content(localized.get("terms")),
                     "has_changelog": True,
                 }
                 html = templates["changelog"].render(changelog_context)
@@ -305,7 +397,7 @@ def build_projects():
                 print(f"Generated: {output}")
 
             # Get-login page
-            if localized.get("get_login"):
+            if has_visible_content(localized.get("get_login")):
                 get_login_context = {
                     **base_context,
                     "page_path": page_url("get-login.html"),

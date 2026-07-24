@@ -9,22 +9,52 @@
   <div class="container">
     <div class="invest-hero-inner">
       {% if project %}
-      <img src="{{ project.brand.logo }}" alt="{{ opp.title }}" class="invest-logo-large" loading="eager">
+      <img src="{{ project.brand.logo }}" alt="{{ opp.title }}" class="invest-logo-large" width="96" height="96" loading="eager" decoding="async">
       {% endif %}
       <h1>{{ opp.title }}</h1>
       <p class="invest-tagline">{{ opp.tagline }}</p>
+      {% if opp.traction.status or opp.seeking.type %}
       <div class="invest-hero-meta">
+        {% if opp.traction.status %}
         <span class="badge">{{ opp.traction.status }}</span>
+        {% endif %}
+        {% if opp.seeking.type %}
         <span class="badge badge-outline">{{ opp.seeking.type }}</span>
+        {% endif %}
       </div>
-      <a href="mailto:{{ opp.contact_email }}?subject=Investment Interest: {{ opp.title_en }}" class="btn btn-primary btn-lg">
+      {% endif %}
+      <a href="mailto:{{ opp.contact_email }}?subject=Investment Interest: {{ opp.title }}" class="btn btn-primary btn-lg">
         <i class="fas fa-handshake"></i>
         {{ opp.cta }}
+      </a>
+      <a href="#invest-cta" class="btn btn-secondary btn-lg">
+        <i class="fas fa-comments"></i>
+        {{ 'Discuss the opportunity' if lang == 'en' else 'ناقش الفرصة' }}
       </a>
     </div>
   </div>
 </section>
 
+<section class="section invest-section invest-summary">
+  <div class="container">
+    <div class="invest-summary-grid">
+      <div class="invest-summary-card">
+        <h3>{{ 'Opportunity summary' if lang == 'en' else 'ملخص الفرصة' }}</h3>
+        <p>{{ opp.tagline }}</p>
+      </div>
+      <div class="invest-summary-card">
+        <h3>{{ 'Why now' if lang == 'en' else 'لماذا الآن' }}</h3>
+        <p>{{ opp.market.size }}</p>
+      </div>
+      <div class="invest-summary-card">
+        <h3>{{ 'Founder advantage' if lang == 'en' else 'ميزة المؤسس' }}</h3>
+        <p>{{ 'Built by a founder with product execution and solar domain experience, not only a financial pitch.' if lang == 'en' else 'يبنيه مؤسس لديه خبرة تنفيذ منتج وخبرة مجال شمسي، وليس مجرد عرض مالي.' }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if opp.market.size %}
 <section class="section invest-section" id="problem">
   <div class="container">
     <div class="invest-section-inner">
@@ -33,13 +63,15 @@
     </div>
   </div>
 </section>
+{% endif %}
 
+{% if project or opp.tagline %}
 <section class="section invest-section invest-section-alt" id="solution">
   <div class="container">
     <div class="invest-section-inner">
       <h2>{{ 'The Product' if lang == 'en' else 'المنتج' }}</h2>
       <p class="lead">{{ project.site.description if project else opp.tagline }}</p>
-      {% if project and project.features %}
+      {% if project and project.features and project.features['items'] %}
       <div class="invest-features">
         {% for feature in project.features['items'][:3] %}
         <div class="invest-feature-item">
@@ -53,7 +85,9 @@
     </div>
   </div>
 </section>
+{% endif %}
 
+{% if opp.competition %}
 <section class="section invest-section" id="market">
   <div class="container">
     <div class="invest-section-inner">
@@ -62,21 +96,27 @@
     </div>
   </div>
 </section>
+{% endif %}
 
+{% if opp.monetization or opp.seeking.amount or opp.seeking.type %}
 <section class="section invest-section invest-section-alt" id="monetization">
   <div class="container">
     <div class="invest-section-inner">
       <h2>{{ 'Business Model' if lang == 'en' else 'نموذج العمل' }}</h2>
-      <p class="lead">{{ opp.monetization }}</p>
+      {% if opp.monetization %}<p class="lead">{{ opp.monetization }}</p>{% endif %}
+      {% if opp.seeking.amount or opp.seeking.type %}
       <div class="invest-seeking-box">
         <h3>{{ 'Seeking' if lang == 'en' else 'نبحث عن' }}</h3>
-        <p class="invest-amount">{{ opp.seeking.amount }}</p>
-        <p>{{ opp.seeking.type }}</p>
+        {% if opp.seeking.amount %}<p class="invest-amount">{{ opp.seeking.amount }}</p>{% endif %}
+        {% if opp.seeking.type %}<p>{{ opp.seeking.type }}</p>{% endif %}
       </div>
+      {% endif %}
     </div>
   </div>
 </section>
+{% endif %}
 
+{% if opportunity_has_team %}
 <section class="section invest-section" id="team">
   <div class="container">
     <div class="invest-section-inner">
@@ -86,7 +126,7 @@
         {% set member = team_dict.get(member_id) %}
         {% if member %}
         <div class="invest-team-card">
-          <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+          <img src="{{ member.photo }}" alt="{{ member.name }}" width="120" height="120" loading="lazy" decoding="async">
           <h4>{{ member.name }}</h4>
           <p>{{ member.role }}</p>
           <a href="{{ link('/team/' + member.id + '/') }}">{{ 'View Profile' if lang == 'en' else 'عرض الملف' }}</a>
@@ -97,15 +137,22 @@
     </div>
   </div>
 </section>
+{% endif %}
 
-<section class="section invest-cta">
+<section class="section invest-cta" id="invest-cta">
   <div class="container text-center">
     <h2>{{ 'Interested in Investing?' if lang == 'en' else 'مهتم بالاستثمار؟' }}</h2>
-    <p>{{ 'Reach out to discuss partnership opportunities.' if lang == 'en' else 'تواصل معنا لمناقشة فرص الشراكة.' }}</p>
-    <a href="mailto:{{ opp.contact_email }}?subject=Investment Interest: {{ opp.title_en }}" class="btn btn-primary btn-lg">
-      <i class="fas fa-envelope"></i>
-      {{ opp.cta }}
-    </a>
+    <p>{{ 'Reach out to discuss partnership structure, rollout, and what the right strategic fit looks like.' if lang == 'en' else 'تواصل معنا لمناقشة هيكل الشراكة، وخطة الإطلاق، وما الذي يجعل الشريك مناسباً فعلاً.' }}</p>
+    <div class="hero-actions" style="justify-content:center;">
+      <a href="mailto:{{ opp.contact_email }}?subject=Investment Interest: {{ opp.title }}" class="btn btn-primary btn-lg">
+        <i class="fas fa-envelope"></i>
+        {{ opp.cta }}
+      </a>
+      <a href="{{ link('/team/abdulrasol/') }}" class="btn btn-secondary btn-lg">
+        <i class="fas fa-user-tie"></i>
+        {{ 'View Founder Profile' if lang == 'en' else 'عرض ملف المؤسس' }}
+      </a>
+    </div>
   </div>
 </section>
 

@@ -2,21 +2,26 @@
 
 {% block content %}
 
-<!-- Hero Section -->
 <section class="hero" id="hero">
   <div class="hero-bg">
     {% if brand.banner %}
     <div class="hero-banner" style="background-image: url('{{ brand.banner }}')"></div>
     {% endif %}
+    <div class="hero-orb hero-orb-primary"></div>
+    <div class="hero-orb hero-orb-secondary"></div>
   </div>
 
   <div class="container hero-content">
     <div class="hero-text">
-      <img src="{{ brand.logo }}" alt="{{ brand.name }}" class="hero-logo">
-      <h1 class="hero-title">{{ hero.title | safe }}</h1>
-      <p class="hero-subtitle">{{ hero.subtitle }}</p>
+      {% if hero.badge %}
+      <div class="hero-badge reveal">{{ hero.badge }}</div>
+      {% endif %}
 
-      <div class="hero-actions">
+      <img src="{{ brand.logo }}" alt="{{ brand.name }}" class="hero-logo reveal">
+      <h1 class="hero-title reveal">{{ hero.title | safe }}</h1>
+      <p class="hero-subtitle reveal">{{ hero.subtitle }}</p>
+
+      <div class="hero-actions reveal">
         {% if links.googlePlay %}
         <a href="{{ links.googlePlay }}"
            data-goatcounter-click="project-google-play-{{ id }}"
@@ -27,7 +32,18 @@
           {{ hero.cta }}
         </a>
         {% endif %}
-        {% if links.github %}
+        {% if hero.secondary_cta and has_project_cta %}
+        <a href="#project-cta" class="btn btn-secondary">
+          <i class="fas fa-arrow-down"></i>
+          {{ hero.secondary_cta }}
+        </a>
+        {% if links.support_email %}
+        <a href="mailto:{{ links.support_email }}" class="btn btn-secondary">
+          <i class="fas fa-paper-plane"></i>
+          {{ 'Need a similar system?' if lang == 'en' else 'تحتاج نظاماً مشابهاً؟' }}
+        </a>
+        {% endif %}
+        {% elif links.github %}
         <a href="{{ links.github }}"
            data-goatcounter-click="project-github-{{ id }}"
            class="btn btn-secondary"
@@ -40,52 +56,129 @@
       </div>
 
       {% if platforms %}
-      <div class="platforms">
+      <div class="platforms reveal">
         {% for platform in platforms %}
         <span class="platform-badge">{{ platform }}</span>
         {% endfor %}
       </div>
       {% endif %}
+
+      {% if hero_stats %}
+      <div class="hero-stats reveal">
+        {% for stat in hero_stats %}
+        <div class="hero-stat">
+          <div class="hero-stat-value">{{ stat.value }}</div>
+          <div class="hero-stat-label">{{ stat.label }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <div class="hero-trust-line reveal">
+        <span>{{ 'Built around real operating workflows' if lang == 'en' else 'مبني حول سير عمل تشغيلي حقيقي' }}</span>
+        <span>{{ 'Bilingual-ready delivery' if lang == 'en' else 'تنفيذ جاهز للعربية والإنكليزية' }}</span>
+        <span>{{ 'Direct product execution' if lang == 'en' else 'تنفيذ منتجي مباشر' }}</span>
+      </div>
     </div>
 
-    <div class="hero-image">
-      {% if screenshots and screenshots['items'] %}
-      <img src="{{ screenshots['items'][0] }}" alt="{{ brand.name }} screenshot">
+    <div class="hero-visual reveal">
+      {% if has_screenshots %}
+      <div class="hero-device-stack">
+        <div class="device device-back">
+          <img src="{{ screenshots['items'][0] }}" alt="{{ brand.name }} screenshot">
+        </div>
+        {% if screenshots['items']|length > 1 %}
+        <div class="device device-front">
+          <img src="{{ screenshots['items'][1] }}" alt="{{ brand.name }} screenshot">
+        </div>
+        {% endif %}
+      </div>
       {% else %}
-      <img src="{{ brand.logo }}" alt="{{ brand.name }}">
+      <div class="hero-brand-card">
+        <img src="{{ brand.logo }}" alt="{{ brand.name }}">
+        <p>{{ brand.tagline }}</p>
+      </div>
       {% endif %}
     </div>
   </div>
 </section>
 
-<!-- Features Section -->
-{% if features %}
-<section class="section features" id="features">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">{{ features.title }}</h2>
-    </div>
+{% if has_problem %}
+{% set problem = sections.problem %}
+<section class="section story-section story-section-split" id="problem">
+  <div class="container story-grid">
+    <div class="story-copy reveal">
+      {% if problem.label %}<span class="section-eyebrow">{{ problem.label }}</span>{% endif %}
+      {% if problem.title %}<h2 class="section-title">{{ problem.title }}</h2>{% endif %}
+      {% if problem.subtitle %}<p class="section-subtitle">{{ problem.subtitle }}</p>{% endif %}
+      {% if problem.body %}<p class="story-body">{{ problem.body }}</p>{% endif %}
 
-    {% if features.groups %}
-      {% for group in features.groups %}
-      <h3 class="feature-group-title">{{ group.title }}</h3>
-      <div class="features-grid">
-        {% for feature in group['items'] %}
-        <div class="feature-card">
-          <span class="feature-icon">{{ feature.icon }}</span>
-          <h3>{{ feature.title }}</h3>
-          <p>{{ feature.desc }}</p>
+      {% if problem['items'] %}
+      <div class="story-list">
+        {% for item in problem['items'] %}
+        <div class="story-list-item">
+          {% if item.icon %}<span class="story-list-icon">{{ item.icon }}</span>{% endif %}
+          <span>{{ item.text }}</span>
         </div>
         {% endfor %}
       </div>
+      {% endif %}
+    </div>
+
+    {% if problem.highlight %}
+    <div class="story-highlight reveal">
+      <div class="highlight-card">
+        <div class="highlight-value">{{ problem.highlight.value }}</div>
+        <div class="highlight-label">{{ problem.highlight.label }}</div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% if has_solution %}
+{% set solution = sections.solution %}
+<section class="section cards-section cards-section-alt" id="solution">
+  <div class="container">
+    <div class="section-header reveal">
+      {% if solution.label %}<span class="section-eyebrow">{{ solution.label }}</span>{% endif %}
+      {% if solution.title %}<h2 class="section-title">{{ solution.title }}</h2>{% endif %}
+      {% if solution.subtitle %}<p class="section-subtitle">{{ solution.subtitle }}</p>{% endif %}
+    </div>
+
+    {% if solution['items'] %}
+    <div class="feature-showcase-grid">
+      {% for item in solution['items'] %}
+      <article class="feature-showcase-card reveal">
+        {% if item.icon %}<span class="feature-icon">{{ item.icon }}</span>{% endif %}
+        {% if item.title %}<h3>{{ item.title }}</h3>{% endif %}
+        {% if item.desc %}<p>{{ item.desc }}</p>{% endif %}
+      </article>
       {% endfor %}
-    {% elif features['items'] %}
-    <div class="features-grid">
-      {% for feature in features['items'] %}
-      <div class="feature-card">
-        <span class="feature-icon">{{ feature.icon }}</span>
-        <h3>{{ feature.title }}</h3>
-        <p>{{ feature.desc }}</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% if has_market %}
+{% set market = sections.market %}
+<section class="section metrics-section" id="market">
+  <div class="container">
+    <div class="section-header reveal">
+      {% if market.label %}<span class="section-eyebrow">{{ market.label }}</span>{% endif %}
+      {% if market.title %}<h2 class="section-title">{{ market.title }}</h2>{% endif %}
+      {% if market.subtitle %}<p class="section-subtitle">{{ market.subtitle }}</p>{% endif %}
+    </div>
+
+    {% if market['items'] %}
+    <div class="metrics-grid">
+      {% for item in market['items'] %}
+      <div class="metric-card reveal">
+        {% if item.icon %}<div class="metric-icon">{{ item.icon }}</div>{% endif %}
+        {% if item.value %}<div class="metric-value">{{ item.value }}</div>{% endif %}
+        {% if item.label %}<div class="metric-label">{{ item.label }}</div>{% endif %}
       </div>
       {% endfor %}
     </div>
@@ -94,16 +187,79 @@
 </section>
 {% endif %}
 
-<!-- Screenshots Section -->
-{% if screenshots and screenshots['items'] %}
+{% if has_features %}
+<section class="section features" id="features">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">{{ features.label or (features.title if features.title else ('Features' if lang == 'en' else 'الميزات')) }}</span>
+      <h2 class="section-title">{{ features.title }}</h2>
+      {% if features.subtitle %}<p class="section-subtitle">{{ features.subtitle }}</p>{% endif %}
+    </div>
+
+    {% if features.groups %}
+      {% for group in features.groups %}
+      <div class="feature-group reveal">
+        {% if group.title %}<h3 class="feature-group-title">{{ group.title }}</h3>{% endif %}
+        <div class="features-grid">
+          {% for feature in group['items'] %}
+          <article class="feature-card">
+            {% if feature.icon %}<span class="feature-icon">{{ feature.icon }}</span>{% endif %}
+            {% if feature.title %}<h3>{{ feature.title }}</h3>{% endif %}
+            {% if feature.desc %}<p>{{ feature.desc }}</p>{% endif %}
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    {% elif features['items'] %}
+    <div class="features-grid">
+      {% for feature in features['items'] %}
+      <article class="feature-card reveal">
+        {% if feature.icon %}<span class="feature-icon">{{ feature.icon }}</span>{% endif %}
+        {% if feature.title %}<h3>{{ feature.title }}</h3>{% endif %}
+        {% if feature.desc %}<p>{{ feature.desc }}</p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% if has_revenue %}
+{% set revenue = sections.revenue %}
+<section class="section cards-section" id="revenue">
+  <div class="container">
+    <div class="section-header reveal">
+      {% if revenue.label %}<span class="section-eyebrow">{{ revenue.label }}</span>{% endif %}
+      {% if revenue.title %}<h2 class="section-title">{{ revenue.title }}</h2>{% endif %}
+      {% if revenue.subtitle %}<p class="section-subtitle">{{ revenue.subtitle }}</p>{% endif %}
+    </div>
+
+    <div class="feature-showcase-grid">
+      {% for item in revenue['items'] %}
+      <article class="feature-showcase-card reveal">
+        {% if item.icon %}<span class="feature-icon">{{ item.icon }}</span>{% endif %}
+        {% if item.title %}<h3>{{ item.title }}</h3>{% endif %}
+        {% if item.desc %}<p>{{ item.desc }}</p>{% endif %}
+        {% if item.tag %}<span class="card-tag">{{ item.tag }}</span>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if has_screenshots %}
 <section class="section screenshots-section" id="screenshots">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">{{ 'Preview' if lang == 'en' else 'استعراض' }}</span>
       <h2 class="section-title">{{ screenshots.title }}</h2>
     </div>
     <div class="screenshots-scroll">
       {% for screenshot in screenshots['items'] %}
-      <div class="screenshot-item">
+      <div class="screenshot-item reveal">
         <div class="phone-frame">
           <div class="phone-content">
             <img src="{{ screenshot }}" alt="{{ brand.name }} screenshot" loading="lazy">
@@ -116,16 +272,41 @@
 </section>
 {% endif %}
 
-<!-- Testimonials Section -->
-{% if testimonials and testimonials['items'] %}
+{% if has_why_invest %}
+{% set why_invest = sections.why_invest %}
+<section class="section story-section" id="why-invest">
+  <div class="container">
+    <div class="section-header reveal">
+      {% if why_invest.label %}<span class="section-eyebrow">{{ why_invest.label }}</span>{% endif %}
+      {% if why_invest.title %}<h2 class="section-title">{{ why_invest.title }}</h2>{% endif %}
+      {% if why_invest.subtitle %}<p class="section-subtitle">{{ why_invest.subtitle }}</p>{% endif %}
+    </div>
+
+    <div class="why-grid">
+      {% for item in why_invest['items'] %}
+      <article class="why-card reveal">
+        {% if item.number %}<div class="why-number">{{ item.number }}</div>{% endif %}
+        <div class="why-copy">
+          {% if item.title %}<h3>{{ item.title }}</h3>{% endif %}
+          {% if item.desc %}<p>{{ item.desc }}</p>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if has_testimonials %}
 <section class="section testimonials" id="testimonials">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">{{ nav.testimonials }}</span>
       <h2 class="section-title">{{ testimonials.title }}</h2>
     </div>
     <div class="testimonials-grid">
       {% for testimonial in testimonials['items'] %}
-      <div class="testimonial-card">
+      <div class="testimonial-card reveal">
         <div class="testimonial-stars">
           {% for n in range(5) %}
           <i class="fas fa-star {% if n < testimonial.rating %}active{% endif %}"></i>
@@ -136,7 +317,7 @@
           <div class="author-avatar">{{ testimonial.name[0] }}</div>
           <div class="author-info">
             <h4>{{ testimonial.name }}</h4>
-            <span>{{ testimonial.role }}</span>
+            {% if testimonial.role %}<span>{{ testimonial.role }}</span>{% endif %}
           </div>
         </div>
       </div>
@@ -146,18 +327,18 @@
 </section>
 {% endif %}
 
-<!-- Pricing Section -->
-{% if pricing and pricing['tiers'] %}
+{% if has_pricing %}
 <section class="section pricing" id="pricing">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">{{ 'Pricing' if lang == 'en' else 'الأسعار' }}</span>
       <h2 class="section-title">{{ pricing.title }}</h2>
       {% if pricing.subtitle %}<p class="section-subtitle">{{ pricing.subtitle }}</p>{% endif %}
     </div>
 
     <div class="pricing-grid">
       {% for tier in pricing['tiers'] %}
-      <div class="pricing-card {% if tier.featured %}featured{% endif %}">
+      <div class="pricing-card {% if tier.featured %}featured{% endif %} reveal">
         <h3>{{ tier.name }}</h3>
         <div class="pricing-price">{{ tier.price }}</div>
         <ul class="pricing-features">
@@ -182,16 +363,16 @@
 </section>
 {% endif %}
 
-<!-- Purchase Form Section -->
-{% if purchase_form %}
+{% if has_purchase_form %}
 <section class="section purchase" id="purchase-form">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">{{ nav.request_purchase }}</span>
       <h2 class="section-title">{{ purchase_form.title }}</h2>
       {% if purchase_form.subtitle %}<p class="section-subtitle">{{ purchase_form.subtitle }}</p>{% endif %}
     </div>
 
-    <form class="purchase-form" id="purchase-form" action="{{ contact_form_endpoint }}" method="POST">
+    <form class="purchase-form reveal" id="purchase-form" action="{{ contact_form_endpoint }}" method="POST">
       <input type="hidden" name="access_key" value="{{ contact_form_access_key }}">
       <input type="hidden" name="subject" value="{{ purchase_form.title }} - {{ brand.name }}">
       <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
@@ -244,6 +425,38 @@
       <p class="form-note">{{ purchase_form.note | safe }}</p>
       {% endif %}
     </form>
+  </div>
+</section>
+{% endif %}
+
+{% if has_project_cta %}
+{% set cta = sections.cta %}
+<section class="section project-cta-section" id="project-cta">
+  <div class="container">
+    <div class="project-cta-card reveal">
+      {% if cta.label %}<span class="section-eyebrow">{{ cta.label }}</span>{% endif %}
+      {% if cta.title %}<h2 class="section-title">{{ cta.title }}</h2>{% endif %}
+      {% if cta.subtitle %}<p class="section-subtitle">{{ cta.subtitle }}</p>{% endif %}
+
+      <div class="hero-actions">
+        {% if links.support_email %}
+        <a href="mailto:{{ links.support_email }}" class="btn btn-primary">
+          <i class="fas fa-envelope"></i>
+          {{ cta.primary_label or nav.contact_us }}
+        </a>
+        {% endif %}
+        {% if whatsapp_number %}
+        <a href="https://wa.me/{{ whatsapp_number }}?text={{ whatsapp_message | urlencode }}" class="btn btn-secondary" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+          {{ cta.secondary_label or 'WhatsApp' }}
+        </a>
+        {% endif %}
+        <a href="{{ link('/team/abdulrasol/') }}" class="btn btn-secondary">
+          <i class="fas fa-user-tie"></i>
+          {{ 'View Founder Profile' if lang == 'en' else 'عرض ملف المؤسس' }}
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 {% endif %}

@@ -1,13 +1,13 @@
 {
   "site": {
     "url": "https://abdulrasol.github.io",
-    "title_en": "Meaad Tech — Software & Solar Solutions",
-    "title_ar": "ميعاد تكنلوجي — حلول برمجية وطاقة شمسية",
-    "description_en": "Meaad Tech builds cross-platform mobile apps, business management systems, and solar energy tools. From POS systems to solar calculators, we deliver innovative digital products.",
-    "description_ar": "ميعاد تكنلوجي تبني تطبيقات الموبايل متعددة المنصات، أنظمة إدارة الأعمال، وأدوات الطاقة الشمسية. من أنظمة نقاط البيع إلى حاسبات الطاقة الشمسية، نقدم منتجات رقمية مبتكرة.",
-    "keywords_en": "Meaad Tech, Flutter Developer, Mobile Apps, Solar Energy, B2B Solutions, POS, Iraq Tech, Software Company",
-    "keywords_ar": "ميعاد تكنلوجي, مطور فلاتر, تطبيقات موبايل, طاقة شمسية, حلول أعمال, نقاط بيع, تقنية العراق, شركة برمجيات",
-    "author": "Meaad Tech",
+    "title_en": "Subul Technology — Software, AI & Solar Solutions",
+    "title_ar": "سبل التكنلوجيا — حلول برمجية وذكاء اصطناعي وطاقة شمسية",
+    "description_en": "Subul Technology builds mobile apps, web platforms, AI solutions, business systems, and solar tools. From B2B operations software to solar platforms, we deliver practical digital products.",
+    "description_ar": "سبل التكنلوجيا تبني تطبيقات موبايل، منصات ويب، حلول ذكاء اصطناعي، أنظمة أعمال، وأدوات طاقة شمسية. من أنظمة الأعمال إلى المنصات الشمسية، نقدم منتجات رقمية عملية.",
+    "keywords_en": "Subul Technology, Mobile Apps, Web Platforms, AI Solutions, Solar Tools, B2B Systems, Iraq Tech, Software Company",
+    "keywords_ar": "سبل التكنلوجيا, تطبيقات موبايل, منصات ويب, ذكاء اصطناعي, أدوات طاقة شمسية, أنظمة أعمال, تقنية العراق, شركة برمجيات",
+    "author": "Subul Technology",
     "google_site_verification": "rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg"
   },
   "analytics": {
@@ -30,10 +30,10 @@
     "location_ar": "العراق",
     "availability_en": "Open for partnerships",
     "availability_ar": "مفتوح للشراكات",
-    "email": "abdulrasol.alhilo@gmail.com",
+    "email": "abdulrasol@subultech.top",
     "whatsapp": "9647813639721",
-    "whatsapp_message_en": "Hello Meaad Tech, I visited your website and would like to discuss a project or partnership.",
-    "whatsapp_message_ar": "مرحباً ميعاد تكنلوجي، زرت موقعكم وأرغب في مناقشة مشروع أو شراكة.",
+    "whatsapp_message_en": "Hello Subul Technology, I visited your website and would like to discuss a project, product, or partnership.",
+    "whatsapp_message_ar": "مرحباً سبل التكنلوجيا، زرت موقعكم وأرغب في مناقشة مشروع أو منتج أو شراكة.",
     "photo": "/static/images/progile.JPEG",
     "resume_pdf": "/static/resume.pdf",
     "social": {
@@ -46,24 +46,104 @@
     }
   },
   "hero": {
-    "badge_en": "Meaad Tech",
-    "badge_ar": "ميعاد تكنلوجي",
-    "headline_en": "Building Digital Products & Solar Solutions",
-    "headline_ar": "نبني منتجات رقمية وحلول طاقة شمسية",
-    "highlight_en": "For Tomorrow",
-    "highlight_ar": "للمستقبل",
-    "subtitle_en": "We are a software company specializing in cross-platform mobile apps, business management systems, and solar energy tools. We help businesses and individuals turn ideas into fast, scalable, and innovative digital products.",
-    "subtitle_ar": "نحن شركة برمجيات متخصصة في تطبيقات الموبايل متعددة المنصات، أنظمة إدارة الأعمال، وأدوات الطاقة الشمسية. نساعد الشركات والأفراد على تحويل الأفكار إلى منتجات رقمية سريعة وقابلة للتوسع ومبتكرة.",
-    "cta_primary_en": "Explore Our Products",
-    "cta_primary_ar": "استكشف منتجاتنا",
-    "cta_secondary_en": "Meet the Founder",
-    "cta_secondary_ar": "تعرف على المؤسس"
+    "badge_en": "Subul Technology",
+    "badge_ar": "سبل التكنلوجيا",
+    "headline_en": "Software Systems, AI Tools",
+    "headline_ar": "أنظمة برمجية وأدوات ذكاء اصطناعي",
+    "highlight_en": "& Solar Solutions Built for Real Work",
+    "highlight_ar": "وحلول طاقة شمسية تبني أثراً فعلياً",
+    "subtitle_en": "We help businesses and founders launch faster with mobile apps, internal systems, AI-powered workflows, and solar platforms designed for practical operations.",
+    "subtitle_ar": "نساعد الشركات ورواد الأعمال على إطلاق منتجاتهم وأنظمتهم بسرعة عبر تطبيقات موبايل، أنظمة تشغيل داخلية، أتمتة ذكية، ومنصات طاقة شمسية تخدم الواقع العملي.",
+    "cta_primary_en": "Start a Project",
+    "cta_primary_ar": "ابدأ مشروعك",
+    "cta_secondary_en": "Explore Products",
+    "cta_secondary_ar": "استعرض المنتجات",
+    "proof_points": [
+      {
+        "label_en": "B2B systems",
+        "label_ar": "أنظمة أعمال"
+      },
+      {
+        "label_en": "AI automation",
+        "label_ar": "أتمتة ذكية"
+      },
+      {
+        "label_en": "Solar expertise",
+        "label_ar": "خبرة شمسية"
+      }
+    ],
+    "client_types": [
+      {
+        "label_en": "Companies",
+        "label_ar": "شركات"
+      },
+      {
+        "label_en": "Founders",
+        "label_ar": "رواد أعمال"
+      },
+      {
+        "label_en": "Strategic partners",
+        "label_ar": "شركاء استراتيجيون"
+      }
+    ]
+  },
+  "why_subul": {
+    "title_en": "Why Work With Subul",
+    "title_ar": "لماذا سبل",
+    "subtitle_en": "We combine technical delivery with practical market context, so the result is useful from day one.",
+    "subtitle_ar": "نجمع بين التنفيذ التقني وفهم السوق العملي، حتى تكون النتيجة مفيدة من اليوم الأول.",
+    "items": [
+      {
+        "title_en": "Fast execution, clear scope",
+        "title_ar": "تنفيذ سريع ونطاق واضح",
+        "text_en": "We turn ideas and operational problems into realistic builds with clear next steps.",
+        "text_ar": "نحوّل الأفكار والمشاكل التشغيلية إلى تنفيذ واقعي بخطوات واضحة."
+      },
+      {
+        "title_en": "Built for Iraq and Arabic users",
+        "title_ar": "مصمم للعراق والمستخدم العربي",
+        "text_en": "Bilingual product thinking, local context, and interfaces that match real users.",
+        "text_ar": "تفكير منتجي ثنائي اللغة وسياق محلي وواجهات مناسبة للمستخدم الحقيقي."
+      },
+      {
+        "title_en": "Software plus solar expertise",
+        "title_ar": "خبرة برمجية وشمسية معاً",
+        "text_en": "A rare mix that helps with business systems, AI automation, and energy products.",
+        "text_ar": "مزيج نادر يساعد في أنظمة الأعمال والأتمتة الذكية ومنتجات الطاقة."
+      }
+    ]
+  },
+  "proof": {
+    "title_en": "Proof Through Real Work",
+    "title_ar": "إثبات من عمل حقيقي",
+    "subtitle_en": "The strongest signal is delivered software solving real operational use cases.",
+    "subtitle_ar": "أقوى دليل هو برمجيات منجزة تحل استخدامات تشغيلية حقيقية.",
+    "items": [
+      {
+        "title_en": "Sales and store operations",
+        "title_ar": "تشغيل المبيعات والمتاجر",
+        "text_en": "POS, invoicing, inventory, staff roles, and daily workflows turned into usable systems.",
+        "text_ar": "نقاط بيع وفوترة ومخزون وصلاحيات وعمليات يومية تحولت إلى أنظمة قابلة للاستخدام."
+      },
+      {
+        "title_en": "AI-assisted field workflows",
+        "title_ar": "سير عمل ميداني مدعوم بالذكاء",
+        "text_en": "OCR-based capture, automation, and reporting for technical and operational teams.",
+        "text_ar": "التقاط بالـ OCR وأتمتة وتقارير لفرق التشغيل والفرق التقنية."
+      },
+      {
+        "title_en": "Solar planning and execution",
+        "title_ar": "تخطيط وتنفيذ شمسي",
+        "text_en": "Tools that connect solar demand, system design, and business execution in one flow.",
+        "text_ar": "أدوات تربط الطلب الشمسي وتصميم الأنظمة والتنفيذ التجاري في مسار واحد."
+      }
+    ]
   },
   "about": {
     "title_en": "About Us",
     "title_ar": "من نحن",
-    "text_en": "Meaad Tech is a software and solar energy solutions company founded by AbdulRasol Al-Hilo. With 6+ years of experience in designing and installing PV systems, and 5+ years building cross-platform apps and web backends, we bridge the gap between clean energy and modern technology. From POS systems for Iraqi businesses to solar calculators for the global market, we deliver practical, innovative tools.",
-    "text_ar": "ميعاد تكنلوجي هي شركة حلول برمجية وطاقة شمسية أسسها عبدالرسول الحلو. مع 6+ سنوات من الخبرة في تصميم وتركيب أنظمة الطاقة الشمسية، و5+ سنوات في بناء تطبيقات متعددة المنصات وأنظمة ويب، نجسر الفجوة بين الطاقة النظيفة والتقنية الحديثة. من أنظمة نقاط البيع للشركات العراقية إلى حاسبات الطاقة الشمسية للسوق العالمي، نقدم أدوات عملية ومبتكرة.",
+    "text_en": "Subul Technology is a product-minded software company founded by AbdulRasol Al-Hilo. We combine hands-on experience in B2B systems, cross-platform app development, AI-powered tools, and solar products to build practical solutions for Iraqi and regional markets.",
+    "text_ar": "سبل التكنلوجيا هي شركة برمجية ذات توجه منتجي أسسها عبدالرسول الحلو. نجمع بين الخبرة العملية في أنظمة الأعمال، تطوير التطبيقات متعددة المنصات، الأدوات المدعومة بالذكاء الاصطناعي، ومنتجات الطاقة الشمسية لبناء حلول عملية للسوق العراقي والأسواق القريبة.",
     "stats": [
       {
         "value_en": "7+",
@@ -78,18 +158,18 @@
         "label_ar": "سنوات خبرة شمسية"
       },
       {
-        "value_en": "5+",
-        "value_ar": "٥+",
+        "value_en": "3+",
+        "value_ar": "٣+",
         "label_en": "Years Coding",
         "label_ar": "سنوات برمجة"
       }
     ]
   },
   "skills": {
-    "title_en": "Skills & Technologies",
-    "title_ar": "المهارات والتقنيات",
-    "subtitle_en": "Technologies we use to build modern, scalable applications.",
-    "subtitle_ar": "التقنيات التي نستخدمها لبناء تطبيقات حديثة وقابلة للتوسع.",
+    "title_en": "Delivery Capabilities",
+    "title_ar": "قدرات التنفيذ",
+    "subtitle_en": "Core stacks we use to deliver reliable products and internal systems.",
+    "subtitle_ar": "التقنيات الأساسية التي نعتمد عليها لتقديم منتجات وأنظمة داخلية موثوقة.",
     "categories": [
       {
         "name_en": "Mobile Development",
@@ -112,13 +192,13 @@
         ]
       },
       {
-        "name_en": "Solar & Engineering",
-        "name_ar": "الطاقة الشمسية والهندسة",
+        "name_en": "AI, Systems & Solar",
+        "name_ar": "الذكاء الاصطناعي والأنظمة والطاقة الشمسية",
         "skills": [
+          { "name": "AI Workflows", "icon": "brain", "level": 82 },
+          { "name": "OCR / Automation", "icon": "wand-magic-sparkles", "level": 78 },
           { "name": "Solar PV Design", "icon": "solar-panel", "level": 90 },
-          { "name": "On-grid/Off-grid", "icon": "bolt", "level": 85 },
-          { "name": "System Sizing", "icon": "calculator", "level": 85 },
-          { "name": "Installation", "icon": "tools", "level": 80 }
+          { "name": "System Sizing", "icon": "calculator", "level": 85 }
         ]
       },
       {
@@ -139,10 +219,10 @@
       "period_ar": "٢٠٢٤ — الحاضر",
       "role_en": "Software Developer",
       "role_ar": "مطور برمجيات",
-      "company_en": "Meaad Tech",
-      "company_ar": "ميعاد تكنلوجي",
-      "description_en": "Founder and lead developer. Building cross-platform mobile apps with Flutter, web backends with Django, and solar energy tools. Products include Baytraq, MEAAD, MeterLog, Watt, and Sweep.",
-      "description_ar": "المؤسس والمطور الرئيسي. بناء تطبيقات موبايل متعددة المنصات بـ Flutter، وأنظمة ويب بـ Django، وأدوات الطاقة الشمسية. المنتجات تشمل بيترق، ميعاد، ميتر لوغ، واط، و SWEEP."
+      "company_en": "Subul Technology",
+      "company_ar": "سبل التكنلوجيا",
+      "description_en": "Founder and lead developer. Building B2B software, cross-platform mobile apps, AI-powered tools, and solar products. Products include Baytraq, MEAAD, MeterLog, Watt, and Sweep.",
+      "description_ar": "المؤسس والمطور الرئيسي. بناء برمجيات الأعمال، تطبيقات موبايل متعددة المنصات، أدوات مدعومة بالذكاء الاصطناعي، ومنتجات طاقة شمسية. المنتجات تشمل بيترق، ميعاد، ميتر لوغ، واط، وSWEEP."
     },
     {
       "period_en": "2020 — Present",
@@ -168,20 +248,28 @@
   "projects": {
     "title_en": "Our Products",
     "title_ar": "منتجاتنا",
-    "subtitle_en": "A selection of apps and platforms we've designed and built.",
-    "subtitle_ar": "مجموعة من التطبيقات والمنصات التي صممناها وبنيناها.",
+    "subtitle_en": "Selected products that show how we turn operational problems into usable software.",
+    "subtitle_ar": "منتجات مختارة توضح كيف نحول المشاكل التشغيلية إلى برمجيات قابلة للاستخدام.",
     "filter_all_en": "All",
     "filter_all_ar": "الكل",
     "filter_mobile_en": "Mobile",
     "filter_mobile_ar": "موبايل",
-    "filter_business_en": "Business",
-    "filter_business_ar": "أعمال",
+    "filter_business_en": "Operations",
+    "filter_business_ar": "تشغيل",
     "filter_ai_en": "AI & Tools",
     "filter_ai_ar": "ذكاء اصطناعي وأدوات",
     "filter_solar_en": "Solar",
     "filter_solar_ar": "طاقة شمسية",
     "featured_badge_en": "Featured",
     "featured_badge_ar": "مميز",
+    "view_all_en": "View All Products",
+    "view_all_ar": "عرض كل المنتجات",
+    "discuss_cta_en": "Need a similar system?",
+    "discuss_cta_ar": "تحتاج نظاماً مشابهاً؟",
+    "empty_title_en": "No products match this filter yet.",
+    "empty_title_ar": "لا توجد منتجات مطابقة لهذا التصنيف حالياً.",
+    "empty_text_en": "Try another category or contact us if you want a similar system built for your business.",
+    "empty_text_ar": "جرّب تصنيفاً آخر أو تواصل معنا إذا كنت تريد نظاماً مشابهاً لعملك.",
     "list": [
       {
         "title_en": "Baytraq Sales Manager",
@@ -308,8 +396,30 @@
   "contact": {
     "title_en": "Get In Touch",
     "title_ar": "تواصل معنا",
-    "subtitle_en": "Have a project in mind, want to invest, or looking for a partnership? Send us a message and we'll respond as soon as possible.",
-    "subtitle_ar": "هل لديك مشروع في بالك، ترغب في الاستثمار، أو تبحث عن شراكة؟ أرسل لنا رسالة وسنرد في أقرب وقت ممكن.",
+    "subtitle_en": "Share your project, process problem, or product idea. We respond with a practical next step.",
+    "subtitle_ar": "شاركنا مشروعك أو مشكلتك التشغيلية أو فكرتك للمنتج. سنرد عليك بخطوة عملية واضحة.",
+    "response_time_en": "Usually within 24-48 hours",
+    "response_time_ar": "عادة خلال 24-48 ساعة",
+    "proof_points": [
+      {
+        "title_en": "Direct founder communication",
+        "title_ar": "تواصل مباشر مع المؤسس",
+        "text_en": "You speak directly with the builder handling scope and delivery.",
+        "text_ar": "تتواصل مباشرة مع الشخص الذي يدير النطاق والتنفيذ."
+      },
+      {
+        "title_en": "Bilingual delivery",
+        "title_ar": "تنفيذ ثنائي اللغة",
+        "text_en": "English and Arabic product flows for Iraqi and regional users.",
+        "text_ar": "تجارب عربية وإنجليزية مناسبة للمستخدمين في العراق والمنطقة."
+      },
+      {
+        "title_en": "Product-minded approach",
+        "title_ar": "منهجية تركز على المنتج",
+        "text_en": "We optimize for usable systems, not just shipped screens.",
+        "text_ar": "نركز على أنظمة قابلة للاستخدام لا مجرد شاشات منجزة."
+      }
+    ],
     "form": {
       "provider": "web3forms",
       "endpoint": "https://api.web3forms.com/submit",
@@ -341,8 +451,8 @@
     }
   },
   "footer": {
-    "tagline_en": "Building software & solar solutions with passion and precision.",
-    "tagline_ar": "نبني حلول برمجية وطاقة شمسية بشغف ودقة.",
+    "tagline_en": "Building software products, AI tools, and solar solutions with precision.",
+    "tagline_ar": "نبني منتجات برمجية وأدوات ذكاء اصطناعي وحلول طاقة شمسية بدقة.",
     "quick_links_title_en": "Quick Links",
     "quick_links_title_ar": "روابط سريعة",
     "contact_title_en": "Contact",
