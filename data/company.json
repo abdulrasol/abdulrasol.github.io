@@ -1,0 +1,51 @@
+{
+  "name_en": "Meaad Tech",
+  "name_ar": "ميعاد تكنلوجي",
+  "tagline_en": "Software & Solar Solutions",
+  "tagline_ar": "حلول برمجية وطاقة شمسية",
+  "description_en": "Meaad Tech builds cross-platform mobile applications, business management systems, and solar energy tools for the Iraqi market and beyond.",
+  "description_ar": "ميعاد تكنلوجي تبني تطبيقات الموبايل متعددة المنصات، أنظمة إدارة الأعمال، وأدوات الطاقة الشمسية للسوق العراقي وما وراءه.",
+  "founded_en": "2024",
+  "founded_ar": "٢٠٢٤",
+  "location_en": "Iraq",
+  "location_ar": "العراق",
+  "email": "abdulrasol.alhilo@gmail.com",
+  "whatsapp": "9647813639721",
+  "social": {
+    "github": "https://github.com/abdulrasol",
+    "linkedin": "http://linkedin.com/in/abdulrasoolal-hilo/",
+    "twitter": null,
+    "facebook": null,
+    "instagram": null
+  },
+  "services": [
+    {
+      "icon": "mobile-alt",
+      "title_en": "Mobile Apps",
+      "title_ar": "تطبيقات الموبايل",
+      "desc_en": "Cross-platform Flutter apps for iOS, Android, and Desktop with bilingual support.",
+      "desc_ar": "تطبيقات Flutter متعددة المنصات لـ iOS و Android وسطح المكتب مع دعم ثنائي اللغة."
+    },
+    {
+      "icon": "cash-register",
+      "title_en": "B2B Solutions",
+      "title_ar": "حلول الأعمال",
+      "desc_en": "POS, inventory, invoicing, and sales management systems for retail and wholesale.",
+      "desc_ar": "أنظمة نقاط البيع، المخزون، الفواتير، وإدارة المبيعات للتجزئة والجملة."
+    },
+    {
+      "icon": "solar-panel",
+      "title_en": "Solar Tools",
+      "title_ar": "أدوات الطاقة الشمسية",
+      "desc_en": "Solar system calculators, equipment marketplaces, and project management for clean energy.",
+      "desc_ar": "حاسبات أنظمة الطاقة الشمسية، أسواق المعدات، وإدارة المشاريع للطاقة النظيفة."
+    },
+    {
+      "icon": "code",
+      "title_en": "Developer Tools",
+      "title_ar": "أدوات المطورين",
+      "desc_en": "High-performance utilities built with Rust, Tauri, and modern frameworks.",
+      "desc_ar": "أدوات عالية الأداء مبنية بـ Rust و Tauri وأطر العمل الحديثة."
+    }
+  ]
+}

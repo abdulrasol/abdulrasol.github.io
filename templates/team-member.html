@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="member-hero">
+  <div class="container">
+    <div class="member-hero-inner">
+      <div class="member-photo-large">
+        <img src="{{ member.photo }}" alt="{{ member.name }}" loading="eager">
+      </div>
+      <div class="member-intro">
+        <h1>{{ member.name }}</h1>
+        <p class="member-role">{{ member.role }}</p>
+        <div class="member-social">
+          {% if member.social.github %}
+          <a href="{{ member.social.github }}" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          {% endif %}
+          {% if member.social.linkedin %}
+          <a href="{{ member.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section member-bio" id="about">
+  <div class="container">
+    <div class="member-content">
+      <div class="member-main">
+        <h2>{{ 'About' if lang == 'en' else 'نبذة' }}</h2>
+        <p class="lead">{{ member.bio }}</p>
+
+        <h2>{{ 'Skills' if lang == 'en' else 'المهارات' }}</h2>
+        <div class="member-skills-grid">
+          {% for skill in member.skills %}
+          <span class="skill-tag large">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="member-sidebar">
+        {% if member.projects %}
+        <div class="sidebar-box">
+          <h3>{{ 'Projects' if lang == 'en' else 'المشاريع' }}</h3>
+          <ul class="member-projects-list">
+            {% for project_id in member.projects %}
+            <li>
+              <a href="{{ link('/' + project_id + '/') }}">{{ project_id | title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        <div class="sidebar-box">
+          <h3>{{ 'Connect' if lang == 'en' else 'تواصل' }}</h3>
+          <p>{{ 'Email:' if lang == 'en' else 'البريد:' }} <a href="mailto:{{ company.email }}">{{ company.email }}</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section member-cta">
+  <div class="container text-center">
+    <a href="{{ link('/team/') }}" class="btn btn-secondary">
+      <i class="fas fa-arrow-left"></i>
+      {{ 'Back to Team' if lang == 'en' else 'العودة للفريق' }}
+    </a>
+  </div>
+</section>
+
+{% endblock %}

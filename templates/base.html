@@ -17,9 +17,9 @@
 
   <!-- Canonical & Alternate Languages -->
   <link rel="canonical" href="{{ site.url }}{{ page_path }}">
-  <link rel="alternate" hreflang="en" href="{{ site.url }}/">
-  <link rel="alternate" hreflang="ar" href="{{ site.url }}/ar/">
-  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
+  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ link_for(page_path, 'en') }}">
+  <link rel="alternate" hreflang="ar" href="{{ site.url }}{{ link_for(page_path, 'ar') }}">
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ link_for(page_path, 'en') }}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ site_title }}">
@@ -49,25 +49,33 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/additional.css">
 
   {% include "partials/analytics.html" %}
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Data: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "{{ personal.name }}",
-    "jobTitle": "{{ personal.tagline }}",
+    "@type": "Organization",
+    "name": "{{ company.name }}",
     "url": "{{ site.url }}",
-    "email": "mailto:{{ personal.email }}",
+    "logo": "{{ site.url }}/logo.png",
+    "description": "{{ company.description }}",
+    "email": "mailto:{{ company.email }}",
     "sameAs": [
-      {% if personal.social.github %}"{{ personal.social.github }}"{% endif %}
-      {% if personal.social.linkedin %}{% if personal.social.github %},{% endif %}"{{ personal.social.linkedin }}"{% endif %}
+      {% if company.social.github %}"{{ company.social.github }}"{% endif %}
+      {% if company.social.linkedin %}{% if company.social.github %},{% endif %}"{{ company.social.linkedin }}"{% endif %}
     ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Freelance"
+    "founder": {
+      "@type": "Person",
+      "name": "{{ personal.name }}",
+      "jobTitle": "{{ personal.tagline }}",
+      "url": "{{ site.url }}{{ link('/team/abdulrasol/') }}",
+      "sameAs": [
+        {% if personal.social.github %}"{{ personal.social.github }}"{% endif %}
+        {% if personal.social.linkedin %}{% if personal.social.github %},{% endif %}"{{ personal.social.linkedin }}"{% endif %}
+      ]
     }
   }
   </script>
@@ -77,17 +85,19 @@
   <!-- Header -->
   <header class="site-header" id="header">
     <div class="container header-inner">
-      <a href="{{ '/' if lang == 'en' else '/ar/' }}" class="logo">
-        <img src="/logo.png" alt="{{ personal.name }} logo" width="40" height="40">
-        <span>{{ personal.name }}</span>
+      <a href="{{ link('/') }}" class="logo">
+        <img src="/logo.png" alt="{{ company.name }} logo" width="40" height="40">
+        <span>{{ company.name }}</span>
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="#about">{{ nav.about }}</a>
-        <a href="#skills">{{ nav.skills }}</a>
-        <a href="#projects">{{ nav.projects }}</a>
-        <a href="#contact">{{ nav.contact }}</a>
-        <a href="{{ '/resume.html' if lang == 'en' else '/ar/resume.html' }}" class="nav-resume">{{ nav.resume }}</a>
+        <a href="{{ link('/') }}">{{ nav.home | default('Home' if lang == 'en' else 'الرئيسية') }}</a>
+        <a href="{{ link('/') }}#services">{{ nav.services | default('Services' if lang == 'en' else 'خدماتنا') }}</a>
+        <a href="{{ link('/') }}#projects">{{ nav.products | default('Products' if lang == 'en' else 'منتجاتنا') }}</a>
+        <a href="{{ link('/team/') }}">{{ nav.team | default('Team' if lang == 'en' else 'الفريق') }}</a>
+        <a href="{{ link('/invest/') }}">{{ nav.investors | default('Invest' if lang == 'en' else 'للمستثمرين') }}</a>
+        <a href="{{ link('/careers/') }}">{{ nav.careers | default('Careers' if lang == 'en' else 'الوظائف') }}</a>
+        <a href="{{ link('/resume.html') }}" class="nav-resume">{{ nav.resume | default('Founder' if lang == 'en' else 'المؤسس') }}</a>
       </nav>
 
       <div class="header-actions">
@@ -106,11 +116,13 @@
 
     <!-- Mobile Nav -->
     <div class="mobile-nav" id="mobile-nav">
-      <a href="#about">{{ nav.about }}</a>
-      <a href="#skills">{{ nav.skills }}</a>
-      <a href="#projects">{{ nav.projects }}</a>
-      <a href="#contact">{{ nav.contact }}</a>
-      <a href="{{ '/resume.html' if lang == 'en' else '/ar/resume.html' }}">{{ nav.resume }}</a>
+      <a href="{{ link('/') }}">{{ nav.home | default('Home' if lang == 'en' else 'الرئيسية') }}</a>
+      <a href="{{ link('/') }}#services">{{ nav.services | default('Services' if lang == 'en' else 'خدماتنا') }}</a>
+      <a href="{{ link('/') }}#projects">{{ nav.products | default('Products' if lang == 'en' else 'منتجاتنا') }}</a>
+      <a href="{{ link('/team/') }}">{{ nav.team | default('Team' if lang == 'en' else 'الفريق') }}</a>
+      <a href="{{ link('/invest/') }}">{{ nav.investors | default('Invest' if lang == 'en' else 'للمستثمرين') }}</a>
+      <a href="{{ link('/careers/') }}">{{ nav.careers | default('Careers' if lang == 'en' else 'الوظائف') }}</a>
+      <a href="{{ link('/resume.html') }}">{{ nav.resume | default('Founder' if lang == 'en' else 'المؤسس') }}</a>
       <a href="{{ other_page }}">{{ other_lang_label }}</a>
     </div>
   </header>
@@ -124,38 +136,43 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a href="{{ '/' if lang == 'en' else '/ar/' }}" class="logo">
-          <img src="/logo.png" alt="{{ personal.name }} logo" width="36" height="36">
-          <span>{{ personal.name }}</span>
+        <a href="{{ link('/') }}" class="logo">
+          <img src="/logo.png" alt="{{ company.name }} logo" width="36" height="36">
+          <span>{{ company.name }}</span>
         </a>
         <p>{{ footer.tagline }}</p>
       </div>
 
       <div class="footer-links">
         <h4>{{ footer.quick_links_title }}</h4>
-        <a href="#about">{{ nav.about }}</a>
-        <a href="#skills">{{ nav.skills }}</a>
-        <a href="#projects">{{ nav.projects }}</a>
-        <a href="#contact">{{ nav.contact }}</a>
+        <a href="{{ link('/') }}">{{ nav.home | default('Home') }}</a>
+        <a href="{{ link('/') }}#services">{{ nav.services | default('Services') }}</a>
+        <a href="{{ link('/') }}#projects">{{ nav.products | default('Products') }}</a>
+        <a href="{{ link('/team/') }}">{{ nav.team | default('Team') }}</a>
+        <a href="{{ link('/invest/') }}">{{ nav.investors | default('Invest') }}</a>
+        <a href="{{ link('/careers/') }}">{{ nav.careers | default('Careers') }}</a>
       </div>
 
       <div class="footer-contact">
         <h4>{{ footer.contact_title }}</h4>
-        <a href="mailto:{{ personal.email }}"><i class="fas fa-envelope"></i> {{ personal.email }}</a>
-        <a href="https://wa.me/{{ personal.whatsapp }}" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        {% if personal.social.github %}
-        <a href="{{ personal.social.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        <a href="mailto:{{ company.email }}"><i class="fas fa-envelope"></i> {{ company.email }}</a>
+        <a href="https://wa.me/{{ company.whatsapp }}" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        {% if company.social.github %}
+        <a href="{{ company.social.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        {% endif %}
+        {% if company.social.linkedin %}
+        <a href="{{ company.social.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
         {% endif %}
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {{ current_year }} {{ personal.name }}. {{ footer.copyright }}</p>
+      <p>&copy; {{ current_year }} {{ company.name }}. {{ footer.copyright }}</p>
     </div>
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/{{ personal.whatsapp }}?text={{ whatsapp_message | urlencode }}"
+  <a href="https://wa.me/{{ company.whatsapp }}?text={{ whatsapp_message | urlencode }}"
      class="whatsapp-float"
      target="_blank"
      rel="noopener"
@@ -167,6 +184,32 @@
   <button class="back-to-top" id="back-to-top" aria-label="Back to top">
     <i class="fas fa-arrow-up"></i>
   </button>
+
+  <!-- Language Detection Toast -->
+  <div id="lang-toast" class="lang-toast" role="dialog" aria-live="polite" aria-hidden="true">
+    <div class="lang-toast-content">
+      <span class="lang-toast-message">{{ 'This page is also available in Arabic.' if lang == 'en' else 'هذه الصفحة متوفرة أيضاً بالإنجليزية.' }}</span>
+      <a href="{{ other_page }}" class="lang-toast-link">{{ 'View in Arabic' if lang == 'en' else 'عرض بالإنجليزية' }}</a>
+      <button class="lang-toast-close" aria-label="{{ 'Close' if lang == 'en' else 'إغلاق' }}">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Tawk.to Live Chat (placeholder — replace PROPERTY_ID after registration) -->
+  <!--
+  <script type="text/plain" data-tawk-to>
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  -->
 
   <!-- Scripts -->
   <script src="/static/js/main.js"></script>

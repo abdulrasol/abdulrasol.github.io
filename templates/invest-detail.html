@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% set opp = opportunity %}
+{% set project = project_data %}
+
+<section class="invest-hero-detail">
+  <div class="container">
+    <div class="invest-hero-inner">
+      {% if project %}
+      <img src="{{ project.brand.logo }}" alt="{{ opp.title }}" class="invest-logo-large" loading="eager">
+      {% endif %}
+      <h1>{{ opp.title }}</h1>
+      <p class="invest-tagline">{{ opp.tagline }}</p>
+      <div class="invest-hero-meta">
+        <span class="badge">{{ opp.traction.status }}</span>
+        <span class="badge badge-outline">{{ opp.seeking.type }}</span>
+      </div>
+      <a href="mailto:{{ opp.contact_email }}?subject=Investment Interest: {{ opp.title_en }}" class="btn btn-primary btn-lg">
+        <i class="fas fa-handshake"></i>
+        {{ opp.cta }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section invest-section" id="problem">
+  <div class="container">
+    <div class="invest-section-inner">
+      <h2>{{ 'The Opportunity' if lang == 'en' else 'الفرصة' }}</h2>
+      <p class="lead">{{ opp.market.size }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section invest-section invest-section-alt" id="solution">
+  <div class="container">
+    <div class="invest-section-inner">
+      <h2>{{ 'The Product' if lang == 'en' else 'المنتج' }}</h2>
+      <p class="lead">{{ project.site.description if project else opp.tagline }}</p>
+      {% if project and project.features %}
+      <div class="invest-features">
+        {% for feature in project.features['items'][:3] %}
+        <div class="invest-feature-item">
+          <span class="invest-feature-icon">{{ feature.icon }}</span>
+          <h4>{{ feature.title }}</h4>
+          <p>{{ feature.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section invest-section" id="market">
+  <div class="container">
+    <div class="invest-section-inner">
+      <h2>{{ 'Market & Competition' if lang == 'en' else 'السوق والمنافسة' }}</h2>
+      <p>{{ opp.competition }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section invest-section invest-section-alt" id="monetization">
+  <div class="container">
+    <div class="invest-section-inner">
+      <h2>{{ 'Business Model' if lang == 'en' else 'نموذج العمل' }}</h2>
+      <p class="lead">{{ opp.monetization }}</p>
+      <div class="invest-seeking-box">
+        <h3>{{ 'Seeking' if lang == 'en' else 'نبحث عن' }}</h3>
+        <p class="invest-amount">{{ opp.seeking.amount }}</p>
+        <p>{{ opp.seeking.type }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section invest-section" id="team">
+  <div class="container">
+    <div class="invest-section-inner">
+      <h2>{{ 'Team' if lang == 'en' else 'الفريق' }}</h2>
+      <div class="invest-team">
+        {% for member_id in opp.team %}
+        {% set member = team_dict.get(member_id) %}
+        {% if member %}
+        <div class="invest-team-card">
+          <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+          <h4>{{ member.name }}</h4>
+          <p>{{ member.role }}</p>
+          <a href="{{ link('/team/' + member.id + '/') }}">{{ 'View Profile' if lang == 'en' else 'عرض الملف' }}</a>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section invest-cta">
+  <div class="container text-center">
+    <h2>{{ 'Interested in Investing?' if lang == 'en' else 'مهتم بالاستثمار؟' }}</h2>
+    <p>{{ 'Reach out to discuss partnership opportunities.' if lang == 'en' else 'تواصل معنا لمناقشة فرص الشراكة.' }}</p>
+    <a href="mailto:{{ opp.contact_email }}?subject=Investment Interest: {{ opp.title_en }}" class="btn btn-primary btn-lg">
+      <i class="fas fa-envelope"></i>
+      {{ opp.cta }}
+    </a>
+  </div>
+</section>
+
+{% endblock %}

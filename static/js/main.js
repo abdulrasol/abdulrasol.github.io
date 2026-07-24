@@ -1,16 +1,18 @@
 /**
- * Portfolio main interactions
- * - Theme toggle
+ * Meaad Tech main interactions
+ * - Theme toggle + auto-detect dark mode
  * - Mobile navigation
  * - Scroll effects
  * - Project filtering
  * - Contact form
+ * - Language detection toast
  */
 
 (function () {
   'use strict';
 
   const STORAGE_KEY_THEME = 'portfolio_theme';
+  const STORAGE_KEY_LANG_DETECTED = 'portfolio_lang_detected';
   const html = document.documentElement;
   const body = document.body;
   const header = document.getElementById('header');
@@ -21,10 +23,18 @@
   const contactForm = document.getElementById('contact-form');
 
   /* Theme handling */
-  function getPreferredTheme() {
-    const saved = localStorage.getItem(STORAGE_KEY_THEME);
-    if (saved) return saved;
+  function getSystemTheme() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function getSavedTheme() {
+    return localStorage.getItem(STORAGE_KEY_THEME);
+  }
+
+  function getPreferredTheme() {
+    const saved = getSavedTheme();
+    if (saved) return saved;
+    return getSystemTheme();
   }
 
   function applyTheme(theme) {
@@ -42,6 +52,62 @@
     const next = current === 'dark' ? 'light' : 'dark';
     localStorage.setItem(STORAGE_KEY_THEME, next);
     applyTheme(next);
+  }
+
+  function initAutoTheme() {
+    // Apply theme immediately based on saved preference or system preference
+    applyTheme(getPreferredTheme());
+
+    // Listen for system theme changes when no explicit preference is saved
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!getSavedTheme()) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  }
+
+  /* Language detection toast */
+  function getBrowserLanguage() {
+    return (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+  }
+
+  function getCurrentPageLanguage() {
+    return html.getAttribute('lang') || 'en';
+  }
+
+  function initLanguageToast() {
+    const toast = document.getElementById('lang-toast');
+    if (!toast) return;
+
+    // Already detected this session? Don't show again.
+    if (sessionStorage.getItem(STORAGE_KEY_LANG_DETECTED)) {
+      return;
+    }
+
+    const browserLang = getBrowserLanguage();
+    const currentLang = getCurrentPageLanguage();
+
+    // Show toast if browser is Arabic but page is English, or vice versa
+    const isBrowserArabic = browserLang.startsWith('ar');
+    const isCurrentArabic = currentLang === 'ar';
+
+    if (isBrowserArabic !== isCurrentArabic) {
+      // Small delay so it doesn't appear immediately on load
+      setTimeout(() => {
+        toast.classList.add('visible');
+        toast.setAttribute('aria-hidden', 'false');
+        sessionStorage.setItem(STORAGE_KEY_LANG_DETECTED, 'true');
+      }, 1500);
+    }
+
+    // Close button
+    const closeBtn = toast.querySelector('.lang-toast-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        toast.classList.remove('visible');
+        toast.setAttribute('aria-hidden', 'true');
+      });
+    }
   }
 
   /* Header scroll effect */
@@ -76,7 +142,7 @@
   /* Scroll reveal animations */
   function initReveal() {
     const revealElements = document.querySelectorAll(
-      '.section-header, .skill-category, .project-card, .timeline-item, .testimonial-card, .contact-card, .stat-card, .about-text, .about-stats'
+      '.section-header, .skill-category, .project-card, .timeline-item, .testimonial-card, .contact-card, .stat-card, .about-text, .about-stats, .service-card, .team-card, .invest-card'
     );
 
     if (!('IntersectionObserver' in window)) {
@@ -237,7 +303,7 @@
 
   /* Initialize */
   function init() {
-    applyTheme(getPreferredTheme());
+    initAutoTheme();
     handleScroll();
 
     if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
@@ -251,6 +317,7 @@
     initSkillBars();
     initContactForm();
     initSmoothScroll();
+    initLanguageToast();
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {

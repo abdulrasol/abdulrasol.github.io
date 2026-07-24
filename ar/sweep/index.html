@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SWEEP — منظف ماك للمطورين</title>
+  <meta name="description" content="أداة عالية الأداء لتنظيف أجهزة Mac للمطورين. مبنية بـ Rust و Tauri v2 و React. تجد وتزيل تلقائياً الملفات المخفية للتطوير لاسترداد مساحة القرص.">
+  <meta name="keywords" content="منظف ماك, أدوات المطورين, Rust, Tauri, React, تنظيف القرص, أدوات">
+  <meta name="author" content="Meaad Tech">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1a1a2e">
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
+
+  <!-- Canonical & Alternate Languages -->
+  <link rel="canonical" href="https://abdulrasol.github.io/ar/sweep/">
+  <link rel="alternate" hreflang="en" href="https://abdulrasol.github.io/sweep/">
+  <link rel="alternate" hreflang="ar" href="https://abdulrasol.github.io/ar/sweep/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SWEEP — منظف ماك للمطورين">
+  <meta property="og:description" content="أداة عالية الأداء لتنظيف أجهزة Mac للمطورين. مبنية بـ Rust و Tauri v2 و React. تجد وتزيل تلقائياً الملفات المخفية للتطوير لاسترداد مساحة القرص.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abdulrasol.github.io/ar/sweep/">
+  <meta property="og:image" content="https://abdulrasol.github.io/assets/sweep/logo.png">
+  <meta property="og:locale" content="ar_AR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SWEEP — منظف ماك للمطورين">
+  <meta name="twitter:description" content="أداة عالية الأداء لتنظيف أجهزة Mac للمطورين. مبنية بـ Rust و Tauri v2 و React. تجد وتزيل تلقائياً الملفات المخفية للتطوير لاسترداد مساحة القرص.">
+  <meta name="twitter:image" content="https://abdulrasol.github.io/assets/sweep/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/sweep/logo.png">
+  <link rel="apple-touch-icon" href="/assets/sweep/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Project Colors -->
+  <style>
+    :root {
+      --project-primary: #1a1a2e;
+      --project-secondary: #e94560;
+    }
+  </style>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/static/css/project.css">
+
+<script data-goatcounter="https://abdulrasol.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SWEEP",
+    "applicationCategory": "MobileApplication",
+    "operatingSystem": "Android, iOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "أداة عالية الأداء لتنظيف أجهزة Mac للمطورين. مبنية بـ Rust و Tauri v2 و React. تجد وتزيل تلقائياً الملفات المخفية للتطوير لاسترداد مساحة القرص.",
+    "image": "https://abdulrasol.github.io/assets/sweep/logo.png"
+  }
+  </script>
+</head>
+<body data-lang="ar">
+
+  <!-- Header -->
+  <header class="project-header" id="project-header">
+    <div class="container header-inner">
+      <a href="/ar/sweep/" class="brand">
+        <img src="/assets/sweep/logo.png" alt="SWEEP logo">
+        <span>SWEEP</span>
+      </a>
+
+      <a href="/ar/" class="back-link desktop-back">
+        <i class="fas fa-arrow-right"></i>
+        العودة للمعرض →
+      </a>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="تبديل المظهر">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="/sweep/" class="lang-toggle" aria-label="Switch to English">
+          <i class="fas fa-globe"></i>
+          <span>English</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="فتح القائمة">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="/ar/">العودة للمعرض →</a>
+      <a href="/ar/sweep/">الرئيسية</a>
+      <a href="/sweep/">English</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-banner" style="background-image: url('/assets/sweep/banner.png')"></div>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-text">
+      <img src="/assets/sweep/logo.png" alt="SWEEP" class="hero-logo">
+      <h1 class="hero-title">SWEEP: استرد مساحة عملك</h1>
+      <p class="hero-subtitle">مركز قيادة احترافي لتنظيف الملفات المخفية للمطورين. مبنى بـ Rust و Tauri v2 و React. متعدد المنصات لـ macOS و Windows و Linux.</p>
+
+      <div class="hero-actions">
+        <a href="https://github.com/abdulrasol/sweep"
+           data-goatcounter-click="project-github-sweep"
+           class="btn btn-secondary"
+           target="_blank"
+           rel="noopener">
+          <i class="fab fa-github"></i>
+          المشروع على GitHub
+        </a>
+      </div>
+
+      <div class="platforms">
+        <span class="platform-badge">macOS</span>
+        <span class="platform-badge">Windows</span>
+        <span class="platform-badge">Linux</span>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="/assets/sweep/screenshots/01.png" alt="SWEEP screenshot">
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="section features" id="features">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">مميزات SWEEP</h2>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">🧹</span>
+        <h3>تنظيف عميق متعدد البيئات</h3>
+        <p>ينظف Flutter و Android (AVD/Gradle) و Xcode (DerivedData) و Node.js و Rust (Cargo) و Python (Conda/Pip) و Docker و Unity و Unreal Engine و Adobe caches.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📊</span>
+        <h3>لوحة تحكم فورية</h3>
+        <p>مراقبة فورية للمعالج والذاكرة ومساحة القرص بواجهة زجاجية متميزة.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔍</span>
+        <h3>فحص ذكي مستهدف</h3>
+        <p>اختر مجلد التطوير ودع SWEEP يجد الملفات الزائدة تلقائياً بذكاء.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🛡️</span>
+        <h3>الأمان أولاً</h3>
+        <p>راجع كل ملف قبل الحذف. لا فقدان بيانات عرضي. الحذف الدائم موضح بوضوح.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🖥️</span>
+        <h3>متعدد المنصات</h3>
+        <p>بنيات أصلية لـ macOS (.dmg) و Windows (.msi) و Linux (.deb) باستخدام Tauri v2 و Rust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots Section -->
+<section class="section screenshots-section" id="screenshots">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">لقطات الشاشة</h2>
+    </div>
+    <div class="screenshots-scroll">
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="/assets/sweep/screenshots/01.png" alt="SWEEP screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="/assets/sweep/screenshots/02.png" alt="SWEEP screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-item">
+        <div class="phone-frame">
+          <div class="phone-content">
+            <img src="/assets/sweep/screenshots/03.png" alt="SWEEP screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+
+<!-- Pricing Section -->
+
+<!-- Purchase Form Section -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="project-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/ar/sweep/" class="brand">
+          <img src="/assets/sweep/logo.png" alt="SWEEP" width="36" height="36">
+          <span>SWEEP</span>
+        </a>
+        <p>استرد مساحة قرصك، ملفاً تلو الآخر</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>قانوني</h4>
+      </div>
+
+      <div class="footer-contact">
+        <h4>تواصل</h4>
+        <a href="mailto:abdulrasol.alhilo@gmail.com"><i class="fas fa-envelope"></i> abdulrasol.alhilo@gmail.com</a>
+        <a href="https://github.com/abdulrasol/sweep" data-goatcounter-click="footer-github-sweep" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 SWEEP. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/9647813639721?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D9%8A%D8%B9%D8%A7%D8%AF%20%D8%AA%D9%83%D9%86%D9%84%D9%88%D8%AC%D9%8A%D8%8C%20%D8%B2%D8%B1%D8%AA%20%D9%85%D9%88%D9%82%D8%B9%D9%83%D9%85%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A3%D9%88%20%D8%B4%D8%B1%D8%A7%D9%83%D8%A9."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="/static/js/project.js"></script>
+</body>
+</html>

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Unified build script for the portfolio and project landing pages.
+Unified build script for Meaad Tech website.
 
 Runs:
-    1. build.py      — main portfolio pages (index + resume, EN/AR)
+    1. build.py         — main site pages (index, resume, team, invest, careers, EN/AR)
     2. build-project.py — project landing pages (EN/AR)
-    3. sitemap.xml   — dynamic sitemap of all generated pages
+    3. build-images.py  — convert PNG/JPG to WebP
 
 Usage:
     python build-all.py
@@ -14,7 +14,6 @@ Usage:
 import json
 import subprocess
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -39,74 +38,16 @@ def run_script(script: str) -> None:
         raise RuntimeError(f"{script} failed with exit code {result.returncode}")
 
 
-def collect_urls(base_url: str, projects: list[dict]) -> list[tuple[str, str]]:
-    """Return a list of (url, priority) tuples for the sitemap."""
-    urls = [
-        (f"{base_url}/", "1.0"),
-        (f"{base_url}/ar/", "1.0"),
-        (f"{base_url}/resume.html", "0.8"),
-        (f"{base_url}/ar/resume.html", "0.8"),
-    ]
-
-    for project in projects:
-        project_id = project["id"]
-        priority = "0.9" if project.get("featured") else "0.8"
-
-        # Index pages
-        urls.append((f"{base_url}/{project_id}/", priority))
-        urls.append((f"{base_url}/ar/{project_id}/", priority))
-
-        # Optional pages
-        if project.get("privacy"):
-            urls.append((f"{base_url}/{project_id}/privacy_policy/", "0.6"))
-            urls.append((f"{base_url}/ar/{project_id}/privacy_policy/", "0.6"))
-
-        if project.get("terms"):
-            urls.append((f"{base_url}/{project_id}/terms.html", "0.6"))
-            urls.append((f"{base_url}/ar/{project_id}/terms.html", "0.6"))
-
-        if project.get("changelog"):
-            urls.append((f"{base_url}/{project_id}/changelogs.html", "0.6"))
-            urls.append((f"{base_url}/ar/{project_id}/changelogs.html", "0.6"))
-
-        if project.get("get_login"):
-            urls.append((f"{base_url}/{project_id}/get-login.html", "0.5"))
-            urls.append((f"{base_url}/ar/{project_id}/get-login.html", "0.5"))
-
-    return urls
-
-
-def generate_sitemap(base_url: str, projects: list[dict], output: str = "sitemap.xml") -> None:
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    urls = collect_urls(base_url, projects)
-
-    lines = [
-        '<?xml version="1.0" encoding="UTF-8"?>',
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ]
-    for url, priority in urls:
-        lines.extend([
-            "  <url>",
-            f"    <loc>{url}</loc>",
-            f"    <lastmod>{today}</lastmod>",
-            f"    <priority>{priority}</priority>",
-            "  </url>",
-        ])
-    lines.append("</urlset>")
-
-    Path(output).write_text("\n".join(lines), encoding="utf-8")
-    print(f"\nGenerated: {output} ({len(urls)} URLs)")
-
-
 def main():
-    portfolio = load_json("data/portfolio.json")
-    base_url = portfolio.get("site", {}).get("url", "https://abdulrasol.github.io").rstrip("/")
-
+    # Run all builders
     run_script("build.py")
     run_script("build-project.py")
-
-    projects = load_projects()
-    generate_sitemap(base_url, projects)
+    
+    # Optional: convert images to WebP
+    try:
+        run_script("build-images.py")
+    except RuntimeError:
+        print("Warning: build-images.py failed (Pillow may not be installed)")
 
     print("\n=== All builds complete ===")
 

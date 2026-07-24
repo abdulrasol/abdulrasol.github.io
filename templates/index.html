@@ -23,35 +23,20 @@
           <i class="fas fa-rocket"></i>
           {{ hero.cta_primary }}
         </a>
-        <a href="{{ '/resume.html' if lang == 'en' else '/ar/resume.html' }}" class="btn btn-secondary">
-          <i class="fas fa-file-alt"></i>
+        <a href="{{ link('/team/abdulrasol/') }}" class="btn btn-secondary">
+          <i class="fas fa-user"></i>
           {{ hero.cta_secondary }}
         </a>
       </div>
       <div class="hero-social">
-        {% if personal.social.github %}
-        <a href="{{ personal.social.github }}" target="_blank" rel="noopener" aria-label="GitHub">
+        {% if company.social.github %}
+        <a href="{{ company.social.github }}" target="_blank" rel="noopener" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
         {% endif %}
-        {% if personal.social.linkedin %}
-        <a href="{{ personal.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+        {% if company.social.linkedin %}
+        <a href="{{ company.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
-        </a>
-        {% endif %}
-        {% if personal.social.play_store %}
-        <a href="{{ personal.social.play_store }}" target="_blank" rel="noopener" aria-label="Google Play">
-          <i class="fab fa-google-play"></i>
-        </a>
-        {% endif %}
-        {% if personal.social.facebook %}
-        <a href="{{ personal.social.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        {% endif %}
-        {% if personal.social.instagram %}
-        <a href="{{ personal.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
         </a>
         {% endif %}
       </div>
@@ -67,9 +52,32 @@
         <span>Flutter</span>
       </div>
       <div class="floating-card card-2">
-        <i class="fas fa-globe"></i>
-        <span>Django</span>
+        <i class="fas fa-solar-panel"></i>
+        <span>Solar</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ 'What We Do' if lang == 'en' else 'ما نقدمه' }}</span>
+      <h2 class="section-title">{{ 'Our Services' if lang == 'en' else 'خدماتنا' }}</h2>
+      <p class="section-subtitle">{{ 'End-to-end solutions for businesses and individuals.' if lang == 'en' else 'حلول متكاملة للشركات والأفراد.' }}</p>
+    </div>
+
+    <div class="services-grid">
+      {% for service in company.services %}
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-{{ service.icon }}"></i>
+        </div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.desc }}</p>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -89,6 +97,10 @@
           <a href="#contact" class="btn btn-primary">
             <i class="fas fa-paper-plane"></i>
             {{ nav.contact }}
+          </a>
+          <a href="{{ link('/invest/') }}" class="btn btn-secondary">
+            <i class="fas fa-handshake"></i>
+            {{ 'For Investors' if lang == 'en' else 'للمستثمرين' }}
           </a>
         </div>
       </div>
@@ -137,13 +149,13 @@
   </div>
 </section>
 
-<!-- Experience Section (only if data exists) -->
+<!-- Experience Section -->
 {% if experience and experience|length > 0 %}
 <section class="section experience" id="experience">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">{{ nav.experience }}</span>
-      <h2 class="section-title">{{ nav.experience }}</h2>
+      <span class="section-label">{{ nav.experience | default('Experience' if lang == 'en' else 'الخبرات') }}</span>
+      <h2 class="section-title">{{ nav.experience | default('Experience' if lang == 'en' else 'الخبرات') }}</h2>
     </div>
 
     <div class="timeline">
@@ -184,6 +196,9 @@
       </button>
       <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">
         {{ projects.filter_ai }}
+      </button>
+      <button class="filter-btn" data-filter="solar" role="tab" aria-selected="false">
+        {{ projects.filter_solar | default('Solar' if lang == 'en' else 'طاقة شمسية') }}
       </button>
     </div>
 
@@ -234,30 +249,52 @@
               <i class="fab fa-github"></i>
             </a>
             {% endif %}
-            {% if project.links.facebook %}
-            <a href="{{ project.links.facebook }}"
-               data-goatcounter-click="facebook-{{ project_id }}"
-               class="project-link"
-               target="_blank"
-               rel="noopener"
-               aria-label="Facebook">
-              <i class="fab fa-facebook"></i>
-            </a>
-            {% endif %}
-            {% if project.links.instagram %}
-            <a href="{{ project.links.instagram }}"
-               data-goatcounter-click="instagram-{{ project_id }}"
-               class="project-link"
-               target="_blank"
-               rel="noopener"
-               aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            {% endif %}
           </div>
         </div>
       </article>
       {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Team Preview Section -->
+<section class="section team-preview" id="team">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ 'Our Team' if lang == 'en' else 'فريقنا' }}</span>
+      <h2 class="section-title">{{ 'Meet the Team' if lang == 'en' else 'تعرف على الفريق' }}</h2>
+      <p class="section-subtitle">{{ 'Passionate builders shaping the future of tech in Iraq.' if lang == 'en' else 'بنّاء شغوفون يشكلون مستقبل التقنية في العراق.' }}</p>
+    </div>
+
+    <div class="team-grid">
+      {% for member in team.members %}
+      {% if member.featured %}
+      <article class="team-card featured">
+        <div class="team-photo">
+          <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+          <span class="team-badge">{{ 'Founder' if lang == 'en' else 'المؤسس' }}</span>
+        </div>
+        <div class="team-info">
+          <h3>{{ member.name }}</h3>
+          <p class="team-role">{{ member.role }}</p>
+          <div class="team-skills">
+            {% for skill in member.skills[:4] %}
+            <span class="skill-tag">{{ skill }}</span>
+            {% endfor %}
+          </div>
+          <a href="{{ link('/team/' + member.id + '/') }}" class="btn btn-sm btn-primary">
+            {{ 'View Profile' if lang == 'en' else 'عرض الملف' }}
+          </a>
+        </div>
+      </article>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="text-center" style="margin-top: 2rem;">
+      <a href="{{ link('/team/') }}" class="btn btn-secondary">
+        {{ 'View Full Team' if lang == 'en' else 'عرض الفريق كاملاً' }}
+      </a>
     </div>
   </div>
 </section>
@@ -311,7 +348,7 @@
           </div>
           <div class="contact-details">
             <h3>{{ contact.info.email_title }}</h3>
-            <a href="mailto:{{ personal.email }}">{{ personal.email }}</a>
+            <a href="mailto:{{ company.email }}">{{ company.email }}</a>
           </div>
         </div>
 
@@ -321,7 +358,7 @@
           </div>
           <div class="contact-details">
             <h3>{{ contact.info.whatsapp_title }}</h3>
-            <a href="https://wa.me/{{ personal.whatsapp }}" target="_blank" rel="noopener">
+            <a href="https://wa.me/{{ company.whatsapp }}" target="_blank" rel="noopener">
               {{ contact.info.whatsapp_desc }}
             </a>
           </div>
@@ -333,7 +370,7 @@
           </div>
           <div class="contact-details">
             <h3>{{ contact.info.location_title }}</h3>
-            <span>{{ personal.location }}</span>
+            <span>{{ company.location }}</span>
           </div>
         </div>
       </div>
@@ -341,7 +378,7 @@
       <div class="contact-form-wrapper">
         <form class="contact-form" id="contact-form" action="{{ contact.form.endpoint }}" method="POST">
           <input type="hidden" name="access_key" value="{{ contact.form.access_key }}">
-          <input type="hidden" name="subject" value="New message from portfolio - {{ personal.name }}">
+          <input type="hidden" name="subject" value="New message from Meaad Tech website">
           <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
           <div class="form-row">

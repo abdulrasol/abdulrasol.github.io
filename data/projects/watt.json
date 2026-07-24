@@ -1,46 +1,46 @@
 {
   "id": "watt",
   "site": {
-    "title_en": "Watt: Your AI Assistant",
-    "title_ar": "واط: مساعدك الذكي بالذكاء الاصطناعي",
-    "description_en": "Experience the future of AI with Watt. Chat with advanced AI, generate stunning images, and manage your files seamlessly in one powerful app.",
-    "description_ar": "جرب مستقبل الذكاء الاصطناعي مع واط. دردش مع نماذج لغوية متقدمة، أنشئ صوراً مذهلة، واستمتع بتجربة سلسة في تطبيق واحد قوي.",
-    "keywords_en": "AI, Chatbot, Image Generation, Assistant, Flutter, OpenAI, GPT",
-    "keywords_ar": "ذكاء اصطناعي, دردشة ذكية, توليد صور, مساعد, فلاتر, OpenAI, GPT"
+    "title_en": "Watt: Solar Energy Platform",
+    "title_ar": "واط: منصة الطاقة الشمسية",
+    "description_en": "Solar system calculator and equipment marketplace for designing clean energy solutions. For homeowners, businesses, and solar professionals in Iraq and globally.",
+    "description_ar": "حاسبة أنظمة الطاقة الشمسية وسوق معدات لتصميم حلول الطاقة النظيفة. للمنازل، الشركات، والمحترفين في العراق وعالمياً.",
+    "keywords_en": "Solar Energy, PV System, Solar Calculator, Clean Energy, Equipment Marketplace, Flutter, Iraq",
+    "keywords_ar": "طاقة شمسية, نظام طاقة, حاسبة شمسية, طاقة نظيفة, سوق معدات, فلاتر, العراق"
   },
   "settings": {
     "default_lang": "ar",
     "default_theme": "dark",
-    "primary_color": "#10b981",
-    "secondary_color": "#0ea5e9"
+    "primary_color": "#f59e0b",
+    "secondary_color": "#10b981"
   },
   "brand": {
     "name_en": "Watt",
     "name_ar": "واط",
-    "tagline_en": "Your AI assistant for chat, images, and more",
-    "tagline_ar": "مساعدك الذكي للدردشة، الصور، والمزيد",
+    "tagline_en": "Solar system design made simple",
+    "tagline_ar": "تصميم أنظمة الطاقة الشمسية بكل بساطة",
     "logo": "/assets/watt/logo.png",
     "banner": "/assets/watt/banar.png",
     "favicon": "/assets/watt/logo.png"
   },
   "links": {
-    "googlePlay": "https://play.google.com/store/apps/details?id=com.example.watt",
+    "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",
     "appStore": null,
     "github": null,
     "facebook": null,
     "instagram": null,
-    "support_email": "abdulrsol97@gmail.com"
+    "support_email": "abdulrasol.alhilo@gmail.com"
   },
   "hero": {
-    "title_en": "Watt: Your AI Assistant",
-    "title_ar": "واط: مساعدك الذكي بالذكاء الاصطناعي",
-    "subtitle_en": "Chat with advanced AI, generate stunning images, and manage your files seamlessly.",
-    "subtitle_ar": "دردش مع نماذج لغوية متقدمة، أنشئ صوراً مذهلة، ونظّم ملفاتك بسلاسة في تطبيق واحد.",
+    "title_en": "Watt: Solar Energy Solutions",
+    "title_ar": "واط: حلول الطاقة الشمسية",
+    "subtitle_en": "Design solar systems, compare equipment, and manage your clean energy projects — all in one powerful app. Built for Iraq, ready for the world.",
+    "subtitle_ar": "صمم أنظمة الطاقة الشمسية، قارن المعدات، وأدر مشاريعك للطاقة النظيفة — كل ذلك في تطبيق واحد قوي. مبني للعراق، جاهز للعالم.",
     "cta_en": "Download on Google Play",
     "cta_ar": "تحميل من Google Play"
   },
   "platforms": ["Android", "iOS"],
-  "category": "mobile",
+  "category": "solar",
   "featured": false,
   "technologies": ["Flutter", "Dart", "Firebase"],
   "features": {
@@ -48,46 +48,46 @@
     "title_ar": "مميزات واط",
     "items": [
       {
-        "icon": "💬",
-        "title_en": "AI Chat",
-        "title_ar": "دردشة ذكية",
-        "desc_en": "Engage in intelligent conversations with powerful AI models.",
-        "desc_ar": "أجرِ محادثات ذكية مع نماذج لغوية قوية وفريدة."
+        "icon": "☀️",
+        "title_en": "Solar System Calculator",
+        "title_ar": "حاسبة النظام الشمسي",
+        "desc_en": "Calculate system size, panel count, battery capacity, and inverter requirements for on-grid and off-grid setups.",
+        "desc_ar": "احسب حجم النظام، عدد الألواح، سعة البطارية، ومتطلبات العاكس للأنظمة المتصلة وغير المتصلة بالشبكة."
       },
       {
-        "icon": "🎨",
-        "title_en": "Image Generation",
-        "title_ar": "توليد الصور",
-        "desc_en": "Turn your ideas into stunning visuals with AI-powered image creation.",
-        "desc_ar": "حوّل أفكارك إلى صور مذهلة باستخدام الذكاء الاصطناعي."
+        "icon": "🛒",
+        "title_en": "Equipment Marketplace",
+        "title_ar": "سوق المعدات",
+        "desc_en": "Browse and compare solar panels, batteries, inverters, and accessories from multiple suppliers.",
+        "desc_ar": "تصفح وقارن الألواح الشمسية، البطاريات، العاكسات، والملحقات من موردين متعددين."
       },
       {
-        "icon": "🔤",
-        "title_en": "Realistic Text-to-Speech",
-        "title_ar": "تحويل نص إلى كلام",
-        "desc_en": "Listen to AI responses with natural-sounding voice synthesis.",
-        "desc_ar": "استمع إلى ردود الذكاء الاصطناعي بأصوات واقعية وطبيعية."
+        "icon": "📊",
+        "title_en": "Project Management",
+        "title_ar": "إدارة المشاريع",
+        "desc_en": "Track your solar installations, generate professional PDF quotes, and manage client proposals.",
+        "desc_ar": "تتبع تركيباتك الشمسية، أنشئ عروض أسعار PDF احترافية، وأدر مقترحات العملاء."
       },
       {
-        "icon": "📁",
-        "title_en": "File Management",
-        "title_ar": "إدارة الملفات",
-        "desc_en": "Organize and access your documents and media with ease.",
-        "desc_ar": "نظّم وصولك إلى المستندات والملفات والوسائط بسهولة."
+        "icon": "🌍",
+        "title_en": "Global & Local Support",
+        "title_ar": "دعم عالمي ومحلي",
+        "desc_en": "Optimized for Iraqi conditions and pricing, with universal calculation engine for any location worldwide.",
+        "desc_ar": "محسن لظروف وأسعار العراق، مع محرك حسابات عالمي لأي موقع حول العالم."
       },
       {
-        "icon": "🌐",
-        "title_en": "Multi-Language Support",
-        "title_ar": "دعم متعدد اللغات",
-        "desc_en": "Communicate in multiple languages with a smooth localized experience.",
-        "desc_ar": "تواصل بأكثر من لغة مع تجربة مترجمة بسلاسة."
+        "icon": "📱",
+        "title_en": "Works Offline",
+        "title_ar": "يعمل بدون إنترنت",
+        "desc_en": "Core calculations work without internet. Sync when connected for marketplace and cloud features.",
+        "desc_ar": "الحسابات الأساسية تعمل بدون إنترنت. تزامن عند الاتصال لميزات السوق والسحابة."
       },
       {
         "icon": "🎨",
         "title_en": "Modern UI",
         "title_ar": "تصميم عصري",
-        "desc_en": "A clean, intuitive interface designed for productivity.",
-        "desc_ar": "واجهة نظيفة وبديهية مصممة لتعزيز الإنتاجية."
+        "desc_en": "Clean, intuitive interface in both Arabic and English, with Dark Mode support.",
+        "desc_ar": "واجهة نظيفة وبديهية بالعربية والإنجليزية، مع دعم الوضع الليلي."
       }
     ]
   },

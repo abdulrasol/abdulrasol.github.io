@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ 'Careers' if lang == 'en' else 'الوظائف' }}</span>
+      <h1 class="section-title">{{ 'Join Our Team' if lang == 'en' else 'انضم إلى فريقنا' }}</h1>
+      <p class="section-subtitle">
+        {{ jobs.message }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section careers" id="careers">
+  <div class="container">
+    {% if jobs.positions and jobs.positions|length > 0 %}
+    <div class="positions-list">
+      {% for job in jobs.positions %}
+      <article class="position-card">
+        <div class="position-header">
+          <h3>{{ job.title }}</h3>
+          <span class="position-type">{{ job.type }}</span>
+        </div>
+        <p>{{ job.description }}</p>
+        <div class="position-meta">
+          <span><i class="fas fa-map-marker-alt"></i> {{ job.location }}</span>
+          <span><i class="fas fa-clock"></i> {{ job.posted }}</span>
+        </div>
+        <a href="mailto:{{ jobs.contact_email }}?subject=Application: {{ job.title_en }}" class="btn btn-primary">
+          {{ 'Apply Now' if lang == 'en' else 'قدم الآن' }}
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="careers-empty">
+      <div class="empty-icon">
+        <i class="fas fa-users"></i>
+      </div>
+      <h2>{{ 'No Open Positions Right Now' if lang == 'en' else 'لا توجد وظائف متاحة حالياً' }}</h2>
+      <p>{{ jobs.message }}</p>
+      <div class="careers-form">
+        <h3>{{ 'Get Notified' if lang == 'en' else 'أبلغني' }}</h3>
+        <p>{{ 'Leave your email and we will contact you when positions open.' if lang == 'en' else 'اترك بريدك الإلكتروني وسنتواصل معك عند توفر وظائف.' }}</p>
+        <form action="mailto:{{ jobs.contact_email }}" method="post" enctype="text/plain" class="notify-form">
+          <div class="form-row">
+            <input type="email" name="email" placeholder="{{ 'Your email' if lang == 'en' else 'بريدك الإلكتروني' }}" required class="form-input">
+            <button type="submit" class="btn btn-primary">
+              {{ 'Notify Me' if lang == 'en' else 'أبلغني' }}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}
