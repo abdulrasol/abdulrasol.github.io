@@ -18,6 +18,114 @@
     "facebook": null,
     "instagram": null
   },
+  "privacy": {
+    "last_updated_en": "August 3, 2026",
+    "last_updated_ar": "03/08/2026",
+    "website": "https://subultech.top",
+    "email": "info@subultech.top",
+    "sections": [
+      {
+        "title_en": "Information We Collect",
+        "title_ar": "المعلومات التي نجمعها",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "We may collect the following information:",
+            "text_ar": "قد نقوم بجمع المعلومات التالية:"
+          },
+          {
+            "type": "list",
+            "items_en": [
+              "Full name",
+              "Phone number",
+              "Email address",
+              "Any additional information you voluntarily provide"
+            ],
+            "items_ar": [
+              "الاسم الكامل",
+              "رقم الهاتف",
+              "البريد الإلكتروني",
+              "أي معلومات يرسلها العميل ضمن رسالة أو طلب الخدمة"
+            ]
+          }
+        ]
+      },
+      {
+        "title_en": "How We Use Your Information",
+        "title_ar": "كيفية استخدام المعلومات",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Your information is used to:",
+            "text_ar": "نستخدم هذه المعلومات من أجل:"
+          },
+          {
+            "type": "list",
+            "items_en": [
+              "Contact you regarding your inquiry",
+              "Provide quotations and consultations",
+              "Deliver requested services",
+              "Improve our services"
+            ],
+            "items_ar": [
+              "التواصل مع العميل",
+              "تقديم عروض الأسعار والاستشارات",
+              "الرد على الاستفسارات",
+              "تحسين خدماتنا وتجربة المستخدم"
+            ]
+          }
+        ]
+      },
+      {
+        "title_en": "Information Sharing",
+        "title_ar": "مشاركة المعلومات",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "We do not sell, rent, or share your personal information with third parties except when required by law or with your consent.",
+            "text_ar": "لا نقوم ببيع أو تأجير أو مشاركة بياناتك الشخصية مع أي طرف ثالث، إلا إذا كان ذلك مطلوبًا بموجب القانون أو بموافقتك."
+          }
+        ]
+      },
+      {
+        "title_en": "Data Security",
+        "title_ar": "حماية البيانات",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "We implement appropriate security measures to protect your information from unauthorized access, alteration, or disclosure.",
+            "text_ar": "نتخذ إجراءات أمنية مناسبة لحماية بياناتك من الوصول غير المصرح به أو التعديل أو الإفصاح."
+          }
+        ]
+      },
+      {
+        "title_en": "Your Rights",
+        "title_ar": "حقوقك",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "You may request to:",
+            "text_ar": "يمكنك طلب:"
+          },
+          {
+            "type": "list",
+            "items_en": [
+              "Access your personal data",
+              "Correct your information",
+              "Delete your information",
+              "Opt out of marketing communications"
+            ],
+            "items_ar": [
+              "الاطلاع على بياناتك",
+              "تعديل بياناتك",
+              "حذف بياناتك",
+              "إيقاف التواصل التسويقي في أي وقت"
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "services": [
     {
       "icon": "mobile-alt",

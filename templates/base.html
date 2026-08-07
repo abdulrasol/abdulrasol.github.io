@@ -164,6 +164,7 @@
         <a href="{{ link('/team/') }}">{{ nav.team | default('Team') }}</a>
         <a href="{{ link('/invest/') }}">{{ nav.investors | default('Invest') }}</a>
         <a href="{{ link('/careers/') }}">{{ nav.careers | default('Careers') }}</a>
+        <a href="{{ link('/privacy.html') }}">{{ nav.privacy | default('Privacy Policy' if lang == 'en' else 'سياسة الخصوصية') }}</a>
       </div>
 
       <div class="footer-contact">

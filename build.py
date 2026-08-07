@@ -226,6 +226,7 @@ def build_site():
         "invest": env.get_template("invest.html"),
         "invest_detail": env.get_template("invest-detail.html"),
         "careers": env.get_template("careers.html"),
+        "privacy": env.get_template("privacy.html"),
     }
     current_year = datetime.now().year
 
@@ -251,6 +252,7 @@ def build_site():
             "menu": "Open menu",
             "back_to_site": "Back to Site",
             "print_resume": "Print / Save as PDF",
+            "privacy": "Privacy Policy",
         },
         "ar": {
             "home": "الرئيسية",
@@ -272,6 +274,7 @@ def build_site():
             "menu": "فتح القائمة",
             "back_to_site": "العودة للموقع",
             "print_resume": "طباعة / حفظ كـ PDF",
+            "privacy": "سياسة الخصوصية",
         },
     }
 
@@ -468,6 +471,25 @@ def build_site():
         careers_path.write_text(careers_html, encoding="utf-8")
         print(f"Generated: {careers_path}")
         sitemap_pages.append(f"/{'ar/' if lang == 'ar' else ''}careers/")
+
+        # Generate privacy policy page
+        privacy_path_str = "/privacy.html" if lang == "en" else "/ar/privacy.html"
+        privacy_base_path = base_langless_path(privacy_path_str)
+        privacy_ctx = {
+            **context,
+            "page_name": "privacy",
+            "page_path": privacy_path_str,
+            "en_page_path": lang_url(privacy_base_path, "en"),
+            "ar_page_path": lang_url(privacy_base_path, "ar"),
+            "other_page": other_lang_path(privacy_path_str),
+            "privacy": company_localized.get("privacy", {}),
+        }
+        privacy_html = templates["privacy"].render(privacy_ctx)
+        privacy_path = Path("privacy.html") if lang == "en" else Path("ar") / "privacy.html"
+        privacy_path.parent.mkdir(parents=True, exist_ok=True)
+        privacy_path.write_text(privacy_html, encoding="utf-8")
+        print(f"Generated: {privacy_path}")
+        sitemap_pages.append(f"/{'ar/' if lang == 'ar' else ''}privacy.html")
 
     # Generate sitemap.xml
     sitemap_xml = generate_sitemap(sitemap_pages, raw_data["site"]["url"])

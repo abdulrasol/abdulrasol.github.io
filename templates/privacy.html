@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="content-page">
+  <div class="container">
+    <div class="content-container">
+      <div class="content-header">
+        <h1>{{ 'Privacy Policy' if lang == 'en' else 'سياسة الخصوصية' }}</h1>
+        <p class="app-name">{{ company.name }}</p>
+        {% if privacy.last_updated %}
+        <p class="date">{{ 'Last Updated:' if lang == 'en' else 'آخر تحديث:' }} {{ privacy.last_updated }}</p>
+        {% endif %}
+      </div>
+
+      {% for section in privacy.sections %}
+      <div class="content-section">
+        <h2>{{ section.title }}</h2>
+        {% for block in section.blocks %}
+          {% if block.type == 'paragraph' %}
+          <p>{{ block.text }}</p>
+          {% elif block.type == 'list' %}
+          <ul>
+            {% for item in block['items'] %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endfor %}
+
+      <div class="content-section">
+        <h2>{{ 'Contact Us' if lang == 'en' else 'التواصل معنا' }}</h2>
+        <p>
+          {{ company.name }}<br>
+          <a href="{{ privacy.website }}" target="_blank" rel="noopener">{{ privacy.website }}</a><br>
+          <a href="mailto:{{ privacy.email }}">{{ privacy.email }}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
