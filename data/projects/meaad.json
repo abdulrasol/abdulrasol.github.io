@@ -2,7 +2,7 @@
   "id": "meaad",
   "site": {
     "title_en": "MEAAD - Debt & Installment Manager",
-    "title_ar": "ميعاد - إدارة الديون والأقساط",
+    "title_ar": "ميعاد Meaad - إدارة الديون والأقساط",
     "description_en": "The easiest and most secure app to manage debts, installments, and subscriptions for your business.",
     "description_ar": "التطبيق الأسهل والأكثر أماناً لإدارة الديون والأقساط والاشتراكات لعملك التجاري.",
     "keywords_en": "Debt Management, Installments, Subscriptions, Google Sheets, Flutter, Business",
@@ -16,7 +16,7 @@
   },
   "brand": {
     "name_en": "MEAAD",
-    "name_ar": "ميعاد",
+    "name_ar": "ميعاد Meaad",
     "tagline_en": "Your ultimate app for managing debts and installments",
     "tagline_ar": "تطبيقك الأمثل لإدارة الديون والأقساط",
     "logo": "/assets/meaad/logo.png",

@@ -100,15 +100,16 @@
         <a href="{{ link('/team/') }}"
            class="nav-link{% if page_name in ['team', 'team-member'] %} is-current{% endif %}"
            {% if page_name in ['team', 'team-member'] %}aria-current="page"{% endif %}>{{ nav.team | default('Team' if lang == 'en' else 'الفريق') }}</a>
+        <a href="{{ blog_url }}"
+           class="nav-link"
+           target="_blank"
+           rel="noopener">{{ nav.blog | default('Blog' if lang == 'en' else 'المدونة') }}</a>
         <a href="{{ link('/invest/') }}"
            class="nav-link{% if page_name in ['invest', 'invest-detail'] %} is-current{% endif %}"
            {% if page_name in ['invest', 'invest-detail'] %}aria-current="page"{% endif %}>{{ nav.investors | default('Invest' if lang == 'en' else 'للمستثمرين') }}</a>
         <a href="{{ link('/careers/') }}"
            class="nav-link{% if page_name == 'careers' %} is-current{% endif %}"
            {% if page_name == 'careers' %}aria-current="page"{% endif %}>{{ nav.careers | default('Careers' if lang == 'en' else 'الوظائف') }}</a>
-        <a href="{{ link('/resume.html') }}"
-           class="nav-resume{% if page_name == 'resume' %} is-current{% endif %}"
-           {% if page_name == 'resume' %}aria-current="page"{% endif %}>{{ nav.resume | default('Founder' if lang == 'en' else 'المؤسس') }}</a>
       </nav>
 
       <div class="header-actions">
@@ -130,10 +131,10 @@
       <a href="{{ link('/') }}">{{ nav.home | default('Home' if lang == 'en' else 'الرئيسية') }}</a>
       <a href="{{ link('/') }}#services">{{ nav.services | default('Services' if lang == 'en' else 'خدماتنا') }}</a>
       <a href="{{ link('/') }}#projects">{{ nav.products | default('Products' if lang == 'en' else 'منتجاتنا') }}</a>
+      <a href="{{ blog_url }}" target="_blank" rel="noopener">{{ nav.blog | default('Blog' if lang == 'en' else 'المدونة') }}</a>
       <a href="{{ link('/') }}#contact">{{ nav.contact | default('Contact' if lang == 'en' else 'تواصل') }}</a>
       <div class="mobile-nav-meta">
         <a href="{{ other_page }}" data-lang-switch>{{ other_lang_label }}</a>
-        <a href="{{ link('/resume.html') }}">{{ nav.resume | default('Founder' if lang == 'en' else 'المؤسس') }}</a>
       </div>
     </div>
   </header>
@@ -159,6 +160,7 @@
         <a href="{{ link('/') }}">{{ nav.home | default('Home') }}</a>
         <a href="{{ link('/') }}#services">{{ nav.services | default('Services') }}</a>
         <a href="{{ link('/') }}#projects">{{ nav.products | default('Products') }}</a>
+        <a href="{{ blog_url }}" target="_blank" rel="noopener">{{ nav.blog | default('Blog' if lang == 'en' else 'المدونة') }}</a>
         <a href="{{ link('/team/') }}">{{ nav.team | default('Team') }}</a>
         <a href="{{ link('/invest/') }}">{{ nav.investors | default('Invest') }}</a>
         <a href="{{ link('/careers/') }}">{{ nav.careers | default('Careers') }}</a>
