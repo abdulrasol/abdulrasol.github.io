@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Frosted UI Kit</title>
+  <meta name="description" content="مجموعة واجهة مستخدم Flutter حديثة وقابلة للتخصيص مستوحاة من جماليات Apple Liquid Glass وتصميم Telegram الحديث.">
+  <meta name="keywords" content="">
+  <meta name="author" content="Subul Technology">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#36ADA3">
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
+
+  <!-- Canonical & Alternate Languages -->
+  <link rel="canonical" href="https://abdulrasol.github.io/ar/packages/frostuikit/">
+  <link rel="alternate" hreflang="en" href="https://abdulrasol.github.io/packages/frostuikit/">
+  <link rel="alternate" hreflang="ar" href="https://abdulrasol.github.io/ar/packages/frostuikit/">
+  <link rel="alternate" hreflang="x-default" href="https://abdulrasol.github.io/packages/frostuikit/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Frosted UI Kit">
+  <meta property="og:description" content="مجموعة واجهة مستخدم Flutter حديثة وقابلة للتخصيص مستوحاة من جماليات Apple Liquid Glass وتصميم Telegram الحديث.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abdulrasol.github.io/ar/packages/frostuikit/">
+  <meta property="og:image" content="https://abdulrasol.github.io/logo.png">
+  <meta property="og:locale" content="ar_AR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Frosted UI Kit">
+  <meta name="twitter:description" content="مجموعة واجهة مستخدم Flutter حديثة وقابلة للتخصيص مستوحاة من جماليات Apple Liquid Glass وتصميم Telegram الحديث.">
+  <meta name="twitter:image" content="https://abdulrasol.github.io/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="apple-touch-icon" href="/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/additional.css">
+
+
+  <!-- JSON-LD Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "سبل التكنلوجيا",
+    "url": "https://abdulrasol.github.io",
+    "logo": "https://abdulrasol.github.io/logo.png",
+    "description": "سبل التكنلوجيا تبني تطبيقات موبايل، منصات ويب، حلول ذكاء اصطناعي، أنظمة أعمال، وأدوات طاقة شمسية للعراق وما بعده.",
+    "email": "mailto:info@subultech.top",
+    "sameAs": [
+"https://github.com/abdulrasol","http://linkedin.com/in/abdulrasoolal-hilo/"    ],
+    "founder": {
+      "@type": "Person",
+      "name": "",
+      "jobTitle": "",
+      "url": "https://abdulrasol.github.io/ar/team/abdulrasol/",
+      "sameAs": [
+"https://github.com/abdulrasol","http://linkedin.com/in/abdulrasoolal-hilo/"      ]
+    }
+  }
+  </script>
+</head>
+<body data-lang="ar" data-page="package" class="page-package">
+  <a href="#main-content" class="skip-link">انتقل إلى المحتوى</a>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="/ar/" class="logo">
+        <img src="/logo.png" alt="سبل التكنلوجيا logo" width="40" height="40">
+        <span>سبل التكنلوجيا</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="/ar/"
+           class="nav-link"
+>الرئيسية</a>
+        <a href="/ar/#services" class="nav-link" data-nav-target="services">خدماتنا</a>
+        <a href="/ar/#projects" class="nav-link" data-nav-target="projects">منتجاتنا</a>
+        <a href="/ar/team/"
+           class="nav-link"
+>الفريق</a>
+        <a href=""
+           class="nav-link"
+           target="_blank"
+           rel="noopener">المدونة</a>
+        <a href="/ar/invest/"
+           class="nav-link"
+>للمستثمرين</a>
+        <a href="/ar/careers/"
+           class="nav-link"
+>الوظائف</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="/packages/frostuikit/" class="lang-toggle" data-lang-switch aria-label="Switch to English">
+          <i class="fas fa-globe"></i>
+          <span>English</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="" aria-expanded="false" aria-controls="mobile-nav">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="/ar/">الرئيسية</a>
+      <a href="/ar/#services">خدماتنا</a>
+      <a href="/ar/#projects">منتجاتنا</a>
+      <a href="" target="_blank" rel="noopener">المدونة</a>
+      <a href="/ar/#contact">تواصل</a>
+      <div class="mobile-nav-meta">
+        <a href="/packages/frostuikit/" data-lang-switch>English</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+<section class="page-header" style="text-align: center; padding: 4rem 1rem; background: var(--surface-color);">
+  <div class="container">
+    <h1 style="color: var(--primary-color);">Frosted UI Kit</h1>
+    <p class="subtitle" style="max-width: 600px; margin: 0 auto; color: var(--text-muted);">مجموعة واجهة مستخدم Flutter حديثة وقابلة للتخصيص مستوحاة من جماليات Apple Liquid Glass وتصميم Telegram الحديث.</p>
+    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
+      <a href="https://pub.dev/packages/frosted_ui_kit" class="btn btn-primary" target="_blank" rel="noopener">pub.dev</a>
+      <a href="https://github.com/abdulrasol/frosted_ui_kit" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section class="package-content" style="padding: 2rem 1rem;">
+  <div class="container" style="max-width: 900px; margin: 0 auto;">
+    
+
+    <div class="markdown-content" style="line-height: 1.8;">
+      <h1>❄️ Frosted UI Kit Catalog &amp; API Indexing</h1>
+<p>Welcome to the <strong><code>frosted_ui_kit</code></strong> Widget Catalog and Technical API Index. This document provides a complete visual reference, parameter guide, and code snippets for all components in the library.</p>
+<hr />
+<h2>📊 API &amp; Widget Catalog Index</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">File / Module</th>
+<th style="text-align: left;">Primary Class</th>
+<th style="text-align: left;">Mixin Shortcut</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Input Fields</strong></td>
+<td style="text-align: left;"><code>inputs.dart</code></td>
+<td style="text-align: left;"><code>AppTextField</code></td>
+<td style="text-align: left;"><code>emailField</code>, <code>passwordField</code>, <code>nameField</code>, <code>textField</code></td>
+<td style="text-align: left;">Pre-configured glassmorphic inputs with auto-obscure toggle, icons, and validation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Glass Cards</strong></td>
+<td style="text-align: left;"><code>cards.dart</code></td>
+<td style="text-align: left;"><code>BlurredCard</code></td>
+<td style="text-align: left;"><code>blurredCard</code> (<code>bluredCard</code>)</td>
+<td style="text-align: left;">Translucent card container with backdrop blur filter (<code>sigmaX: 10, sigmaY: 10</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Action Buttons</strong></td>
+<td style="text-align: left;"><code>buttons.dart</code></td>
+<td style="text-align: left;"><code>AppButton</code>, <code>CircleButton</code>, <code>AppFloatingActionButton</code></td>
+<td style="text-align: left;"><code>appButton</code>, <code>circleButton</code>, <code>backButton</code>, <code>appFab</code></td>
+<td style="text-align: left;">Multi-styled buttons (<code>glass</code>, <code>colored</code>, <code>outlined</code>, <code>text</code>) and floating action buttons.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sliding Tabs</strong></td>
+<td style="text-align: left;"><code>tabs.dart</code></td>
+<td style="text-align: left;"><code>AppSlidingTabs</code></td>
+<td style="text-align: left;"><code>appSlidingTabs</code></td>
+<td style="text-align: left;">Telegram-style animated sliding segmented control with RTL support.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Bottom Sheets</strong></td>
+<td style="text-align: left;"><code>bottom_sheet.dart</code></td>
+<td style="text-align: left;"><code>AppBottomSheet</code></td>
+<td style="text-align: left;"><code>showAppBottomSheet</code></td>
+<td style="text-align: left;">Modal bottom sheet with backdrop blur filter and drag indicator.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dialogs</strong></td>
+<td style="text-align: left;"><code>dialogs.dart</code></td>
+<td style="text-align: left;"><code>AppDialog</code></td>
+<td style="text-align: left;"><code>showAppWarningDialog</code>, <code>showAppErrorDialog</code>, <code>showAppInputDialog</code></td>
+<td style="text-align: left;">Pop-up glassmorphic dialogs for warnings, errors, and input prompts.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>List Tiles</strong></td>
+<td style="text-align: left;"><code>list_tile.dart</code></td>
+<td style="text-align: left;"><code>FrostedListSection</code></td>
+<td style="text-align: left;"><em>N/A</em></td>
+<td style="text-align: left;">Grouped, glassmorphic settings-style lists with integrated dividers.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>App Bars</strong></td>
+<td style="text-align: left;"><code>app_bar.dart</code></td>
+<td style="text-align: left;"><code>FrostedAppBar</code></td>
+<td style="text-align: left;"><em>N/A</em></td>
+<td style="text-align: left;">Modern, glassmorphic primary application bar with auto-fitting title.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Navigation Bars</strong></td>
+<td style="text-align: left;"><code>navigation_bar.dart</code></td>
+<td style="text-align: left;"><code>FrostedNavigationButtomBar</code>, <code>FrostedNavbarController</code></td>
+<td style="text-align: left;"><em>N/A</em></td>
+<td style="text-align: left;">Glassmorphic bottom navigation bar with animated tab selection.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Screen Layout</strong></td>
+<td style="text-align: left;"><code>base_widget.dart</code></td>
+<td style="text-align: left;"><code>BaseWidget</code></td>
+<td style="text-align: left;"><em>Scaffold Wrapper</em></td>
+<td style="text-align: left;">Screen wrapper providing integrated <code>FrostedAppBar</code> and <code>FrostedNavigationButtomBar</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Auth Feature</strong></td>
+<td style="text-align: left;"><code>features/auth/</code></td>
+<td style="text-align: left;"><code>AuthScreen</code>, <code>AuthController</code></td>
+<td style="text-align: left;"><em>Complete Flow</em></td>
+<td style="text-align: left;">Pure UI authentication screens (<code>login</code>, <code>register</code>, <code>reset</code>, <code>verify</code>).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>🧩 Widget Catalog &amp; Detailed API Guide</h2>
+<h3>1. 📝 Input Fields (<code>AppTextField</code> &amp; <code>Inputs</code>)</h3>
+<p>Modern glassmorphic text input fields supporting pre-configured presets, automatic obscure text toggles for passwords, custom error feedback, and label support.</p>
+<h4>Supported Preset Variants (<code>AppTextFieldType</code>):</h4>
+<ul>
+<li><code>AppTextFieldType.email</code>: Auto-configured with email keyboard, email icon, and validation.</li>
+<li><code>AppTextFieldType.password</code>: Auto-configured with obscure text mask and interactive eye toggle button.</li>
+<li><code>AppTextFieldType.name</code>: Auto-configured with word capitalization and person icon.</li>
+<li><code>AppTextFieldType.phone</code>: Auto-configured with numeric phone keypad.</li>
+<li><code>AppTextFieldType.number</code>: Auto-configured with numeric keypad.</li>
+<li><code>AppTextFieldType.multiline</code>: Text area supporting multiline input.</li>
+<li><code>AppTextFieldType.text</code>: Standard generic text field.</li>
+</ul>
+<h4>API &amp; Key Parameters:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>type</code></td>
+<td style="text-align: left;"><code>AppTextFieldType</code></td>
+<td style="text-align: left;"><code>text</code></td>
+<td style="text-align: left;">Field preset variant controlling defaults.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>label</code></td>
+<td style="text-align: left;"><code>String?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Label text rendered above input box.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>placeholder</code></td>
+<td style="text-align: left;"><code>String?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Hint text displayed when field is empty.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>controller</code></td>
+<td style="text-align: left;"><code>TextEditingController?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Controller for managing text state.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>obscureText</code></td>
+<td style="text-align: left;"><code>bool?</code></td>
+<td style="text-align: left;"><em>Auto for password</em></td>
+<td style="text-align: left;">Whether to mask text input.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>prefix</code></td>
+<td style="text-align: left;"><code>Widget?</code></td>
+<td style="text-align: left;"><em>Auto based on type</em></td>
+<td style="text-align: left;">Leading icon or widget.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>suffix</code></td>
+<td style="text-align: left;"><code>Widget?</code></td>
+<td style="text-align: left;"><em>Eye icon for password</em></td>
+<td style="text-align: left;">Trailing icon or widget.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>validator</code></td>
+<td style="text-align: left;"><code>FormFieldValidator&lt;String&gt;?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Validation function for Form state.</td>
+</tr>
+</tbody>
+</table>
+<h4>Code Usage Examples:</h4>
+<h5>Email &amp; Password Shortcuts via Mixin:</h5>
+<pre><code class="language-dart">class LoginSampleWidget extends StatelessWidget with Inputs {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        emailField(
+          context: context,
+          controller: _emailController,
+          validator: (val) =&gt; val == null || val.isEmpty ? 'Required' : null,
+        ),
+        const SizedBox(height: 14),
+        passwordField(
+          context: context,
+          controller: _passwordController,
+        ),
+      ],
+    );
+  }
+}
+</code></pre>
+<hr />
+<h3>2. 🧊 Glass Cards (<code>BlurredCard</code> &amp; <code>Cards</code>)</h3>
+<p>Translucent glassmorphic container leveraging Flutter's <code>BackdropFilter</code> and <code>ClipRRect</code> to create realistic glass depth.</p>
+<h4>API &amp; Key Parameters:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>child</code></td>
+<td style="text-align: left;"><code>Widget</code></td>
+<td style="text-align: left;"><em>Required</em></td>
+<td style="text-align: left;">Child content inside the glass card.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>borderRadius</code></td>
+<td style="text-align: left;"><code>BorderRadiusGeometry?</code></td>
+<td style="text-align: left;"><code>BorderRadius.circular(radius)</code></td>
+<td style="text-align: left;">Custom border radius geometry.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>radius</code></td>
+<td style="text-align: left;"><code>double?</code></td>
+<td style="text-align: left;"><code>50</code></td>
+<td style="text-align: left;">Circular corner radius when <code>borderRadius</code> is omitted.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>height</code></td>
+<td style="text-align: left;"><code>double?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Explicit height for the container.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>width</code></td>
+<td style="text-align: left;"><code>double?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Explicit width for the container.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>padding</code></td>
+<td style="text-align: left;"><code>EdgeInsetsGeometry?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Inner padding surrounding child.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>margin</code></td>
+<td style="text-align: left;"><code>EdgeInsetsGeometry?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Outer margin around card box.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>border</code></td>
+<td style="text-align: left;"><code>BoxBorder?</code></td>
+<td style="text-align: left;"><code>AppThemes.border</code></td>
+<td style="text-align: left;">Translucent border stroke decoration.</td>
+</tr>
+</tbody>
+</table>
+<h4>Code Usage Example:</h4>
+<pre><code class="language-dart">class CardSampleWidget extends StatelessWidget with Cards {
+  @override
+  Widget build(BuildContext context) {
+    return blurredCard(
+      context: context,
+      padding: const EdgeInsets.all(16),
+      child: const Text('Frosted Glass Container'),
+    );
+  }
+}
+</code></pre>
+<hr />
+<h3>3. 🔘 Action Buttons (<code>AppButton</code>, <code>CircleButton</code>, <code>AppFloatingActionButton</code> &amp; <code>Buttons</code>)</h3>
+<p>A comprehensive set of action buttons supporting 4 visual style variants (<code>AppButtonStyle</code>). It also includes <code>AppFloatingActionButton</code> which acts as a versatile FAB (icon only, text only, or extended icon + text).</p>
+<h4>Supported Style Variants (<code>AppButtonStyle</code>):</h4>
+<ul>
+<li><code>AppButtonStyle.glass</code>: Translucent glassmorphic button with backdrop blur.</li>
+<li><code>AppButtonStyle.colored</code>: Solid primary accent filled button.</li>
+<li><code>AppButtonStyle.outlined</code>: Transparent button with primary border outline.</li>
+<li><code>AppButtonStyle.text</code>: Subtle text-only button without border or card fill.</li>
+</ul>
+<h4>API &amp; Key Parameters:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>title</code></td>
+<td style="text-align: left;"><code>String?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Button label text string.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>icon</code></td>
+<td style="text-align: left;"><code>IconData?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Icon displayed beside title label.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>style</code></td>
+<td style="text-align: left;"><code>AppButtonStyle</code></td>
+<td style="text-align: left;"><code>glass</code></td>
+<td style="text-align: left;">Visual style variant choice.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>isLoading</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+<td style="text-align: left;"><code>false</code></td>
+<td style="text-align: left;">Displays progress indicator when true.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>isDisabled</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+<td style="text-align: left;"><code>false</code></td>
+<td style="text-align: left;">Disables touch interactions and dims colors.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>onPressed</code></td>
+<td style="text-align: left;"><code>VoidCallback?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Tap callback handler.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>height</code></td>
+<td style="text-align: left;"><code>double?</code></td>
+<td style="text-align: left;"><code>48</code></td>
+<td style="text-align: left;">Fixed button height.</td>
+</tr>
+</tbody>
+</table>
+<h4>Code Usage Examples:</h4>
+<pre><code class="language-dart">class ButtonSampleWidget extends StatelessWidget with Buttons {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        // Glass Button
+        appButton(
+          context: context,
+          title: 'Glass Action',
+          style: AppButtonStyle.glass,
+          onPressed: () {},
+        ),
+        const SizedBox(height: 10),
+        // Colored Button with Loading
+        appButton(
+          context: context,
+          title: 'Submit',
+          style: AppButtonStyle.colored,
+          isLoading: false,
+          onPressed: () {},
+        ),
+        const SizedBox(height: 10),
+        // Navigation Back Button
+        Row(
+          children: [
+            backButton(context),
+            const SizedBox(width: 8),
+            closeButton(context),
+          ],
+        ),
+        const SizedBox(height: 10),
+        // Extended Floating Action Button
+        appFab(
+          context: context,
+          icon: Icons.add,
+          title: 'Create',
+          onPressed: () {},
+        ),
+      ],
+    );
+  }
+}
+</code></pre>
+<hr />
+<h3>3.1 🔄 Animated Loading Buttons (<code>FrostLoadingButton</code>)</h3>
+<p>A dynamic button wrapper built on <code>AppButton</code> that handles transitions between multiple states (idle, loading, success, error) using Lottie animations. </p>
+<h4>Available States (<code>FrostLoadingButtonState</code>):</h4>
+<ul>
+<li><code>idle</code>: Displays the normal text and icon.</li>
+<li><code>loading</code>: Shrinks (or maintains width) to show an <code>AppLoadingIndicator</code> built with Lottie.</li>
+<li><code>success</code>: Shows a success icon with customizable success color.</li>
+<li><code>error</code>: Shows an error icon with customizable error color.</li>
+</ul>
+<h4>Code Usage Example:</h4>
+<pre><code class="language-dart">class LoadingButtonSample extends StatelessWidget {
+  final FrostLoadingButtonController controller = FrostLoadingButtonController();
+
+  @override
+  Widget build(BuildContext context) {
+    return FrostLoadingButton(
+      controller: controller,
+      title: 'Submit Data',
+      icon: Icons.upload,
+      onPressed: () async {
+        controller.start(); // Switch to loading
+        await Future.delayed(const Duration(seconds: 2));
+        controller.success(); // Switch to success
+      },
+    );
+  }
+}
+</code></pre>
+<hr />
+<h3>4. 🗂️ Sliding Segmented Tabs (<code>AppSlidingTabs</code> &amp; <code>Tabs</code>)</h3>
+<p>Telegram-inspired sliding tab selector with an animated pill indicator that smoothly slides between tab options. Fully RTL-aware.</p>
+<h4>API &amp; Key Parameters:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>tabs</code></td>
+<td style="text-align: left;"><code>List&lt;String&gt;</code></td>
+<td style="text-align: left;"><em>Required</em></td>
+<td style="text-align: left;">List of tab label strings.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>selectedIndex</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><em>Required</em></td>
+<td style="text-align: left;">Currently active tab index.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>onTabChanged</code></td>
+<td style="text-align: left;"><code>ValueChanged&lt;int&gt;</code></td>
+<td style="text-align: left;"><em>Required</em></td>
+<td style="text-align: left;">Callback triggered when a tab is tapped.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>height</code></td>
+<td style="text-align: left;"><code>double</code></td>
+<td style="text-align: left;"><code>46</code></td>
+<td style="text-align: left;">Total height of tabs container.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>activeTextStyle</code></td>
+<td style="text-align: left;"><code>TextStyle?</code></td>
+<td style="text-align: left;"><em>Bold OnPrimary</em></td>
+<td style="text-align: left;">Custom style for selected tab text.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>inactiveTextStyle</code></td>
+<td style="text-align: left;"><code>TextStyle?</code></td>
+<td style="text-align: left;"><em>OnSurfaceVariant</em></td>
+<td style="text-align: left;">Custom style for inactive tab text.</td>
+</tr>
+</tbody>
+</table>
+<h4>Code Usage Example:</h4>
+<pre><code class="language-dart">class TabSampleWidget extends StatefulWidget with Tabs {
+  @override
+  State&lt;TabSampleWidget&gt; createState() =&gt; _TabSampleWidgetState();
+}
+
+class _TabSampleWidgetState extends State&lt;TabSampleWidget&gt; {
+  int _tabIndex = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return widget.appSlidingTabs(
+      context: context,
+      tabs: const ['Tab One', 'Tab Two', 'Tab Three'],
+      selectedIndex: _tabIndex,
+      onTabChanged: (index) =&gt; setState(() =&gt; _tabIndex = index),
+    );
+  }
+}
+</code></pre>
+<hr />
+<h3>5. 📑 Glassmorphic Bottom Sheets (<code>AppBottomSheet</code> &amp; <code>BottomSheets</code>)</h3>
+<p>Translucent backdrop filter bottom sheet modal with drag handle indicator and automatic keyboard inset padding (<code>viewInsets</code>).</p>
+<h4>API &amp; Key Parameters:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>context</code></td>
+<td style="text-align: left;"><code>BuildContext</code></td>
+<td style="text-align: left;"><em>Required</em></td>
+<td style="text-align: left;">Build context for navigator.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>child</code></td>
+<td style="text-align: left;"><code>Widget</code></td>
+<td style="text-align: left;"><em>Required</em></td>
+<td style="text-align: left;">Sheet content widget.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>title</code></td>
+<td style="text-align: left;"><code>String?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Optional header title string with close button.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>isScrollControlled</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">Allows sheet to resize with keyboard.</td>
+</tr>
+</tbody>
+</table>
+<h4>Code Usage Example:</h4>
+<pre><code class="language-dart">class SheetSampleWidget extends StatelessWidget with BottomSheets {
+  void _openSheet(BuildContext context) {
+    showAppBottomSheet(
+      context: context,
+      title: 'Modal Settings',
+      child: const Padding(
+        padding: EdgeInsets.all(16),
+        child: Text('BottomSheet Content Here'),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () =&gt; _openSheet(context),
+      child: const Text('Open Sheet'),
+    );
+  }
+}
+</code></pre>
+<hr />
+<h3>6. 💬 Glassmorphic Dialogs (<code>AppDialog</code> &amp; <code>Dialogs</code>)</h3>
+<p>Glassmorphic popup dialogs designed to alert the user, ask for confirmation, or prompt for text input.</p>
+<h4>Available Mixin Methods:</h4>
+<ul>
+<li><code>showAppWarningDialog</code>: Shows a warning dialog returning a boolean.</li>
+<li><code>showAppErrorDialog</code>: Shows an error dialog with an OK button.</li>
+<li><code>showAppInputDialog</code>: Shows an input dialog returning the submitted string, with support for validation.</li>
+</ul>
+<h4>Shared API &amp; Key Parameters:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>context</code></td>
+<td style="text-align: left;"><code>BuildContext</code></td>
+<td style="text-align: left;"><em>Required</em></td>
+<td style="text-align: left;">Build context for navigator.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>title</code></td>
+<td style="text-align: left;"><code>String?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Optional header title string.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code></td>
+<td style="text-align: left;"><code>String?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Optional description or body text.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>icon</code></td>
+<td style="text-align: left;"><code>IconData?</code></td>
+<td style="text-align: left;"><em>Varies</em></td>
+<td style="text-align: left;">Optional top icon. Set to <code>null</code> to hide.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>iconColor</code></td>
+<td style="text-align: left;"><code>Color?</code></td>
+<td style="text-align: left;"><code>error</code></td>
+<td style="text-align: left;">Theme color applied to the icon and its background.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>confirmText</code></td>
+<td style="text-align: left;"><code>String</code></td>
+<td style="text-align: left;"><em>Varies</em></td>
+<td style="text-align: left;">Label for the positive/submit button.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cancelText</code></td>
+<td style="text-align: left;"><code>String</code></td>
+<td style="text-align: left;"><code>Cancel</code></td>
+<td style="text-align: left;">Label for the negative button (if available).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>validator</code></td>
+<td style="text-align: left;"><code>FormFieldValidator&lt;String&gt;?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Validation logic for <code>showAppInputDialog</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>titleColor</code></td>
+<td style="text-align: left;"><code>Color?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Custom color for the title text.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>descriptionColor</code></td>
+<td style="text-align: left;"><code>Color?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Custom color for the description text.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>confirmButtonColor</code></td>
+<td style="text-align: left;"><code>Color?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Custom background color for the confirm button.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>confirmTextColor</code></td>
+<td style="text-align: left;"><code>Color?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Custom text color for the confirm button.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cancelButtonColor</code></td>
+<td style="text-align: left;"><code>Color?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Custom background color for the cancel button.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cancelTextColor</code></td>
+<td style="text-align: left;"><code>Color?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Custom text color for the cancel button.</td>
+</tr>
+</tbody>
+</table>
+<h4>Code Usage Example:</h4>
+<pre><code class="language-dart">class DialogSampleWidget extends StatelessWidget with Dialogs {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () async {
+        final result = await showAppInputDialog(
+          context: context,
+          title: 'Enter Name',
+          description: 'Please enter your full name below.',
+          hintText: 'John Doe',
+          validator: (val) =&gt; val == null || val.isEmpty ? 'Required' : null,
+        );
+      },
+      child: const Text('Open Input Dialog'),
+    );
+  }
+}
+</code></pre>
+<hr />
+<h3>7. ⏳ Loading Indicator (<code>AppLoadingIndicator</code>)</h3>
+<p>A generic glassmorphic loading indicator built on a Lottie animation (<code>assets/lottie/loading.json</code>), acting as a drop-in replacement for standard <code>CircularProgressIndicator</code>.</p>
+<h4>Available Methods in <code>Dialogs</code> mixin:</h4>
+<ul>
+<li><code>showAppLoadingDialog</code>: Shows a glassmorphic non-dismissible loading dialog featuring the <code>AppLoadingIndicator</code> and an optional message.</li>
+</ul>
+<h4>Code Usage Example:</h4>
+<pre><code class="language-dart">class LoadingSampleWidget extends StatelessWidget with Dialogs {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        // Raw indicator
+        const AppLoadingIndicator(size: 40),
+        // Dialog wrapper
+        ElevatedButton(
+          onPressed: () =&gt; showAppLoadingDialog(
+            context: context, 
+            message: 'Loading...', 
+          ),
+          child: const Text('Show Loading Dialog'),
+        ),
+      ],
+    );
+  }
+}
+</code></pre>
+<hr />
+<h3>7. 📋 Glassmorphic List Tiles (<code>FrostedListSection</code> &amp; <code>FrostedListTile</code>)</h3>
+<p>A glassmorphic list section that groups multiple list tiles together. It automatically handles rounded corners and dividers between tiles, mimicking native iOS settings menus but with a modern glass look.</p>
+<h4>API &amp; Key Parameters:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>header</code></td>
+<td style="text-align: left;"><code>Widget?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Header widget displayed above the section.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>children</code></td>
+<td style="text-align: left;"><code>List&lt;Widget&gt;</code></td>
+<td style="text-align: left;"><em>Required</em></td>
+<td style="text-align: left;">List of <code>FrostedListTile</code>s.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>margin</code></td>
+<td style="text-align: left;"><code>EdgeInsetsGeometry</code></td>
+<td style="text-align: left;"><code>EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)</code></td>
+<td style="text-align: left;">Margin around the section.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>separatorColor</code></td>
+<td style="text-align: left;"><code>Color?</code></td>
+<td style="text-align: left;"><code>dividerColor</code></td>
+<td style="text-align: left;">Color of the divider line between tiles.</td>
+</tr>
+</tbody>
+</table>
+<h4>Code Usage Example:</h4>
+<pre><code class="language-dart">class SettingsSampleWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FrostedListSection(
+      header: const Text('Preferences'),
+      children: [
+        FrostedListTile(
+          title: const Text('Notifications'),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () {},
+        ),
+        FrostedListTile(
+          title: const Text('Privacy'),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () {},
+        ),
+      ],
+    );
+  }
+}
+</code></pre>
+<hr />
+<h3>8. 🖼️ Screen Scaffold Layout (<code>BaseWidget</code>, <code>FrostedAppBar</code> &amp; <code>FrostedNavigationButtomBar</code>)</h3>
+<p>Screen scaffold wrapper ensuring consistent layout padding, safe areas, and a floating glass app bar (<code>FrostedAppBar</code>) as well as an optional floating glass bottom navigation bar (<code>FrostedNavigationButtomBar</code>).</p>
+<h4>API &amp; Key Parameters (<code>BaseWidget</code>):</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>child</code></td>
+<td style="text-align: left;"><code>Widget</code></td>
+<td style="text-align: left;"><em>Required</em></td>
+<td style="text-align: left;">Body content widget.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>title</code></td>
+<td style="text-align: left;"><code>String?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Title displayed inside the glass <code>FrostedAppBar</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>actions</code></td>
+<td style="text-align: left;"><code>List&lt;Widget&gt;?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">End-aligned action icons in <code>FrostedAppBar</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>isHideAppbar</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+<td style="text-align: left;"><code>false</code></td>
+<td style="text-align: left;">Hides the top app bar when true.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>bottomNavigationBar</code></td>
+<td style="text-align: left;"><code>Widget?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Optional bottom bar component.</td>
+</tr>
+</tbody>
+</table>
+<h4>API &amp; Key Parameters (<code>FrostedNavigationButtomBar</code>):</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>controller</code></td>
+<td style="text-align: left;"><code>FrostedNavbarController</code></td>
+<td style="text-align: left;"><em>Required</em></td>
+<td style="text-align: left;">Controller managing the active tab index.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>items</code></td>
+<td style="text-align: left;"><code>List&lt;FrostedNavbarItem&gt;</code></td>
+<td style="text-align: left;"><em>Required</em></td>
+<td style="text-align: left;">List of tab items to display (data class).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>action</code></td>
+<td style="text-align: left;"><code>Widget?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Optional action widget (e.g. FAB) displayed at the end.</td>
+</tr>
+</tbody>
+</table>
+<h4>Code Usage Example:</h4>
+<pre><code class="language-dart">class MyScreen extends StatefulWidget {
+  @override
+  State&lt;MyScreen&gt; createState() =&gt; _MyScreenState();
+}
+
+class _MyScreenState extends State&lt;MyScreen&gt; {
+  final FrostedNavbarController _navController = FrostedNavbarController();
+
+  @override
+  void dispose() {
+    _navController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return BaseWidget(
+      title: 'Dashboard',
+      actions: [
+        IconButton(icon: const Icon(Icons.settings_outlined), onPressed: () {}),
+      ],
+      bottomNavigationBar: FrostedNavigationButtomBar(
+        controller: _navController,
+        items: [
+          FrostedNavbarItem(icon: Icons.home, title: 'Home'),
+          FrostedNavbarItem(icon: Icons.search, title: 'Search', badgeCount: 3),
+        ],
+        action: appFab(context: context, icon: Icons.add, onPressed: () {}),
+      ),
+      child: const Center(child: Text('Screen Content')),
+    );
+  }
+}
+</code></pre>
+<hr />
+<h3>7. 🚦 Glassmorphic Stepper (<code>FrostedStepper</code> &amp; <code>Steppers</code>)</h3>
+<p>A multi-step progress indicator designed with the liquid glass aesthetic. Supports both horizontal and vertical orientations.</p>
+<h4>Available Mixin Methods:</h4>
+<ul>
+<li><code>appStepper</code>: Returns a <code>FrostedStepper</code> instance.</li>
+</ul>
+<h4>API &amp; Key Parameters:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>controller</code></td>
+<td style="text-align: left;"><code>FrostedStepperController</code></td>
+<td style="text-align: left;"><em>Required</em></td>
+<td style="text-align: left;">Manages the current step and navigation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>direction</code></td>
+<td style="text-align: left;"><code>FrostedStepperDirection</code></td>
+<td style="text-align: left;"><code>horizontal</code></td>
+<td style="text-align: left;">Layout direction (<code>horizontal</code> or <code>vertical</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>activeColor</code></td>
+<td style="text-align: left;"><code>Color?</code></td>
+<td style="text-align: left;"><code>primary</code></td>
+<td style="text-align: left;">Color for active steps and completed lines.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>inactiveColor</code></td>
+<td style="text-align: left;"><code>Color?</code></td>
+<td style="text-align: left;"><code>outlineVariant</code></td>
+<td style="text-align: left;">Color for inactive steps and remaining lines.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>textColor</code></td>
+<td style="text-align: left;"><code>Color?</code></td>
+<td style="text-align: left;"><code>onPrimary</code></td>
+<td style="text-align: left;">Color for the step number text.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>lineSize</code></td>
+<td style="text-align: left;"><code>double</code></td>
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">Thickness of the connecting line.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>stepSize</code></td>
+<td style="text-align: left;"><code>double</code></td>
+<td style="text-align: left;"><code>32</code></td>
+<td style="text-align: left;">Diameter of the step circle.</td>
+</tr>
+</tbody>
+</table>
+<h4>Code Usage Example:</h4>
+<pre><code class="language-dart">class StepperSampleWidget extends StatefulWidget {
+  @override
+  State&lt;StepperSampleWidget&gt; createState() =&gt; _StepperSampleWidgetState();
+}
+
+class _StepperSampleWidgetState extends State&lt;StepperSampleWidget&gt; with Steppers {
+  late FrostedStepperController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = FrostedStepperController(
+      steps: 3,
+      stepsList: ['Cart', 'Address', 'Payment'],
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return appStepper(
+      controller: _controller,
+      direction: FrostedStepperDirection.horizontal,
+    );
+  }
+}
+</code></pre>
+<hr />
+<h2>🔐 Generic Authentication Catalog (<code>features/auth</code>)</h2>
+<p>The authentication module provides ready-to-use pure UI screens and forms for sign-in, registration, password recovery, and email verification:</p>
+<ul>
+<li><strong><code>AuthScreen</code></strong>: Complete unified page featuring sliding tabs between Sign In and Register.</li>
+<li><strong><code>LoginFormWidget</code></strong>: Standalone sign-in form using <code>emailField</code> and <code>passwordField</code>.</li>
+<li><strong><code>RegisterFormWidget</code></strong>: Account creation form with name, email, password, and confirm password.</li>
+<li><strong><code>ForgotPasswordFormWidget</code></strong>: Reset email request form.</li>
+<li><strong><code>ResetPasswordFormWidget</code></strong>: Token verification and new password entry form.</li>
+<li><strong><code>VerifyEmailFormWidget</code></strong>: Email token confirmation form.</li>
+<li><strong><code>AuthController</code></strong>: Pure UI state manager for view modes, loading states, and user feedback.</li>
+</ul>
+<pre><code class="language-dart">// Example embedding AuthScreen with callbacks:
+AuthScreen(
+  onLoginSuccess: () {
+    Navigator.of(context).pushReplacementNamed('/home');
+  },
+  onRegisterSuccess: () {
+    // Perform post-registration navigation
+  },
+);
+</code></pre>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Markdown styling overrides to match site theme */
+.markdown-content h2, .markdown-content h3 {
+  color: var(--primary-color);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.markdown-content p {
+  margin-bottom: 1rem;
+}
+.markdown-content pre {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+.markdown-content code {
+  font-family: monospace;
+  background: rgba(0,0,0,0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+.markdown-content pre code {
+  background: none;
+  padding: 0;
+}
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+.markdown-content th, .markdown-content td {
+  border: 1px solid var(--border-color, #eaeaea);
+  padding: 0.75rem;
+  text-align: left;
+}
+html[dir="rtl"] .markdown-content th, html[dir="rtl"] .markdown-content td {
+  text-align: right;
+}
+.markdown-content th {
+  background: rgba(54, 173, 163, 0.1); /* Primary color with opacity */
+}
+</style>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/ar/" class="logo">
+          <img src="/logo.png" alt="سبل التكنلوجيا logo" width="36" height="36">
+          <span>سبل التكنلوجيا</span>
+        </a>
+        <p></p>
+      </div>
+
+      <div class="footer-links">
+        <h4></h4>
+        <a href="/ar/">الرئيسية</a>
+        <a href="/ar/#services">Services</a>
+        <a href="/ar/#projects">Products</a>
+        <a href="" target="_blank" rel="noopener">المدونة</a>
+        <a href="/ar/team/">Team</a>
+        <a href="/ar/invest/">Invest</a>
+        <a href="/ar/careers/">Careers</a>
+        <a href="/ar/privacy.html">سياسة الخصوصية</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4></h4>
+        <a href="mailto:info@subultech.top"><i class="fas fa-envelope"></i> info@subultech.top</a>
+        <a href="https://wa.me/9647813639721" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://github.com/abdulrasol" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        <a href="http://linkedin.com/in/abdulrasoolal-hilo/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 سبل التكنلوجيا. </p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/9647813639721?text="
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Optional Tawk.to Live Chat -->
+  <!--
+  <script type="text/plain" data-tawk-to>
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  -->
+
+  <!-- Scripts -->
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

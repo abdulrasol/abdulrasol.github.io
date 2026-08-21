@@ -42,6 +42,7 @@ def main():
     # Run all builders
     run_script("build.py")
     run_script("build-project.py")
+    run_script("build-packages.py")
     
     # Optional: convert images to WebP
     try:

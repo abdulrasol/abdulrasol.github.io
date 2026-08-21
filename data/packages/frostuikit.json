@@ -1,0 +1,13 @@
+{
+  "id": "frostuikit",
+  "name_en": "Frosted UI Kit",
+  "name_ar": "Frosted UI Kit",
+  "description_en": "A modern, highly-customizable Flutter UI kit inspired by Apple's Liquid Glass aesthetic and Telegram's modern Android redesign.",
+  "description_ar": "مجموعة واجهة مستخدم Flutter حديثة وقابلة للتخصيص مستوحاة من جماليات Apple Liquid Glass وتصميم Telegram الحديث.",
+  "version": "1.0.0",
+  "github_url": "https://github.com/abdulrasol/frosted_ui_kit",
+  "pub_url": "https://pub.dev/packages/frosted_ui_kit",
+  "logo": "/assets/packages/frostuikit/dart.png",
+  "content_file": "data/packages/frostuikit.md",
+  "screenshots": []
+}
