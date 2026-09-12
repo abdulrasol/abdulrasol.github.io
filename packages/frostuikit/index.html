@@ -490,7 +490,7 @@
       </button>
       <a href="https://pub.dev/packages/frosted_ui_kit" class="btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-cube"></i> pub.dev</a>
       <a href="https://github.com/abdulrasol/frosted_ui_kit" class="btn btn-outline" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-      <span style="margin-left: auto; align-self: center; color: var(--text-muted); font-size: 0.95rem; font-weight: 500;">v1.0.0</span>
+      <span style="margin-left: auto; align-self: center; color: var(--text-muted); font-size: 0.95rem; font-weight: 500;">v1.1.0</span>
     </div>
 
     <div class="content">
@@ -699,6 +699,11 @@
 <hr />
 <h3 id="2-glass-cards-blurredcard-cards">2. 🧊 Glass Cards (<code>BlurredCard</code> &amp; <code>Cards</code>)</h3>
 <p>Translucent glassmorphic container leveraging Flutter's <code>BackdropFilter</code> and <code>ClipRRect</code> to create realistic glass depth.</p>
+<p><strong>Smart Platform Optimization</strong>: <code>BlurredCard</code> automatically adapts to the platform for maximum performance:
+<ul>
+<li><strong>iOS</strong>: Uses the highly optimized <code>BackdropFilter</code> (via Impeller) with a smooth <code>sigmaX/Y: 5.0</code>.</li>
+<li><strong>Android</strong>: Automatically falls back to Alpha Transparency (<code>disableBlur = true</code>) mimicking Telegram's approach for fluid performance on all devices. You can override this behavior by explicitly setting the <code>disableBlur</code> parameter.</li>
+</ul></p>
 <h4 id="api-key-parameters_1">API &amp; Key Parameters:</h4>
 <table>
 <thead>
@@ -757,6 +762,30 @@
 <td style="text-align: left;"><code>BoxBorder?</code></td>
 <td style="text-align: left;"><code>AppThemes.border</code></td>
 <td style="text-align: left;">Translucent border stroke decoration.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>sigmaX</code></td>
+<td style="text-align: left;"><code>double</code></td>
+<td style="text-align: left;"><code>5.0</code></td>
+<td style="text-align: left;">Horizontal backdrop blur intensity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>sigmaY</code></td>
+<td style="text-align: left;"><code>double</code></td>
+<td style="text-align: left;"><code>5.0</code></td>
+<td style="text-align: left;">Vertical backdrop blur intensity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>clipBehavior</code></td>
+<td style="text-align: left;"><code>Clip</code></td>
+<td style="text-align: left;"><code>Clip.hardEdge</code></td>
+<td style="text-align: left;">Content clipping behavior (optimized for speed).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>disableBlur</code></td>
+<td style="text-align: left;"><code>bool?</code></td>
+<td style="text-align: left;"><code>null</code> (Auto)</td>
+<td style="text-align: left;">If true, disables the heavy blur filter and relies on alpha transparency. Defaults to true on Android and false on iOS.</td>
 </tr>
 </tbody>
 </table>
@@ -1334,6 +1363,12 @@ class _TabSampleWidgetState extends State&lt;TabSampleWidget&gt; {
 <td style="text-align: left;"><code>null</code></td>
 <td style="text-align: left;">Optional action widget (e.g. FAB) displayed at the end.</td>
 </tr>
+<tr>
+<td style="text-align: left;"><code>onTabChanged</code></td>
+<td style="text-align: left;"><code>ValueChanged&lt;int&gt;?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Global callback executed when any tab is tapped.</td>
+</tr>
 </tbody>
 </table>
 <h4 id="code-usage-example_7">Code Usage Example:</h4>
@@ -1360,6 +1395,9 @@ class _MyScreenState extends State&lt;MyScreen&gt; {
       ],
       bottomNavigationBar: FrostedNavigationButtomBar(
         controller: _navController,
+        onTabChanged: (index) {
+          print('Tab changed to $index');
+        },
         items: [
           FrostedNavbarItem(icon: Icons.home, title: 'Home'),
           FrostedNavbarItem(icon: Icons.search, title: 'Search', badgeCount: 3),
