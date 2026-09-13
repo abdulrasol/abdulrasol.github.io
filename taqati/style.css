@@ -1,0 +1,194 @@
+:root {
+  --primary-color: #047857; /* Emerald green for energy */
+  --secondary-color: #059669;
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --card-bg: #ffffff;
+  --header-bg: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+  --card-bg: #1e293b;
+  --header-bg: rgba(15, 23, 42, 0.9);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.controls button {
+  background: none;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.controls button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+main {
+  padding: 2rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s;
+  color: white;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn-apple {
+  background-color: #000;
+}
+.btn-google {
+  background-color: var(--secondary-color);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.feature-card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.feature-card h3 {
+  color: var(--primary-color);
+  margin: 1rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.faq-item {
+  background-color: var(--card-bg);
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+.faq-item h4 {
+  margin-bottom: 0.5rem;
+}
+
+.document {
+  background-color: var(--card-bg);
+  padding: 3rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.document h1 {
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.document h2 {
+  margin: 1.5rem 0 0.5rem;
+}
+
+.document p {
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 3rem 5%;
+  background-color: var(--card-bg);
+  margin-top: 4rem;
+}
+
+.footer-links {
+  margin: 1.5rem 0;
+}
+
+.footer-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
