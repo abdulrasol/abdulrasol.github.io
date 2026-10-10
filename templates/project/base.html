@@ -152,7 +152,7 @@
       </div>
       {% endif %}
 
-      {% if links.support_email or links.googlePlay or links.github %}
+      {% if links.support_email or links.googlePlay or links.appStore or links.github %}
       <div class="footer-contact">
         <h4>{{ nav.contact }}</h4>
         {% if links.support_email %}
@@ -160,6 +160,9 @@
         {% endif %}
         {% if links.googlePlay %}
         <a href="{{ links.googlePlay }}" data-goatcounter-click="footer-google-play-{{ id }}" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
+        {% endif %}
+        {% if links.appStore %}
+        <a href="{{ links.appStore }}" data-goatcounter-click="footer-app-store-{{ id }}" target="_blank" rel="noopener"><i class="fab fa-apple"></i> App Store</a>
         {% endif %}
         {% if links.github %}
         <a href="{{ links.github }}" data-goatcounter-click="footer-github-{{ id }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>

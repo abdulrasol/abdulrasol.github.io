@@ -201,7 +201,7 @@
           <div class="project-links">
             {% set project_id = project.id or project.title | lower | replace(' ', '-') %}
             {% if project.links.page %}
-            <a href="{{ project.links.page }}?ref=portfolio"
+            <a href="{{ link(project.links.page) }}?ref=portfolio"
                data-goatcounter-click="portfolio-project-{{ project_id }}"
                class="project-link"
                aria-label="View project">

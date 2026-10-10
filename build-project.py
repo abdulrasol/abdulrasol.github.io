@@ -242,6 +242,7 @@ def build_projects():
             localized["testimonials"] = normalize_items_section(localized.get("testimonials"))
             localized["pricing"] = normalize_items_section(localized.get("pricing"))
             localized["purchase_form"] = normalize_items_section(localized.get("purchase_form"))
+            localized["faq"] = normalize_items_section(localized.get("faq"))
             localized["sections"] = normalize_sections(localized.get("sections"))
 
             def page_url(page="", is_ar=False):
@@ -319,6 +320,7 @@ def build_projects():
                 "has_testimonials": has_visible_content(localized.get("testimonials")),
                 "has_pricing": has_visible_content(localized.get("pricing")),
                 "has_purchase_form": has_visible_content(localized.get("purchase_form")),
+                "has_faq": has_visible_content(localized.get("faq")),
                 "has_problem": has_visible_content(localized.get("sections", {}).get("problem")),
                 "has_solution": has_visible_content(localized.get("sections", {}).get("solution")),
                 "has_market": has_visible_content(localized.get("sections", {}).get("market")),
@@ -412,14 +414,14 @@ def build_projects():
                 output.write_text(html, encoding="utf-8")
                 print(f"Generated: {output}")
 
-    # Create redirect for old MEAAD privacy URL
-    create_meaad_redirect()
+    # Create redirects for legacy privacy URLs
+    create_legacy_redirects()
 
     print("Project pages build complete.")
 
 
-def create_meaad_redirect():
-    """Redirect old /meaad/privacy.html to /meaad/privacy_policy/index.html"""
+def create_legacy_redirects():
+    """Redirect legacy /project/privacy.html to /project/privacy_policy/index.html"""
     redirect_html = """<!DOCTYPE html>
 <html>
 <head>
@@ -432,10 +434,11 @@ def create_meaad_redirect():
 </body>
 </html>
 """
-    path = Path("meaad/privacy.html")
-    if path.exists():
+    for rel_path in ["meaad/privacy.html", "taqati/privacy.html", "ar/taqati/privacy.html"]:
+        path = Path(rel_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(redirect_html, encoding="utf-8")
-        print("Updated: meaad/privacy.html redirect")
+        print(f"Updated: {rel_path} redirect")
 
 
 if __name__ == "__main__":

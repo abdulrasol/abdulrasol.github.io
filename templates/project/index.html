@@ -29,10 +29,20 @@
            target="_blank"
            rel="noopener">
           <i class="fab fa-google-play"></i>
-          {{ hero.cta }}
+          {{ hero.cta or ('Google Play' if lang == 'en' else 'متجر جوجل بلاي') }}
         </a>
         {% endif %}
-        {% if hero.secondary_cta and has_project_cta %}
+        {% if links.appStore %}
+        <a href="{{ links.appStore }}"
+           data-goatcounter-click="project-app-store-{{ id }}"
+           class="btn btn-secondary"
+           target="_blank"
+           rel="noopener">
+          <i class="fab fa-apple"></i>
+          {{ hero.secondary_cta or ('App Store' if lang == 'en' else 'متجر أبل') }}
+        </a>
+        {% endif %}
+        {% if hero.secondary_cta and has_project_cta and not links.appStore %}
         <a href="#project-cta" class="btn btn-secondary">
           <i class="fas fa-arrow-down"></i>
           {{ hero.secondary_cta }}
@@ -425,6 +435,30 @@
       <p class="form-note">{{ purchase_form.note | safe }}</p>
       {% endif %}
     </form>
+  </div>
+</section>
+{% endif %}
+
+{% if has_faq %}
+<section class="section faq-section" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">{{ 'FAQ' if lang == 'en' else 'الأسئلة الشائعة' }}</span>
+      <h2 class="section-title">{{ faq.title or ('Frequently Asked Questions' if lang == 'en' else 'الأسئلة الشائعة') }}</h2>
+      {% if faq.subtitle %}<p class="section-subtitle">{{ faq.subtitle }}</p>{% endif %}
+    </div>
+
+    <div class="faq-grid">
+      {% for item in faq['items'] %}
+      <article class="faq-card reveal">
+        <h3 class="faq-question">
+          <i class="fas fa-circle-question"></i>
+          <span>{{ item.question }}</span>
+        </h3>
+        <p class="faq-answer">{{ item.answer }}</p>
+      </article>
+      {% endfor %}
+    </div>
   </div>
 </section>
 {% endif %}

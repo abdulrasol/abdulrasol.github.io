@@ -340,6 +340,23 @@
         }
       },
       {
+        "title_en": "Taqati",
+        "title_ar": "طاقتي",
+        "desc_en": "Smart solar PV sizing and engineering calculations with real-time PVGIS satellite climate data and installer marketplace.",
+        "desc_ar": "تصميم الأنظمة الكهروضوئية وحسابات هندسية شمسية دقيقة مع بيانات PVGIS المناخية وسوق طلبات وخدمات التركيب.",
+        "image": "/assets/taqati/logo.png",
+        "category": "solar",
+        "featured": true,
+        "technologies": ["Flutter", "Dart", "PVGIS", "Weather API"],
+        "links": {
+          "page": "/taqati/",
+          "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.taqati",
+          "github": null,
+          "facebook": null,
+          "instagram": null
+        }
+      },
+      {
         "title_en": "Store Management",
         "title_ar": "إدارة المتجر",
         "desc_en": "Complete store management system for inventory, invoices, customers, suppliers, expenses, and analytics.",

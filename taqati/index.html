@@ -1,74 +1,330 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="title">طاقتي</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <header>
-    <a href="index.html" class="logo" data-i18n="title">طاقتي</a>
-    <div class="controls">
-      <button id="lang-toggle">English</button>
+  <title>Taqati: Smart Solar PV Design &amp; Calculations</title>
+  <meta name="description" content="The premier engineering app for solar energy calculations, weather data, and PV system design in your pocket.">
+  <meta name="keywords" content="Taqati, Solar Energy, Solar Calculator, PVGIS, Solar System Design, Iraq, Subul Technology, Flutter, Inverters, Solar Panels">
+  <meta name="author" content="Subul Technology">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f59e0b">
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
+
+  <!-- Canonical & Alternate Languages -->
+  <link rel="canonical" href="https://abdulrasol.github.io/taqati/">
+  <link rel="alternate" hreflang="en" href="https://abdulrasol.github.io/taqati/">
+  <link rel="alternate" hreflang="ar" href="https://abdulrasol.github.io/ar/taqati/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Taqati: Smart Solar PV Design &amp; Calculations">
+  <meta property="og:description" content="The premier engineering app for solar energy calculations, weather data, and PV system design in your pocket.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abdulrasol.github.io/taqati/">
+  <meta property="og:image" content="https://abdulrasol.github.io/assets/taqati/logo.png">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Taqati: Smart Solar PV Design &amp; Calculations">
+  <meta name="twitter:description" content="The premier engineering app for solar energy calculations, weather data, and PV system design in your pocket.">
+  <meta name="twitter:image" content="https://abdulrasol.github.io/assets/taqati/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/taqati/logo.png">
+  <link rel="apple-touch-icon" href="/assets/taqati/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Project Colors -->
+  <style>
+    :root {
+      --project-primary: #f59e0b;
+      --project-secondary: #10b981;
+    }
+  </style>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/static/css/project.css">
+
+<script data-goatcounter="https://abdulrasol.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Taqati",
+    "applicationCategory": "MobileApplication",
+    "operatingSystem": "Android, iOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "The premier engineering app for solar energy calculations, weather data, and PV system design in your pocket.",
+"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.taqati",    "image": "https://abdulrasol.github.io/assets/taqati/logo.png"
+  }
+  </script>
+</head>
+<body data-lang="en">
+
+  <!-- Header -->
+  <header class="project-header" id="project-header">
+    <div class="container header-inner">
+      <a href="/taqati/" class="brand">
+        <img src="/assets/taqati/logo.png" alt="Taqati logo">
+        <span>Taqati</span>
+      </a>
+
+      <a href="/" class="back-link desktop-back">
+        <i class="fas fa-arrow-left"></i>
+        ← Back to Portfolio
+      </a>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="/ar/taqati/" class="lang-toggle" data-lang-switch aria-label="Switch to Arabic">
+          <i class="fas fa-globe"></i>
+          <span>العربية</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="/">← Back to Portfolio</a>
+      <a href="/taqati/">Home</a>
+<a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#features">Features</a><a href="/taqati/privacy_policy/">Privacy Policy</a><a href="/taqati/terms.html">Terms of Service</a>      <a href="/ar/taqati/" data-lang-switch>العربية</a>
     </div>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <section class="hero">
-      <h1 data-i18n="hero_title">صمم نظامك الشمسي بذكاء ودقة ⚡</h1>
-      <p data-i18n="hero_desc">التطبيق الهندسي الأول لحسابات الطاقة الشمسية، بيانات الطقس، وتصميم الأنظمة الكهروضوئية في جيبك.</p>
-      
-      <div class="store-buttons">
-        <a href="#" class="btn btn-apple" data-i18n="btn_apple">متجر أبل</a>
-        <a href="#" class="btn btn-google" data-i18n="btn_google">جوجل بلاي</a>
-      </div>
-    </section>
 
-    <section class="features">
-      <h2 class="section-title" data-i18n="feat_title" style="grid-column: 1 / -1;">لماذا تختار طاقتي؟</h2>
-      
-      <div class="feature-card">
-        <h3 data-i18n="feat_1_title">📐 حسابات دقيقة</h3>
-        <p data-i18n="feat_1_desc">أدوات هندسية لحساب الألواح والبطاريات بدقة عالية.</p>
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-orb hero-orb-primary"></div>
+    <div class="hero-orb hero-orb-secondary"></div>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-text">
+      <div class="hero-badge reveal">Solar Engineering in Your Pocket ⚡</div>
+
+      <img src="/assets/taqati/logo.png" alt="Taqati" class="hero-logo reveal">
+      <h1 class="hero-title reveal">Design Your Solar System <span class="highlight">Smartly & Accurately</span> ⚡</h1>
+      <p class="hero-subtitle reveal">The premier engineering app for solar energy calculations, weather data, and PV system design in your pocket.</p>
+
+      <div class="hero-actions reveal">
+        <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.taqati"
+           data-goatcounter-click="project-google-play-taqati"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener">
+          <i class="fab fa-google-play"></i>
+          Google Play
+        </a>
+        <a href="https://apps.apple.com/app/id-taqati"
+           data-goatcounter-click="project-app-store-taqati"
+           class="btn btn-secondary"
+           target="_blank"
+           rel="noopener">
+          <i class="fab fa-apple"></i>
+          App Store
+        </a>
       </div>
 
-      <div class="feature-card">
-        <h3 data-i18n="feat_2_title">⛅ بيانات مناخية</h3>
-        <p data-i18n="feat_2_desc">بيانات PVGIS وطقس مباشر لمدينتك لاتخاذ أفضل القرارات.</p>
+      <div class="platforms reveal">
+        <span class="platform-badge">Android</span>
+        <span class="platform-badge">iOS</span>
       </div>
 
-      <div class="feature-card">
-        <h3 data-i18n="feat_3_title">🛒 سوق وطلبات</h3>
-        <p data-i18n="feat_3_desc">اطلب عروض أسعار أو قدم خدماتك للعملاء بكل سهولة.</p>
+      <div class="hero-stats reveal">
+        <div class="hero-stat">
+          <div class="hero-stat-value">PVGIS</div>
+          <div class="hero-stat-label">Direct satellite climate data</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">100%</div>
+          <div class="hero-stat-label">Engineering calculation accuracy</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">B2B + B2C</div>
+          <div class="hero-stat-label">For engineers &amp; consumers</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">Free</div>
+          <div class="hero-stat-label">Core features access</div>
+        </div>
       </div>
-    </section>
 
-    <section class="faq">
-      <h2 class="section-title" data-i18n="faq_title">❓ الأسئلة الشائعة</h2>
-      <div class="faq-item">
-        <h4 data-i18n="faq_1_q">هل التطبيق يدعم منطقتي جغرافياً؟</h4>
-        <p data-i18n="faq_1_a">نعم، التطبيق يعتمد على بيانات عالمية دقيقة.</p>
+      <div class="hero-trust-line reveal">
+        <span>Built around real operating workflows</span>
+        <span>Bilingual-ready delivery</span>
+        <span>Direct product execution</span>
       </div>
-      <div class="faq-item">
-        <h4 data-i18n="faq_2_q">هل استخدام التطبيق مجاني؟</h4>
-        <p data-i18n="faq_2_a">نعم، يقدم التطبيق الميزات الأساسية مجاناً مع إمكانية الوصول لميزات متقدمة.</p>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hero-brand-card">
+        <img src="/assets/taqati/logo.png" alt="Taqati">
+        <p>Design Your Solar System Smartly &amp; Accurately</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+<section class="section story-section story-section-split" id="problem">
+  <div class="container story-grid">
+    <div class="story-copy reveal">
+<span class="section-eyebrow">The Challenge</span><h2 class="section-title">Solar sizing shouldn&#39;t be guesswork</h2><p class="section-subtitle">Manual calculations lead to undersized or overpriced systems.</p><p class="story-body">Designing an off-grid or hybrid solar system requires balancing irradiance data, temperature derating, battery cycles, and load profiles. Sizing systems without accurate climate data often leads to battery failures and wasted investments.</p>
+      <div class="story-list">
+        <div class="story-list-item">
+<span class="story-list-icon">❌</span>          <span>Inaccurate sizing leading to early battery degradation</span>
+        </div>
+        <div class="story-list-item">
+<span class="story-list-icon">❌</span>          <span>Difficulty fetching local PVGIS and irradiance data</span>
+        </div>
+        <div class="story-list-item">
+<span class="story-list-icon">❌</span>          <span>Lack of standardized quotation comparison tools</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-highlight reveal">
+      <div class="highlight-card">
+        <div class="highlight-value">100%</div>
+        <div class="highlight-label">Scientific precision for solar PV sizing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cards-section cards-section-alt" id="solution">
+  <div class="container">
+    <div class="section-header reveal">
+<span class="section-eyebrow">The Solution</span><h2 class="section-title">Taqati: An integrated solar toolkit in your pocket</h2><p class="section-subtitle">Everything from panel calculation to climate analytics and service requests.</p>    </div>
+
+    <div class="feature-showcase-grid">
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">📐</span><h3>Accurate PV Sizing</h3><p>Calculate solar panel count, battery bank capacities, inverter sizes, and wire gauges in seconds.</p>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">⛅</span><h3>Satellite Weather &amp; PVGIS</h3><p>Fetch real-time irradiance, peak sun hours, and temperature data for any geographic coordinate.</p>      </article>
+      <article class="feature-showcase-card reveal">
+<span class="feature-icon">🛒</span><h3>Marketplace &amp; Quotes</h3><p>Request quotes from specialized suppliers or provide professional solar installation services.</p>      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="section features" id="features">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Why Choose Taqati?</span>
+      <h2 class="section-title">Why Choose Taqati?</h2>
+<p class="section-subtitle">Built with engineering standards to empower both solar installers and homeowners.</p>    </div>
+
+    <div class="features-grid">
+      <article class="feature-card reveal">
+<span class="feature-icon">📐</span><h3>Accurate Calculations</h3><p>Engineering tools to calculate panels, inverters, and batteries with high precision.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">⛅</span><h3>Climate &amp; Weather Data</h3><p>Live PVGIS and real-time weather data for your city to make the best decisions.</p>      </article>
+      <article class="feature-card reveal">
+<span class="feature-icon">🛒</span><h3>Marketplace &amp; Requests</h3><p>Request quotes or offer your services to clients easily.</p>      </article>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="section faq-section" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">FAQ</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+<p class="section-subtitle">Answers to common questions about using the Taqati app.</p>    </div>
+
+    <div class="faq-grid">
+      <article class="faq-card reveal">
+        <h3 class="faq-question">
+          <i class="fas fa-circle-question"></i>
+          <span>Does the app support my geographic region?</span>
+        </h3>
+        <p class="faq-answer">Yes, the app relies on accurate global satellite and meteorological data (including PVGIS) covering all regions worldwide.</p>
+      </article>
+      <article class="faq-card reveal">
+        <h3 class="faq-question">
+          <i class="fas fa-circle-question"></i>
+          <span>Is the app free to use?</span>
+        </h3>
+        <p class="faq-answer">Yes, the app offers its core engineering calculation tools for free, with optional access to advanced professional features.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
   </main>
 
-  <footer>
-    <div class="footer-links">
-      <a href="index.html" data-i18n="nav_home">الرئيسية</a>
-      <a href="privacy.html" data-i18n="nav_privacy">الخصوصية</a>
-      <a href="terms.html" data-i18n="nav_terms">الشروط</a>
+  <!-- Footer -->
+  <footer class="project-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/taqati/" class="brand">
+          <img src="/assets/taqati/logo.png" alt="Taqati" width="36" height="36">
+          <span>Taqati</span>
+        </a>
+        <p>Design Your Solar System Smartly &amp; Accurately</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Legal</h4>
+<a href="/taqati/privacy_policy/">Privacy Policy</a><a href="/taqati/terms.html">Terms of Service</a>      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a href="mailto:support@abdulrasol.io"><i class="fas fa-envelope"></i> support@abdulrasol.io</a>
+        <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.taqati" data-goatcounter-click="footer-google-play-taqati" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
+        <a href="https://apps.apple.com/app/id-taqati" data-goatcounter-click="footer-app-store-taqati" target="_blank" rel="noopener"><i class="fab fa-apple"></i> App Store</a>
+      </div>
     </div>
-    <p data-i18n="footer_copy">طاقتي © 2026. جميع الحقوق محفوظة.</p>
-    <p style="margin-top:1rem; opacity:0.8;">support@abdulrasol.io</p>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Taqati. All rights reserved.</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/9647813639721?text=Hello%20Subul%20Technology%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%2C%20product%2C%20or%20partnership."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="/static/js/project.js"></script>
 </body>
 </html>
