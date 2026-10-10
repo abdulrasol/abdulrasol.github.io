@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account & Data - Watt, Solar app calculator</title>
+    <link rel="icon" type="image/png" href="/assets/watt/logo.png">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .logo {
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 { color: #0f172a; text-align: center; margin-bottom: 0.5rem; }
+        .app-name { text-align: center; font-weight: 600; color: #64748b; margin-bottom: 2rem; }
+        h2 { border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 2rem; color: #0f172a; }
+        h3 { margin-top: 1.5rem; color: #1e293b; }
+        p { margin-bottom: 1rem; }
+        ol, ul { margin-bottom: 1rem; padding-left: 2rem; }
+        li { margin-bottom: 0.5rem; }
+        .date { text-align: center; color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; }
+        hr { border: 0; border-top: 1px solid #eee; margin: 2rem 0; }
+        .lang-switch { text-align: center; margin-bottom: 2rem; }
+        .lang-switch a { color: #3b82f6; text-decoration: none; margin: 0 10px; font-weight: 600; }
+        .note {
+            background: #fff8e6;
+            border: 1px solid #f5d98b;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            color: #8a5a00;
+            font-size: 0.95rem;
+        }
+        .email {
+            font-weight: 700;
+            color: #087F63;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 1.5rem; }
+            body { padding: 1rem; }
+        }
+
+        /* Language-specific alignment */
+        [lang="ar"] { direction: rtl; font-family: 'Cairo', sans-serif; text-align: right; }
+        [lang="ar"] ol, [lang="ar"] ul { padding-left: 0; padding-right: 2rem; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <img src="/assets/watt/logo.png" alt="Watt Logo" class="logo">
+        <h1>Delete Account &amp; Data / حذف الحساب والبيانات</h1>
+        <p class="app-name">Watt, Solar app calculator</p>
+        <p class="date">Last Updated: 2026-10-11</p>
+
+        <div class="lang-switch">
+            <a href="#english">English</a>
+            <a href="#arabic">العربية</a>
+        </div>
+
+        <section id="english">
+            <h2>English</h2>
+
+            <h3>Delete from within the app</h3>
+            <ol>
+                <li>Open the <strong>Watt</strong> app and sign in to your account.</li>
+                <li>Go to the <strong>Account</strong> tab.</li>
+                <li>Open <strong>Account Settings</strong> and choose <strong>Delete Account</strong>.</li>
+                <li>Re-confirm your identity using the same sign-in method you used (Google or Apple).</li>
+                <li>Type the confirmation word and confirm deletion.</li>
+            </ol>
+            <p>Deletion happens <strong>immediately</strong> once you complete these steps.</p>
+
+            <h3>What gets deleted</h3>
+            <ul>
+                <li>Your profile data (name, email, phone number if provided, location).</li>
+                <li>All solar systems saved to your account.</li>
+                <li>Your sign-in account in Firebase Authentication.</li>
+                <li>For "Sign in with Apple" users: the app's Apple authorization is also revoked.</li>
+            </ul>
+
+            <h3>What is kept</h3>
+            <p>If your account is a "company" account and you added brands or products to the app's public catalog, those entries remain visible to other users as general catalog data rather than personal data. Contact us below if you would like them removed as well.</p>
+
+            <h3>Can't access the app?</h3>
+            <p>If you have uninstalled the app or can't sign in, email us and we will delete your account and its associated data for you:</p>
+            <p><a class="email" href="mailto:watt.app.calculator@gmail.com">watt.app.calculator@gmail.com</a></p>
+            <div class="note">We process email deletion requests within <strong>7 business days</strong> of receiving them.</div>
+
+            <h3>Related</h3>
+            <p>See also our <a href="/watt/privacy_policy/">Privacy Policy</a> for details on what data we collect and why.</p>
+        </section>
+
+        <hr>
+
+        <section id="arabic" lang="ar">
+            <h2>العربية</h2>
+
+            <h3>الحذف من داخل التطبيق</h3>
+            <ol>
+                <li>افتح تطبيق <strong>واط</strong> وسجّل الدخول لحسابك.</li>
+                <li>اذهب لتبويب <strong>"حسابي"</strong>.</li>
+                <li>افتح <strong>إعدادات الحساب</strong> ثم اختر <strong>"حذف الحساب"</strong>.</li>
+                <li>أعد تأكيد هويتك بنفس طريقة تسجيل الدخول المستخدمة (Google أو Apple).</li>
+                <li>اكتب كلمة التأكيد المطلوبة واضغط تأكيد الحذف.</li>
+            </ol>
+            <p>يتم الحذف <strong>فوراً</strong> عند إتمام هذه الخطوات.</p>
+
+            <h3>ماذا يُحذف بالضبط</h3>
+            <ul>
+                <li>بيانات ملفك الشخصي (الاسم، البريد الإلكتروني، رقم الهاتف إن وُجد، الموقع).</li>
+                <li>كل الأنظمة الشمسية المحفوظة بحسابك.</li>
+                <li>حساب تسجيل الدخول نفسه من Firebase Authentication.</li>
+                <li>لمستخدمي "المتابعة مع Apple": يُلغى أيضاً تفويض Sign in with Apple الخاص بالتطبيق.</li>
+            </ul>
+
+            <h3>ماذا لا يُحذف</h3>
+            <p>إذا كان حسابك من نوع "شركة" وأضفت براندات أو منتجات لكتالوج التطبيق العام، هذه العناصر تبقى ظاهرة للمستخدمين الآخرين لأنها بيانات كتالوج عامة وليست بيانات شخصية. تواصل معنا أدناه إذا أردت إزالتها أيضاً.</p>
+
+            <h3>لا تقدر تدخل للتطبيق؟</h3>
+            <p>إذا حذفت التطبيق أو ما تكدر تسجّل الدخول، راسلنا وراح نحذف حسابك وبياناتك نيابة عنك:</p>
+            <p><a class="email" href="mailto:watt.app.calculator@gmail.com">watt.app.calculator@gmail.com</a></p>
+            <div class="note">نعالج طلبات الحذف عبر الإيميل خلال <strong>7 أيام عمل</strong> من استلامها.</div>
+
+            <h3>باقي المعلومات</h3>
+            <p>راجع أيضاً <a href="/watt/privacy_policy/">سياسة الخصوصية</a> لتفاصيل أكثر عن البيانات التي نجمعها وسبب جمعها.</p>
+        </section>
+    </div>
+</body>
+</html>
