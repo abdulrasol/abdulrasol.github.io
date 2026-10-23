@@ -16,23 +16,23 @@
   <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
 
   <!-- Canonical & Alternate Languages -->
-  <link rel="canonical" href="https://abdulrasol.github.io/meterlog/">
-  <link rel="alternate" hreflang="en" href="https://abdulrasol.github.io/meterlog/">
-  <link rel="alternate" hreflang="ar" href="https://abdulrasol.github.io/ar/meterlog/">
+  <link rel="canonical" href="https://subultech.top/meterlog/">
+  <link rel="alternate" hreflang="en" href="https://subultech.top/meterlog/">
+  <link rel="alternate" hreflang="ar" href="https://subultech.top/ar/meterlog/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Smart Multimeter Reader | MeterLog">
   <meta property="og:description" content="AI-powered multimeter reader with OCR recognition, scheduled capture, and professional Excel/CSV export. Works 100% offline.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://abdulrasol.github.io/meterlog/">
-  <meta property="og:image" content="https://abdulrasol.github.io/assets/meter_log/logo.png">
+  <meta property="og:url" content="https://subultech.top/meterlog/">
+  <meta property="og:image" content="https://subultech.top/assets/meter_log/logo.png">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Smart Multimeter Reader | MeterLog">
   <meta name="twitter:description" content="AI-powered multimeter reader with OCR recognition, scheduled capture, and professional Excel/CSV export. Works 100% offline.">
-  <meta name="twitter:image" content="https://abdulrasol.github.io/assets/meter_log/logo.png">
+  <meta name="twitter:image" content="https://subultech.top/assets/meter_log/logo.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/meter_log/logo.png">
@@ -54,8 +54,16 @@
     }
   </style>
 
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('portfolio_theme');
+      document.documentElement.dataset.theme = savedTheme === 'dark' || savedTheme === 'light'
+        ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch { /* System theme is applied by the main script. */ }
+  </script>
   <!-- Styles -->
   <link rel="stylesheet" href="/static/css/project.css">
+  <link rel="stylesheet" href="/static/css/brand.css?v=2">
 
 <script data-goatcounter="https://abdulrasol.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -74,11 +82,12 @@
       "priceCurrency": "USD"
     },
     "description": "AI-powered multimeter reader with OCR recognition, scheduled capture, and professional Excel/CSV export. Works 100% offline.",
-"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log",    "image": "https://abdulrasol.github.io/assets/meter_log/logo.png"
+"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log",    "image": "https://subultech.top/assets/meter_log/logo.png"
   }
   </script>
 </head>
-<body data-lang="en">
+<body data-lang="en" class="product-site">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- Header -->
   <header class="project-header" id="project-header">
@@ -88,9 +97,10 @@
         <span>MeterLog</span>
       </a>
 
-      <a href="/" class="back-link desktop-back">
+      <a href="/" class="back-link desktop-back parent-brand">
+        <img src="/static/images/brand/symbol-teal.svg" alt="" width="24" height="28">
         <i class="fas fa-arrow-left"></i>
-        ← Back to Portfolio
+        By Subul Technology
       </a>
 
       <div class="header-actions">
@@ -116,7 +126,7 @@
   </header>
 
   <!-- Main Content -->
-  <main>
+  <main id="main-content">
 
 <section class="hero" id="hero">
   <div class="hero-bg">
@@ -270,6 +280,7 @@
           <span>MeterLog</span>
         </a>
         <p>Smart multimeter readings with AI</p>
+        <a class="parent-brand" href="/"><img src="/static/images/brand/symbol-teal.svg" alt="" width="22" height="26">A Subul Technology product</a>
       </div>
 
       <div class="footer-links">

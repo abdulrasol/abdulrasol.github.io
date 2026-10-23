@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Watt: Solar Energy Platform</title>
-  <meta name="description" content="A comprehensive solar platform for Iraq that combines system calculation, product marketplace, quotations, and business operations in one experience.">
-  <meta name="keywords" content="Watt, Solar Energy Platform, Iraq Solar Marketplace, Solar Calculator, B2B B2C, Clean Energy, Flutter">
+  <title>Watt: Solar Sizing, Climate Data &amp; Solar Store</title>
+  <meta name="description" content="Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.">
+  <meta name="keywords" content="Watt, Taqati, solar calculator, solar system sizing, PVGIS, off-grid, hybrid inverter, battery sizing, Iraq solar store, Subul Technology, Flutter">
   <meta name="author" content="Subul Technology">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#f59e0b">
@@ -16,23 +16,23 @@
   <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
 
   <!-- Canonical & Alternate Languages -->
-  <link rel="canonical" href="https://abdulrasol.github.io/watt/">
-  <link rel="alternate" hreflang="en" href="https://abdulrasol.github.io/watt/">
-  <link rel="alternate" hreflang="ar" href="https://abdulrasol.github.io/ar/watt/">
+  <link rel="canonical" href="https://subultech.top/watt/">
+  <link rel="alternate" hreflang="en" href="https://subultech.top/watt/">
+  <link rel="alternate" hreflang="ar" href="https://subultech.top/ar/watt/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Watt: Solar Energy Platform">
-  <meta property="og:description" content="A comprehensive solar platform for Iraq that combines system calculation, product marketplace, quotations, and business operations in one experience.">
+  <meta property="og:title" content="Watt: Solar Sizing, Climate Data &amp; Solar Store">
+  <meta property="og:description" content="Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://abdulrasol.github.io/watt/">
-  <meta property="og:image" content="https://abdulrasol.github.io/assets/watt/logo.png">
+  <meta property="og:url" content="https://subultech.top/watt/">
+  <meta property="og:image" content="https://subultech.top/assets/watt/logo.png">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Watt: Solar Energy Platform">
-  <meta name="twitter:description" content="A comprehensive solar platform for Iraq that combines system calculation, product marketplace, quotations, and business operations in one experience.">
-  <meta name="twitter:image" content="https://abdulrasol.github.io/assets/watt/logo.png">
+  <meta name="twitter:title" content="Watt: Solar Sizing, Climate Data &amp; Solar Store">
+  <meta name="twitter:description" content="Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.">
+  <meta name="twitter:image" content="https://subultech.top/assets/watt/logo.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/watt/logo.png">
@@ -54,8 +54,16 @@
     }
   </style>
 
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('portfolio_theme');
+      document.documentElement.dataset.theme = savedTheme === 'dark' || savedTheme === 'light'
+        ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch { /* System theme is applied by the main script. */ }
+  </script>
   <!-- Styles -->
   <link rel="stylesheet" href="/static/css/project.css">
+  <link rel="stylesheet" href="/static/css/brand.css?v=2">
 
 <script data-goatcounter="https://abdulrasol.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -73,12 +81,13 @@
       "price": "0",
       "priceCurrency": "USD"
     },
-    "description": "A comprehensive solar platform for Iraq that combines system calculation, product marketplace, quotations, and business operations in one experience.",
-"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",    "image": "https://abdulrasol.github.io/assets/watt/logo.png"
+    "description": "Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.",
+"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",    "image": "https://subultech.top/assets/watt/logo.png"
   }
   </script>
 </head>
-<body data-lang="en">
+<body data-lang="en" class="product-site">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- Header -->
   <header class="project-header" id="project-header">
@@ -88,9 +97,10 @@
         <span>Watt</span>
       </a>
 
-      <a href="/" class="back-link desktop-back">
+      <a href="/" class="back-link desktop-back parent-brand">
+        <img src="/static/images/brand/symbol-teal.svg" alt="" width="24" height="28">
         <i class="fas fa-arrow-left"></i>
-        ← Back to Portfolio
+        By Subul Technology
       </a>
 
       <div class="header-actions">
@@ -111,27 +121,26 @@
     <div class="mobile-nav" id="mobile-nav" hidden>
       <a href="/">← Back to Portfolio</a>
       <a href="/watt/">Home</a>
-<a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#market">Market</a><a href="#features">Features</a><a href="#revenue">Revenue</a><a href="#why-invest">Why invest</a><a href="#screenshots">Screenshots</a>      <a href="/ar/watt/" data-lang-switch>العربية</a>
+<a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#market">Market</a><a href="#features">Features</a><a href="#revenue">Revenue</a><a href="#why-invest">Why invest</a><a href="/watt/privacy_policy/">Privacy Policy</a><a href="/watt/terms.html">Terms of Service</a><a href="/watt/changelogs.html">Changelog</a>      <a href="/ar/watt/" data-lang-switch>العربية</a>
     </div>
   </header>
 
   <!-- Main Content -->
-  <main>
+  <main id="main-content">
 
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <div class="hero-banner" style="background-image: url('/assets/watt/banar.png')"></div>
     <div class="hero-orb hero-orb-primary"></div>
     <div class="hero-orb hero-orb-secondary"></div>
   </div>
 
   <div class="container hero-content">
     <div class="hero-text">
-      <div class="hero-badge reveal">Iraq&#39;s first integrated solar marketplace</div>
+      <div class="hero-badge reveal">Formerly Taqati · Solar engineering in your pocket</div>
 
       <img src="/assets/watt/logo.png" alt="Watt" class="hero-logo reveal">
-      <h1 class="hero-title reveal">Turn Solar Demand Into <span class="highlight">A Scalable Platform</span></h1>
-      <p class="hero-subtitle reveal">Watt combines solar calculation, system design, supplier marketplace, quotations, and business operations in one platform for consumers and companies.</p>
+      <h1 class="hero-title reveal">Size your solar system <span class="highlight">from your real location</span></h1>
+      <p class="hero-subtitle reveal">Watt turns your loads and your location into panels, batteries and an inverter, backed by PVGIS and NASA climate data, then connects you to a solar store and company quotations.</p>
 
       <div class="hero-actions reveal">
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt"
@@ -142,13 +151,21 @@
           <i class="fab fa-google-play"></i>
           Download on Google Play
         </a>
-        <a href="#project-cta" class="btn btn-secondary">
-          <i class="fas fa-arrow-down"></i>
-          View Investment Case
+        <a href="https://apps.apple.com/iq/app/watt-solar-system-calculator/id6820459639"
+           data-goatcounter-click="project-app-store-watt"
+           class="btn btn-secondary"
+           target="_blank"
+           rel="noopener">
+          <i class="fab fa-apple"></i>
+          App Store
         </a>
-        <a href="mailto:watt@subultech.top" class="btn btn-secondary">
-          <i class="fas fa-paper-plane"></i>
-          Need a similar system?
+        <a href="https://watt.subultech.top"
+           data-goatcounter-click="project-web-app-watt"
+           class="btn btn-secondary"
+           target="_blank"
+           rel="noopener">
+          <i class="fas fa-globe"></i>
+          Open on the web
         </a>
       </div>
 
@@ -159,20 +176,20 @@
 
       <div class="hero-stats reveal">
         <div class="hero-stat">
-          <div class="hero-stat-value">+300</div>
-          <div class="hero-stat-label">Active users</div>
+          <div class="hero-stat-value">PVGIS</div>
+          <div class="hero-stat-label">Satellite climate data for your site</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-value">+50</div>
-          <div class="hero-stat-label">Registered companies</div>
+          <div class="hero-stat-value">Offline</div>
+          <div class="hero-stat-label">Built-in climate grid for Iraq</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-value">+25</div>
-          <div class="hero-stat-label">Iraqi cities</div>
+          <div class="hero-stat-value">AR + EN</div>
+          <div class="hero-stat-label">Arabic and English</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-value">B2B + B2C</div>
-          <div class="hero-stat-label">Dual business model</div>
+          <div class="hero-stat-value">Free</div>
+          <div class="hero-stat-label">Calculators and design tools</div>
         </div>
       </div>
 
@@ -184,13 +201,9 @@
     </div>
 
     <div class="hero-visual reveal">
-      <div class="hero-device-stack">
-        <div class="device device-back">
-          <img src="/assets/watt/screenshots/1.jpg" alt="Watt screenshot">
-        </div>
-        <div class="device device-front">
-          <img src="/assets/watt/screenshots/2.jpg" alt="Watt screenshot">
-        </div>
+      <div class="hero-brand-card">
+        <img src="/assets/watt/logo.png" alt="Watt">
+        <p>Size, design, and buy your solar system</p>
       </div>
     </div>
   </div>
@@ -199,19 +212,19 @@
 <section class="section story-section story-section-split" id="problem">
   <div class="container story-grid">
     <div class="story-copy reveal">
-<span class="section-eyebrow">The problem</span><h2 class="section-title">Iraq has a power gap and a fragmented solar market</h2><p class="section-subtitle">Demand is real, but discovery, comparison, and execution are still difficult.</p><p class="story-body">Iraq faces chronic electricity shortages while having one of the strongest solar conditions in the region. Consumers and companies still struggle with an unstructured market, inconsistent pricing, and the lack of one trusted workflow from sizing to purchase and execution.</p>
+<span class="section-eyebrow">The problem</span><h2 class="section-title">Solar sizing should not be guesswork</h2><p class="section-subtitle">Wrong sizing wastes money and wears out batteries early.</p><p class="story-body">Iraq has strong sun but long power outages, and most buyers size their system from rules of thumb. Without real irradiance and temperature data, systems end up too small, too expensive, or hard on the batteries. Prices and specifications are also scattered across the market.</p>
       <div class="story-list">
         <div class="story-list-item">
-<span class="story-list-icon">❌</span>          <span>8-12 hours of daily power outages in many areas</span>
+<span class="story-list-icon">❌</span>          <span>Rule-of-thumb sizing that ignores your real location and worst months</span>
         </div>
         <div class="story-list-item">
-<span class="story-list-icon">❌</span>          <span>High generator and fuel costs</span>
+<span class="story-list-icon">❌</span>          <span>Batteries sized on the wrong load and worn out early</span>
         </div>
         <div class="story-list-item">
-<span class="story-list-icon">❌</span>          <span>Unstructured market for solar distributors and installers</span>
+<span class="story-list-icon">❌</span>          <span>Hard to get reliable sun and temperature data for your site</span>
         </div>
         <div class="story-list-item">
-<span class="story-list-icon">❌</span>          <span>Difficult price and specification comparison across suppliers</span>
+<span class="story-list-icon">❌</span>          <span>Prices and specifications are hard to compare across suppliers</span>
         </div>
       </div>
     </div>
@@ -228,21 +241,21 @@
 <section class="section cards-section cards-section-alt" id="solution">
   <div class="container">
     <div class="section-header reveal">
-<span class="section-eyebrow">The solution</span><h2 class="section-title">Watt brings the whole solar journey into one platform</h2><p class="section-subtitle">From first calculation to quotation, order, and business operations.</p>    </div>
+<span class="section-eyebrow">The solution</span><h2 class="section-title">Watt: from your loads to a system you can buy</h2><p class="section-subtitle">Calculate, check, design, then request quotes or shop in one app.</p>    </div>
 
     <div class="feature-showcase-grid">
       <article class="feature-showcase-card reveal">
-<span class="feature-icon">🔢</span><h3>Smart solar calculator</h3><p>Calculate panels, batteries, inverters, and energy needs with practical accuracy.</p>      </article>
+<span class="feature-icon">🧮</span><h3>Location-based calculator</h3><p>Panels, battery bank, inverter and charger sized from your appliances and the real monthly sun at your site.</p>      </article>
       <article class="feature-showcase-card reveal">
-<span class="feature-icon">🏪</span><h3>B2B + B2C marketplace</h3><p>A unified marketplace for consumers and companies to browse and compare equipment.</p>      </article>
+<span class="feature-icon">🛰️</span><h3>Trusted climate data</h3><p>PVGIS first, NASA POWER as backup, and a built-in grid for Iraq that works without internet. Every result shows its data source.</p>      </article>
       <article class="feature-showcase-card reveal">
-<span class="feature-icon">📋</span><h3>Quotation workflow</h3><p>Request and compare quotations from multiple companies inside one product flow.</p>      </article>
+<span class="feature-icon">🔋</span><h3>Outage-aware batteries</h3><p>Battery size follows the load you keep during an outage, with startup surge, and a chart of how long the system lasts.</p>      </article>
       <article class="feature-showcase-card reveal">
-<span class="feature-icon">📊</span><h3>Inventory and sales operations</h3><p>For companies, manage stock, orders, customers, and financial reporting.</p>      </article>
+<span class="feature-icon">📐</span><h3>PV system designer</h3><p>Lay out panels on your roof, design the mounting structure, and export your design.</p>      </article>
       <article class="feature-showcase-card reveal">
-<span class="feature-icon">💳</span><h3>Integrated accounting</h3><p>Invoices, ledgers, receivables, payables, and profitability in one operational system.</p>      </article>
+<span class="feature-icon">🛒</span><h3>Watt Store and quotations</h3><p>Browse products from verified companies and technicians, request quotations, and compare offers.</p>      </article>
       <article class="feature-showcase-card reveal">
-<span class="feature-icon">✏️</span><h3>System designer</h3><p>Professional system-design tooling with bill-of-material support.</p>      </article>
+<span class="feature-icon">🩺</span><h3>System health check</h3><p>Audit any system, including one you added manually, and see exactly what is under- or over-sized.</p>      </article>
     </div>
   </div>
 </section>
@@ -272,30 +285,102 @@
 <section class="section features" id="features">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-eyebrow">Platform features</span>
-      <h2 class="section-title">Platform features</h2>
-<p class="section-subtitle">Watt serves both end users and solar businesses in one connected experience.</p>    </div>
+      <span class="section-eyebrow">Everything Watt does</span>
+      <h2 class="section-title">Everything Watt does</h2>
+<p class="section-subtitle">Calculators, climate data, design tools, a solar store, and quotations in one app for homeowners, technicians, and companies.</p>    </div>
 
-    <div class="features-grid">
-      <article class="feature-card reveal">
-<span class="feature-icon">🧮</span><h3>Quick calculator</h3><p>Estimate usage, system size, component count, and cost within minutes.</p>      </article>
-      <article class="feature-card reveal">
-<span class="feature-icon">🛒</span><h3>B2B + B2C marketplace</h3><p>A product marketplace for both end customers and professional solar companies.</p>      </article>
-      <article class="feature-card reveal">
-<span class="feature-icon">🤝</span><h3>Quotation requests</h3><p>Let users create requests and compare multiple company offers before choosing.</p>      </article>
-      <article class="feature-card reveal">
-<span class="feature-icon">📦</span><h3>Order tracking</h3><p>Follow the journey from request submission to delivery and installation.</p>      </article>
-      <article class="feature-card reveal">
-<span class="feature-icon">👥</span><h3>Team management</h3><p>Add team members, manage permissions, and coordinate sales and operations.</p>      </article>
-      <article class="feature-card reveal">
-<span class="feature-icon">💬</span><h3>Community and advisory space</h3><p>Support discussion, educational content, and practical market trust building.</p>      </article>
-      <article class="feature-card reveal">
-<span class="feature-icon">📐</span><h3>System designer</h3><p>Design systems with more professional logic and output-ready material structures.</p>      </article>
-      <article class="feature-card reveal">
-<span class="feature-icon">📊</span><h3>Reports and analytics</h3><p>Operational and financial visibility for companies running solar sales and projects.</p>      </article>
-      <article class="feature-card reveal">
-<span class="feature-icon">🔔</span><h3>Smart notifications</h3><p>Real-time updates for orders, offers, changes, and commercial activity.</p>      </article>
-    </div>
+      <div class="feature-group reveal">
+<h3 class="feature-group-title">Solar system calculator</h3>        <div class="features-grid">
+          <article class="feature-card">
+<span class="feature-icon">🧮</span><h3>System wizard</h3><p>Step by step: your loads, location and preferences give panels, battery bank, inverter and charger. Supports off-grid and hybrid systems.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">⚡</span><h3>Fast calculator</h3><p>A quick estimate on the same sizing engine as the full wizard, with AC voltage, battery type and a live performance panel.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🔌</span><h3>Detailed appliances mode</h3><p>A catalog of 20 common appliances fills power, duty cycle and startup surge for you, and you choose which ones stay on backup.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">📍</span><h3>Sized for your location</h3><p>Uses the real monthly sun at your site, finds the best tilt and direction automatically, and designs for the average of the three worst months by default.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🔋</span><h3>Outage survival</h3><p>See for every start hour how long the system lasts on sun and battery alone, with the worst and best periods and a load sensitivity table.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">📈</span><h3>Multi-day simulation</h3><p>Battery charge over consecutive days with real charging efficiency and your charger current, shown in a clear chart.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🩺</span><h3>System health check</h3><p>An engineering audit that flags weak chargers, undersized inverters or batteries and unrealistic assumptions, for calculated and manually added systems.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">💾</span><h3>Saved systems</h3><p>Save calculations, reopen and edit them, or add an existing system manually and compare it with the recommended one.</p>          </article>
+        </div>
+      </div>
+      <div class="feature-group reveal">
+<h3 class="feature-group-title">Engineering tools</h3>        <div class="features-grid">
+          <article class="feature-card">
+<span class="feature-icon">☀️</span><h3>Panel calculator</h3><p>Panel count and array layout for a target power.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🔋</span><h3>Battery calculators</h3><p>Battery capacity, runtime and number of batteries for your load.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🔁</span><h3>Inverter calculator</h3><p>Choose an inverter size from your loads and startup surge.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🧵</span><h3>Wire calculator</h3><p>Wire size and voltage drop for your current and distance.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">💧</span><h3>Solar pump calculator</h3><p>Size a solar water-pumping system.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🧭</span><h3>Direction and tilt</h3><p>Best panel direction and tilt for your location and season.</p>          </article>
+        </div>
+      </div>
+      <div class="feature-group reveal">
+<h3 class="feature-group-title">Design</h3>        <div class="features-grid">
+          <article class="feature-card">
+<span class="feature-icon">📐</span><h3>PV system designer</h3><p>Design the array step by step and export your design, including a technical sketch.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🏠</span><h3>Roof simulator</h3><p>Place panels on a roof and see how many fit.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🏗️</span><h3>Mounting structure design</h3><p>Pick the location on a map, optimize the seasonal tilt, and get a clear drawing of the structure.</p>          </article>
+        </div>
+      </div>
+      <div class="feature-group reveal">
+<h3 class="feature-group-title">Climate data and weather</h3>        <div class="features-grid">
+          <article class="feature-card">
+<span class="feature-icon">🛰️</span><h3>PVGIS satellite data</h3><p>Monthly and hourly sun and temperature for any coordinates.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🌐</span><h3>NASA POWER backup</h3><p>If PVGIS is unreachable, Watt switches to NASA data and tells you.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">📶</span><h3>Offline grid for Iraq</h3><p>A built-in climate grid lets you size systems in Iraq with no connection.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🏷️</span><h3>Data source badges</h3><p>Each result shows where its numbers came from, and a data sources page explains each one.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">⛅</span><h3>Solar outlook on the home screen</h3><p>Today&#39;s solar production outlook for your city at a glance.</p>          </article>
+        </div>
+      </div>
+      <div class="feature-group reveal">
+<h3 class="feature-group-title">Watt Store and quotations</h3>        <div class="features-grid">
+          <article class="feature-card">
+<span class="feature-icon">🛒</span><h3>Watt Store</h3><p>Browse products by category, offers, trusted brands and top vendors, with search and vendor profiles.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🛍️</span><h3>Cart and checkout</h3><p>A separate cart per seller, delivery zones, and a full order history with tracking.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🏪</span><h3>Sell as a company or technician</h3><p>Add products with options, wholesale price tiers, stock and an optional brand, and manage incoming orders.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">📋</span><h3>Quotation requests</h3><p>Send a request from your calculated system and compare offers from several companies.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🏷️</span><h3>Brands and catalog</h3><p>Approved brands and categories, including mounting structures and accessories, with brand suggestions from users.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🏢</span><h3>Company profile and dashboard</h3><p>Register your company and manage its offers, products and orders.</p>          </article>
+        </div>
+      </div>
+      <div class="feature-group reveal">
+<h3 class="feature-group-title">Account and app</h3>        <div class="features-grid">
+          <article class="feature-card">
+<span class="feature-icon">🔐</span><h3>Google and Apple sign-in</h3><p>No password to remember, and you can delete your account inside the app.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">👤</span><h3>Account types</h3><p>User, technician and company accounts, each with the screens it needs.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">💱</span><h3>Your country&#39;s prices</h3><p>Estimated cost in your country&#39;s currency, shown only when prices are published for it.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🔔</span><h3>Notifications you control</h3><p>Orders, offers and updates, with settings to switch off what you do not want.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🌍</span><h3>Arabic and English</h3><p>Full right-to-left Arabic and English, with light and dark themes.</p>          </article>
+          <article class="feature-card">
+<span class="feature-icon">🧭</span><h3>Guided tours and feedback</h3><p>Interactive tours for new users, a feedback form, and update prompts.</p>          </article>
+        </div>
+      </div>
   </div>
 </section>
 
@@ -315,65 +400,6 @@
   </div>
 </section>
 
-<section class="section screenshots-section" id="screenshots">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-eyebrow">Preview</span>
-      <h2 class="section-title">App Screenshots</h2>
-    </div>
-    <div class="screenshots-scroll">
-      <div class="screenshot-item reveal">
-        <div class="phone-frame">
-          <div class="phone-content">
-            <img src="/assets/watt/screenshots/1.jpg" alt="Watt screenshot" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="screenshot-item reveal">
-        <div class="phone-frame">
-          <div class="phone-content">
-            <img src="/assets/watt/screenshots/2.jpg" alt="Watt screenshot" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="screenshot-item reveal">
-        <div class="phone-frame">
-          <div class="phone-content">
-            <img src="/assets/watt/screenshots/3.jpg" alt="Watt screenshot" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="screenshot-item reveal">
-        <div class="phone-frame">
-          <div class="phone-content">
-            <img src="/assets/watt/screenshots/4.jpg" alt="Watt screenshot" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="screenshot-item reveal">
-        <div class="phone-frame">
-          <div class="phone-content">
-            <img src="/assets/watt/screenshots/5.jpg" alt="Watt screenshot" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="screenshot-item reveal">
-        <div class="phone-frame">
-          <div class="phone-content">
-            <img src="/assets/watt/screenshots/6.jpg" alt="Watt screenshot" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="screenshot-item reveal">
-        <div class="phone-frame">
-          <div class="phone-content">
-            <img src="/assets/watt/screenshots/7.jpg" alt="Watt screenshot" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="section story-section" id="why-invest">
   <div class="container">
@@ -412,6 +438,66 @@
 
 
 
+<section class="section faq-section" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">FAQ</span>
+      <h2 class="section-title">Frequently asked questions</h2>
+<p class="section-subtitle">Short answers about Watt.</p>    </div>
+
+    <div class="faq-grid">
+      <article class="faq-card reveal">
+        <h3 class="faq-question">
+          <i class="fas fa-circle-question"></i>
+          <span>Is Watt the same app as Taqati?</span>
+        </h3>
+        <p class="faq-answer">Yes. Taqati was renamed Watt. Your account and saved systems continue in the same app, and old Taqati links redirect to this page.</p>
+      </article>
+      <article class="faq-card reveal">
+        <h3 class="faq-question">
+          <i class="fas fa-circle-question"></i>
+          <span>Is Watt free?</span>
+        </h3>
+        <p class="faq-answer">The calculators and design tools are free. Prices of products in the store are set by the sellers.</p>
+      </article>
+      <article class="faq-card reveal">
+        <h3 class="faq-question">
+          <i class="fas fa-circle-question"></i>
+          <span>Which countries does Watt support?</span>
+        </h3>
+        <p class="faq-answer">The calculators work anywhere using PVGIS or NASA data. Iraq also has a built-in offline grid. Price estimates and store features appear for countries where they are available.</p>
+      </article>
+      <article class="faq-card reveal">
+        <h3 class="faq-question">
+          <i class="fas fa-circle-question"></i>
+          <span>Where do the solar numbers come from?</span>
+        </h3>
+        <p class="faq-answer">From PVGIS (European Commission, JRC) first, then NASA POWER if PVGIS is unreachable, and a built-in grid for Iraq when you are offline. Each result shows its source.</p>
+      </article>
+      <article class="faq-card reveal">
+        <h3 class="faq-question">
+          <i class="fas fa-circle-question"></i>
+          <span>Can I rely on the results to buy equipment?</span>
+        </h3>
+        <p class="faq-answer">Results are engineering estimates for planning. Confirm the final design and safety items such as wiring and breakers with a qualified technician before installing.</p>
+      </article>
+      <article class="faq-card reveal">
+        <h3 class="faq-question">
+          <i class="fas fa-circle-question"></i>
+          <span>Does Watt need my location?</span>
+        </h3>
+        <p class="faq-answer">Only if you allow it, to fetch the sun at your site. You can also pick a place on the map or skip it and get a clearly labelled general estimate.</p>
+      </article>
+      <article class="faq-card reveal">
+        <h3 class="faq-question">
+          <i class="fas fa-circle-question"></i>
+          <span>How do I delete my account?</span>
+        </h3>
+        <p class="faq-answer">From your account page inside the app, or by following the steps on the account deletion page.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
 <section class="section project-cta-section" id="project-cta">
   <div class="container">
@@ -445,14 +531,20 @@
           <img src="/assets/watt/logo.png" alt="Watt" width="36" height="36">
           <span>Watt</span>
         </a>
-        <p>Iraq&#39;s integrated solar platform</p>
+        <p>Size, design, and buy your solar system</p>
+        <a class="parent-brand" href="/"><img src="/static/images/brand/symbol-teal.svg" alt="" width="22" height="26">A Subul Technology product</a>
       </div>
 
+      <div class="footer-links">
+        <h4>Legal</h4>
+<a href="/watt/privacy_policy/">Privacy Policy</a><a href="/watt/terms.html">Terms of Service</a><a href="/watt/changelogs.html">Changelog</a>      </div>
 
       <div class="footer-contact">
         <h4>Contact</h4>
         <a href="mailto:watt@subultech.top"><i class="fas fa-envelope"></i> watt@subultech.top</a>
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt" data-goatcounter-click="footer-google-play-watt" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
+        <a href="https://apps.apple.com/iq/app/watt-solar-system-calculator/id6820459639" data-goatcounter-click="footer-app-store-watt" target="_blank" rel="noopener"><i class="fab fa-apple"></i> App Store</a>
+        <a href="https://watt.subultech.top" data-goatcounter-click="footer-web-app-watt" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Web app</a>
       </div>
     </div>
 

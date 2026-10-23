@@ -36,7 +36,8 @@
   <meta name="twitter:image" content="{{ site.url }}/logo.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/static/images/brand/symbol-teal.svg">
   <link rel="apple-touch-icon" href="/logo.png">
 
   <!-- Fonts -->
@@ -47,9 +48,17 @@
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('portfolio_theme');
+      document.documentElement.dataset.theme = savedTheme === 'dark' || savedTheme === 'light'
+        ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch { /* System theme is applied by the main script. */ }
+  </script>
   <!-- Styles -->
   <link rel="stylesheet" href="/static/css/style.css">
   <link rel="stylesheet" href="/static/css/additional.css">
+  <link rel="stylesheet" href="/static/css/brand.css?v=2">
 
   {% include "partials/analytics.html" %}
 
@@ -87,8 +96,8 @@
   <header class="site-header" id="header">
     <div class="container header-inner">
       <a href="{{ link('/') }}" class="logo">
-        <img src="/logo.png" alt="{{ company.name }} logo" width="40" height="40">
-        <span>{{ company.name }}</span>
+        <img src="/static/images/brand/symbol-teal.svg" alt="" width="40" height="48">
+        <span class="brand-wordmark"><strong>{{ "Subul" if lang == "en" else "سُبُل" }}</strong><small>{{ "Technology" if lang == "en" else "التكنولوجيا" }}</small></span>
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
@@ -131,6 +140,9 @@
       <a href="{{ link('/') }}">{{ nav.home | default('Home' if lang == 'en' else 'الرئيسية') }}</a>
       <a href="{{ link('/') }}#services">{{ nav.services | default('Services' if lang == 'en' else 'خدماتنا') }}</a>
       <a href="{{ link('/') }}#projects">{{ nav.products | default('Products' if lang == 'en' else 'منتجاتنا') }}</a>
+      <a href="{{ link('/team/') }}">{{ nav.team }}</a>
+      <a href="{{ link('/invest/') }}">{{ nav.investors }}</a>
+      <a href="{{ link('/careers/') }}">{{ nav.careers }}</a>
       <a href="{{ blog_url }}" target="_blank" rel="noopener">{{ nav.blog | default('Blog' if lang == 'en' else 'المدونة') }}</a>
       <a href="{{ link('/') }}#contact">{{ nav.contact | default('Contact' if lang == 'en' else 'تواصل') }}</a>
       <div class="mobile-nav-meta">
@@ -149,8 +161,8 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="{{ link('/') }}" class="logo">
-          <img src="/logo.png" alt="{{ company.name }} logo" width="36" height="36">
-          <span>{{ company.name }}</span>
+          <img src="/static/images/brand/symbol-teal.svg" alt="" width="40" height="48">
+        <span class="brand-wordmark"><strong>{{ "Subul" if lang == "en" else "سُبُل" }}</strong><small>{{ "Technology" if lang == "en" else "التكنولوجيا" }}</small></span>
         </a>
         <p>{{ footer.tagline }}</p>
       </div>

@@ -16,23 +16,23 @@
   <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
 
   <!-- Canonical & Alternate Languages -->
-  <link rel="canonical" href="https://abdulrasol.github.io/store-management/">
-  <link rel="alternate" hreflang="en" href="https://abdulrasol.github.io/store-management/">
-  <link rel="alternate" hreflang="ar" href="https://abdulrasol.github.io/ar/store-management/">
+  <link rel="canonical" href="https://subultech.top/store-management/">
+  <link rel="alternate" hreflang="en" href="https://subultech.top/store-management/">
+  <link rel="alternate" hreflang="ar" href="https://subultech.top/ar/store-management/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Store Management App">
   <meta property="og:description" content="Your all-in-one solution for effortless store management. Track inventory, manage invoices, analyze sales, and stay connected with customers and suppliers.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://abdulrasol.github.io/store-management/">
-  <meta property="og:image" content="https://abdulrasol.github.io/assets/store_mangement/logo.png">
+  <meta property="og:url" content="https://subultech.top/store-management/">
+  <meta property="og:image" content="https://subultech.top/assets/store_mangement/logo.png">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Store Management App">
   <meta name="twitter:description" content="Your all-in-one solution for effortless store management. Track inventory, manage invoices, analyze sales, and stay connected with customers and suppliers.">
-  <meta name="twitter:image" content="https://abdulrasol.github.io/assets/store_mangement/logo.png">
+  <meta name="twitter:image" content="https://subultech.top/assets/store_mangement/logo.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/store_mangement/logo.png">
@@ -54,8 +54,16 @@
     }
   </style>
 
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('portfolio_theme');
+      document.documentElement.dataset.theme = savedTheme === 'dark' || savedTheme === 'light'
+        ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch { /* System theme is applied by the main script. */ }
+  </script>
   <!-- Styles -->
   <link rel="stylesheet" href="/static/css/project.css">
+  <link rel="stylesheet" href="/static/css/brand.css?v=2">
 
 <script data-goatcounter="https://abdulrasol.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -74,11 +82,12 @@
       "priceCurrency": "USD"
     },
     "description": "Your all-in-one solution for effortless store management. Track inventory, manage invoices, analyze sales, and stay connected with customers and suppliers.",
-"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.store_mangment",    "image": "https://abdulrasol.github.io/assets/store_mangement/logo.png"
+"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.store_mangment",    "image": "https://subultech.top/assets/store_mangement/logo.png"
   }
   </script>
 </head>
-<body data-lang="en">
+<body data-lang="en" class="product-site">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- Header -->
   <header class="project-header" id="project-header">
@@ -88,9 +97,10 @@
         <span>Store Management</span>
       </a>
 
-      <a href="/" class="back-link desktop-back">
+      <a href="/" class="back-link desktop-back parent-brand">
+        <img src="/static/images/brand/symbol-teal.svg" alt="" width="24" height="28">
         <i class="fas fa-arrow-left"></i>
-        ← Back to Portfolio
+        By Subul Technology
       </a>
 
       <div class="header-actions">
@@ -116,7 +126,7 @@
   </header>
 
   <!-- Main Content -->
-  <main>
+  <main id="main-content">
 
 <section class="hero" id="hero">
   <div class="hero-bg">
@@ -317,6 +327,7 @@
           <span>Store Management</span>
         </a>
         <p>Complete store operations in one app</p>
+        <a class="parent-brand" href="/"><img src="/static/images/brand/symbol-teal.svg" alt="" width="22" height="26">A Subul Technology product</a>
       </div>
 
 

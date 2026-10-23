@@ -42,6 +42,16 @@
           {{ hero.secondary_cta or ('App Store' if lang == 'en' else 'متجر أبل') }}
         </a>
         {% endif %}
+        {% if links.webApp %}
+        <a href="{{ links.webApp }}"
+           data-goatcounter-click="project-web-app-{{ id }}"
+           class="btn btn-secondary"
+           target="_blank"
+           rel="noopener">
+          <i class="fas fa-globe"></i>
+          {{ hero.web_cta or ('Open on the web' if lang == 'en' else 'افتح نسخة الويب') }}
+        </a>
+        {% endif %}
         {% if hero.secondary_cta and has_project_cta and not links.appStore %}
         <a href="#project-cta" class="btn btn-secondary">
           <i class="fas fa-arrow-down"></i>

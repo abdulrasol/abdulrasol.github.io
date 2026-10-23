@@ -16,23 +16,23 @@
   <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
 
   <!-- Canonical & Alternate Languages -->
-  <link rel="canonical" href="https://abdulrasol.github.io/ar/sweep/">
-  <link rel="alternate" hreflang="en" href="https://abdulrasol.github.io/sweep/">
-  <link rel="alternate" hreflang="ar" href="https://abdulrasol.github.io/ar/sweep/">
+  <link rel="canonical" href="https://subultech.top/ar/sweep/">
+  <link rel="alternate" hreflang="en" href="https://subultech.top/sweep/">
+  <link rel="alternate" hreflang="ar" href="https://subultech.top/ar/sweep/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="SWEEP — منظف ماك للمطورين">
   <meta property="og:description" content="أداة عالية الأداء لتنظيف أجهزة Mac للمطورين. مبنية بـ Rust و Tauri v2 و React. تجد وتزيل تلقائياً الملفات المخفية للتطوير لاسترداد مساحة القرص.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://abdulrasol.github.io/ar/sweep/">
-  <meta property="og:image" content="https://abdulrasol.github.io/assets/sweep/logo.png">
+  <meta property="og:url" content="https://subultech.top/ar/sweep/">
+  <meta property="og:image" content="https://subultech.top/assets/sweep/logo.png">
   <meta property="og:locale" content="ar_AR">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SWEEP — منظف ماك للمطورين">
   <meta name="twitter:description" content="أداة عالية الأداء لتنظيف أجهزة Mac للمطورين. مبنية بـ Rust و Tauri v2 و React. تجد وتزيل تلقائياً الملفات المخفية للتطوير لاسترداد مساحة القرص.">
-  <meta name="twitter:image" content="https://abdulrasol.github.io/assets/sweep/logo.png">
+  <meta name="twitter:image" content="https://subultech.top/assets/sweep/logo.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/sweep/logo.png">
@@ -54,8 +54,16 @@
     }
   </style>
 
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('portfolio_theme');
+      document.documentElement.dataset.theme = savedTheme === 'dark' || savedTheme === 'light'
+        ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch { /* System theme is applied by the main script. */ }
+  </script>
   <!-- Styles -->
   <link rel="stylesheet" href="/static/css/project.css">
+  <link rel="stylesheet" href="/static/css/brand.css?v=2">
 
 <script data-goatcounter="https://abdulrasol.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -74,11 +82,12 @@
       "priceCurrency": "USD"
     },
     "description": "أداة عالية الأداء لتنظيف أجهزة Mac للمطورين. مبنية بـ Rust و Tauri v2 و React. تجد وتزيل تلقائياً الملفات المخفية للتطوير لاسترداد مساحة القرص.",
-    "image": "https://abdulrasol.github.io/assets/sweep/logo.png"
+    "image": "https://subultech.top/assets/sweep/logo.png"
   }
   </script>
 </head>
-<body data-lang="ar">
+<body data-lang="ar" class="product-site">
+  <a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
 
   <!-- Header -->
   <header class="project-header" id="project-header">
@@ -88,9 +97,10 @@
         <span>SWEEP</span>
       </a>
 
-      <a href="/ar/" class="back-link desktop-back">
+      <a href="/ar/" class="back-link desktop-back parent-brand">
+        <img src="/static/images/brand/symbol-teal.svg" alt="" width="24" height="28">
         <i class="fas fa-arrow-right"></i>
-        العودة للمعرض →
+        من سُبُل التكنولوجيا
       </a>
 
       <div class="header-actions">
@@ -111,12 +121,12 @@
     <div class="mobile-nav" id="mobile-nav" hidden>
       <a href="/ar/">العودة للمعرض →</a>
       <a href="/ar/sweep/">الرئيسية</a>
-<a href="#features">الميزات</a><a href="#screenshots">اللقطات</a>      <a href="/sweep/" data-lang-switch>English</a>
+<a href="#features">الميزات</a>      <a href="/sweep/" data-lang-switch>English</a>
     </div>
   </header>
 
   <!-- Main Content -->
-  <main>
+  <main id="main-content">
 
 <section class="hero" id="hero">
   <div class="hero-bg">
@@ -158,13 +168,9 @@
     </div>
 
     <div class="hero-visual reveal">
-      <div class="hero-device-stack">
-        <div class="device device-back">
-          <img src="/assets/sweep/screenshots/01.png" alt="SWEEP screenshot">
-        </div>
-        <div class="device device-front">
-          <img src="/assets/sweep/screenshots/02.png" alt="SWEEP screenshot">
-        </div>
+      <div class="hero-brand-card">
+        <img src="/assets/sweep/logo.png" alt="SWEEP">
+        <p>استرد مساحة قرصك، ملفاً تلو الآخر</p>
       </div>
     </div>
   </div>
@@ -196,37 +202,6 @@
 </section>
 
 
-<section class="section screenshots-section" id="screenshots">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-eyebrow">استعراض</span>
-      <h2 class="section-title">لقطات الشاشة</h2>
-    </div>
-    <div class="screenshots-scroll">
-      <div class="screenshot-item reveal">
-        <div class="phone-frame">
-          <div class="phone-content">
-            <img src="/assets/sweep/screenshots/01.png" alt="SWEEP screenshot" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="screenshot-item reveal">
-        <div class="phone-frame">
-          <div class="phone-content">
-            <img src="/assets/sweep/screenshots/02.png" alt="SWEEP screenshot" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="screenshot-item reveal">
-        <div class="phone-frame">
-          <div class="phone-content">
-            <img src="/assets/sweep/screenshots/03.png" alt="SWEEP screenshot" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
@@ -245,6 +220,7 @@
           <span>SWEEP</span>
         </a>
         <p>استرد مساحة قرصك، ملفاً تلو الآخر</p>
+        <a class="parent-brand" href="/ar/"><img src="/static/images/brand/symbol-teal.svg" alt="" width="22" height="26">أحد منتجات سُبُل التكنولوجيا</a>
       </div>
 
 
@@ -261,7 +237,7 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/9647813639721?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B3%D8%A8%D9%84%20%D8%A7%D9%84%D8%AA%D9%83%D9%86%D9%84%D9%88%D8%AC%D9%8A%D8%A7%D8%8C%20%D8%B2%D8%B1%D8%AA%20%D9%85%D9%88%D9%82%D8%B9%D9%83%D9%85%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A3%D9%88%20%D9%85%D9%86%D8%AA%D8%AC%20%D8%A3%D9%88%20%D8%B4%D8%B1%D8%A7%D9%83%D8%A9."
+  <a href="https://wa.me/9647813639721?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B3%D9%8F%D8%A8%D9%8F%D9%84%20%D8%A7%D9%84%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A7%D8%8C%20%D8%B2%D8%B1%D8%AA%20%D9%85%D9%88%D9%82%D8%B9%D9%83%D9%85%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A3%D9%88%20%D9%85%D9%86%D8%AA%D8%AC%20%D8%A3%D9%88%20%D8%B4%D8%B1%D8%A7%D9%83%D8%A9."
      class="whatsapp-float"
      target="_blank"
      rel="noopener"

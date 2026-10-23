@@ -54,8 +54,16 @@
     }
   </style>
 
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('portfolio_theme');
+      document.documentElement.dataset.theme = savedTheme === 'dark' || savedTheme === 'light'
+        ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch { /* System theme is applied by the main script. */ }
+  </script>
   <!-- Styles -->
   <link rel="stylesheet" href="/static/css/project.css">
+  <link rel="stylesheet" href="/static/css/brand.css?v=2">
 
   {% include "partials/analytics.html" %}
 
@@ -78,7 +86,8 @@
   }
   </script>
 </head>
-<body data-lang="{{ lang }}">
+<body data-lang="{{ lang }}" class="product-site">
+  <a class="skip-link" href="#main-content">{{ "Skip to content" if lang == "en" else "انتقل إلى المحتوى" }}</a>
 
   <!-- Header -->
   <header class="project-header" id="project-header">
@@ -88,9 +97,10 @@
         <span>{{ brand.name }}</span>
       </a>
 
-      <a href="{{ home_url }}" class="back-link desktop-back">
+      <a href="{{ home_url }}" class="back-link desktop-back parent-brand">
+        <img src="/static/images/brand/symbol-teal.svg" alt="" width="24" height="28">
         <i class="fas fa-arrow-{{ 'left' if lang == 'en' else 'right' }}"></i>
-        {{ nav.back_to_portfolio }}
+        {{ "By Subul Technology" if lang == "en" else "من سُبُل التكنولوجيا" }}
       </a>
 
       <div class="header-actions">
@@ -128,7 +138,7 @@
   </header>
 
   <!-- Main Content -->
-  <main>
+  <main id="main-content">
     {% block content %}{% endblock %}
   </main>
 
@@ -141,6 +151,7 @@
           <span>{{ brand.name }}</span>
         </a>
         <p>{{ brand.tagline }}</p>
+        <a class="parent-brand" href="{{ home_url }}"><img src="/static/images/brand/symbol-teal.svg" alt="" width="22" height="26">{{ "A Subul Technology product" if lang == "en" else "أحد منتجات سُبُل التكنولوجيا" }}</a>
       </div>
 
       {% if has_privacy or has_terms or has_changelog %}
@@ -152,7 +163,7 @@
       </div>
       {% endif %}
 
-      {% if links.support_email or links.googlePlay or links.appStore or links.github %}
+      {% if links.support_email or links.googlePlay or links.appStore or links.webApp or links.github %}
       <div class="footer-contact">
         <h4>{{ nav.contact }}</h4>
         {% if links.support_email %}
@@ -163,6 +174,9 @@
         {% endif %}
         {% if links.appStore %}
         <a href="{{ links.appStore }}" data-goatcounter-click="footer-app-store-{{ id }}" target="_blank" rel="noopener"><i class="fab fa-apple"></i> App Store</a>
+        {% endif %}
+        {% if links.webApp %}
+        <a href="{{ links.webApp }}" data-goatcounter-click="footer-web-app-{{ id }}" target="_blank" rel="noopener"><i class="fas fa-globe"></i> {{ 'Web app' if lang == 'en' else 'نسخة الويب' }}</a>
         {% endif %}
         {% if links.github %}
         <a href="{{ links.github }}" data-goatcounter-click="footer-github-{{ id }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>

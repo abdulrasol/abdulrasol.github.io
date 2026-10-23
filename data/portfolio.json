@@ -1,12 +1,12 @@
 {
   "site": {
-    "url": "https://abdulrasol.github.io",
+    "url": "https://subultech.top",
     "title_en": "Subul Technology — Software, AI & Solar Solutions",
-    "title_ar": "سبل التكنلوجيا — حلول برمجية وذكاء اصطناعي وطاقة شمسية",
+    "title_ar": "سُبُل التكنولوجيا — حلول برمجية وذكاء اصطناعي وطاقة شمسية",
     "description_en": "Subul Technology builds mobile apps, web platforms, AI solutions, business systems, and solar tools. From B2B operations software to solar platforms, we deliver practical digital products.",
-    "description_ar": "سبل التكنلوجيا تبني تطبيقات موبايل، منصات ويب، حلول ذكاء اصطناعي، أنظمة أعمال، وأدوات طاقة شمسية. من أنظمة الأعمال إلى المنصات الشمسية، نقدم منتجات رقمية عملية.",
+    "description_ar": "سُبُل التكنولوجيا تبني تطبيقات موبايل، منصات ويب، حلول ذكاء اصطناعي، أنظمة أعمال، وأدوات طاقة شمسية. من أنظمة الأعمال إلى المنصات الشمسية، نقدم منتجات رقمية عملية.",
     "keywords_en": "Subul Technology, Mobile Apps, Web Platforms, AI Solutions, Solar Tools, B2B Systems, Iraq Tech, Software Company",
-    "keywords_ar": "سبل التكنلوجيا, تطبيقات موبايل, منصات ويب, ذكاء اصطناعي, أدوات طاقة شمسية, أنظمة أعمال, تقنية العراق, شركة برمجيات",
+    "keywords_ar": "سُبُل التكنولوجيا, تطبيقات موبايل, منصات ويب, ذكاء اصطناعي, أدوات طاقة شمسية, أنظمة أعمال, تقنية العراق, شركة برمجيات",
     "author": "Subul Technology",
     "google_site_verification": "rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg"
   },
@@ -33,7 +33,7 @@
     "email": "abdulrasol@subultech.top",
     "whatsapp": "9647813639721",
     "whatsapp_message_en": "Hello Subul Technology, I visited your website and would like to discuss a project, product, or partnership.",
-    "whatsapp_message_ar": "مرحباً سبل التكنلوجيا، زرت موقعكم وأرغب في مناقشة مشروع أو منتج أو شراكة.",
+    "whatsapp_message_ar": "مرحباً سُبُل التكنولوجيا، زرت موقعكم وأرغب في مناقشة مشروع أو منتج أو شراكة.",
     "photo": "/static/images/progile.JPEG",
     "resume_pdf": "/static/resume.pdf",
     "social": {
@@ -46,14 +46,14 @@
     }
   },
   "hero": {
-    "badge_en": "Subul Technology",
-    "badge_ar": "سبل التكنلوجيا",
-    "headline_en": "Software Systems, AI Tools",
-    "headline_ar": "أنظمة برمجية وأدوات ذكاء اصطناعي",
-    "highlight_en": "& Solar Solutions Built for Real Work",
-    "highlight_ar": "وحلول طاقة شمسية تبني أثراً فعلياً",
-    "subtitle_en": "We help businesses and founders launch faster with mobile apps, internal systems, AI-powered workflows, and solar platforms designed for practical operations.",
-    "subtitle_ar": "نساعد الشركات ورواد الأعمال على إطلاق منتجاتهم وأنظمتهم بسرعة عبر تطبيقات موبايل، أنظمة تشغيل داخلية، أتمتة ذكية، ومنصات طاقة شمسية تخدم الواقع العملي.",
+    "badge_en": "YOUR PATH TO WHAT’S NEXT",
+    "badge_ar": "سُبُل للارتقاء بأعمالك",
+    "headline_en": "Build better.",
+    "headline_ar": "نبني حلولك.",
+    "highlight_en": "Go further.",
+    "highlight_ar": "لنرتقي بأعمالك.",
+    "subtitle_en": "Software, intelligent systems, reliable infrastructure, and solar solutions. Connected expertise to take your business to its next stage.",
+    "subtitle_ar": "برمجيات وأنظمة ذكية، بنية تحتية موثوقة وحلول طاقة شمسية. خبرات مترابطة تنقل أعمالك إلى مستواها التالي.",
     "cta_primary_en": "Start a Project",
     "cta_primary_ar": "ابدأ مشروعك",
     "cta_secondary_en": "Explore Products",
@@ -143,7 +143,7 @@
     "title_en": "About Us",
     "title_ar": "من نحن",
     "text_en": "Subul Technology is a product-minded software company founded by AbdulRasol Al-Hilo. We combine hands-on experience in B2B systems, cross-platform app development, AI-powered tools, and solar products to build practical solutions for Iraqi and regional markets.",
-    "text_ar": "سبل التكنلوجيا هي شركة برمجية ذات توجه منتجي أسسها عبدالرسول الحلو. نجمع بين الخبرة العملية في أنظمة الأعمال، تطوير التطبيقات متعددة المنصات، الأدوات المدعومة بالذكاء الاصطناعي، ومنتجات الطاقة الشمسية لبناء حلول عملية للسوق العراقي والأسواق القريبة.",
+    "text_ar": "سُبُل التكنولوجيا هي شركة برمجية ذات توجه منتجي أسسها عبدالرسول الحلو. نجمع بين الخبرة العملية في أنظمة الأعمال، تطوير التطبيقات متعددة المنصات، الأدوات المدعومة بالذكاء الاصطناعي، ومنتجات الطاقة الشمسية لبناء حلول عملية للسوق العراقي والأسواق القريبة.",
     "stats": [
       {
         "value_en": "7+",
@@ -175,40 +175,104 @@
         "name_en": "Mobile Development",
         "name_ar": "تطوير الموبايل",
         "skills": [
-          { "name": "Flutter", "icon": "flutter", "level": 95 },
-          { "name": "Dart", "icon": "dart", "level": 90 },
-          { "name": "Android", "icon": "android", "level": 80 },
-          { "name": "iOS", "icon": "apple", "level": 75 }
+          {
+            "name": "Flutter",
+            "icon": "flutter",
+            "level": 95
+          },
+          {
+            "name": "Dart",
+            "icon": "dart",
+            "level": 90
+          },
+          {
+            "name": "Android",
+            "icon": "android",
+            "level": 80
+          },
+          {
+            "name": "iOS",
+            "icon": "apple",
+            "level": 75
+          }
         ]
       },
       {
         "name_en": "Web & Backend",
         "name_ar": "الويب والخلفية",
         "skills": [
-          { "name": "Django", "icon": "python", "level": 85 },
-          { "name": "Python", "icon": "python", "level": 85 },
-          { "name": "Firebase", "icon": "firebase", "level": 85 },
-          { "name": "REST APIs", "icon": "server", "level": 80 }
+          {
+            "name": "Django",
+            "icon": "python",
+            "level": 85
+          },
+          {
+            "name": "Python",
+            "icon": "python",
+            "level": 85
+          },
+          {
+            "name": "Firebase",
+            "icon": "firebase",
+            "level": 85
+          },
+          {
+            "name": "REST APIs",
+            "icon": "server",
+            "level": 80
+          }
         ]
       },
       {
         "name_en": "AI, Systems & Solar",
         "name_ar": "الذكاء الاصطناعي والأنظمة والطاقة الشمسية",
         "skills": [
-          { "name": "AI Workflows", "icon": "brain", "level": 82 },
-          { "name": "OCR / Automation", "icon": "wand-magic-sparkles", "level": 78 },
-          { "name": "Solar PV Design", "icon": "solar-panel", "level": 90 },
-          { "name": "System Sizing", "icon": "calculator", "level": 85 }
+          {
+            "name": "AI Workflows",
+            "icon": "brain",
+            "level": 82
+          },
+          {
+            "name": "OCR / Automation",
+            "icon": "wand-magic-sparkles",
+            "level": 78
+          },
+          {
+            "name": "Solar PV Design",
+            "icon": "solar-panel",
+            "level": 90
+          },
+          {
+            "name": "System Sizing",
+            "icon": "calculator",
+            "level": 85
+          }
         ]
       },
       {
         "name_en": "Tools & Platforms",
         "name_ar": "الأدوات والمنصات",
         "skills": [
-          { "name": "Linux", "icon": "linux", "level": 80 },
-          { "name": "Git", "icon": "git-alt", "level": 80 },
-          { "name": "WordPress", "icon": "wordpress", "level": 70 },
-          { "name": "Inkscape", "icon": "pen-nib", "level": 70 }
+          {
+            "name": "Linux",
+            "icon": "linux",
+            "level": 80
+          },
+          {
+            "name": "Git",
+            "icon": "git-alt",
+            "level": 80
+          },
+          {
+            "name": "WordPress",
+            "icon": "wordpress",
+            "level": 70
+          },
+          {
+            "name": "Inkscape",
+            "icon": "pen-nib",
+            "level": 70
+          }
         ]
       }
     ]
@@ -220,7 +284,7 @@
       "role_en": "Software Developer",
       "role_ar": "مطور برمجيات",
       "company_en": "Subul Technology",
-      "company_ar": "سبل التكنلوجيا",
+      "company_ar": "سُبُل التكنولوجيا",
       "description_en": "Founder and lead developer. Building B2B software, cross-platform mobile apps, AI-powered tools, and solar products. Products include Baytraq, MEAAD, MeterLog, Watt, and Sweep.",
       "description_ar": "المؤسس والمطور الرئيسي. بناء برمجيات الأعمال، تطبيقات موبايل متعددة المنصات، أدوات مدعومة بالذكاء الاصطناعي، ومنتجات طاقة شمسية. المنتجات تشمل بيترق، ميعاد، ميتر لوغ، واط، وSWEEP."
     },
@@ -279,7 +343,12 @@
         "image": "/assets/baytraq/logo.png",
         "category": "business",
         "featured": true,
-        "technologies": ["Flutter", "Dart", "Firebase", "ObjectBox"],
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "Firebase",
+          "ObjectBox"
+        ],
         "links": {
           "page": "/baytraq/",
           "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager",
@@ -296,7 +365,12 @@
         "image": "/assets/meter_log/logo.png",
         "category": "ai",
         "featured": true,
-        "technologies": ["Flutter", "Dart", "AI/OCR", "Isar"],
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "AI/OCR",
+          "Isar"
+        ],
         "links": {
           "page": "/meterlog/",
           "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log",
@@ -313,7 +387,12 @@
         "image": "/meaad/logo.png",
         "category": "business",
         "featured": true,
-        "technologies": ["Flutter", "Dart", "Google Sheets", "Google Drive"],
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "Google Sheets",
+          "Google Drive"
+        ],
         "links": {
           "page": "/meaad/",
           "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meadd",
@@ -330,27 +409,14 @@
         "image": "/assets/watt/logo.png",
         "category": "solar",
         "featured": false,
-        "technologies": ["Flutter", "Dart", "Firebase"],
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "Firebase"
+        ],
         "links": {
           "page": "/watt/",
           "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",
-          "github": null,
-          "facebook": null,
-          "instagram": null
-        }
-      },
-      {
-        "title_en": "Taqati",
-        "title_ar": "طاقتي",
-        "desc_en": "Smart solar PV sizing and engineering calculations with real-time PVGIS satellite climate data and installer marketplace.",
-        "desc_ar": "تصميم الأنظمة الكهروضوئية وحسابات هندسية شمسية دقيقة مع بيانات PVGIS المناخية وسوق طلبات وخدمات التركيب.",
-        "image": "/assets/taqati/logo.png",
-        "category": "solar",
-        "featured": true,
-        "technologies": ["Flutter", "Dart", "PVGIS", "Weather API"],
-        "links": {
-          "page": "/taqati/",
-          "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.taqati",
           "github": null,
           "facebook": null,
           "instagram": null
@@ -364,7 +430,12 @@
         "image": "/assets/store_mangement/logo.png",
         "category": "business",
         "featured": false,
-        "technologies": ["Flutter", "Dart", "GetX", "ObjectBox"],
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "GetX",
+          "ObjectBox"
+        ],
         "links": {
           "page": "/store-management/",
           "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.store_mangment",
@@ -381,7 +452,12 @@
         "image": "/assets/madarik/logo.png",
         "category": "mobile",
         "featured": false,
-        "technologies": ["Flutter", "Dart", "Riverpod", "Hive"],
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "Riverpod",
+          "Hive"
+        ],
         "links": {
           "page": "/madarik/",
           "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.madarik",
@@ -398,7 +474,12 @@
         "image": "/assets/sweep/logo.png",
         "category": "ai",
         "featured": false,
-        "technologies": ["Rust", "Tauri", "React", "TypeScript"],
+        "technologies": [
+          "Rust",
+          "Tauri",
+          "React",
+          "TypeScript"
+        ],
         "links": {
           "page": "/sweep/",
           "googlePlay": null,

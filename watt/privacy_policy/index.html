@@ -1,391 +1,281 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Watt, Solar app calculator</title>
-    <link rel="icon" type="image/png" href="/assets/watt/logo.png">
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-            background-color: #f4f4f9;
-        }
-        .container {
-            background: white;
-            padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .logo {
-            display: block;
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 2rem;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        h1 { color: #0f172a; text-align: center; margin-bottom: 0.5rem; }
-        .app-name { text-align: center; font-weight: 600; color: #64748b; margin-bottom: 2rem; }
-        h2 { border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 2rem; color: #0f172a; }
-        h3 { margin-top: 1.5rem; color: #1e293b; }
-        h4 { margin-top: 1rem; color: #334155; }
-        p { margin-bottom: 1rem; }
-        ul { margin-bottom: 1rem; padding-left: 2rem; }
-        li { margin-bottom: 0.5rem; }
-        .date { text-align: center; color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; }
-        hr { border: 0; border-top: 1px solid #eee; margin: 2rem 0; }
-        .lang-switch { text-align: center; margin-bottom: 2rem; }
-        .lang-switch a { color: #3b82f6; text-decoration: none; margin: 0 10px; font-weight: 600; }
-        
-        @media (max-width: 600px) {
-            .container { padding: 1.5rem; }
-            body { padding: 1rem; }
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        /* Language-specific alignment */
-        [lang="ar"] { direction: rtl; font-family: 'Cairo', sans-serif; }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Watt: Solar Sizing, Climate Data &amp; Solar Store</title>
+  <meta name="description" content="Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.">
+  <meta name="keywords" content="Watt, Taqati, solar calculator, solar system sizing, PVGIS, off-grid, hybrid inverter, battery sizing, Iraq solar store, Subul Technology, Flutter">
+  <meta name="author" content="Subul Technology">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f59e0b">
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
+
+  <!-- Canonical & Alternate Languages -->
+  <link rel="canonical" href="https://subultech.top/watt/privacy_policy/">
+  <link rel="alternate" hreflang="en" href="https://subultech.top/watt/privacy_policy/">
+  <link rel="alternate" hreflang="ar" href="https://subultech.top/ar/watt/privacy_policy/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Watt: Solar Sizing, Climate Data &amp; Solar Store">
+  <meta property="og:description" content="Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://subultech.top/watt/privacy_policy/">
+  <meta property="og:image" content="https://subultech.top/assets/watt/logo.png">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Watt: Solar Sizing, Climate Data &amp; Solar Store">
+  <meta name="twitter:description" content="Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.">
+  <meta name="twitter:image" content="https://subultech.top/assets/watt/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/watt/logo.png">
+  <link rel="apple-touch-icon" href="/assets/watt/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Project Colors -->
+  <style>
+    :root {
+      --project-primary: #f59e0b;
+      --project-secondary: #10b981;
+    }
+  </style>
+
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('portfolio_theme');
+      document.documentElement.dataset.theme = savedTheme === 'dark' || savedTheme === 'light'
+        ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch { /* System theme is applied by the main script. */ }
+  </script>
+  <!-- Styles -->
+  <link rel="stylesheet" href="/static/css/project.css">
+  <link rel="stylesheet" href="/static/css/brand.css?v=2">
+
+<script data-goatcounter="https://abdulrasol.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Watt",
+    "applicationCategory": "MobileApplication",
+    "operatingSystem": "Android, iOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.",
+"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",    "image": "https://subultech.top/assets/watt/logo.png"
+  }
+  </script>
 </head>
-<body>
-    <div class="container">
-        <img src="/assets/watt/logo.png" alt="Watt Logo" class="logo">
-        <h1>Privacy Policy / سياسة الخصوصية</h1>
-        <p class="app-name">Watt, Solar app calculator</p>
-        <p class="date">Last Updated: 2026-04-08</p>
+<body data-lang="en" class="product-site">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-        <div class="lang-switch">
-            <a href="#english">English</a>
-            <a href="#arabic">العربية</a>
-        </div>
+  <!-- Header -->
+  <header class="project-header" id="project-header">
+    <div class="container header-inner">
+      <a href="/watt/privacy_policy/" class="brand">
+        <img src="/assets/watt/logo.png" alt="Watt logo">
+        <span>Watt</span>
+      </a>
 
-        <section id="english">
-            <h2>English</h2>
-            <h3>1. Introduction</h3>
-            <p>This Privacy Policy explains how <code>Watt</code> collects, uses, stores, and shares information when you use the mobile application and related services. <code>Watt</code> is published by <strong>AbdulRasol Al-Hilo</strong>.</p>
-            <p>By using <code>Watt</code>, you agree to the practices described in this Privacy Policy.</p>
+      <a href="/" class="back-link desktop-back parent-brand">
+        <img src="/static/images/brand/symbol-teal.svg" alt="" width="24" height="28">
+        <i class="fas fa-arrow-left"></i>
+        By Subul Technology
+      </a>
 
-            <h3>2. Information We Collect</h3>
-            <p>Depending on how you use the app, <code>Watt</code> may collect the following categories of information:</p>
-            
-            <h4>2.1 Account and Profile Information</h4>
-            <p>When you create or manage an account, we may collect:</p>
-            <ul>
-                <li>Username</li>
-                <li>Password</li>
-                <li>Email address</li>
-                <li>First name</li>
-                <li>Last name</li>
-                <li>Phone number</li>
-                <li>City or city identifier</li>
-                <li>Optional profile image</li>
-                <li>Optional security question and security answer</li>
-            </ul>
-
-            <h4>2.2 Company and Business Information</h4>
-            <p>If you register a company or use business features, we may collect:</p>
-            <ul>
-                <li>Company name</li>
-                <li>Company description</li>
-                <li>Address</li>
-                <li>City</li>
-                <li>Company logo</li>
-                <li>Business type and related business flags such as B2B or B2C settings</li>
-            </ul>
-
-            <h4>2.3 Feedback and Support Information</h4>
-            <p>If you submit feedback or contact us through the app, we may collect:</p>
-            <ul>
-                <li>Name</li>
-                <li>Phone number, if provided</li>
-                <li>Message content</li>
-                <li>Optional image attachment</li>
-                <li>Submission timestamp</li>
-            </ul>
-
-            <h4>2.4 Product, Service, and Upload Information</h4>
-            <p>If you use inventory, service, or marketplace features, we may collect content you upload or submit, including:</p>
-            <ul>
-                <li>Product information</li>
-                <li>Product images</li>
-                <li>Service request notes</li>
-                <li>Service request image attachments</li>
-                <li>Other content you choose to submit through forms in the app</li>
-            </ul>
-
-            <h4>2.5 Notification and Device-Related Information</h4>
-            <p>If notifications are enabled, we may collect and process:</p>
-            <ul>
-                <li>Firebase Cloud Messaging token</li>
-                <li>Device identifier or backend device registration identifier</li>
-                <li>App version</li>
-                <li>Platform information such as Android or iOS</li>
-                <li>Notification interaction data needed to deliver or manage notifications</li>
-            </ul>
-
-            <h4>2.6 Locally Stored Information</h4>
-            <p>The app may store certain data on your device for functionality and convenience, including:</p>
-            <ul>
-                <li>Session or authentication state</li>
-                <li>Cached user information</li>
-                <li>App settings such as language, theme, and notification preferences</li>
-                <li>Saved app navigation or startup preferences</li>
-            </ul>
-
-            <h3>3. How We Use Information</h3>
-            <p>We use collected information to:</p>
-            <ul>
-                <li>Create and manage user accounts</li>
-                <li>Authenticate users and maintain signed-in sessions</li>
-                <li>Provide profile, company, store, marketplace, calculation, and dashboard features</li>
-                <li>Process password reset requests</li>
-                <li>Process account deletion requests</li>
-                <li>Receive and respond to feedback or support requests</li>
-                <li>Upload, display, and manage images and business-related content</li>
-                <li>Send push notifications and maintain notification delivery</li>
-                <li>Improve app reliability, security, and performance</li>
-                <li>Comply with legal obligations and enforce platform rules</li>
-            </ul>
-
-            <h3>4. How We Share Information</h3>
-            <p>We do not sell your personal information. We may share information only in the following limited circumstances:</p>
-            <ul>
-                <li><strong>Service providers and infrastructure providers:</strong> to operate backend services, storage, hosting, and app functionality</li>
-                <li><strong>Firebase services:</strong> for push notifications and related messaging functionality</li>
-                <li><strong>Legal or compliance reasons:</strong> if required by law, regulation, court order, or valid legal request</li>
-                <li><strong>Business protection and security:</strong> to investigate abuse, fraud, unauthorized activity, or security incidents</li>
-            </ul>
-
-            <h3>5. Permissions and Device Access</h3>
-            <p><code>Watt</code> may request access to certain device features depending on the functionality you use:</p>
-            <ul>
-                <li><strong>Camera:</strong> to capture images and scan barcodes</li>
-                <li><strong>Photos or gallery access:</strong> to select and upload images</li>
-                <li><strong>Internet and network access:</strong> to communicate with backend services and load app content</li>
-                <li><strong>Notifications:</strong> to deliver push notifications and alerts</li>
-            </ul>
-            <p>You can control some permissions through your device settings. If you deny certain permissions, parts of the app may not work correctly.</p>
-
-            <h3>6. Password Reset and Account Deletion</h3>
-            <p><code>Watt</code> provides features to help users manage account access and account lifecycle:</p>
-            <ul>
-                <li>You may request a password reset through the app if you forget your password.</li>
-                <li>You may request account deletion from within the app profile area.</li>
-            </ul>
-            <p>When an account deletion request is submitted, we will process it according to our backend systems and operational requirements. In some cases, certain records may be retained where necessary for:</p>
-            <ul>
-                <li>Legal compliance</li>
-                <li>Security investigation</li>
-                <li>Fraud prevention</li>
-                <li>Recordkeeping related to legitimate business operations</li>
-            </ul>
-            <p>If you have questions about deletion or data handling, contact us at <strong>watt.app.calculator@gmail.com</strong>.</p>
-
-            <h3>7. Data Retention</h3>
-            <p>We retain information only for as long as reasonably necessary to:</p>
-            <ul>
-                <li>Provide the app and its features</li>
-                <li>Maintain account functionality</li>
-                <li>Support user requests</li>
-                <li>Resolve disputes</li>
-                <li>Enforce agreements</li>
-                <li>Meet legal, regulatory, security, or operational obligations</li>
-            </ul>
-            <p>Retention periods may vary depending on the type of data and how the feature is used.</p>
-
-            <h3>8. Data Security</h3>
-            <p>We take reasonable administrative, technical, and organizational measures to protect information processed through the app. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
-
-            <h3>9. Children’s Privacy</h3>
-            <p><code>Watt</code> is not intended for children unless permitted by applicable law and supervised where required. If you believe that personal data belonging to a child has been provided to us inappropriately, please contact us.</p>
-
-            <h3>10. Your Rights and Choices</h3>
-            <p>Depending on your location and applicable law, you may have rights related to your personal information, such as:</p>
-            <ul>
-                <li>Accessing your information</li>
-                <li>Correcting inaccurate information</li>
-                <li>Requesting deletion of your account or data</li>
-                <li>Managing app permissions through your device settings</li>
-            </ul>
-            <p>To make a privacy-related request, contact:</p>
-            <p><strong>AbdulRasol Al-Hilo</strong><br>
-            <strong>Email:</strong> watt.app.calculator@gmail.com</p>
-
-            <h3>11. External Publication</h3>
-            <p>This Privacy Policy is publicly published at:</p>
-            <p><a href="https://abdulrasol.github.io/watt/privacy_policy/">https://abdulrasol.github.io/watt/privacy_policy/</a></p>
-
-            <h3>12. Changes to This Policy</h3>
-            <p>We may update this Privacy Policy from time to time. Updated versions will be reflected by the revised "Last Updated" date. Continued use of the app after changes take effect means you accept the updated policy.</p>
-        </section>
-
-        <hr>
-
-        <section id="arabic" lang="ar">
-            <h2>العربية</h2>
-            <h3>1. مقدمة</h3>
-            <p>توضح سياسة الخصوصية هذه كيفية قيام تطبيق <code>Watt</code> بجمع المعلومات واستخدامها وتخزينها ومشاركتها عند استخدام التطبيق والخدمات المرتبطة به. يتم نشر تطبيق <code>Watt</code> بواسطة <strong>AbdulRasol Al-Hilo</strong>.</p>
-            <p>باستخدامك لتطبيق <code>Watt</code>، فإنك توافق على الممارسات الموضحة في هذه السياسة.</p>
-
-            <h3>2. المعلومات التي نقوم بجمعها</h3>
-            <p>بحسب طريقة استخدامك للتطبيق، قد يقوم <code>Watt</code> بجمع الفئات التالية من المعلومات:</p>
-
-            <h4>2.1 معلومات الحساب والملف الشخصي</h4>
-            <p>عند إنشاء الحساب أو إدارته، قد نقوم بجمع:</p>
-            <ul>
-                <li>اسم المستخدم</li>
-                <li>كلمة المرور</li>
-                <li>البريد الإلكتروني</li>
-                <li>الاسم الأول</li>
-                <li>الاسم الأخير</li>
-                <li>رقم الهاتف</li>
-                <li>المدينة أو معرف المدينة</li>
-                <li>صورة شخصية اختيارية</li>
-                <li>سؤال أمان اختياري وإجابة أمان اختيارية</li>
-            </ul>
-
-            <h4>2.2 معلومات الشركة والأعمال</h4>
-            <p>إذا قمت بتسجيل شركة أو استخدام الميزات التجارية، فقد نقوم بجمع:</p>
-            <ul>
-                <li>اسم الشركة</li>
-                <li>وصف الشركة</li>
-                <li>العنوان</li>
-                <li>المدينة</li>
-                <li>شعار الشركة</li>
-                <li>نوع النشاط وبعض الإعدادات المرتبطة به مثل B2B و B2C</li>
-            </ul>
-
-            <h4>2.3 معلومات الملاحظات والدعم</h4>
-            <p>إذا قمت بإرسال ملاحظات أو تواصلت معنا من خلال التطبيق، فقد نقوم بجمع:</p>
-            <ul>
-                <li>الاسم</li>
-                <li>رقم الهاتف إذا تم تقديمه</li>
-                <li>محتوى الرسالة</li>
-                <li>صورة مرفقة بشكل اختياري</li>
-                <li>وقت إرسال الطلب</li>
-            </ul>
-
-            <h4>2.4 معلومات المنتجات والخدمات والملفات المرفوعة</h4>
-            <p>إذا استخدمت ميزات المخزون أو الخدمات أو السوق داخل التطبيق، فقد نقوم بجمع المحتوى الذي تقوم برفعه أو إرساله، بما في ذلك:</p>
-            <ul>
-                <li>معلومات المنتجات</li>
-                <li>صور المنتجات</li>
-                <li>ملاحظات طلبات الخدمات</li>
-                <li>الصور المرفقة بطلبات الخدمات</li>
-                <li>أي محتوى آخر تختار إدخاله في نماذج التطبيق</li>
-            </ul>
-
-            <h4>2.5 معلومات الإشعارات ومعلومات متعلقة بالجهاز</h4>
-            <p>إذا كانت الإشعارات مفعلة، فقد نقوم بجمع ومعالجة:</p>
-            <ul>
-                <li>رمز Firebase Cloud Messaging</li>
-                <li>معرف الجهاز أو معرف تسجيل الجهاز في الخادم</li>
-                <li>إصدار التطبيق</li>
-                <li>معلومات المنصة مثل Android أو iOS</li>
-                <li>بيانات التفاعل مع الإشعارات اللازمة لإرسالها أو إدارتها</li>
-            </ul>
-
-            <h4>2.6 المعلومات المخزنة محليًا على الجهاز</h4>
-            <p>قد يقوم التطبيق بتخزين بعض البيانات على جهازك من أجل الوظائف الأساسية وسهولة الاستخدام، بما في ذلك:</p>
-            <ul>
-                <li>حالة الجلسة أو تسجيل الدخول</li>
-                <li>بيانات المستخدم المخزنة مؤقتًا</li>
-                <li>إعدادات التطبيق مثل اللغة والمظهر وتفضيلات الإشعارات</li>
-                <li>تفضيلات التنقل أو صفحة البداية داخل التطبيق</li>
-            </ul>
-
-            <h3>3. كيفية استخدام المعلومات</h3>
-            <p>نستخدم المعلومات التي يتم جمعها من أجل:</p>
-            <ul>
-                <li>إنشاء الحسابات وإدارتها</li>
-                <li>التحقق من المستخدمين والحفاظ على جلسات تسجيل الدخول</li>
-                <li>توفير ميزات الملف الشخصي والشركات والمتجر والسوق والحاسبات ولوحات التحكم</li>
-                <li>معالجة طلبات إعادة تعيين كلمة المرور</li>
-                <li>معالجة طلبات حذف الحساب</li>
-                <li>استقبال الملاحظات أو طلبات الدعم والرد عليها</li>
-                <li>رفع الصور والمحتوى التجاري وإدارته وعرضه</li>
-                <li>إرسال الإشعارات الفورية وإدارة توصيلها</li>
-                <li>تحسين موثوقية التطبيق وأمانه وأدائه</li>
-                <li>الامتثال للالتزامات القانونية وتطبيق قواعد المنصة</li>
-            </ul>
-
-            <h3>4. كيفية مشاركة المعلومات</h3>
-            <p>نحن لا نبيع معلوماتك الشخصية. وقد نشارك المعلومات فقط في الحالات المحدودة التالية:</p>
-            <ul>
-                <li><strong>مزودو الخدمات والبنية التحتية:</strong> لتشغيل الخوادم والتخزين والاستضافة ووظائف التطبيق</li>
-                <li><strong>خدمات Firebase:</strong> لإرسال الإشعارات والوظائف المرتبطة بالمراسلة</li>
-                <li><strong>الأسباب القانونية أو التنظيمية:</strong> إذا كان ذلك مطلوبًا بموجب القانون أو اللوائح أو الأوامر القضائية أو الطلبات القانونية الصحيحة</li>
-                <li><strong>حماية الأعمال والأمن:</strong> للتحقيق في إساءة الاستخدام أو الاحتيال أو الأنشطة غير المصرح بها أو الحوادث الأمنية</li>
-            </ul>
-
-            <h3>5. الأذونات والوصول إلى الجهاز</h3>
-            <p>قد يطلب <code>Watt</code> الوصول إلى بعض ميزات الجهاز بحسب الوظائف التي تستخدمها، ومنها:</p>
-            <ul>
-                <li><strong>الكاميرا:</strong> لالتقاط الصور ومسح الباركود</li>
-                <li><strong>الصور أو المعرض:</strong> لاختيار الصور ورفعها</li>
-                <li><strong>الإنترنت والشبكة:</strong> للتواصل مع الخوادم وتحميل محتوى التطبيق</li>
-                <li><strong>الإشعارات:</strong> لإرسال التنبيهات والإشعارات الفورية</li>
-            </ul>
-            <p>يمكنك التحكم في بعض الأذونات من خلال إعدادات جهازك. وفي حال رفض بعض الأذونات، قد لا تعمل بعض أجزاء التطبيق بشكل صحيح.</p>
-
-            <h3>6. إعادة تعيين كلمة المرور وحذف الحساب</h3>
-            <p>يوفر تطبيق <code>Watt</code> ميزات تساعد المستخدمين على إدارة الوصول إلى الحساب ودورة حياة الحساب:</p>
-            <ul>
-                <li>يمكنك طلب إعادة تعيين كلمة المرور من داخل التطبيق إذا نسيت كلمة المرور.</li>
-                <li>يمكنك طلب حذف الحساب من داخل قسم الملف الشخصي في التطبيق.</li>
-            </ul>
-            <p>عند إرسال طلب حذف الحساب، سنقوم بمعالجته وفقًا لأنظمة الخادم والمتطلبات التشغيلية لدينا. وفي بعض الحالات قد نحتفظ ببعض السجلات عند الحاجة للأسباب التالية:</p>
-            <ul>
-                <li>الامتثال القانوني</li>
-                <li>التحقيقات الأمنية</li>
-                <li>منع الاحتيال</li>
-                <li>حفظ السجلات المرتبطة بالعمليات التجارية المشروعة</li>
-            </ul>
-            <p>إذا كان لديك أي استفسار بخصوص الحذف أو طريقة التعامل مع البيانات، يمكنك التواصل معنا عبر:<br>
-            <strong>watt.app.calculator@gmail.com</strong></p>
-
-            <h3>7. الاحتفاظ بالبيانات</h3>
-            <p>نحتفظ بالمعلومات فقط للمدة اللازمة بشكل معقول من أجل:</p>
-            <ul>
-                <li>تقديم التطبيق وميزاته</li>
-                <li>الحفاظ على وظائف الحساب</li>
-                <li>دعم طلبات المستخدمين</li>
-                <li>حل النزاعات</li>
-                <li>تنفيذ الاتفاقيات</li>
-                <li>الوفاء بالالتزامات القانونية أو التنظيمية أو الأمنية أو التشغيلية</li>
-            </ul>
-            <p>قد تختلف مدة الاحتفاظ بحسب نوع البيانات وطريقة استخدام الميزة.</p>
-
-            <h3>8. أمان البيانات</h3>
-            <p>نتخذ تدابير إدارية وتقنية وتنظيمية معقولة لحماية المعلومات التي تتم معالجتها من خلال التطبيق. ومع ذلك، لا توجد وسيلة نقل أو تخزين آمنة بشكل كامل، ولا يمكننا ضمان الأمان المطلق.</p>
-
-            <h3>9. خصوصية الأطفال</h3>
-            <p>تطبيق <code>Watt</code> غير موجه للأطفال إلا إذا كان ذلك مسموحًا به بموجب القانون المعمول به وتحت الإشراف عند الحاجة. إذا كنت تعتقد أنه تم تزويدنا ببيانات تخص طفل بشكل غير مناسب، يرجى التواصل معنا.</p>
-
-            <h3>10. حقوقك وخياراتك</h3>
-            <p>بحسب موقعك الجغرافي والقانون المطبق، قد تكون لديك حقوق تتعلق بمعلوماتك الشخصية، مثل:</p>
-            <ul>
-                <li>الوصول إلى معلوماتك</li>
-                <li>تصحيح المعلومات غير الدقيقة</li>
-                <li>طلب حذف الحساب أو البيانات</li>
-                <li>إدارة أذونات التطبيق من خلال إعدادات الجهاز</li>
-            </ul>
-            <p>لتقديم طلب متعلق بالخصوصية، يمكنك التواصل مع:</p>
-            <p><strong>AbdulRasol Al-Hilo</strong><br>
-            <strong>البريد الإلكتروني:</strong> watt.app.calculator@gmail.com</p>
-
-            <h3>11. النشر العام للسياسة</h3>
-            <p>سياسة الخصوصية هذه منشورة بشكل عام على الرابط التالي:</p>
-            <p><a href="https://abdulrasol.github.io/watt/privacy_policy/">https://abdulrasol.github.io/watt/privacy_policy/</a></p>
-
-            <h3>12. التغييرات على هذه السياسة</h3>
-            <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. وستظهر أي تحديثات من خلال تعديل تاريخ "آخر تحديث". إن استمرارك في استخدام التطبيق بعد سريان التعديلات يعني موافقتك على السياسة المحدثة.</p>
-        </section>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="/ar/watt/" class="lang-toggle" data-lang-switch aria-label="Switch to Arabic">
+          <i class="fas fa-globe"></i>
+          <span>العربية</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="/">← Back to Portfolio</a>
+      <a href="/watt/privacy_policy/">Home</a>
+<a href="/watt/privacy_policy/">Privacy Policy</a><a href="/watt/terms.html">Terms of Service</a><a href="/watt/changelogs.html">Changelog</a>      <a href="/ar/watt/" data-lang-switch>العربية</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+<section class="content-page">
+  <div class="container">
+    <div class="content-container">
+      <div class="content-header">
+        <img src="/assets/watt/logo.png" alt="Watt" class="content-logo">
+        <h1>Privacy Policy</h1>
+        <p class="app-name">Watt</p>
+        <p class="date">Last updated: 2026-10-23</p>
+      </div>
+
+      <div class="content-section">
+        <h2>1. Introduction</h2>
+          <p>This policy explains what Watt (formerly Taqati) collects, why, and the choices you have. Watt is published by AbdulRasol Al-Hilo (Subul Technology). By using the app you agree to this policy.</p>
+      </div>
+      <div class="content-section">
+        <h2>2. Information we collect</h2>
+          <p>Account. You sign in with Google or Apple. We receive your name, email address and profile picture from the provider. We never see your Google or Apple password.</p>
+          <p>Profile. Phone number, country and city, account type (user, technician or company) and, optionally, a picture.</p>
+          <p>Your calculations. Appliances, loads, settings and the systems you save or add manually.</p>
+          <p>Location. Only if you allow it. Your coordinates, or a place you pick on the map, are used to get sun and weather data for your site.</p>
+          <p>Company and store content. Company name, description, address, logo, products, prices, images, quotation requests, offers, carts and orders, including the delivery details you enter at checkout.</p>
+          <p>Feedback and support. Your message, optional phone number and optional image.</p>
+          <p>Device and usage. A notification token, app version, platform (Android, iOS or web), language, and anonymous usage statistics from Firebase Analytics.</p>
+          <p>On your device. Settings, session state and cached climate data are stored locally so the app works faster and offline.</p>
+      </div>
+      <div class="content-section">
+        <h2>3. How we use it</h2>
+          <ul>
+            <li>Run your account and keep you signed in</li>
+            <li>Calculate and save your systems and fetch climate data for your site</li>
+            <li>Operate the store, quotations and orders between buyers and sellers</li>
+            <li>Send notifications you have not switched off</li>
+            <li>Answer feedback and support requests</li>
+            <li>Keep the app secure, prevent abuse and improve reliability</li>
+            <li>Meet legal obligations</li>
+          </ul>
+      </div>
+      <div class="content-section">
+        <h2>4. Services that process your data</h2>
+          <p>Watt relies on the following services. They receive only what they need to work.</p>
+          <ul>
+            <li>Firebase (Google): sign-in, database, notifications, remote settings and analytics.</li>
+            <li>Google Sign-In and Sign in with Apple: to verify your identity.</li>
+            <li>PVGIS (European Commission, Joint Research Centre): receives the coordinates and system settings you request, to return solar data. Requests may pass through a Cloudflare proxy operated by us to make them more reliable. The proxy keeps a temporary cache of the climate response and does not link it to your account.</li>
+            <li>NASA POWER: receives coordinates to return climate data when PVGIS is unavailable.</li>
+            <li>Open-Meteo: receives coordinates to return weather and the solar outlook.</li>
+            <li>OpenStreetMap services (map tiles and place search): receive the area you view and the place names you search.</li>
+            <li>Our image and file storage: stores pictures you upload, such as product images and logos.</li>
+          </ul>
+      </div>
+      <div class="content-section">
+        <h2>5. Sharing</h2>
+          <p>We do not sell your personal data and we do not use it for third-party advertising.</p>
+          <ul>
+            <li>Sellers and buyers: when you place an order or request a quotation, the other party sees the details needed to complete it, such as your name, phone number and delivery address.</li>
+            <li>Public content: a company profile, its products and its offers are visible to other users.</li>
+            <li>Service providers listed in section 4.</li>
+            <li>Authorities, when the law requires it, and to investigate fraud, abuse or security incidents.</li>
+          </ul>
+      </div>
+      <div class="content-section">
+        <h2>6. Permissions</h2>
+          <ul>
+            <li>Location: to fetch solar data for where you are. Optional.</li>
+            <li>Camera: to take pictures and scan codes. Optional.</li>
+            <li>Photos: to choose pictures to upload. Optional.</li>
+            <li>Notifications: to send order, offer and update alerts. Optional.</li>
+            <li>Network: required for online features.</li>
+          </ul>
+          <p>You can change permissions in your device settings. Without a permission, the related feature may not work.</p>
+      </div>
+      <div class="content-section">
+        <h2>7. Account deletion and retention</h2>
+          <p>You can delete your account permanently from your account page in the app. You confirm with Google or Apple again, and your cloud and local data are removed. You can also follow the steps on the account deletion page, or write to us.</p>
+          <p>We keep data only as long as needed to provide the service. Some records, such as completed orders, may be kept for the period required to resolve disputes, prevent fraud or meet legal duties, and are then removed or anonymized.</p>
+      </div>
+      <div class="content-section">
+        <h2>8. Security</h2>
+          <p>We use reasonable technical and organizational measures, including access rules on the database and encrypted connections. No system is perfectly secure, so we cannot guarantee absolute security.</p>
+      </div>
+      <div class="content-section">
+        <h2>9. Children</h2>
+          <p>Watt is not directed to children under 13. If you believe a child has given us personal data, contact us and we will remove it.</p>
+      </div>
+      <div class="content-section">
+        <h2>10. Your rights</h2>
+          <p>Depending on where you live, you may ask to access, correct or delete your data, or object to some processing. Write to us and we will reply within a reasonable time.</p>
+      </div>
+      <div class="content-section">
+        <h2>11. Changes</h2>
+          <p>We may update this policy. The date at the top shows the latest version. If a change is significant we will tell you in the app.</p>
+      </div>
+
+      <div class="content-section">
+        <h2>Analytics</h2>
+        <p>We use GoatCounter to collect anonymous traffic statistics (such as page views and referral sources). GoatCounter does not use cookies and does not collect any personally identifiable information.</p>
+      </div>
+
+      <div class="content-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, contact us at: <a href="mailto:watt@subultech.top">watt@subultech.top</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="project-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/watt/privacy_policy/" class="brand">
+          <img src="/assets/watt/logo.png" alt="Watt" width="36" height="36">
+          <span>Watt</span>
+        </a>
+        <p>Size, design, and buy your solar system</p>
+        <a class="parent-brand" href="/"><img src="/static/images/brand/symbol-teal.svg" alt="" width="22" height="26">A Subul Technology product</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Legal</h4>
+<a href="/watt/privacy_policy/">Privacy Policy</a><a href="/watt/terms.html">Terms of Service</a><a href="/watt/changelogs.html">Changelog</a>      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a href="mailto:watt@subultech.top"><i class="fas fa-envelope"></i> watt@subultech.top</a>
+        <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt" data-goatcounter-click="footer-google-play-watt" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
+        <a href="https://apps.apple.com/iq/app/watt-solar-system-calculator/id6820459639" data-goatcounter-click="footer-app-store-watt" target="_blank" rel="noopener"><i class="fab fa-apple"></i> App Store</a>
+        <a href="https://watt.subultech.top" data-goatcounter-click="footer-web-app-watt" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Web app</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Watt. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/9647813639721?text=Hello%20Subul%20Technology%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project%2C%20product%2C%20or%20partnership."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="/static/js/project.js"></script>
 </body>
 </html>

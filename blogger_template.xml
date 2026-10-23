@@ -20,16 +20,17 @@
     <!-- Open Graph (Facebook/LinkedIn) -->
     <meta expr:content='data:view.title.escaped' property='og:title'/>
     <meta expr:content='data:view.url.canonical' property='og:url'/>
-    <meta content='https://blog.subultech.top/favicon.ico' property='og:image'/>
+    <meta content='https://subultech.top/static/images/brand/social-avatar.png' property='og:image'/>
     <meta content='website' property='og:type'/>
     <meta content='Subul Technology Blog' property='og:site_name'/>
     
     <!-- Twitter Card -->
     <meta content='summary_large_image' name='twitter:card'/>
     <meta expr:content='data:view.title.escaped' name='twitter:title'/>
-    <meta content='https://blog.subultech.top/favicon.ico' name='twitter:image'/>
-    <meta content='#25a186' name='theme-color'/>
+    <meta content='https://subultech.top/static/images/brand/social-avatar.png' name='twitter:image'/>
+    <meta content='#36ADA3' name='theme-color'/>
     
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&amp;family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
     <!-- Canonical URL -->
     <link expr:href='data:view.url.canonical' rel='canonical'/>
 
@@ -83,23 +84,23 @@
   <Variable name="body.background.color" description="Body background color" type="color" default="#fff"  value="#ffffff"/>
   <Variable name="body.text.font" description="Font" type="font" default="$(loraNormal20)"  value="400 20px Lora, serif"/>
   <Variable name="body.text.color" description="Color" type="color" default="#292929"  value="#292929"/>
-  <Variable name="body.link.color" description="Link color" type="color" default="#25a186"  value="#25a186"/>
-  <Variable name="body.link.visited.color" description="Visited link color" type="color" default="$(body.link.color)"  value="#25a186"/>
-  <Variable name="body.link.hover.color" description="Link Hover Color" type="color" default="$(body.link.color)"  value="#25a186"/>
+  <Variable name="body.link.color" description="Link color" type="color" default="#36ADA3"  value="#36ADA3"/>
+  <Variable name="body.link.visited.color" description="Visited link color" type="color" default="$(body.link.color)"  value="#36ADA3"/>
+  <Variable name="body.link.hover.color" description="Link Hover Color" type="color" default="$(body.link.color)"  value="#36ADA3"/>
   <Variable name="blog.title.font" description="Blog Title Font" type="font" default="$(openSansBold24)"  value="700 24px Open Sans, sans-serif"/>
   <Variable name="blog.title.color" description="Blog Title Color" type="color" default="#000"  value="#000000"/>
 </Group>
 
 <Group description="Featured post" selector=".heroPost">
-  <Variable name="heropost.main.background.color" description="Featured post main background color" type="color" default="#25a186"  value="#25a186"/>
+  <Variable name="heropost.main.background.color" description="Featured post main background color" type="color" default="#36ADA3"  value="#36ADA3"/>
   <Variable name="heropost.main.title.color" description="Featured post main title color" type="color" default="#fff"  value="#ffffff"/>
   <Variable name="heropost.main.text.color" description="Featured post main text color" type="color" default="#fff"  value="#ffffff"/>
   <Variable name="heropost.main.button.color" description="Featured post main buttons color" type="color" default="#fff"  value="#ffffff"/>
   <Variable name="heropost.main.link.color" description="Featured post main link color" type="color" default="#173752"  value="#173752"/>
   <Variable name="heropost.secondary.background.color" description="Featured post background color (secondary)" type="color" default="#e5f0ee"  value="#e5f0ee"/>
   <Variable name="heropost.secondary.text.color" description="Featured post text color (secondary)" type="color" default="#000"  value="#000000"/>
-  <Variable name="heropost.secondary.button.color" description="Featured post buttons color (secondary)" type="color" default="#25a186"  value="#25a186"/>
-  <Variable name="heropost.secondary.dropcap.color" description="Featured post drop cap color (secondary)" type="color" default="$(heropost.secondary.button.color)"  value="#25a186"/>
+  <Variable name="heropost.secondary.button.color" description="Featured post buttons color (secondary)" type="color" default="#36ADA3"  value="#36ADA3"/>
+  <Variable name="heropost.secondary.dropcap.color" description="Featured post drop cap color (secondary)" type="color" default="$(heropost.secondary.button.color)"  value="#36ADA3"/>
 </Group>
 
 <Group description="Header" selector=".centered-top-container">
@@ -107,9 +108,9 @@
   <Variable name="header.background.color" description="Background color" type="color" default="#fff"  value="#ffffff"/>
   <Variable name="header.description.font" description="Description font" type="font" default="$(openSansNormal14)"  value="400 14px Open Sans, sans-serif"/>
   <Variable name="header.description.color" description="Description Color" type="color" default="rgba(0,0,0,0.54)"  value="rgba(0,0,0,0.54)"/>
-  <Variable name="header.pages.color" description="Page list color" type="color" default="#25a186"  value="#25a186"/>
-  <Variable name="header.pages.selected.color" description="Page list color (selected page)" type="color" default="$(header.pages.color)"  value="#25a186"/>
-  <Variable name="header.items.color" description="Text color" type="color" default="#25a186"  value="#25a186"/>
+  <Variable name="header.pages.color" description="Page list color" type="color" default="#36ADA3"  value="#36ADA3"/>
+  <Variable name="header.pages.selected.color" description="Page list color (selected page)" type="color" default="$(header.pages.color)"  value="#36ADA3"/>
+  <Variable name="header.items.color" description="Text color" type="color" default="#36ADA3"  value="#36ADA3"/>
   <Variable name="header.items.font" description="Text font" type="font" default="$(openSansSemibold14)"  value="600 14px Open Sans, sans-serif"/>
 </Group>
 
@@ -119,13 +120,13 @@
 
 <Group description="Feed" selector=".widget.Blog">
   <Variable name="feed.title.font" description="Post title font" type="font" default="$(openSansBold36)"  value="700 36px Open Sans, sans-serif"/>
-  <Variable name="feed.title.color" description="Post title color" type="color" default="#25a186"  value="#25a186"/>
+  <Variable name="feed.title.color" description="Post title color" type="color" default="#36ADA3"  value="#36ADA3"/>
   <Variable name="feed.subtitle.font" description="Post subtitle font" type="font" default="$(openSansSemibold16)"  value="600 16px Open Sans, sans-serif"/>
   <Variable name="feed.subtitle.color" description="Post subtitle color" type="color" default="rgba(0,0,0,0.54)"  value="rgba(0,0,0,0.54)"/>
   <Variable name="feed.text.font" description="Post text font" type="font" default="$(loraNormal20)"  value="400 20px Lora, serif"/>
   <Variable name="feed.text.color" description="Post text color" type="color" default="rgba(0,0,0,0.84)"  value="rgba(0,0,0,0.84)"/>
   <Variable name="feed.button.font" description="Button font" type="font" default="$(openSansSemibold14)"  value="600 14px Open Sans, sans-serif"/>
-  <Variable name="feed.button.color" description="Button color" type="color" default="#25a186"  value="#25a186"/>
+  <Variable name="feed.button.color" description="Button color" type="color" default="#36ADA3"  value="#36ADA3"/>
 </Group>
 
 <Group description="Sharing" selector=".sharing">
@@ -135,11 +136,11 @@
       default="$(body.background.color)"  value="#ffffff"/>
   <Variable name="sharing.text.color" description="Sharing text color"
       type="color"
-      default="$(feed.button.color)"  value="#25a186"/>
+      default="$(feed.button.color)"  value="#36ADA3"/>
   <Variable name="sharing.icons.color"
       description="Sharing icons color"
       type="color"
-      default="$(sharing.text.color)"  value="#25a186"/>
+      default="$(sharing.text.color)"  value="#36ADA3"/>
 </Group>
 
 <Group description="Dialogs" selector=".subscribe-popup">
@@ -148,18 +149,18 @@
   <Variable name="dialog.input.font" description="Dialog input font" type="font" default="$(openSansNormal14)"  value="400 14px Open Sans, sans-serif"/>
   <Variable name="dialog.input.color" description="Dialog input color" type="color" default="rgba(0,0,0,0.84)"  value="rgba(0,0,0,0.84)"/>
   <Variable name="dialog.action.font" description="Dialog action font" type="font" default="$(openSansSemibold14)"  value="600 14px Open Sans, sans-serif"/>
-  <Variable name="dialog.action.color" description="Dialog action color" type="color" default="$(feed.button.color)"  value="#25a186"/>
+  <Variable name="dialog.action.color" description="Dialog action color" type="color" default="$(feed.button.color)"  value="#36ADA3"/>
 </Group>
 
 <Group description="Individual Post or Page" selector="body.item-page .widget.Blog">
   <Variable name="item.title.font" description="Font" type="font" default="$(openSansSemibold48)"  value="600 48px Open Sans, sans-serif"/>
   <Variable name="item.title.color" description="Post title color" type="color" default="#fff"  value="#ffffff"/>
-  <Variable name="item.title.background.color" description="Post title background color" type="color" default="#25a186"  value="#25a186"/>
+  <Variable name="item.title.background.color" description="Post title background color" type="color" default="#36ADA3"  value="#36ADA3"/>
   <Variable name="item.subtitle.font" description="Post subtitle font" type="font" default="$(openSansSemibold16)"  value="600 16px Open Sans, sans-serif"/>
   <Variable name="item.subtitle.color" description="Post subtitle color" type="color" default="rgba(0,0,0,0.54)"  value="rgba(0,0,0,0.54)"/>
-  <Variable name="item.byline.color" description="Post byline color" type="color" default="#25a186"  value="#25a186"/>
+  <Variable name="item.byline.color" description="Post byline color" type="color" default="#36ADA3"  value="#36ADA3"/>
   <Variable name="item.byline.font" description="Post byline font" type="font" default="$(openSansSemibold14)"  value="600 14px Open Sans, sans-serif"/>
-  <Variable name="item.action.color" description="Action color" type="color" default="#25a186"  value="#25a186"/>
+  <Variable name="item.action.color" description="Action color" type="color" default="#36ADA3"  value="#36ADA3"/>
   <Variable name="item.action.font" description="Action font" type="font" default="$(openSansSemibold14)"  value="600 14px Open Sans, sans-serif"/>
   <Variable name="item.label.font" description="Label font" type="font" default="$(openSansNormal14)"  value="400 14px Open Sans, sans-serif"/>
   <Variable name="item.blockquote.font" description="Blockquote font" type="font" default="$(openSansSemiboldItalic44)"  value="italic 600 44px Open Sans, sans-serif"/>
@@ -174,7 +175,7 @@
   <Variable name="sidebar.profile.title.color" description="Profile name color" type="color" default="#000"  value="#000000"/>
   <Variable name="sidebar.profile.text.color" description="Profile description color" type="color" default="#000"  value="#000000"/>
   <Variable name="sidebar.profile.link.font" description="Profile link font" type="font" default="$(openSansSemibold16)"  value="600 16px Open Sans, sans-serif"/>
-  <Variable name="sidebar.profile.link.color" description="Profile link color" type="color" default="$(body.link.color)"  value="#25a186"/>
+  <Variable name="sidebar.profile.link.color" description="Profile link color" type="color" default="$(body.link.color)"  value="#36ADA3"/>
 </Group>
 
 
@@ -2912,6 +2913,21 @@ width:100%
 padding-right:$(sidebar.width)
 }
 }
+
+/* Subul Technology — Pathways identity */
+body { background: #F7F9FC; color: #0B0F1F; font-family: 'Cairo', 'Inter', sans-serif; }
+.centered-top-container, .centered-top-container.sticky { background: #0B0F1F; border-bottom: 1px solid #273449; box-shadow: none; }
+.blog-name h1, .blog-name h1 a, .sticky .blog-name h1, .sticky .blog-name h1 a { color: #F7F9FC; font-family: 'Inter','Cairo',sans-serif; font-weight: 800; letter-spacing: -.035em; }
+.Header .header-widget { position: relative; padding-inline-start: 65px; }
+.Header .header-widget::before { content: ''; position: absolute; inset-inline-start: 0; top: 5px; width: 45px; height: 55px; background: url('https://subultech.top/static/images/brand/symbol-teal.svg') center / contain no-repeat; }
+.Header .header-widget p { color: #b7c5d5; line-height: 1.8; }
+.post, .post-outer, .sidebar-container { border-radius: 12px; box-shadow: none; }
+.post-title, .post-title a { font-family: 'Cairo','Inter',sans-serif; letter-spacing: -.025em; }
+.post-body { line-height: 1.95; }
+.post-body a { color: #187E77; text-decoration: underline; text-underline-offset: 4px; }
+.jump-link a, .flat-button { border-radius: 6px; }
+.blog-pager a { border: 1px solid #dfe5eb; border-radius: 6px; }
+@media(max-width: 600px) { .Header .header-widget { padding-inline-start: 45px; } .Header .header-widget::before { width: 30px; height: 40px; } }
 ]]></b:skin>
 
     <b:template-skin>
@@ -4181,7 +4197,7 @@ padding-right:$(sidebar.width)
   &lt;div id="contact-widget-popup" class="contact-widget-popup"&gt;
     &lt;div class="contact-widget-header"&gt;
       &lt;!-- استبدل رابط الصورة برابط شعارك --&gt;
-      &lt;img src="https://blog.subultech.top/favicon.ico" alt="الشعار" /&gt;
+      &lt;img src="https://subultech.top/static/images/brand/social-avatar.png" alt="الشعار" /&gt;
     &lt;/div&gt;
     &lt;div class="contact-widget-body"&gt;
       &lt;p&gt;اتصل الآن للحصول على استشارة او طلب خدمة، نحن في خدمتكم&lt;/p&gt;

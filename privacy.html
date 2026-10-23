@@ -16,27 +16,28 @@
   <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
 
   <!-- Canonical & Alternate Languages -->
-  <link rel="canonical" href="https://abdulrasol.github.io/privacy.html">
-  <link rel="alternate" hreflang="en" href="https://abdulrasol.github.io/privacy.html">
-  <link rel="alternate" hreflang="ar" href="https://abdulrasol.github.io/ar/privacy.html">
-  <link rel="alternate" hreflang="x-default" href="https://abdulrasol.github.io/privacy.html">
+  <link rel="canonical" href="https://subultech.top/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://subultech.top/privacy.html">
+  <link rel="alternate" hreflang="ar" href="https://subultech.top/ar/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://subultech.top/privacy.html">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Subul Technology — Software, AI &amp; Solar Solutions">
   <meta property="og:description" content="Subul Technology builds mobile apps, web platforms, AI solutions, business systems, and solar tools. From B2B operations software to solar platforms, we deliver practical digital products.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://abdulrasol.github.io/privacy.html">
-  <meta property="og:image" content="https://abdulrasol.github.io/logo.png">
+  <meta property="og:url" content="https://subultech.top/privacy.html">
+  <meta property="og:image" content="https://subultech.top/logo.png">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Subul Technology — Software, AI &amp; Solar Solutions">
   <meta name="twitter:description" content="Subul Technology builds mobile apps, web platforms, AI solutions, business systems, and solar tools. From B2B operations software to solar platforms, we deliver practical digital products.">
-  <meta name="twitter:image" content="https://abdulrasol.github.io/logo.png">
+  <meta name="twitter:image" content="https://subultech.top/logo.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/static/images/brand/symbol-teal.svg">
   <link rel="apple-touch-icon" href="/logo.png">
 
   <!-- Fonts -->
@@ -47,9 +48,17 @@
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('portfolio_theme');
+      document.documentElement.dataset.theme = savedTheme === 'dark' || savedTheme === 'light'
+        ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch { /* System theme is applied by the main script. */ }
+  </script>
   <!-- Styles -->
   <link rel="stylesheet" href="/static/css/style.css">
   <link rel="stylesheet" href="/static/css/additional.css">
+  <link rel="stylesheet" href="/static/css/brand.css?v=2">
 
 <script data-goatcounter="https://abdulrasol.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -60,8 +69,8 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Subul Technology",
-    "url": "https://abdulrasol.github.io",
-    "logo": "https://abdulrasol.github.io/logo.png",
+    "url": "https://subultech.top",
+    "logo": "https://subultech.top/logo.png",
     "description": "Subul Technology builds mobile apps, web platforms, AI solutions, business systems, and solar tools for Iraq and beyond.",
     "email": "mailto:info@subultech.top",
     "sameAs": [
@@ -70,7 +79,7 @@
       "@type": "Person",
       "name": "AbdulRasol Al-Hilo",
       "jobTitle": "Founder &amp; Lead Developer",
-      "url": "https://abdulrasol.github.io/team/abdulrasol/",
+      "url": "https://subultech.top/team/abdulrasol/",
       "sameAs": [
 "https://github.com/abdulrasol","http://linkedin.com/in/abdulrasoolal-hilo/"      ]
     }
@@ -84,8 +93,8 @@
   <header class="site-header" id="header">
     <div class="container header-inner">
       <a href="/" class="logo">
-        <img src="/logo.png" alt="Subul Technology logo" width="40" height="40">
-        <span>Subul Technology</span>
+        <img src="/static/images/brand/symbol-teal.svg" alt="" width="40" height="48">
+        <span class="brand-wordmark"><strong>Subul</strong><small>Technology</small></span>
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
@@ -128,6 +137,9 @@
       <a href="/">Home</a>
       <a href="/#services">Services</a>
       <a href="/#projects">Products</a>
+      <a href="/team/">Team</a>
+      <a href="/invest/">Invest</a>
+      <a href="/careers/">Careers</a>
       <a href="https://blog.subultech.top/" target="_blank" rel="noopener">Blog</a>
       <a href="/#contact">Contact</a>
       <div class="mobile-nav-meta">
@@ -206,8 +218,8 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="/" class="logo">
-          <img src="/logo.png" alt="Subul Technology logo" width="36" height="36">
-          <span>Subul Technology</span>
+          <img src="/static/images/brand/symbol-teal.svg" alt="" width="40" height="48">
+        <span class="brand-wordmark"><strong>Subul</strong><small>Technology</small></span>
         </a>
         <p>Building software products, AI tools, and solar solutions with precision.</p>
       </div>

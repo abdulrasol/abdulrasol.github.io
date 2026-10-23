@@ -16,27 +16,28 @@
   <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
 
   <!-- Canonical & Alternate Languages -->
-  <link rel="canonical" href="https://abdulrasol.github.io/">
-  <link rel="alternate" hreflang="en" href="https://abdulrasol.github.io/">
-  <link rel="alternate" hreflang="ar" href="https://abdulrasol.github.io/ar/">
-  <link rel="alternate" hreflang="x-default" href="https://abdulrasol.github.io/">
+  <link rel="canonical" href="https://subultech.top/">
+  <link rel="alternate" hreflang="en" href="https://subultech.top/">
+  <link rel="alternate" hreflang="ar" href="https://subultech.top/ar/">
+  <link rel="alternate" hreflang="x-default" href="https://subultech.top/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Subul Technology — Software, AI &amp; Solar Solutions">
   <meta property="og:description" content="Subul Technology builds mobile apps, web platforms, AI solutions, business systems, and solar tools. From B2B operations software to solar platforms, we deliver practical digital products.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://abdulrasol.github.io/">
-  <meta property="og:image" content="https://abdulrasol.github.io/logo.png">
+  <meta property="og:url" content="https://subultech.top/">
+  <meta property="og:image" content="https://subultech.top/logo.png">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Subul Technology — Software, AI &amp; Solar Solutions">
   <meta name="twitter:description" content="Subul Technology builds mobile apps, web platforms, AI solutions, business systems, and solar tools. From B2B operations software to solar platforms, we deliver practical digital products.">
-  <meta name="twitter:image" content="https://abdulrasol.github.io/logo.png">
+  <meta name="twitter:image" content="https://subultech.top/logo.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/static/images/brand/symbol-teal.svg">
   <link rel="apple-touch-icon" href="/logo.png">
 
   <!-- Fonts -->
@@ -47,9 +48,17 @@
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('portfolio_theme');
+      document.documentElement.dataset.theme = savedTheme === 'dark' || savedTheme === 'light'
+        ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch { /* System theme is applied by the main script. */ }
+  </script>
   <!-- Styles -->
   <link rel="stylesheet" href="/static/css/style.css">
   <link rel="stylesheet" href="/static/css/additional.css">
+  <link rel="stylesheet" href="/static/css/brand.css?v=2">
 
 <script data-goatcounter="https://abdulrasol.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -60,8 +69,8 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Subul Technology",
-    "url": "https://abdulrasol.github.io",
-    "logo": "https://abdulrasol.github.io/logo.png",
+    "url": "https://subultech.top",
+    "logo": "https://subultech.top/logo.png",
     "description": "Subul Technology builds mobile apps, web platforms, AI solutions, business systems, and solar tools for Iraq and beyond.",
     "email": "mailto:info@subultech.top",
     "sameAs": [
@@ -70,7 +79,7 @@
       "@type": "Person",
       "name": "AbdulRasol Al-Hilo",
       "jobTitle": "Founder &amp; Lead Developer",
-      "url": "https://abdulrasol.github.io/team/abdulrasol/",
+      "url": "https://subultech.top/team/abdulrasol/",
       "sameAs": [
 "https://github.com/abdulrasol","http://linkedin.com/in/abdulrasoolal-hilo/"      ]
     }
@@ -84,8 +93,8 @@
   <header class="site-header" id="header">
     <div class="container header-inner">
       <a href="/" class="logo">
-        <img src="/logo.png" alt="Subul Technology logo" width="40" height="40">
-        <span>Subul Technology</span>
+        <img src="/static/images/brand/symbol-teal.svg" alt="" width="40" height="48">
+        <span class="brand-wordmark"><strong>Subul</strong><small>Technology</small></span>
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
@@ -128,6 +137,9 @@ aria-current="page">Home</a>
       <a href="/">Home</a>
       <a href="/#services">Services</a>
       <a href="/#projects">Products</a>
+      <a href="/team/">Team</a>
+      <a href="/invest/">Invest</a>
+      <a href="/careers/">Careers</a>
       <a href="https://blog.subultech.top/" target="_blank" rel="noopener">Blog</a>
       <a href="/#contact">Contact</a>
       <div class="mobile-nav-meta">
@@ -149,12 +161,12 @@ aria-current="page">Home</a>
 
   <div class="container hero-content">
     <div class="hero-text">
-      <span class="hero-badge">Subul Technology</span>
+      <span class="hero-badge">YOUR PATH TO WHAT’S NEXT</span>
       <h1 class="hero-title">
-        Software Systems, AI Tools
-        <span class="gradient-text">&amp; Solar Solutions Built for Real Work</span>
+        Build better.
+        <span class="gradient-text">Go further.</span>
       </h1>
-      <p class="hero-subtitle">We help businesses and founders launch faster with mobile apps, internal systems, AI-powered workflows, and solar platforms designed for practical operations.</p>
+      <p class="hero-subtitle">Software, intelligent systems, reliable infrastructure, and solar solutions. Connected expertise to take your business to its next stage.</p>
       <div class="hero-proof" aria-label="Core strengths">
         <span class="hero-proof-item">B2B systems</span>
         <span class="hero-proof-item">AI automation</span>
@@ -185,56 +197,17 @@ aria-current="page">Home</a>
       </div>
     </div>
 
-    <div class="hero-showcase" aria-label="Service overview">
-      <div class="hero-panel hero-panel-primary">
-        <span class="hero-panel-kicker">What we build</span>
-        <h2>Practical systems for operations, growth, and automation.</h2>
-        <p>From internal tools to market-facing products, we focus on shipping useful software with clear business value.</p>
+    <div class="hero-showcase">
+      <div class="pathway-art">
+        <div class="pathway-art-top"><span>SUBUL / TECHNOLOGY</span><span>01 — ∞</span></div>
+        <div class="pathway-symbol" aria-hidden="true"><img src="/static/images/brand/symbol-teal.svg" alt="" width="400" height="400"></div>
+        <div class="pathway-art-caption"><span>Connected thinking.</span><strong>Higher possibilities.</strong></div>
+        <div class="pathway-art-bottom"><span>Software · Infrastructure · Energy</span><i class="fas fa-arrow-up" aria-hidden="true"></i></div>
       </div>
-
-      <div class="hero-service-stack">
-        <article class="hero-service-card">
-          <div class="hero-service-icon">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <div class="hero-service-copy">
-            <h3>Mobile App Development</h3>
-            <p>Cross-platform mobile apps with Flutter for Android, iOS, and desktop experiences that scale.</p>
-          </div>
-        </article>
-        <article class="hero-service-card">
-          <div class="hero-service-icon">
-            <i class="fas fa-globe"></i>
-          </div>
-          <div class="hero-service-copy">
-            <h3>Web Platforms &amp; Websites</h3>
-            <p>Business websites, dashboards, admin panels, and custom web platforms with modern backend integrations.</p>
-          </div>
-        </article>
-        <article class="hero-service-card">
-          <div class="hero-service-icon">
-            <i class="fas fa-brain"></i>
-          </div>
-          <div class="hero-service-copy">
-            <h3>AI Solutions &amp; Automation</h3>
-            <p>AI-powered tools, OCR workflows, assistants, and practical automation for businesses and technical teams.</p>
-          </div>
-        </article>
-      </div>
-
       <div class="hero-mini-stats">
-        <div class="hero-mini-stat">
-          <strong>7+</strong>
-          <span>Apps Shipped</span>
-        </div>
-        <div class="hero-mini-stat">
-          <strong>6+</strong>
-          <span>Years Solar Experience</span>
-        </div>
-        <div class="hero-mini-stat">
-          <strong>3+</strong>
-          <span>Years Coding</span>
-        </div>
+        <div class="hero-mini-stat"><strong>7+</strong><span>Apps Shipped</span></div>
+        <div class="hero-mini-stat"><strong>6+</strong><span>Years Solar Experience</span></div>
+        <div class="hero-mini-stat"><strong>3+</strong><span>Years Coding</span></div>
       </div>
     </div>
   </div>
@@ -251,6 +224,7 @@ aria-current="page">Home</a>
 
     <div class="services-grid">
       <div class="service-card">
+        <span class="service-number" aria-hidden="true">01</span>
         <div class="service-icon">
           <i class="fas fa-mobile-alt"></i>
         </div>
@@ -258,6 +232,7 @@ aria-current="page">Home</a>
         <p>Cross-platform mobile apps with Flutter for Android, iOS, and desktop experiences that scale.</p>
       </div>
       <div class="service-card">
+        <span class="service-number" aria-hidden="true">02</span>
         <div class="service-icon">
           <i class="fas fa-globe"></i>
         </div>
@@ -265,6 +240,7 @@ aria-current="page">Home</a>
         <p>Business websites, dashboards, admin panels, and custom web platforms with modern backend integrations.</p>
       </div>
       <div class="service-card">
+        <span class="service-number" aria-hidden="true">03</span>
         <div class="service-icon">
           <i class="fas fa-brain"></i>
         </div>
@@ -272,6 +248,15 @@ aria-current="page">Home</a>
         <p>AI-powered tools, OCR workflows, assistants, and practical automation for businesses and technical teams.</p>
       </div>
       <div class="service-card">
+        <span class="service-number" aria-hidden="true">04</span>
+        <div class="service-icon">
+          <i class="fas fa-server"></i>
+        </div>
+        <h3>Hosting &amp; Local Infrastructure</h3>
+        <p>Website hosting, local server administration, internal networks, and private NAS storage built around your business.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-number" aria-hidden="true">05</span>
         <div class="service-icon">
           <i class="fas fa-diagram-project"></i>
         </div>
@@ -279,6 +264,7 @@ aria-current="page">Home</a>
         <p>Move manual operations into connected digital systems for sales, operations, reporting, and customer workflows.</p>
       </div>
       <div class="service-card">
+        <span class="service-number" aria-hidden="true">06</span>
         <div class="service-icon">
           <i class="fas fa-solar-panel"></i>
         </div>
@@ -473,51 +459,20 @@ aria-current="page">Home</a>
       </article>
       <article class="project-card" data-category="solar">
         <div class="project-image">
-          <img src="/assets/taqati/logo.png" alt="Taqati" width="240" height="160" loading="lazy" decoding="async">
-          <span class="project-badge">Featured</span>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Taqati</h3>
-          <p class="project-desc">The premier engineering app for solar energy calculations, weather data, and PV system design in your pocket.</p>
-          <div class="project-tech">
-            <span class="tech-tag">Flutter</span>
-            <span class="tech-tag">Dart</span>
-            <span class="tech-tag">PVGIS API</span>
-            <span class="tech-tag">Weather API</span>
-            <span class="tech-tag">Solar PV Design</span>
-          </div>
-          <div class="project-links">
-            <a href="/taqati/?ref=portfolio"
-               data-goatcounter-click="portfolio-project-taqati"
-               class="project-link"
-               aria-label="View project">
-              <i class="fas fa-external-link-alt"></i>
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.taqati"
-               data-goatcounter-click="google-play-taqati"
-               class="project-link"
-               target="_blank"
-               rel="noopener"
-               aria-label="Google Play">
-              <i class="fab fa-google-play"></i>
-            </a>
-          </div>
-        </div>
-      </article>
-      <article class="project-card project-card-extra hidden" data-category="solar">
-        <div class="project-image">
           <img src="/assets/watt/logo.png" alt="Watt" width="240" height="160" loading="lazy" decoding="async">
           <span class="project-badge">Featured</span>
         </div>
         <div class="project-body">
           <h3 class="project-title">Watt</h3>
-          <p class="project-desc">A comprehensive solar platform for Iraq that combines system calculation, product marketplace, quotations, and business operations in one experience.</p>
+          <p class="project-desc">Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.</p>
           <div class="project-tech">
             <span class="tech-tag">Flutter</span>
             <span class="tech-tag">Dart</span>
             <span class="tech-tag">Firebase</span>
-            <span class="tech-tag">Go</span>
             <span class="tech-tag">Riverpod</span>
+            <span class="tech-tag">PVGIS</span>
+            <span class="tech-tag">NASA POWER</span>
+            <span class="tech-tag">Open-Meteo</span>
           </div>
           <div class="project-links">
             <a href="/watt/?ref=portfolio"
@@ -864,8 +819,8 @@ aria-current="page">Home</a>
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="/" class="logo">
-          <img src="/logo.png" alt="Subul Technology logo" width="36" height="36">
-          <span>Subul Technology</span>
+          <img src="/static/images/brand/symbol-teal.svg" alt="" width="40" height="48">
+        <span class="brand-wordmark"><strong>Subul</strong><small>Technology</small></span>
         </a>
         <p>Building software products, AI tools, and solar solutions with precision.</p>
       </div>

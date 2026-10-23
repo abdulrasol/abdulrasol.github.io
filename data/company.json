@@ -1,10 +1,10 @@
 {
   "name_en": "Subul Technology",
-  "name_ar": "سبل التكنلوجيا",
+  "name_ar": "سُبُل التكنولوجيا",
   "tagline_en": "Software, AI & Solar Solutions",
   "tagline_ar": "حلول برمجية وذكاء اصطناعي وطاقة شمسية",
   "description_en": "Subul Technology builds mobile apps, web platforms, AI solutions, business systems, and solar tools for Iraq and beyond.",
-  "description_ar": "سبل التكنلوجيا تبني تطبيقات موبايل، منصات ويب، حلول ذكاء اصطناعي، أنظمة أعمال، وأدوات طاقة شمسية للعراق وما بعده.",
+  "description_ar": "سُبُل التكنولوجيا تبني تطبيقات موبايل، منصات ويب، حلول ذكاء اصطناعي، أنظمة أعمال، وأدوات طاقة شمسية للعراق وما بعده.",
   "founded_en": "2024",
   "founded_ar": "٢٠٢٤",
   "location_en": "Iraq",
@@ -147,6 +147,13 @@
       "title_ar": "حلول الذكاء الاصطناعي والأتمتة",
       "desc_en": "AI-powered tools, OCR workflows, assistants, and practical automation for businesses and technical teams.",
       "desc_ar": "أدوات ذكاء اصطناعي، OCR، ومساعدات وأتمتة عملية تختصر الوقت وترفع دقة العمل."
+    },
+    {
+      "icon": "server",
+      "title_en": "Hosting & Local Infrastructure",
+      "title_ar": "الاستضافة والبنية التحتية المحلية",
+      "desc_en": "Website hosting, local server administration, internal networks, and private NAS storage built around your business.",
+      "desc_ar": "استضافة المواقع وإدارة السيرفرات المحلية والشبكات الداخلية والتخزين الخاص NAS، بما يناسب احتياجات عملك."
     },
     {
       "icon": "diagram-project",

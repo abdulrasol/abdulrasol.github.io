@@ -10,7 +10,7 @@
 (function () {
   'use strict';
 
-  const STORAGE_KEY_THEME = 'project_theme';
+  const STORAGE_KEY_THEME = 'portfolio_theme';
   const STORAGE_KEY_LANG_PREFERENCE = 'portfolio_lang_preference';
   const STORAGE_KEY_LANG_REDIRECTED = 'portfolio_lang_redirected';
   const html = document.documentElement;
@@ -24,8 +24,12 @@
 
   /* Theme handling */
   function getPreferredTheme() {
-    const saved = localStorage.getItem(STORAGE_KEY_THEME);
-    if (saved) return saved;
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY_THEME);
+      if (saved === 'light' || saved === 'dark') return saved;
+    } catch {
+      // Theme remains usable when browser storage is unavailable.
+    }
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
@@ -42,7 +46,7 @@
   function toggleTheme() {
     const current = html.getAttribute('data-theme') || getPreferredTheme();
     const next = current === 'dark' ? 'light' : 'dark';
-    localStorage.setItem(STORAGE_KEY_THEME, next);
+    try { localStorage.setItem(STORAGE_KEY_THEME, next); } catch { /* Storage is optional. */ }
     applyTheme(next);
   }
 
@@ -152,10 +156,10 @@
   /* Scroll reveal */
   function initReveal() {
     const revealElements = document.querySelectorAll(
-      '.section-header, .feature-card, .screenshot-item, .testimonial-card, .pricing-card, .version-card, .content-section'
+      '.reveal, .section-header, .feature-card, .screenshot-item, .testimonial-card, .pricing-card, .version-card, .content-section'
     );
 
-    if (!('IntersectionObserver' in window)) {
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       revealElements.forEach((el) => el.classList.add('visible'));
       return;
     }

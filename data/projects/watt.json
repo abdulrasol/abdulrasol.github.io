@@ -1,12 +1,12 @@
 {
   "id": "watt",
   "site": {
-    "title_en": "Watt: Solar Energy Platform",
-    "title_ar": "واط: منصة الطاقة الشمسية",
-    "description_en": "A comprehensive solar platform for Iraq that combines system calculation, product marketplace, quotations, and business operations in one experience.",
-    "description_ar": "منصة شمسية متكاملة للعراق تجمع بين حساب الأنظمة، سوق المنتجات، عروض الأسعار، وعمليات الشركات في تجربة واحدة.",
-    "keywords_en": "Watt, Solar Energy Platform, Iraq Solar Marketplace, Solar Calculator, B2B B2C, Clean Energy, Flutter",
-    "keywords_ar": "واط, منصة طاقة شمسية, سوق شمسي العراق, حاسبة شمسية, B2B B2C, طاقة نظيفة, فلاتر"
+    "title_en": "Watt: Solar Sizing, Climate Data & Solar Store",
+    "title_ar": "واط: حاسبة الطاقة الشمسية وبيانات المناخ ومتجر الطاقة الشمسية",
+    "description_en": "Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.",
+    "description_ar": "واط تحسب منظومتك الشمسية من موقعك الحقيقي ببيانات PVGIS وناسا، وتصمّم الألواح، وتربطك بمتجر الطاقة الشمسية وعروض أسعار الشركات.",
+    "keywords_en": "Watt, Taqati, solar calculator, solar system sizing, PVGIS, off-grid, hybrid inverter, battery sizing, Iraq solar store, Subul Technology, Flutter",
+    "keywords_ar": "واط, طاقتي, حاسبة طاقة شمسية, حساب منظومة شمسية, PVGIS, بطاريات, انفرتر هجين, متجر طاقة شمسية العراق, سبل التكنولوجيا, فلاتر"
   },
   "settings": {
     "default_lang": "ar",
@@ -17,59 +17,109 @@
   "brand": {
     "name_en": "Watt",
     "name_ar": "واط",
-    "tagline_en": "Iraq's integrated solar platform",
-    "tagline_ar": "المنصة الشمسية المتكاملة للعراق",
+    "tagline_en": "Size, design, and buy your solar system",
+    "tagline_ar": "احسب منظومتك الشمسية وصمّمها واشترِ مكوناتها",
     "logo": "/assets/watt/logo.png",
-    "banner": "/assets/watt/banar.png",
+    "banner": null,
     "favicon": "/assets/watt/logo.png"
   },
   "links": {
     "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",
-    "appStore": null,
+    "appStore": "https://apps.apple.com/iq/app/watt-solar-system-calculator/id6820459639",
     "github": null,
     "facebook": null,
     "instagram": null,
-    "support_email": "watt@subultech.top"
+    "support_email": "watt@subultech.top",
+    "webApp": "https://watt.subultech.top"
   },
   "hero": {
-    "badge_en": "Iraq's first integrated solar marketplace",
-    "badge_ar": "أول سوق إلكتروني متكامل للطاقة الشمسية في العراق",
-    "title_en": "Turn Solar Demand Into <span class=\"highlight\">A Scalable Platform</span>",
-    "title_ar": "حوّل الطلب الشمسي إلى <span class=\"highlight\">منصة قابلة للتوسع</span>",
-    "subtitle_en": "Watt combines solar calculation, system design, supplier marketplace, quotations, and business operations in one platform for consumers and companies.",
-    "subtitle_ar": "واط تجمع بين الحساب الشمسي، تصميم الأنظمة، سوق الموردين، عروض الأسعار، وعمليات الشركات في منصة واحدة للمستهلكين والشركات.",
+    "badge_en": "Formerly Taqati · Solar engineering in your pocket",
+    "badge_ar": "طاقتي سابقاً · الهندسة الشمسية في جيبك",
+    "title_en": "Size your solar system <span class=\"highlight\">from your real location</span>",
+    "title_ar": "احسب منظومتك الشمسية <span class=\"highlight\">من موقعك الحقيقي</span>",
+    "subtitle_en": "Watt turns your loads and your location into panels, batteries and an inverter, backed by PVGIS and NASA climate data, then connects you to a solar store and company quotations.",
+    "subtitle_ar": "واط تحوّل أحمالك وموقعك إلى ألواح وبطاريات وانفرتر، بالاعتماد على بيانات PVGIS وناسا المناخية، ثم تربطك بمتجر الطاقة الشمسية وعروض أسعار الشركات.",
     "cta_en": "Download on Google Play",
     "cta_ar": "تحميل من Google Play",
-    "secondary_cta_en": "View Investment Case",
-    "secondary_cta_ar": "عرض فرصة الاستثمار",
+    "secondary_cta_en": "App Store",
+    "secondary_cta_ar": "متجر أبل",
     "stats_en": [
-      { "value": "+300", "label": "Active users" },
-      { "value": "+50", "label": "Registered companies" },
-      { "value": "+25", "label": "Iraqi cities" },
-      { "value": "B2B + B2C", "label": "Dual business model" }
+      {
+        "value": "PVGIS",
+        "label": "Satellite climate data for your site"
+      },
+      {
+        "value": "Offline",
+        "label": "Built-in climate grid for Iraq"
+      },
+      {
+        "value": "AR + EN",
+        "label": "Arabic and English"
+      },
+      {
+        "value": "Free",
+        "label": "Calculators and design tools"
+      }
     ],
     "stats_ar": [
-      { "value": "+300", "label": "مستخدم نشط" },
-      { "value": "+50", "label": "شركة مسجلة" },
-      { "value": "+25", "label": "مدينة عراقية" },
-      { "value": "B2B + B2C", "label": "نموذج عمل مزدوج" }
-    ]
+      {
+        "value": "PVGIS",
+        "label": "بيانات مناخية من الأقمار الصناعية لموقعك"
+      },
+      {
+        "value": "بدون إنترنت",
+        "label": "شبكة مناخ مضمّنة للعراق"
+      },
+      {
+        "value": "عربي + English",
+        "label": "واجهة بالعربية والإنجليزية"
+      },
+      {
+        "value": "مجاني",
+        "label": "الحاسبات وأدوات التصميم"
+      }
+    ],
+    "web_cta_en": "Open on the web",
+    "web_cta_ar": "افتح نسخة الويب"
   },
-  "platforms": ["Android", "iOS"],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
   "category": "solar",
   "featured": true,
-  "technologies": ["Flutter", "Dart", "Firebase", "Go", "Riverpod"],
+  "technologies": [
+    "Flutter",
+    "Dart",
+    "Firebase",
+    "Riverpod",
+    "PVGIS",
+    "NASA POWER",
+    "Open-Meteo"
+  ],
   "sections": {
     "problem_en": {
       "label": "The problem",
-      "title": "Iraq has a power gap and a fragmented solar market",
-      "subtitle": "Demand is real, but discovery, comparison, and execution are still difficult.",
-      "body": "Iraq faces chronic electricity shortages while having one of the strongest solar conditions in the region. Consumers and companies still struggle with an unstructured market, inconsistent pricing, and the lack of one trusted workflow from sizing to purchase and execution.",
+      "title": "Solar sizing should not be guesswork",
+      "subtitle": "Wrong sizing wastes money and wears out batteries early.",
+      "body": "Iraq has strong sun but long power outages, and most buyers size their system from rules of thumb. Without real irradiance and temperature data, systems end up too small, too expensive, or hard on the batteries. Prices and specifications are also scattered across the market.",
       "items": [
-        { "icon": "❌", "text": "8-12 hours of daily power outages in many areas" },
-        { "icon": "❌", "text": "High generator and fuel costs" },
-        { "icon": "❌", "text": "Unstructured market for solar distributors and installers" },
-        { "icon": "❌", "text": "Difficult price and specification comparison across suppliers" }
+        {
+          "icon": "❌",
+          "text": "Rule-of-thumb sizing that ignores your real location and worst months"
+        },
+        {
+          "icon": "❌",
+          "text": "Batteries sized on the wrong load and worn out early"
+        },
+        {
+          "icon": "❌",
+          "text": "Hard to get reliable sun and temperature data for your site"
+        },
+        {
+          "icon": "❌",
+          "text": "Prices and specifications are hard to compare across suppliers"
+        }
       ],
       "highlight": {
         "value": "330+",
@@ -78,14 +128,26 @@
     },
     "problem_ar": {
       "label": "المشكلة",
-      "title": "العراق يملك فجوة كهربائية وسوقاً شمسية مبعثرة",
-      "subtitle": "الطلب موجود، لكن الاكتشاف والمقارنة والتنفيذ ما زالت معقدة.",
-      "body": "يعاني العراق من نقص مزمن في الكهرباء رغم امتلاكه واحداً من أفضل الظروف الشمسية في المنطقة. ما يزال المستهلكون والشركات يواجهون سوقاً غير منظمة، وأسعاراً غير واضحة، وغياب مسار موثوق من حساب الاحتياج إلى الشراء والتنفيذ.",
+      "title": "حساب المنظومة الشمسية يجب ألا يكون تخميناً",
+      "subtitle": "الحساب الخاطئ يضيّع المال ويُتلف البطاريات مبكراً.",
+      "body": "العراق غني بالشمس لكن انقطاع الكهرباء طويل، ومعظم المشترين يحسبون منظومتهم بالتقدير. وبدون بيانات إشعاع وحرارة حقيقية تصبح المنظومة أصغر من اللازم أو أغلى منه أو مرهقة للبطاريات. كما أن الأسعار والمواصفات متفرقة في السوق.",
       "items": [
-        { "icon": "❌", "text": "انقطاع الكهرباء من 8 إلى 12 ساعة يومياً في كثير من المناطق" },
-        { "icon": "❌", "text": "تكاليف عالية للمولدات والوقود" },
-        { "icon": "❌", "text": "سوق غير منظمة للموزعين وشركات التركيب" },
-        { "icon": "❌", "text": "صعوبة مقارنة الأسعار والمواصفات بين الموردين" }
+        {
+          "icon": "❌",
+          "text": "حساب بالتقدير لا يراعي موقعك الحقيقي وأسوأ أشهر السنة"
+        },
+        {
+          "icon": "❌",
+          "text": "بطاريات تُحسب على حمل خاطئ وتتلف مبكراً"
+        },
+        {
+          "icon": "❌",
+          "text": "صعوبة الحصول على بيانات شمس وحرارة موثوقة لموقعك"
+        },
+        {
+          "icon": "❌",
+          "text": "صعوبة مقارنة الأسعار والمواصفات بين الموردين"
+        }
       ],
       "highlight": {
         "value": "330+",
@@ -94,28 +156,76 @@
     },
     "solution_en": {
       "label": "The solution",
-      "title": "Watt brings the whole solar journey into one platform",
-      "subtitle": "From first calculation to quotation, order, and business operations.",
+      "title": "Watt: from your loads to a system you can buy",
+      "subtitle": "Calculate, check, design, then request quotes or shop in one app.",
       "items": [
-        { "icon": "🔢", "title": "Smart solar calculator", "desc": "Calculate panels, batteries, inverters, and energy needs with practical accuracy." },
-        { "icon": "🏪", "title": "B2B + B2C marketplace", "desc": "A unified marketplace for consumers and companies to browse and compare equipment." },
-        { "icon": "📋", "title": "Quotation workflow", "desc": "Request and compare quotations from multiple companies inside one product flow." },
-        { "icon": "📊", "title": "Inventory and sales operations", "desc": "For companies, manage stock, orders, customers, and financial reporting." },
-        { "icon": "💳", "title": "Integrated accounting", "desc": "Invoices, ledgers, receivables, payables, and profitability in one operational system." },
-        { "icon": "✏️", "title": "System designer", "desc": "Professional system-design tooling with bill-of-material support." }
+        {
+          "icon": "🧮",
+          "title": "Location-based calculator",
+          "desc": "Panels, battery bank, inverter and charger sized from your appliances and the real monthly sun at your site."
+        },
+        {
+          "icon": "🛰️",
+          "title": "Trusted climate data",
+          "desc": "PVGIS first, NASA POWER as backup, and a built-in grid for Iraq that works without internet. Every result shows its data source."
+        },
+        {
+          "icon": "🔋",
+          "title": "Outage-aware batteries",
+          "desc": "Battery size follows the load you keep during an outage, with startup surge, and a chart of how long the system lasts."
+        },
+        {
+          "icon": "📐",
+          "title": "PV system designer",
+          "desc": "Lay out panels on your roof, design the mounting structure, and export your design."
+        },
+        {
+          "icon": "🛒",
+          "title": "Watt Store and quotations",
+          "desc": "Browse products from verified companies and technicians, request quotations, and compare offers."
+        },
+        {
+          "icon": "🩺",
+          "title": "System health check",
+          "desc": "Audit any system, including one you added manually, and see exactly what is under- or over-sized."
+        }
       ]
     },
     "solution_ar": {
       "label": "الحل",
-      "title": "واط تجمع الرحلة الشمسية كلها في منصة واحدة",
-      "subtitle": "من أول حساب إلى عرض السعر والطلب وعمليات الشركة.",
+      "title": "واط: من أحمالك إلى منظومة تستطيع شراءها",
+      "subtitle": "احسب وافحص وصمّم ثم اطلب عروض الأسعار أو تسوّق في تطبيق واحد.",
       "items": [
-        { "icon": "🔢", "title": "حاسبة شمسية ذكية", "desc": "احسب الألواح والبطاريات والإنفرترات والاحتياج الطاقي بدقة عملية." },
-        { "icon": "🏪", "title": "متجر B2B + B2C", "desc": "سوق موحدة للمستهلكين والشركات لتصفح المعدات ومقارنتها." },
-        { "icon": "📋", "title": "مسار عروض أسعار", "desc": "اطلب وقارن عروض الأسعار من عدة شركات ضمن تدفق واحد." },
-        { "icon": "📊", "title": "إدارة المخزون والمبيعات", "desc": "للشركات: إدارة المخزون والطلبات والعملاء والتقارير المالية." },
-        { "icon": "💳", "title": "محاسبة متكاملة", "desc": "فواتير، دفاتر أستاذ، قبض وصرف، وربحية ضمن نظام تشغيلي واحد." },
-        { "icon": "✏️", "title": "مصمم أنظمة", "desc": "أداة احترافية لتصميم الأنظمة مع دعم فاتورة المواد." }
+        {
+          "icon": "🧮",
+          "title": "حاسبة حسب موقعك",
+          "desc": "الألواح وبنك البطاريات والانفرتر والشاحن تُحسب من أجهزتك وشمس موقعك الشهرية الفعلية."
+        },
+        {
+          "icon": "🛰️",
+          "title": "بيانات مناخية موثوقة",
+          "desc": "PVGIS أولاً وناسا POWER احتياطاً، وشبكة مضمّنة للعراق تعمل بلا إنترنت. وكل نتيجة تعرض مصدر بياناتها."
+        },
+        {
+          "icon": "🔋",
+          "title": "بطاريات تراعي الانقطاع",
+          "desc": "حجم البطارية يتبع الحمل الذي تُبقيه وقت الانقطاع مع تيار البدء، ومخطط يوضح كم تصمد المنظومة."
+        },
+        {
+          "icon": "📐",
+          "title": "مصمم منظومات PV",
+          "desc": "وزّع الألواح على سطحك، وصمّم هيكل التثبيت، وصدّر تصميمك."
+        },
+        {
+          "icon": "🛒",
+          "title": "متجر واط وعروض الأسعار",
+          "desc": "تصفّح منتجات شركات وفنيين موثقين، واطلب عروض أسعار وقارن بينها."
+        },
+        {
+          "icon": "🩺",
+          "title": "فحص صحة المنظومة",
+          "desc": "افحص أي منظومة حتى المضافة يدوياً، وشاهد بالضبط ما هو أصغر أو أكبر من اللازم."
+        }
       ]
     },
     "market_en": {
@@ -123,12 +233,36 @@
       "title": "Why Iraq, and why now?",
       "subtitle": "A high-demand energy market with digital readiness and low integrated competition.",
       "items": [
-        { "icon": "☀️", "value": "3,000+", "label": "Hours of sun annually" },
-        { "icon": "🏠", "value": "40M+", "label": "Population with rising alternative-energy demand" },
-        { "icon": "⚡", "value": "~55%", "label": "Gap between grid output and real demand" },
-        { "icon": "📜", "value": "2024-2030", "label": "Renewable-energy momentum and policy window" },
-        { "icon": "💰", "value": "$500M+", "label": "Expected Iraqi solar-market size by 2027" },
-        { "icon": "📱", "value": "85%", "label": "Internet and smartphone penetration" }
+        {
+          "icon": "☀️",
+          "value": "3,000+",
+          "label": "Hours of sun annually"
+        },
+        {
+          "icon": "🏠",
+          "value": "40M+",
+          "label": "Population with rising alternative-energy demand"
+        },
+        {
+          "icon": "⚡",
+          "value": "~55%",
+          "label": "Gap between grid output and real demand"
+        },
+        {
+          "icon": "📜",
+          "value": "2024-2030",
+          "label": "Renewable-energy momentum and policy window"
+        },
+        {
+          "icon": "💰",
+          "value": "$500M+",
+          "label": "Expected Iraqi solar-market size by 2027"
+        },
+        {
+          "icon": "📱",
+          "value": "85%",
+          "label": "Internet and smartphone penetration"
+        }
       ]
     },
     "market_ar": {
@@ -136,12 +270,36 @@
       "title": "لماذا العراق؟ ولماذا الآن؟",
       "subtitle": "سوق طاقة عالي الطلب مع جاهزية رقمية ومنافسة متكاملة منخفضة.",
       "items": [
-        { "icon": "☀️", "value": "3,000+", "label": "ساعة شمس سنوياً" },
-        { "icon": "🏠", "value": "40M+", "label": "عدد سكان مع طلب متزايد على الطاقة البديلة" },
-        { "icon": "⚡", "value": "~55%", "label": "فجوة بين إنتاج الشبكة والحاجة الفعلية" },
-        { "icon": "📜", "value": "2024-2030", "label": "نافذة تنظيمية وزخم للطاقة المتجددة" },
-        { "icon": "💰", "value": "$500M+", "label": "حجم سوق شمسي متوقع في العراق بحلول 2027" },
-        { "icon": "📱", "value": "85%", "label": "انتشار الإنترنت والهواتف الذكية" }
+        {
+          "icon": "☀️",
+          "value": "3,000+",
+          "label": "ساعة شمس سنوياً"
+        },
+        {
+          "icon": "🏠",
+          "value": "40M+",
+          "label": "عدد سكان مع طلب متزايد على الطاقة البديلة"
+        },
+        {
+          "icon": "⚡",
+          "value": "~55%",
+          "label": "فجوة بين إنتاج الشبكة والحاجة الفعلية"
+        },
+        {
+          "icon": "📜",
+          "value": "2024-2030",
+          "label": "نافذة تنظيمية وزخم للطاقة المتجددة"
+        },
+        {
+          "icon": "💰",
+          "value": "$500M+",
+          "label": "حجم سوق شمسي متوقع في العراق بحلول 2027"
+        },
+        {
+          "icon": "📱",
+          "value": "85%",
+          "label": "انتشار الإنترنت والهواتف الذكية"
+        }
       ]
     },
     "revenue_en": {
@@ -149,9 +307,24 @@
       "title": "How Watt generates revenue",
       "subtitle": "Multiple revenue channels support both growth and resilience.",
       "items": [
-        { "icon": "📋", "title": "Marketplace commission", "desc": "A commission on B2B and B2C sales completed through the platform.", "tag": "Core revenue" },
-        { "icon": "👑", "title": "Company subscriptions", "desc": "Recurring subscriptions for suppliers, installers, and professional operators.", "tag": "Recurring" },
-        { "icon": "📢", "title": "Promotions and advertising", "desc": "Paid visibility for suppliers, premium listings, and in-platform promotions.", "tag": "Expansion" }
+        {
+          "icon": "📋",
+          "title": "Marketplace commission",
+          "desc": "A commission on B2B and B2C sales completed through the platform.",
+          "tag": "Core revenue"
+        },
+        {
+          "icon": "👑",
+          "title": "Company subscriptions",
+          "desc": "Recurring subscriptions for suppliers, installers, and professional operators.",
+          "tag": "Recurring"
+        },
+        {
+          "icon": "📢",
+          "title": "Promotions and advertising",
+          "desc": "Paid visibility for suppliers, premium listings, and in-platform promotions.",
+          "tag": "Expansion"
+        }
       ]
     },
     "revenue_ar": {
@@ -159,9 +332,24 @@
       "title": "كيف يحقق واط الإيرادات",
       "subtitle": "قنوات إيراد متعددة تدعم النمو والاستدامة.",
       "items": [
-        { "icon": "📋", "title": "عمولة السوق", "desc": "عمولة على مبيعات B2B وB2C التي تتم عبر المنصة.", "tag": "الإيراد الأساسي" },
-        { "icon": "👑", "title": "اشتراكات الشركات", "desc": "اشتراكات متكررة للموردين وشركات التركيب والمشغلين المحترفين.", "tag": "متكرر" },
-        { "icon": "📢", "title": "الترويج والإعلانات", "desc": "ظهور مدفوع للموردين، بطاقات مميزة، وحملات داخل المنصة.", "tag": "توسع" }
+        {
+          "icon": "📋",
+          "title": "عمولة السوق",
+          "desc": "عمولة على مبيعات B2B وB2C التي تتم عبر المنصة.",
+          "tag": "الإيراد الأساسي"
+        },
+        {
+          "icon": "👑",
+          "title": "اشتراكات الشركات",
+          "desc": "اشتراكات متكررة للموردين وشركات التركيب والمشغلين المحترفين.",
+          "tag": "متكرر"
+        },
+        {
+          "icon": "📢",
+          "title": "الترويج والإعلانات",
+          "desc": "ظهور مدفوع للموردين، بطاقات مميزة، وحملات داخل المنصة.",
+          "tag": "توسع"
+        }
       ]
     },
     "why_invest_en": {
@@ -169,12 +357,36 @@
       "title": "Why Watt is the right investment",
       "subtitle": "This is not another small utility app. It is platform infrastructure for a market.",
       "items": [
-        { "number": "1", "title": "Underserved market", "desc": "No direct integrated competitor combines sizing, marketplace, quotations, and operations." },
-        { "number": "2", "title": "Scalable business model", "desc": "A dual B2B + B2C model with room to expand to regional markets." },
-        { "number": "3", "title": "Strong technical base", "desc": "Built with a modern stack and architecture ready for operational scale." },
-        { "number": "4", "title": "More than a store", "desc": "Combines calculations, design, commerce, operations, and business workflow in one product." },
-        { "number": "5", "title": "Market-native expertise", "desc": "Built with direct understanding of Iraqi market needs and solar realities." },
-        { "number": "6", "title": "Launch-ready direction", "desc": "The product direction is clear and the growth case is compelling with the right partner." }
+        {
+          "number": "1",
+          "title": "Underserved market",
+          "desc": "No direct integrated competitor combines sizing, marketplace, quotations, and operations."
+        },
+        {
+          "number": "2",
+          "title": "Scalable business model",
+          "desc": "A dual B2B + B2C model with room to expand to regional markets."
+        },
+        {
+          "number": "3",
+          "title": "Strong technical base",
+          "desc": "Built with a modern stack and architecture ready for operational scale."
+        },
+        {
+          "number": "4",
+          "title": "More than a store",
+          "desc": "Combines calculations, design, commerce, operations, and business workflow in one product."
+        },
+        {
+          "number": "5",
+          "title": "Market-native expertise",
+          "desc": "Built with direct understanding of Iraqi market needs and solar realities."
+        },
+        {
+          "number": "6",
+          "title": "Launch-ready direction",
+          "desc": "The product direction is clear and the growth case is compelling with the right partner."
+        }
       ]
     },
     "why_invest_ar": {
@@ -182,12 +394,36 @@
       "title": "لماذا واط هي الاستثمار الصحيح؟",
       "subtitle": "هذا ليس تطبيقاً صغيراً آخر، بل بنية منصة لسوق كامل.",
       "items": [
-        { "number": "1", "title": "سوق غير مخدوم كفاية", "desc": "لا يوجد منافس متكامل يجمع الحساب والسوق وعروض الأسعار والعمليات." },
-        { "number": "2", "title": "نموذج عمل قابل للتوسع", "desc": "نموذج مزدوج B2B + B2C مع مساحة للتوسع الإقليمي." },
-        { "number": "3", "title": "قاعدة تقنية قوية", "desc": "مبني بتقنيات حديثة ومعمارية جاهزة للنمو التشغيلي." },
-        { "number": "4", "title": "أكثر من مجرد متجر", "desc": "يجمع الحساب والتصميم والتجارة والعمليات وسير العمل التجاري في منتج واحد." },
-        { "number": "5", "title": "خبرة نابعة من السوق", "desc": "مبني بفهم مباشر لاحتياجات السوق العراقي وواقع الطاقة الشمسية." },
-        { "number": "6", "title": "اتجاه جاهز للإطلاق", "desc": "اتجاه المنتج واضح، وفرصة النمو قوية مع الشريك المناسب." }
+        {
+          "number": "1",
+          "title": "سوق غير مخدوم كفاية",
+          "desc": "لا يوجد منافس متكامل يجمع الحساب والسوق وعروض الأسعار والعمليات."
+        },
+        {
+          "number": "2",
+          "title": "نموذج عمل قابل للتوسع",
+          "desc": "نموذج مزدوج B2B + B2C مع مساحة للتوسع الإقليمي."
+        },
+        {
+          "number": "3",
+          "title": "قاعدة تقنية قوية",
+          "desc": "مبني بتقنيات حديثة ومعمارية جاهزة للنمو التشغيلي."
+        },
+        {
+          "number": "4",
+          "title": "أكثر من مجرد متجر",
+          "desc": "يجمع الحساب والتصميم والتجارة والعمليات وسير العمل التجاري في منتج واحد."
+        },
+        {
+          "number": "5",
+          "title": "خبرة نابعة من السوق",
+          "desc": "مبني بفهم مباشر لاحتياجات السوق العراقي وواقع الطاقة الشمسية."
+        },
+        {
+          "number": "6",
+          "title": "اتجاه جاهز للإطلاق",
+          "desc": "اتجاه المنتج واضح، وفرصة النمو قوية مع الشريك المناسب."
+        }
       ]
     },
     "cta_en": {
@@ -206,73 +442,307 @@
     }
   },
   "features": {
-    "title_en": "Platform features",
-    "title_ar": "ميزات المنصة",
-    "subtitle_en": "Watt serves both end users and solar businesses in one connected experience.",
-    "subtitle_ar": "واط تخدم المستخدم النهائي والشركات الشمسية في تجربة مترابطة واحدة.",
+    "title_en": "Everything Watt does",
+    "title_ar": "كل ما تقدّمه واط",
+    "subtitle_en": "Calculators, climate data, design tools, a solar store, and quotations in one app for homeowners, technicians, and companies.",
+    "subtitle_ar": "حاسبات وبيانات مناخية وأدوات تصميم ومتجر وعروض أسعار في تطبيق واحد للمستخدمين والفنيين والشركات.",
+    "groups": [
+      {
+        "title_en": "Solar system calculator",
+        "title_ar": "حاسبة المنظومة الشمسية",
+        "items": [
+          {
+            "icon": "🧮",
+            "title_en": "System wizard",
+            "title_ar": "معالج حساب المنظومة",
+            "desc_en": "Step by step: your loads, location and preferences give panels, battery bank, inverter and charger. Supports off-grid and hybrid systems.",
+            "desc_ar": "خطوة بخطوة: أحمالك وموقعك وتفضيلاتك تعطي الألواح وبنك البطاريات والانفرتر والشاحن. تدعم المنظومات المستقلة والهجينة."
+          },
+          {
+            "icon": "⚡",
+            "title_en": "Fast calculator",
+            "title_ar": "الحاسبة السريعة",
+            "desc_en": "A quick estimate on the same sizing engine as the full wizard, with AC voltage, battery type and a live performance panel.",
+            "desc_ar": "تقدير سريع على نفس محرك الحساب الكامل، مع اختيار جهد التيار المتناوب ونوع البطارية ولوحة أداء مباشرة."
+          },
+          {
+            "icon": "🔌",
+            "title_en": "Detailed appliances mode",
+            "title_ar": "وضع الأجهزة التفصيلي",
+            "desc_en": "A catalog of 20 common appliances fills power, duty cycle and startup surge for you, and you choose which ones stay on backup.",
+            "desc_ar": "كتالوج بـ20 جهازاً شائعاً يعبّئ القدرة ونسبة التشغيل وتيار البدء، وتختار أنت الأجهزة التي تبقى على الاحتياط."
+          },
+          {
+            "icon": "📍",
+            "title_en": "Sized for your location",
+            "title_ar": "حساب حسب موقعك",
+            "desc_en": "Uses the real monthly sun at your site, finds the best tilt and direction automatically, and designs for the average of the three worst months by default.",
+            "desc_ar": "يعتمد شمس موقعك الشهرية الفعلية، ويحسب أفضل ميل واتجاه تلقائياً، ويصمّم افتراضياً على متوسط أسوأ ثلاثة أشهر."
+          },
+          {
+            "icon": "🔋",
+            "title_en": "Outage survival",
+            "title_ar": "صمود المنظومة وقت الانقطاع",
+            "desc_en": "See for every start hour how long the system lasts on sun and battery alone, with the worst and best periods and a load sensitivity table.",
+            "desc_ar": "اعرف لكل ساعة بدء كم تصمد المنظومة على الشمس والبطارية فقط، مع أسوأ وأقوى الفترات وجدول حساسية للحمل."
+          },
+          {
+            "icon": "📈",
+            "title_en": "Multi-day simulation",
+            "title_ar": "محاكاة عدة أيام",
+            "desc_en": "Battery charge over consecutive days with real charging efficiency and your charger current, shown in a clear chart.",
+            "desc_ar": "شحن البطارية على أيام متتالية بكفاءة شحن حقيقية وتيار شاحنك، مع مخطط واضح."
+          },
+          {
+            "icon": "🩺",
+            "title_en": "System health check",
+            "title_ar": "فحص صحة المنظومة",
+            "desc_en": "An engineering audit that flags weak chargers, undersized inverters or batteries and unrealistic assumptions, for calculated and manually added systems.",
+            "desc_ar": "تدقيق هندسي يكشف الشاحن الضعيف والانفرتر أو البطاريات الصغيرة والافتراضات غير الواقعية، للمنظومات المحسوبة والمضافة يدوياً."
+          },
+          {
+            "icon": "💾",
+            "title_en": "Saved systems",
+            "title_ar": "المنظومات المحفوظة",
+            "desc_en": "Save calculations, reopen and edit them, or add an existing system manually and compare it with the recommended one.",
+            "desc_ar": "احفظ حساباتك وافتحها وعدّلها، أو أضف منظومة قائمة يدوياً وقارنها بالمنظومة الموصى بها."
+          }
+        ]
+      },
+      {
+        "title_en": "Engineering tools",
+        "title_ar": "الأدوات الهندسية",
+        "items": [
+          {
+            "icon": "☀️",
+            "title_en": "Panel calculator",
+            "title_ar": "حاسبة الألواح",
+            "desc_en": "Panel count and array layout for a target power.",
+            "desc_ar": "عدد الألواح وتوزيعها لقدرة مطلوبة."
+          },
+          {
+            "icon": "🔋",
+            "title_en": "Battery calculators",
+            "title_ar": "حاسبات البطاريات",
+            "desc_en": "Battery capacity, runtime and number of batteries for your load.",
+            "desc_ar": "سعة البطارية وزمن التشغيل وعدد البطاريات لحملك."
+          },
+          {
+            "icon": "🔁",
+            "title_en": "Inverter calculator",
+            "title_ar": "حاسبة الانفرتر",
+            "desc_en": "Choose an inverter size from your loads and startup surge.",
+            "desc_ar": "اختيار قدرة الانفرتر من أحمالك وتيار البدء."
+          },
+          {
+            "icon": "🧵",
+            "title_en": "Wire calculator",
+            "title_ar": "حاسبة الأسلاك",
+            "desc_en": "Wire size and voltage drop for your current and distance.",
+            "desc_ar": "مقطع السلك وهبوط الجهد لتيارك ومسافتك."
+          },
+          {
+            "icon": "💧",
+            "title_en": "Solar pump calculator",
+            "title_ar": "حاسبة مضخات الماء",
+            "desc_en": "Size a solar water-pumping system.",
+            "desc_ar": "حساب منظومة شمسية لضخ المياه."
+          },
+          {
+            "icon": "🧭",
+            "title_en": "Direction and tilt",
+            "title_ar": "الاتجاه والميل",
+            "desc_en": "Best panel direction and tilt for your location and season.",
+            "desc_ar": "أفضل اتجاه وميل للألواح لموقعك وموسمك."
+          }
+        ]
+      },
+      {
+        "title_en": "Design",
+        "title_ar": "التصميم",
+        "items": [
+          {
+            "icon": "📐",
+            "title_en": "PV system designer",
+            "title_ar": "مصمم منظومات PV",
+            "desc_en": "Design the array step by step and export your design, including a technical sketch.",
+            "desc_ar": "صمّم المصفوفة خطوة بخطوة وصدّر تصميمك مع مخطط فني."
+          },
+          {
+            "icon": "🏠",
+            "title_en": "Roof simulator",
+            "title_ar": "محاكي السطح",
+            "desc_en": "Place panels on a roof and see how many fit.",
+            "desc_ar": "ضع الألواح على السطح وشاهد كم لوحاً يتسع."
+          },
+          {
+            "icon": "🏗️",
+            "title_en": "Mounting structure design",
+            "title_ar": "تصميم هيكل التثبيت",
+            "desc_en": "Pick the location on a map, optimize the seasonal tilt, and get a clear drawing of the structure.",
+            "desc_ar": "اختر الموقع على الخريطة، وحسّن الميل الموسمي، واحصل على رسم واضح للهيكل."
+          }
+        ]
+      },
+      {
+        "title_en": "Climate data and weather",
+        "title_ar": "البيانات المناخية والطقس",
+        "items": [
+          {
+            "icon": "🛰️",
+            "title_en": "PVGIS satellite data",
+            "title_ar": "بيانات PVGIS من الأقمار الصناعية",
+            "desc_en": "Monthly and hourly sun and temperature for any coordinates.",
+            "desc_ar": "شمس وحرارة شهرية وساعية لأي إحداثيات."
+          },
+          {
+            "icon": "🌐",
+            "title_en": "NASA POWER backup",
+            "title_ar": "ناسا POWER احتياطاً",
+            "desc_en": "If PVGIS is unreachable, Watt switches to NASA data and tells you.",
+            "desc_ar": "إن تعذّر الوصول إلى PVGIS تنتقل واط إلى بيانات ناسا وتخبرك بذلك."
+          },
+          {
+            "icon": "📶",
+            "title_en": "Offline grid for Iraq",
+            "title_ar": "شبكة بيانات للعراق بدون إنترنت",
+            "desc_en": "A built-in climate grid lets you size systems in Iraq with no connection.",
+            "desc_ar": "شبكة مناخ مضمّنة تتيح حساب المنظومات داخل العراق بلا اتصال."
+          },
+          {
+            "icon": "🏷️",
+            "title_en": "Data source badges",
+            "title_ar": "شارات مصدر البيانات",
+            "desc_en": "Each result shows where its numbers came from, and a data sources page explains each one.",
+            "desc_ar": "كل نتيجة تعرض مصدر أرقامها، وصفحة مصادر البيانات تشرح كل مصدر."
+          },
+          {
+            "icon": "⛅",
+            "title_en": "Solar outlook on the home screen",
+            "title_ar": "توقع الشمس في الرئيسية",
+            "desc_en": "Today's solar production outlook for your city at a glance.",
+            "desc_ar": "توقع إنتاج الشمس اليوم لمدينتك بنظرة واحدة."
+          }
+        ]
+      },
+      {
+        "title_en": "Watt Store and quotations",
+        "title_ar": "متجر واط وعروض الأسعار",
+        "items": [
+          {
+            "icon": "🛒",
+            "title_en": "Watt Store",
+            "title_ar": "متجر واط",
+            "desc_en": "Browse products by category, offers, trusted brands and top vendors, with search and vendor profiles.",
+            "desc_ar": "تصفّح المنتجات حسب الصنف والعروض والبراندات الموثوقة وأبرز البائعين، مع بحث وصفحات للبائعين."
+          },
+          {
+            "icon": "🛍️",
+            "title_en": "Cart and checkout",
+            "title_ar": "السلة وإتمام الطلب",
+            "desc_en": "A separate cart per seller, delivery zones, and a full order history with tracking.",
+            "desc_ar": "سلة منفصلة لكل بائع، ومناطق توصيل، وسجل طلبات كامل مع تتبّع."
+          },
+          {
+            "icon": "🏪",
+            "title_en": "Sell as a company or technician",
+            "title_ar": "البيع كشركة أو فني",
+            "desc_en": "Add products with options, wholesale price tiers, stock and an optional brand, and manage incoming orders.",
+            "desc_ar": "أضف منتجات بخيارات وشرائح أسعار جملة ومخزون وبراند اختياري، وأدر الطلبات الواردة."
+          },
+          {
+            "icon": "📋",
+            "title_en": "Quotation requests",
+            "title_ar": "طلبات عروض الأسعار",
+            "desc_en": "Send a request from your calculated system and compare offers from several companies.",
+            "desc_ar": "أرسل طلباً من منظومتك المحسوبة وقارن عروض عدة شركات."
+          },
+          {
+            "icon": "🏷️",
+            "title_en": "Brands and catalog",
+            "title_ar": "البراندات والكتالوج",
+            "desc_en": "Approved brands and categories, including mounting structures and accessories, with brand suggestions from users.",
+            "desc_ar": "براندات وأصناف معتمدة منها هياكل التثبيت والملحقات، مع اقتراح براندات من المستخدمين."
+          },
+          {
+            "icon": "🏢",
+            "title_en": "Company profile and dashboard",
+            "title_ar": "ملف الشركة ولوحة التحكم",
+            "desc_en": "Register your company and manage its offers, products and orders.",
+            "desc_ar": "سجّل شركتك وأدر عروضها ومنتجاتها وطلباتها."
+          }
+        ]
+      },
+      {
+        "title_en": "Account and app",
+        "title_ar": "الحساب والتطبيق",
+        "items": [
+          {
+            "icon": "🔐",
+            "title_en": "Google and Apple sign-in",
+            "title_ar": "الدخول بجوجل وآبل",
+            "desc_en": "No password to remember, and you can delete your account inside the app.",
+            "desc_ar": "بلا كلمة مرور تحفظها، ويمكنك حذف حسابك من داخل التطبيق."
+          },
+          {
+            "icon": "👤",
+            "title_en": "Account types",
+            "title_ar": "أنواع الحسابات",
+            "desc_en": "User, technician and company accounts, each with the screens it needs.",
+            "desc_ar": "حساب مستخدم وفني وشركة، لكل منها الشاشات التي يحتاجها."
+          },
+          {
+            "icon": "💱",
+            "title_en": "Your country's prices",
+            "title_ar": "أسعار بلدك",
+            "desc_en": "Estimated cost in your country's currency, shown only when prices are published for it.",
+            "desc_ar": "كلفة تقديرية بعملة بلدك تظهر فقط عند نشر أسعار له."
+          },
+          {
+            "icon": "🔔",
+            "title_en": "Notifications you control",
+            "title_ar": "إشعارات تتحكم بها",
+            "desc_en": "Orders, offers and updates, with settings to switch off what you do not want.",
+            "desc_ar": "طلبات وعروض وتحديثات، مع إعدادات لإيقاف ما لا تريده."
+          },
+          {
+            "icon": "🌍",
+            "title_en": "Arabic and English",
+            "title_ar": "عربي وإنجليزي",
+            "desc_en": "Full right-to-left Arabic and English, with light and dark themes.",
+            "desc_ar": "عربي كامل من اليمين لليسار وإنجليزي، مع مظهر فاتح وداكن."
+          },
+          {
+            "icon": "🧭",
+            "title_en": "Guided tours and feedback",
+            "title_ar": "جولات إرشادية وملاحظات",
+            "desc_en": "Interactive tours for new users, a feedback form, and update prompts.",
+            "desc_ar": "جولات تفاعلية للمستخدمين الجدد ونموذج ملاحظات وتنبيه بالتحديثات."
+          }
+        ]
+      }
+    ],
     "items": [
       {
-        "icon": "🧮",
-        "title_en": "Quick calculator",
-        "title_ar": "الحاسبة السريعة",
-        "desc_en": "Estimate usage, system size, component count, and cost within minutes.",
-        "desc_ar": "احسب الاستهلاك وحجم النظام وعدد المكونات والكلفة خلال دقائق."
+        "icon": "📍",
+        "title_en": "Sized for your location",
+        "title_ar": "حساب حسب موقعك",
+        "desc_en": "Uses the real monthly sun at your site, finds the best tilt and direction automatically, and designs for the average of the three worst months by default.",
+        "desc_ar": "يعتمد شمس موقعك الشهرية الفعلية، ويحسب أفضل ميل واتجاه تلقائياً، ويصمّم افتراضياً على متوسط أسوأ ثلاثة أشهر."
       },
       {
         "icon": "🛒",
-        "title_en": "B2B + B2C marketplace",
-        "title_ar": "متجر B2B + B2C",
-        "desc_en": "A product marketplace for both end customers and professional solar companies.",
-        "desc_ar": "سوق منتجات للمستهلك النهائي ولشركات الطاقة الشمسية المحترفة."
+        "title_en": "Watt Store",
+        "title_ar": "متجر واط",
+        "desc_en": "Browse products by category, offers, trusted brands and top vendors, with search and vendor profiles.",
+        "desc_ar": "تصفّح المنتجات حسب الصنف والعروض والبراندات الموثوقة وأبرز البائعين، مع بحث وصفحات للبائعين."
       },
       {
-        "icon": "🤝",
-        "title_en": "Quotation requests",
-        "title_ar": "طلبات عروض الأسعار",
-        "desc_en": "Let users create requests and compare multiple company offers before choosing.",
-        "desc_ar": "إنشاء طلبات عروض ومقارنة عروض عدة شركات قبل اتخاذ القرار."
-      },
-      {
-        "icon": "📦",
-        "title_en": "Order tracking",
-        "title_ar": "إدارة الطلبات",
-        "desc_en": "Follow the journey from request submission to delivery and installation.",
-        "desc_ar": "تابع المسار من تقديم الطلب إلى التوصيل والتركيب."
-      },
-      {
-        "icon": "👥",
-        "title_en": "Team management",
-        "title_ar": "إدارة الفريق",
-        "desc_en": "Add team members, manage permissions, and coordinate sales and operations.",
-        "desc_ar": "إضافة أعضاء الفريق وإدارة الصلاحيات وتنسيق المبيعات والعمليات."
-      },
-      {
-        "icon": "💬",
-        "title_en": "Community and advisory space",
-        "title_ar": "مجتمع ومساحة استشارية",
-        "desc_en": "Support discussion, educational content, and practical market trust building.",
-        "desc_ar": "دعم النقاش والمحتوى التعليمي وبناء الثقة السوقية عملياً."
-      },
-      {
-        "icon": "📐",
-        "title_en": "System designer",
-        "title_ar": "مصمم الأنظمة",
-        "desc_en": "Design systems with more professional logic and output-ready material structures.",
-        "desc_ar": "تصميم الأنظمة بمنطق أكثر احترافية مع مخرجات جاهزة للمواد."
-      },
-      {
-        "icon": "📊",
-        "title_en": "Reports and analytics",
-        "title_ar": "تقارير وتحليلات",
-        "desc_en": "Operational and financial visibility for companies running solar sales and projects.",
-        "desc_ar": "رؤية تشغيلية ومالية للشركات التي تدير مبيعات ومشاريع الطاقة الشمسية."
-      },
-      {
-        "icon": "🔔",
-        "title_en": "Smart notifications",
-        "title_ar": "إشعارات ذكية",
-        "desc_en": "Real-time updates for orders, offers, changes, and commercial activity.",
-        "desc_ar": "تحديثات لحظية للطلبات والعروض والتغييرات والنشاط التجاري."
+        "icon": "🔋",
+        "title_en": "Outage survival",
+        "title_ar": "صمود المنظومة وقت الانقطاع",
+        "desc_en": "See for every start hour how long the system lasts on sun and battery alone, with the worst and best periods and a load sensitivity table.",
+        "desc_ar": "اعرف لكل ساعة بدء كم تصمد المنظومة على الشمس والبطارية فقط، مع أسوأ وأقوى الفترات وجدول حساسية للحمل."
       }
     ]
   },
@@ -290,10 +760,536 @@
     ]
   },
   "testimonials": [],
-  "privacy": null,
-  "terms": null,
-  "changelog": null,
+  "privacy": {
+    "last_updated": "2026-10-23",
+    "email": "watt@subultech.top",
+    "sections": [
+      {
+        "title_en": "1. Introduction",
+        "title_ar": "1. مقدمة",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "This policy explains what Watt (formerly Taqati) collects, why, and the choices you have. Watt is published by AbdulRasol Al-Hilo (Subul Technology). By using the app you agree to this policy.",
+            "text_ar": "توضح هذه السياسة ما الذي تجمعه واط (طاقتي سابقاً) ولماذا وما خياراتك. تنشر واط بواسطة عبدالرسول الحلو (سبل التكنولوجيا). باستخدامك للتطبيق فإنك توافق على هذه السياسة."
+          }
+        ]
+      },
+      {
+        "title_en": "2. Information we collect",
+        "title_ar": "2. المعلومات التي نجمعها",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Account. You sign in with Google or Apple. We receive your name, email address and profile picture from the provider. We never see your Google or Apple password.",
+            "text_ar": "الحساب. تسجّل الدخول بحساب جوجل أو آبل، فنستلم اسمك وبريدك الإلكتروني وصورتك من المزوّد. لا نرى أبداً كلمة مرور جوجل أو آبل."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "Profile. Phone number, country and city, account type (user, technician or company) and, optionally, a picture.",
+            "text_ar": "الملف الشخصي. رقم الهاتف والبلد والمدينة ونوع الحساب (مستخدم أو فني أو شركة) وصورة اختيارية."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "Your calculations. Appliances, loads, settings and the systems you save or add manually.",
+            "text_ar": "حساباتك. الأجهزة والأحمال والإعدادات والمنظومات التي تحفظها أو تضيفها يدوياً."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "Location. Only if you allow it. Your coordinates, or a place you pick on the map, are used to get sun and weather data for your site.",
+            "text_ar": "الموقع. فقط إن سمحت به. تُستخدم إحداثياتك أو المكان الذي تختاره على الخريطة لجلب بيانات الشمس والطقس لموقعك."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "Company and store content. Company name, description, address, logo, products, prices, images, quotation requests, offers, carts and orders, including the delivery details you enter at checkout.",
+            "text_ar": "بيانات الشركة والمتجر. اسم الشركة ووصفها وعنوانها وشعارها والمنتجات والأسعار والصور وطلبات العروض والعروض والسلال والطلبات، ومنها بيانات التوصيل التي تدخلها عند إتمام الطلب."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "Feedback and support. Your message, optional phone number and optional image.",
+            "text_ar": "الملاحظات والدعم. رسالتك ورقم هاتف اختياري وصورة اختيارية."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "Device and usage. A notification token, app version, platform (Android, iOS or web), language, and anonymous usage statistics from Firebase Analytics.",
+            "text_ar": "الجهاز والاستخدام. رمز الإشعارات وإصدار التطبيق والمنصة (أندرويد أو iOS أو ويب) واللغة، وإحصاءات استخدام مجهولة من Firebase Analytics."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "On your device. Settings, session state and cached climate data are stored locally so the app works faster and offline.",
+            "text_ar": "على جهازك. تُخزَّن الإعدادات وحالة الجلسة وبيانات المناخ المؤقتة محلياً ليعمل التطبيق أسرع وبدون إنترنت."
+          }
+        ]
+      },
+      {
+        "title_en": "3. How we use it",
+        "title_ar": "3. كيف نستخدمها",
+        "blocks": [
+          {
+            "type": "list",
+            "items_en": [
+              "Run your account and keep you signed in",
+              "Calculate and save your systems and fetch climate data for your site",
+              "Operate the store, quotations and orders between buyers and sellers",
+              "Send notifications you have not switched off",
+              "Answer feedback and support requests",
+              "Keep the app secure, prevent abuse and improve reliability",
+              "Meet legal obligations"
+            ],
+            "items_ar": [
+              "تشغيل حسابك وإبقاؤك مسجّلاً",
+              "حساب منظوماتك وحفظها وجلب البيانات المناخية لموقعك",
+              "تشغيل المتجر وعروض الأسعار والطلبات بين المشترين والبائعين",
+              "إرسال الإشعارات التي لم توقفها",
+              "الرد على الملاحظات وطلبات الدعم",
+              "حماية التطبيق ومنع إساءة الاستخدام وتحسين الموثوقية",
+              "الوفاء بالالتزامات القانونية"
+            ]
+          }
+        ]
+      },
+      {
+        "title_en": "4. Services that process your data",
+        "title_ar": "4. الخدمات التي تعالج بياناتك",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Watt relies on the following services. They receive only what they need to work.",
+            "text_ar": "تعتمد واط على الخدمات التالية، وهي تستلم فقط ما تحتاجه للعمل."
+          },
+          {
+            "type": "list",
+            "items_en": [
+              "Firebase (Google): sign-in, database, notifications, remote settings and analytics.",
+              "Google Sign-In and Sign in with Apple: to verify your identity.",
+              "PVGIS (European Commission, Joint Research Centre): receives the coordinates and system settings you request, to return solar data. Requests may pass through a Cloudflare proxy operated by us to make them more reliable. The proxy keeps a temporary cache of the climate response and does not link it to your account.",
+              "NASA POWER: receives coordinates to return climate data when PVGIS is unavailable.",
+              "Open-Meteo: receives coordinates to return weather and the solar outlook.",
+              "OpenStreetMap services (map tiles and place search): receive the area you view and the place names you search.",
+              "Our image and file storage: stores pictures you upload, such as product images and logos."
+            ],
+            "items_ar": [
+              "Firebase (جوجل): تسجيل الدخول وقاعدة البيانات والإشعارات والإعدادات عن بُعد والتحليلات.",
+              "تسجيل الدخول بجوجل وآبل: للتحقق من هويتك.",
+              "PVGIS (المفوضية الأوروبية، مركز البحوث المشترك): يستلم الإحداثيات وإعدادات المنظومة التي تطلبها ليعيد بيانات الشمس. وقد تمر الطلبات عبر وسيط Cloudflare نشغّله نحن لزيادة الموثوقية. يحتفظ الوسيط بنسخة مؤقتة من استجابة المناخ ولا يربطها بحسابك.",
+              "ناسا POWER: يستلم الإحداثيات ليعيد بيانات المناخ عند تعذّر PVGIS.",
+              "Open-Meteo: يستلم الإحداثيات ليعيد الطقس وتوقع الشمس.",
+              "خدمات OpenStreetMap (مربعات الخريطة والبحث عن الأماكن): تستلم المنطقة التي تعرضها وأسماء الأماكن التي تبحث عنها.",
+              "تخزين الصور والملفات لدينا: يحفظ الصور التي ترفعها مثل صور المنتجات والشعارات."
+            ]
+          }
+        ]
+      },
+      {
+        "title_en": "5. Sharing",
+        "title_ar": "5. المشاركة",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "We do not sell your personal data and we do not use it for third-party advertising.",
+            "text_ar": "لا نبيع بياناتك الشخصية ولا نستخدمها لإعلانات أطراف ثالثة."
+          },
+          {
+            "type": "list",
+            "items_en": [
+              "Sellers and buyers: when you place an order or request a quotation, the other party sees the details needed to complete it, such as your name, phone number and delivery address.",
+              "Public content: a company profile, its products and its offers are visible to other users.",
+              "Service providers listed in section 4.",
+              "Authorities, when the law requires it, and to investigate fraud, abuse or security incidents."
+            ],
+            "items_ar": [
+              "البائعون والمشترون: عند تقديم طلب أو طلب عرض سعر يرى الطرف الآخر التفاصيل اللازمة لإتمامه مثل اسمك ورقم هاتفك وعنوان التوصيل.",
+              "المحتوى العام: ملف الشركة ومنتجاتها وعروضها تظهر للمستخدمين الآخرين.",
+              "مزودو الخدمات المذكورون في البند 4.",
+              "الجهات الرسمية عندما يوجب القانون ذلك، وللتحقيق في الاحتيال أو إساءة الاستخدام أو الحوادث الأمنية."
+            ]
+          }
+        ]
+      },
+      {
+        "title_en": "6. Permissions",
+        "title_ar": "6. الأذونات",
+        "blocks": [
+          {
+            "type": "list",
+            "items_en": [
+              "Location: to fetch solar data for where you are. Optional.",
+              "Camera: to take pictures and scan codes. Optional.",
+              "Photos: to choose pictures to upload. Optional.",
+              "Notifications: to send order, offer and update alerts. Optional.",
+              "Network: required for online features."
+            ],
+            "items_ar": [
+              "الموقع: لجلب بيانات الشمس لمكانك. اختياري.",
+              "الكاميرا: لالتقاط الصور ومسح الرموز. اختياري.",
+              "الصور: لاختيار الصور المراد رفعها. اختياري.",
+              "الإشعارات: لتنبيهات الطلبات والعروض والتحديثات. اختياري.",
+              "الشبكة: مطلوبة للميزات التي تعمل عبر الإنترنت."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text_en": "You can change permissions in your device settings. Without a permission, the related feature may not work.",
+            "text_ar": "يمكنك تغيير الأذونات من إعدادات جهازك. وبدون الإذن قد لا تعمل الميزة المرتبطة به."
+          }
+        ]
+      },
+      {
+        "title_en": "7. Account deletion and retention",
+        "title_ar": "7. حذف الحساب والاحتفاظ بالبيانات",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "You can delete your account permanently from your account page in the app. You confirm with Google or Apple again, and your cloud and local data are removed. You can also follow the steps on the account deletion page, or write to us.",
+            "text_ar": "يمكنك حذف حسابك نهائياً من صفحة حسابك في التطبيق. تؤكد العملية بحساب جوجل أو آبل مرة أخرى، وتُزال بياناتك السحابية والمحلية. ويمكنك أيضاً اتباع الخطوات في صفحة حذف الحساب أو مراسلتنا."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "We keep data only as long as needed to provide the service. Some records, such as completed orders, may be kept for the period required to resolve disputes, prevent fraud or meet legal duties, and are then removed or anonymized.",
+            "text_ar": "نحتفظ بالبيانات فقط للمدة اللازمة لتقديم الخدمة. وقد تُحفظ بعض السجلات مثل الطلبات المكتملة للمدة اللازمة لحل النزاعات ومنع الاحتيال أو الوفاء بالواجبات القانونية، ثم تُحذف أو تُجهَّل."
+          }
+        ]
+      },
+      {
+        "title_en": "8. Security",
+        "title_ar": "8. الأمان",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "We use reasonable technical and organizational measures, including access rules on the database and encrypted connections. No system is perfectly secure, so we cannot guarantee absolute security.",
+            "text_ar": "نستخدم تدابير تقنية وتنظيمية معقولة منها قواعد صلاحيات على قاعدة البيانات واتصالات مشفّرة. لا يوجد نظام آمن تماماً، لذلك لا نستطيع ضمان أمان مطلق."
+          }
+        ]
+      },
+      {
+        "title_en": "9. Children",
+        "title_ar": "9. الأطفال",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Watt is not directed to children under 13. If you believe a child has given us personal data, contact us and we will remove it.",
+            "text_ar": "واط غير موجهة للأطفال دون 13 سنة. إن كنت تعتقد أن طفلاً زوّدنا ببيانات شخصية فتواصل معنا وسنحذفها."
+          }
+        ]
+      },
+      {
+        "title_en": "10. Your rights",
+        "title_ar": "10. حقوقك",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Depending on where you live, you may ask to access, correct or delete your data, or object to some processing. Write to us and we will reply within a reasonable time.",
+            "text_ar": "بحسب مكان إقامتك قد يحق لك طلب الاطلاع على بياناتك أو تصحيحها أو حذفها أو الاعتراض على بعض المعالجة. راسلنا وسنرد خلال مدة معقولة."
+          }
+        ]
+      },
+      {
+        "title_en": "11. Changes",
+        "title_ar": "11. التغييرات",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "We may update this policy. The date at the top shows the latest version. If a change is significant we will tell you in the app.",
+            "text_ar": "قد نحدّث هذه السياسة، ويبيّن التاريخ في أعلاها آخر نسخة. وإذا كان التغيير جوهرياً سنخبرك داخل التطبيق."
+          }
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "last_updated": "2026-10-23",
+    "sections": [
+      {
+        "title_en": "1. Acceptance",
+        "title_ar": "1. القبول",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "These terms govern your use of Watt (formerly Taqati), published by AbdulRasol Al-Hilo (Subul Technology). By using the app you accept them. If you do not accept them, do not use the app.",
+            "text_ar": "تحكم هذه الشروط استخدامك لواط (طاقتي سابقاً) التي ينشرها عبدالرسول الحلو (سبل التكنولوجيا). باستخدامك للتطبيق فإنك تقبلها، وإن لم تقبلها فلا تستخدمه."
+          }
+        ]
+      },
+      {
+        "title_en": "2. What Watt provides",
+        "title_ar": "2. ما تقدمه واط",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Watt provides solar calculators, climate data, design tools, a marketplace where companies and technicians list products, and a quotation service. Features may change, and some depend on your country.",
+            "text_ar": "تقدم واط حاسبات شمسية وبيانات مناخية وأدوات تصميم وسوقاً تعرض فيه الشركات والفنيون منتجاتهم وخدمة عروض أسعار. وقد تتغير الميزات وبعضها يعتمد على بلدك."
+          }
+        ]
+      },
+      {
+        "title_en": "3. Estimates, not engineering approval",
+        "title_ar": "3. تقديرات وليست اعتماداً هندسياً",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Results are estimates for planning. They depend on the data you enter and on third-party climate data, which can differ from real conditions. They do not replace a site survey or a qualified engineer.",
+            "text_ar": "النتائج تقديرات للتخطيط، وتعتمد على ما تدخله وعلى بيانات مناخية من أطراف ثالثة قد تختلف عن الواقع. ولا تغني عن المعاينة الميدانية أو المهندس المختص."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "Before installation, have a qualified technician confirm the design and the safety items, including wire sizes, fuses, breakers, earthing and battery protection. You are responsible for decisions and purchases you make using the results.",
+            "text_ar": "قبل التركيب اجعل فنياً مختصاً يؤكد التصميم وبنود السلامة ومنها مقاطع الأسلاك والفيوزات والقواطع والتأريض وحماية البطاريات. وأنت مسؤول عن قراراتك ومشترياتك المبنية على النتائج."
+          }
+        ]
+      },
+      {
+        "title_en": "4. Your account",
+        "title_ar": "4. حسابك",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "You sign in with Google or Apple and must give accurate information. You are responsible for activity on your account. Tell us if you suspect unauthorized use.",
+            "text_ar": "تسجّل الدخول بحساب جوجل أو آبل وعليك تقديم معلومات صحيحة. وأنت مسؤول عن النشاط على حسابك. أبلغنا إن اشتبهت باستخدام غير مصرّح به."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "You can delete your account at any time from the app.",
+            "text_ar": "يمكنك حذف حسابك في أي وقت من التطبيق."
+          }
+        ]
+      },
+      {
+        "title_en": "5. Marketplace and quotations",
+        "title_ar": "5. المتجر وعروض الأسعار",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Watt is a platform that connects buyers with sellers. Sellers are independent companies and technicians. Each seller is responsible for its products, prices, availability, delivery, warranty and invoices. Watt is not a party to the sale and does not guarantee the quality of products or work.",
+            "text_ar": "واط منصة تربط المشترين بالبائعين. والبائعون شركات وفنيون مستقلون، وكل بائع مسؤول عن منتجاته وأسعاره وتوفرها وتوصيلها وضمانها وفواتيرها. واط ليست طرفاً في البيع ولا تضمن جودة المنتجات أو العمل."
+          },
+          {
+            "type": "paragraph",
+            "text_en": "Watt does not currently process payments. Payment and delivery terms are agreed directly between buyer and seller. Prices may be out of date, and a quotation or order is binding only as agreed between the two parties.",
+            "text_ar": "لا تعالج واط حالياً أي مدفوعات. وتُتفق شروط الدفع والتوصيل مباشرة بين المشتري والبائع. وقد تكون الأسعار غير محدّثة، ولا يلزم عرض السعر أو الطلب إلا بما اتفق عليه الطرفان."
+          }
+        ]
+      },
+      {
+        "title_en": "6. Content you add",
+        "title_ar": "6. المحتوى الذي تضيفه",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "You keep ownership of what you add, such as products, images and descriptions, and you allow Watt to store and show it as part of the service. You confirm that you have the right to add it and that it is accurate.",
+            "text_ar": "تحتفظ بملكية ما تضيفه مثل المنتجات والصور والأوصاف، وتسمح لواط بتخزينه وعرضه ضمن الخدمة. وتؤكد أن لك الحق في إضافته وأنه صحيح."
+          }
+        ]
+      },
+      {
+        "title_en": "7. Acceptable use",
+        "title_ar": "7. الاستخدام المقبول",
+        "blocks": [
+          {
+            "type": "list",
+            "items_en": [
+              "Do not add false, misleading, illegal or infringing content or listings",
+              "Do not impersonate others or misuse another person's data",
+              "Do not try to break, overload, scrape or reverse-engineer the service",
+              "Do not use the service for fraud or to harm others"
+            ],
+            "items_ar": [
+              "لا تضف محتوى أو منتجات كاذبة أو مضللة أو غير قانونية أو منتهكة للحقوق",
+              "لا تنتحل شخصية غيرك ولا تسئ استخدام بيانات الآخرين",
+              "لا تحاول اختراق الخدمة أو إرهاقها أو سحب بياناتها أو فكّ هندستها",
+              "لا تستخدم الخدمة للاحتيال أو لإيذاء الآخرين"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text_en": "We may remove content or suspend accounts that break these rules.",
+            "text_ar": "يجوز لنا حذف المحتوى أو تعليق الحسابات المخالفة لهذه القواعد."
+          }
+        ]
+      },
+      {
+        "title_en": "8. Third-party data and services",
+        "title_ar": "8. بيانات وخدمات الأطراف الثالثة",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Watt uses data and services from others, including PVGIS (European Commission, Joint Research Centre), NASA POWER, Open-Meteo, OpenStreetMap, Firebase and Google or Apple sign-in. They are provided under their own terms and may be unavailable or change. Watt shows the source of climate data next to the results.",
+            "text_ar": "تستخدم واط بيانات وخدمات من آخرين منها PVGIS (المفوضية الأوروبية، مركز البحوث المشترك) وناسا POWER وOpen-Meteo وOpenStreetMap وFirebase وتسجيل الدخول بجوجل أو آبل. وهي مقدمة بشروطها الخاصة وقد تتوقف أو تتغير. وتعرض واط مصدر البيانات المناخية بجانب النتائج."
+          }
+        ]
+      },
+      {
+        "title_en": "9. Intellectual property",
+        "title_ar": "9. الملكية الفكرية",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "The Watt name, logo, design and code belong to their owner, except third-party data and open-source components, which stay under their own licenses. You may not copy or resell the app or its content without permission.",
+            "text_ar": "اسم واط وشعارها وتصميمها وبرمجتها ملك لصاحبها، عدا بيانات الأطراف الثالثة والمكونات مفتوحة المصدر فتبقى تحت تراخيصها. ولا يجوز نسخ التطبيق أو محتواه أو إعادة بيعه دون إذن."
+          }
+        ]
+      },
+      {
+        "title_en": "10. Disclaimer and liability",
+        "title_ar": "10. إخلاء المسؤولية",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "Watt is provided as is and as available, without guarantees of accuracy, uninterrupted service or fitness for a purpose. To the extent allowed by law, we are not liable for indirect or consequential loss, for losses from decisions made using the results, or for the acts of sellers and other users. Nothing here limits liability that cannot be limited by law.",
+            "text_ar": "تُقدَّم واط كما هي وحسب التوفر دون ضمان للدقة أو استمرار الخدمة أو الملاءمة لغرض معين. وبالقدر الذي يسمح به القانون لا نتحمل المسؤولية عن الخسائر غير المباشرة أو التبعية أو الناتجة عن قرارات مبنية على النتائج أو عن تصرفات البائعين والمستخدمين الآخرين. ولا يحدّ شيء هنا من مسؤولية لا يجوز تحديدها قانوناً."
+          }
+        ]
+      },
+      {
+        "title_en": "11. Changes and termination",
+        "title_ar": "11. التعديل والإنهاء",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "We may change these terms or the service. If you keep using the app after a change, you accept the new terms. We may suspend or end access if you break these terms.",
+            "text_ar": "قد نعدّل هذه الشروط أو الخدمة، واستمرارك في استخدام التطبيق بعد التعديل يعني قبولك للشروط الجديدة. ويجوز لنا تعليق الوصول أو إنهاؤه عند مخالفة هذه الشروط."
+          }
+        ]
+      },
+      {
+        "title_en": "12. Governing law and contact",
+        "title_ar": "12. القانون الواجب والتواصل",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_en": "These terms are governed by the laws of Iraq, unless your local consumer law says otherwise. For questions write to watt@subultech.top.",
+            "text_ar": "تخضع هذه الشروط لقوانين جمهورية العراق ما لم يقض قانون حماية المستهلك المحلي لديك بغير ذلك. للاستفسار راسلنا على watt@subultech.top."
+          }
+        ]
+      }
+    ]
+  },
+  "changelog": {
+    "title_en": "Changelog",
+    "title_ar": "سجل التحديثات",
+    "items": [
+      {
+        "version": "1.5.0",
+        "date_en": "October 2026",
+        "date_ar": "أكتوبر 2026",
+        "tag_en": "Latest ✨",
+        "tag_ar": "أحدث إصدار ✨",
+        "changes_en": [
+          "Built-in climate grid for Iraq, so you can size a system with no internet",
+          "The calculator now sizes from your real location, with automatic best tilt and direction",
+          "Battery sizing follows the load you keep during an outage, with a 20-appliance catalog",
+          "Outage survival panel and a clearer battery charge chart",
+          "Per-country electricity assumptions and prices",
+          "Notification settings you control, and stronger order security in the store"
+        ],
+        "changes_ar": [
+          "شبكة مناخ مضمّنة للعراق لحساب المنظومة بدون إنترنت",
+          "الحاسبة تحسب الآن من موقعك الحقيقي مع أفضل ميل واتجاه تلقائياً",
+          "حجم البطارية يتبع الحمل الذي تُبقيه وقت الانقطاع مع كتالوج 20 جهازاً",
+          "لوحة صمود المنظومة وقت الانقطاع ومخطط شحن بطارية أوضح",
+          "افتراضات كهرباء وأسعار خاصة بكل بلد",
+          "إعدادات إشعارات تتحكم بها، وتحصين أكبر لطلبات المتجر"
+        ]
+      },
+      {
+        "version": "1.4.1",
+        "date_en": "October 2026",
+        "date_ar": "أكتوبر 2026",
+        "changes_en": [
+          "Launched Watt Store for verified companies and technicians, with cart, checkout, delivery zones and order tracking",
+          "Product options that change the price, and optional brand",
+          "Automatic update checks"
+        ],
+        "changes_ar": [
+          "إطلاق متجر واط للشركات والفنيين الموثقين مع السلة والدفع وإتمام الطلب ومناطق التوصيل وتتبّع الطلبات",
+          "خيارات منتجات تغيّر السعر، والبراند اختياري",
+          "فحص تلقائي للتحديثات"
+        ]
+      },
+      {
+        "version": "1.4",
+        "date_en": "October 2026",
+        "date_ar": "أكتوبر 2026",
+        "changes_en": [
+          "Products catalog for registered companies and technicians",
+          "In-app permanent account deletion for Apple and Google sign-in",
+          "Fast calculator on the real sizing engine, with major accuracy fixes for batteries and panels",
+          "More realistic multi-day system simulation and a system health check for any system"
+        ],
+        "changes_ar": [
+          "كتالوج منتجات للشركات والفنيين المسجلين",
+          "حذف الحساب نهائياً من داخل التطبيق لحسابات آبل وجوجل",
+          "الحاسبة السريعة على محرك الحساب الحقيقي مع إصلاحات دقة كبيرة للبطاريات والألواح",
+          "محاكاة أكثر واقعية لعدة أيام وفحص صحة لأي منظومة"
+        ]
+      },
+      {
+        "version": "1.2",
+        "date_en": "September 2026",
+        "date_ar": "سبتمبر 2026",
+        "changes_en": [
+          "Taqati is now Watt, with new logo and branding",
+          "PV structure designer with map location and seasonal tilt",
+          "User roles, interactive tours and an About screen"
+        ],
+        "changes_ar": [
+          "طاقتي أصبحت واط بشعار وهوية جديدين",
+          "مصمم هيكل PV مع اختيار الموقع من الخريطة والميل الموسمي",
+          "أنواع حسابات وجولات تفاعلية وشاشة حول التطبيق"
+        ]
+      }
+    ]
+  },
   "pricing": null,
   "purchase_form": null,
-  "get_login": null
+  "get_login": null,
+  "faq": {
+    "title_en": "Frequently asked questions",
+    "title_ar": "الأسئلة الشائعة",
+    "subtitle_en": "Short answers about Watt.",
+    "subtitle_ar": "إجابات قصيرة عن واط.",
+    "items": [
+      {
+        "question_en": "Is Watt the same app as Taqati?",
+        "question_ar": "هل واط هي نفس تطبيق طاقتي؟",
+        "answer_en": "Yes. Taqati was renamed Watt. Your account and saved systems continue in the same app, and old Taqati links redirect to this page.",
+        "answer_ar": "نعم. طاقتي أصبح اسمها واط. حسابك ومنظومتك المحفوظة تستمر في نفس التطبيق، وروابط طاقتي القديمة تُحوَّل إلى هذه الصفحة."
+      },
+      {
+        "question_en": "Is Watt free?",
+        "question_ar": "هل واط مجانية؟",
+        "answer_en": "The calculators and design tools are free. Prices of products in the store are set by the sellers.",
+        "answer_ar": "الحاسبات وأدوات التصميم مجانية. وأسعار منتجات المتجر يحددها البائعون."
+      },
+      {
+        "question_en": "Which countries does Watt support?",
+        "question_ar": "ما الدول التي تدعمها واط؟",
+        "answer_en": "The calculators work anywhere using PVGIS or NASA data. Iraq also has a built-in offline grid. Price estimates and store features appear for countries where they are available.",
+        "answer_ar": "الحاسبات تعمل في أي مكان ببيانات PVGIS أو ناسا، وللعراق شبكة مضمّنة تعمل بلا إنترنت. وتقديرات الأسعار وميزات المتجر تظهر في البلدان التي تتوفر فيها."
+      },
+      {
+        "question_en": "Where do the solar numbers come from?",
+        "question_ar": "من أين تأتي أرقام الشمس؟",
+        "answer_en": "From PVGIS (European Commission, JRC) first, then NASA POWER if PVGIS is unreachable, and a built-in grid for Iraq when you are offline. Each result shows its source.",
+        "answer_ar": "من PVGIS (المفوضية الأوروبية، JRC) أولاً، ثم ناسا POWER إن تعذّر الوصول إليه، وشبكة مضمّنة للعراق عند عدم وجود إنترنت. وكل نتيجة تعرض مصدرها."
+      },
+      {
+        "question_en": "Can I rely on the results to buy equipment?",
+        "question_ar": "هل أعتمد على النتائج لشراء المعدات؟",
+        "answer_en": "Results are engineering estimates for planning. Confirm the final design and safety items such as wiring and breakers with a qualified technician before installing.",
+        "answer_ar": "النتائج تقديرات هندسية للتخطيط. أكّد التصميم النهائي وبنود السلامة كالأسلاك والقواطع مع فني مختص قبل التركيب."
+      },
+      {
+        "question_en": "Does Watt need my location?",
+        "question_ar": "هل تحتاج واط إلى موقعي؟",
+        "answer_en": "Only if you allow it, to fetch the sun at your site. You can also pick a place on the map or skip it and get a clearly labelled general estimate.",
+        "answer_ar": "فقط إن سمحت بذلك، لجلب شمس موقعك. ويمكنك اختيار مكان على الخريطة أو تخطّيه والحصول على تقدير عام موسوم بوضوح."
+      },
+      {
+        "question_en": "How do I delete my account?",
+        "question_ar": "كيف أحذف حسابي؟",
+        "answer_en": "From your account page inside the app, or by following the steps on the account deletion page.",
+        "answer_ar": "من صفحة حسابك داخل التطبيق، أو باتباع الخطوات في صفحة حذف الحساب."
+      }
+    ]
+  }
 }

@@ -16,23 +16,23 @@
   <meta name="google-site-verification" content="rvBAu6HPtfV0ypH5plfLbjAOuoH7SMRunhDn9VS3CWg">
 
   <!-- Canonical & Alternate Languages -->
-  <link rel="canonical" href="https://abdulrasol.github.io/baytraq/privacy_policy/">
-  <link rel="alternate" hreflang="en" href="https://abdulrasol.github.io/baytraq/privacy_policy/">
-  <link rel="alternate" hreflang="ar" href="https://abdulrasol.github.io/ar/baytraq/privacy_policy/">
+  <link rel="canonical" href="https://subultech.top/baytraq/privacy_policy/">
+  <link rel="alternate" hreflang="en" href="https://subultech.top/baytraq/privacy_policy/">
+  <link rel="alternate" hreflang="ar" href="https://subultech.top/ar/baytraq/privacy_policy/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Baytraq Sales Manager">
   <meta property="og:description" content="The ultimate sales and management workspace. Run invoicing, POS sales, track inventory, monitor profits and expenses, with LAN and cloud sync.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://abdulrasol.github.io/baytraq/privacy_policy/">
-  <meta property="og:image" content="https://abdulrasol.github.io/assets/baytraq/logo.png">
+  <meta property="og:url" content="https://subultech.top/baytraq/privacy_policy/">
+  <meta property="og:image" content="https://subultech.top/assets/baytraq/logo.png">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Baytraq Sales Manager">
   <meta name="twitter:description" content="The ultimate sales and management workspace. Run invoicing, POS sales, track inventory, monitor profits and expenses, with LAN and cloud sync.">
-  <meta name="twitter:image" content="https://abdulrasol.github.io/assets/baytraq/logo.png">
+  <meta name="twitter:image" content="https://subultech.top/assets/baytraq/logo.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/baytraq/logo.png">
@@ -54,8 +54,16 @@
     }
   </style>
 
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('portfolio_theme');
+      document.documentElement.dataset.theme = savedTheme === 'dark' || savedTheme === 'light'
+        ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch { /* System theme is applied by the main script. */ }
+  </script>
   <!-- Styles -->
   <link rel="stylesheet" href="/static/css/project.css">
+  <link rel="stylesheet" href="/static/css/brand.css?v=2">
 
 <script data-goatcounter="https://abdulrasol.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -74,11 +82,12 @@
       "priceCurrency": "USD"
     },
     "description": "The ultimate sales and management workspace. Run invoicing, POS sales, track inventory, monitor profits and expenses, with LAN and cloud sync.",
-"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager",    "image": "https://abdulrasol.github.io/assets/baytraq/logo.png"
+"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager",    "image": "https://subultech.top/assets/baytraq/logo.png"
   }
   </script>
 </head>
-<body data-lang="en">
+<body data-lang="en" class="product-site">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- Header -->
   <header class="project-header" id="project-header">
@@ -88,9 +97,10 @@
         <span>Baytraq</span>
       </a>
 
-      <a href="/" class="back-link desktop-back">
+      <a href="/" class="back-link desktop-back parent-brand">
+        <img src="/static/images/brand/symbol-teal.svg" alt="" width="24" height="28">
         <i class="fas fa-arrow-left"></i>
-        ← Back to Portfolio
+        By Subul Technology
       </a>
 
       <div class="header-actions">
@@ -116,7 +126,7 @@
   </header>
 
   <!-- Main Content -->
-  <main>
+  <main id="main-content">
 
 <section class="content-page">
   <div class="container">
@@ -172,6 +182,7 @@
           <span>Baytraq</span>
         </a>
         <p>The ultimate sales &amp; management workspace</p>
+        <a class="parent-brand" href="/"><img src="/static/images/brand/symbol-teal.svg" alt="" width="22" height="26">A Subul Technology product</a>
       </div>
 
       <div class="footer-links">

@@ -25,6 +25,7 @@ import json
 import os
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -125,6 +126,22 @@ def normalize_items_section(section):
                 normalized.pop(key, None)
 
     return normalized if has_visible_content(normalized) else None
+
+
+def normalize_screenshots(section):
+    """Omit missing local screenshots while preserving configured remote images."""
+    if not isinstance(section, dict):
+        return None
+    items = []
+    for source in visible_list(section.get("items", [])):
+        if not isinstance(source, str):
+            continue
+        url = urlsplit(source)
+        if url.scheme or url.netloc:
+            items.append(source)
+        elif (Path(__file__).parent / unquote(url.path.lstrip("/"))).is_file():
+            items.append(source)
+    return {**section, "items": items} if items else None
 
 
 def normalize_sections(sections):
@@ -238,7 +255,7 @@ def build_projects():
             localized["site"] = {**site, **project_site}
             localized["settings"] = project.get("settings", {})
             localized["features"] = normalize_features(localized.get("features"))
-            localized["screenshots"] = normalize_items_section(localized.get("screenshots"))
+            localized["screenshots"] = normalize_screenshots(localized.get("screenshots"))
             localized["testimonials"] = normalize_items_section(localized.get("testimonials"))
             localized["pricing"] = normalize_items_section(localized.get("pricing"))
             localized["purchase_form"] = normalize_items_section(localized.get("purchase_form"))
@@ -434,11 +451,50 @@ def create_legacy_redirects():
 </body>
 </html>
 """
-    for rel_path in ["meaad/privacy.html", "taqati/privacy.html", "ar/taqati/privacy.html"]:
+    for rel_path in ["meaad/privacy.html"]:
         path = Path(rel_path)
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(redirect_html, encoding="utf-8")
         print(f"Updated: {rel_path} redirect")
+
+    create_renamed_project_redirects()
+
+
+# Projects that were renamed: old id -> new id. Old URLs keep working (store listings
+# and shared links still point to them), so each old page becomes a redirect page.
+RENAMED_PROJECTS = {"taqati": "watt"}
+RENAMED_PAGES = ["", "terms.html", "privacy.html", "privacy_policy/", "changelogs.html"]
+
+
+def create_renamed_project_redirects():
+    base = "https://subultech.top"
+    for old_id, new_id in RENAMED_PROJECTS.items():
+        for lang_prefix in ["", "ar/"]:
+            for page in RENAMED_PAGES:
+                # privacy.html used to redirect to the privacy_policy/ page
+                target_page = "privacy_policy/" if page == "privacy.html" else page
+                target = f"/{lang_prefix}{new_id}/{target_page}"
+                html = f"""<!DOCTYPE html>
+<html lang="{'ar' if lang_prefix else 'en'}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{base}{target}">
+  <meta http-equiv="refresh" content="0; url={target}">
+  <title>Watt</title>
+  <script>location.replace("{target}");</script>
+</head>
+<body>
+  <p><a href="{target}">{target}</a></p>
+</body>
+</html>
+"""
+                out = Path(f"{lang_prefix}{old_id}/{page}")
+                if out.suffix != ".html":
+                    out = out / "index.html"
+                out.parent.mkdir(parents=True, exist_ok=True)
+                out.write_text(html, encoding="utf-8")
+                print(f"Redirect: {out} -> {target}")
 
 
 if __name__ == "__main__":

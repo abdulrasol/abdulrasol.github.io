@@ -56,33 +56,16 @@
       </div>
     </div>
 
-    <div class="hero-showcase" aria-label="{{ 'Service overview' if lang == 'en' else 'ملخص الخدمات' }}">
-      <div class="hero-panel hero-panel-primary">
-        <span class="hero-panel-kicker">{{ 'What we build' if lang == 'en' else 'ماذا نبني' }}</span>
-        <h2>{{ 'Practical systems for operations, growth, and automation.' if lang == 'en' else 'حلول تقنية عملية للتشغيل والنمو والأتمتة.' }}</h2>
-        <p>{{ 'From internal tools to market-facing products, we focus on shipping useful software with clear business value.' if lang == 'en' else 'من الأنظمة الداخلية إلى المنتجات الموجهة للسوق، نركز على بناء حلول مفيدة تحمل قيمة واضحة للأعمال.' }}</p>
+    <div class="hero-showcase">
+      <div class="pathway-art">
+        <div class="pathway-art-top"><span>SUBUL / TECHNOLOGY</span><span>01 — ∞</span></div>
+        <div class="pathway-symbol" aria-hidden="true"><img src="/static/images/brand/symbol-teal.svg" alt="" width="400" height="400"></div>
+        <div class="pathway-art-caption"><span>{{ 'Connected thinking.' if lang == 'en' else 'رؤية مترابطة.' }}</span><strong>{{ 'Higher possibilities.' if lang == 'en' else 'آفاق أعلى.' }}</strong></div>
+        <div class="pathway-art-bottom"><span>{{ 'Software · Infrastructure · Energy' if lang == 'en' else 'برمجيات · بنية تحتية · طاقة' }}</span><i class="fas fa-arrow-up" aria-hidden="true"></i></div>
       </div>
-
-      <div class="hero-service-stack">
-        {% for service in company.services[:3] %}
-        <article class="hero-service-card">
-          <div class="hero-service-icon">
-            <i class="fas fa-{{ service.icon }}"></i>
-          </div>
-          <div class="hero-service-copy">
-            <h3>{{ service.title }}</h3>
-            <p>{{ service.desc }}</p>
-          </div>
-        </article>
-        {% endfor %}
-      </div>
-
       <div class="hero-mini-stats">
         {% for stat in about.stats[:3] %}
-        <div class="hero-mini-stat">
-          <strong>{{ stat.value }}</strong>
-          <span>{{ stat.label }}</span>
-        </div>
+        <div class="hero-mini-stat"><strong>{{ stat.value }}</strong><span>{{ stat.label }}</span></div>
         {% endfor %}
       </div>
     </div>
@@ -101,6 +84,7 @@
     <div class="services-grid">
       {% for service in company.services %}
       <div class="service-card">
+        <span class="service-number" aria-hidden="true">0{{ loop.index }}</span>
         <div class="service-icon">
           <i class="fas fa-{{ service.icon }}"></i>
         </div>
