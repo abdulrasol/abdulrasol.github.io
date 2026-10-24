@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "updated": "2026-10-24",
+  "min_version": {
+    "android": "2.0.0",
+    "ios": "2.0.0",
+    "macos": "2.0.0",
+    "windows": "2.0.0",
+    "linux": "2.0.0"
+  }
+}

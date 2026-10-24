@@ -2,25 +2,25 @@
   "id": "baytraq",
   "site": {
     "title_en": "Baytraq Sales Manager",
-    "title_ar": "بيترق - مدير المبيعات",
-    "description_en": "The ultimate sales and management workspace. Run invoicing, POS sales, track inventory, monitor profits and expenses, with LAN and cloud sync.",
-    "description_ar": "مساحة العمل المتكاملة للمبيعات والإدارة. أدِر الفواتير ومبيعات نقاط البيع، تتبع المخزون، راقب الأرباح والمصروفات مع المزامنة المحلية والسحابية.",
+    "title_ar": "Baytraq — مدير المبيعات",
+    "description_en": "Manage sales, inventory, invoices, customer and supplier accounts and expenses in one app, with LAN or cloud device linking.",
+    "description_ar": "تطبيق لإدارة المبيعات والمخزون والفواتير وحسابات العملاء والموردين والمصاريف، مع ربط أجهزة عبر LAN أو السحابة.",
     "keywords_en": "POS, Inventory, Invoicing, Sales Manager, Desktop App, Cloud Sync, Flutter",
     "keywords_ar": "نقطة بيع, مخزون, فواتير, إدارة مبيعات, تطبيق سطح مكتب, مزامنة سحابية, فلاتر"
   },
   "settings": {
     "default_lang": "en",
-    "default_theme": "dark",
-    "primary_color": "#1A237E",
-    "secondary_color": "#FFB300"
+    "default_theme": "light",
+    "primary_color": "#143044",
+    "secondary_color": "#28B5B1"
   },
   "brand": {
     "name_en": "Baytraq",
-    "name_ar": "بيترق",
-    "tagline_en": "The ultimate sales & management workspace",
-    "tagline_ar": "مساحة العمل المتكاملة للمبيعات والإدارة",
+    "name_ar": "Baytraq",
+    "tagline_en": "Your sales, stock and accounts in one place",
+    "tagline_ar": "مبيعاتك ومخزونك وحسابات مشروعك في مكان واحد",
     "logo": "/assets/baytraq/logo.png",
-    "banner": "/assets/baytraq/banar.png",
+    "banner": null,
     "favicon": "/assets/baytraq/logo.png"
   },
   "links": {
@@ -32,20 +32,31 @@
     "support_email": "info@subultech.top"
   },
   "hero": {
-    "title_en": "The Ultimate Sales <br>& Management Workspace",
-    "title_ar": "مساحة العمل المتكاملة <br>للمبيعات والإدارة",
-    "subtitle_en": "Run invoicing, POS sales, track inventory, monitor profits and expenses, and stay connected with customers. Optimized for Desktop/PC first, with full support for Tablets and Mobile devices.",
-    "subtitle_ar": "إدارة الفواتير ومبيعات نقاط البيع، تتبع المخزون، مراقبة الأرباح والمصروفات، والبقاء على تواصل مع عملائك. مُحسّن لأجهزة الكمبيوتر والمكتب أولاً، مع دعم كامل للأجهزة اللوحية والهواتف الذكية.",
-    "cta_en": "Get Baytraq Now",
-    "cta_ar": "احصل على بيترق الآن"
+    "title_en": "Your sales, stock and accounts<br>in one place",
+    "title_ar": "مبيعاتك ومخزونك وحسابات مشروعك<br>في مكان واحد",
+    "subtitle_en": "Organize selling, purchasing, debts and expenses, and follow stock and team activity. Runs locally on your device — you choose when to link devices over LAN or the cloud.",
+    "subtitle_ar": "نظّم البيع والمشتريات والديون والمصاريف، وتابع حركة البضاعة والفريق. يعمل محلياً على جهازك، وتختار متى تربط أجهزتك عبر LAN أو السحابة.",
+    "cta_en": "Get it on Google Play",
+    "cta_ar": "نزّل من Google Play"
   },
-  "platforms": ["Windows", "macOS", "Linux", "Android", "iOS"],
+  "platforms": [
+    "Windows",
+    "macOS",
+    "Linux",
+    "Android",
+    "iOS"
+  ],
   "category": "business",
   "featured": true,
-  "technologies": ["Flutter", "Dart", "Firebase", "ObjectBox"],
+  "technologies": [
+    "Flutter",
+    "Dart",
+    "SQLite (Drift)",
+    "Firebase"
+  ],
   "features": {
     "title_en": "Key Features",
-    "title_ar": "المميزات الرئيسية",
+    "title_ar": "المزايا الرئيسية",
     "groups": [
       {
         "title_en": "Core Operations",
@@ -53,104 +64,105 @@
         "items": [
           {
             "icon": "🛒",
-            "title_en": "Point of Sale (POS)",
-            "title_ar": "نقطة البيع",
-            "desc_en": "Bilingual interface optimized for quick actions with integrated camera/QR scanning and express multi-cart system.",
-            "desc_ar": "واجهة ثنائية اللغة محسّنة للإجراءات السريعة مع مسح الباركود/QR المدمج وسلة مشتريات متعددة وسريعة."
+            "title_ar": "نقطة بيع سريعة",
+            "desc_ar": "سلال متعددة، بحث وباركود بالكاميرا، وتحصيل نقدي أو إلكتروني أو آجل بخطوات قليلة.",
+            "title_en": "Fast point of sale",
+            "desc_en": "Multiple carts, search and camera barcode scanning, and cash, electronic or credit payment in few steps."
+          },
+          {
+            "icon": "🧾",
+            "title_ar": "فواتير يدوية",
+            "desc_ar": "لمن يعمل بالفواتير: فاتورة كاملة بخصم وسداد جزئي وطباعة PDF، دون الحاجة لواجهة نقطة البيع.",
+            "title_en": "Manual invoicing",
+            "desc_en": "Full invoices with discounts, part payments and PDF printing — no POS screen required."
           },
           {
             "icon": "📦",
-            "title_en": "Inventory Management",
-            "title_ar": "إدارة المخزون",
-            "desc_en": "Real-time stock tracking with auto-deductions on sales, low-stock alerts, products & services, and supplier linking.",
-            "desc_ar": "تتبع المخزون بالوقت الفعلي مع خصم تلقائي للمبيعات، وتنبيهات انخفاض المخزون، ودعم المنتجات والخدمات، وربط الموردين."
-          },
-          {
-            "icon": "📄",
-            "title_en": "Advanced Invoicing",
-            "title_ar": "فواتير متقدمة",
-            "desc_en": "Create custom invoices with discounts, track paid/unpaid/partial states, view history, and print formatted PDFs.",
-            "desc_ar": "إنشاء فواتير مخصصة بخصومات متنوعة، وتتبع حالة الدفع، والاطلاع على سجل التعديلات، وطباعة PDF مع شعار المتجر."
+            "title_ar": "مخزون وجرد",
+            "desc_ar": "بطاقة حركة لكل صنف، جرد بالكميات الفعلية وإظهار الفروق، متوسط تكلفة مرجّح، وتنبيهات انخفاض المخزون.",
+            "title_en": "Inventory & stock-take",
+            "desc_en": "A movement card per item, physical counts with variances, weighted-average cost and low-stock alerts."
           }
         ]
       },
       {
-        "title_en": "Financials & Analytics",
-        "title_ar": "المالية والتحليلات",
+        "title_en": "Inventory & Purchasing",
+        "title_ar": "المخزون والمشتريات",
         "items": [
           {
-            "icon": "📈",
-            "title_en": "Insights Dashboard",
-            "title_ar": "لوحة تحكم التحليلات",
-            "desc_en": "Real-time metrics for sales, net/gross profits, expenses, and debts with multi-period filters and top-sellers charts.",
-            "desc_ar": "مؤشرات مالية فورية للمبيعات، صافي وإجمالي الأرباح، المصروفات، والديون مع فلاتر للفترات الزمنية ورسوم بيانية."
+            "icon": "⏳",
+            "title_ar": "متابعة الصلاحية",
+            "desc_ar": "تتبّع دفعات الصلاحية للأصناف التي تحتاجها وتنبيه بالقريبة من الانتهاء.",
+            "title_en": "Expiry tracking",
+            "desc_en": "Track expiry lots where needed and get alerted to items nearing expiry."
           },
           {
-            "icon": "💸",
-            "title_en": "Expense Tracking",
-            "title_ar": "تتبع المصروفات",
-            "desc_en": "Log one-time and recurring expenses with automated due calculation and alerts.",
-            "desc_ar": "تسجيل المصروفات لمرة واحدة ودورية مع احتساب تلقائي للمستحقات والتنبيهات."
+            "icon": "🚚",
+            "title_ar": "استلام المشتريات",
+            "desc_ar": "إدخال يدوي أو مسح أو استيراد CSV مع مسودة ومطابقة الأصناف وتسجيل التكلفة والصلاحية والمبلغ المدفوع.",
+            "title_en": "Purchase intake",
+            "desc_en": "Manual entry, scanning or CSV import with drafts, item matching, cost, expiry and amount paid."
           },
           {
-            "icon": "🏛️",
-            "title_en": "Debt & Credit Management",
-            "title_ar": "الديون والائتمان",
-            "desc_en": "Running customer ledger balances, automatic debit/credit posting on invoices, and self-healing sync engine.",
-            "desc_ar": "حسابات جارية لأرصدة العملاء، وتسجيل تلقائي للديون والائتمان بالفواتير، ومحرك قاعدة بيانات يصلح اختلافات المزامنة."
+            "icon": "↩️",
+            "title_ar": "مرتجعات موثّقة",
+            "desc_ar": "مرتجع مرتبط بالفاتورة بكميات مسموحة وسبب وتسوية، ينعكس على المخزون وحساب العميل.",
+            "title_en": "Documented returns",
+            "desc_en": "Invoice-linked returns with allowed quantities, reason and settlement, reflected in stock and customer balance."
           }
         ]
       },
       {
-        "title_en": "Networking, Sync & Multi-Device",
-        "title_ar": "المزامنة وتعدد الأجهزة",
-        "items": [
-          {
-            "icon": "🌍",
-            "title_en": "Real-Time Cloud Sync",
-            "title_ar": "المزامنة السحابية",
-            "desc_en": "Seamless multi-tenant synchronization powered by Cloud Firestore with secure rules and anonymous authentication fallback.",
-            "desc_ar": "مزامنة سحابية سلسة ومتعددة المتاجر مدعومة بقواعد Firestore الآمنة وتسجيل الدخول المجهول الاحتياطي."
-          },
-          {
-            "icon": "📶",
-            "title_en": "Local LAN Sync (Offline-First)",
-            "title_ar": "المزامنة المحلية بدون إنترنت",
-            "desc_en": "Master-Slave LAN architecture over Wi-Fi using WebSockets, Drift SQLite local storage, and LWW conflict resolution.",
-            "desc_ar": "هيكلية رئيسي/تابِع للشبكة المحلية عبر Wi-Fi باستخدام WebSockets، وتخزين SQLite محلي مع معالجة تعارض المزامنة."
-          },
-          {
-            "icon": "🔍",
-            "title_en": "Price Checker (Kiosk Mode)",
-            "title_ar": "قارئ الأسعار",
-            "desc_en": "Dedicated station for customer membership kiosk scanning with offline fallback querying local replica database.",
-            "desc_ar": "محطة مخصصة للعملاء للبحث ومسح المنتجات لمعرفة الأسعار، مع وضع عدم الاتصال الذي يستعلم من نسخة قاعدة البيانات المحلية."
-          }
-        ]
-      },
-      {
-        "title_en": "Identity & Access Control",
-        "title_ar": "الهوية والصلاحيات",
+        "title_en": "Customers, Money & Team",
+        "title_ar": "العملاء والمال والفريق",
         "items": [
           {
             "icon": "👥",
-            "title_en": "Staff Roles (RBAC)",
-            "title_ar": "إدارة الموظفين والصلاحيات",
-            "desc_en": "Role-Based Access Control (Admin, Manager, Cashier, Staff, PriceViewer) with screen guarding and secure PIN/QR logins.",
-            "desc_ar": "التحكم في الوصول بناءً على الأدوار (مدير، محاسب، كاشير، موظف) مع حماية الشاشات وتسجيل دخول آمن برمز PIN أو QR."
+            "title_ar": "عملاء وموردون وديون",
+            "desc_ar": "حسابات وتسديدات وأرصدة وفواتير جزئية وآجلة في سجل يسهل الرجوع إليه.",
+            "title_en": "Customers, suppliers & debts",
+            "desc_en": "Accounts, payments, balances, partial and credit invoices in one easy-to-trace ledger."
+          },
+          {
+            "icon": "💸",
+            "title_ar": "مصاريف",
+            "desc_ar": "مصاريف لمرة واحدة ودورية مع تنبيهات الاستحقاق، وتأثيرها على نتائج العمل.",
+            "title_en": "Expenses",
+            "desc_en": "One-off and recurring expenses with due alerts and their effect on results."
+          },
+          {
+            "icon": "⏱️",
+            "title_ar": "ورديات وكاشير",
+            "desc_ar": "فصل المبيعات عن التحصيل والنقد، وإغلاق وردية بحساب واضح للصندوق.",
+            "title_en": "Shifts & cashier",
+            "desc_en": "Sales separated from collections and cash, with clear drawer reconciliation at shift close."
+          },
+          {
+            "icon": "🔐",
+            "title_ar": "أدوار وصلاحيات",
+            "desc_ar": "أدوار للموظفين وموافقات للخصومات والعمليات الحساسة ودخول بـ PIN أو QR.",
+            "title_en": "Roles & permissions",
+            "desc_en": "Staff roles, approvals for discounts and sensitive actions, PIN or QR sign-in."
           }
         ]
       },
       {
-        "title_en": "System Utilities",
-        "title_ar": "أدوات النظام",
+        "title_en": "Insights & Printing",
+        "title_ar": "التقارير والطباعة",
         "items": [
           {
-            "icon": "🛠️",
-            "title_en": "Utility & Customization Suite",
-            "title_ar": "حزمة الأدوات والتخصيص",
-            "desc_en": "JSON Backup/Restore, 12 built-in languages, custom branding, currency/decimals, and responsive Light/Dark themes.",
-            "desc_ar": "نسخ احتياطي واستعادة بصيغة JSON، دعم 12 لغة مدمجة، تخصيص الهوية التجارية والعملة والكسور العشرية ومظهر داكن/فاتح."
+            "icon": "📊",
+            "title_ar": "تقارير وتحليلات",
+            "desc_ar": "مبيعات وهوامش ومصاريف وديون ومقارنة فترات وأفضل المنتجات.",
+            "title_en": "Reports & insights",
+            "desc_en": "Sales, margins, expenses, debts, period comparison and top products."
+          },
+          {
+            "icon": "🏷️",
+            "title_ar": "باركود وطباعة",
+            "desc_ar": "توليد ملصقات باركود وإيصالات وفواتير PDF وطابعات حرارية.",
+            "title_en": "Barcodes & printing",
+            "desc_en": "Barcode labels, receipts, PDF invoices and thermal printers."
           }
         ]
       }
@@ -159,104 +171,582 @@
   "screenshots": null,
   "testimonials": null,
   "privacy": {
-    "last_updated": "2026-05-07",
+    "last_updated": "2026-10-25",
     "email": "info@subultech.top",
     "sections": [
       {
-        "title_en": "Information Collection and Use",
-        "title_ar": "جمع المعلومات واستخدامها",
+        "title_ar": "الخلاصة",
+        "title_en": "In short",
         "blocks": [
-          {
-            "type": "paragraph",
-            "text_en": "This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service.",
-            "text_ar": "تصف سياسة الخصوصية هذه سياساتنا وإجراءاتنا بشأن جمع واستخدام والكشف عن معلوماتك عند استخدامك للخدمة."
-          },
-          {
-            "type": "paragraph",
-            "text_en": "We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.",
-            "text_ar": "نحن نستخدم بياناتك الشخصية لتوفير الخدمة وتحسينها. باستخدامك للخدمة، فإنك توافق على جمع واستخدام المعلومات وفقًا لسياسة الخصوصية هذه."
-          },
-          {
-            "type": "paragraph",
-            "text_en": "While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:",
-            "text_ar": "أثناء استخدام خدمتنا، قد نطلب منك تزويدنا بمعلومات تعريف شخصية معينة يمكن استخدامها للاتصال بك أو تحديد هويتك. قد تشمل معلومات التعريف الشخصية، على سبيل المثال لا الحصر:"
-          },
           {
             "type": "list",
-            "items_en": ["Email address", "First name and last name", "Usage Data"],
-            "items_ar": ["عنوان البريد الإلكتروني", "الاسم الأول والاسم الأخير", "بيانات الاستخدام"]
+            "items_ar": [
+              "بيانات متجرك (فواتير، أصناف، عملاء، موردون، مصاريف) تُخزَّن على جهازك افتراضياً، ولا نملك نسخة منها.",
+              "لا يحتوي التطبيق على إعلانات ولا أدوات تتبع أو تحليلات سلوك، ولا يجمع موقعك الجغرافي.",
+              "لا تُرفع بياناتك إلى السحابة إلا إذا فعّلت المزامنة السحابية (باقة Cloud)، وعندها تُخزَّن عبر خدمات Google Firebase.",
+              "لا نبيع بياناتك ولا نشاركها لأغراض إعلانية."
+            ],
+            "items_en": [
+              "Your store data (invoices, items, customers, suppliers, expenses) is stored on your device by default; we do not hold a copy.",
+              "The app has no ads and no behavioral tracking or analytics SDKs, and does not collect your location.",
+              "Data is uploaded to the cloud only if you enable cloud sync (Cloud plan), in which case it is stored with Google Firebase.",
+              "We do not sell your data or share it for advertising."
+            ]
           }
         ]
       },
       {
-        "title_en": "Cloud Sync and Firebase",
-        "title_ar": "المزامنة السحابية و Firebase",
+        "title_ar": "1. من نحن ومن المسؤول عن البيانات",
+        "title_en": "1. Who we are and who controls the data",
         "blocks": [
           {
             "type": "paragraph",
-            "text_en": "Baytraq Sales Manager uses Firebase (a Google service) to provide cloud synchronization, authentication, and database services across your devices. Your data is securely stored on Firebase servers. We do not sell your personal data or store data to third parties.",
-            "text_ar": "يستخدم تطبيق بيترق خدمة Firebase (المقدمة من شركة Google) لتوفير خدمات المزامنة السحابية والمصادقة وقواعد البيانات عبر أجهزتك. يتم تخزين بياناتك بشكل آمن على خوادم Firebase. نحن لا نبيع بياناتك الشخصية أو بيانات متجرك لأطراف ثالثة."
+            "text_ar": "Baytraq Sales Manager (ويُسمّى «التطبيق») من تطوير وتشغيل Subul Technology («نحن»). للاستفسارات: info@subultech.top. بما أن بيانات متجرك تبقى في الغالب على أجهزتك، فأنت (صاحب المتجر) المتحكّم الفعلي ببيانات عملائك وموظفيك ومعاملاتك، ونحن نوفّر الأداة.",
+            "text_en": "Baytraq Sales Manager (the “App”) is developed and operated by Subul Technology (“we”). Contact: info@subultech.top. Because your store data mostly stays on your own devices, you (the store owner) effectively control your customers’, staff and transaction data; we provide the tool."
           }
         ]
       },
       {
-        "title_en": "Contact Us",
-        "title_ar": "اتصل بنا",
+        "title_ar": "2. البيانات التي يعالجها التطبيق",
+        "title_en": "2. Data the App handles",
+        "blocks": [
+          {
+            "type": "list",
+            "items_ar": [
+              "بيانات العمل: الأصناف والأسعار والكميات، الفواتير والمرتجعات، المشتريات، المصاريف، الورديات، حركات المخزون (أين تُخزَّن: قاعدة بيانات محلية على جهازك (SQLite))",
+              "بيانات جهات الاتصال: أسماء العملاء والموردين وأرقام هواتفهم وعناوينهم وأرصدتهم، كما تُدخلها أنت (أين تُخزَّن: محلياً على جهازك؛ وفي السحابة فقط إن فعّلتها)",
+              "بيانات الموظفين: أسماء الحسابات وأدوارهم وصلاحياتهم ورموز الدخول (PIN/QR) (أين تُخزَّن: محلياً؛ وفي السحابة إن فعّلتها)",
+              "إعدادات المتجر: اسم المتجر، العملة، اللغة، المظهر، تفضيلات الطباعة (أين تُخزَّن: تخزين محلي على الجهاز؛ والمفاتيح الحساسة في مخزن التشفير الآمن للنظام (Keychain / Keystore) حيثما توفّر)",
+              "صور المنتجات والمرفقات: ما تختاره أنت من معرض الصور أو الملفات (أين تُخزَّن: محلياً على جهازك)",
+              "سجل الأخطاء المحلي: أخطاء تقنية مع إخفاء البيانات الحساسة (أين تُخزَّن: ملف على جهازك فقط؛ لا يُرسل تلقائياً)"
+            ],
+            "items_en": [
+              "Business data: Items, prices, quantities, invoices, returns, purchases, expenses, shifts, stock movements (Where it is stored: Local database on your device (SQLite))",
+              "Contacts: Customer and supplier names, phones, addresses and balances you enter (Where it is stored: Locally; in the cloud only if you enable it)",
+              "Staff data: Account names, roles, permissions, login codes (PIN/QR) (Where it is stored: Locally; in the cloud if enabled)",
+              "Store settings: Store name, currency, language, theme, printing preferences (Where it is stored: On-device storage; sensitive keys in the OS secure store (Keychain / Keystore) where available)",
+              "Product images & attachments: What you choose from your gallery or files (Where it is stored: Locally on your device)",
+              "Local error log: Technical errors with sensitive data redacted (Where it is stored: A file on your device only; never sent automatically)"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text_ar": "لا نطلب منك إنشاء حساب بالبريد أو كلمة مرور لاستخدام النسخة المجانية على جهاز واحد.",
+            "text_en": "You do not need an email account or password to use the free single-device version."
+          }
+        ]
+      },
+      {
+        "title_ar": "3. أذونات الجهاز",
+        "title_en": "3. Device permissions",
+        "blocks": [
+          {
+            "type": "list",
+            "items_ar": [
+              "الإنترنت: للتحقق من الحد الأدنى للإصدار، والمزامنة السحابية، وإرسال طلبات التفعيل إن استخدمتها.",
+              "الكاميرا: لمسح الباركود ورموز QR (تسجيل دخول الموظفين وربط الأجهزة). تُعالج الصورة لحظياً على الجهاز ولا تُحفظ ولا تُرسل.",
+              "البلوتوث: للاتصال بطابعات الإيصالات.",
+              "مكتبة الصور والملفات: فقط عندما تختار صورة منتج أو ملف نسخة احتياطية أو CSV.",
+              "الشبكة المحلية: لمزامنة الأجهزة داخل المتجر (LAN)؛ تنتقل البيانات بين أجهزتك داخل شبكتك دون المرور بخوادمنا."
+            ],
+            "items_en": [
+              "Internet: minimum-version check, cloud sync, and activation requests if you use them.",
+              "Camera: scanning barcodes and QR codes (staff login, device pairing). Frames are processed live on the device and are not saved or sent.",
+              "Bluetooth: connecting to receipt printers.",
+              "Photos / files: only when you pick a product image, a backup file or a CSV.",
+              "Local network: syncing devices inside your store (LAN); data moves between your devices on your network, not through our servers."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text_ar": "لا نطلب إذن الموقع الجغرافي ولا نجمعه.",
+            "text_en": "We do not request or collect location data."
+          }
+        ]
+      },
+      {
+        "title_ar": "4. المزامنة السحابية (Firebase)",
+        "title_en": "4. Cloud sync (Firebase)",
         "blocks": [
           {
             "type": "paragraph",
-            "text_en": "If you have any questions about this Privacy Policy, you can contact us at:",
-            "text_ar": "إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، يمكنك الاتصال بنا على:"
+            "text_ar": "عند تفعيل الربط السحابي يستخدم التطبيق خدمات Google Firebase: Authentication (يشمل الدخول المجهول ورموز دخول مخصّصة) وCloud Firestore. يُنسخ حينها إلى قاعدة بيانات Firebase المهيّأة لمتجرك محتوى المتجر الذي تعمل عليه: الأصناف والفواتير والمعاملات والسندات وجهات الاتصال وحسابات الموظفين. تخضع هذه البيانات لقواعد الأمان وسياسات Google (policies.google.com/privacy). حدود الاستخدام المجاني لدى Firebase وأي رسوم زائدة تخصّ مشروع Firebase المعني.",
+            "text_en": "If you enable cloud sync, the App uses Google Firebase: Authentication (including anonymous sign-in and custom tokens) and Cloud Firestore. Your store’s working data — items, invoices, transactions, vouchers, contacts and staff accounts — is then copied to the Firebase database configured for your store and is subject to its security rules and Google’s policies (policies.google.com/privacy). Firebase free-tier limits and any overage charges relate to the Firebase project concerned."
+          },
+          {
+            "type": "paragraph",
+            "text_ar": "إن كنت لا تريد رفع بياناتك فاستخدم النسخة المحلية أو مزامنة LAN، فهما لا ترسلان بياناتك إلى أي خادم خارجي.",
+            "text_en": "If you prefer not to upload data, use local-only mode or LAN sync; neither sends your data to any external server."
+          }
+        ]
+      },
+      {
+        "title_ar": "5. اتصالات أخرى يجريها التطبيق",
+        "title_en": "5. Other connections the App makes",
+        "blocks": [
+          {
+            "type": "list",
+            "items_ar": [
+              "فحص الحد الأدنى للإصدار: يطلب التطبيق ملفاً عاماً صغيراً (min_version.json) من abdulrasol.github.io (GitHub Pages) ليعرف إن كان الإصدار مدعوماً. لا يُرسل التطبيق بيانات متجرك؛ ويرى GitHub عنوان IP وبيانات الطلب التقنية المعتادة وفق سياسته.",
+              "متجرا التطبيقات: التنزيل والتحديث عبر Google Play أو App Store يخضعان لسياسات تلك المتاجر.",
+              "الذكاء الاصطناعي: ميزة قراءة فاتورة المشتريات بالذكاء الاصطناعي معطّلة في هذا الإصدار ولا تُرسل أي فاتورة أو صورة إلى أي خدمة. إن فعّلناها مستقبلاً سنحدّث هذه السياسة ونطلب موافقتك قبل أي إرسال."
+            ],
+            "items_en": [
+              "Minimum-version check: the App fetches a small public file (min_version.json) from abdulrasol.github.io (GitHub Pages) to learn whether your version is supported. No store data is sent; GitHub sees your IP address and standard request metadata under its own policy.",
+              "App stores: downloads and updates via Google Play or the App Store follow those stores’ policies.",
+              "AI: AI-based purchase-invoice reading is disabled in this version and sends no invoice or image anywhere. If we enable it in future we will update this policy and ask for your consent before anything is sent."
+            ]
+          }
+        ]
+      },
+      {
+        "title_ar": "6. النسخ الاحتياطي والتصدير والمشاركة",
+        "title_en": "6. Backups, exports and sharing",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "ملفات النسخ الاحتياطي وCSV وPDF تُنشأ على جهازك وتحت سيطرتك. هي غير مشفّرة افتراضياً، فاحفظها في مكان آمن؛ ومشاركتها مع أي طرف (بريد، تخزين سحابي) قرارك ومسؤوليتك. سجل الأخطاء المحلي لا يُشارَك إلا عندما تختار إرساله يدوياً إلينا لطلب دعم.",
+            "text_en": "Backup, CSV and PDF files are created on your device under your control. They are not encrypted by default, so keep them safe; sharing them (email, cloud storage) is your decision and responsibility. The local error log is shared only if you choose to send it to us for support."
+          }
+        ]
+      },
+      {
+        "title_ar": "7. الموقع الإلكتروني",
+        "title_en": "7. Website",
+        "blocks": [
+          {
+            "type": "list",
+            "items_ar": [
+              "إحصاءات الزيارات: نستخدم GoatCounter لإحصاءات مجمّعة (الصفحات المزارة، المصدر) دون ملفات تعريف ارتباط ودون تتبّع شخصي.",
+              "نموذج طلب الشراء: الاسم والبريد والهاتف (اختياري) واسم المتجر والباقة والرسالة تُرسل إلى خدمة Web3Forms لتوصيلها إلينا بالبريد. نستخدمها للرد على طلبك وإصدار الترخيص فقط، ونحتفظ بها المدة اللازمة لخدمتك وأغراض السجل التجاري المعقولة.",
+              "لا يحمّل الموقع خطوطاً أو مكتبات من أطراف خارجية."
+            ],
+            "items_en": [
+              "Visit statistics: we use GoatCounter for aggregate stats (pages viewed, referrers) without cookies or personal tracking.",
+              "Purchase-request form: name, email, phone (optional), store name, plan and message are sent through Web3Forms to be delivered to us by email. We use them only to answer your request and issue your license, and keep them as long as needed to serve you and for reasonable business records.",
+              "The site loads no third-party fonts or libraries."
+            ]
+          }
+        ]
+      },
+      {
+        "title_ar": "8. الأساس والغرض من المعالجة",
+        "title_en": "8. Purpose and basis",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "نعالج البيانات المحدودة لدينا (طلبات الشراء والدعم) لتنفيذ طلبك وإدارة الترخيص والرد على استفساراتك وتحسين الخدمة. أما بيانات متجرك داخل التطبيق فتُعالج على جهازك لتقديم وظائف التطبيق التي تستخدمها.",
+            "text_en": "We process the limited data we hold (purchase and support requests) to fulfil your request, manage licensing, answer enquiries and improve the service. Store data inside the App is processed on your device to provide the features you use."
+          }
+        ]
+      },
+      {
+        "title_ar": "9. المشاركة والإفصاح",
+        "title_en": "9. Sharing and disclosure",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "لا نبيع بياناتك ولا نؤجّرها. لا تنتقل بياناتك إلا إلى: (أ) مزوّدي الخدمة المذكورين أعلاه بالقدر اللازم لعملهم، (ب) جهات قانونية عند إلزامنا بذلك بموجب القانون. ولا نملك أصلاً بيانات متجرك المحلية لنُفصح عنها.",
+            "text_en": "We do not sell or rent your data. Data goes only to (a) the service providers named above as needed for them to operate, and (b) legal authorities where we are legally required. We do not hold your local store data to disclose in the first place."
+          }
+        ]
+      },
+      {
+        "title_ar": "10. الأمان",
+        "title_en": "10. Security",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "نستخدم تخزيناً محلياً مع تشفير للأسرار الحساسة، وصلاحيات أدوار داخل التطبيق، وقواعد أمان على السحابة. لا يوجد نظام آمن بشكل مطلق؛ ننصحك بقفل جهازك، وتحديث التطبيق، وعدم مشاركة رموز الدخول، واستخدام نسخ احتياطية دورية.",
+            "text_en": "We use local storage with encryption for sensitive secrets, in-app role permissions, and cloud security rules. No system is absolutely secure; lock your device, keep the App updated, do not share login codes and keep regular backups."
+          }
+        ]
+      },
+      {
+        "title_ar": "11. الاحتفاظ بالبيانات والحذف",
+        "title_en": "11. Retention and deletion",
+        "blocks": [
+          {
+            "type": "list",
+            "items_ar": [
+              "محلياً: تبقى بياناتك حتى تحذفها أو تحذف التطبيق. حذف التطبيق يحذف قاعدة البيانات المحلية (احتفظ بنسخة احتياطية إن لزم).",
+              "السحابة: لحذف بيانات متجرك من Firebase راسلنا على info@subultech.top مع اسم المتجر، وسننفّذ الحذف بعد التحقق من هويتك كمالك.",
+              "الموقع: لحذف أو تصحيح بيانات طلب الشراء راسلنا على البريد نفسه."
+            ],
+            "items_en": [
+              "Local: your data stays until you delete it or uninstall the App, which removes the local database (keep a backup if needed).",
+              "Cloud: to delete your store’s data from Firebase, email info@subultech.top with your store name; we will act after verifying you are the owner.",
+              "Website: to correct or delete purchase-request data, email the same address."
+            ]
+          }
+        ]
+      },
+      {
+        "title_ar": "12. حقوقك",
+        "title_en": "12. Your rights",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "يمكنك طلب الاطلاع على بياناتك لدينا أو تصحيحها أو حذفها أو الاعتراض على معالجتها، أو سحب موافقتك بإيقاف المزامنة السحابية. أرسل طلبك إلى info@subultech.top. وإن كنت صاحب متجر، فعليك احترام حقوق عملائك وموظفيك فيما تُدخله من بياناتهم.",
+            "text_en": "You may ask to access, correct or delete your data, object to processing, or withdraw consent by turning off cloud sync. Write to info@subultech.top. If you are a store owner, you must respect the rights of your own customers and staff regarding the data you enter."
+          }
+        ]
+      },
+      {
+        "title_ar": "13. مسؤوليتك كصاحب متجر",
+        "title_en": "13. Your responsibility as a store owner",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "أنت مسؤول عن مشروعية جمعك لبيانات عملائك وموظفيك (أسماء وهواتف وأرصدة)، وعن إبلاغهم بذلك عند الحاجة، وعن ضبط صلاحيات الموظفين وحماية الأجهزة.",
+            "text_en": "You are responsible for the lawfulness of collecting your customers’ and staff data (names, phones, balances), for informing them where required, for configuring staff permissions and for securing your devices."
+          }
+        ]
+      },
+      {
+        "title_ar": "14. الأطفال",
+        "title_en": "14. Children",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "التطبيق موجّه للأنشطة التجارية وليس للأطفال دون 16 عاماً، ولا نجمع بياناتهم عن علم.",
+            "text_en": "The App is for business use and not directed to children under 16; we do not knowingly collect their data."
+          }
+        ]
+      },
+      {
+        "title_ar": "15. التحويل الدولي",
+        "title_en": "15. International transfers",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "خدمات Firebase وGitHub وWeb3Forms قد تعالج البيانات في دول غير بلدك. باستخدامك المزامنة السحابية أو النموذج فإنك تقر بذلك.",
+            "text_en": "Firebase, GitHub and Web3Forms may process data in countries other than yours. By using cloud sync or the form you acknowledge this."
+          }
+        ]
+      },
+      {
+        "title_ar": "16. التعديلات",
+        "title_en": "16. Changes",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "قد نحدّث هذه السياسة، وسنغيّر تاريخ «آخر تحديث» أعلاه، وننبّه إلى التغييرات الجوهرية داخل الموقع أو التطبيق.",
+            "text_en": "We may update this policy; we will change the “Last updated” date and flag material changes on the site or in the App."
           }
         ]
       }
     ]
   },
-  "terms": null,
+  "terms": {
+    "last_updated": "2026-10-25",
+    "sections": [
+      {
+        "title_ar": "الخلاصة",
+        "title_en": "In short",
+        "blocks": [
+          {
+            "type": "list",
+            "items_ar": [
+              "الترخيص لاستخدام التطبيق في عملك التجاري، وليس لبيعه أو تفكيكه.",
+              "التطبيق أداة تشغيلية وليس نظام ضرائب أو فوترة حكومية معتمداً؛ ومراجعة أرقامك مسؤوليتك.",
+              "بياناتك لك، وحفظ النسخ الاحتياطية مسؤوليتك.",
+              "قد نشترط تحديث التطبيق إذا صدر إصدار يعالج مشكلة جوهرية."
+            ],
+            "items_en": [
+              "You get a license to run your business with the App — not to resell or reverse-engineer it.",
+              "The App is an operational tool; it is not a certified tax or government e-invoicing system, so review your figures.",
+              "Your data is yours, and keeping backups is your responsibility.",
+              "We may require an update when a release fixes a significant issue."
+            ]
+          }
+        ]
+      },
+      {
+        "title_ar": "1. القبول",
+        "title_en": "1. Acceptance",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "باستخدامك التطبيق أو الموقع أو بتقديم طلب شراء فإنك توافق على هذه الشروط وعلى سياسة الخصوصية. إن لم توافق فلا تستخدمهما. إن كنت تستخدمه نيابة عن منشأة فأنت تقرّ بأن لك صلاحية إلزامها.",
+            "text_en": "By using the App or website, or submitting a purchase request, you agree to these Terms and to the Privacy Policy. If you do not agree, do not use them. If you act for a business, you confirm you can bind it."
+          }
+        ]
+      },
+      {
+        "title_ar": "2. وصف الخدمة",
+        "title_en": "2. The service",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "Baytraq Sales Manager تطبيق لإدارة نقطة البيع والفواتير والمخزون والمشتريات والمرتجعات والعملاء والموردين والمصاريف والتقارير، يعمل محلياً على جهازك، مع خيارات ربط الأجهزة عبر الشبكة المحلية (LAN) أو السحابة حسب باقتك. تتوفر الميزات والمنصات بحسب الإصدار والترخيص، وقد تختلف بين المنصات.",
+            "text_en": "Baytraq Sales Manager is an app for point of sale, invoicing, inventory, purchasing, returns, customers, suppliers, expenses and reports. It runs locally on your device, with optional device linking over a local network (LAN) or the cloud depending on your plan. Features and platforms depend on the release and license and may differ between platforms."
+          }
+        ]
+      },
+      {
+        "title_ar": "3. الترخيص",
+        "title_en": "3. License",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "نمنحك ترخيصاً شخصياً غير حصري وغير قابل للتنازل لاستخدام التطبيق في أعمالك التجارية المشروعة وفق باقتك. يُحظر: نسخ التطبيق لإعادة بيعه، أو فك تشفيره أو هندسته عكسياً أو تجاوز قيود الترخيص، أو إزالة العلامات، أو استخدامه لأي نشاط غير مشروع. تبقى حقوق الملكية الفكرية للتطبيق والعلامة والشعار لـ Subul Technology، أما بياناتك فتبقى ملكك. بعض أجزاء التطبيق قد تعتمد على مكتبات مفتوحة المصدر تخضع لتراخيصها.",
+            "text_en": "We grant you a personal, non-exclusive, non-transferable license to use the App for your lawful business according to your plan. You may not copy the App for resale, decompile or reverse-engineer it, bypass license limits, remove notices, or use it for unlawful activity. Intellectual property in the App, name and logo remains with Subul Technology; your data remains yours. Parts of the App may use open-source libraries under their own licenses."
+          }
+        ]
+      },
+      {
+        "title_ar": "4. الباقات والمدفوعات",
+        "title_en": "4. Plans and payment",
+        "blocks": [
+          {
+            "type": "list",
+            "items_ar": [
+              "Free: المزايا الأساسية على جهاز واحد.",
+              "LAN: ربط الأجهزة داخل المتجر عبر الشبكة المحلية وحسابات الموظفين.",
+              "Cloud (تشمل LAN): مزامنة سحابية عبر Firebase."
+            ],
+            "items_en": [
+              "Free: core features on a single device.",
+              "LAN: device linking inside the store over the local network, and staff accounts.",
+              "Cloud (includes LAN): cloud sync through Firebase."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text_ar": "الأسعار وشروط الباقات المعلنة على الموقع (كالدفع لمرة واحدة لكل متجر) سارية وقت إصدار الترخيص، ويؤكَّد التفعيل بيننا وبينك عند الطلب. رسوم Firebase الزائدة عن الحد المجاني، إن وُجدت، يتحمّلها صاحب مشروع Firebase المعني وليست جزءاً من سعر الترخيص. قد نغيّر الأسعار للطلبات الجديدة دون أثر على تراخيص صدرت.",
+            "text_en": "Prices and plan terms published on the website (such as a one-time payment per store) apply when your license is issued, and activation is confirmed between us on request. Any Firebase charges above its free quota are borne by the owner of the relevant Firebase project and are not part of the license price. We may change prices for new orders without affecting licenses already issued."
+          }
+        ]
+      },
+      {
+        "title_ar": "5. الحساب والموظفون",
+        "title_en": "5. Accounts and staff",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "أنت مسؤول عن الأشخاص الذين تمنحهم أدواراً وصلاحيات، وعن سرية رموز الدخول (PIN/QR)، وعن كل نشاط يتم بحسابات متجرك.",
+            "text_en": "You are responsible for the people you give roles and permissions, for keeping login codes (PIN/QR) secret, and for all activity under your store’s accounts."
+          }
+        ]
+      },
+      {
+        "title_ar": "6. بياناتك والنسخ الاحتياطي",
+        "title_en": "6. Your data and backups",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "بياناتك تُخزَّن غالباً على أجهزتك. أنت مسؤول عن أخذ نسخ احتياطية منتظمة وحفظها. فقدان الجهاز أو حذف التطبيق أو تلف التخزين قد يؤدي إلى فقدان البيانات المحلية. لا نضمن إمكانية استرجاع بيانات لا نملك نسخة منها.",
+            "text_en": "Your data is mostly stored on your own devices. You are responsible for taking and safeguarding regular backups. Device loss, app deletion or storage corruption can lose local data, and we cannot recover data we do not hold."
+          }
+        ]
+      },
+      {
+        "title_ar": "7. الاستخدام المقبول",
+        "title_en": "7. Acceptable use",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "لا تستخدم الخدمة لما يخالف القانون، أو للإضرار بالآخرين، أو لتعطيل الخدمة أو الوصول غير المصرّح به إلى بيانات متاجر أخرى، أو لرفع محتوى ينتهك حقوق غيرك.",
+            "text_en": "Do not use the service unlawfully, to harm others, to disrupt it, to access other stores’ data without authorization, or to upload content that infringes others’ rights."
+          }
+        ]
+      },
+      {
+        "title_ar": "8. التحديثات وفرض الحد الأدنى للإصدار",
+        "title_en": "8. Updates and minimum version",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "قد نصدر تحديثات وإصلاحات. لحماية بياناتك وسلامة المزامنة قد نحدّد حداً أدنى للإصدار المدعوم، ويطلب التطبيق عندها التحديث للمتابعة. إن تعذّر الوصول إلى خادم الفحص فلا يُمنع الاستخدام.",
+            "text_en": "We may release updates and fixes. To protect your data and sync integrity we may set a minimum supported version, and the App will then ask you to update to continue. If the check server is unreachable, use is not blocked."
+          }
+        ]
+      },
+      {
+        "title_ar": "9. خدمات الأطراف الثالثة",
+        "title_en": "9. Third-party services",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "تعتمد بعض الميزات على خدمات طرف ثالث (Google Firebase، متاجر التطبيقات، GitHub Pages، Web3Forms). لا نتحكم بتوافرها أو شروطها، وقد تتأثر الميزات المرتبطة بها عند انقطاعها.",
+            "text_en": "Some features rely on third-party services (Google Firebase, app stores, GitHub Pages, Web3Forms). We do not control their availability or terms, and related features may be affected by outages."
+          }
+        ]
+      },
+      {
+        "title_ar": "10. طبيعة المخرجات وعدم كونها استشارة",
+        "title_en": "10. Nature of outputs; no professional advice",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "التقارير والأرباح والضرائب والأرصدة في التطبيق مخرجات تشغيلية تعتمد على ما تدخله وعلى إعداداتك. التطبيق ليس نظام محاسبة أو ضرائب معتمداً ولا يدّعي امتثالاً لفوترة إلكترونية حكومية أو لمتطلبات جهة تنظيمية معينة، وليس بديلاً عن محاسب أو مستشار قانوني. تحقّق من النتائج قبل اتخاذ قرارات مالية أو تقديم إقرارات.",
+            "text_en": "Reports, profit, tax and balance figures are operational outputs based on what you enter and how you configure the App. The App is not a certified accounting or tax system, does not claim compliance with any government e-invoicing or regulatory requirement, and is not a substitute for an accountant or lawyer. Verify results before financial decisions or filings."
+          }
+        ]
+      },
+      {
+        "title_ar": "11. التوافق مع الأجهزة والطابعات",
+        "title_en": "11. Devices and printers",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "نبذل جهدنا لدعم المنصات والطابعات والماسحات الشائعة، لكن لا نضمن عمل كل جهاز أو طابعة أو شبكة. نوصي بتجربة التطبيق على أجهزتك قبل الاعتماد عليه في التشغيل اليومي.",
+            "text_en": "We work to support common platforms, printers and scanners, but cannot guarantee every device, printer or network will work. Test the App on your own equipment before relying on it day to day."
+          }
+        ]
+      },
+      {
+        "title_ar": "12. إخلاء المسؤولية",
+        "title_en": "12. Disclaimer",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "يُقدَّم التطبيق «كما هو» و«حسب التوفر» دون ضمانات صريحة أو ضمنية، بما فيها الملاءمة لغرض معيّن أو خلوّه من الأخطاء أو استمراريته دون انقطاع، إلى أقصى حد يسمح به القانون.",
+            "text_en": "The App is provided “as is” and “as available”, without warranties of any kind, express or implied, including fitness for a particular purpose, error-free or uninterrupted operation, to the fullest extent permitted by law."
+          }
+        ]
+      },
+      {
+        "title_ar": "13. حدود المسؤولية",
+        "title_en": "13. Limitation of liability",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "إلى أقصى حد يسمح به القانون، لا تتحمل Subul Technology مسؤولية الأضرار غير المباشرة أو التبعية أو خسارة الأرباح أو البيانات أو الفرص الناتجة عن استخدام التطبيق أو تعذّره، ويقتصر إجمالي مسؤوليتنا على المبلغ الذي دفعته فعلياً مقابل الترخيص المعني. لا يستثني هذا ما لا يجوز استثناؤه قانوناً.",
+            "text_en": "To the fullest extent permitted by law, Subul Technology is not liable for indirect or consequential damages or loss of profit, data or opportunity arising from use of or inability to use the App, and our total liability is limited to the amount you actually paid for the relevant license. This does not exclude liability that cannot lawfully be excluded."
+          }
+        ]
+      },
+      {
+        "title_ar": "14. التعويض",
+        "title_en": "14. Indemnity",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "توافق على تحمّل أي مطالبات تنشأ عن استخدامك المخالف لهذه الشروط أو عن بيانات أدخلتها دون حق.",
+            "text_en": "You agree to bear claims arising from your use in breach of these Terms or from data you entered without the right to do so."
+          }
+        ]
+      },
+      {
+        "title_ar": "15. الإيقاف والإنهاء",
+        "title_en": "15. Suspension and termination",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "يمكنك التوقف عن الاستخدام في أي وقت. ويجوز لنا تعليق أو إنهاء ترخيص مخالف لهذه الشروط أو مستخدم لأغراض احتيالية. تبقى الأحكام التي بطبيعتها تستمر (الملكية، إخلاء المسؤولية، حدود المسؤولية) بعد الإنهاء.",
+            "text_en": "You may stop using the service at any time. We may suspend or terminate a license that breaches these Terms or is used fraudulently. Provisions that by nature survive (ownership, disclaimer, limitation of liability) continue after termination."
+          }
+        ]
+      },
+      {
+        "title_ar": "16. التعديلات",
+        "title_en": "16. Changes",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "قد نعدّل هذه الشروط، ويُعد استمرارك في الاستخدام بعد نشر التعديل قبولاً به. سنغيّر تاريخ «آخر تحديث» وننبّه للتغييرات الجوهرية.",
+            "text_en": "We may amend these Terms; continued use after publication means acceptance. We will update the “Last updated” date and flag material changes."
+          }
+        ]
+      },
+      {
+        "title_ar": "17. القانون الواجب وحل النزاعات",
+        "title_en": "17. Governing law and disputes",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "تخضع هذه الشروط للقوانين النافذة في جمهورية العراق، ونسعى أولاً إلى حل أي خلاف وديّاً عبر المراسلة، فإن تعذّر ذلك فالاختصاص للمحاكم العراقية المختصة، دون إخلال بحقوقك الإلزامية بموجب قوانين بلد إقامتك.",
+            "text_en": "These Terms are governed by the laws in force in the Republic of Iraq. We will first try to resolve disputes amicably by correspondence, failing which the competent Iraqi courts have jurisdiction, without prejudice to mandatory rights you hold under the law of your country of residence."
+          }
+        ]
+      },
+      {
+        "title_ar": "18. التواصل",
+        "title_en": "18. Contact",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text_ar": "Subul Technology — info@subultech.top",
+            "text_en": "Subul Technology — info@subultech.top"
+          }
+        ]
+      }
+    ]
+  },
   "changelog": null,
   "pricing": {
     "title_en": "Simple, Transparent Pricing",
     "title_ar": "تسعير بسيط وشفاف",
-    "note_en": "Invite your team members to join your store database for Free!",
-    "note_ar": "قم بدعوة أعضاء فريقك للانضمام لقاعدة بيانات متجرك مجاناً!",
-    "disclaimer_en": "* Note: Cloud Tier uses Firebase for remote sync. Firebase free limits apply; additional usage charges are paid directly to Firebase if you exceed their free plan.",
-    "disclaimer_ar": "* ملاحظة: الفئة السحابية تستخدم منصة Firebase. تُطبق حدود Firebase المجانية؛ تُدفع أي رسوم استخدام إضافية إلى Firebase مباشرة إذا تجاوزت خطتهم المجانية.",
+    "note_en": "Any Firebase charges above its free quota are paid directly to Firebase. Current prices may change for new orders.",
+    "note_ar": "رسوم Firebase الزائدة عن حدّه المجاني (إن وُجدت) تُدفع مباشرة إلى Firebase. الأسعار الحالية قابلة للتغيير للطلبات الجديدة.",
+    "disclaimer_en": "* Cloud plan uses Google Firebase for remote sync; see the Privacy Policy.",
+    "disclaimer_ar": "* باقة Cloud تستخدم Google Firebase للمزامنة البعيدة؛ راجع سياسة الخصوصية.",
     "tiers": [
       {
         "id": "free",
-        "name_en": "Free Tier",
-        "name_ar": "الفئة المجانية",
+        "name_en": "Free",
+        "name_ar": "Free",
         "price_en": "Free",
         "price_ar": "مجاناً",
         "featured": false,
         "cta_en": "Get Started",
         "cta_ar": "ابدأ الآن",
-        "features_en": ["Full POS & Invoicing", "Inventory Management", "Single Device Offline Mode", "Local Backup & Restore"],
-        "features_ar": ["نقطة البيع الكاملة والفواتير", "إدارة المخزون والمنتجات", "العمل دون اتصال لجهاز واحد", "نسخ احتياطي واستعادة محلي"]
+        "features_en": [
+          "Selling, invoicing and inventory",
+          "Single device (works offline)",
+          "Backup & restore"
+        ],
+        "features_ar": [
+          "البيع والفواتير وإدارة المخزون",
+          "جهاز واحد (يعمل دون إنترنت)",
+          "نسخ احتياطي واستعادة"
+        ]
       },
       {
         "id": "lan",
-        "name_en": "LAN Sync Tier",
-        "name_ar": "فئة المزامنة المحلية",
-        "price_en": "$150",
-        "price_ar": "150 دولار",
+        "name_en": "LAN",
+        "name_ar": "LAN",
+        "price_en": "$50",
+        "price_ar": "50 دولار",
         "featured": true,
-        "cta_en": "Choose LAN Sync",
-        "cta_ar": "اختر المزامنة المحلية",
-        "features_en": ["Everything in Free Tier", "Local LAN Multi-Device Sync", "Offline Master-Client Setup", "Price Checker Kiosk Mode", "One-time payment per store"],
-        "features_ar": ["كل شيء في الفئة المجانية", "مزامنة أجهزة متعددة بالشبكة المحلية", "بنية رئيسي/تابع بدون إنترنت", "وضع كشك قارئ الأسعار", "دفع لمرة واحدة لكل متجر"]
+        "cta_en": "Request LAN license",
+        "cta_ar": "اطلب ترخيص LAN",
+        "features_en": [
+          "Everything in Free",
+          "Link store devices over the local network",
+          "Staff accounts & permissions",
+          "Price-checker station",
+          "One-time payment per store"
+        ],
+        "features_ar": [
+          "كل مزايا Free",
+          "ربط أجهزة المتجر عبر الشبكة المحلية",
+          "حسابات موظفين وصلاحيات",
+          "محطة استعلام السعر",
+          "دفعة واحدة لكل متجر"
+        ]
       },
       {
         "id": "cloud",
-        "name_en": "Cloud & LAN Tier",
-        "name_ar": "الفئة السحابية والمحلية",
-        "price_en": "$250",
-        "price_ar": "250 دولار",
+        "name_en": "Cloud",
+        "name_ar": "Cloud",
+        "price_en": "$100",
+        "price_ar": "100 دولار",
         "featured": false,
-        "cta_en": "Choose Cloud & LAN",
-        "cta_ar": "اختر السحابي والمحلي",
-        "features_en": ["Everything in LAN Sync", "Real-Time Cloud Sync (Firebase)", "Hybrid Cloud & Offline LAN", "Automatic Firestore Backups", "Staff Roles & Remote Sync"],
-        "features_ar": ["كل شيء في المزامنة المحلية", "مزامنة سحابية فورية (Firebase)", "مزامنة هجينة سحابية ومحلية", "نسخ احتياطي تلقائي بـ Firestore", "صلاحيات الموظفين والمزامنة عن بعد"]
+        "cta_en": "Request Cloud license",
+        "cta_ar": "اطلب ترخيص Cloud",
+        "features_en": [
+          "Everything in LAN",
+          "Cloud sync via Firebase",
+          "Remote linking between devices"
+        ],
+        "features_ar": [
+          "كل مزايا LAN",
+          "مزامنة سحابية عبر Firebase",
+          "ربط بعيد بين الأجهزة"
+        ]
       }
     ]
   },
@@ -266,22 +756,65 @@
     "subtitle_en": "Fill out the form below and we will contact you shortly with payment instructions and your license key.",
     "subtitle_ar": "املأ النموذج أدناه وسنتواصل معك قريباً بتعليمات الدفع ومفتاح الترخيص الخاص بك.",
     "fields": [
-      { "name": "fullName", "label_en": "Full Name", "label_ar": "الاسم الكامل", "type": "text", "required": true },
-      { "name": "email", "label_en": "Email Address", "label_ar": "البريد الإلكتروني", "type": "email", "required": true },
-      { "name": "storeName", "label_en": "Store / Business Name", "label_ar": "اسم المتجر / النشاط التجاري", "type": "text", "required": true },
-      { "name": "phone", "label_en": "Phone Number", "label_ar": "رقم الهاتف", "type": "tel", "required": false },
-      { "name": "plan", "label_en": "Selected Plan", "label_ar": "الباقة المختارة", "type": "select", "required": true },
-      { "name": "message", "label_en": "Message / Notes", "label_ar": "الرسالة / ملاحظات", "type": "textarea", "required": false }
+      {
+        "name": "fullName",
+        "label_en": "Full Name",
+        "label_ar": "الاسم الكامل",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label_en": "Email Address",
+        "label_ar": "البريد الإلكتروني",
+        "type": "email",
+        "required": true
+      },
+      {
+        "name": "storeName",
+        "label_en": "Store / Business Name",
+        "label_ar": "اسم المتجر / النشاط التجاري",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "label_en": "Phone Number",
+        "label_ar": "رقم الهاتف",
+        "type": "tel",
+        "required": false
+      },
+      {
+        "name": "plan",
+        "label_en": "Selected Plan",
+        "label_ar": "الباقة المختارة",
+        "type": "select",
+        "required": true
+      },
+      {
+        "name": "message",
+        "label_en": "Message / Notes",
+        "label_ar": "الرسالة / ملاحظات",
+        "type": "textarea",
+        "required": false
+      }
     ],
     "plans": [
-      { "value": "Free Tier", "label_en": "Free Tier", "label_ar": "الفئة المجانية" },
-      { "value": "LAN Sync Tier ($150)", "label_en": "LAN Sync Tier ($150)", "label_ar": "فئة المزامنة المحلية (150$)" },
-      { "value": "Cloud & LAN Tier ($250)", "label_en": "Cloud & LAN Tier ($250)", "label_ar": "الفئة السحابية والمحلية (250$)" }
+      {
+        "value": "LAN — $50",
+        "label_en": "LAN — $50",
+        "label_ar": "LAN — 50$"
+      },
+      {
+        "value": "Cloud — $100",
+        "label_en": "Cloud — $100",
+        "label_ar": "Cloud — 100$"
+      }
     ],
     "submit_en": "Send Purchase Request",
     "submit_ar": "إرسال طلب الشراء",
-    "note_en": "This opens your email app with the details pre-filled. You can also reach us directly at info@subultech.top.",
-    "note_ar": "سيفتح هذا تطبيق البريد الإلكتروني الخاص بك مع تفاصيل مملوءة مسبقاً. يمكنك أيضاً التواصل معنا مباشرة على info@subultech.top."
+    "note_en": "The form is delivered through Web3Forms; your data is used only to answer your request (see the Privacy Policy). You can also email info@subultech.top.",
+    "note_ar": "يُرسَل النموذج عبر خدمة Web3Forms وتُستخدم بياناتك للرد على طلبك فقط (راجع سياسة الخصوصية). يمكنك أيضاً مراسلتنا على info@subultech.top."
   },
   "get_login": {
     "filename": "login.json",
@@ -290,5 +823,59 @@
     "title_ar": "جاري تحميل إعدادات تسجيل الدخول...",
     "description_en": "Your login configuration file will download automatically. If it does not start within a few seconds, use the button below.",
     "description_ar": "سيتم تحميل ملف إعدادات تسجيل الدخول تلقائياً. إذا لم يبدأ خلال ثوانٍ قليلة، استخدم الزر أدناه."
+  },
+  "faq": {
+    "title_en": "Frequently Asked Questions",
+    "title_ar": "أسئلة شائعة",
+    "items": [
+      {
+        "question_ar": "هل يناسبني إن كنت أعمل وحدي؟",
+        "question_en": "Is it right for a one-person business?",
+        "answer_ar": "نعم، يمكنك الاستفادة من البيع والفواتير والمخزون وحسابات العملاء والمصاريف دون فريق.",
+        "answer_en": "Yes — selling, invoices, stock, customer accounts and expenses all work without a team."
+      },
+      {
+        "question_ar": "هل أحتاج الإنترنت طوال الوقت؟",
+        "question_en": "Do I need internet all the time?",
+        "answer_ar": "العمليات الأساسية تعمل محلياً على جهازك. الإنترنت مطلوب فقط للمزامنة السحابية والتفعيل وفحص التحديثات.",
+        "answer_en": "Core operations run locally. Internet is only needed for cloud sync, activation and update checks."
+      },
+      {
+        "question_ar": "أين تُحفظ بياناتي؟",
+        "question_en": "Where is my data stored?",
+        "answer_ar": "على جهازك افتراضياً. لا تُرفع إلى السحابة إلا إذا فعّلت باقة Cloud. التفاصيل في سياسة الخصوصية.",
+        "answer_en": "On your device by default. It goes to the cloud only if you enable the Cloud plan. See the Privacy Policy."
+      },
+      {
+        "question_ar": "هل يسحب التطبيق مبلغ البطاقة البنكية؟",
+        "question_en": "Does it charge bank cards?",
+        "answer_ar": "تسجيل الدفع الإلكتروني يوثّق طريقة السداد فقط، ولا يعني وجود ربط ببوابة دفع أو جهاز مصرفي.",
+        "answer_en": "Electronic payment entries only record how a sale was paid; there is no payment-gateway or bank-terminal integration."
+      },
+      {
+        "question_ar": "هل هو نظام محاسبة وضرائب معتمد؟",
+        "question_en": "Is it a certified accounting or tax system?",
+        "answer_ar": "لا. يوفّر حسابات وتقارير تشغيلية، ولا يدّعي اعتماداً ضريبياً أو امتثالاً لفوترة إلكترونية حكومية.",
+        "answer_en": "No. It provides operational accounts and reports and does not claim tax certification or government e-invoicing compliance."
+      },
+      {
+        "question_ar": "هل يقرأ صورة فاتورة المشتريات تلقائياً؟",
+        "question_en": "Can it read a purchase invoice photo automatically?",
+        "answer_ar": "هذه الميزة قادمة وغير مفعّلة حالياً. المتاح: الإدخال اليدوي والمسح واستيراد CSV.",
+        "answer_en": "That feature is coming and currently disabled. Available now: manual entry, scanning and CSV import."
+      },
+      {
+        "question_ar": "على أي منصات يعمل؟",
+        "question_en": "Which platforms does it run on?",
+        "answer_ar": "Android وiOS وWindows وmacOS وLinux. قد تختلف بعض الميزات بين المنصات (مثلاً ربط LAN في المتصفح).",
+        "answer_en": "Android, iOS, Windows, macOS and Linux. Some features differ by platform (e.g. LAN linking in browsers)."
+      },
+      {
+        "question_ar": "كم لغة يدعم؟",
+        "question_en": "How many languages?",
+        "answer_ar": "16 لغة مسجّلة في النظام، منها العربية والإنجليزية؛ وجودة الترجمة تتفاوت بين اللغات.",
+        "answer_en": "16 registered languages including Arabic and English; translation completeness varies by language."
+      }
+    ]
   }
 }
