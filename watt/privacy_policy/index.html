@@ -34,6 +34,9 @@
   <meta name="twitter:description" content="Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.">
   <meta name="twitter:image" content="https://subultech.top/assets/watt/logo.png">
 
+  <!-- Safari on iPhone/iPad shows the official App Store banner -->
+  <meta name="apple-itunes-app" content="app-id=6820459639">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/watt/logo.png">
   <link rel="apple-touch-icon" href="/assets/watt/logo.png">
@@ -68,22 +71,107 @@
 <script data-goatcounter="https://abdulrasol.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Data (built in build-project.py: app, web app, organization, FAQ) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Watt",
-    "applicationCategory": "MobileApplication",
-    "operatingSystem": "Android, iOS",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://subultech.top/#organization",
+      "name": "Subul Technology",
+      "url": "https://subultech.top/",
+      "logo": "https://subultech.top/logo.png"
     },
-    "description": "Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.",
-"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",    "image": "https://subultech.top/assets/watt/logo.png"
-  }
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://subultech.top/watt/#app",
+      "name": "Watt",
+      "alternateName": [
+        "واط"
+      ],
+      "description": "Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.",
+      "url": "https://subultech.top/watt/",
+      "image": "https://subultech.top/assets/watt/logo.png",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Android, iOS, Web",
+      "inLanguage": [
+        "ar",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://subultech.top/#organization"
+      },
+      "author": {
+        "@id": "https://subultech.top/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "sameAs": [
+        "https://apps.apple.com/us/app/watt-solar-system-calculator/id6820459639",
+        "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",
+        "https://watt.subultech.top/"
+      ],
+      "downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",
+      "installUrl": "https://watt.subultech.top/",
+      "featureList": [
+        "System wizard",
+        "Fast calculator",
+        "Detailed appliances mode",
+        "Sized for your location",
+        "Outage survival",
+        "Multi-day simulation",
+        "System health check",
+        "Saved systems",
+        "Panel calculator",
+        "Battery calculators",
+        "Inverter calculator",
+        "Wire calculator",
+        "Solar pump calculator",
+        "Direction and tilt",
+        "PV system designer",
+        "Roof simulator",
+        "Mounting structure design",
+        "PVGIS satellite data",
+        "NASA POWER backup",
+        "Offline grid for Iraq",
+        "Data source badges",
+        "Solar outlook on the home screen",
+        "Watt Store",
+        "Cart and checkout",
+        "Sell as a company or technician",
+        "Quotation requests",
+        "Brands and catalog",
+        "Company profile and dashboard",
+        "Google and Apple sign-in",
+        "Account types",
+        "Your country's prices",
+        "Notifications you control",
+        "Arabic and English",
+        "Guided tours and feedback"
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Watt Web",
+      "url": "https://watt.subultech.top/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (web browser)",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "isPartOf": {
+        "@id": "https://subultech.top/watt/#app"
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body data-lang="en" class="product-site">
@@ -256,8 +344,8 @@
         <h4>Contact</h4>
         <a href="mailto:watt@subultech.top"><i class="fas fa-envelope"></i> watt@subultech.top</a>
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt" data-goatcounter-click="footer-google-play-watt" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
-        <a href="https://apps.apple.com/iq/app/watt-solar-system-calculator/id6820459639" data-goatcounter-click="footer-app-store-watt" target="_blank" rel="noopener"><i class="fab fa-apple"></i> App Store</a>
-        <a href="https://watt.subultech.top" data-goatcounter-click="footer-web-app-watt" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Web app</a>
+        <a href="https://apps.apple.com/us/app/watt-solar-system-calculator/id6820459639" data-goatcounter-click="footer-app-store-watt" target="_blank" rel="noopener"><i class="fab fa-apple"></i> App Store</a>
+        <a href="https://watt.subultech.top/" data-goatcounter-click="footer-web-app-watt" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Web app</a>
       </div>
     </div>
 

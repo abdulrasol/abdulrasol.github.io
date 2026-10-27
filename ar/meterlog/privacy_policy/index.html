@@ -34,6 +34,7 @@
   <meta name="twitter:description" content="قارئ Multimeter ذكي بالذكاء الاصطناعي مع التعرف الضوئي، الالتقاط المجدول، وتصدير احترافي بصيغ Excel/CSV. يعمل 100% بدون إنترنت.">
   <meta name="twitter:image" content="https://subultech.top/assets/meter_log/logo.png">
 
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/meter_log/logo.png">
   <link rel="apple-touch-icon" href="/assets/meter_log/logo.png">
@@ -68,22 +69,47 @@
 <script data-goatcounter="https://abdulrasol.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Data (built in build-project.py: app, web app, organization, FAQ) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "ميتر لوغ",
-    "applicationCategory": "MobileApplication",
-    "operatingSystem": "Android, iOS",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://subultech.top/#organization",
+      "name": "Subul Technology",
+      "url": "https://subultech.top/",
+      "logo": "https://subultech.top/logo.png"
     },
-    "description": "قارئ Multimeter ذكي بالذكاء الاصطناعي مع التعرف الضوئي، الالتقاط المجدول، وتصدير احترافي بصيغ Excel/CSV. يعمل 100% بدون إنترنت.",
-"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log",    "image": "https://subultech.top/assets/meter_log/logo.png"
-  }
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://subultech.top/meterlog/#app",
+      "name": "ميتر لوغ",
+      "alternateName": [
+        "MeterLog"
+      ],
+      "description": "قارئ Multimeter ذكي بالذكاء الاصطناعي مع التعرف الضوئي، الالتقاط المجدول، وتصدير احترافي بصيغ Excel/CSV. يعمل 100% بدون إنترنت.",
+      "url": "https://subultech.top/meterlog/",
+      "image": "https://subultech.top/assets/meter_log/logo.png",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Android, iOS",
+      "inLanguage": [
+        "ar",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://subultech.top/#organization"
+      },
+      "author": {
+        "@id": "https://subultech.top/#organization"
+      },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log"
+      ],
+      "downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meter_log"
+    }
+  ]
+}
   </script>
 </head>
 <body data-lang="ar" class="product-site">

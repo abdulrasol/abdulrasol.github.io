@@ -34,6 +34,11 @@
   <meta name="twitter:description" content="{{ site_description }}">
   <meta name="twitter:image" content="{{ site.url }}{{ brand.logo }}">
 
+  {% if app_store_id %}
+  <!-- Safari on iPhone/iPad shows the official App Store banner -->
+  <meta name="apple-itunes-app" content="app-id={{ app_store_id }}">
+  {% endif %}
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="{{ brand.favicon or brand.logo }}">
   <link rel="apple-touch-icon" href="{{ brand.favicon or brand.logo }}">
@@ -67,23 +72,9 @@
 
   {% include "partials/analytics.html" %}
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Data (built in build-project.py: app, web app, organization, FAQ) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "{{ brand.name }}",
-    "applicationCategory": "MobileApplication",
-    "operatingSystem": "Android, iOS",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "{{ pricing.currency if pricing and pricing.currency else 'USD' }}"
-    },
-    "description": "{{ site_description | replace('"', '\\"') }}",
-    {% if links.googlePlay %}"downloadUrl": "{{ links.googlePlay }}",{% endif %}
-    "image": "{{ site.url }}{{ brand.logo }}"
-  }
+{{ structured_data | safe }}
   </script>
 </head>
 <body data-lang="{{ lang }}" class="product-site">

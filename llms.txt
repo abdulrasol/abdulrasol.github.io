@@ -1,0 +1,52 @@
+# Subul Technology
+
+> Software, AI and solar solutions company based in Iraq. Builds bilingual (Arabic/English) apps.
+
+## Products
+
+- [Watt (واط)](https://subultech.top/watt/): Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.
+- [Baytraq](https://subultech.top/baytraq/): Manage sales, inventory, invoices, customer and supplier accounts and expenses in one app, with LAN or cloud device linking.
+- [MEAAD (ميعاد Meaad)](https://subultech.top/meaad/): The easiest and most secure app to manage debts, installments, and subscriptions for your business.
+- [MeterLog (ميتر لوغ)](https://subultech.top/meterlog/): AI-powered multimeter reader with OCR recognition, scheduled capture, and professional Excel/CSV export. Works 100% offline.
+- [Madarik (مدارك)](https://subultech.top/madarik/): An engaging educational quiz game to test and expand your knowledge in Islamic history, science, geography, and more.
+- [Store Management (إدارة المتجر)](https://subultech.top/store-management/): Your all-in-one solution for effortless store management. Track inventory, manage invoices, analyze sales, and stay connected with customers and suppliers.
+- [SWEEP](https://subultech.top/sweep/): High-performance Mac cleaning utility for developers. Built with Rust, Tauri v2, and React. Automatically finds and removes hidden development artifacts to reclaim disk space.
+
+## Watt (واط)
+
+Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.
+
+واط تحسب منظومتك الشمسية من موقعك الحقيقي ببيانات PVGIS وناسا، وتصمّم الألواح، وتربطك بمتجر الطاقة الشمسية وعروض أسعار الشركات.
+
+- Website: https://subultech.top/watt/
+- Arabic website: https://subultech.top/ar/watt/
+- Download (auto-detects device): https://subultech.top/watt/download/
+- iPhone and iPad (App Store): https://apps.apple.com/us/app/watt-solar-system-calculator/id6820459639
+- Android (Google Play): https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt
+- Web app (any browser, Windows/Mac/Linux): https://watt.subultech.top/
+- Support: watt@subultech.top
+- Price: free
+- Platforms: Android, iOS, Web
+
+### FAQ
+
+**Is Watt the same app as Taqati?**
+Yes. Taqati was renamed Watt. Your account and saved systems continue in the same app, and old Taqati links redirect to this page.
+
+**Is Watt free?**
+The calculators and design tools are free. Prices of products in the store are set by the sellers.
+
+**Which countries does Watt support?**
+The calculators work anywhere using PVGIS or NASA data. Iraq also has a built-in offline grid. Price estimates and store features appear for countries where they are available.
+
+**Where do the solar numbers come from?**
+From PVGIS (European Commission, JRC) first, then NASA POWER if PVGIS is unreachable, and a built-in grid for Iraq when you are offline. Each result shows its source.
+
+**Can I rely on the results to buy equipment?**
+Results are engineering estimates for planning. Confirm the final design and safety items such as wiring and breakers with a qualified technician before installing.
+
+**Does Watt need my location?**
+Only if you allow it, to fetch the sun at your site. You can also pick a place on the map or skip it and get a clearly labelled general estimate.
+
+**How do I delete my account?**
+From your account page inside the app, or by following the steps on the account deletion page.

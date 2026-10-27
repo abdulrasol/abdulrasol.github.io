@@ -95,7 +95,11 @@ def build_portfolio_project_list(project_jsons, manual_list):
     auto_pages = {p["id"] for p in project_jsons}
     portfolio_list = []
 
-    sorted_projects = sorted(project_jsons, key=lambda p: (not p.get("featured", False), p["id"]))
+    # "order" in the project JSON wins (1 = first); the rest: featured first, then by id.
+    sorted_projects = sorted(
+        project_jsons,
+        key=lambda p: (p.get("order", 999), not p.get("featured", False), p["id"]),
+    )
 
     for project in sorted_projects:
         portfolio_list.append(
@@ -112,6 +116,7 @@ def build_portfolio_project_list(project_jsons, manual_list):
                 "links": {
                     "page": f"/{project['id']}/",
                     "googlePlay": project["links"].get("googlePlay"),
+                    "download": f"/{project['id']}/download/" if project.get("download_page") else None,
                     "github": project["links"].get("github"),
                     "facebook": project["links"].get("facebook"),
                     "instagram": project["links"].get("instagram"),
@@ -490,6 +495,16 @@ def build_site():
         privacy_path.write_text(privacy_html, encoding="utf-8")
         print(f"Generated: {privacy_path}")
         sitemap_pages.append(f"/{'ar/' if lang == 'ar' else ''}privacy.html")
+
+    # Product landing pages (rendered by build-project.py) belong in the sitemap too.
+    # Download pages are noindex redirects, so they are left out on purpose.
+    for project in project_jsons:
+        for prefix in ("", "ar/"):
+            sitemap_pages.append(f"/{prefix}{project['id']}/")
+            if has_visible_content(project.get("privacy")):
+                sitemap_pages.append(f"/{prefix}{project['id']}/privacy_policy/")
+            if has_visible_content(project.get("terms")):
+                sitemap_pages.append(f"/{prefix}{project['id']}/terms.html")
 
     # Generate sitemap.xml
     sitemap_xml = generate_sitemap(sitemap_pages, raw_data["site"]["url"])

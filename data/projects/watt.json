@@ -25,12 +25,12 @@
   },
   "links": {
     "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",
-    "appStore": "https://apps.apple.com/iq/app/watt-solar-system-calculator/id6820459639",
+    "appStore": "https://apps.apple.com/us/app/watt-solar-system-calculator/id6820459639",
     "github": null,
     "facebook": null,
     "instagram": null,
     "support_email": "watt@subultech.top",
-    "webApp": "https://watt.subultech.top"
+    "webApp": "https://watt.subultech.top/"
   },
   "hero": {
     "badge_en": "Formerly Taqati · Solar engineering in your pocket",
@@ -87,7 +87,11 @@
     "iOS"
   ],
   "category": "solar",
+  "application_category": "UtilitiesApplication",
+  "download_page": true,
+  "is_free": true,
   "featured": true,
+  "order": 1,
   "technologies": [
     "Flutter",
     "Dart",

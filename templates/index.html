@@ -192,7 +192,15 @@
               <i class="fas fa-external-link-alt"></i>
             </a>
             {% endif %}
-            {% if project.links.googlePlay %}
+            {% if project.links.download %}
+            {# Smart download page: App Store on iPhone/iPad, Google Play on Android, choice on computers #}
+            <a href="{{ link(project.links.download) }}"
+               data-goatcounter-click="download-{{ project_id }}"
+               class="project-link"
+               aria-label="{{ 'Download' if lang == 'en' else 'تحميل' }}">
+              <i class="fas fa-download"></i>
+            </a>
+            {% elif project.links.googlePlay %}
             <a href="{{ project.links.googlePlay }}"
                data-goatcounter-click="google-play-{{ project_id }}"
                class="project-link"

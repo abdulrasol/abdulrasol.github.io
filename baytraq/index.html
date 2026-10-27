@@ -34,6 +34,7 @@
   <meta name="twitter:description" content="Manage sales, inventory, invoices, customer and supplier accounts and expenses in one app, with LAN or cloud device linking.">
   <meta name="twitter:image" content="https://subultech.top/assets/baytraq/logo.png">
 
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/baytraq/logo.png">
   <link rel="apple-touch-icon" href="/assets/baytraq/logo.png">
@@ -68,22 +69,129 @@
 <script data-goatcounter="https://abdulrasol.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Data (built in build-project.py: app, web app, organization, FAQ) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Baytraq",
-    "applicationCategory": "MobileApplication",
-    "operatingSystem": "Android, iOS",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://subultech.top/#organization",
+      "name": "Subul Technology",
+      "url": "https://subultech.top/",
+      "logo": "https://subultech.top/logo.png"
     },
-    "description": "Manage sales, inventory, invoices, customer and supplier accounts and expenses in one app, with LAN or cloud device linking.",
-"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager",    "image": "https://subultech.top/assets/baytraq/logo.png"
-  }
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://subultech.top/baytraq/#app",
+      "name": "Baytraq",
+      "description": "Manage sales, inventory, invoices, customer and supplier accounts and expenses in one app, with LAN or cloud device linking.",
+      "url": "https://subultech.top/baytraq/",
+      "image": "https://subultech.top/assets/baytraq/logo.png",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Windows, macOS, Linux, Android, iOS",
+      "inLanguage": [
+        "ar",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://subultech.top/#organization"
+      },
+      "author": {
+        "@id": "https://subultech.top/#organization"
+      },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager"
+      ],
+      "downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager",
+      "featureList": [
+        "Fast point of sale",
+        "Manual invoicing",
+        "Inventory & stock-take",
+        "Expiry tracking",
+        "Purchase intake",
+        "Documented returns",
+        "Customers, suppliers & debts",
+        "Expenses",
+        "Shifts & cashier",
+        "Roles & permissions",
+        "Reports & insights",
+        "Barcodes & printing"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://subultech.top/baytraq/#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is it right for a one-person business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — selling, invoices, stock, customer accounts and expenses all work without a team."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need internet all the time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Core operations run locally. Internet is only needed for cloud sync, activation and update checks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is my data stored?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On your device by default. It goes to the cloud only if you enable the Cloud plan. See the Privacy Policy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it charge bank cards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Electronic payment entries only record how a sale was paid; there is no payment-gateway or bank-terminal integration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it a certified accounting or tax system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It provides operational accounts and reports and does not claim tax certification or government e-invoicing compliance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can it read a purchase invoice photo automatically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That feature is coming and currently disabled. Available now: manual entry, scanning and CSV import."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which platforms does it run on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Android, iOS, Windows, macOS and Linux. Some features differ by platform (e.g. LAN linking in browsers)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many languages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "16 registered languages including Arabic and English; translation completeness varies by language."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body data-lang="en" class="product-site">

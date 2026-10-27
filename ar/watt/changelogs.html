@@ -34,6 +34,9 @@
   <meta name="twitter:description" content="واط تحسب منظومتك الشمسية من موقعك الحقيقي ببيانات PVGIS وناسا، وتصمّم الألواح، وتربطك بمتجر الطاقة الشمسية وعروض أسعار الشركات.">
   <meta name="twitter:image" content="https://subultech.top/assets/watt/logo.png">
 
+  <!-- Safari on iPhone/iPad shows the official App Store banner -->
+  <meta name="apple-itunes-app" content="app-id=6820459639">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/watt/logo.png">
   <link rel="apple-touch-icon" href="/assets/watt/logo.png">
@@ -68,22 +71,107 @@
 <script data-goatcounter="https://abdulrasol.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Data (built in build-project.py: app, web app, organization, FAQ) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "واط",
-    "applicationCategory": "MobileApplication",
-    "operatingSystem": "Android, iOS",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://subultech.top/#organization",
+      "name": "Subul Technology",
+      "url": "https://subultech.top/",
+      "logo": "https://subultech.top/logo.png"
     },
-    "description": "واط تحسب منظومتك الشمسية من موقعك الحقيقي ببيانات PVGIS وناسا، وتصمّم الألواح، وتربطك بمتجر الطاقة الشمسية وعروض أسعار الشركات.",
-"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",    "image": "https://subultech.top/assets/watt/logo.png"
-  }
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://subultech.top/watt/#app",
+      "name": "واط",
+      "alternateName": [
+        "Watt"
+      ],
+      "description": "واط تحسب منظومتك الشمسية من موقعك الحقيقي ببيانات PVGIS وناسا، وتصمّم الألواح، وتربطك بمتجر الطاقة الشمسية وعروض أسعار الشركات.",
+      "url": "https://subultech.top/watt/",
+      "image": "https://subultech.top/assets/watt/logo.png",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Android, iOS, Web",
+      "inLanguage": [
+        "ar",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://subultech.top/#organization"
+      },
+      "author": {
+        "@id": "https://subultech.top/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "sameAs": [
+        "https://apps.apple.com/us/app/watt-solar-system-calculator/id6820459639",
+        "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",
+        "https://watt.subultech.top/"
+      ],
+      "downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",
+      "installUrl": "https://watt.subultech.top/",
+      "featureList": [
+        "معالج حساب المنظومة",
+        "الحاسبة السريعة",
+        "وضع الأجهزة التفصيلي",
+        "حساب حسب موقعك",
+        "صمود المنظومة وقت الانقطاع",
+        "محاكاة عدة أيام",
+        "فحص صحة المنظومة",
+        "المنظومات المحفوظة",
+        "حاسبة الألواح",
+        "حاسبات البطاريات",
+        "حاسبة الانفرتر",
+        "حاسبة الأسلاك",
+        "حاسبة مضخات الماء",
+        "الاتجاه والميل",
+        "مصمم منظومات PV",
+        "محاكي السطح",
+        "تصميم هيكل التثبيت",
+        "بيانات PVGIS من الأقمار الصناعية",
+        "ناسا POWER احتياطاً",
+        "شبكة بيانات للعراق بدون إنترنت",
+        "شارات مصدر البيانات",
+        "توقع الشمس في الرئيسية",
+        "متجر واط",
+        "السلة وإتمام الطلب",
+        "البيع كشركة أو فني",
+        "طلبات عروض الأسعار",
+        "البراندات والكتالوج",
+        "ملف الشركة ولوحة التحكم",
+        "الدخول بجوجل وآبل",
+        "أنواع الحسابات",
+        "أسعار بلدك",
+        "إشعارات تتحكم بها",
+        "عربي وإنجليزي",
+        "جولات إرشادية وملاحظات"
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "واط Web",
+      "url": "https://watt.subultech.top/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (web browser)",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "isPartOf": {
+        "@id": "https://subultech.top/watt/#app"
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body data-lang="ar" class="product-site">
@@ -220,8 +308,8 @@
         <h4>تواصل</h4>
         <a href="mailto:watt@subultech.top"><i class="fas fa-envelope"></i> watt@subultech.top</a>
         <a href="https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt" data-goatcounter-click="footer-google-play-watt" target="_blank" rel="noopener"><i class="fab fa-google-play"></i> Google Play</a>
-        <a href="https://apps.apple.com/iq/app/watt-solar-system-calculator/id6820459639" data-goatcounter-click="footer-app-store-watt" target="_blank" rel="noopener"><i class="fab fa-apple"></i> App Store</a>
-        <a href="https://watt.subultech.top" data-goatcounter-click="footer-web-app-watt" target="_blank" rel="noopener"><i class="fas fa-globe"></i> نسخة الويب</a>
+        <a href="https://apps.apple.com/us/app/watt-solar-system-calculator/id6820459639" data-goatcounter-click="footer-app-store-watt" target="_blank" rel="noopener"><i class="fab fa-apple"></i> App Store</a>
+        <a href="https://watt.subultech.top/" data-goatcounter-click="footer-web-app-watt" target="_blank" rel="noopener"><i class="fas fa-globe"></i> نسخة الويب</a>
       </div>
     </div>
 

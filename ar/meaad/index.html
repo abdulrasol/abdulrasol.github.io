@@ -34,6 +34,7 @@
   <meta name="twitter:description" content="التطبيق الأسهل والأكثر أماناً لإدارة الديون والأقساط والاشتراكات لعملك التجاري.">
   <meta name="twitter:image" content="https://subultech.top/assets/meaad/logo.png">
 
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/meaad/logo.png">
   <link rel="apple-touch-icon" href="/assets/meaad/logo.png">
@@ -68,22 +69,47 @@
 <script data-goatcounter="https://abdulrasol.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Data (built in build-project.py: app, web app, organization, FAQ) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "ميعاد Meaad",
-    "applicationCategory": "MobileApplication",
-    "operatingSystem": "Android, iOS",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://subultech.top/#organization",
+      "name": "Subul Technology",
+      "url": "https://subultech.top/",
+      "logo": "https://subultech.top/logo.png"
     },
-    "description": "التطبيق الأسهل والأكثر أماناً لإدارة الديون والأقساط والاشتراكات لعملك التجاري.",
-"downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meadd",    "image": "https://subultech.top/assets/meaad/logo.png"
-  }
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://subultech.top/meaad/#app",
+      "name": "ميعاد Meaad",
+      "alternateName": [
+        "MEAAD"
+      ],
+      "description": "التطبيق الأسهل والأكثر أماناً لإدارة الديون والأقساط والاشتراكات لعملك التجاري.",
+      "url": "https://subultech.top/meaad/",
+      "image": "https://subultech.top/assets/meaad/logo.png",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Android, iOS",
+      "inLanguage": [
+        "ar",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://subultech.top/#organization"
+      },
+      "author": {
+        "@id": "https://subultech.top/#organization"
+      },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meadd"
+      ],
+      "downloadUrl": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meadd"
+    }
+  ]
+}
   </script>
 </head>
 <body data-lang="ar" class="product-site">

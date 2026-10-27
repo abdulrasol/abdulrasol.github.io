@@ -14,15 +14,19 @@ Output:
     ./{project}/terms.html
     ./{project}/changelogs.html
     ./{project}/get-login.html
+    ./{project}/download/index.html      (when "download_page": true)
     ./ar/{project}/index.html
     ./ar/{project}/privacy_policy/index.html
     ./ar/{project}/terms.html
     ./ar/{project}/changelogs.html
     ./ar/{project}/get-login.html
+    ./ar/{project}/download/index.html   (when "download_page": true)
+    ./llms.txt                           (summary for AI assistants and agents)
 """
 
 import json
 import os
+import re
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -156,6 +160,167 @@ def normalize_sections(sections):
     return normalized
 
 
+def app_store_id(url):
+    """Extract the numeric App Store id from an apps.apple.com link."""
+    match = re.search(r"/id(\d+)", url or "")
+    return match.group(1) if match else ""
+
+
+def operating_systems(project):
+    systems = list(project.get("platforms") or [])
+    if project.get("links", {}).get("webApp") and "Web" not in systems:
+        systems.append("Web")
+    return ", ".join(systems)
+
+
+def build_structured_data(localized, project, site, page_path, lang, include_faq):
+    """Return the JSON-LD graph for a project page as a ready-to-embed string."""
+    site_url = site.get("url", "")
+    links = project.get("links", {})
+    brand = localized.get("brand", {})
+    org = {
+        "@type": "Organization",
+        "@id": f"{site_url}/#organization",
+        "name": "Subul Technology",
+        "url": f"{site_url}/",
+        "logo": f"{site_url}/logo.png",
+    }
+    store_links = [u for u in (links.get("appStore"), links.get("googlePlay"), links.get("webApp")) if u]
+
+    features = []
+    for group in (localized.get("features") or {}).get("groups", []) or []:
+        for item in group.get("items", []) or []:
+            if item.get("title"):
+                features.append(item["title"])
+
+    app = {
+        "@type": "SoftwareApplication",
+        "@id": f"{site_url}/{project['id']}/#app",
+        "name": brand.get("name", ""),
+        "alternateName": [
+            n for n in dict.fromkeys([project["brand"].get("name_en"), project["brand"].get("name_ar")])
+            if n and n != brand.get("name")
+        ],
+        "description": localized.get("site", {}).get("description", ""),
+        "url": f"{site_url}/{project['id']}/",
+        "image": f"{site_url}{brand.get('logo', '')}",
+        "applicationCategory": project.get("application_category", "UtilitiesApplication"),
+        "operatingSystem": operating_systems(project),
+        "inLanguage": ["ar", "en"],
+        "publisher": {"@id": org["@id"]},
+        "author": {"@id": org["@id"]},
+    }
+    if not app["alternateName"]:
+        del app["alternateName"]
+    # Only claim a price when the project says it is free ("is_free": true in its JSON).
+    if project.get("is_free"):
+        app["offers"] = {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+    if store_links:
+        app["sameAs"] = store_links
+        app["downloadUrl"] = links.get("googlePlay") or links.get("appStore") or links.get("webApp")
+    if links.get("webApp"):
+        app["installUrl"] = links["webApp"]
+    if features:
+        app["featureList"] = features
+
+    graph = [org, app]
+
+    if links.get("webApp"):
+        graph.append({
+            "@type": "WebApplication",
+            "name": f"{brand.get('name', '')} Web",
+            "url": links["webApp"],
+            "applicationCategory": app["applicationCategory"],
+            "operatingSystem": "Any (web browser)",
+            "browserRequirements": "Requires JavaScript",
+            **({"offers": app["offers"]} if "offers" in app else {}),
+            "isPartOf": {"@id": app["@id"]},
+        })
+
+    if include_faq:
+        questions = [
+            {
+                "@type": "Question",
+                "name": item.get("question", ""),
+                "acceptedAnswer": {"@type": "Answer", "text": item.get("answer", "")},
+            }
+            for item in (localized.get("faq") or {}).get("items", []) or []
+            if item.get("question") and item.get("answer")
+        ]
+        if questions:
+            graph.append({
+                "@type": "FAQPage",
+                "@id": f"{site_url}{page_path}#faq",
+                "inLanguage": lang,
+                "mainEntity": questions,
+            })
+
+    data = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, indent=2)
+    # Never let page content close the <script> tag early.
+    return data.replace("</", "<\\/")
+
+
+def generate_llms_txt(projects, site_url):
+    """Write /llms.txt: a plain summary that AI assistants and agents can read quickly."""
+    lines = [
+        "# Subul Technology",
+        "",
+        "> Software, AI and solar solutions company based in Iraq. Builds bilingual (Arabic/English) apps.",
+        "",
+        "## Products",
+        "",
+    ]
+    projects = sorted(
+        projects,
+        key=lambda p: (p.get("order", 999), not p.get("featured", False), p["id"]),
+    )
+    for project in projects:
+        site = project.get("site", {})
+        links = project.get("links", {})
+        name = project.get("brand", {}).get("name_en") or project["id"]
+        name_ar = project.get("brand", {}).get("name_ar")
+        title = f"{name} ({name_ar})" if name_ar and name_ar != name else name
+        lines.append(f"- [{title}]({site_url}/{project['id']}/): {site.get('description_en', '')}")
+    lines.append("")
+
+    for project in projects:
+        links = project.get("links", {})
+        if not project.get("download_page"):
+            continue
+        site = project.get("site", {})
+        brand = project.get("brand", {})
+        lines += [
+            f"## {brand.get('name_en', project['id'])} ({brand.get('name_ar', '')})",
+            "",
+            site.get("description_en", ""),
+            "",
+            site.get("description_ar", ""),
+            "",
+            f"- Website: {site_url}/{project['id']}/",
+            f"- Arabic website: {site_url}/ar/{project['id']}/",
+            f"- Download (auto-detects device): {site_url}/{project['id']}/download/",
+        ]
+        if links.get("appStore"):
+            lines.append(f"- iPhone and iPad (App Store): {links['appStore']}")
+        if links.get("googlePlay"):
+            lines.append(f"- Android (Google Play): {links['googlePlay']}")
+        if links.get("webApp"):
+            lines.append(f"- Web app (any browser, Windows/Mac/Linux): {links['webApp']}")
+        if links.get("support_email"):
+            lines.append(f"- Support: {links['support_email']}")
+        lines += [f"- Price: free", f"- Platforms: {operating_systems(project)}", ""]
+
+        faq = project.get("faq") or {}
+        items = [i for i in faq.get("items", []) if i.get("question_en") and i.get("answer_en")]
+        if items:
+            lines += ["### FAQ", ""]
+            for item in items:
+                lines += [f"**{item['question_en']}**", item["answer_en"], ""]
+
+    Path("llms.txt").write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    print("Generated: llms.txt")
+
+
 def build_projects():
     portfolio = load_json("data/portfolio.json")
     projects = load_projects()
@@ -173,6 +338,7 @@ def build_projects():
         "terms": env.get_template("project/terms.html"),
         "changelog": env.get_template("project/changelog.html"),
         "get_login": env.get_template("project/get-login.html"),
+        "download": env.get_template("project/download.html"),
     }
 
     current_year = datetime.now().year
@@ -203,6 +369,16 @@ def build_projects():
             "latest": "Latest ✨",
             "testimonials": "What Our Users Say",
             "download": "Download",
+            "dl_title": "Download {name}",
+            "dl_redirecting": "Taking you to the right store for your device…",
+            "dl_choose": "Choose your platform:",
+            "dl_ios": "App Store",
+            "dl_ios_sub": "iPhone & iPad",
+            "dl_android": "Google Play",
+            "dl_android_sub": "Android",
+            "dl_web": "Web app",
+            "dl_web_sub": "Windows · Mac · any browser",
+            "dl_learn_more": "Learn more about {name}",
         },
         "ar": {
             "back_to_portfolio": "العودة للمعرض →",
@@ -229,6 +405,16 @@ def build_projects():
             "latest": "أحدث إصدار ✨",
             "testimonials": "آراء المستخدمين",
             "download": "تحميل",
+            "dl_title": "حمّل تطبيق {name}",
+            "dl_redirecting": "جاري تحويلك للمتجر المناسب لجهازك…",
+            "dl_choose": "اختر المتجر المناسب لجهازك:",
+            "dl_ios": "App Store",
+            "dl_ios_sub": "آيفون وآيباد",
+            "dl_android": "Google Play",
+            "dl_android_sub": "أندرويد",
+            "dl_web": "نسخة الويب",
+            "dl_web_sub": "ويندوز · ماك · أي متصفح",
+            "dl_learn_more": "تعرّف أكثر على {name}",
         },
     }
 
@@ -316,8 +502,13 @@ def build_projects():
                 "link": make_link,
                 "home_url": home_url,
                 "hero_stats": visible_list(localized.get("hero", {}).get("stats", [])),
+                "app_store_id": app_store_id(project.get("links", {}).get("appStore")),
                 **localized,
             }
+
+            base_context["structured_data"] = build_structured_data(
+                localized, project, localized["site"], page_url(), lang, include_faq=False
+            )
 
             # Index page
             index_context = {
@@ -346,6 +537,9 @@ def build_projects():
                 "has_team_section": has_visible_content(localized.get("sections", {}).get("team")),
                 "has_project_cta": has_visible_content(localized.get("sections", {}).get("cta")),
             }
+            index_context["structured_data"] = build_structured_data(
+                localized, project, localized["site"], page_url(), lang, include_faq=True
+            )
             html = templates["index"].render(index_context)
             output = Path(project_id) / "index.html" if lang == "en" else Path("ar") / project_id / "index.html"
             output.parent.mkdir(parents=True, exist_ok=True)
@@ -430,6 +624,39 @@ def build_projects():
                 output.parent.mkdir(parents=True, exist_ok=True)
                 output.write_text(html, encoding="utf-8")
                 print(f"Generated: {output}")
+
+            # Smart download page: redirects to App Store / Google Play / web app by device
+            if project.get("download_page"):
+                labels = nav_labels[lang]
+                name = localized.get("brand", {}).get("name", project_id)
+                download_context = {
+                    **base_context,
+                    "page_path": page_url("download/"),
+                    "page_url": page_url("download/"),
+                    "landing_url": page_url(),
+                    "en_url": en_url("download/"),
+                    "ar_url": ar_url("download/"),
+                    "dl": {
+                        "title": labels["dl_title"].format(name=name),
+                        "redirecting": labels["dl_redirecting"],
+                        "choose": labels["dl_choose"],
+                        "ios": labels["dl_ios"],
+                        "android": labels["dl_android"],
+                        "web": labels["dl_web"],
+                        "ios_sub": labels["dl_ios_sub"],
+                        "android_sub": labels["dl_android_sub"],
+                        "web_sub": labels["dl_web_sub"],
+                        "learn_more": labels["dl_learn_more"].format(name=name),
+                    },
+                }
+                html = templates["download"].render(download_context)
+                output = Path(project_id) / "download" / "index.html" if lang == "en" else Path("ar") / project_id / "download" / "index.html"
+                output.parent.mkdir(parents=True, exist_ok=True)
+                output.write_text(html, encoding="utf-8")
+                print(f"Generated: {output}")
+
+    # Summary for AI assistants / agents (llms.txt convention)
+    generate_llms_txt(projects, site.get("url", ""))
 
     # Create redirects for legacy privacy URLs
     create_legacy_redirects()

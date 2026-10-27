@@ -48,6 +48,7 @@
   ],
   "category": "business",
   "featured": true,
+  "order": 2,
   "technologies": [
     "Flutter",
     "Dart",
