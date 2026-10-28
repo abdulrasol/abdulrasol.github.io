@@ -392,7 +392,7 @@
       {% if purchase_form.subtitle %}<p class="section-subtitle">{{ purchase_form.subtitle }}</p>{% endif %}
     </div>
 
-    <form class="purchase-form reveal" id="purchase-form" action="{{ contact_form_endpoint }}" method="POST">
+    <form class="purchase-form reveal" id="purchase-request-form" action="{{ contact_form_endpoint }}" method="POST">
       <input type="hidden" name="access_key" value="{{ contact_form_access_key }}">
       <input type="hidden" name="subject" value="{{ purchase_form.title }} - {{ brand.name }}">
       <input type="checkbox" name="botcheck" class="hidden" style="display: none;">

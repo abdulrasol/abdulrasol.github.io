@@ -19,7 +19,7 @@
   const themeToggle = document.getElementById('theme-toggle');
   const mobileToggle = document.getElementById('mobile-menu-toggle');
   const mobileNav = document.getElementById('mobile-nav');
-  const purchaseForm = document.getElementById('purchase-form');
+  const purchaseForm = document.getElementById('purchase-request-form');
   const langSwitches = Array.from(document.querySelectorAll('[data-lang-switch]'));
 
   /* Theme handling */
