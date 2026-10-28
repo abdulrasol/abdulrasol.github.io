@@ -418,7 +418,8 @@
           <textarea id="{{ field_name }}" name="{{ field_name }}" rows="4" {% if field_required %}required{% endif %}></textarea>
           {% elif field_type == 'select' %}
           <select id="{{ field_name }}" name="{{ field_name }}" {% if field_required %}required{% endif %}>
-            {% if field is string and purchase_form.plans %}
+            {# plans come from purchase_form.plans for the plan field (string or object field) #}
+            {% if field_name == 'plan' and purchase_form.plans %}
               {% for option in purchase_form.plans %}
               <option value="{{ option.value }}">{{ option.label }}</option>
               {% endfor %}

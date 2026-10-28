@@ -94,9 +94,9 @@
           {
             "icon": "📦",
             "title_ar": "مخزون وجرد",
-            "desc_ar": "بطاقة حركة لكل صنف، جرد بالكميات الفعلية وإظهار الفروق، متوسط تكلفة مرجّح، وتنبيهات انخفاض المخزون.",
+            "desc_ar": "بطاقة حركة لكل صنف، جرد بالكميات الفعلية (كرتون + قطع) وإظهار الفروق، متوسط تكلفة مرجّح، وتنبيهات انخفاض المخزون.",
             "title_en": "Inventory & stock-take",
-            "desc_en": "A movement card per item, physical counts with variances, weighted-average cost and low-stock alerts."
+            "desc_en": "A movement card per item, physical counts in cartons + pieces with variances, weighted-average cost and low-stock alerts."
           }
         ]
       },
@@ -135,9 +135,9 @@
           {
             "icon": "↩️",
             "title_ar": "مرتجعات موثّقة",
-            "desc_ar": "مرتجع مرتبط بالفاتورة بكميات مسموحة وسبب وتسوية، ينعكس على المخزون وحساب العميل.",
+            "desc_ar": "مرتجع مرتبط بالفاتورة بكميات مسموحة وسبب وتسوية (بالقطعة أو بالكرتون)، ينعكس على المخزون وحساب العميل.",
             "title_en": "Documented returns",
-            "desc_en": "Invoice-linked returns with allowed quantities, reason and settlement, reflected in stock and customer balance."
+            "desc_en": "Invoice-linked returns (by piece or by carton) with allowed quantities, reason and settlement, reflected in stock and customer balance."
           }
         ]
       },
@@ -189,9 +189,9 @@
           {
             "icon": "🏷️",
             "title_ar": "باركود وطباعة",
-            "desc_ar": "توليد ملصقات باركود وإيصالات وفواتير PDF وطابعات حرارية.",
+            "desc_ar": "توليد ملصقات باركود لكل قطعة ولكل كرتون، وإيصالات وفواتير PDF وطابعات حرارية.",
             "title_en": "Barcodes & printing",
-            "desc_en": "Barcode labels, receipts, PDF invoices and thermal printers."
+            "desc_en": "Barcode labels per piece and per carton, receipts, PDF invoices and thermal printers."
           }
         ]
       }
