@@ -66,9 +66,23 @@
           {
             "icon": "🛒",
             "title_ar": "نقطة بيع سريعة",
-            "desc_ar": "سلال متعددة، بحث وباركود بالكاميرا، وتحصيل نقدي أو إلكتروني أو آجل بخطوات قليلة.",
+            "desc_ar": "سلال متعددة، بحث وباركود بالكاميرا أو الجهاز، وأزرار دفع نقدي أو إلكتروني مباشرة، مع إخفاء إحدى الطريقتين إن لم تستخدمها.",
             "title_en": "Fast point of sale",
-            "desc_en": "Multiple carts, search and camera barcode scanning, and cash, electronic or credit payment in few steps."
+            "desc_en": "Multiple carts, search and camera or scanner barcodes, and direct cash / electronic pay buttons — hide either method if you don't use it."
+          },
+          {
+            "icon": "🖥️",
+            "title_ar": "كاشير للحاسوب: كيبورد وماوس ولمس",
+            "desc_ar": "شاشة من لوحين: المنتجات والأكثر مبيعاً بجانب جدول السلة، اختصارات (F2 كاش، F3 إلكتروني، Space لكتابة الكمية…) وأزرار كبيرة للمس.",
+            "title_en": "Desktop cashier: keyboard, mouse & touch",
+            "desc_en": "Two-pane screen: products and top sellers beside the cart table, shortcuts (F2 cash, F3 electronic, Space to type a quantity…) and large touch targets."
+          },
+          {
+            "icon": "🧮",
+            "title_ar": "جبر الكسور بدون تعديل السعر",
+            "desc_ar": "الكاشير لا يغيّر الأسعار؛ يقرّب الإجمالي للأسفل إلى 250 أو 500 أو 1000 ويُسجَّل الفرق خصماً على الفاتورة.",
+            "title_en": "Rounding without editing prices",
+            "desc_en": "Cashiers can't change prices; they round the total down to 250, 500 or 1000 and the difference is recorded as an invoice discount."
           },
           {
             "icon": "🧾",
@@ -90,6 +104,20 @@
         "title_en": "Inventory & Purchasing",
         "title_ar": "المخزون والمشتريات",
         "items": [
+          {
+            "icon": "📦",
+            "title_ar": "بيع وشراء بالكرتون أو القطعة",
+            "desc_ar": "عرّف تعبئة لكل صنف (كرتون، علبة…) بسعر وباركود، وبِع أو استلم بالتعبئة أو بالقطعة؛ المخزون والتكلفة يبقيان بالقطعة.",
+            "title_en": "Sell and buy by carton or piece",
+            "desc_en": "Define packaging per item (carton, pack…) with its own price and barcode, then sell or receive by packaging or by piece; stock and cost stay in pieces."
+          },
+          {
+            "icon": "🏷️",
+            "title_ar": "أسعار مفرد وجملة",
+            "desc_ar": "سعر جملة اختياري لكل قطعة أو تعبئة، وتبديل بين مفرد وجملة لكل فاتورة مع إعادة تسعير السلة فوراً.",
+            "title_en": "Retail & wholesale prices",
+            "desc_en": "Optional wholesale price per piece or packaging, and a retail/wholesale switch per invoice that reprices the cart instantly."
+          },
           {
             "icon": "⏳",
             "title_ar": "متابعة الصلاحية",
