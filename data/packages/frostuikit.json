@@ -10,5 +10,10 @@
   "demo_url": "/packages/frostuikit/demo/",
   "logo": "/assets/packages/frostuikit/dart.png",
   "content_file": "data/packages/frostuikit.md",
+  "doc_sources": [
+    "FROSTED_UI_KIT.md",
+    "FROSTED_THEME.md",
+    "GLASS_SURFACES.md"
+  ],
   "screenshots": []
 }

@@ -46,7 +46,6 @@ jobs:
           rm -rf ../../packages/frostuikit/demo/*
           cp -R build/web/* ../../packages/frostuikit/demo/
           cd ../..
-          rm -rf _frost_kit
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -59,6 +58,9 @@ jobs:
 
       - name: Build site
         run: python build-all.py
+
+      - name: Cleanup temporary checkout
+        run: rm -rf _frost_kit
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
