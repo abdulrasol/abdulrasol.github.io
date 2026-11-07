@@ -145,6 +145,25 @@ visual review. Run `flutter test` to compare baselines and review image changes
 before intentionally regenerating them with `--update-goldens`.
 A comprehensive set of action buttons supporting 4 visual style variants (`AppButtonStyle`). It also includes `AppFloatingActionButton` which acts as a versatile FAB (icon only, text only, or extended icon + text).
 
+Button meaning is independent from appearance. Use
+`FrostedActionRole.primary`, `secondary`, or `destructive` on `AppButton`, or
+the matching `FrostedButton` constructor. Both examples retain destructive
+error colors:
+
+```dart
+FrostedButton.destructive(label: 'Delete', onPressed: deleteItem)
+FrostedButton.destructive(
+  label: 'Delete',
+  style: AppButtonStyle.glass,
+  onPressed: deleteItem,
+)
+```
+
+Resolution order is: local color and border overrides, then the corresponding
+action colors in `FrostedThemeData`, then Material `ColorScheme`. Disabled
+content/surfaces use `onSurface`; focus, hover, and pressed overlays use the
+resolved role accent. Existing buttons default to the primary role.
+
 #### Supported Style Variants (`AppButtonStyle`):
 - `AppButtonStyle.glass`: Translucent glassmorphic button with backdrop blur.
 - `AppButtonStyle.colored`: Solid primary accent filled button.
@@ -193,6 +212,7 @@ circleButton(
 | `title` | `String?` | `null` | Button label text string. |
 | `icon` | `IconData?` | `null` | Icon displayed beside title label. |
 | `style` | `AppButtonStyle` | `glass` | Visual style variant choice. |
+| `role` | `FrostedActionRole` | `primary` | Semantic action role and color family. |
 | `isLoading` | `bool` | `false` | Displays progress indicator when true. |
 | `isDisabled` | `bool` | `false` | Disables touch interactions and dims colors. |
 | `onPressed` | `VoidCallback?` | `null` | Tap callback handler. |
@@ -752,6 +772,15 @@ use motionDuration for text and 1.25 times that duration for sliding feedback.
 A filled primary button still uses its ColorScheme primary. Local style
 overrides remain available; fixed functional measurements such as drag handles
 and icon sizes intentionally remain separate from design tokens.
+
+Action roles can be customized independently from button appearance with
+`primaryActionColor`/`onPrimaryActionColor`,
+`secondaryActionColor`/`onSecondaryActionColor`, and
+`destructiveActionColor`/`onDestructiveActionColor`. Null role colors inherit
+the matching primary, secondary, or error pair from Material `ColorScheme`.
+The resolution order is local widget color, role token, then ColorScheme.
+Disabled colors derive from `onSurface`; interaction overlays derive from the
+resolved role accent.
 
 Component blur defaults preserve existing appearances: inputBlur 10, tabsBlur
 10, sheetBlur 15, navigationBlur 20. For a lighter recipe:

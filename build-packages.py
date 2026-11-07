@@ -148,6 +148,7 @@ def build_packages():
             auto_version = extract_version_from_pubspec(pkg_dir)
             if auto_version:
                 data["version"] = auto_version
+                print(f"[{package_id}] Synced version from pubspec.yaml: v{auto_version}")
                 
             preferred_sources = data.get("doc_sources")
             assembled_md = assemble_markdown_from_docs(pkg_dir, preferred_sources)
@@ -155,6 +156,9 @@ def build_packages():
                 print(f"[{package_id}] Assembled docs from all files in {pkg_dir}/doc")
                 if "content_file" in data:
                     Path(data["content_file"]).write_text(assembled_md, encoding="utf-8")
+            
+            # Persist json changes so disk file stays up to date
+            path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         
         md_content = ""
         md_toc = ""

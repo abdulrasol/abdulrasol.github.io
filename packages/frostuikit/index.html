@@ -1039,6 +1039,21 @@ RTL, tooltips and disabled state. Light/dark geometry baselines are stored in
 visual review. Run <code>flutter test</code> to compare baselines and review image changes
 before intentionally regenerating them with <code>--update-goldens</code>.
 A comprehensive set of action buttons supporting 4 visual style variants (<code>AppButtonStyle</code>). It also includes <code>AppFloatingActionButton</code> which acts as a versatile FAB (icon only, text only, or extended icon + text).</p>
+<p>Button meaning is independent from appearance. Use
+<code>FrostedActionRole.primary</code>, <code>secondary</code>, or <code>destructive</code> on <code>AppButton</code>, or
+the matching <code>FrostedButton</code> constructor. Both examples retain destructive
+error colors:</p>
+<pre><code class="language-dart">FrostedButton.destructive(label: 'Delete', onPressed: deleteItem)
+FrostedButton.destructive(
+  label: 'Delete',
+  style: AppButtonStyle.glass,
+  onPressed: deleteItem,
+)
+</code></pre>
+<p>Resolution order is: local color and border overrides, then the corresponding
+action colors in <code>FrostedThemeData</code>, then Material <code>ColorScheme</code>. Disabled
+content/surfaces use <code>onSurface</code>; focus, hover, and pressed overlays use the
+resolved role accent. Existing buttons default to the primary role.</p>
 <h4 id="supported-style-variants-appbuttonstyle">Supported Style Variants (<code>AppButtonStyle</code>):</h4>
 <ul>
 <li><code>AppButtonStyle.glass</code>: Translucent glassmorphic button with backdrop blur.</li>
@@ -1105,6 +1120,12 @@ The existing <code>glass</code> style remains the default.</p>
 <td style="text-align: left;"><code>AppButtonStyle</code></td>
 <td style="text-align: left;"><code>glass</code></td>
 <td style="text-align: left;">Visual style variant choice.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>role</code></td>
+<td style="text-align: left;"><code>FrostedActionRole</code></td>
+<td style="text-align: left;"><code>primary</code></td>
+<td style="text-align: left;">Semantic action role and color family.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>isLoading</code></td>
@@ -1939,6 +1960,14 @@ use motionDuration for text and 1.25 times that duration for sliding feedback.
 A filled primary button still uses its ColorScheme primary. Local style
 overrides remain available; fixed functional measurements such as drag handles
 and icon sizes intentionally remain separate from design tokens.</p>
+<p>Action roles can be customized independently from button appearance with
+<code>primaryActionColor</code>/<code>onPrimaryActionColor</code>,
+<code>secondaryActionColor</code>/<code>onSecondaryActionColor</code>, and
+<code>destructiveActionColor</code>/<code>onDestructiveActionColor</code>. Null role colors inherit
+the matching primary, secondary, or error pair from Material <code>ColorScheme</code>.
+The resolution order is local widget color, role token, then ColorScheme.
+Disabled colors derive from <code>onSurface</code>; interaction overlays derive from the
+resolved role accent.</p>
 <p>Component blur defaults preserve existing appearances: inputBlur 10, tabsBlur
 10, sheetBlur 15, navigationBlur 20. For a lighter recipe:</p>
 <pre><code class="language-dart">const FrostedThemeData(
