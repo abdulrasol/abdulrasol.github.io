@@ -406,6 +406,95 @@
         font-size: 1rem;
       }
     }
+
+    /* Demo Preview Card & Responsive Mobile Frame */
+    .demo-preview-card {
+      margin: 1.5rem 0 2rem 0;
+      background: var(--sidebar-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .demo-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(8px);
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .demo-stage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.25rem 1rem;
+      background: radial-gradient(circle at center, #1e293b 0%, #0b1120 100%);
+      transition: all 0.3s ease;
+    }
+    .demo-phone-wrapper {
+      width: 320px;
+      max-width: 100%;
+      height: 560px;
+      border-radius: 36px;
+      background: #000;
+      border: 6px solid #334155;
+      box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .demo-phone-notch {
+      position: absolute;
+      top: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 65px;
+      height: 12px;
+      background: #000;
+      border-radius: 8px;
+      z-index: 10;
+      pointer-events: none;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    }
+    .demo-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      background: #000;
+    }
+
+    @media (max-width: 768px) {
+      .demo-preview-card {
+        margin: 1.25rem 0;
+        border-radius: 12px;
+      }
+      .demo-header {
+        padding: 0.6rem 0.85rem;
+      }
+      .demo-stage {
+        padding: 0.85rem 0.5rem;
+      }
+      .demo-phone-wrapper {
+        width: 100%;
+        max-width: 310px;
+        height: 500px;
+        border-radius: 28px;
+        border-width: 5px;
+      }
+    }
+    @media (max-width: 480px) {
+      .demo-phone-wrapper {
+        max-width: 100%;
+        height: 480px;
+        border-radius: 22px;
+        border-width: 4px;
+      }
+    }
   </style>
   <link rel="stylesheet" href="/static/css/brand.css?v=2">
 </head>
@@ -450,24 +539,49 @@
       <p class="subtitle">{{ description }}</p>
 
       {% if demo_url %}
-      <div id="live-preview-section" class="demo-preview-card" style="margin: 2rem 0; padding: 1.5rem; background: var(--sidebar-bg); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.75rem;">
+      <div id="live-preview-section" class="demo-preview-card">
+        <div class="demo-header">
           <div style="display: flex; align-items: center; gap: 0.6rem;">
-            <i class="fas fa-mobile-screen" style="color: var(--primary); font-size: 1.2rem;"></i>
-            <strong style="font-size: 1.05rem;">Live Interactive Preview</strong>
-            <span style="font-size: 0.75rem; background: rgba(54, 173, 163, 0.12); color: var(--primary); padding: 3px 10px; border-radius: 12px; font-weight: 600;">Flutter Web</span>
+            <i class="fas fa-mobile-screen" style="color: var(--primary); font-size: 1.15rem;"></i>
+            <strong style="font-size: 0.95rem;">Interactive Preview</strong>
+            <span style="font-size: 0.75rem; background: rgba(54, 173, 163, 0.12); color: var(--primary); padding: 2px 8px; border-radius: 12px; font-weight: 600;">Flutter Web</span>
           </div>
-          <div style="display: flex; gap: 0.5rem;">
-            <button onclick="const f = document.getElementById('flutter-demo-iframe'); f.src = f.src;" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.85rem; cursor: pointer;" title="Reload Demo"><i class="fas fa-redo-alt"></i> Reload</button>
-            <a href="{{ demo_url }}" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.85rem;"><i class="fas fa-external-link-alt"></i> Fullscreen</a>
+          <div style="display: flex; gap: 0.4rem; align-items: center;">
+            <button onclick="toggleDemoStage()" class="btn btn-outline" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; cursor: pointer;" title="Toggle View">
+              <i class="fas fa-chevron-up" id="toggleDemoIcon"></i>
+              <span id="toggleDemoText" style="margin-left: 3px;">Hide</span>
+            </button>
+            <button onclick="const f = document.getElementById('flutter-demo-iframe'); f.src = f.src;" class="btn btn-outline" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; cursor: pointer;" title="Reload Demo">
+              <i class="fas fa-redo-alt"></i>
+            </button>
+            <a href="{{ demo_url }}" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">
+              <i class="fas fa-external-link-alt"></i> Fullscreen
+            </a>
           </div>
         </div>
-        <div style="display: flex; justify-content: center; background: #0f172a; border-radius: 24px; padding: 2rem 1rem;">
-          <div style="width: 380px; max-width: 100%; height: 720px; border-radius: 36px; overflow: hidden; border: 8px solid #334155; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); position: relative; background: #000;">
-            <iframe id="flutter-demo-iframe" src="{{ demo_url }}" style="width: 100%; height: 100%; border: none; display: block;" title="Frosted UI Kit Live Demo" loading="lazy"></iframe>
+        <div id="demo-stage-container" class="demo-stage">
+          <div class="demo-phone-wrapper">
+            <div class="demo-phone-notch"></div>
+            <iframe id="flutter-demo-iframe" class="demo-iframe" src="{{ demo_url }}" title="Frosted UI Kit Live Demo" loading="lazy"></iframe>
           </div>
         </div>
       </div>
+      <script>
+        function toggleDemoStage() {
+          const stage = document.getElementById('demo-stage-container');
+          const icon = document.getElementById('toggleDemoIcon');
+          const text = document.getElementById('toggleDemoText');
+          if (stage.style.display === 'none') {
+            stage.style.display = 'flex';
+            icon.className = 'fas fa-chevron-up';
+            text.innerText = 'Hide';
+          } else {
+            stage.style.display = 'none';
+            icon.className = 'fas fa-chevron-down';
+            text.innerText = 'Show';
+          }
+        }
+      </script>
       {% endif %}
 
       {% if screenshots and screenshots|length > 0 %}
