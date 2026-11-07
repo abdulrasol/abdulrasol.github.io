@@ -378,6 +378,8 @@ def build_projects():
             "dl_android_sub": "Android",
             "dl_web": "Web app",
             "dl_web_sub": "Windows · Mac · any browser",
+            "dl_desktop": "Latest release",
+            "dl_desktop_sub": "Windows & Linux",
             "dl_learn_more": "Learn more about {name}",
         },
         "ar": {
@@ -414,6 +416,8 @@ def build_projects():
             "dl_android_sub": "أندرويد",
             "dl_web": "نسخة الويب",
             "dl_web_sub": "ويندوز · ماك · أي متصفح",
+            "dl_desktop": "أحدث إصدار",
+            "dl_desktop_sub": "Windows وLinux",
             "dl_learn_more": "تعرّف أكثر على {name}",
         },
     }
@@ -646,6 +650,8 @@ def build_projects():
                         "ios_sub": labels["dl_ios_sub"],
                         "android_sub": labels["dl_android_sub"],
                         "web_sub": labels["dl_web_sub"],
+                        "desktop": labels["dl_desktop"],
+                        "desktop_sub": labels["dl_desktop_sub"],
                         "learn_more": labels["dl_learn_more"].format(name=name),
                     },
                 }

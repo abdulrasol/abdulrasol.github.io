@@ -26,6 +26,7 @@
   "links": {
     "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager",
     "appStore": null,
+    "desktopRelease": "https://github.com/abdulrasol/baytraq_sales_manager/releases/latest",
     "github": "https://github.com/abdulrasol/baytraq_sales_manager",
     "facebook": null,
     "instagram": null,
@@ -47,6 +48,7 @@
     "iOS"
   ],
   "category": "business",
+  "download_page": true,
   "featured": true,
   "order": 2,
   "technologies": [
@@ -97,6 +99,13 @@
             "desc_ar": "بطاقة حركة لكل صنف، جرد بالكميات الفعلية (كرتون + قطع) وإظهار الفروق، متوسط تكلفة مرجّح، وتنبيهات انخفاض المخزون.",
             "title_en": "Inventory & stock-take",
             "desc_en": "A movement card per item, physical counts in cartons + pieces with variances, weighted-average cost and low-stock alerts."
+          },
+          {
+            "icon": "🔄",
+            "title_en": "Protected sync review",
+            "desc_en": "When two devices change the same record, Baytraq preserves both copies for review instead of silently replacing a local edit.",
+            "title_ar": "مراجعة مزامنة تحمي التعديلات",
+            "desc_ar": "عند تعديل جهازين للسجل نفسه، يحتفظ Baytraq بالنسختين للمراجعة بدل استبدال التعديل المحلي بصمت."
           }
         ]
       },

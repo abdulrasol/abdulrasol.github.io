@@ -106,6 +106,7 @@
       var LINKS = {
         ios: "https://apps.apple.com/us/app/watt-solar-system-calculator/id6820459639",
         android: "https://play.google.com/store/apps/details?id=io.github.abdulrasol.watt",
+        desktop: "",
         web: "https://watt.subultech.top/"
       };
 
@@ -115,6 +116,8 @@
         if (/iphone|ipad|ipod/i.test(ua)) return 'ios';
         // iPadOS 13+ reports itself as a Mac; a touch screen gives it away.
         if (/macintosh/i.test(ua) && navigator.maxTouchPoints > 1) return 'ios';
+        if (/macintosh/i.test(ua)) return 'ios';
+        if (/windows|linux/i.test(ua)) return 'desktop';
         return 'web';
       }
 
@@ -132,9 +135,8 @@
       var stay = /[?&]stay(=|&|$)/.test(location.search);
       var status = document.getElementById('status');
 
-      // Only phones and tablets are redirected. On a computer the visitor picks
-      // (web app, or a store link to send to their phone).
-      if (stay || isBot || platform === 'web') {
+      // Unknown devices remain on this page. Known platforms go to their store.
+      if (stay || isBot || platform === 'web' || !LINKS[platform]) {
         status.textContent = "Choose your platform:" + (stay ? ' (' + platform + ')' : '');
         return;
       }

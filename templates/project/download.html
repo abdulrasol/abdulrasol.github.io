@@ -112,6 +112,14 @@
         <span class="label"><small>{{ dl.web_sub }}</small><strong>{{ dl.web }}</strong></span>
       </a>
       {% endif %}
+      {% if links.desktopRelease %}
+      <a class="btn" id="btn-desktop" href="{{ links.desktopRelease }}" data-goatcounter-click="download-desktop-{{ id }}">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>
+        </span>
+        <span class="label"><small>{{ dl.desktop_sub }}</small><strong>{{ dl.desktop }}</strong></span>
+      </a>
+      {% endif %}
     </div>
 
     <a class="back" href="{{ landing_url }}">{{ dl.learn_more }}</a>
@@ -122,6 +130,7 @@
       var LINKS = {
         ios: {{ (links.appStore or '') | tojson }},
         android: {{ (links.googlePlay or '') | tojson }},
+        desktop: {{ (links.desktopRelease or '') | tojson }},
         web: {{ (links.webApp or landing_url) | tojson }}
       };
 
@@ -131,6 +140,8 @@
         if (/iphone|ipad|ipod/i.test(ua)) return 'ios';
         // iPadOS 13+ reports itself as a Mac; a touch screen gives it away.
         if (/macintosh/i.test(ua) && navigator.maxTouchPoints > 1) return 'ios';
+        if (/macintosh/i.test(ua)) return 'ios';
+        if (/windows|linux/i.test(ua)) return 'desktop';
         return 'web';
       }
 
@@ -148,9 +159,8 @@
       var stay = /[?&]stay(=|&|$)/.test(location.search);
       var status = document.getElementById('status');
 
-      // Only phones and tablets are redirected. On a computer the visitor picks
-      // (web app, or a store link to send to their phone).
-      if (stay || isBot || platform === 'web') {
+      // Unknown devices remain on this page. Known platforms go to their store.
+      if (stay || isBot || platform === 'web' || !LINKS[platform]) {
         status.textContent = {{ dl.choose | tojson }}{% raw %} + (stay ? ' (' + platform + ')' : ''){% endraw %};
         return;
       }

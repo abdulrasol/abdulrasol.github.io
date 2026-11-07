@@ -7,6 +7,7 @@
   "version": "1.0.0",
   "github_url": "https://github.com/abdulrasol/frosted_ui_kit",
   "pub_url": "https://pub.dev/packages/frosted_ui_kit",
+  "demo_url": "/packages/frostuikit/demo/",
   "logo": "/assets/packages/frostuikit/dart.png",
   "content_file": "data/packages/frostuikit.md",
   "screenshots": []

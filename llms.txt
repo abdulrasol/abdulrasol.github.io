@@ -50,3 +50,43 @@ Only if you allow it, to fetch the sun at your site. You can also pick a place o
 
 **How do I delete my account?**
 From your account page inside the app, or by following the steps on the account deletion page.
+
+## Baytraq (Baytraq)
+
+Manage sales, inventory, invoices, customer and supplier accounts and expenses in one app, with LAN or cloud device linking.
+
+تطبيق لإدارة المبيعات والمخزون والفواتير وحسابات العملاء والموردين والمصاريف، مع ربط أجهزة عبر LAN أو السحابة.
+
+- Website: https://subultech.top/baytraq/
+- Arabic website: https://subultech.top/ar/baytraq/
+- Download (auto-detects device): https://subultech.top/baytraq/download/
+- Android (Google Play): https://play.google.com/store/apps/details?id=io.github.abdulrasol.baytraqsalesmanager
+- Support: info@subultech.top
+- Price: free
+- Platforms: Windows, macOS, Linux, Android, iOS
+
+### FAQ
+
+**Is it right for a one-person business?**
+Yes — selling, invoices, stock, customer accounts and expenses all work without a team.
+
+**Do I need internet all the time?**
+Core operations run locally. Internet is only needed for cloud sync, activation and update checks.
+
+**Where is my data stored?**
+On your device by default. It goes to the cloud only if you enable the Cloud plan. See the Privacy Policy.
+
+**Does it charge bank cards?**
+Electronic payment entries only record how a sale was paid; there is no payment-gateway or bank-terminal integration.
+
+**Is it a certified accounting or tax system?**
+No. It provides operational accounts and reports and does not claim tax certification or government e-invoicing compliance.
+
+**Can it read a purchase invoice photo automatically?**
+That feature is coming and currently disabled. Available now: manual entry, scanning and CSV import.
+
+**Which platforms does it run on?**
+Android, iOS, Windows, macOS and Linux. Some features differ by platform (e.g. LAN linking in browsers).
+
+**How many languages?**
+16 registered languages including Arabic and English; translation completeness varies by language.

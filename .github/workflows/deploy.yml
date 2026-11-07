@@ -5,6 +5,8 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
+  repository_dispatch:
+    types: [update-frosted-demo]
   workflow_dispatch:
 
 permissions:
@@ -23,6 +25,29 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Checkout Frosted UI Kit for Live Demo
+        uses: actions/checkout@v4
+        with:
+          repository: 'abdulrasol/frosted_ui_kit'
+          path: '_frost_kit'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Build Flutter Web Demo
+        run: |
+          cd _frost_kit/example
+          flutter pub get
+          flutter build web --release --base-href "/packages/frostuikit/demo/"
+          mkdir -p ../../packages/frostuikit/demo
+          rm -rf ../../packages/frostuikit/demo/*
+          cp -R build/web/* ../../packages/frostuikit/demo/
+          cd ../..
+          rm -rf _frost_kit
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -37,11 +62,11 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/master' || github.event_name == 'repository_dispatch' || github.event_name == 'workflow_dispatch'
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/master' || github.event_name == 'repository_dispatch' || github.event_name == 'workflow_dispatch'
         with:
           path: "."
 
@@ -51,7 +76,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master' || github.event_name == 'repository_dispatch' || github.event_name == 'workflow_dispatch'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
