@@ -15,17 +15,17 @@
   <meta property="og:description" content="A modern, highly-customizable Flutter UI kit inspired by Apple&#39;s Liquid Glass aesthetic and Telegram&#39;s modern Android redesign.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://subultech.top">
-  <meta property="og:image" content="https://subultech.top/assets/packages/frostuikit/dart.png">
+  <meta property="og:image" content="https://subultech.top/assets/packages/frostuikit/frosted_ui_kit_logo.png">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Frosted UI Kit Documentation">
   <meta name="twitter:description" content="A modern, highly-customizable Flutter UI kit inspired by Apple&#39;s Liquid Glass aesthetic and Telegram&#39;s modern Android redesign.">
-  <meta name="twitter:image" content="https://subultech.top/assets/packages/frostuikit/dart.png">
+  <meta name="twitter:image" content="https://subultech.top/assets/packages/frostuikit/frosted_ui_kit_logo.png">
 
   <!-- Favicon / Tab Icon -->
-  <link rel="icon" type="image/png" href="/assets/packages/frostuikit/dart.png">
-  <link rel="apple-touch-icon" href="/assets/packages/frostuikit/dart.png">
+  <link rel="icon" type="image/png" href="/assets/packages/frostuikit/frosted_ui_kit_logo.png">
+  <link rel="apple-touch-icon" href="/assets/packages/frostuikit/frosted_ui_kit_logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -571,78 +571,33 @@
 </ul>
 </li>
 <li><a href="#tour-onboarding-support-widget-keys">🔑 Tour &amp; Onboarding Support (Widget Keys)</a></li>
+<li><a href="#quick-start">🚀 Quick Start</a><ul>
+<li><a href="#1-install-the-package">1. Install the package</a></li>
+<li><a href="#2-copy-paste-example">2. Copy-paste example</a></li>
+<li><a href="#3-configure-the-theme">3. Configure the theme</a></li>
+<li><a href="#4-configure-localization">4. Configure localization</a></li>
+<li><a href="#5-choose-the-right-component">5. Choose the right component</a></li>
+<li><a href="#6-migration-from-older-apis">6. Migration from older APIs</a></li>
+</ul>
+</li>
 <li><a href="#central-theme-tokens-frostedthemedata">🎨 Central Theme Tokens (FrostedThemeData)</a></li>
 <li><a href="#shared-glass-rendering-architecture">🔬 Shared Glass Rendering Architecture</a></li>
-<li><a href="#performance-analysis-benchmarks">📊 Performance Analysis &amp; Benchmarks</a><ul>
-<li><a href="#110">✅ حالة التنفيذ — الإصدار 1.1.0</a></li>
-<li><a href="#1">1. الخلاصة التنفيذية</a></li>
-<li><a href="#2">2. المصدر الحقيقي للكلفة — كيف تعمل الحزمة داخلياً</a><ul>
-<li><a href="#21">2.1 نقطة الاختناق المركزية</a></li>
-<li><a href="#22-backdropfilter">2.2 لماذا BackdropFilter مكلف تحديداً؟</a></li>
+<li><a href="#adaptive-dialogs-and-bottom-sheets">Adaptive Dialogs and Bottom Sheets</a><ul>
+<li><a href="#layout-behavior">Layout behavior</a></li>
+<li><a href="#dialog-usage">Dialog usage</a></li>
+<li><a href="#bottom-sheet-usage">Bottom-sheet usage</a></li>
+<li><a href="#performance-on-lower-end-devices">Performance on lower-end devices</a></li>
+<li><a href="#compatibility">Compatibility</a></li>
+<li><a href="#verification">Verification</a></li>
 </ul>
 </li>
-<li><a href="#3">3. عدّ الطبقات الضبابية لكل شاشة (قياس فعلي من الكود)</a><ul>
-<li><a href="#registerformwidget-authscreen">شاشة التسجيل RegisterFormWidget + AuthScreen</a></li>
-<li><a href="#dashboard">شاشة تطبيقية نموذجية (Dashboard)</a></li>
-</ul>
-</li>
-<li><a href="#4">4. متى تُدفع الكلفة؟ — محفّزات إعادة الرسم (الأخطر)</a><ul>
-<li><a href="#41-appbar-navbar-base_widgetdart53-77">🔴 4.1 التمرير خلف الـ AppBar والـ NavBar — base_widget.dart:53-77</a></li>
-<li><a href="#42-navigation_bardart170-240">🔴 4.2 أنيميشن داخل الطبقة المضببة — navigation_bar.dart:170-240</a></li>
-<li><a href="#43-lottie">🔴 4.3 Lottie داخل الزجاج — الأسوأ في المكتبة</a></li>
-<li><a href="#44-inputsdart579">🟡 4.4 الكتابة في حقول النص — inputs.dart:579</a></li>
-<li><a href="#45-repaintboundary">🟡 4.5 غياب RepaintBoundary بالكامل</a></li>
-</ul>
-</li>
-<li><a href="#5-gpu">5. الذاكرة و GPU</a><ul>
-<li><a href="#51">5.1 لا يوجد تسريب ذاكرة ✅</a></li>
-<li><a href="#52-gpu">5.2 ذاكرة GPU المؤقتة</a></li>
-</ul>
-</li>
-<li><a href="#6-cpu-dart">6. الكلفة على CPU / Dart (منخفضة نسبياً)</a></li>
-<li><a href="#7">7. حجم التطبيق والاعتماديات</a><ul>
-<li><a href="#71-lottie-3-kb">7.1 lottie مقابل ملف 3 KB 🔴</a></li>
-<li><a href="#72-any">7.2 قيود any 🟡</a></li>
-<li><a href="#73">7.3 كود تجريبي منشور داخل المكتبة 🟡</a></li>
-</ul>
-</li>
-<li><a href="#8">8. جدول الأولويات</a></li>
-<li><a href="#9">9. التحسينات المقترحة — مع الكود</a><ul>
-<li><a href="#91-backdropgroup-backdropfiltergrouped">⭐ 9.1 التحسين الأهم: BackdropGroup + BackdropFilter.grouped</a></li>
-<li><a href="#92-frostedperformance">⭐ 9.2 مفتاح أداء عام — FrostedPerformance</a></li>
-<li><a href="#93">⭐ 9.3 إخراج الأنيميشن من داخل الطبقة المضببة</a></li>
-<li><a href="#94-lottie">⭐ 9.4 إصلاح Lottie داخل الزجاج</a></li>
-<li><a href="#95">9.5 تحسينات متوسطة</a></li>
-<li><a href="#96-v20">9.6 تغييرات مقترحة لـ v2.0 (كاسرة للتوافق)</a></li>
-<li><a href="#97-frosted_ui_kitmd">9.7 قاعدة توثيقية مقترحة لـ FROSTED_UI_KIT.md</a></li>
-</ul>
-</li>
-<li><a href="#10">10. خطة القياس (للتحقق قبل وبعد)</a></li>
-<li><a href="#11">11. الحكم النهائي</a><ul>
-<li><a href="#_1">خارطة طريق مقترحة</a></li>
-</ul>
-</li>
-<li><a href="#_2">المصادر</a></li>
-</ul>
-</li>
-<li><a href="#frosted-ui-kit">تقرير مراجعة استهلاك الموارد — Frosted UI Kit</a><ul>
-<li><a href="#_3">الحكم</a></li>
-<li><a href="#_4">النطاق وحدود الإثبات</a></li>
-<li><a href="#_5">أثر الموارد</a></li>
-<li><a href="#_6">النتائج من الكود</a><ul>
-<li><a href="#1_1">1. نقطة البلور مركزية، لكنها بلا تعطيل صريح — أولوية عالية</a></li>
-<li><a href="#2_1">2. وضع الأداء الموجود لا يغيّر أي سطح حالياً — أولوية عالية</a></li>
-<li><a href="#3_1">3. بعض الإعدادات تضيف زجاجاً تلقائياً — أولوية عالية</a></li>
-<li><a href="#4_1">4. الطبقات المتداخلة والتجميع — أولوية عالية مشروطة</a></li>
-<li><a href="#5">5. القوائم الكبيرة مبنية دفعة واحدة — أولوية متوسطة إلى عالية حسب الاستخدام</a></li>
-<li><a href="#6">6. الحركة والتحميل — أولوية متوسطة، بالقياس</a></li>
-<li><a href="#7_1">7. دورة الحياة والذاكرة — إيجابيات ومخاطر تحتاج اختباراً</a></li>
-</ul>
-</li>
-<li><a href="#_7">تصحيح التقرير السابق</a></li>
-<li><a href="#_8">نتائج الفحوص المنفذة</a></li>
-<li><a href="#_9">خطة تحسين قابلة للتحقق</a></li>
-<li><a href="#_10">بروتوكول القياس قبل وبعد</a></li>
+<li><a href="#frostedasyncbutton">FrostedAsyncButton</a><ul>
+<li><a href="#basic-usage">Basic usage</a></li>
+<li><a href="#state-lifecycle">State lifecycle</a></li>
+<li><a href="#lifecycle-and-late-results">Lifecycle and late results</a></li>
+<li><a href="#appearance-and-role">Appearance and role</a></li>
+<li><a href="#choosing-the-correct-api">Choosing the correct API</a></li>
+<li><a href="#verification_1">Verification</a></li>
 </ul>
 </li>
 </ul>
@@ -661,7 +616,7 @@
       <a href="https://pub.dev/packages/frosted_ui_kit" class="btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-cube"></i> pub.dev</a>
       <a href="https://github.com/abdulrasol/frosted_ui_kit" class="btn btn-outline" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
       <a href="#live-preview-section" class="btn btn-outline"><i class="fas fa-play"></i> Live Demo</a>
-      <span style="margin-left: auto; align-self: center; color: var(--text-muted); font-size: 0.95rem; font-weight: 500;">v1.2.0</span>
+      <span style="margin-left: auto; align-self: center; color: var(--text-muted); font-size: 0.95rem; font-weight: 500;">v2.0.0</span>
     </div>
 
     <div class="content">
@@ -1038,7 +993,7 @@ RTL, tooltips and disabled state. Light/dark geometry baselines are stored in
 <code>test/goldens</code>; Flutter's test font is used, so device typography still needs
 visual review. Run <code>flutter test</code> to compare baselines and review image changes
 before intentionally regenerating them with <code>--update-goldens</code>.
-A comprehensive set of action buttons supporting 4 visual style variants (<code>AppButtonStyle</code>). It also includes <code>AppFloatingActionButton</code> which acts as a versatile FAB (icon only, text only, or extended icon + text).</p>
+A comprehensive set of action buttons supporting 5 visual style variants (<code>AppButtonStyle</code>). It also includes <code>AppFloatingActionButton</code> which acts as a versatile FAB (icon only, text only, or extended icon + text).</p>
 <p>Button meaning is independent from appearance. Use
 <code>FrostedActionRole.primary</code>, <code>secondary</code>, or <code>destructive</code> on <code>AppButton</code>, or
 the matching <code>FrostedButton</code> constructor. Both examples retain destructive
@@ -1053,7 +1008,24 @@ FrostedButton.destructive(
 <p>Resolution order is: local color and border overrides, then the corresponding
 action colors in <code>FrostedThemeData</code>, then Material <code>ColorScheme</code>. Disabled
 content/surfaces use <code>onSurface</code>; focus, hover, and pressed overlays use the
-resolved role accent. Existing buttons default to the primary role.</p>
+resolved role accent. Roles are also supported by icon buttons and FABs.
+Existing buttons default to the primary role.</p>
+<p>For a normal Future-based action, <code>FrostedAsyncButton</code> owns the state cycle and
+does not require a controller:</p>
+<pre><code class="language-dart">FrostedAsyncButton(
+  title: 'Save changes',
+  icon: Icons.save_outlined,
+  onPressed: () async =&gt; repository.save(),
+  onSuccess: showSavedMessage,
+  onError: (error, stackTrace) =&gt; logger.record(error, stackTrace),
+)
+</code></pre>
+<p>Activation is blocked synchronously while an operation is active. Success and
+error feedback reset after <code>feedbackDuration</code> (1.2 seconds by default), or can
+remain visible with <code>null</code>. Late results after unmount are consumed without UI
+callbacks or state updates. Errors are delivered to <code>onError</code>; no Dialog or
+SnackBar is opened automatically. <code>FrostLoadingButtonController</code> remains the
+advanced API for manually controlled workflows.</p>
 <h4 id="supported-style-variants-appbuttonstyle">Supported Style Variants (<code>AppButtonStyle</code>):</h4>
 <ul>
 <li><code>AppButtonStyle.glass</code>: Translucent glassmorphic button with backdrop blur.</li>
@@ -1331,6 +1303,24 @@ class _TabSampleWidgetState extends State&lt;TabSampleWidget&gt; {
 <td style="text-align: left;">Optional header title string with close button.</td>
 </tr>
 <tr>
+<td style="text-align: left;"><code>header</code></td>
+<td style="text-align: left;"><code>Widget?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Replaces the default title header.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>actions</code></td>
+<td style="text-align: left;"><code>Widget?</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;">Footer pinned when space allows and scrollable on compact layouts.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maxHeightFactor</code></td>
+<td style="text-align: left;"><code>double</code></td>
+<td style="text-align: left;"><code>0.92</code></td>
+<td style="text-align: left;">Maximum fraction of usable keyboard-adjusted height.</td>
+</tr>
+<tr>
 <td style="text-align: left;"><code>isScrollControlled</code></td>
 <td style="text-align: left;"><code>bool</code></td>
 <td style="text-align: left;"><code>true</code></td>
@@ -1353,9 +1343,9 @@ class _TabSampleWidgetState extends State&lt;TabSampleWidget&gt; {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return FrostedButton.primary(
+      label: 'Open Sheet',
       onPressed: () =&gt; _openSheet(context),
-      child: const Text('Open Sheet'),
     );
   }
 }
@@ -1374,8 +1364,14 @@ insets appearing/disappearing. Input tests verify invalid Done submission,
 valid Done and button submission, Cancel, and system back results. These are
 widget simulations; physical-device keyboard behavior still benefits from
 manual checks. The Input Dialog catalog includes a longer description for
-trying these scenarios interactively.
-Glassmorphic popup dialogs designed to alert the user, ask for confirmation, or prompt for text input.</p>
+trying these scenarios interactively.</p>
+<p>Dialogs and bottom sheets share <code>FrostedAdaptiveSurfaceLayout</code>. Headers and
+actions remain visible on regular viewports, while short or keyboard-reduced
+layouts use one scroll view. <code>FrostedAdaptiveActions</code> stacks at narrow widths
+or accessibility text scale. Warning confirmations use
+<code>FrostedActionRole.destructive</code> when <code>isDestructive</code> is true. See
+<code>FROSTED_ADAPTIVE_MODALS.md</code> for compatibility and low-end-device behavior.</p>
+<p>Glassmorphic popup dialogs designed to alert the user, ask for confirmation, or prompt for text input.</p>
 <h4 id="available-mixin-methods">Available Mixin Methods:</h4>
 <ul>
 <li><code>showAppWarningDialog</code>: Shows a warning dialog returning a boolean.</li>
@@ -1425,15 +1421,15 @@ Glassmorphic popup dialogs designed to alert the user, ask for confirmation, or 
 </tr>
 <tr>
 <td style="text-align: left;"><code>confirmText</code></td>
-<td style="text-align: left;"><code>String</code></td>
-<td style="text-align: left;"><em>Varies</em></td>
-<td style="text-align: left;">Label for the positive/submit button.</td>
+<td style="text-align: left;"><code>String?</code></td>
+<td style="text-align: left;">localized</td>
+<td style="text-align: left;">Optional positive/submit label override.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>cancelText</code></td>
-<td style="text-align: left;"><code>String</code></td>
-<td style="text-align: left;"><code>Cancel</code></td>
-<td style="text-align: left;">Label for the negative button (if available).</td>
+<td style="text-align: left;"><code>String?</code></td>
+<td style="text-align: left;">localized</td>
+<td style="text-align: left;">Optional negative label override.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>validator</code></td>
@@ -1494,7 +1490,8 @@ remains filled.</p>
 <pre><code class="language-dart">class DialogSampleWidget extends StatelessWidget with Dialogs {
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return FrostedButton.primary(
+      label: 'Open Input Dialog',
       onPressed: () async {
         final result = await showAppInputDialog(
           context: context,
@@ -1504,7 +1501,6 @@ remains filled.</p>
           validator: (val) =&gt; val == null || val.isEmpty ? 'Required' : null,
         );
       },
-      child: const Text('Open Input Dialog'),
     );
   }
 }
@@ -1665,7 +1661,7 @@ remains filled.</p>
 <td style="text-align: left;"><code>showStatusBarGradient</code></td>
 <td style="text-align: left;"><code>bool</code></td>
 <td style="text-align: left;"><code>true</code></td>
-<td style="text-align: left;">Adds a subtle background gradient behind the system status-bar icons.</td>
+<td style="text-align: left;">Adds a theme-aware status-bar gradient: dark scaffold tint in dark mode and a subtle black-to-transparent tint in light mode.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>bottomNavigationBar</code></td>
@@ -1756,7 +1752,9 @@ reclaim the top edge while the user scrolls down. The default floating
 <code>FrostedAppBar</code> hides after <code>hideAfter</code> logical pixels and returns after
 <code>showAfter</code> logical pixels. The different thresholds prevent flickering when
 the user's finger changes direction. It also remains visible when the scroll
-position reaches the top.</p>
+position reaches the top. Reaching or bouncing at the bottom does not count as
+an upward reveal; the bar returns only after content actually moves upward away
+from the bottom edge.</p>
 <p>The option is disabled by default and applies only to the default floating
 app bar. A custom <code>appbar</code> passed to <code>BaseWidget</code> continues to use the normal
 <code>Scaffold.appBar</code> behavior. The implementation changes state only when the
@@ -1930,6 +1928,215 @@ appButton(
 - Direct widget instantiations (<code>AppButton</code>, <code>AppTextField</code>, <code>BaseWidget</code>, etc.)
 - Bottom Sheets and Dialogs via their mixin launchers.</p>
 <hr />
+<h2 id="quick-start">🚀 Quick Start</h2>
+<p>This guide takes a new Flutter project from installation to its first glass
+surface without requiring knowledge of the repository's internal structure.</p>
+<h3 id="1-install-the-package">1. Install the package</h3>
+<p>Add the package from pub.dev to <code>pubspec.yaml</code>:</p>
+<pre><code class="language-yaml">dependencies:
+  frosted_ui_kit: ^2.0.0
+</code></pre>
+<p>Then run <code>flutter pub get</code>.</p>
+<p>For local package development only, use a path relative to your own app:</p>
+<pre><code class="language-yaml">dependencies:
+  frosted_ui_kit:
+    path: ../frosted_ui_kit
+</code></pre>
+<h3 id="2-copy-paste-example">2. Copy-paste example</h3>
+<p>Place this file in <code>lib/main.dart</code>. It is self-contained and does not import
+anything from the package's internal <code>example</code> application:</p>
+<pre><code class="language-dart">import 'package:flutter/material.dart';
+import 'package:frosted_ui_kit/frosted_ui_kit.dart';
+
+void main() =&gt; runApp(const QuickStartApp());
+
+class QuickStartApp extends StatelessWidget {
+  const QuickStartApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return FrostedPerformance.fromData(
+      data: FrostedPerformance.balanced,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          brightness: Brightness.light,
+          useMaterial3: true,
+          extensions: const [FrostedThemeData.light],
+        ),
+        darkTheme: ThemeData(
+          brightness: Brightness.dark,
+          useMaterial3: true,
+          extensions: const [FrostedThemeData.dark],
+        ),
+        themeMode: ThemeMode.system,
+        home: const QuickStartPage(),
+      ),
+    );
+  }
+}
+
+class QuickStartPage extends StatelessWidget {
+  const QuickStartPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text('Welcome', style: TextStyle(fontSize: 28)),
+              const SizedBox(height: 20),
+              FrostedButton.primary(
+                label: 'Open sheet',
+                onPressed: () =&gt; showModalBottomSheet&lt;void&gt;(
+                  context: context,
+                  backgroundColor: Colors.transparent,
+                  isScrollControlled: true,
+                  builder: (_) =&gt; const AppBottomSheet(
+                    title: 'Quick action',
+                    child: Text('Your glass surface is ready.'),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 12),
+              FrostedButton.secondary(
+                label: 'Show dialog',
+                onPressed: () =&gt; showDialog&lt;void&gt;(
+                  context: context,
+                  builder: (_) =&gt; const AppDialog(
+                    child: Text('Dialogs adapt to small screens and keyboards.'),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+</code></pre>
+<p>For standardized results, use the <code>Dialogs</code> and <code>BottomSheets</code> mixins and
+helpers such as <code>showAppWarningDialog</code> and <code>showAppInputDialog</code>.</p>
+<h3 id="3-configure-the-theme">3. Configure the theme</h3>
+<p>Add <code>FrostedThemeData</code> to <code>ThemeData.extensions</code>. Local widget properties take
+precedence over theme tokens, followed by the package defaults:</p>
+<pre><code class="language-dart">ThemeData(
+  extensions: const [
+    FrostedThemeData(
+      dialogRadius: 28,
+      buttonRadius: 18,
+      dialogBlur: 10,
+      spacing: 14,
+    ),
+  ],
+)
+</code></pre>
+<p>Use <code>FrostedPerformance.full</code> for high-end devices, <code>balanced</code> as a practical
+general default, and <code>lite</code> for low-end devices or reduced-transparency modes:</p>
+<pre><code class="language-dart">FrostedPerformance.fromData(
+  data: FrostedPerformance.lite,
+  child: MaterialApp(home: const QuickStartPage()),
+)
+</code></pre>
+<p><code>lite</code> disables <code>BackdropFilter</code> while preserving layout, interaction, and the
+core translucent surface treatment.</p>
+<h3 id="4-configure-localization">4. Configure localization</h3>
+<p>Add <code>flutter_localizations</code> to the application and provide delegates and
+supported locales:</p>
+<pre><code class="language-dart">MaterialApp(
+  localizationsDelegates: const [
+    AppLocalizations.delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+  ],
+  supportedLocales: AppLocalizations.supportedLocales,
+)
+</code></pre>
+<p>The package provides defaults for common actions such as <code>confirm</code>, <code>cancel</code>,
+and <code>ok</code>. Applications can pass their own localized strings to dialog APIs;
+the package does not force a single language.</p>
+<h3 id="5-choose-the-right-component">5. Choose the right component</h3>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Recommended component</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regular action</td>
+<td><code>FrostedButton.primary</code></td>
+<td>Save, continue, send</td>
+</tr>
+<tr>
+<td>Safe or cancel action</td>
+<td><code>FrostedButton.secondary</code></td>
+<td>Back, cancel, close</td>
+</tr>
+<tr>
+<td>Dangerous action</td>
+<td><code>FrostedButton.destructive</code></td>
+<td>Delete, disable, remove</td>
+</tr>
+<tr>
+<td>Icon-only action</td>
+<td><code>FrostedIconButton</code> or <code>CircleButton</code></td>
+<td>Settings, back, add</td>
+</tr>
+<tr>
+<td>Async operation</td>
+<td><code>FrostedAsyncButton</code></td>
+<td>Save or upload with feedback</td>
+</tr>
+<tr>
+<td>Text input</td>
+<td><code>AppTextField</code> or <code>showAppInputDialog</code></td>
+<td>Forms and search</td>
+</tr>
+<tr>
+<td>Confirmation</td>
+<td><code>showAppWarningDialog</code></td>
+<td>Decisions requiring confirmation</td>
+</tr>
+<tr>
+<td>Error message</td>
+<td><code>showAppErrorDialog</code></td>
+<td>Failed operations and warnings</td>
+</tr>
+<tr>
+<td>Bottom content</td>
+<td><code>showAppBottomSheet</code></td>
+<td>Options and details</td>
+</tr>
+<tr>
+<td>Full screen layout</td>
+<td><code>BaseWidget</code></td>
+<td>Floating app bar and scroll behavior</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-migration-from-older-apis">6. Migration from older APIs</h3>
+<p>No migration is required. Existing names and mixins remain supported,
+including <code>BluredCard</code> and the legacy button APIs. For new code:</p>
+<ul>
+<li>Prefer <code>BlurredCard</code>; <code>BluredCard</code> remains a compatibility alias.</li>
+<li>Prefer <code>FrostedButton</code> for everyday actions and <code>AppButton</code> for advanced customization.</li>
+<li>Pass <code>role: FrostedActionRole.destructive</code> instead of inferring risk from color.</li>
+<li>Use <code>FrostedPerformance</code> instead of disabling <code>BackdropFilter</code> per component.</li>
+<li>Use <code>showAppInputDialog</code> or <code>AppDialog(actions: ...)</code> for keyboard-aware layouts.</li>
+</ul>
+<p>For advanced details, see <a href="#central-theme-tokens-frostedthemedata">FrostedThemeData</a>,
+<a href="#shared-glass-rendering-architecture">shared glass surfaces</a>, and
+<a href="#adaptive-dialogs-and-bottom-sheets">adaptive dialogs and bottom sheets</a>.</p>
+<hr />
 <h2 id="central-theme-tokens-frostedthemedata">🎨 Central Theme Tokens (FrostedThemeData)</h2>
 <p>Import <code>frosted_ui_kit.dart</code> and install <code>FrostedThemeData</code> in
 <code>ThemeData.extensions</code>. Light/dark presets inherit colors from the matching
@@ -2019,1088 +2226,155 @@ for other components is outside this rendering refactor.</p>
 balanced scaling once, and existing light/dark geometry goldens. These establish
 render-tree behavior and visual regression protection, not a measured FPS gain.</p>
 <hr />
-<h2 id="performance-analysis-benchmarks">📊 Performance Analysis &amp; Benchmarks</h2>
-<blockquote>
-<p>تحليل ساكن (static analysis) لكامل <code>lib/</code> بتاريخ 2026-09-11 — على الإصدار <code>1.0.2</code>
-المرجع: <code>doc/FROSTED_UI_KIT.md</code> و <code>.agents/AGENTS.md</code></p>
-</blockquote>
-<hr />
-<h3 id="110">✅ حالة التنفيذ — الإصدار 1.1.0</h3>
-<p><strong>تم تطبيق المرحلتين 1 و 2 بالكامل.</strong> التقرير أدناه يصف المشكلة كما كانت في
-<code>1.0.2</code>، ويُحتفظ به كمرجع تقني ولقياس الفرق قبل/بعد. تفاصيل التغييرات في
-<a href="../CHANGELOG.md">CHANGELOG.md</a>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">البند</th>
-<th style="text-align: center;">الحالة</th>
-<th style="text-align: left;">التنفيذ</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">مشاركة طبقة الخلفية بين كل عمليات الضبابية</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: left;"><code>FrostedGlassGroup</code> (<code>BackdropGroup</code> + <code>BackdropFilter.grouped</code>) — يُطبَّق تلقائياً من <code>BaseWidget</code> و <code>AppDialog</code> و <code>showAppBottomSheet</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">مفتاح أداء عام لإطفاء/تخفيض الزجاج</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: left;"><code>FrostedPerformance</code> + الإعدادات الجاهزة <code>full</code> / <code>balanced</code> / <code>lite</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">إخراج الأنيميشن من داخل الطبقة المضببة</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: left;"><code>FrostedPanel</code> — طُبِّق على شريط التنقل، التبويبات، الديالوغات، حقول النص، وقوائم <code>FrostedListSection</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">Lottie داخل الزجاج</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: left;"><code>FrostLoadingButton.blurWhileLoading = false</code> + ديالوغ التحميل على <code>FrostedPanel</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">مفاتيح تعطيل موضعية</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: left;"><code>enabled</code> / <code>grouped</code> على <code>BlurredCard</code> و <code>FrostedPanel</code>، و <code>blurEnabled</code> على الأزرار</td>
-</tr>
-<tr>
-<td style="text-align: left;">خفض sigma في شريط التنقل</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: left;">من <code>20</code> إلى <code>12</code>، وصار قابلاً للضبط عبر <code>sigmaX</code> / <code>sigmaY</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>RepaintBoundary</code></td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: left;">حول طبقة الزجاج في <code>FrostedPanel</code> وحول كل عنصر في شريط التنقل</td>
-</tr>
-<tr>
-<td style="text-align: left;">تخزين <code>AppThemes.border</code> مؤقتاً</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: left;">كاش حسب اللون بدل تخصيص كائن جديد كل إطار</td>
-</tr>
-<tr>
-<td style="text-align: left;">حذف الـ <code>ClipRRect</code> المكرر في <code>FrostedListSection</code></td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr>
-<td style="text-align: left;">تثبيت <code>material_ui</code> و <code>cupertino_ui</code></td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: left;"><code>^1.2.0</code> و <code>^1.0.2</code> بدل <code>any</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">تغيير الأنماط الافتراضية (<code>colored</code> للأزرار، <code>useGlass: false</code>)</td>
-<td style="text-align: center;">⏳</td>
-<td style="text-align: left;">مؤجَّل لـ v2.0 — كاسر للتوافق</td>
-</tr>
-<tr>
-<td style="text-align: left;">فصل <code>lottie</code> إلى حزمة مرافقة</td>
-<td style="text-align: center;">⏳</td>
-<td style="text-align: left;">مؤجَّل لـ v2.0 — كاسر للتوافق</td>
-</tr>
-<tr>
-<td style="text-align: left;">نقل <code>lib/main.dart</code> و <code>features/home/</code> إلى <code>example/</code></td>
-<td style="text-align: center;">⏳</td>
-<td style="text-align: left;">لم يُنفَّذ — أثره على وقت التشغيل صفر (tree-shaking)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>⚠️ <strong>لم يتم تشغيل <code>flutter analyze</code> ولا القياس على جهاز فعلي</strong> — بيئة التحليل
-ما بيها Flutter SDK. شغّل <code>flutter analyze</code> و <code>flutter run --profile</code> قبل النشر.</p>
-</blockquote>
-<hr />
-<h3 id="1">1. الخلاصة التنفيذية</h3>
-<p><strong>نعم — استخدام الحزمة يزيد استهلاك الموارد، والزيادة على الـ GPU وليس على الـ RAM.</strong></p>
-<p>السبب الجذري واحد ومركزي: <strong>كل مكوّن زجاجي في الحزمة مبني على <code>BlurredCard</code>، و<code>BlurredCard</code> تُنشئ <code>BackdropFilter</code> مستقل لكل نسخة منها.</strong> يعني شاشة واحدة عادية تحتوي بين <strong>5 و 11 عملية <code>BackdropFilter</code> منفصلة</strong> في نفس الإطار (frame).</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">البُعد</th>
-<th style="text-align: left;">التقييم</th>
-<th style="text-align: left;">الملاحظة</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>GPU / وقت الرسم (raster)</strong></td>
-<td style="text-align: left;">🔴 مرتفع</td>
-<td style="text-align: left;">المصدر الأساسي للمشكلة</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>الذاكرة (RAM)</strong></td>
-<td style="text-align: left;">🟢 سليم</td>
-<td style="text-align: left;">لا يوجد تسريب؛ لا <code>AnimationController</code> بدون <code>dispose</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>ذاكرة GPU المؤقتة</strong></td>
-<td style="text-align: left;">🟡 متوسط</td>
-<td style="text-align: left;">~3–6 MB لكل إطار على شاشة مزدحمة</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>CPU / Dart</strong></td>
-<td style="text-align: left;">🟢 منخفض</td>
-<td style="text-align: left;">تخصيصات بسيطة، لا حسابات ثقيلة في <code>build</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>حجم التطبيق</strong></td>
-<td style="text-align: left;">🟡 متوسط</td>
-<td style="text-align: left;"><code>lottie</code> + <code>archive</code> + <code>http</code> مقابل ملف سبينر بحجم 3 KB</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>صحة الحزمة (package health)</strong></td>
-<td style="text-align: left;">🟡</td>
-<td style="text-align: left;"><code>material_ui: any</code> و <code>cupertino_ui: any</code> + كود تجريبي منشور داخل المكتبة</td>
-</tr>
-</tbody>
-</table>
-<p><strong>الحكم حسب فئة الجهاز:</strong></p>
-<ul>
-<li><strong>أجهزة راقية</strong> (iPhone 14+، Snapdragon 8 Gen 1+): مقبولة تماماً، 60/120fps تُحافظ عليها.</li>
-<li><strong>أجهزة متوسطة وضعيفة</strong> (Snapdragon 4xx/6xx، Mali-G52/G57 — وهي <strong>الغالبية في السوق العراقي</strong>): هنا تظهر المشكلة فعلياً. توقّع ارتفاع زمن الإطار، jank أثناء التمرير، استهلاك بطارية وحرارة.</li>
-</ul>
-<p>الخبر الجيد: <strong>كل المشاكل قابلة للحل داخل <code>cards.dart</code> و <code>base_widget.dart</code> و <code>navigation_bar.dart</code> تقريباً</strong> — أي بتعديل مركزي محدود، بدون إعادة كتابة الحزمة.</p>
-<hr />
-<h3 id="2">2. المصدر الحقيقي للكلفة — كيف تعمل الحزمة داخلياً</h3>
-<h4 id="21">2.1 نقطة الاختناق المركزية</h4>
-<pre><code>lib/src/shared/widgets/cards.dart : 98-113
-    ClipRRect / ClipOval
-      └── BackdropFilter(filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10))
-            └── Container(decoration: BoxDecoration(...))
-</code></pre>
-<p>وكل هذه المكوّنات تمر من هنا:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">المكوّن</th>
-<th style="text-align: left;">الملف</th>
-<th style="text-align: left;">عدد الـ Blur لكل نسخة</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>CircleButton</code></td>
-<td style="text-align: left;"><code>buttons.dart:82</code></td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>AppButton</code> (نمط <code>glass</code> — <strong>وهو النمط الافتراضي</strong>)</td>
-<td style="text-align: left;"><code>buttons.dart:345</code></td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>AppTextField</code> (عندما <code>useGlass: true</code> — <strong>وهو الافتراضي</strong>)</td>
-<td style="text-align: left;"><code>inputs.dart:579</code></td>
-<td style="text-align: left;">1 لكل حقل</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>AppSlidingTabs</code></td>
-<td style="text-align: left;"><code>tabs.dart:88</code></td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>FrostedAppBar</code> (بطاقة العنوان)</td>
-<td style="text-align: left;"><code>app_bar.dart:99</code></td>
-<td style="text-align: left;">1 + زر الرجوع + كل <code>circleButton</code> في <code>actions</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>FrostedNavigationButtomBar</code></td>
-<td style="text-align: left;"><code>navigation_bar.dart:52</code></td>
-<td style="text-align: left;">1 (بـ <code>sigma: 20</code>) + الـ FAB</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>FrostedListSection</code></td>
-<td style="text-align: left;"><code>list_tile.dart:58</code></td>
-<td style="text-align: left;">1 لكل قسم (✅ جيد — مشترك بين كل الـ tiles)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>AppBottomSheet</code></td>
-<td style="text-align: left;"><code>bottom_sheet.dart:67</code></td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>AppDialog</code> / <code>showAppLoadingDialog</code></td>
-<td style="text-align: left;"><code>dialogs.dart:24, 416</code></td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h4 id="22-backdropfilter">2.2 لماذا <code>BackdropFilter</code> مكلف تحديداً؟</h4>
-<p>على مستوى الـ GPU، كل <code>BackdropFilter</code> يفرض:</p>
-<ol>
-<li><strong>قراءة الخلفية (backdrop read):</strong> يجب قراءة ما تم رسمه خلف الويدجت من الـ render target إلى نسيج (texture) منفصل.</li>
-<li><strong>كسر مسار الـ tile:</strong> كل وحدات GPU في الموبايل هي <strong>Tile-Based Deferred Rendering</strong> (Adreno / Mali / PowerVR / Apple GPU). القراءة من الـ framebuffer في منتصف التمرير تجبر الـ GPU على <strong>إنهاء الـ render pass الحالي وكتابته للذاكرة، ثم بدء pass جديد</strong>. هذه أغلى عملية منفردة في التحليل كله.</li>
-<li><strong>تمريرتا ضبابية:</strong> Gaussian blur على Impeller يُنفَّذ بتمريرتين قابلتين للفصل (أفقي + عمودي) على دقّة مصغّرة.</li>
-</ol>
-<blockquote>
-<p>توثيق Flutter الرسمي يقول حرفياً عن <code>BackdropFilter</code>:
-<em>"This effect is relatively expensive, especially if the filter is non-local, such as a blur."</em>
-وهناك تقارير مفتوحة معروفة: <a href="https://github.com/flutter/flutter/issues/32804">flutter#32804</a> و <a href="https://github.com/flutter/flutter/issues/126353">flutter#126353</a>.</p>
-</blockquote>
-<p><strong>النتيجة:</strong> الكلفة ≈ <code>عدد الـ BackdropFilters × (كسر render pass + تمريرات الضبابية)</code>.
-الكلفة <strong>تتضاعف عددياً</strong> ولا تُدمج تلقائياً — وهذا بالضبط ما تفعله الحزمة حالياً.</p>
-<hr />
-<h3 id="3">3. عدّ الطبقات الضبابية لكل شاشة (قياس فعلي من الكود)</h3>
-<h4 id="registerformwidget-authscreen">شاشة التسجيل <code>RegisterFormWidget</code> + <code>AuthScreen</code></h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">العنصر</th>
-<th style="text-align: left;">العدد</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>nameField</code> + <code>emailField</code> + <code>passwordField</code> ×2</td>
-<td style="text-align: left;">4</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>appSlidingTabs</code></td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>appButton</code> (register — نمط glass افتراضي)</td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>FrostedAppBar</code> (عنوان + زر رجوع)</td>
-<td style="text-align: left;">2</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>المجموع</strong></td>
-<td style="text-align: left;"><strong>8 عمليات Backdrop Blur في إطار واحد</strong></td>
-</tr>
-</tbody>
-</table>
-<h4 id="dashboard">شاشة تطبيقية نموذجية (Dashboard)</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">العنصر</th>
-<th style="text-align: left;">العدد</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>FrostedAppBar</code>: زر رجوع + عنوان + زرَّا actions</td>
-<td style="text-align: left;">4</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>FrostedNavigationButtomBar</code> + FAB</td>
-<td style="text-align: left;">2</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>FrostedListSection</code> ×3</td>
-<td style="text-align: left;">3</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>appButton</code> زجاجي ×2</td>
-<td style="text-align: left;">2</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>المجموع</strong></td>
-<td style="text-align: left;"><strong>11 عملية Backdrop Blur في إطار واحد</strong></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>القاعدة العملية المتعارف عليها في Flutter: لا تتجاوز 2–3 عمليات <code>BackdropFilter</code> مرئية في نفس الوقت.</strong> الحزمة حالياً تتجاوز هذا الحد بـ 3–4 أضعاف بشكل افتراضي، بدون أن يشعر المطوّر المستخدم لها.</p>
-</blockquote>
-<hr />
-<h3 id="4">4. متى تُدفع الكلفة؟ — محفّزات إعادة الرسم (الأخطر)</h3>
-<p>الضبابية <strong>لا تُدفع مرة واحدة</strong>. تُدفع في <strong>كل إطار</strong> تحتاج فيه المنطقة لإعادة رسم. وهنا المشاكل الحقيقية:</p>
-<h4 id="41-appbar-navbar-base_widgetdart53-77">🔴 4.1 التمرير خلف الـ AppBar والـ NavBar — <code>base_widget.dart:53-77</code></h4>
-<pre><code class="language-dart">body: Stack(
-  children: [
-    child,                                   // ← المحتوى القابل للتمرير
-    if (bottomNavigationBar != null)
-      Positioned(bottom: 0, ... ),           // ← زجاج فوقه
-    if (!isHideAppbar &amp;&amp; appbar == null)
-      Positioned(top: 0, ... FrostedAppBar), // ← زجاج فوقه
-  ],
-),
-</code></pre>
-<p><code>BaseWidget</code> يضع الـ AppBar والـ NavBar <strong>فوق</strong> المحتوى المتمرّر في <code>Stack</code>. هذا هو المظهر الزجاجي المطلوب — لكنه يعني أنّ <strong>المحتوى خلف الزجاج يتغيّر في كل إطار أثناء التمرير، فيُعاد حساب الضبابية 60 أو 120 مرة في الثانية.</strong></p>
-<p>هذا أغلى وضع تشغيل في الحزمة كاملة، وهو الوضع الافتراضي لكل شاشة.</p>
-<h4 id="42-navigation_bardart170-240">🔴 4.2 أنيميشن داخل الطبقة المضببة — <code>navigation_bar.dart:170-240</code></h4>
-<pre><code class="language-dart">BlurredCard(sigmaX: 20, sigmaY: 20,       // ← الضبابية هنا (وبقيمة 20!)
-  child: Row(children: [
-    _FrostedNavbarItemWidget(...)          // ← وداخلها:
-      // Transform.scale (AnimationController 100ms)
-      // AnimatedContainer (250ms)
-      // TweenAnimationBuilder&lt;Color&gt; (250ms)
-  ]),
-)
-</code></pre>
-<p>كل الأنيميشن <strong>أبناء</strong> للـ <code>BackdropFilter</code>. أي لمسة على تبويب = 250ms من إعادة الرسم داخل طبقة مضببة بـ <code>sigma: 20</code>. هذا خطأ معماري، وليس مجرد ضبط.</p>
-<p>نفس النمط في <code>tabs.dart:99-116</code>: <code>AnimatedAlign</code> + <code>AnimatedDefaultTextStyle</code> داخل <code>bluredCard</code>.</p>
-<h4 id="43-lottie">🔴 4.3 Lottie داخل الزجاج — الأسوأ في المكتبة</h4>
-<p><code>loading_button.dart:181</code> و <code>dialogs.dart:399</code>:</p>
-<pre><code class="language-dart">appButton(... style: glass ...,           // ← BackdropFilter
-  child: AnimatedSwitcher(
-    child: AppLoadingIndicator(size: 48), // ← Lottie، رسم متجهي 60fps
-  ),
-)
-</code></pre>
-<p>سبينر Lottie يُعيد رسم نفسه في كل إطار، <strong>داخل</strong> طبقة مضببة. يعني الضبابية تُعاد طوال مدة التحميل بالكامل، بشكل متواصل. نفس المشكلة في <code>showAppLoadingDialog</code> لكن على مساحة أكبر (ديالوغ).</p>
-<h4 id="44-inputsdart579">🟡 4.4 الكتابة في حقول النص — <code>inputs.dart:579</code></h4>
-<p><code>AppTextField</code> يلفّ <code>CupertinoTextField</code> داخل <code>BlurredCard</code>. مؤشّر الكتابة (caret) يومض مرتين في الثانية → إعادة رسم → إعادة حساب الضبابية. وكل ضغطة زر كذلك. الحقل المركَّز فقط هو الذي يُعاد رسمه، لكن الضبابية تُعاد مع كل وميض.</p>
-<h4 id="45-repaintboundary">🟡 4.5 غياب <code>RepaintBoundary</code> بالكامل</h4>
-<p>بحث في كامل <code>lib/</code>: <strong>صفر استخدام لـ <code>RepaintBoundary</code></strong>. إعادة الرسم تنتشر أوسع من اللازم.</p>
-<hr />
-<h3 id="5-gpu">5. الذاكرة و GPU</h3>
-<h4 id="51">5.1 لا يوجد تسريب ذاكرة ✅</h4>
-<p>الفحص أظهر:
-- <code>_FrostedNavbarItemWidgetState._scaleController</code> → <code>dispose()</code> موجود ✅
-- <code>FrostedNavbarController</code> (ValueNotifier) → التوثيق يطلب <code>dispose()</code> من المستخدم ✅
-- <code>FrostedStepperController</code> → <code>dispose()</code> موثّق ✅
-- <code>AppLogger</code> يطبع فقط داخل <code>kDebugMode</code> ✅ (لا كلفة في الإصدار النهائي)</p>
-<h4 id="52-gpu">5.2 ذاكرة GPU المؤقتة</h4>
-<p>كل <code>BackdropFilter</code> يحتاج render target بحجم حدوده + أنسجة وسيطة للضبابية المصغّرة.</p>
-<p>الصيغة التقريبية (RGBA8888):</p>
-<pre><code>البايتات ≈ العرض(dp) × الارتفاع(dp) × DPR² × 4
-</code></pre>
-<p>على جهاز بـ DPR = 3 (تقدير):</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">العنصر</th>
-<th style="text-align: left;">الأبعاد (dp)</th>
-<th style="text-align: left;">تقدير النسيج</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">شريط التنقل السفلي</td>
-<td style="text-align: left;">360 × 80</td>
-<td style="text-align: left;">≈ 1.04 MB</td>
-</tr>
-<tr>
-<td style="text-align: left;">بطاقة عنوان الـ AppBar</td>
-<td style="text-align: left;">250 × 48</td>
-<td style="text-align: left;">≈ 0.41 MB</td>
-</tr>
-<tr>
-<td style="text-align: left;">حقل نص واحد</td>
-<td style="text-align: left;">328 × 52</td>
-<td style="text-align: left;">≈ 0.48 MB</td>
-</tr>
-<tr>
-<td style="text-align: left;">زر دائري</td>
-<td style="text-align: left;">48 × 48</td>
-<td style="text-align: left;">≈ 0.08 MB</td>
-</tr>
-</tbody>
-</table>
-<p><strong>الإجمالي التقريبي على شاشة مزدحمة: 3–6 MB لكل إطار</strong> (تخصيص مؤقت، يُعاد تدويره — ليس تسريباً).</p>
-<p>المشكلة ليست الحجم، بل <strong>عرض النطاق (bandwidth)</strong>: كتابة وقراءة هذه الأنسجة 60 مرة في الثانية على GPU متوسط يستهلك ذاكرة ويولّد حرارة.</p>
-<hr />
-<h3 id="6-cpu-dart">6. الكلفة على CPU / Dart (منخفضة نسبياً)</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">الملاحظة</th>
-<th style="text-align: left;">الموقع</th>
-<th style="text-align: left;">الأثر</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>AppThemes.border(context)</code> يُنشئ كائن <code>Border</code> جديد في كل <code>build</code></td>
-<td style="text-align: left;"><code>cards.dart:83</code></td>
-<td style="text-align: left;">ضئيل، لكنه متكرر جداً</td>
-</tr>
-<tr>
-<td style="text-align: left;">دوال الـ mixins (<code>blurredCard</code>, <code>appButton</code>…) تمنع استخدام <code>const</code> على الويدجتات</td>
-<td style="text-align: left;">كل الـ mixins</td>
-<td style="text-align: left;">يمنع تخزين الويدجت مؤقتاً، يوسّع نطاق الـ rebuild</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>List.generate</code> داخل <code>build</code></td>
-<td style="text-align: left;"><code>tabs.dart:126</code>, <code>navigation_bar.dart:66</code></td>
-<td style="text-align: left;">إعادة بناء كل العناصر عند أي rebuild للأب</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>Navigator.of(context).canPop()</code> داخل <code>build</code></td>
-<td style="text-align: left;"><code>app_bar.dart:70</code></td>
-<td style="text-align: left;">يُنشئ تبعية على الـ Navigator → إعادة بناء عند تغيير المسار</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>clipBehavior: Clip.antiAlias</code> (وليس <code>antiAliasWithSaveLayer</code>)</td>
-<td style="text-align: left;"><code>cards.dart:27</code></td>
-<td style="text-align: left;">✅ اختيار صحيح — تجنّب <code>saveLayer</code> إضافي</td>
-</tr>
-</tbody>
-</table>
-<p><strong>هذه البنود ثانوية.</strong> إصلاحها لن يُحدث فرقاً ملموساً قبل إصلاح مشكلة الـ <code>BackdropFilter</code>.</p>
-<hr />
-<h3 id="7">7. حجم التطبيق والاعتماديات</h3>
-<h4 id="71-lottie-3-kb">7.1 <code>lottie</code> مقابل ملف 3 KB 🔴</h4>
-<pre><code class="language-yaml">lottie: ^3.5.1   # يجرّ معه: archive, http
-</code></pre>
-<p>الاستخدام الوحيد: <code>assets/lottie/loading.json</code> — <strong>حجمه 3072 بايت</strong>.</p>
-<p><code>lottie</code> مكتبة كاملة لعرض ملفات After Effects (تحليل JSON، أشكال، أقنعة، تعبيرات، مسارات). كل تطبيق يستخدم <code>frosted_ui_kit</code> يدفع ثمنها في حجم الـ APK/IPA، حتى لو لم يعرض سبينراً أبداً. وتجرّ معها <code>archive</code> (لملفات dotLottie) و <code>http</code> (للتحميل من الشبكة) — وكلاهما غير مستخدم هنا.</p>
-<h4 id="72-any">7.2 قيود <code>any</code> 🟡</h4>
-<pre><code class="language-yaml">material_ui: any
-cupertino_ui: any
-</code></pre>
-<p><code>any</code> يعني أن أي إصدار جديد كاسر (breaking) من هاتين الحزمتين سيكسر بناء كل من يستخدم <code>frosted_ui_kit</code>. وهذا أيضاً يخفّض تقييم الحزمة على pub.dev. يجب تثبيتها بـ <code>^x.y.z</code>.</p>
-<h4 id="73">7.3 كود تجريبي منشور داخل المكتبة 🟡</h4>
-<p><code>lib/main.dart</code> و <code>lib/src/features/home/persentation/screen/home.dart</code> هما تطبيق تجريبي داخل مكتبة منشورة. الـ tree-shaking في AOT يحذفهما فلا أثر وقت التشغيل، لكنهما وزن زائد في الحزمة. (ولاحظ الخطأ الإملائي: <code>persentation</code> بدل <code>presentation</code>.)</p>
-<hr />
-<h3 id="8">8. جدول الأولويات</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">#</th>
-<th style="text-align: left;">المشكلة</th>
-<th style="text-align: center;">الأثر</th>
-<th style="text-align: center;">جهد الإصلاح</th>
-<th style="text-align: center;">كسر التوافق</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: left;">كل <code>BlurredCard</code> = <code>BackdropFilter</code> مستقل</td>
-<td style="text-align: center;">🔴 عالٍ جداً</td>
-<td style="text-align: center;">منخفض</td>
-<td style="text-align: center;">لا</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: left;">الأنيميشن داخل الطبقة المضببة (navbar + tabs)</td>
-<td style="text-align: center;">🔴 عالٍ</td>
-<td style="text-align: center;">متوسط</td>
-<td style="text-align: center;">لا</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: left;">Lottie داخل الزجاج (loading button + dialog)</td>
-<td style="text-align: center;">🔴 عالٍ</td>
-<td style="text-align: center;">منخفض</td>
-<td style="text-align: center;">لا</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">لا يوجد مفتاح لإيقاف الزجاج على الأجهزة الضعيفة</td>
-<td style="text-align: center;">🔴 عالٍ</td>
-<td style="text-align: center;">منخفض</td>
-<td style="text-align: center;">لا</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: left;"><code>sigma: 20</code> في شريط التنقل</td>
-<td style="text-align: center;">🟡 متوسط</td>
-<td style="text-align: center;">تافه</td>
-<td style="text-align: center;">لا</td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td style="text-align: left;"><code>useGlass: true</code> افتراضياً في حقول النص</td>
-<td style="text-align: center;">🟡 متوسط</td>
-<td style="text-align: center;">تافه</td>
-<td style="text-align: center;">نعم (v2)</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
-<td style="text-align: left;"><code>AppButtonStyle.glass</code> هو النمط الافتراضي</td>
-<td style="text-align: center;">🟡 متوسط</td>
-<td style="text-align: center;">تافه</td>
-<td style="text-align: center;">نعم (v2)</td>
-</tr>
-<tr>
-<td style="text-align: center;">8</td>
-<td style="text-align: left;">غياب <code>RepaintBoundary</code></td>
-<td style="text-align: center;">🟡 متوسط</td>
-<td style="text-align: center;">منخفض</td>
-<td style="text-align: center;">لا</td>
-</tr>
-<tr>
-<td style="text-align: center;">9</td>
-<td style="text-align: left;"><code>lottie</code> كاعتمادية إلزامية</td>
-<td style="text-align: center;">🟡 متوسط</td>
-<td style="text-align: center;">متوسط</td>
-<td style="text-align: center;">نعم (v2)</td>
-</tr>
-<tr>
-<td style="text-align: center;">10</td>
-<td style="text-align: left;"><code>material_ui: any</code> / <code>cupertino_ui: any</code></td>
-<td style="text-align: center;">🟢 منخفض</td>
-<td style="text-align: center;">تافه</td>
-<td style="text-align: center;">لا</td>
-</tr>
-<tr>
-<td style="text-align: center;">11</td>
-<td style="text-align: left;"><code>lib/main.dart</code> + <code>features/home</code> داخل الحزمة</td>
-<td style="text-align: center;">🟢 منخفض</td>
-<td style="text-align: center;">تافه</td>
-<td style="text-align: center;">لا</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="9">9. التحسينات المقترحة — مع الكود</h3>
-<h4 id="91-backdropgroup-backdropfiltergrouped">⭐ 9.1 التحسين الأهم: <code>BackdropGroup</code> + <code>BackdropFilter.grouped</code></h4>
-<p>Flutter 3.29 أضاف حلاً مصمَّماً <strong>تحديداً</strong> لحالة هذه الحزمة:</p>
-<blockquote>
-<p><em>"Applications that display multiple backdrop filters can now use the new widget <code>BackdropGroup</code> and a new <code>BackdropFilter.grouped</code> constructor. These can improve performance of multiple blurs above and beyond what was possible on the Skia backend."</em>
-— <a href="https://flutter.dev/blog/whats-new-in-flutter-3-29">What's new in Flutter 3.29</a></p>
-</blockquote>
-<p>بدل أن يقرأ كل فلتر الخلفية بنفسه، <strong>كل الفلاتر داخل <code>BackdropGroup</code> تتشارك نسيج خلفية واحد</strong>. من N قراءة خلفية إلى قراءة واحدة. كلما زاد N زاد الربح — وهذه بالضبط حالة الحزمة (N = 8 إلى 11).</p>
-<p><code>pubspec.lock</code> يُظهر <code>flutter: "&gt;=3.44.0"</code> — يعني الـ API متوفّر بدون أي شرط.</p>
-<p><strong>التعديل في <code>cards.dart</code>:</strong></p>
-<pre><code class="language-dart">class BlurredCard extends StatelessWidget {
-  const BlurredCard({
-    super.key,
-    required this.child,
-    // ... البقية كما هي
-    this.enabled,          // null = تلقائي حسب FrostedPerformance
-    this.grouped = true,   // يشارك الخلفية مع أقرب BackdropGroup
-  });
-
-  /// تعطيل الضبابية نهائياً لهذه البطاقة (يتخطّى الـ BackdropFilter كلياً).
-  final bool? enabled;
-
-  /// استخدام BackdropFilter.grouped لمشاركة طبقة الخلفية.
-  final bool grouped;
-
-  @override
-  Widget build(BuildContext context) {
-    final perf = FrostedPerformance.of(context);
-    final sx = sigmaX * perf.blurScale;
-    final sy = sigmaY * perf.blurScale;
-    final blurOn = (enabled ?? perf.blurEnabled) &amp;&amp; (sx &gt; 0 || sy &gt; 0);
-
-    // عندما تُطفأ الضبابية نُبقي نفس الـ Container بالضبط،
-    // فلا يتغيّر التخطيط ولا يحصل layout shift.
-    final containerWidget = Container(/* ... كما هو ... */);
-
-    Widget wrap(Widget inner) {
-      if (!blurOn) return inner;
-      final filter = ImageFilter.blur(sigmaX: sx, sigmaY: sy);
-      return grouped
-          ? BackdropFilter.grouped(filter: filter, child: inner)
-          : BackdropFilter(filter: filter, child: inner);
-    }
-
-    if (shape == BoxShape.circle) {
-      return ClipOval(clipBehavior: clipBehavior, child: wrap(containerWidget));
-    }
-    return ClipRRect(
-      borderRadius: effectiveBorderRadius ?? BorderRadius.zero,
-      clipBehavior: clipBehavior,
-      child: wrap(containerWidget),
-    );
-  }
-}
-</code></pre>
-<p><strong>وفي <code>base_widget.dart</code> — نلفّ الشاشة كلها:</strong></p>
-<pre><code class="language-dart">@override
-Widget build(BuildContext context) {
-  return BackdropGroup(          // ← سطر واحد، يستفيد منه كل زجاج الشاشة
-    child: Scaffold(
-      extendBody: bottomNavigationBar != null,
-      // ... البقية كما هي
+<h2 id="adaptive-dialogs-and-bottom-sheets">Adaptive Dialogs and Bottom Sheets</h2>
+<p>Dialogs and bottom sheets share <code>FrostedAdaptiveSurfaceLayout</code>, which divides a
+modal surface into optional header, scrollable body, and optional actions.
+This keeps behavior consistent across compact phones, tablets, large text,
+RTL, and keyboard-visible layouts.</p>
+<h3 id="layout-behavior">Layout behavior</h3>
+<p>On a regular viewport the header and actions remain visible while only the body
+scrolls. When available height is too small, all three regions move into one
+scroll view. The threshold scales with accessibility text size so a large
+header or stacked actions cannot overflow.</p>
+<p><code>FrostedAdaptiveActions</code> displays secondary and primary actions in one row when
+space allows. Below 360 logical pixels, or at a text scale of 1.3 and above,
+the actions stack vertically with full-width touch targets. Secondary remains
+before primary, keeping the safe action ahead of a destructive action.</p>
+<h3 id="dialog-usage">Dialog usage</h3>
+<pre><code class="language-dart">AppDialog(
+  header: Text(appStrings.deleteTitle),
+  actions: FrostedAdaptiveActions(
+    secondary: FrostedButton.secondary(
+      label: appStrings.cancel,
+      onPressed: cancel,
     ),
-  );
-}
-</code></pre>
-<blockquote>
-<p>⚠️ ملاحظة: <code>BackdropFilter.grouped</code> يبحث عن أقرب <code>BackdropGroup</code> في الشجرة. المكوّنات التي تُعرض خارج شجرة الشاشة (<code>showAppBottomSheet</code>، <code>showAppDialog</code>) تُبنى في الـ <code>Navigator</code> overlay، لذلك تحتاج <code>BackdropGroup</code> خاصاً بها داخل الـ builder، أو تُترك بـ <code>grouped: false</code>.</p>
-</blockquote>
-<hr />
-<h4 id="92-frostedperformance">⭐ 9.2 مفتاح أداء عام — <code>FrostedPerformance</code></h4>
-<p>هذا <strong>ليس تحسيناً تجميلياً، بل شرط لتشغيل الحزمة على أجهزة السوق المتوسطة.</strong></p>
-<p>ملف جديد <code>lib/src/utils/frosted_performance.dart</code>:</p>
-<pre><code class="language-dart">import 'package:material_ui/material_ui.dart';
-
-/// مفتاح عام يتحكّم بكل الأسطح الزجاجية في `frosted_ui_kit`.
-///
-/// ضعه فوق `MaterialApp` لتخفيض أو إطفاء الضبابية على الأجهزة الضعيفة،
-/// أو عند تفعيل &quot;تقليل الحركة&quot; في إعدادات الوصولية.
-class FrostedPerformance extends InheritedWidget {
-  const FrostedPerformance({
-    super.key,
-    this.blurEnabled = true,
-    this.blurScale = 1.0,
-    this.fallbackOpacity = 0.88,
-    required super.child,
-  }) : assert(blurScale &gt;= 0.0 &amp;&amp; blurScale &lt;= 1.0);
-
-  /// إطفاء كل عمليات BackdropFilter (أعلى ربح أداء ممكن).
-  final bool blurEnabled;
-
-  /// معامل ضرب لكل قيم sigma (0.0 – 1.0).
-  final double blurScale;
-
-  /// شفافية التعبئة البديلة عندما تكون الضبابية مُطفأة.
-  final double fallbackOpacity;
-
-  static const _fallback = _Defaults();
-
-  static FrostedPerformanceData of(BuildContext context) {
-    final w = context.dependOnInheritedWidgetOfExactType&lt;FrostedPerformance&gt;();
-    if (w == null) return const FrostedPerformanceData();
-    return FrostedPerformanceData(
-      blurEnabled: w.blurEnabled,
-      blurScale: w.blurScale,
-      fallbackOpacity: w.fallbackOpacity,
-    );
-  }
-
-  @override
-  bool updateShouldNotify(FrostedPerformance old) =&gt;
-      blurEnabled != old.blurEnabled ||
-      blurScale != old.blurScale ||
-      fallbackOpacity != old.fallbackOpacity;
-}
-
-class FrostedPerformanceData {
-  const FrostedPerformanceData({
-    this.blurEnabled = true,
-    this.blurScale = 1.0,
-    this.fallbackOpacity = 0.88,
-  });
-  final bool blurEnabled;
-  final double blurScale;
-  final double fallbackOpacity;
-}
-</code></pre>
-<p><strong>الاستخدام:</strong></p>
-<pre><code class="language-dart">// ربطه بإعداد الوصولية &quot;تقليل الحركة&quot; + إعداد يدوي للمستخدم
-FrostedPerformance(
-  blurEnabled: !MediaQuery.disableAnimationsOf(context) &amp;&amp; !userPrefersLiteMode,
-  blurScale: isLowEndDevice ? 0.5 : 1.0,
-  child: MaterialApp(...),
-)
-</code></pre>
-<p>مع هذا المفتاح، أي تطبيق (مثلاً تطبيق صيدلية على جهاز Android متوسط) يستطيع تقديم <strong>وضع خفيف</strong> بسطر واحد، بنفس التخطيط تماماً وبدون أي <code>layout shift</code>.</p>
-<hr />
-<h4 id="93">⭐ 9.3 إخراج الأنيميشن من داخل الطبقة المضببة</h4>
-<p><strong>هذا أكبر مكسب بنيوي بعد <code>BackdropGroup</code>.</strong></p>
-<p>المبدأ: اجعل اللوح الزجاجي <strong>طبقة خلفية ساكنة</strong>، وارسم المحتوى المتحرّك <strong>فوقه كشقيق (sibling)</strong> وليس كابن.</p>
-<p><strong><code>navigation_bar.dart</code> — قبل:</strong></p>
-<pre><code class="language-dart">BlurredCard(sigmaX: 20, sigmaY: 20,
-  child: Row(children: [ /* عناصر متحركة */ ]),   // ❌ داخل الفلتر
-)
-</code></pre>
-<p><strong>بعد:</strong></p>
-<pre><code class="language-dart">SizedBox(
-  height: 72,
-  child: Stack(
-    children: [
-      // طبقة الزجاج — لا يتحرّك أي شيء داخلها إطلاقاً
-      Positioned.fill(
-        child: RepaintBoundary(
-          child: BlurredCard(
-            borderRadius: BorderRadius.circular(32),
-            sigmaX: 12, sigmaY: 12,      // ← خُفّضت من 20
-            border: Border.all(/* ... */),
-            child: const SizedBox.expand(),
-          ),
-        ),
-      ),
-      // المحتوى المتحرّك — خارج شجرة الـ BackdropFilter
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: List.generate(widget.items.length, (i) =&gt;
-            _FrostedNavbarItemWidget(
-              item: widget.items[i], index: i, controller: widget.controller,
-            ),
-          ),
-        ),
-      ),
-    ],
+    primary: FrostedButton.destructive(
+      label: appStrings.delete,
+      onPressed: confirmDelete,
+    ),
   ),
+  child: Text(appStrings.deleteDescription),
 )
 </code></pre>
-<p>النتيجة: أنيميشن اللمس الآن يُعيد رسم <strong>بكسلات فوق</strong> الزجاج فقط، ولا يُجبر إعادة حساب الضبابية.</p>
-<p><strong>نفس النمط يُطبَّق على <code>tabs.dart</code>:</strong> الـ <code>AnimatedAlign</code> (حبّة المؤشّر المنزلقة) و <code>AnimatedDefaultTextStyle</code> يُرفعان فوق لوح زجاجي ساكن.</p>
-<hr />
-<h4 id="94-lottie">⭐ 9.4 إصلاح Lottie داخل الزجاج</h4>
-<p>ثلاثة خيارات، مرتّبة من الأبسط للأفضل:</p>
-<p><strong>(أ) إطفاء الضبابية أثناء التحميل — <code>loading_button.dart</code>:</strong></p>
-<pre><code class="language-dart">appButton(
+<p><code>showAppWarningDialog(isDestructive: true)</code> assigns the destructive role to
+the confirmation action. Default Confirm, Cancel, Submit, and OK labels follow
+<code>FrostedAppLocalizations</code> when its delegate is installed. Explicit strings
+continue to take precedence.</p>
+<p>Input dialogs retain one validation path for keyboard Done and the confirmation
+button. Dialog constraints continue to account for keyboard insets without
+adding them twice.</p>
+<h3 id="bottom-sheet-usage">Bottom-sheet usage</h3>
+<pre><code class="language-dart">showAppBottomSheet(
   context: context,
-  style: state == FrostLoadingButtonState.loading
-      ? AppButtonStyle.colored   // ← بلا BackdropFilter أثناء الأنيميشن
-      : style,
-  // ...
+  title: appStrings.settings,
+  actions: FrostedButton.primary(
+    label: appStrings.save,
+    onPressed: save,
+  ),
+  child: const SettingsForm(),
 )
 </code></pre>
-<p><strong>(ب) رسم السبينر فوق الزجاج بدل داخله</strong> (نفس نمط 9.3).</p>
-<p><strong>(ج) الأفضل — جعل <code>lottie</code> اختيارية:</strong></p>
-<pre><code class="language-dart">class AppLoadingIndicator extends StatelessWidget {
-  const AppLoadingIndicator({super.key, this.size = 64.0, this.color, this.builder});
-
-  /// باني مخصّص للمؤشّر. عند تركه فارغاً يُستخدم مؤشّر خفيف مرسوم بـ CustomPainter.
-  final WidgetBuilder? builder;
-  // ...
-}
+<p><code>AppBottomSheet</code> animates the complete surface above <code>viewInsets.bottom</code>
+instead of inserting a large empty spacer inside its content. Its height is
+clamped to the usable viewport through <code>maxHeightFactor</code>, which defaults to
+0.92. <code>header</code> can replace the title row; <code>showCloseButton</code>, <code>showDragHandle</code>,
+and <code>closeTooltip</code> customize the default chrome.</p>
+<h3 id="performance-on-lower-end-devices">Performance on lower-end devices</h3>
+<p>Each modal owns one <code>BlurredCard</code> surface. Nested kit controls detect the glass
+ancestor and do not create another backdrop blur. Bottom sheets use
+<code>Clip.hardEdge</code> by default, avoiding anti-aliased save layers for routine
+clipping.</p>
+<p>All surfaces honor <code>FrostedPerformance</code>. In lite mode no <code>BackdropFilter</code> is
+created; the opaque fallback preserves contrast and geometry. Balanced mode
+scales sigma once. Keyboard padding uses the shared theme duration and becomes
+immediate when reduced motion is active. No FPS claim is made without
+profile-mode device measurements.</p>
+<h3 id="compatibility">Compatibility</h3>
+<p>Existing child, title, sizing, glass, drag, and dismissal parameters remain
+supported. New <code>header</code> and <code>actions</code> parameters are additive. Existing custom
+dialog children continue to render, so applications can migrate incrementally.</p>
+<h3 id="verification">Verification</h3>
+<p>Widget tests cover destructive roles, 320px width with 2x text, keyboard
+insets, a long bottom-sheet body, localized default actions, and blur counts in
+full and lite modes. Existing dialog validation, rotation, RTL, and keyboard
+tests remain part of the full suite.</p>
+<hr />
+<h2 id="frostedasyncbutton">FrostedAsyncButton</h2>
+<p><code>FrostedAsyncButton</code> is the beginner-friendly API for a button that starts a
+<code>Future</code>. It owns loading, success, error, repeat-tap prevention, feedback
+timing, and mounted checks. No controller or <code>setState</code> is required.</p>
+<h3 id="basic-usage">Basic usage</h3>
+<pre><code class="language-dart">FrostedAsyncButton(
+  title: appStrings.save,
+  icon: Icons.save_outlined,
+  onPressed: () async =&gt; repository.save(),
+  onSuccess: showSavedMessage,
+  onError: (error, stackTrace) =&gt; logger.record(error, stackTrace),
+)
 </code></pre>
-<p>مع نقل نسخة Lottie إلى حزمة مرافقة <code>frosted_ui_kit_lottie</code>. هذا يحذف <code>lottie</code> + <code>archive</code> + <code>http</code> من كل مستهلكي الحزمة.</p>
-<hr />
-<h4 id="95">9.5 تحسينات متوسطة</h4>
-<p><strong>خفض قيم sigma الافتراضية:</strong></p>
-<pre><code class="language-dart">// cards.dart — الافتراضي الحالي 10.0، معقول
-this.sigmaX = 10.0,
-this.sigmaY = 10.0,
-
-// navigation_bar.dart — 20 مبالغ فيه
-sigmaX: 12, sigmaY: 12,   // بدل 20
-</code></pre>
-<p><strong>تخزين الـ Border مؤقتاً — <code>app_themes.dart</code>:</strong></p>
-<pre><code class="language-dart">// بدل إنشاء Border جديد في كل build
-static final Map&lt;Color, Border&gt; _borderCache = {};
-static Border border(BuildContext context) {
-  final c = borderColor(context);
-  return _borderCache.putIfAbsent(c, () =&gt; Border.all(color: c));
-}
-</code></pre>
-<p><strong>إضافة <code>RepaintBoundary</code></strong> حول شريط التنقل وشريط العنوان في <code>base_widget.dart</code>.</p>
-<p><strong>تثبيت الاعتماديات — <code>pubspec.yaml</code>:</strong></p>
-<pre><code class="language-yaml">material_ui: ^&lt;الإصدار_الفعلي&gt;      # بدل any
-cupertino_ui: ^&lt;الإصدار_الفعلي&gt;     # بدل any
-</code></pre>
-<p><strong>حذف الكود التجريبي:</strong> انقل <code>lib/main.dart</code> و <code>lib/src/features/home/</code> إلى <code>example/</code>.</p>
-<hr />
-<h4 id="96-v20">9.6 تغييرات مقترحة لـ v2.0 (كاسرة للتوافق)</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">التغيير</th>
-<th style="text-align: left;">السبب</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>AppButtonStyle.colored</code> كنمط افتراضي بدل <code>glass</code></td>
-<td style="text-align: left;">كل زر يُكتب بدون تحديد نمط يحصل على <code>BackdropFilter</code> صامت</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>AppTextField.useGlass = false</code> افتراضياً</td>
-<td style="text-align: left;">النماذج عادة فوق سطح معتم — الضبابية غير مرئية أصلاً وتُدفع كلفتها</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>lottie</code> كاعتمادية اختيارية</td>
-<td style="text-align: left;">حجم الحزمة</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h4 id="97-frosted_ui_kitmd">9.7 قاعدة توثيقية مقترحة لـ <code>FROSTED_UI_KIT.md</code></h4>
-<blockquote>
-<p><strong>قاعدة الميزانية الزجاجية:</strong> الزجاج مخصّص للأسطح التي تطفو <strong>فوق صور أو تدرّجات لونية</strong>. فوق سطح معتم، الضبابية تُكلّف بدون أن تُرى.
-<strong>لا تتجاوز 3 أسطح زجاجية مرئية في نفس الوقت في الشاشة الواحدة.</strong> استخدم <code>FrostedListSection</code> (ضبابية واحدة مشتركة) بدل بطاقات زجاجية متعدّدة، واستخدم <code>AppButtonStyle.colored</code> للأزرار الثانوية.</p>
-</blockquote>
-<hr />
-<h3 id="10">10. خطة القياس (للتحقق قبل وبعد)</h3>
-<pre><code class="language-bash"># 1. تشغيل في وضع profile على جهاز حقيقي (وليس محاكي)
-flutter run --profile
-
-# 2. في DevTools → Performance:
-#    راقب سطر &quot;Raster&quot; تحديداً (وليس &quot;UI&quot;).
-#    إذا كان Raster &gt; 8ms فالمشكلة GPU-bound → أي مشكلة BackdropFilter.
-
-# 3. طبقة الأداء المرئية على الجهاز
-flutter run --profile --dart-define=...   # ثم فعّل PerformanceOverlay
-
-# 4. تتبّع تفصيلي لعمليات الرسم
-flutter run --profile --trace-skia
-
-# 5. تحليل حجم الحزمة (لقياس أثر إزالة lottie)
-flutter build apk --analyze-size --target-platform android-arm64
-</code></pre>
-<p><strong>اختبار A/B سريع بعد تطبيق 9.2:</strong>
-بدّل <code>blurEnabled</code> بين <code>true</code> و <code>false</code> وقارن سطر الـ Raster. الفرق بينهما هو <strong>الكلفة الحقيقية للزجاج على ذلك الجهاز بالضبط</strong> — وهذا أدقّ بكثير من أي تقدير نظري في هذا التقرير.</p>
-<p><strong>أجهزة الاختبار المقترحة:</strong>
-- جهاز مرجعي منخفض: Android بـ Snapdragon 4xx / Mali-G52 (يمثّل شريحة واسعة من مستخدمي السوق العراقي)
-- جهاز مرجعي متوسط: Snapdragon 6xx/7xx
-- iPhone حديث كمرجع أعلى</p>
-<hr />
-<h3 id="11">11. الحكم النهائي</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">السؤال</th>
-<th style="text-align: left;">الجواب</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>هل تزيد استهلاك الموارد؟</strong></td>
-<td style="text-align: left;">نعم — بشكل ملموس، والزيادة على <strong>GPU/raster</strong>، وليست على RAM أو CPU</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>هل هناك تسريب ذاكرة؟</strong></td>
-<td style="text-align: left;">لا. التخلّص من الـ controllers سليم وموثّق</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>هل تصلح للإنتاج كما هي؟</strong></td>
-<td style="text-align: left;">على الأجهزة الراقية: نعم. على الأجهزة المتوسطة والضعيفة: ليس بالإعدادات الافتراضية الحالية</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>هل المشكلة قابلة للإصلاح؟</strong></td>
-<td style="text-align: left;">نعم، وبشكل مركزي — أغلب الربح يأتي من <code>cards.dart</code> + <code>base_widget.dart</code> + <code>navigation_bar.dart</code></td>
-</tr>
-</tbody>
-</table>
-<h4 id="_1">خارطة طريق مقترحة</h4>
-<p><strong>المرحلة 1 — لا تكسر التوافق، أعلى ربح (يوم عمل تقريباً):</strong>
-1. <code>BackdropGroup</code> + <code>BackdropFilter.grouped</code> (بند 9.1)
-2. <code>FrostedPerformance</code> وضع الأداء العام (بند 9.2)
-3. إطفاء ضبابية زر التحميل أثناء الـ loading (بند 9.4-أ)
-4. خفض sigma شريط التنقل من 20 إلى 12</p>
-<p><strong>المرحلة 2 — إعادة هيكلة موضعية (2–3 أيام):</strong>
-5. إخراج أنيميشن شريط التنقل والتبويبات من داخل الطبقة المضببة (بند 9.3)
-6. <code>RepaintBoundary</code> + تخزين الـ Border مؤقتاً
-7. تثبيت <code>material_ui</code> و <code>cupertino_ui</code>، ونقل الكود التجريبي إلى <code>example/</code></p>
-<p><strong>المرحلة 3 — v2.0:</strong>
-8. تغيير الأنماط الافتراضية (<code>colored</code> للأزرار، <code>useGlass: false</code> للحقول)
-9. فصل <code>lottie</code> إلى حزمة مرافقة
-10. توثيق "قاعدة الميزانية الزجاجية" في الدليل الرسمي</p>
-<hr />
-<h3 id="_2">المصادر</h3>
-<ul>
-<li><a href="https://api.flutter.dev/flutter/widgets/BackdropFilter-class.html">BackdropFilter class — Flutter API</a></li>
-<li><a href="https://api.flutter.dev/flutter/widgets/BackdropGroup-class.html">BackdropGroup class — Flutter API</a></li>
-<li><a href="https://api.flutter.dev/flutter/widgets/BackdropFilter/BackdropFilter.grouped.html">BackdropFilter.grouped constructor — Flutter API</a></li>
-<li><a href="https://flutter.dev/blog/whats-new-in-flutter-3-29">What's new in Flutter 3.29 — Flutter Blog</a></li>
-<li><a href="https://github.com/flutter/flutter/issues/32804">flutter#32804 — BackdropFilter performance issue</a></li>
-<li><a href="https://github.com/flutter/flutter/issues/126353">flutter#126353 — Impeller Blur BackdropFilter performance degradation</a></li>
-</ul>
-<hr />
-<h2 id="frosted-ui-kit">تقرير مراجعة استهلاك الموارد — Frosted UI Kit</h2>
-<p>التاريخ: 2026-09-11 | نسخة pubspec: 1.0.2 | النطاق: الكود المحلي بحالته الحالية، بما فيه الملفات غير المتتبعة.</p>
-<h3 id="_3">الحكم</h3>
-<p>نعم، استخدام المكوّنات الزجاجية يمكن أن يزيد كلفة الرسم مقارنة بواجهات بتعبئة عادية. المرشح الأساسي هو ضبابية الخلفية، خصوصاً عند تمرير محتوى خلفها، أو زيادة مساحتها وعددها وتداخلها. مقدار الزيادة غير مقاس هنا؛ لا يوجد دليل يبرر نسبة محددة للبطارية أو الذاكرة أو حكماً عاماً بأن البكج لا يصلح للأجهزة المتوسطة.</p>
-<p>إضافة dependency وحدها لا تعني تشغيل بلور مستمر. الكلفة التشغيلية ترتبط بالمكوّنات المبنية والمشهد المعروض والحركات النشطة. الشاشة الساكنة ليست بالضرورة تعيد الرسم باستمرار.</p>
-<p><strong>التوصية:</strong> استخدام انتقائي للزجاج، توفير تعطيل فعلي مركزي له، ثم اختبار مشاهد واقعية على أجهزة مستهدفة قبل اعتماد الإعدادات الافتراضية للإنتاج.</p>
-<h3 id="_4">النطاق وحدود الإثبات</h3>
-<p>قُرئت تعليمات <code>.agents/AGENTS.md</code> والدليل <code>doc/FROSTED_UI_KIT.md</code>، وروجعت مكوّنات العرض المركزية، المتحكمات، الاعتماديات والاختبارات. تعذر فتح رابط Claude؛ النسخة المحلية كانت متاحة. يوجد تقرير سابق <code>doc/PERFORMANCE_ANALYSIS.md</code> وملف <code>frosted_performance.dart</code> غير متتبعين؛ هذا التقرير مستقل ويحافظ عليهما.</p>
-<p>هذه مراجعة كود مع فحوص تحليل واختبار، وليست benchmark. لم تُقَس FPS أو طاقة أو ذاكرة GPU أو حجم APK، ولم يُجرَ profiling على هاتف. الأولويات أدناه تقدير هندسي وليست نتائج زمنية.</p>
-<h3 id="_5">أثر الموارد</h3>
-<table>
-<thead>
-<tr>
-<th>المورد</th>
-<th>التأثير المتوقع</th>
-<th>ما يرفع الكلفة</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>الرسم / GPU</td>
-<td>المرشح الرئيسي لزيادة الكلفة</td>
-<td>بلور واسع، عدة أسطح، خلفية متحركة أو تمرير خلفها</td>
-</tr>
-<tr>
-<td>CPU</td>
-<td>بناء وتخطيط المكوّنات ومعالجة الحركة وتجهيز الرسم</td>
-<td>عناصر كثيرة غير كسولة، تغييرات الحالة والحركات المتزامنة</td>
-</tr>
-<tr>
-<td>الذاكرة</td>
-<td>قد ترتفع للطبقات والموارد الرسومية وكاش الحركات</td>
-<td>مساحة بالبكسل الفعلي، عدد الطبقات، كاش إضافي</td>
-</tr>
-<tr>
-<td>البطارية والحرارة</td>
-<td>قد ترتفع مع استمرار العمل الإضافي</td>
-<td>تحميل طويل، تمرير متكرر، معدل تحديث عالٍ</td>
-</tr>
-<tr>
-<td>حجم التطبيق</td>
-<td>يتأثر بالكود والأصول والاعتماديات المحتفظ بها في البناء</td>
-<td>يجب قياس release؛ حجم dependency ليس حجم الزيادة النهائي</td>
-</tr>
-<tr>
-<td>الشبكة</td>
-<td>مؤشّر التحميل يستخدم أصلاً محلياً</td>
-<td>طلبات المصادقة تأتي من استخدام repository، وليست شرطاً للزجاج</td>
-</tr>
-</tbody>
-</table>
-<p>زمن Raster ليس قراءة مباشرة لنسبة انشغال GPU؛ ارتفاعه يستدعي فحص التتبع قبل تحديد السبب. كذلك لا يصح استبعاد CPU وRAM لمجرد أن البلور هو المرشح الأكبر.</p>
-<h3 id="_6">النتائج من الكود</h3>
-<h4 id="1_1">1. نقطة البلور مركزية، لكنها بلا تعطيل صريح — أولوية عالية</h4>
-<p><code>lib/src/shared/widgets/cards.dart:98</code> و<code>:108</code>: مساران لإنشاء <code>BackdropFilter</code>؛ البطاقة تستخدم واحداً منهما بحسب الشكل، لا فلترين معاً. الافتراضي <code>sigmaX/Y = 10</code> في السطرين 22–23. يوجد clipping حول الفلتر، وهذا اختيار جيد لتحديد المساحة. حتى عندما تكون sigma صفراً يستمر إنشاء widget الفلتر؛ لا يوجد مسار صريح لتجاوزه.</p>
-<p>بما أن معظم الأسطح تعتمد على <code>BlurredCard</code>، تحسينها ينعكس على عدة مكوّنات. قيمة sigma ليست وحدها ميزانية الأداء؛ بطاقة كبيرة قد تكون أكلف من عدة أزرار صغيرة. توثيق Flutter يصف البلور بأنه عملية مكلفة نسبياً. <a href="https://api.flutter.dev/flutter/widgets/BackdropFilter-class.html">مرجع BackdropFilter</a>.</p>
-<h4 id="2_1">2. وضع الأداء الموجود لا يغيّر أي سطح حالياً — أولوية عالية</h4>
-<p><code>lib/src/utils/frosted_performance.dart</code> يعرّف Full/Balanced/Lite، لكن البحث في الكود لم يجد مستهلكاً لهذه الإعدادات خارج الملف نفسه، وهو غير مُصدَّر من <code>lib/frosted_ui_kit.dart</code>. لذلك وضع <code>FrostedPerformance.lite</code> حول التطبيق لا يعطّل بلور البكج الحالي.</p>
-<p>الملف يستورد <code>material_ui</code> وهي ليست dependency معلنة في pubspec الحالي؛ التحليل أبلغ عنها. الحل المقترح عند التنفيذ: الاستيراد من Flutter مباشرة، ربط الإعدادات بالبطاقة المركزية، تصدير الواجهة، وتمرير overrides عبر المكوّنات والمساعدات. توفير تعبئة بديلة مقروءة عند تعطيل البلور، مع الحفاظ على القياسات. ادعاء أن نصف sigma يعني نصف كلفة GPU غير مثبت ويجب حذفه من التوثيق.</p>
-<h4 id="3_1">3. بعض الإعدادات تضيف زجاجاً تلقائياً — أولوية عالية</h4>
-<table>
-<thead>
-<tr>
-<th>المكوّن</th>
-<th>الوضع الفعلي</th>
-<th>الإجراء المقترح</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>AppButton</td>
-<td><code>glass</code> افتراضياً، buttons.dart:127</td>
-<td>اختيار colored/outlined/text عندما لا تحتاج ضبابية</td>
-</tr>
-<tr>
-<td>AppFloatingActionButton</td>
-<td><code>glass</code> افتراضياً، buttons.dart:594</td>
-<td>نفس المبدأ حسب الخلفية</td>
-</tr>
-<tr>
-<td>AppTextField</td>
-<td><code>useGlass = true</code>، inputs.dart:77</td>
-<td>استخدام <code>AppTextField(useGlass: false)</code> للنماذج المناسبة</td>
-</tr>
-<tr>
-<td>Navigation bar</td>
-<td>sigma ثابتة 20، navigation_bar.dart:61</td>
-<td>جعلها قابلة للضبط وتجربة قيمة أقل بصرياً وأدائياً</td>
-</tr>
-<tr>
-<td>Bottom sheet</td>
-<td>sigma افتراضية 15</td>
-<td>تقليل المساحة أو الشدة إذا أثبت القياس الحاجة</td>
-</tr>
-<tr>
-<td>FrostLoadingButton</td>
-<td><code>colored</code> افتراضياً، loading_button.dart:51</td>
-<td>لا توجد مشكلة بلور افتراضية هنا؛ تظهر عند اختيار glass</td>
-</tr>
-</tbody>
-</table>
-<p>تغيير افتراضات الأزرار والحقول يغيّر الشكل المتوقع للمستخدمين؛ الأفضل بدءاً إضافة خيارات متوافقة مع السلوك الحالي. الخلفية الموحدة لا تستفيد بصرياً كثيراً من البلور.</p>
-<h4 id="4_1">4. الطبقات المتداخلة والتجميع — أولوية عالية مشروطة</h4>
-<p><code>BaseWidget</code> يضع الشريطين فوق المحتوى داخل Stack. كذلك يمكن للمستخدم وضع أزرار أو حقول زجاجية داخل بطاقة زجاجية. هذه مشاهد تحتاج مراجعة عدد الفلاتر وتداخلها.</p>
-<p>يمكن تجربة <code>BackdropGroup</code> و<code>BackdropFilter.grouped</code> للعناصر المتوافقة غير المتداخلة، مثل بطاقات قائمة منفصلة. <strong>لا تجمع كل زجاج الشاشة بمفتاح واحد تلقائياً:</strong> Flutter يحذر من مشاركة المفتاح بين فلاتر متداخلة لأنها قد تغيّر النتيجة البصرية. الأسطح المتراكبة والحوارات تحتاج حدود مجموعات مناسبة. <a href="https://api.flutter.dev/flutter/widgets/BackdropFilter-class.html">قواعد التجميع</a>.</p>
-<p>لا يوجد ضمان أن كل N فلاتر عشوائية تتحول إلى عملية واحدة. يجب التحقق أيضاً من الحد الأدنى المدعوم لـFlutter في pubspec قبل إضافة API؛ ملف lock المحلي ليس عقد توافق لكل مستهلك.</p>
-<h4 id="5">5. القوائم الكبيرة مبنية دفعة واحدة — أولوية متوسطة إلى عالية حسب الاستخدام</h4>
-<p><code>FrostedListSection</code> يستخدم بطاقة واحدة تحيط بـColumn لجميع children، مع فواصل. هذا جيد لأقسام إعدادات قصيرة لأنه لا ينشئ بلوراً لكل صف عادي؛ لكنه ليس قائمة كسولة للمئات أو الآلاف من العناصر.</p>
-<p>للقوائم الكبيرة، يوصى بواجهة builder أو slivers تبني العناصر المرئية، ثم اختيار خلفية واحدة أو تجميع مدروس للأسطح. تقليل الفلاتر لا يعالج وحده CPU والذاكرة إذا استمر بناء جميع الصفوف. <a href="https://docs.flutter.dev/perf/best-practices">توصيات Flutter للقوائم والتخطيط</a>.</p>
-<h4 id="6">6. الحركة والتحميل — أولوية متوسطة، بالقياس</h4>
-<p>الشريط والتبويبات يستخدمان حركات انتقالية، ومؤشر Lottie يستمر أثناء التحميل. ملف التحميل المحلي صغير: <strong>3072 بايت</strong>، طبقتا أشكال، و<code>fr = 21</code>؛ هذا معدل الملف وليس إثباتاً لعدد إطارات الشاشة الفعلي. لا توجد صور مضمنة في مصفوفة assets فيه.</p>
-<p>وجود child متحرك تحت <code>BackdropFilter</code> لا يعني أن هذا child يُطمَس؛ الفلتر يعالج المحتوى المرسوم خلفه ثم يُرسم الطفل. لا يكفي موقع الطفل في الشجرة لإثبات إعادة حساب البلور كل frame. فصل المحتوى المتحرك أو استخدام RepaintBoundary تجربة تحسين محتملة، وليس ضماناً لكاش ثابت للخلفية.</p>
-<p>يوصى بإتاحة loadingBuilder، واحترام إعداد تقليل الحركة، وإيقاف الحركة للشاشات غير النشطة حسب طريقة إبقائها في الشجرة. خيارات كاش Lottie قد تخفف العمل مقابل ذاكرة إضافية؛ لا تفعّلها عشوائياً لهذا الأصل الصغير. <a href="https://pub.dev/packages/lottie">توثيق Lottie من ناشر الحزمة</a>.</p>
-<h4 id="7_1">7. دورة الحياة والذاكرة — إيجابيات ومخاطر تحتاج اختباراً</h4>
-<p>متحكمات النص في نماذج المصادقة تُتلف في dispose، وكذلك AnimationController لعناصر التنقل. AuthView يزيل listener ويتلف المتحكم إذا أنشأه محلياً. هذه نقاط سليمة، لكنها لا تثبت غياب كل تسريب ذاكرة.</p>
-<p>AuthView يحتفظ بمتحكم <code>late final</code> من initState ولا يعالج استبدال المتحكم الوارد عبر didUpdateWidget؛ عند تغيير الهوية مع إبقاء State نفسه قد يبقى مرتبطاً بالمتحكم القديم. كذلك عمليات AuthController غير المتزامنة قد تُكمل وتستدعي notifyListeners بعد إتلافه عند مغادرة الشاشة. هذه مخاطر صحة ودورة حياة تستحق اختبارات مخصصة؛ لم تُثبت كتسريب بقياس heap.</p>
-<p>التحسين المقترح: التعامل مع تغيير هوية المتحكم وملكيته، وحماية الإكمال بعد dispose أو إلغاء العمليات عندما يدعم مصدرها ذلك. اختبار فتح وإغلاق المصادقة أثناء طلب بطيء وتبديل المتحكم.</p>
-<h3 id="_7">تصحيح التقرير السابق</h3>
-<table>
-<thead>
-<tr>
-<th>الادعاء</th>
-<th>التقييم الحالي</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>الضرر على GPU فقط وليس RAM أو CPU</td>
-<td>غير دقيق؛ توجد موارد أخرى محتملة</td>
-</tr>
-<tr>
-<td>لا يوجد تسريب ذاكرة قطعاً</td>
-<td>غير مثبت دون profiling واختبارات دورة حياة</td>
-</tr>
-<tr>
-<td>البكج لا يصلح للأجهزة المتوسطة</td>
-<td>حكم أوسع من الأدلة</td>
-</tr>
-<tr>
-<td>تجميع الشاشة كلها حل آمن</td>
-<td>يجب مراعاة التداخل والمفاتيح</td>
-</tr>
-<tr>
-<td>تحريك الطفل يعني إعادة البلور حتماً</td>
-<td>يحتاج تتبعاً؛ الطفل ليس هو الخلفية المفلترة</td>
-</tr>
-<tr>
-<td>نصف sigma = نصف الكلفة</td>
-<td>لا توجد علاقة خطية مضمونة</td>
-</tr>
-<tr>
-<td>لا تتجاوز ثلاث بطاقات</td>
-<td>ليست قاعدة Flutter ولا حدّاً مثبتاً</td>
-</tr>
-<tr>
-<td>material_ui وcupertino_ui معرفتان بـany</td>
-<td>غير موجودتين في pubspec الحالي؛ توجد مشكلة import في ملف الأداء فقط</td>
-</tr>
-<tr>
-<td>Raster أكبر من 8ms يعني مشكلة blur</td>
-<td>الميزانية تعتمد على التحديث، والسبب يحتاج تتبعاً</td>
-</tr>
-<tr>
-<td>كاش Map دائم للـBorder تحسين مطلوب</td>
-<td>أولوية ضعيفة دون قياس، وقد يضيف احتفاظاً غير محدود بالألوان</td>
-</tr>
-</tbody>
-</table>
-<p>لا يُنصح بإضافة RepaintBoundary إلى كل عنصر؛ كل حدود إضافية قد ترفع كلفة الطبقات والذاكرة. كذلك نقل أمثلة من lib إلى example يحسن تنظيم الحزمة، لكنه لا يثبت تخفيض RAM للتطبيق المنتج لأن الكود غير المستخدم قد يُستبعد في البناء.</p>
-<h3 id="_8">نتائج الفحوص المنفذة</h3>
-<ul>
-<li><code>flutter analyze --no-pub</code>: اكتمل برمز خروج 1، وأبلغ عن ملاحظتين info موجودتين مسبقاً: <code>implementation_imports</code> في <code>example/lib/main.dart:3</code>، و<code>depend_on_referenced_packages</code> في <code>lib/src/utils/frosted_performance.dart:1</code>.</li>
-<li><code>flutter test --no-pub</code>: فشل اختبار الجذر القديم <code>Counter increments smoke test</code> عند <code>test/widget_test.dart:19</code> لأنه يبحث عن نص <code>0</code> غير موجود في التطبيق الحالي. هذا ليس قياساً للأداء ولا دليلاً على خلل البلور.</li>
-<li>محاولة <code>flutter --version</code> لم تكتمل بسبب منع الكتابة في كاش SDK خارج مساحة العمل؛ لا يُنسب رقم SDK غير متحقق إليه.</li>
-<li>لم تُعدّل ملفات Dart، ولم تُنفذ تحسينات أو يصلَح الاختبار ضمن هذه المراجعة. التغيير الوحيد المقصود هو إنشاء هذا التقرير.</li>
-</ul>
-<h3 id="_9">خطة تحسين قابلة للتحقق</h3>
+<p>The application supplies localized <code>title</code>, <code>loadingLabel</code>, <code>successLabel</code>,
+and <code>errorLabel</code> values when the defaults do not match its language.</p>
+<h3 id="state-lifecycle">State lifecycle</h3>
 <ol>
-<li><strong>تفعيل وضع أداء حقيقي:</strong> ربط الإعدادات بالبطاقة، تجاوز الفلتر عند التعطيل، تعبئة بديلة مناسبة، تصدير API وتوثيقها. تحقق widget test من غياب BackdropFilter في Lite ومن بقاء الأبعاد، واختبار بصري للتباين.</li>
-<li><strong>ضبط الكلفة حسب المشهد:</strong> خيارات sigma للشريط، تقليل زجاج الحقول والأزرار الداخلية، تجميع غير المتداخل فقط. تحقق من شكل التداخل والحوارات قبل اعتماد التغيير.</li>
-<li><strong>معالجة القوائم الكبيرة:</strong> builder/slivers مع اختبار تمرير واقعي، مع الحفاظ على API الحالية للأقسام القصيرة.</li>
-<li><strong>تحسين الحركة عند ظهور مشكلة:</strong> قياس مناطق إعادة الرسم ثم تجربة عزلها، وإضافة تقليل الحركة وloadingBuilder عند الحاجة.</li>
-<li><strong>تصحيح دورة الحياة والفحوص:</strong> متحكمات المصادقة والإكمال المتأخر، استيراد الأداء، والاختبار القديم. فصل هذه الإصلاحات عن ادعاءات مكاسب الرسم.</li>
+<li>The idle button accepts one activation.</li>
+<li>Its state changes to loading synchronously, before awaiting the callback.
+   A second pointer, keyboard, or semantics activation is rejected.</li>
+<li>A completed Future shows success; a thrown error shows error and is passed
+   to <code>onError</code> with its stack trace.</li>
+<li>The button returns to idle after <code>feedbackDuration</code>, which defaults to 1.2
+   seconds. Set it to <code>null</code> to retain the terminal state while the widget
+   remains mounted.</li>
 </ol>
-<h3 id="_10">بروتوكول القياس قبل وبعد</h3>
-<p>استخدم تطبيق example أو harness ثابتاً في وضع profile على جهاز حقيقي من كل فئة مستهدفة. سجّل الجهاز، OS، إصدار Flutter، محرك الرسم، الدقة، معدل التحديث والسطوع. اختبر الويب منفصلاً بأدوات المتصفح. القياس في debug غير ممثل لأداء release. <a href="https://docs.flutter.dev/tools/devtools/performance">دليل Performance في DevTools</a>.</p>
-<p>المشاهد المطلوبة: شاشة ساكنة؛ نموذج به عدة حقول؛ تمرير قائمة خلف الشريطين؛ بطاقات فوق صورة أو خلفية متحركة؛ حوار وsheet فوق زجاج؛ تحميل مستمر؛ دخول وخروج متكرر أثناء طلب مصادقة.</p>
-<p>قارن: الإعداد الحالي، ثم تعطيل البلور فعلياً بعد تنفيذه، ثم sigma أخف، ثم تجميع آمن. غيّر عاملاً واحداً كل مرة مع نفس المحتوى والحركة. افصل بدء التشغيل البارد عن القياس بعد الإحماء، وكرر كل تجربة ثلاث مرات على الأقل وبترتيب متبادل لتقليل أثر الحرارة.</p>
-<p>سجّل UI وRaster عند p50/p95/p99، والإطارات المتأخرة، وDart heap والذاكرة الكلية/الأصلية المتاحة. ميزانية الإطار نحو 16.67ms عند 60Hz، و11.11ms عند 90Hz، و8.33ms عند 120Hz؛ لا تجمع UI وRaster ببساطة لأنهما يعملان ضمن pipeline. لا تعتمد المتوسط وحده لإخفاء التقطيع.</p>
-<p>للطاقة، قارن تجربة تفاعل موحدة لعدة دقائق مع نفس الظروف، وسجّل الحرارة والطاقة بأدوات المنصة؛ فرق البطارية اللحظي ليس دليلاً كافياً. للذاكرة، كرر فتح وإغلاق الشاشات بعد إحماء الكاش وقارن الاستقرار بعد GC؛ النمو الأولي للكاش ليس تسريباً بحد ذاته.</p>
-<p>لحجم Android، نفذ من example بناء release مماثلاً قبل وبعد باستخدام <code>flutter build apk --analyze-size --target-platform android-arm64</code>. لا تفترض أن إزالة lottie تزيل كل اعتمادياتها العابرة، فقد يستخدمها التطبيق من طريق آخر.</p>
+<p>The widget never opens a Dialog, SnackBar, or retry UI automatically. Those
+decisions remain in application code.</p>
+<h3 id="lifecycle-and-late-results">Lifecycle and late results</h3>
+<p>Disposing the widget cancels its feedback timer and invalidates the active
+operation generation. The application Future itself is not canceled because a
+generic Dart Future has no cancellation contract. When that Future completes
+after unmount, the result is consumed without <code>setState</code>, controller updates,
+or success/error callbacks.</p>
+<p>For cancellable network work, cancellation remains the responsibility of the
+repository or request client. Pass its cancellation signal through the
+application callback.</p>
+<h3 id="appearance-and-role">Appearance and role</h3>
+<p><code>style</code> controls appearance and <code>role</code> controls semantic colors, matching
+<code>AppButton</code>. A destructive asynchronous action can therefore use a glass
+surface without losing its error color family:</p>
+<pre><code class="language-dart">FrostedAsyncButton(
+  title: appStrings.deleteAccount,
+  role: FrostedActionRole.destructive,
+  style: AppButtonStyle.glass,
+  onPressed: accountRepository.delete,
+)
+</code></pre>
+<h3 id="choosing-the-correct-api">Choosing the correct API</h3>
 <table>
 <thead>
 <tr>
-<th>القياس</th>
-<th>الحالي</th>
-<th>Lite</th>
-<th>تحسينات أخرى</th>
+<th>Need</th>
+<th>API</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>UI / Raster p95</td>
-<td>لم يُقَس</td>
-<td>لم يُقَس</td>
-<td>لم يُقَس</td>
+<td>Run one Future and show automatic feedback</td>
+<td><code>FrostedAsyncButton</code></td>
 </tr>
 <tr>
-<td>نسبة الإطارات المتأخرة</td>
-<td>لم تُقَس</td>
-<td>لم تُقَس</td>
-<td>لم تُقَس</td>
+<td>Application code drives every state manually</td>
+<td><code>FrostLoadingButton</code></td>
 </tr>
 <tr>
-<td>الذاكرة والطاقة</td>
-<td>لم تُقَس</td>
-<td>لم تُقَس</td>
-<td>لم تُقَس</td>
-</tr>
-<tr>
-<td>حجم release</td>
-<td>لم يُقَس</td>
-<td>لم يُقَس</td>
-<td>لم يُقَس</td>
+<td>Normal synchronous action</td>
+<td><code>FrostedButton</code> or <code>AppButton</code></td>
 </tr>
 </tbody>
 </table>
-<p>القرار الإنتاجي يبنى على هذه النتائج لكل مشهد وجهاز. الكود الحالي يوضح أين نبدأ التحسين، لكنه لا يحدد وحده حجم الزيادة في موارد جهاز المستخدم.</p>
+<p><code>FrostLoadingButtonController</code> remains supported and is not deprecated.</p>
+<h3 id="verification_1">Verification</h3>
+<p>Widget tests cover synchronous repeat blocking, success and automatic reset,
+captured errors and retry, disabled semantics, and completion after unmount.
+The full package test suite and <code>flutter analyze</code> must pass before release.</p>
       </div>
     </div>
 

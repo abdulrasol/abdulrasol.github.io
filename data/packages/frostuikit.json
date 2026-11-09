@@ -11,9 +11,11 @@
   "logo": "/assets/packages/frostuikit/dart.png",
   "content_file": "data/packages/frostuikit.md",
   "doc_sources": [
+    "FROSTED_QUICK_START.md",
     "FROSTED_UI_KIT.md",
     "FROSTED_THEME.md",
-    "GLASS_SURFACES.md"
+    "GLASS_SURFACES.md",
+    "FROSTED_ADAPTIVE_MODALS.md"
   ],
   "screenshots": []
 }

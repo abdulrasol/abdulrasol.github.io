@@ -1,16 +1,41 @@
 #!/usr/bin/env python3
 import json
 import os
+import re
+import unicodedata
 from pathlib import Path
 from datetime import datetime
 import markdown
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 DOC_TITLES = {
+    "FROSTED_QUICK_START.md": "🚀 Quick Start",
     "FROSTED_THEME.md": "🎨 Central Theme Tokens (FrostedThemeData)",
     "GLASS_SURFACES.md": "🔬 Shared Glass Rendering Architecture",
     "PERFORMANCE_ANALYSIS.md": "📊 Performance Analysis & Benchmarks",
 }
+
+
+def markdown_anchor(text):
+    """Return the GitHub-Markdown-compatible anchor used by Python-Markdown."""
+    normalized = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
+    normalized = normalized.lower()
+    normalized = re.sub(r"[^a-z0-9 -]", "", normalized)
+    return re.sub(r"\s+", "-", normalized).strip("-")
+
+
+def rewrite_internal_doc_links(markdown_text, anchor_by_filename):
+    """Point relative documentation links at sections in the assembled page."""
+    pattern = re.compile(r"(\]\()(?P<target>[A-Za-z0-9_.-]+\.md)(?P<suffix>[^)]*)(\))")
+
+    def replace(match):
+        target = match.group("target")
+        anchor = anchor_by_filename.get(target)
+        if anchor is None:
+            return match.group(0)
+        return f"{match.group(1)}#{anchor}{match.group('suffix')}{match.group(4)}"
+
+    return pattern.sub(replace, markdown_text)
 
 def find_package_source_dir(package_id):
     candidates = [
@@ -63,6 +88,7 @@ def assemble_markdown_from_docs(pkg_dir, preferred_sources=None):
             ordered_files.append(name)
             
     sections = []
+    anchor_by_filename = {}
     for name in ordered_files:
         file_path = all_files[name]
         content = file_path.read_text(encoding="utf-8").strip()
@@ -72,6 +98,12 @@ def assemble_markdown_from_docs(pkg_dir, preferred_sources=None):
         # Primary catalog keeps its original layout
         if name == "FROSTED_UI_KIT.md":
             sections.append(content)
+            first_heading = next(
+                (line[2:].strip() for line in content.splitlines() if line.startswith("# ")),
+                None,
+            )
+            if first_heading:
+                anchor_by_filename[name] = markdown_anchor(first_heading)
         else:
             # Adjust headings for secondary doc sections
             title = DOC_TITLES.get(name)
@@ -86,6 +118,7 @@ def assemble_markdown_from_docs(pkg_dir, preferred_sources=None):
                     if not first_h1_handled and line.startswith("# "):
                         clean_title = title if title else line.lstrip("#").strip()
                         adjusted.append(f"## {clean_title}")
+                        anchor_by_filename[name] = markdown_anchor(clean_title)
                         first_h1_handled = True
                         continue
                     # Bump existing subheadings down by 1 level
@@ -96,7 +129,10 @@ def assemble_markdown_from_docs(pkg_dir, preferred_sources=None):
             section_md = "\n".join(adjusted)
             sections.append(f"\n\n---\n\n{section_md}")
             
-    return "\n\n".join(sections) if sections else None
+    assembled = "\n\n".join(sections) if sections else None
+    if assembled is None:
+        return None
+    return rewrite_internal_doc_links(assembled, anchor_by_filename)
 
 def localize(data, lang="en"):
     """Resolve _en / _ar suffixed keys based on selected language."""
