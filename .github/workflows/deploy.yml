@@ -44,7 +44,9 @@ jobs:
           flutter build web --release --base-href "/packages/frostuikit/demo/"
           mkdir -p ../../packages/frostuikit/demo
           rm -rf ../../packages/frostuikit/demo/*
-          cp -R build/web/* ../../packages/frostuikit/demo/
+          cp -R build/web/. ../../packages/frostuikit/demo/
+          test -s ../../packages/frostuikit/demo/index.html
+          test -s ../../packages/frostuikit/demo/flutter_bootstrap.js
           cd ../..
 
       - name: Set up Python

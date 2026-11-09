@@ -591,6 +591,18 @@
 <li><a href="#verification">Verification</a></li>
 </ul>
 </li>
+<li><a href="#brand-assets">Brand Assets</a><ul>
+<li><a href="#logo">Logo</a></li>
+<li><a href="#usage-guidance">Usage guidance</a></li>
+<li><a href="#example-application-icon">Example application icon</a></li>
+</ul>
+</li>
+<li><a href="#api-stability-and-deprecation">API Stability and Deprecation</a><ul>
+<li><a href="#public-entry-point">Public entry point</a></li>
+<li><a href="#compatibility-policy">Compatibility policy</a></li>
+<li><a href="#migration-guidance">Migration guidance</a></li>
+</ul>
+</li>
 <li><a href="#frostedasyncbutton">FrostedAsyncButton</a><ul>
 <li><a href="#basic-usage">Basic usage</a></li>
 <li><a href="#state-lifecycle">State lifecycle</a></li>
@@ -600,6 +612,40 @@
 <li><a href="#verification_1">Verification</a></li>
 </ul>
 </li>
+<li><a href="#authentication-api-review">Authentication API Review</a><ul>
+<li><a href="#current-contract">Current contract</a></li>
+<li><a href="#lifecycle-correction">Lifecycle correction</a></li>
+<li><a href="#remaining-follow-up">Remaining follow-up</a></li>
+</ul>
+</li>
+<li><a href="#frosted-ui-kit-performance-policy">Frosted UI Kit Performance Policy</a><ul>
+<li><a href="#presets">Presets</a></li>
+<li><a href="#component-contract">Component contract</a></li>
+<li><a href="#choosing-a-mode-at-runtime">Choosing a mode at runtime</a></li>
+<li><a href="#measurement-protocol">Measurement protocol</a></li>
+<li><a href="#android-baseline-2026-11-08">Android baseline (2026-11-08)</a></li>
+<li><a href="#android-preset-comparison">Android preset comparison</a></li>
+<li><a href="#ios-baseline-2026-11-09">iOS baseline (2026-11-09)</a></li>
+<li><a href="#current-verification">Current verification</a></li>
+</ul>
+</li>
+<li><a href="#migration-guide">Migration Guide</a><ul>
+<li><a href="#import-boundary">Import boundary</a></li>
+<li><a href="#naming-corrections">Naming corrections</a></li>
+<li><a href="#performance-configuration">Performance configuration</a></li>
+<li><a href="#buttons">Buttons</a></li>
+<li><a href="#dialogs-and-bottom-sheets">Dialogs and bottom sheets</a></li>
+<li><a href="#app-bars-and-navigation">App bars and navigation</a></li>
+<li><a href="#release-checklist">Release checklist</a></li>
+</ul>
+</li>
+<li><a href="#package-layout-and-example-boundary">Package Layout and Example Boundary</a><ul>
+<li><a href="#package-source">Package source</a></li>
+<li><a href="#interactive-example">Interactive example</a></li>
+<li><a href="#dependency-boundary">Dependency boundary</a></li>
+</ul>
+</li>
+<li><a href="#visual-consistency">Visual Consistency</a></li>
 </ul>
 </li>
 </ul>
@@ -621,7 +667,7 @@
 
     <div class="content">
       <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
-        <img src="/assets/packages/frostuikit/dart.png" alt="Frosted UI Kit logo" style="width: 48px; height: 48px; object-fit: contain;">
+        <img src="/assets/packages/frostuikit/frosted_ui_kit_logo.png" alt="Frosted UI Kit logo" style="width: 48px; height: 48px; object-fit: contain;">
         <h1 style="margin: 0;">Frosted UI Kit</h1>
       </div>
       <p class="subtitle">A modern, highly-customizable Flutter UI kit inspired by Apple&#39;s Liquid Glass aesthetic and Telegram&#39;s modern Android redesign.</p>
@@ -673,6 +719,9 @@
 
       <div class="markdown-body">
         <h1 id="frosted-ui-kit-catalog-api-indexing">❄️ Frosted UI Kit Catalog &amp; API Indexing</h1>
+<p>For supported imports, compatibility aliases, and deprecation policy, see
+<a href="#api-stability-and-deprecation">API Stability and Deprecation</a>.
+For the shared visual surface rules, see <a href="#visual-consistency">Visual Consistency</a>.</p>
 <p>Welcome to the <strong><code>frosted_ui_kit</code></strong> Widget Catalog and Technical API Index. This document provides a complete visual reference, parameter guide, and code snippets for all components in the library.</p>
 <hr />
 <h2 id="api-widget-catalog-index">📊 API &amp; Widget Catalog Index</h2>
@@ -1370,7 +1419,9 @@ actions remain visible on regular viewports, while short or keyboard-reduced
 layouts use one scroll view. <code>FrostedAdaptiveActions</code> stacks at narrow widths
 or accessibility text scale. Warning confirmations use
 <code>FrostedActionRole.destructive</code> when <code>isDestructive</code> is true. See
-<code>FROSTED_ADAPTIVE_MODALS.md</code> for compatibility and low-end-device behavior.</p>
+<code>FROSTED_ADAPTIVE_MODALS.md</code> for compatibility and low-end-device behavior.
+See <code>FROSTED_PERFORMANCE.md</code> for the shared rendering policy, presets, and
+profile measurement protocol.</p>
 <p>Glassmorphic popup dialogs designed to alert the user, ask for confirmation, or prompt for text input.</p>
 <h4 id="available-mixin-methods">Available Mixin Methods:</h4>
 <ul>
@@ -1934,7 +1985,7 @@ surface without requiring knowledge of the repository's internal structure.</p>
 <h3 id="1-install-the-package">1. Install the package</h3>
 <p>Add the package from pub.dev to <code>pubspec.yaml</code>:</p>
 <pre><code class="language-yaml">dependencies:
-  frosted_ui_kit: ^2.0.0
+  frosted_ui_kit: ^1.2.0
 </code></pre>
 <p>Then run <code>flutter pub get</code>.</p>
 <p>For local package development only, use a path relative to your own app:</p>
@@ -2299,6 +2350,114 @@ insets, a long bottom-sheet body, localized default actions, and blur counts in
 full and lite modes. Existing dialog validation, rotation, RTL, and keyboard
 tests remain part of the full suite.</p>
 <hr />
+<h2 id="brand-assets">Brand Assets</h2>
+<p>Frosted UI Kit uses a glass droplet mark with a lavender-to-cyan highlight on
+a deep indigo field. The mark represents the library's two core ideas:
+translucent surfaces and fluid interaction.</p>
+<h3 id="logo">Logo</h3>
+<p>The source logo is available at:</p>
+<p><code>assets/brand/frosted_ui_kit_logo.png</code></p>
+<p>The same source is copied into the example app so native platform icons and
+the Flutter asset catalog remain visually aligned.</p>
+<h3 id="usage-guidance">Usage guidance</h3>
+<ul>
+<li>Use the full mark on dark or neutral backgrounds.</li>
+<li>Keep clear space around the mark equal to at least one quarter of its width.</li>
+<li>Do not recolor, stretch, crop, or add text inside the mark.</li>
+<li>For small UI sizes, use the icon without a wordmark; the mark is designed to
+  remain recognizable at compact sizes.</li>
+</ul>
+<h3 id="example-application-icon">Example application icon</h3>
+<p>The example app uses the same mark for Android, iOS, macOS, and web icons.
+Platform-specific sizes are generated from the source image to avoid separate
+variants drifting apart over time.</p>
+<hr />
+<h2 id="api-stability-and-deprecation">API Stability and Deprecation</h2>
+<h3 id="public-entry-point">Public entry point</h3>
+<p>Application code should import <code>package:frosted_ui_kit/frosted_ui_kit.dart</code>.
+The package entry point exports the supported widgets, theme data, performance
+configuration, localization types, and generic authentication types. Internal
+<code>src/</code> imports are not part of the compatibility contract.</p>
+<p>The public entry point is intentionally grouped into these API areas:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Public types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surfaces and layout</td>
+<td><code>BlurredCard</code>, <code>GlassBackdrop</code>, <code>BaseWidget</code>, <code>FrostedAdaptiveSurfaceLayout</code></td>
+</tr>
+<tr>
+<td>Navigation</td>
+<td><code>FrostedAppBar</code>, <code>FrostedNavigationBottomBar</code>, <code>FrostedNavbarController</code></td>
+</tr>
+<tr>
+<td>Buttons and loading</td>
+<td><code>AppButton</code>, <code>CircleButton</code>, <code>FrostedButton</code>, <code>FrostedAsyncButton</code>, <code>FrostLoadingButton</code></td>
+</tr>
+<tr>
+<td>Inputs and modals</td>
+<td><code>AppTextField</code>, <code>AppDialog</code>, <code>AppBottomSheet</code></td>
+</tr>
+<tr>
+<td>Design system</td>
+<td><code>FrostedThemeData</code>, <code>FrostedPerformance</code>, <code>FrostedPerformanceData</code></td>
+</tr>
+<tr>
+<td>Supporting components</td>
+<td>tabs, steppers, list tiles, loading indicators, localization, and generic auth types</td>
+</tr>
+</tbody>
+</table>
+<p>The auth data and domain exports remain public for 1.x compatibility. New
+applications should depend on the domain contracts and presentation widgets;
+the data implementations are exported only to support existing integrations.
+The authentication review and lifecycle ownership rules are documented in
+<a href="#authentication-api-review">Authentication API Review</a>.</p>
+<p>Authentication-only consumers may instead import the optional facade:</p>
+<pre><code class="language-dart">import 'package:frosted_ui_kit/auth.dart';
+</code></pre>
+<h3 id="compatibility-policy">Compatibility policy</h3>
+<p>Existing 1.x APIs are retained when a spelling or naming correction is made.
+Deprecated APIs remain available and forward to the canonical implementation.</p>
+<table>
+<thead>
+<tr>
+<th>Deprecated API</th>
+<th>Canonical API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CricleButton</code></td>
+<td><code>CircleButton</code></td>
+</tr>
+<tr>
+<td><code>BluredCard</code></td>
+<td><code>BlurredCard</code></td>
+</tr>
+<tr>
+<td><code>Cards.bluredCard</code></td>
+<td><code>Cards.blurredCard</code></td>
+</tr>
+<tr>
+<td><code>FrostedNavigationButtomBar</code></td>
+<td><code>FrostedNavigationBottomBar</code></td>
+</tr>
+</tbody>
+</table>
+<p>No deprecated API is removed as part of this compatibility pass.</p>
+<h3 id="migration-guidance">Migration guidance</h3>
+<p>Replace deprecated names when touching existing code. Projects that need a
+gradual migration can keep the old names temporarily; behavior and layout are
+unchanged because the aliases delegate to the same implementation.</p>
+<p>Breaking changes require a changelog entry, migration notes, and a major
+version.</p>
+<hr />
 <h2 id="frostedasyncbutton">FrostedAsyncButton</h2>
 <p><code>FrostedAsyncButton</code> is the beginner-friendly API for a button that starts a
 <code>Future</code>. It owns loading, success, error, repeat-tap prevention, feedback
@@ -2375,6 +2534,456 @@ surface without losing its error color family:</p>
 <p>Widget tests cover synchronous repeat blocking, success and automatic reset,
 captured errors and retry, disabled semantics, and completion after unmount.
 The full package test suite and <code>flutter analyze</code> must pass before release.</p>
+<hr />
+<h2 id="authentication-api-review">Authentication API Review</h2>
+<h3 id="current-contract">Current contract</h3>
+<p>The authentication module is generic at its domain boundary:</p>
+<ul>
+<li><code>UserEntity</code> carries app-specific attributes through <code>customData</code>.</li>
+<li><code>AuthRepository</code> is the application-facing contract.</li>
+<li><code>AuthRemoteDataSource</code> is an injectable backend adapter.</li>
+<li><code>AuthController</code> owns view state and can be supplied by the host app.</li>
+<li><code>AuthScreen</code> and <code>AuthView</code> expose flow flags and button overrides.</li>
+</ul>
+<p>The data models and mock data source remain exported for 1.x compatibility and
+for package examples. Applications with a real backend should provide their
+own <code>AuthRemoteDataSource</code> and <code>AuthRepository</code> implementation.</p>
+<h3 id="lifecycle-correction">Lifecycle correction</h3>
+<p><code>AuthScreen</code> no longer creates a throwaway <code>AuthController</code> inside <code>build</code>.
+When no controller is supplied, <code>AuthView</code> creates exactly one local controller
+and disposes it with the view. When a controller is supplied, ownership stays
+with the caller.</p>
+<p>This prevents duplicate listeners, unnecessary allocations, and state updates
+being sent to a controller different from the one rendering the forms.</p>
+<h3 id="remaining-follow-up">Remaining follow-up</h3>
+<p>The controller currently contains default English feedback messages for the
+legacy standalone auth flow. A future major API can expose message builders or
+localized callbacks without changing the repository contract. Existing strings
+are retained for compatibility in the current release.</p>
+<hr />
+<h2 id="frosted-ui-kit-performance-policy">Frosted UI Kit Performance Policy</h2>
+<p><code>FrostedPerformance</code> is the single performance policy for glass surfaces in
+<code>frosted_ui_kit</code>. It lets an application choose the rendering cost once at the
+root of a widget tree instead of configuring every component independently.</p>
+<h3 id="presets">Presets</h3>
+<pre><code class="language-dart">FrostedPerformance.fromData(
+  data: FrostedPerformance.balanced,
+  child: MaterialApp(home: const HomePage()),
+)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Preset</th>
+<th style="text-align: right;">Backdrop blur</th>
+<th style="text-align: right;">Blur scale</th>
+<th>Recommended use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>full</code></td>
+<td style="text-align: right;">Enabled</td>
+<td style="text-align: right;"><code>1.0</code></td>
+<td>Flagship devices and desktop</td>
+</tr>
+<tr>
+<td><code>balanced</code></td>
+<td style="text-align: right;">Enabled</td>
+<td style="text-align: right;"><code>0.5</code></td>
+<td>General mobile default</td>
+</tr>
+<tr>
+<td><code>lite</code></td>
+<td style="text-align: right;">Disabled</td>
+<td style="text-align: right;"><code>1.0</code></td>
+<td>Low-end devices and reduced transparency</td>
+</tr>
+</tbody>
+</table>
+<p><code>lite</code> removes <code>BackdropFilter</code> entirely. It keeps the same layout, surface
+geometry, interaction, borders, and translucent fallback fill, so changing
+the policy does not cause a layout shift.</p>
+<h3 id="component-contract">Component contract</h3>
+<p>Every shared glass surface must:</p>
+<ol>
+<li>Read <code>FrostedPerformance.of(context)</code>.</li>
+<li>Skip <code>BackdropFilter</code> when <code>blurEnabled</code> is false.</li>
+<li>Multiply requested sigma values by <code>blurScale</code> exactly once.</li>
+<li>Preserve dimensions and decoration in all presets.</li>
+<li>Avoid nested filters through the shared <code>GlassBackdrop</code> scope.</li>
+<li>Keep clipping bounded to the surface shape.</li>
+</ol>
+<p>On Android, <code>BlurredCard</code> also defaults to the lightweight alpha fallback unless
+the caller explicitly opts into blur with <code>disableBlur: false</code>. Explicit widget
+properties remain available for advanced cases, but the root performance policy
+always has the final ability to disable the filter.</p>
+<h3 id="choosing-a-mode-at-runtime">Choosing a mode at runtime</h3>
+<p>Expose the policy as an application setting or derive it from a device-tier
+decision. Do not toggle it on every frame. A single inherited update rebuilds
+only the surfaces that depend on the policy:</p>
+<pre><code class="language-dart">class AppRoot extends StatelessWidget {
+  const AppRoot({super.key, required this.mode});
+
+  final FrostedPerformanceData mode;
+
+  @override
+  Widget build(BuildContext context) {
+    return FrostedPerformance.fromData(
+      data: mode,
+      child: const MaterialApp(home: HomePage()),
+    );
+  }
+}
+</code></pre>
+<p>Use <code>lite</code> when the platform requests reduced transparency, when sustained
+raster work is too high, or on low-end hardware. Use <code>balanced</code> before choosing
+<code>full</code> as the default for a broad mobile audience.</p>
+<h3 id="measurement-protocol">Measurement protocol</h3>
+<p>Performance claims must be made from profile builds, not debug mode:</p>
+<pre><code class="language-bash">flutter run --profile -d &lt;device-id&gt;
+flutter drive --profile --no-dds -d &lt;device-id&gt; \
+  --driver=test_driver/integration_test.dart \
+  --target=integration_test/performance_test.dart
+</code></pre>
+<p>The repository includes a repeatable example scenario at
+<code>example/integration_test/performance_test.dart</code>. Run it from the example
+directory:</p>
+<pre><code class="language-bash">flutter drive --profile --no-dds -d &lt;device-id&gt; \
+  --driver=test_driver/integration_test.dart \
+  --target=integration_test/performance_test.dart
+</code></pre>
+<p>The test reports a <code>catalog_scroll</code> timeline suitable for comparing the same
+build with <code>full</code>, <code>balanced</code>, and <code>lite</code>. The app starts in <code>balanced</code>; change
+the Rendering Mode in Catalog settings and rerun the same scenario for the
+other modes.</p>
+<p>Record the device model, OS, Flutter version, preset, screen, scroll scenario,
+and warm-up duration. Capture build time, raster time, frame timing, and jank.
+Compare the same scenario in <code>full</code>, <code>balanced</code>, <code>android</code>, and <code>lite</code>. This repository
+does not claim a fixed FPS or percentage improvement without those measurements.</p>
+<p>For Android scrolling-heavy screens, the explicit <code>android</code> preset removes
+backdrop readback while preserving surface geometry, opacity, borders, and
+semantics:</p>
+<pre><code class="language-dart">FrostedPerformance.fromData(
+  data: FrostedPerformance.android,
+  child: MaterialApp(home: MyHomePage()),
+)
+</code></pre>
+<p>Use <code>balanced</code> when reduced blur is acceptable, and use <code>full</code> only when the
+device and screen can sustain the additional raster work.</p>
+<h3 id="android-baseline-2026-11-08">Android baseline (2026-11-08)</h3>
+<p>The first physical baseline was captured with the repeatable <code>catalog_scroll</code>
+scenario in <code>balanced</code> mode:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Device</td>
+<td>Xiaomi <code>24069PC21G</code></td>
+</tr>
+<tr>
+<td>Android</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Display</td>
+<td>1220 x 2712, configured for 120 Hz</td>
+</tr>
+<tr>
+<td>Flutter</td>
+<td>3.47.9 stable</td>
+</tr>
+<tr>
+<td>Build</td>
+<td>Profile</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>8 down/up drag cycles, 250 ms between gestures, 2 s warm-up</td>
+</tr>
+<tr>
+<td>Frames captured</td>
+<td>32</td>
+</tr>
+<tr>
+<td>Average build time</td>
+<td>0.505 ms</td>
+</tr>
+<tr>
+<td>90th / 99th build time</td>
+<td>1.058 / 1.439 ms</td>
+</tr>
+<tr>
+<td>Worst build time</td>
+<td>1.439 ms</td>
+</tr>
+<tr>
+<td>Average rasterizer time</td>
+<td>11.722 ms</td>
+</tr>
+<tr>
+<td>90th / 99th rasterizer time</td>
+<td>19.877 / 21.297 ms</td>
+</tr>
+<tr>
+<td>Worst rasterizer time</td>
+<td>21.297 ms</td>
+</tr>
+<tr>
+<td>Missed build budget</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Missed raster budget</td>
+<td>11 of 32 frames</td>
+</tr>
+</tbody>
+</table>
+<p>At 120 Hz the frame budget is approximately 8.33 ms. The measured raster
+average is therefore above the 120 Hz budget, while build work remains well
+below it. The report does not emit a display FPS value; <code>1000 / 11.722</code> is an
+approximate raster-work capacity of 85.3 fps, not measured on-screen FPS and
+must not be presented as one. The raw report is generated at
+<code>example/build/integration_response_data.json</code> for future comparisons.</p>
+<h3 id="android-preset-comparison">Android preset comparison</h3>
+<p>The same scenario was rerun with <code>FrostedPerformance.android</code> on the same
+device and build configuration:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Balanced</th>
+<th style="text-align: right;">Android preset</th>
+<th style="text-align: right;">Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Average build time</td>
+<td style="text-align: right;">0.505 ms</td>
+<td style="text-align: right;">0.561 ms</td>
+<td style="text-align: right;">+0.056 ms</td>
+</tr>
+<tr>
+<td>Average rasterizer time</td>
+<td style="text-align: right;">11.722 ms</td>
+<td style="text-align: right;">5.913 ms</td>
+<td style="text-align: right;">-49.6%</td>
+</tr>
+<tr>
+<td>90th percentile rasterizer</td>
+<td style="text-align: right;">19.877 ms</td>
+<td style="text-align: right;">13.466 ms</td>
+<td style="text-align: right;">-32.2%</td>
+</tr>
+<tr>
+<td>Worst rasterizer time</td>
+<td style="text-align: right;">21.297 ms</td>
+<td style="text-align: right;">14.120 ms</td>
+<td style="text-align: right;">-33.7%</td>
+</tr>
+<tr>
+<td>Missed raster budgets</td>
+<td style="text-align: right;">11 / 32</td>
+<td style="text-align: right;">0 / 32</td>
+<td style="text-align: right;">eliminated</td>
+</tr>
+</tbody>
+</table>
+<p>This is a device-specific baseline, not a universal FPS guarantee. The
+Android preset is the recommended choice for scrolling-heavy Android screens;
+the raw report at <code>example/build/integration_response_data.json</code> contains the
+latest Android-preset run.</p>
+<h3 id="ios-baseline-2026-11-09">iOS baseline (2026-11-09)</h3>
+<p>The same <code>catalog_scroll</code> scenario was captured on the connected physical
+device <code>AbdulRasol's iPhone</code> running iOS <code>27.0.1</code> in Profile mode with the
+default <code>balanced</code> preset:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frames captured</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>Average build time</td>
+<td style="text-align: right;">0.525 ms</td>
+</tr>
+<tr>
+<td>90th / 99th build time</td>
+<td style="text-align: right;">0.761 / 0.858 ms</td>
+</tr>
+<tr>
+<td>Worst build time</td>
+<td style="text-align: right;">0.858 ms</td>
+</tr>
+<tr>
+<td>Average rasterizer time</td>
+<td style="text-align: right;">10.425 ms</td>
+</tr>
+<tr>
+<td>90th / 99th rasterizer time</td>
+<td style="text-align: right;">13.459 ms</td>
+</tr>
+<tr>
+<td>Worst rasterizer time</td>
+<td style="text-align: right;">19.910 ms</td>
+</tr>
+<tr>
+<td>Missed build budgets</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Missed raster budgets</td>
+<td style="text-align: right;">1 of 32</td>
+</tr>
+</tbody>
+</table>
+<p>The iOS report does not expose a reliable display FPS value through this
+runner, so no fixed FPS claim is made. The raw report is generated at
+<code>example/build/integration_response_data.json</code> after each run and should be
+archived with the device and preset details.</p>
+<h3 id="current-verification">Current verification</h3>
+<p>Widget tests verify that <code>lite</code> creates no <code>BackdropFilter</code>, <code>balanced</code> scales
+sigma once, nested glass surfaces do not add filters, and independent surfaces
+remain independently bounded. The Android baseline above is intentionally
+kept separate from unit tests. An iOS profile run is still required before P1
+can be marked complete.</p>
+<hr />
+<h2 id="migration-guide">Migration Guide</h2>
+<p>This guide describes the safe migration path for existing <code>frosted_ui_kit</code>
+applications. The 1.x compatibility policy keeps deprecated APIs available;
+migrations can therefore be applied incrementally.</p>
+<h3 id="import-boundary">Import boundary</h3>
+<p>Use the package entry point for application code:</p>
+<pre><code class="language-dart">import 'package:frosted_ui_kit/frosted_ui_kit.dart';
+</code></pre>
+<p>Do not import <code>lib/src/...</code> paths directly. They are implementation details and
+may change without preserving private structure.</p>
+<h3 id="naming-corrections">Naming corrections</h3>
+<p>Replace legacy spellings when touching a file:</p>
+<table>
+<thead>
+<tr>
+<th>Before</th>
+<th>After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CricleButton</code></td>
+<td><code>CircleButton</code></td>
+</tr>
+<tr>
+<td><code>BluredCard</code></td>
+<td><code>BlurredCard</code></td>
+</tr>
+<tr>
+<td><code>bluredCard(...)</code></td>
+<td><code>blurredCard(...)</code></td>
+</tr>
+<tr>
+<td><code>FrostedNavigationButtomBar</code></td>
+<td><code>FrostedNavigationBottomBar</code></td>
+</tr>
+</tbody>
+</table>
+<p>The old names remain available in 1.x and have the same behavior.</p>
+<h3 id="performance-configuration">Performance configuration</h3>
+<p>Wrap the application or a subtree in <code>FrostedPerformance</code> when you need an
+explicit rendering policy:</p>
+<pre><code class="language-dart">FrostedPerformance.fromData(
+  data: FrostedPerformance.android,
+  child: MaterialApp(home: MyHomePage()),
+)
+</code></pre>
+<p>Use <code>full</code> for maximum glass fidelity, <code>balanced</code> for reduced blur, <code>android</code>
+for scrolling-heavy Android screens without backdrop readback, and <code>lite</code> for
+the lowest raster cost. Changing the preset does not change layout or
+semantics.</p>
+<h3 id="buttons">Buttons</h3>
+<p>Visual appearance and action meaning are independent. Keep destructive meaning
+explicit when changing button styles:</p>
+<pre><code class="language-dart">FrostedButton.destructive(
+  label: 'Delete',
+  onPressed: deleteItem,
+)
+</code></pre>
+<p>Use <code>FrostedAsyncButton</code> for a Future-returning action when loading, success,
+error, repeat-tap prevention, and mounted checks should be managed by the
+widget. Keep <code>FrostLoadingButtonController</code> for manual state transitions.</p>
+<h3 id="dialogs-and-bottom-sheets">Dialogs and bottom sheets</h3>
+<p>The shared adaptive surface layout now handles narrow screens, large text,
+keyboard insets, scrollable content, and destructive action emphasis. Existing
+dialog and bottom-sheet helpers remain source-compatible. Prefer the shared
+helpers over direct <code>showDialog</code> or <code>showModalBottomSheet</code> calls when adopting
+the kit's visual and accessibility behavior.</p>
+<h3 id="app-bars-and-navigation">App bars and navigation</h3>
+<p><code>BaseWidget.hideAppBarOnScroll</code> and <code>appBarScrollBehavior</code> are opt-in. Existing
+screens keep the previous always-visible app bar behavior unless a scroll mode
+is explicitly selected.</p>
+<h3 id="release-checklist">Release checklist</h3>
+<p>Before upgrading a production app:</p>
+<ol>
+<li>Run <code>flutter analyze</code> and the application test suite.</li>
+<li>Check RTL, large text, keyboard, and narrow-screen modal layouts.</li>
+<li>Run a profile scroll test on representative Android and iOS hardware.</li>
+<li>Replace deprecation warnings incrementally.</li>
+<li>Review <code>CHANGELOG.md</code> for visual or behavior changes in the target release.</li>
+</ol>
+<hr />
+<h2 id="package-layout-and-example-boundary">Package Layout and Example Boundary</h2>
+<h3 id="package-source">Package source</h3>
+<p><code>lib/frosted_ui_kit.dart</code> is the supported public entry point. Reusable
+components live under <code>lib/src/shared/widgets/</code>, design-system utilities live
+under <code>lib/src/utils/</code>, and the generic authentication module follows the
+feature boundaries under <code>lib/src/features/auth/</code>.</p>
+<p>The <code>lib/main.dart</code> file is retained only as a legacy package-local smoke-test
+harness. It is not exported and is not the recommended application entry point.</p>
+<h3 id="interactive-example">Interactive example</h3>
+<p>The <code>example/</code> application is the canonical showcase. It owns the catalog
+screens, integration tests, profile performance scenario, and platform runner
+configuration. Package consumers should copy component usage from the example
+or the quick-start guide, not import files from <code>lib/main.dart</code>.</p>
+<h3 id="dependency-boundary">Dependency boundary</h3>
+<p>The package must not depend on its example. Example-only dependencies and test
+drivers stay under <code>example/</code>, while reusable code and public API tests stay in
+the package root.</p>
+<hr />
+<h2 id="visual-consistency">Visual Consistency</h2>
+<p>The kit uses one surface language across cards, app bars, buttons, navigation,
+dialogs, and sheets:</p>
+<ul>
+<li>translucent fills instead of opaque white panels;</li>
+<li>shared rounded geometry and border treatment;</li>
+<li>readable foreground contrast in light and dark themes;</li>
+<li>explicit performance fallbacks on Android;</li>
+<li>custom colors remain higher priority than defaults.</li>
+</ul>
+<p>The default app-bar title uses the same translucent surface family as the
+water-drop controls. On Android, where the default card fallback skips
+<code>BackdropFilter</code>, this keeps the title from becoming a visually disconnected
+opaque panel. Applications can still override it with <code>glassColor</code>.</p>
+<p><code>FrostedListTile</code> adds a selected icon capsule, state-aware typography, and
+semantic selection metadata. <code>AppSlidingTabs</code> uses a bordered gradient pill
+with selected semantics, while <code>FrostedStepper</code> uses a lightweight gradient
+node and current-step emphasis instead of adding another backdrop filter.
+Stepper nodes also accept an optional <code>stepBuilder</code> for icons, images, Lottie,
+or any custom widget. The builder receives the step state and its content is
+constrained to the node size.</p>
+<p>Visual regression checks cover both theme brightnesses. When changing surface
+tokens, verify the catalog on Android and iOS and rerun the profile scroll
+scenario before changing the default appearance.</p>
       </div>
     </div>
 
