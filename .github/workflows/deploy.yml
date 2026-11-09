@@ -61,6 +61,14 @@ jobs:
       - name: Build site
         run: python build-all.py
 
+      - name: Verify standalone Frosted UI Kit demo route
+        run: |
+          test -f packages/frostuikit/demo/index.html
+          test -f packages/frostuikit/demo/flutter_bootstrap.js
+          touch packages/frostuikit/demo/.nojekyll
+          printf 'Frosted demo files: '
+          find packages/frostuikit/demo -maxdepth 1 -type f | wc -l
+
       - name: Cleanup temporary checkout
         run: rm -rf _frost_kit
 
