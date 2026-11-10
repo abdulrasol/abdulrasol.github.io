@@ -114,6 +114,13 @@
         "title_ar": "المخزون والمشتريات",
         "items": [
           {
+            "icon": "📥",
+            "title_ar": "استيراد الأصناف من Excel أو CSV",
+            "desc_ar": "استورد ملفك كما هو من أي نظام: حدّد أنت الأعمدة بنفسك أو اعتمد على الاقتراح التلقائي، مع معاينة وتصحيح الأخطاء قبل الحفظ، وحفظ التعيين لإعادة استخدامه، وتحديد تاريخ الرصيد الافتتاحي، وتنزيل تقرير بالأخطاء، والتراجع عن أي دفعة استيراد.",
+            "title_en": "Import items from Excel or CSV",
+            "desc_en": "Bring your file as-is from any system: map the columns yourself or accept the automatic suggestion, preview and fix errors before saving, save the mapping for reuse, pick the opening-stock date, download an error report, and undo any import batch."
+          },
+          {
             "icon": "📦",
             "title_ar": "بيع وشراء بالكرتون أو القطعة",
             "desc_ar": "عرّف تعبئة لكل صنف (كرتون، علبة…) بسعر وباركود، وبِع أو استلم بالتعبئة أو بالقطعة؛ المخزون والتكلفة يبقيان بالقطعة.",
@@ -879,6 +886,12 @@
         "answer_en": "Core operations run locally. Internet is only needed for cloud sync, activation and update checks."
       },
       {
+        "question_en": "Can I import my existing items from another system?",
+        "question_ar": "هل أستطيع استيراد أصنافي الحالية من نظام آخر؟",
+        "answer_en": "Yes. Import an Excel (.xlsx) or CSV file, map its columns to Baytraq fields, review the preview, and save. Mistakes can be undone per import batch.",
+        "answer_ar": "نعم. استورد ملف Excel (.xlsx) أو CSV، وعيّن أعمدته لحقول Baytraq، وراجع المعاينة ثم احفظ. ويمكن التراجع عن أي دفعة استيراد."
+      },
+      {
         "question_ar": "أين تُحفظ بياناتي؟",
         "question_en": "Where is my data stored?",
         "answer_ar": "على جهازك افتراضياً. لا تُرفع إلى السحابة إلا إذا فعّلت باقة Cloud. التفاصيل في سياسة الخصوصية.",
@@ -899,8 +912,8 @@
       {
         "question_ar": "هل يقرأ صورة فاتورة المشتريات تلقائياً؟",
         "question_en": "Can it read a purchase invoice photo automatically?",
-        "answer_ar": "هذه الميزة قادمة وغير مفعّلة حالياً. المتاح: الإدخال اليدوي والمسح واستيراد CSV.",
-        "answer_en": "That feature is coming and currently disabled. Available now: manual entry, scanning and CSV import."
+        "answer_ar": "هذه الميزة قادمة وغير مفعّلة حالياً. المتاح: الإدخال اليدوي والمسح واستيراد Excel/CSV مع تعيين الأعمدة.",
+        "answer_en": "That feature is coming and currently disabled. Available now: manual entry, scanning and Excel/CSV import with column mapping."
       },
       {
         "question_ar": "على أي منصات يعمل؟",

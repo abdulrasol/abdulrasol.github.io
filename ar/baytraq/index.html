@@ -111,6 +111,7 @@
         "فواتير يدوية",
         "مخزون وجرد",
         "مراجعة مزامنة تحمي التعديلات",
+        "استيراد الأصناف من Excel أو CSV",
         "بيع وشراء بالكرتون أو القطعة",
         "أسعار مفرد وجملة",
         "متابعة الصلاحية",
@@ -147,6 +148,14 @@
         },
         {
           "@type": "Question",
+          "name": "هل أستطيع استيراد أصنافي الحالية من نظام آخر؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم. استورد ملف Excel (.xlsx) أو CSV، وعيّن أعمدته لحقول Baytraq، وراجع المعاينة ثم احفظ. ويمكن التراجع عن أي دفعة استيراد."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "أين تُحفظ بياناتي؟",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -174,7 +183,7 @@
           "name": "هل يقرأ صورة فاتورة المشتريات تلقائياً؟",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "هذه الميزة قادمة وغير مفعّلة حالياً. المتاح: الإدخال اليدوي والمسح واستيراد CSV."
+            "text": "هذه الميزة قادمة وغير مفعّلة حالياً. المتاح: الإدخال اليدوي والمسح واستيراد Excel/CSV مع تعيين الأعمدة."
           }
         },
         {
@@ -326,6 +335,8 @@
       </div>
       <div class="feature-group reveal">
 <h3 class="feature-group-title">المخزون والمشتريات</h3>        <div class="features-grid">
+          <article class="feature-card">
+<span class="feature-icon">📥</span><h3>استيراد الأصناف من Excel أو CSV</h3><p>استورد ملفك كما هو من أي نظام: حدّد أنت الأعمدة بنفسك أو اعتمد على الاقتراح التلقائي، مع معاينة وتصحيح الأخطاء قبل الحفظ، وحفظ التعيين لإعادة استخدامه، وتحديد تاريخ الرصيد الافتتاحي، وتنزيل تقرير بالأخطاء، والتراجع عن أي دفعة استيراد.</p>          </article>
           <article class="feature-card">
 <span class="feature-icon">📦</span><h3>بيع وشراء بالكرتون أو القطعة</h3><p>عرّف تعبئة لكل صنف (كرتون، علبة…) بسعر وباركود، وبِع أو استلم بالتعبئة أو بالقطعة؛ المخزون والتكلفة يبقيان بالقطعة.</p>          </article>
           <article class="feature-card">
@@ -502,6 +513,13 @@
       <article class="faq-card reveal">
         <h3 class="faq-question">
           <i class="fas fa-circle-question"></i>
+          <span>هل أستطيع استيراد أصنافي الحالية من نظام آخر؟</span>
+        </h3>
+        <p class="faq-answer">نعم. استورد ملف Excel (.xlsx) أو CSV، وعيّن أعمدته لحقول Baytraq، وراجع المعاينة ثم احفظ. ويمكن التراجع عن أي دفعة استيراد.</p>
+      </article>
+      <article class="faq-card reveal">
+        <h3 class="faq-question">
+          <i class="fas fa-circle-question"></i>
           <span>أين تُحفظ بياناتي؟</span>
         </h3>
         <p class="faq-answer">على جهازك افتراضياً. لا تُرفع إلى السحابة إلا إذا فعّلت باقة Cloud. التفاصيل في سياسة الخصوصية.</p>
@@ -525,7 +543,7 @@
           <i class="fas fa-circle-question"></i>
           <span>هل يقرأ صورة فاتورة المشتريات تلقائياً؟</span>
         </h3>
-        <p class="faq-answer">هذه الميزة قادمة وغير مفعّلة حالياً. المتاح: الإدخال اليدوي والمسح واستيراد CSV.</p>
+        <p class="faq-answer">هذه الميزة قادمة وغير مفعّلة حالياً. المتاح: الإدخال اليدوي والمسح واستيراد Excel/CSV مع تعيين الأعمدة.</p>
       </article>
       <article class="faq-card reveal">
         <h3 class="faq-question">

@@ -73,6 +73,9 @@ Yes — selling, invoices, stock, customer accounts and expenses all work withou
 **Do I need internet all the time?**
 Core operations run locally. Internet is only needed for cloud sync, activation and update checks.
 
+**Can I import my existing items from another system?**
+Yes. Import an Excel (.xlsx) or CSV file, map its columns to Baytraq fields, review the preview, and save. Mistakes can be undone per import batch.
+
 **Where is my data stored?**
 On your device by default. It goes to the cloud only if you enable the Cloud plan. See the Privacy Policy.
 
@@ -83,7 +86,7 @@ Electronic payment entries only record how a sale was paid; there is no payment-
 No. It provides operational accounts and reports and does not claim tax certification or government e-invoicing compliance.
 
 **Can it read a purchase invoice photo automatically?**
-That feature is coming and currently disabled. Available now: manual entry, scanning and CSV import.
+That feature is coming and currently disabled. Available now: manual entry, scanning and Excel/CSV import with column mapping.
 
 **Which platforms does it run on?**
 Android, iOS, Windows, macOS and Linux. Some features differ by platform (e.g. LAN linking in browsers).

@@ -111,6 +111,7 @@
         "Manual invoicing",
         "Inventory & stock-take",
         "Protected sync review",
+        "Import items from Excel or CSV",
         "Sell and buy by carton or piece",
         "Retail & wholesale prices",
         "Expiry tracking",
@@ -147,6 +148,14 @@
         },
         {
           "@type": "Question",
+          "name": "Can I import my existing items from another system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Import an Excel (.xlsx) or CSV file, map its columns to Baytraq fields, review the preview, and save. Mistakes can be undone per import batch."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Where is my data stored?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -174,7 +183,7 @@
           "name": "Can it read a purchase invoice photo automatically?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "That feature is coming and currently disabled. Available now: manual entry, scanning and CSV import."
+            "text": "That feature is coming and currently disabled. Available now: manual entry, scanning and Excel/CSV import with column mapping."
           }
         },
         {
@@ -326,6 +335,8 @@
       </div>
       <div class="feature-group reveal">
 <h3 class="feature-group-title">Inventory &amp; Purchasing</h3>        <div class="features-grid">
+          <article class="feature-card">
+<span class="feature-icon">📥</span><h3>Import items from Excel or CSV</h3><p>Bring your file as-is from any system: map the columns yourself or accept the automatic suggestion, preview and fix errors before saving, save the mapping for reuse, pick the opening-stock date, download an error report, and undo any import batch.</p>          </article>
           <article class="feature-card">
 <span class="feature-icon">📦</span><h3>Sell and buy by carton or piece</h3><p>Define packaging per item (carton, pack…) with its own price and barcode, then sell or receive by packaging or by piece; stock and cost stay in pieces.</p>          </article>
           <article class="feature-card">
@@ -502,6 +513,13 @@
       <article class="faq-card reveal">
         <h3 class="faq-question">
           <i class="fas fa-circle-question"></i>
+          <span>Can I import my existing items from another system?</span>
+        </h3>
+        <p class="faq-answer">Yes. Import an Excel (.xlsx) or CSV file, map its columns to Baytraq fields, review the preview, and save. Mistakes can be undone per import batch.</p>
+      </article>
+      <article class="faq-card reveal">
+        <h3 class="faq-question">
+          <i class="fas fa-circle-question"></i>
           <span>Where is my data stored?</span>
         </h3>
         <p class="faq-answer">On your device by default. It goes to the cloud only if you enable the Cloud plan. See the Privacy Policy.</p>
@@ -525,7 +543,7 @@
           <i class="fas fa-circle-question"></i>
           <span>Can it read a purchase invoice photo automatically?</span>
         </h3>
-        <p class="faq-answer">That feature is coming and currently disabled. Available now: manual entry, scanning and CSV import.</p>
+        <p class="faq-answer">That feature is coming and currently disabled. Available now: manual entry, scanning and Excel/CSV import with column mapping.</p>
       </article>
       <article class="faq-card reveal">
         <h3 class="faq-question">
