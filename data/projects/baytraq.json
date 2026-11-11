@@ -144,9 +144,9 @@
           {
             "icon": "🚚",
             "title_ar": "استلام المشتريات",
-            "desc_ar": "إدخال يدوي أو مسح أو استيراد CSV مع مسودة ومطابقة الأصناف وتسجيل التكلفة والصلاحية والمبلغ المدفوع.",
+            "desc_ar": "إدخال يدوي أو مسح أو استيراد Excel/CSV بتعيين الأعمدة، بكميات بالكرتون أو القطعة تُطابَق مع أصنافك وتُراجَع كمسودة قبل الحفظ، مع التكلفة والصلاحية والمبلغ المدفوع.",
             "title_en": "Purchase intake",
-            "desc_en": "Manual entry, scanning or CSV import with drafts, item matching, cost, expiry and amount paid."
+            "desc_en": "Manual entry, scanning or Excel/CSV import with column mapping — carton or piece quantities, matched to your items and reviewed as a draft before saving — plus cost, expiry and amount paid."
           },
           {
             "icon": "↩️",
