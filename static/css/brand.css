@@ -154,6 +154,47 @@ input, textarea, select { border-radius: 6px; }
 .product-site .feature-card:hover { transform: translateY(-3px); box-shadow: none; }
 .product-site .hero-banner { opacity: .05; }
 .product-site .hero-trust-line { color: var(--text-muted); }
+
+/* Meaad brand direction: calm navy surfaces with a focused teal action color. */
+.product-site.project-meaad {
+  --project-primary: #28B5B1;
+  --project-secondary: #143044;
+  --project-accent: #28B5B1;
+  --meaad-navy: #143044;
+  --meaad-teal: #28B5B1;
+  --meaad-light: #F5F7F8;
+}
+.product-site.project-meaad .project-header {
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  border-bottom-color: color-mix(in srgb, var(--meaad-teal) 22%, var(--border));
+}
+.product-site.project-meaad .brand img,
+.product-site.project-meaad .hero-logo {
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgb(20 48 68 / 18%);
+}
+.product-site.project-meaad .hero {
+  background: radial-gradient(circle at 12% 15%, rgb(40 181 177 / 12%), transparent 30%), var(--bg);
+}
+.product-site.project-meaad .hero-visual {
+  border-color: color-mix(in srgb, var(--meaad-teal) 32%, var(--border));
+  background: linear-gradient(145deg, rgb(20 48 68 / 10%), rgb(40 181 177 / 8%));
+}
+.product-site.project-meaad .btn-primary {
+  background: var(--meaad-teal);
+  color: #fff;
+  box-shadow: 0 12px 28px rgb(40 181 177 / 25%);
+}
+.product-site.project-meaad .btn-primary:hover {
+  background: #209b98;
+  box-shadow: 0 16px 34px rgb(40 181 177 / 34%);
+}
+.product-site.project-meaad .feature-card {
+  border-top-color: var(--meaad-teal);
+  background: color-mix(in srgb, var(--surface) 88%, var(--meaad-light));
+}
+.product-site.project-meaad .feature-icon { color: var(--meaad-teal); }
+.product-site.project-meaad .section-eyebrow { color: var(--meaad-teal); }
 .product-site .footer-brand .parent-brand { margin-top: 18px; }
 .skip-link { position: fixed; top: -100px; inset-inline-start: 16px; z-index: 9999; background: var(--text); color: var(--bg); padding: 12px 20px; border-radius: 6px; }
 .skip-link:focus { top: 12px; }

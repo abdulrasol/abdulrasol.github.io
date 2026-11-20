@@ -68,7 +68,7 @@
   </script>
   <!-- Styles -->
   <link rel="stylesheet" href="/static/css/project.css">
-  <link rel="stylesheet" href="/static/css/brand.css?v=2">
+  <link rel="stylesheet" href="/static/css/brand.css?v=3">
 
   {% include "partials/analytics.html" %}
 
@@ -77,7 +77,7 @@
 {{ structured_data | safe }}
   </script>
 </head>
-<body data-lang="{{ lang }}" class="product-site">
+<body data-lang="{{ lang }}" class="product-site project-{{ id }}">
   <a class="skip-link" href="#main-content">{{ "Skip to content" if lang == "en" else "انتقل إلى المحتوى" }}</a>
 
   <!-- Header -->

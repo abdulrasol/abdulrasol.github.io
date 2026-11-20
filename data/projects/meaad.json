@@ -3,28 +3,28 @@
   "site": {
     "title_en": "MEAAD - Debt & Installment Manager",
     "title_ar": "ميعاد Meaad - إدارة الديون والأقساط",
-    "description_en": "The easiest and most secure app to manage debts, installments, and subscriptions for your business.",
-    "description_ar": "التطبيق الأسهل والأكثر أماناً لإدارة الديون والأقساط والاشتراكات لعملك التجاري.",
-    "keywords_en": "Debt Management, Installments, Subscriptions, Google Sheets, Flutter, Business",
-    "keywords_ar": "إدارة الديون, أقساط, اشتراكات, جداول Google, فلاتر, أعمال"
+    "description_en": "A simple app for managing customers, installments, recurring payments, and subscriptions — locally first, with optional cloud features.",
+    "description_ar": "تطبيق بسيط لإدارة الزبائن والأقساط والدفعات الدورية والاشتراكات — محلياً أولاً، مع مزايا سحابية اختيارية.",
+    "keywords_en": "Installment Management, Recurring Payments, Subscriptions, Customer Management, Local Storage, Flutter",
+    "keywords_ar": "إدارة الأقساط, الدفعات الدورية, الاشتراكات, إدارة الزبائن, تخزين محلي, فلاتر"
   },
   "settings": {
     "default_lang": "ar",
     "default_theme": "dark",
-    "primary_color": "#3b82f6",
-    "secondary_color": "#8b5cf6"
+    "primary_color": "#28B5B1",
+    "secondary_color": "#143044"
   },
   "brand": {
     "name_en": "MEAAD",
     "name_ar": "ميعاد Meaad",
-    "tagline_en": "Your ultimate app for managing debts and installments",
-    "tagline_ar": "تطبيقك الأمثل لإدارة الديون والأقساط",
+    "tagline_en": "Simple installment and recurring payment management",
+    "tagline_ar": "إدارة بسيطة للأقساط والدفعات الدورية",
     "logo": "/assets/meaad/logo.png",
     "banner": "/assets/meaad/banar.png",
-    "favicon": "/assets/meaad/logo.png"
+    "favicon": "/assets/meaad/icon.png"
   },
   "links": {
-    "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meadd",
+    "googlePlay": "https://play.google.com/store/apps/details?id=io.github.abdulrasol.meaad",
     "appStore": null,
     "github": null,
     "facebook": null,
@@ -32,10 +32,10 @@
     "support_email": "meaad@subultech.top"
   },
   "hero": {
-    "title_en": "Your ultimate app for managing <span class=\"highlight\">Debts &amp; Installments</span>",
-    "title_ar": "تطبيقك الأمثل لإدارة <span class=\"highlight\">الديون والأقساط</span>",
-    "subtitle_en": "MEAAD allows businesses and individuals to track monthly subscriptions, periodic installments, and accumulated debts seamlessly.",
-    "subtitle_ar": "يسمح ميعاد للشركات والأفراد بتتبع الاشتراكات الشهرية، الأقساط الدورية، والديون المتراكمة بكل سهولة وسلاسة.",
+    "title_en": "Manage <span class=\"highlight\">installments and payments</span> with clarity",
+    "title_ar": "رتّب <span class=\"highlight\">أقساطك ودفعاتك</span> بسهولة",
+    "subtitle_en": "Track customers, services, due payments, and recurring subscriptions in one calm, focused workspace.",
+    "subtitle_ar": "تابع الزبائن والخدمات والدفعات المستحقة والاشتراكات الدورية من مكان واحد وبطريقة واضحة.",
     "cta_en": "GET IT ON Google Play",
     "cta_ar": "احصل عليه من Google Play"
   },
@@ -49,8 +49,9 @@
   "technologies": [
     "Flutter",
     "Dart",
-    "Google Sheets",
-    "Google Drive"
+    "Hive",
+    "Firebase",
+    "Apps Script"
   ],
   "features": {
     "title_en": "MEAAD Features",
@@ -58,31 +59,31 @@
     "items": [
       {
         "icon": "🔔",
-        "title_en": "Smart Notifications",
+        "title_en": "Customer and service management",
         "title_ar": "إشعارات ذكية",
-        "desc_en": "Automatic reminders for due dates for you and your customers to avoid delays.",
-        "desc_ar": "تذكير تلقائي بمواعيد الدفع والأقساط لك وللزبون لتجنب التأخير."
+        "desc_en": "Keep each customer, service, subscription, and payment history organised in one place.",
+        "desc_ar": "رتّب بيانات كل زبون وخدماته واشتراكاته وسجل دفعاته في مكان واحد."
       },
       {
         "icon": "📄",
-        "title_en": "PDF Reports",
-        "title_ar": "تقارير PDF",
-        "desc_en": "Generate detailed and professional financial PDF reports with one click.",
-        "desc_ar": "توليد تقارير مالية مفصلة واحترافية بصيغة PDF بضغطة زر."
+        "title_en": "Automatic installment calculation",
+        "title_ar": "حساب الأقساط تلقائياً",
+        "desc_en": "Enter the total and number of months, or the monthly amount, and let MEAAD calculate the rest.",
+        "desc_ar": "أدخل السعر وعدد الأشهر أو قيمة الدفعة الشهرية، وخلّي ميعاد يحسب الباقي تلقائياً."
       },
       {
         "icon": "🔳",
-        "title_en": "Digital QR Portal",
-        "title_ar": "بوابة رقمية بالـ QR",
-        "desc_en": "Customers can scan their QR code to track their balance and updates instantly.",
-        "desc_ar": "يستطيع الزبون مسح الكود الخاص به لمتابعة رصيده وتحديثاته."
+        "title_en": "Complete payment history",
+        "title_ar": "سجل دفعات شامل",
+        "desc_en": "Search and filter previous payments by customer, service, or date without opening customers one by one.",
+        "desc_ar": "ابحث وفلتر الدفعات السابقة حسب الزبون أو الخدمة أو التاريخ بدون الدخول لكل زبون."
       },
       {
         "icon": "☁️",
-        "title_en": "Secure Sync",
-        "title_ar": "مزامنة آمنة",
-        "desc_en": "Data is safely stored in your own personal Google Drive account as Google Sheets.",
-        "desc_ar": "بياناتك محفوظة بشكل آمن في حسابك الشخصي على Google Drive على شكل جداول."
+        "title_en": "Local-first privacy",
+        "title_ar": "خصوصية محلية أولاً",
+        "desc_en": "Start without an account. Your everyday data stays on your device, with cloud features available when activated.",
+        "desc_ar": "ابدأ بدون تسجيل. بياناتك اليومية تبقى على جهازك، مع مزايا سحابية عند تفعيل الحساب."
       },
       {
         "icon": "🔐",
@@ -93,10 +94,10 @@
       },
       {
         "icon": "📶",
-        "title_en": "Offline Mode",
-        "title_ar": "يعمل بدون إنترنت",
-        "desc_en": "Add accounts offline, and they will sync automatically later.",
-        "desc_ar": "أضف زبائنك وحساباتك حتى بدون إنترنت، وستتم المزامنة لاحقاً."
+        "title_en": "Smart reminders",
+        "title_ar": "تذكيرات ذكية",
+        "desc_en": "Stay ahead of upcoming and overdue payments with clear reminders and status tracking.",
+        "desc_ar": "تابع الدفعات القادمة والمتأخرة من خلال تذكيرات واضحة وحالات سهلة الفهم."
       }
     ]
   },
@@ -126,8 +127,8 @@
         "role_en": "Supermarket Owner",
         "role_ar": "صاحب سوبر ماركت",
         "rating": 5,
-        "text_en": "The app made bookkeeping so much easier, and the best feature is data security in Drive.",
-        "text_ar": "التطبيق سهل عليّ الكثير من الحسابات الدفترية، وأفضل ميزة هي الأمان وحفظ البيانات في درايف."
+        "text_en": "The clear payment history and automatic installment calculations made daily follow-up much easier.",
+        "text_ar": "سجل الدفعات الواضح والحساب التلقائي للأقساط سهّلوا عليّ المتابعة اليومية بشكل كبير."
       },
       {
         "name_en": "Mohamed Qasim",
@@ -135,13 +136,75 @@
         "role_en": "Wholesaler",
         "role_ar": "تاجر جملة",
         "rating": 5,
-        "text_en": "Reports and smart notifications ensure I never miss a debt. Deserves 5 stars.",
-        "text_ar": "التقارير والإشعارات الذكية خلتني ما أنسى أي ديون. تطبيق يستحق 5 نجوم."
+        "text_en": "I can manage customers and subscriptions locally without a complicated setup. It is simple and practical.",
+        "text_ar": "أكدر أدير الزبائن والاشتراكات محلياً بدون إعداد معقد. التطبيق بسيط وعملي."
       }
     ]
   },
+  "faq": {
+    "title_en": "Frequently asked questions",
+    "title_ar": "الأسئلة الشائعة",
+    "subtitle_en": "Start simply, then activate the features your workflow needs.",
+    "subtitle_ar": "ابدأ ببساطة، وبعدها فعّل الميزات التي يحتاجها عملك.",
+    "items": [
+      {
+        "question_en": "Can I use MEAAD without creating an account?",
+        "question_ar": "أكدر أستخدم ميعاد بدون إنشاء حساب؟",
+        "answer_en": "Yes. Free Local lets you manage customers, services, and payments on your device without signing in.",
+        "answer_ar": "نعم. النسخة المجانية المحلية تتيح لك إدارة الزبائن والخدمات والدفعات على جهازك بدون تسجيل."
+      },
+      {
+        "question_en": "Where is my local data stored?",
+        "question_ar": "وين تنخزن بياناتي المحلية؟",
+        "answer_en": "Your local records are stored on your device. Cloud features are separate and require an activated account.",
+        "answer_ar": "بياناتك المحلية تنخزن على جهازك. المزايا السحابية منفصلة وتحتاج حساباً مفعلاً."
+      },
+      {
+        "question_en": "What is the difference between Free Local and Cloud?",
+        "question_ar": "شنو الفرق بين النسخة المجانية وCloud؟",
+        "answer_en": "Free Local covers everyday work on one device. Cloud adds synchronisation and higher limits when your account is activated.",
+        "answer_ar": "المجانية تغطي الاستخدام اليومي على جهاز واحد. Cloud تضيف المزامنة وحدوداً أعلى عند تفعيل الحساب."
+      },
+      {
+        "question_en": "Is the Cloud plan a recurring subscription?",
+        "question_ar": "هل Cloud اشتراك شهري متكرر؟",
+        "answer_en": "No. Activation is handled as a one-time licence request. Contact support from the app for availability and details.",
+        "answer_ar": "لا. التفعيل يتم كطلب ترخيص لمرة واحدة. تواصل مع الدعم من داخل التطبيق لمعرفة التوفر والتفاصيل."
+      }
+    ]
+  },
+  "pricing": {
+    "title_en": "Choose the way you work",
+    "title_ar": "اختار الطريقة المناسبة لشغلك",
+    "subtitle_en": "Start free and local. Request Cloud only when you need more room and flexibility.",
+    "subtitle_ar": "ابدأ مجاناً ومحلياً، واطلب Cloud فقط عندما تحتاج مساحة ومرونة أكبر.",
+    "tiers": [
+      {
+        "name_en": "Free Local",
+        "name_ar": "مجاني محلي",
+        "price_en": "Free",
+        "price_ar": "مجاني",
+        "features_en": ["Local Hive storage", "Customer and service management", "Payment history and search", "Essential reminders"],
+        "features_ar": ["تخزين محلي عبر Hive", "إدارة الزبائن والخدمات", "سجل الدفعات والبحث", "التذكيرات الأساسية"],
+        "featured": false
+      },
+      {
+        "name_en": "Cloud activated",
+        "name_ar": "Cloud مفعّل",
+        "price_en": "One-time activation",
+        "price_ar": "تفعيل لمرة واحدة",
+        "features_en": ["Everything in Free Local", "Cloud synchronisation", "Higher usage limits", "Advanced features as available"],
+        "features_ar": ["كل ميزات المجاني المحلي", "مزامنة Cloud", "حدود استخدام أعلى", "ميزات متقدمة حسب التوفر"],
+        "featured": true
+      }
+    ],
+    "note_en": "Cloud availability and licence details are confirmed by support after you submit a request from the app.",
+    "note_ar": "يتم تأكيد توفر Cloud وتفاصيل الترخيص من الدعم بعد إرسال الطلب من داخل التطبيق.",
+    "disclaimer_en": "No payment details are collected on this website.",
+    "disclaimer_ar": "لا يتم جمع أي معلومات دفع من هذا الموقع."
+  },
   "privacy": {
-    "last_updated": "2026-06-27",
+    "last_updated": "2026-11-10",
     "email": "meaad@subultech.top",
     "sections": [
       {
@@ -150,20 +213,20 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text_en": "When you use MEAAD, we may collect certain information from your Google account to provide our services, including:",
-            "text_ar": "عند استخدام تطبيق ميعاد، قد نقوم بجمع بعض المعلومات من حساب Google الخاص بك لتقديم خدماتنا، بما في ذلك:"
+            "text_en": "MEAAD is designed to work locally first. Depending on the features you use, information may include customer, service, payment, store, device, and optional account details.",
+            "text_ar": "تم تصميم ميعاد ليعمل محلياً أولاً. حسب الميزات التي تستخدمها، قد تشمل المعلومات بيانات الزبائن والخدمات والدفعات والمتجر والجهاز وبيانات الحساب الاختيارية."
           },
           {
             "type": "list",
             "items_en": [
-              "Basic profile information via Google Login",
-              "Email address",
-              "Access to your Google Sheets to store and manage your data"
+              "Customer, service, and payment records entered by you",
+              "Store settings and preferences",
+              "Contact details provided when requesting account activation"
             ],
             "items_ar": [
-              "معلومات الملف الشخصي الأساسية عبر تسجيل الدخول بحساب Google",
-              "عنوان البريد الإلكتروني",
-              "الوصول إلى جداول بيانات Google (Google Sheets) الخاصة بك لتخزين وإدارة بياناتك"
+              "بيانات الزبائن والخدمات والدفعات التي تدخلها بنفسك",
+              "إعدادات المتجر وتفضيلاتك",
+              "بيانات التواصل التي تقدمها عند طلب تفعيل الحساب"
             ]
           }
         ]
@@ -193,13 +256,13 @@
         ]
       },
       {
-        "title_en": "3. Data Storage and Protection (Google Drive)",
-        "title_ar": "3. تخزين البيانات وحمايتها (Google Drive)",
+        "title_en": "3. Data Storage and Protection",
+        "title_ar": "3. تخزين البيانات وحمايتها",
         "blocks": [
           {
             "type": "paragraph",
-            "text_en": "MEAAD puts your data completely under your control. All subscriber and payment data is stored directly in your personal Google Drive account as a Google Sheet. The app requests access to Google Drive exclusively to create, read, and modify its own data file within your account to provide the cloud synchronization feature. The app developer has no access to your data, and it is never sent to any external servers. You are the sole owner of your data and we do not sell or share it with any third parties.",
-            "text_ar": "تطبيق ميعاد يضع بياناتك تحت سيطرتك الكاملة. جميع بيانات المشتركين والمدفوعات يتم تخزينها مباشرة في حسابك الشخصي على Google Drive في شكل ملفات Google Sheets. يطلب التطبيق صلاحية الوصول إلى Google Drive حصراً لإنشاء وقراءة وتعديل ملف البيانات الخاص بالتطبيق داخل حسابك لتوفير ميزة المزامنة. مطور التطبيق لا يملك أي صلاحية للوصول إلى بياناتك، ولا يتم إرسالها إلى أي خوادم خارجية. أنت المالك الوحيد لبياناتك ونحن لا نبيعها أو نشاركها مع أي جهة خارجية."
+            "text_en": "Free Local stores your everyday data on your device using local storage. Cloud features use the shared service only after you request and activate an account. We do not sell your data or use it for advertising. Keep your device protected and maintain exports or backups when available.",
+            "text_ar": "النسخة المجانية المحلية تخزن بياناتك اليومية على جهازك باستخدام التخزين المحلي. المزايا السحابية تستخدم الخدمة المشتركة فقط بعد طلب وتفعيل الحساب. لا نبيع بياناتك ولا نستخدمها للإعلانات. حافظ على حماية جهازك وسوِّ تصديراً أو نسخة احتياطية عندما تتوفر."
           }
         ]
       },
@@ -209,8 +272,8 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text_en": "We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.",
-            "text_ar": "نحن نتخذ الإجراءات الأمنية المناسبة لحماية معلوماتك الشخصية من الوصول غير المصرح به أو التعديل أو الإفصاح أو التدمير."
+            "text_en": "We apply reasonable technical and organisational measures. No method of storage or transmission is completely risk-free, so you remain responsible for protecting your device and access credentials.",
+            "text_ar": "نطبق إجراءات تقنية وتنظيمية معقولة. لا توجد طريقة تخزين أو نقل خالية من المخاطر تماماً، لذلك تبقى مسؤولاً عن حماية جهازك وبيانات الدخول."
           }
         ]
       },
@@ -228,7 +291,7 @@
     ]
   },
   "terms": {
-    "last_updated": "2026-06-27",
+    "last_updated": "2026-11-10",
     "sections": [
       {
         "title_en": "1. Acceptance of Terms",
@@ -247,8 +310,8 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text_en": "MEAAD is a periodic payment and subscriber management application. To provide these services, we utilize Google Login for authentication and Google Sheets for data storage. By using MEAAD, you authorize the application to create Google Sheets in your Google account to store your data and to share these specific sheets with the MEAAD developer for the purposes of maintenance, troubleshooting, and service improvement. We reserve the right to modify or discontinue any part of the service at any time.",
-            "text_ar": "ميعاد هو تطبيق لإدارة الدفعات الدورية والمشتركين. لتقديم هذه الخدمات، نستخدم ميزة تسجيل الدخول عبر Google للمصادقة، و Google Sheets لتخزين البيانات. باستخدامك لتطبيق ميعاد، فإنك تفوض التطبيق لإنشاء جداول بيانات Google في حساب Google الخاص بك لتخزين بياناتك ومشاركة هذه الجداول المحددة مع مطور تطبيق ميعاد لأغراض الصيانة وحل المشكلات وتحسين الخدمة. نحن نحتفظ بالحق في تعديل أو إيقاف أي جزء من الخدمة في أي وقت."
+            "text_en": "MEAAD helps you manage customers, services, installments, recurring payments, and reminders. The app can be used as Free Local without an account. Optional Cloud features are available only after an activation request is reviewed and confirmed by support. We may improve, change, or discontinue features with reasonable notice where practical.",
+            "text_ar": "يساعدك ميعاد على إدارة الزبائن والخدمات والأقساط والدفعات الدورية والتذكيرات. يمكن استخدام التطبيق كنسخة مجانية محلية بدون حساب. المزايا السحابية اختيارية وتتوفر بعد مراجعة طلب التفعيل وتأكيده من الدعم. قد نطور أو نغير أو نوقف بعض الميزات مع إشعار معقول عندما يكون ذلك ممكناً."
           }
         ]
       },
@@ -258,8 +321,8 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text_en": "You are responsible for maintaining the confidentiality of your Google account credentials and for all activities that occur under your account. You agree not to use the service for any illegal or unauthorized purpose.",
-            "text_ar": "أنت مسؤول عن الحفاظ على سرية بيانات اعتماد حساب Google الخاص بك وعن جميع الأنشطة التي تحدث تحت حسابك. أنت توافق على عدم استخدام الخدمة لأي غرض غير قانوني أو غير مصرح به."
+            "text_en": "You are responsible for the accuracy of the records you enter, protecting your device and PIN, and using the app lawfully. Do not enter data you are not authorised to manage.",
+            "text_ar": "أنت مسؤول عن دقة البيانات التي تدخلها، وحماية جهازك ورمز PIN، واستخدام التطبيق بشكل قانوني. لا تدخل بيانات لا تملك صلاحية إدارتها."
           }
         ]
       },
@@ -300,14 +363,14 @@
         "changes_en": [
           "App Lock: Added Biometric & PIN lock for enhanced security and privacy.",
           "Performance: Fixed memory leaks in date/time pickers to ensure a smooth experience.",
-          "Smart Sync: Improved offline synchronization to prevent data loss when offline.",
+          "Local-first storage: Improved Hive data handling and protected local migration paths.",
           "Accurate Notifications: Upgraded the notification scheduler for reliable and precise delivery.",
           "General Improvements: Faster search, reduced app size, and fixed navigation bar issues."
         ],
         "changes_ar": [
           "قفل التطبيق: إضافة حماية بالبصمة أو الرمز (Biometric App Lock) لزيادة أمان بياناتك.",
           "تحسينات الأداء: معالجة تسريب الذاكرة (Memory Leaks) في واجهات اختيار التاريخ والوقت لضمان سرعة التطبيق.",
-          "مزامنة ذكية: تطوير محرك المزامنة لحماية البيانات من الضياع عند استخدام التطبيق بدون إنترنت ومزامنتها لاحقاً.",
+          "تخزين محلي أولاً: تحسين التعامل مع بيانات Hive وحماية مسارات نقل البيانات المحلية.",
           "إشعارات دقيقة: تحسين آلية جدولة الإشعارات لضمان وصولها في الوقت المحدد بدون تداخل.",
           "تحسينات عامة: تحسين سرعة البحث وتقليل حجم التطبيق وإصلاحات لمشاكل شريط التنقل."
         ]
@@ -321,21 +384,21 @@
         "changes_en": [
           "Integrated Management: Add and track customer debts and subscriptions effortlessly.",
           "Modern Interface: Fast, responsive modern UI with full Dark Mode support.",
-          "Security & Sync: Complete data privacy with smart syncing to prevent data loss.",
+          "Local-first privacy: Keep everyday data on the device, with optional Cloud activation.",
           "Export & Print: Full support for printing customer receipts and exporting reports to PDF/Excel.",
           "Smart Dashboard: Comprehensive home screen showing real-time debt and collection stats.",
-          "Portal Screen: A smart web portal for customers with QR Code scanning for quick receipt access.",
-          "Roles Management: Support for Multiple Admins for easy app control.",
+          "Payment history: Search and filter previous payments by customer, service, and date.",
+          "Simple setup: Start without an account and request Cloud activation when needed.",
           "Baytraq Integration: Seamless expansion capabilities with our sister app (Baytraq Sales Manager)."
         ],
         "changes_ar": [
           "إدارة متكاملة: إضافة ديون واشتراكات العملاء ومتابعتها بسهولة فائقة وبدون تعقيد.",
           "واجهة عصرية: تصميم UI حديث، سريع الاستجابة، مع دعم كامل للوضع الليلي (Dark Mode).",
-          "أمان ومزامنة: خصوصية تامة لبياناتك بفضل تقنيات المزامنة الذكية التي تحمي معلوماتك من الفقدان.",
+          "خصوصية محلية أولاً: تبقى البيانات اليومية على الجهاز مع إمكانية تفعيل Cloud اختيارياً.",
           "تصدير وطباعة: دعم كامل لطباعة الفواتير الخاصة بالعملاء وتصدير تقارير الديون بصيغة PDF و Excel.",
           "لوحة تحكم ذكية (Dashboard): شاشة رئيسية شاملة تعرض إحصائيات الديون والمبالغ المحصلة في الوقت الفعلي.",
-          "شاشة البوابة (Portal): إطلاق بوابة ذكية للعملاء مزودة بماسح QR Code لتسهيل الوصول للفواتير عبر المتصفح.",
-          "إدارة الصلاحيات: دعم خاصية الإدارة المتعددة (Multiple Admins) للتحكم السهل في التطبيق.",
+          "سجل الدفعات: البحث والفلترة حسب الزبون والخدمة والتاريخ.",
+          "إعداد بسيط: ابدأ بدون حساب واطلب تفعيل Cloud عند الحاجة.",
           "الربط مع بيترك: توفير بيئة متكاملة تدعم التوسع باستخدام تطبيقنا الشقيق (Baytraq Sales Manager)."
         ]
       }
