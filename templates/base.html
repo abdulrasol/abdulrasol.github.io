@@ -88,6 +88,57 @@
     }
   }
   </script>
+  <!-- JSON-LD Structured Data: Website and current page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "{{ site.url }}/#website",
+    "name": "{{ site_title }}",
+    "url": "{{ site.url }}/",
+    "inLanguage": "{{ lang }}",
+    "publisher": {"@id": "{{ site.url }}/#organization"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page_path }}#webpage",
+    "url": "{{ site.url }}{{ page_path }}",
+    "name": "{{ site_title }}",
+    "description": "{{ site_description }}",
+    "inLanguage": "{{ lang }}",
+    "isPartOf": {"@id": "{{ site.url }}/#website"}
+  }
+  </script>
+  {% if page_name == 'home' and projects and projects.list %}
+  <!-- JSON-LD Structured Data: Product directory -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "{{ projects.title }}",
+    "itemListElement": [
+      {% for project in projects.list %}
+      {
+        "@type": "ListItem",
+        "position": {{ loop.index }},
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "{{ project.title }}",
+          "description": "{{ project.desc }}",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, Android, iOS",
+          "url": "{% if project.links.page.startswith('http') %}{{ project.links.page }}{% else %}{{ site.url }}{{ project.links.page }}{% endif %}",
+          "image": "{% if project.image.startswith('http') %}{{ project.image }}{% else %}{{ site.url }}{{ project.image }}{% endif %}"
+        }
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
+  {% endif %}
 </head>
 <body data-lang="{{ lang }}" data-page="{{ page_name | default('site') }}" class="page-{{ page_name | default('site') }}">
   <a href="#main-content" class="skip-link">{{ 'Skip to content' if lang == 'en' else 'انتقل إلى المحتوى' }}</a>

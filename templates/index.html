@@ -147,7 +147,8 @@
       <p class="section-subtitle">{{ projects.subtitle }}</p>
     </div>
 
-    <div class="project-filters" role="tablist" aria-label="Project filters">
+    <div class="projects-toolbar">
+      <div class="project-filters" role="tablist" aria-label="Project filters">
       <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
         {{ projects.filter_all }}
       </button>
@@ -163,11 +164,23 @@
       <button class="filter-btn" data-filter="solar" role="tab" aria-selected="false">
         {{ projects.filter_solar | default('Solar' if lang == 'en' else 'طاقة شمسية') }}
       </button>
+      </div>
+      <p class="projects-scroll-hint" aria-hidden="true">
+        <i class="fas fa-arrows-left-right"></i>
+        {{ 'Swipe or use the arrows to explore' if lang == 'en' else 'اسحب أو استخدم الأسهم لاستعراض المنتجات' }}
+      </p>
+      <button type="button" class="projects-autoplay-toggle" id="projects-autoplay-toggle" aria-pressed="false" aria-label="{{ 'Pause automatic movement' if lang == 'en' else 'إيقاف الحركة التلقائية' }}">
+        <i class="fas fa-pause" aria-hidden="true"></i>
+      </button>
     </div>
 
-    <div class="projects-grid">
+    <div class="projects-carousel" id="projects-carousel">
+      <button type="button" class="projects-carousel-button projects-carousel-button-prev" id="projects-prev" aria-label="{{ 'Previous products' if lang == 'en' else 'المنتجات السابقة' }}">
+        <i class="fas fa-chevron-{{ 'right' if lang == 'ar' else 'left' }}" aria-hidden="true"></i>
+      </button>
+      <div class="projects-grid" id="projects-track" tabindex="0" aria-label="{{ 'Scrollable products list' if lang == 'en' else 'قائمة المنتجات القابلة للتمرير' }}">
       {% for project in projects.list %}
-      <article class="project-card{% if loop.index > 4 %} project-card-extra hidden{% endif %}" data-category="{{ project.category }}">
+      <article class="project-card" data-category="{{ project.category }}" data-categories="{{ project.category }}">
         <div class="project-image">
           <img src="{{ project.image }}" alt="{{ project.title }}" width="240" height="160" loading="lazy" decoding="async">
           {% if project.featured %}
@@ -224,7 +237,12 @@
         </div>
       </article>
       {% endfor %}
+      </div>
+      <button type="button" class="projects-carousel-button projects-carousel-button-next" id="projects-next" aria-label="{{ 'Next products' if lang == 'en' else 'المنتجات التالية' }}">
+        <i class="fas fa-chevron-{{ 'left' if lang == 'ar' else 'right' }}" aria-hidden="true"></i>
+      </button>
     </div>
+    <div class="projects-carousel-status" id="projects-carousel-status" aria-live="polite"></div>
     <div class="projects-empty" id="projects-empty" hidden>
       <h3>{{ projects.empty_title }}</h3>
       <p>{{ projects.empty_text }}</p>
@@ -237,10 +255,6 @@
         <i class="fas fa-paper-plane"></i>
         {{ projects.discuss_cta }}
       </a>
-      <button type="button" class="btn btn-secondary" id="show-all-projects">
-        <i class="fas fa-layer-group"></i>
-        {{ projects.view_all }}
-      </button>
     </div>
   </div>
 </section>

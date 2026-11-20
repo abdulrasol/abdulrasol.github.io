@@ -133,7 +133,16 @@ def build_portfolio_project_list(project_jsons, manual_list):
         else:
             portfolio_list.append(manual)
 
-    return portfolio_list
+    # Manual entries participate in the same ordering as generated projects.
+    # This keeps important products visible in the initial compact portfolio view.
+    return sorted(
+        portfolio_list,
+        key=lambda p: (
+            p.get("order", 999),
+            not p.get("featured", False),
+            p.get("id", p.get("title_en", "")).lower(),
+        ),
+    )
 
 
 def generate_sitemap(pages, site_url):
@@ -308,9 +317,13 @@ def build_site():
 
         # Helpers passed to templates for language-aware links
         def make_link(path):
+            if isinstance(path, str) and (path.startswith("http://") or path.startswith("https://") or path.startswith("mailto:") or path.startswith("#")):
+                return path
             return lang_url(path, lang)
 
         def make_link_for(path, target_lang):
+            if isinstance(path, str) and (path.startswith("http://") or path.startswith("https://") or path.startswith("mailto:") or path.startswith("#")):
+                return path
             return lang_url(base_langless_path(path), target_lang)
 
         context = {

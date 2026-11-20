@@ -336,6 +336,22 @@
     "empty_text_ar": "جرّب تصنيفاً آخر أو تواصل معنا إذا كنت تريد نظاماً مشابهاً لعملك.",
     "list": [
       {
+        "id": "rufoof",
+        "title_en": "Rufoof Inventory Ledger",
+        "title_ar": "رفوف — سجل المخزون",
+        "desc_en": "A bilingual inventory ledger for materials, stock movements, counts, custom fields, and Google Sheets workbooks.",
+        "desc_ar": "سجل مخزون ثنائي اللغة للمواد والحركات والجرد والحقول المخصصة وملفات Google Sheets.",
+        "image": "/assets/rufoof/logo.svg",
+        "category": "business ai",
+        "featured": true,
+        "order": 3,
+        "technologies": ["React", "Google Sheets", "SubulTech Identity"],
+        "links": {
+          "page": "https://rafuf-2au.pages.dev",
+          "github": "https://github.com/abdulrasol/rufoof"
+        }
+      },
+      {
         "title_en": "Baytraq Sales Manager",
         "title_ar": "مدير مبيعات بيترق",
         "desc_en": "All-in-one sales operations workspace with POS, invoicing, inventory, multi-device sync, and staff roles.",

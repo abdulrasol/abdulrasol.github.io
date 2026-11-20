@@ -85,6 +85,136 @@
     }
   }
   </script>
+  <!-- JSON-LD Structured Data: Website and current page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://subultech.top/#website",
+    "name": "Subul Technology — Software, AI &amp; Solar Solutions",
+    "url": "https://subultech.top/",
+    "inLanguage": "en",
+    "publisher": {"@id": "https://subultech.top/#organization"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://subultech.top/#webpage",
+    "url": "https://subultech.top/",
+    "name": "Subul Technology — Software, AI &amp; Solar Solutions",
+    "description": "Subul Technology builds mobile apps, web platforms, AI solutions, business systems, and solar tools. From B2B operations software to solar platforms, we deliver practical digital products.",
+    "inLanguage": "en",
+    "isPartOf": {"@id": "https://subultech.top/#website"}
+  }
+  </script>
+  <!-- JSON-LD Structured Data: Product directory -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Our Products",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Rufoof Inventory Ledger",
+          "description": "A bilingual inventory ledger for materials, stock movements, counts, custom fields, and Google Sheets workbooks.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, Android, iOS",
+          "url": "https://rafuf-2au.pages.dev",
+          "image": "https://subultech.top/assets/rufoof/logo.svg"
+        }
+      },      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Baytraq",
+          "description": "Manage sales, inventory, invoices, customer and supplier accounts and expenses in one app, with LAN or cloud device linking.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, Android, iOS",
+          "url": "https://subultech.top/baytraq/",
+          "image": "https://subultech.top/assets/baytraq/logo.png"
+        }
+      },      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "MEAAD",
+          "description": "A simple app for managing customers, installments, recurring payments, and subscriptions — locally first, with optional cloud features.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, Android, iOS",
+          "url": "https://subultech.top/meaad/",
+          "image": "https://subultech.top/assets/meaad/logo.png"
+        }
+      },      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "MeterLog",
+          "description": "AI-powered multimeter reader with OCR recognition, scheduled capture, and professional Excel/CSV export. Works 100% offline.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, Android, iOS",
+          "url": "https://subultech.top/meterlog/",
+          "image": "https://subultech.top/assets/meter_log/logo.png"
+        }
+      },      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Watt",
+          "description": "Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, Android, iOS",
+          "url": "https://subultech.top/watt/",
+          "image": "https://subultech.top/assets/watt/logo.png"
+        }
+      },      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Madarik",
+          "description": "An engaging educational quiz game to test and expand your knowledge in Islamic history, science, geography, and more.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, Android, iOS",
+          "url": "https://subultech.top/madarik/",
+          "image": "https://subultech.top/assets/madarik/logo.png"
+        }
+      },      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Store Management",
+          "description": "Your all-in-one solution for effortless store management. Track inventory, manage invoices, analyze sales, and stay connected with customers and suppliers.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, Android, iOS",
+          "url": "https://subultech.top/store-management/",
+          "image": "https://subultech.top/assets/store_mangement/logo.png"
+        }
+      },      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "SWEEP",
+          "description": "High-performance Mac cleaning utility for developers. Built with Rust, Tauri v2, and React. Automatically finds and removes hidden development artifacts to reclaim disk space.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, Android, iOS",
+          "url": "https://subultech.top/sweep/",
+          "image": "https://subultech.top/assets/sweep/logo.png"
+        }
+      }    ]
+  }
+  </script>
 </head>
 <body data-lang="en" data-page="home" class="page-home">
   <a href="#main-content" class="skip-link">Skip to content</a>
@@ -334,7 +464,8 @@ aria-current="page">Home</a>
       <p class="section-subtitle">Selected products that show how we turn operational problems into usable software.</p>
     </div>
 
-    <div class="project-filters" role="tablist" aria-label="Project filters">
+    <div class="projects-toolbar">
+      <div class="project-filters" role="tablist" aria-label="Project filters">
       <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
         All
       </button>
@@ -350,43 +481,53 @@ aria-current="page">Home</a>
       <button class="filter-btn" data-filter="solar" role="tab" aria-selected="false">
         Solar
       </button>
+      </div>
+      <p class="projects-scroll-hint" aria-hidden="true">
+        <i class="fas fa-arrows-left-right"></i>
+        Swipe or use the arrows to explore
+      </p>
+      <button type="button" class="projects-autoplay-toggle" id="projects-autoplay-toggle" aria-pressed="false" aria-label="Pause automatic movement">
+        <i class="fas fa-pause" aria-hidden="true"></i>
+      </button>
     </div>
 
-    <div class="projects-grid">
-      <article class="project-card" data-category="solar">
+    <div class="projects-carousel" id="projects-carousel">
+      <button type="button" class="projects-carousel-button projects-carousel-button-prev" id="projects-prev" aria-label="Previous products">
+        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <div class="projects-grid" id="projects-track" tabindex="0" aria-label="Scrollable products list">
+      <article class="project-card" data-category="business ai" data-categories="business ai">
         <div class="project-image">
-          <img src="/assets/watt/logo.png" alt="Watt" width="240" height="160" loading="lazy" decoding="async">
+          <img src="/assets/rufoof/logo.svg" alt="Rufoof Inventory Ledger" width="240" height="160" loading="lazy" decoding="async">
           <span class="project-badge">Featured</span>
         </div>
         <div class="project-body">
-          <h3 class="project-title">Watt</h3>
-          <p class="project-desc">Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.</p>
+          <h3 class="project-title">Rufoof Inventory Ledger</h3>
+          <p class="project-desc">A bilingual inventory ledger for materials, stock movements, counts, custom fields, and Google Sheets workbooks.</p>
           <div class="project-tech">
-            <span class="tech-tag">Flutter</span>
-            <span class="tech-tag">Dart</span>
-            <span class="tech-tag">Firebase</span>
-            <span class="tech-tag">Riverpod</span>
-            <span class="tech-tag">PVGIS</span>
-            <span class="tech-tag">NASA POWER</span>
-            <span class="tech-tag">Open-Meteo</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Google Sheets</span>
+            <span class="tech-tag">SubulTech Identity</span>
           </div>
           <div class="project-links">
-            <a href="/watt/?ref=portfolio"
-               data-goatcounter-click="portfolio-project-watt"
+            <a href="https://rafuf-2au.pages.dev?ref=portfolio"
+               data-goatcounter-click="portfolio-project-rufoof"
                class="project-link"
                aria-label="View project">
               <i class="fas fa-external-link-alt"></i>
             </a>
-            <a href="/watt/download/"
-               data-goatcounter-click="download-watt"
+            <a href="https://github.com/abdulrasol/rufoof"
+               data-goatcounter-click="github-rufoof"
                class="project-link"
-               aria-label="Download">
-              <i class="fas fa-download"></i>
+               target="_blank"
+               rel="noopener"
+               aria-label="GitHub">
+              <i class="fab fa-github"></i>
             </a>
           </div>
         </div>
       </article>
-      <article class="project-card" data-category="business">
+      <article class="project-card" data-category="business" data-categories="business">
         <div class="project-image">
           <img src="/assets/baytraq/logo.png" alt="Baytraq" width="240" height="160" loading="lazy" decoding="async">
           <span class="project-badge">Featured</span>
@@ -424,7 +565,7 @@ aria-current="page">Home</a>
           </div>
         </div>
       </article>
-      <article class="project-card" data-category="business">
+      <article class="project-card" data-category="business" data-categories="business">
         <div class="project-image">
           <img src="/assets/meaad/logo.png" alt="MEAAD" width="240" height="160" loading="lazy" decoding="async">
           <span class="project-badge">Featured</span>
@@ -457,7 +598,7 @@ aria-current="page">Home</a>
           </div>
         </div>
       </article>
-      <article class="project-card" data-category="ai">
+      <article class="project-card" data-category="ai" data-categories="ai">
         <div class="project-image">
           <img src="/assets/meter_log/logo.png" alt="MeterLog" width="240" height="160" loading="lazy" decoding="async">
           <span class="project-badge">Featured</span>
@@ -489,7 +630,40 @@ aria-current="page">Home</a>
           </div>
         </div>
       </article>
-      <article class="project-card project-card-extra hidden" data-category="mobile">
+      <article class="project-card" data-category="solar" data-categories="solar">
+        <div class="project-image">
+          <img src="/assets/watt/logo.png" alt="Watt" width="240" height="160" loading="lazy" decoding="async">
+          <span class="project-badge">Featured</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Watt</h3>
+          <p class="project-desc">Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Dart</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Riverpod</span>
+            <span class="tech-tag">PVGIS</span>
+            <span class="tech-tag">NASA POWER</span>
+            <span class="tech-tag">Open-Meteo</span>
+          </div>
+          <div class="project-links">
+            <a href="/watt/?ref=portfolio"
+               data-goatcounter-click="portfolio-project-watt"
+               class="project-link"
+               aria-label="View project">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="/watt/download/"
+               data-goatcounter-click="download-watt"
+               class="project-link"
+               aria-label="Download">
+              <i class="fas fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="project-card" data-category="mobile" data-categories="mobile">
         <div class="project-image">
           <img src="/assets/madarik/logo.png" alt="Madarik" width="240" height="160" loading="lazy" decoding="async">
         </div>
@@ -528,22 +702,7 @@ aria-current="page">Home</a>
           </div>
         </div>
       </article>
-      <article class="project-card project-card-extra hidden" data-category="business ai">
-        <div class="project-image">
-          <img src="https://rafuf-2au.pages.dev/brand.svg" alt="Rafuf" width="240" height="160" loading="lazy" decoding="async">
-          <span class="project-badge">Web app</span>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Rufoof | رفوف</h3>
-          <p class="project-desc">A focused inventory ledger for materials, movements, stock counts, custom fields, and Google Sheets-based workbooks.</p>
-          <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Google Sheets</span><span class="tech-tag">SubulTech Identity</span></div>
-          <div class="project-links">
-            <a href="https://rafuf-2au.pages.dev" data-goatcounter-click="portfolio-project-rafuf" class="project-link" target="_blank" rel="noopener" aria-label="Open Rafuf"><i class="fas fa-external-link-alt"></i></a>
-            <a href="https://github.com/abdulrasol/rufoof" data-goatcounter-click="github-rufoof" class="project-link" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </article>
-      <article class="project-card project-card-extra hidden" data-category="business">
+      <article class="project-card" data-category="business" data-categories="business">
         <div class="project-image">
           <img src="/assets/store_mangement/logo.png" alt="Store Management" width="240" height="160" loading="lazy" decoding="async">
         </div>
@@ -582,7 +741,7 @@ aria-current="page">Home</a>
           </div>
         </div>
       </article>
-      <article class="project-card project-card-extra hidden" data-category="developer_tools">
+      <article class="project-card" data-category="developer_tools" data-categories="developer_tools">
         <div class="project-image">
           <img src="/assets/sweep/logo.png" alt="SWEEP" width="240" height="160" loading="lazy" decoding="async">
         </div>
@@ -614,7 +773,12 @@ aria-current="page">Home</a>
           </div>
         </div>
       </article>
+      </div>
+      <button type="button" class="projects-carousel-button projects-carousel-button-next" id="projects-next" aria-label="Next products">
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+      </button>
     </div>
+    <div class="projects-carousel-status" id="projects-carousel-status" aria-live="polite"></div>
     <div class="projects-empty" id="projects-empty" hidden>
       <h3>No products match this filter yet.</h3>
       <p>Try another category or contact us if you want a similar system built for your business.</p>
@@ -627,10 +791,6 @@ aria-current="page">Home</a>
         <i class="fas fa-paper-plane"></i>
         Need a similar system?
       </a>
-      <button type="button" class="btn btn-secondary" id="show-all-projects">
-        <i class="fas fa-layer-group"></i>
-        View All Products
-      </button>
     </div>
   </div>
 </section>

@@ -15,8 +15,6 @@
   const STORAGE_KEY_LANG_PREFERENCE = 'portfolio_lang_preference';
   const STORAGE_KEY_LANG_REDIRECTED = 'portfolio_lang_redirected';
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  let projectsExpanded = false;
-
   const ui = {
     html: document.documentElement,
     body: document.body,
@@ -29,7 +27,11 @@
     projectCards: Array.from(document.querySelectorAll('.project-card')),
     filterButtons: Array.from(document.querySelectorAll('.filter-btn')),
     projectsEmpty: document.getElementById('projects-empty'),
-    showAllProjectsButton: document.getElementById('show-all-projects'),
+    projectsTrack: document.getElementById('projects-track'),
+    projectsPrev: document.getElementById('projects-prev'),
+    projectsNext: document.getElementById('projects-next'),
+    projectsStatus: document.getElementById('projects-carousel-status'),
+    projectsAutoplayToggle: document.getElementById('projects-autoplay-toggle'),
     navLinks: Array.from(document.querySelectorAll('.nav-link[data-nav-target]')),
     langSwitches: Array.from(document.querySelectorAll('[data-lang-switch]')),
   };
@@ -229,23 +231,26 @@
 
   function updateProjectFilter(filter) {
     let visibleCount = 0;
-    let hiddenBySummaryCount = 0;
 
     ui.projectCards.forEach((card) => {
-      const matches = filter === 'all' || card.dataset.category === filter;
-      const isSummarizedCard = filter === 'all' && !projectsExpanded && card.classList.contains('project-card-extra');
-      const shouldHide = !matches || isSummarizedCard;
+      const categories = (card.dataset.categories || card.dataset.category || '')
+        .split(/\s+/)
+        .filter(Boolean);
+      const matches = filter === 'all' || categories.includes(filter);
+      const shouldHide = !matches;
       card.classList.toggle('hidden', shouldHide);
-      if (matches && !isSummarizedCard) visibleCount += 1;
-      if (matches && isSummarizedCard) hiddenBySummaryCount += 1;
+      if (matches) visibleCount += 1;
     });
 
     if (ui.projectsEmpty) {
       ui.projectsEmpty.hidden = visibleCount > 0;
     }
 
-    if (ui.showAllProjectsButton) {
-      ui.showAllProjectsButton.hidden = filter !== 'all' || hiddenBySummaryCount === 0;
+    if (ui.projectsStatus) {
+      const total = ui.projectCards.length;
+      ui.projectsStatus.textContent = filter === 'all'
+        ? `${visibleCount} / ${total}`
+        : `${visibleCount}`;
     }
   }
 
@@ -267,15 +272,58 @@
     });
 
     updateProjectFilter('all');
+    requestAnimationFrame(() => { ui.projectsTrack.scrollLeft = 0; });
   }
 
-  function initProjectExpansion() {
-    if (!ui.showAllProjectsButton) return;
+  function initProjectsCarousel() {
+    if (!ui.projectsTrack) return;
 
-    ui.showAllProjectsButton.addEventListener('click', () => {
-      projectsExpanded = true;
-      updateProjectFilter('all');
+    let autoPaused = prefersReducedMotion.matches;
+    let interactionPaused = false;
+    let timer = null;
+    const isRtl = () => document.documentElement.dir === 'rtl';
+    const cards = () => ui.projectCards.filter((card) => !card.classList.contains('hidden'));
+    const moveTo = (card) => card?.scrollIntoView({ behavior: prefersReducedMotion.matches ? 'auto' : 'smooth', block: 'nearest', inline: 'start' });
+    const scroll = (direction) => {
+      const visible = cards();
+      if (!visible.length) return;
+      const current = visible.reduce((best, card, index) => {
+        const distance = Math.abs(card.getBoundingClientRect().left - ui.projectsTrack.getBoundingClientRect().left);
+        return distance < best.distance ? { index, distance } : best;
+      }, { index: 0, distance: Infinity }).index;
+      const next = (current + direction + visible.length) % visible.length;
+      moveTo(visible[next]);
+    };
+
+    const updateToggle = () => {
+      const paused = autoPaused || interactionPaused;
+      ui.projectsAutoplayToggle?.setAttribute('aria-pressed', String(autoPaused));
+      if (ui.projectsAutoplayToggle) {
+        ui.projectsAutoplayToggle.innerHTML = `<i class="fas fa-${autoPaused ? 'play' : 'pause'}" aria-hidden="true"></i>`;
+        ui.projectsAutoplayToggle.setAttribute('aria-label', autoPaused ? (isRtl() ? 'تشغيل الحركة التلقائية' : 'Resume automatic movement') : (isRtl() ? 'إيقاف الحركة التلقائية' : 'Pause automatic movement'));
+      }
+      if (paused || prefersReducedMotion.matches) clearInterval(timer);
+      else if (!timer) timer = setInterval(() => scroll(1), 4800);
+    };
+    const setInteractionPaused = (value) => { interactionPaused = value; updateToggle(); };
+    ui.projectsAutoplayToggle?.addEventListener('click', () => { autoPaused = !autoPaused; updateToggle(); });
+    ui.projectsTrack.closest('.projects-carousel')?.addEventListener('mouseenter', () => setInteractionPaused(true));
+    ui.projectsTrack.closest('.projects-carousel')?.addEventListener('mouseleave', () => setInteractionPaused(false));
+    ui.projectsTrack.closest('.projects-carousel')?.addEventListener('focusin', () => setInteractionPaused(true));
+    ui.projectsTrack.closest('.projects-carousel')?.addEventListener('focusout', (event) => { if (!event.currentTarget.contains(event.relatedTarget)) setInteractionPaused(false); });
+
+    ui.projectsPrev?.addEventListener('click', () => scroll(-1));
+    ui.projectsNext?.addEventListener('click', () => scroll(1));
+    ui.projectsTrack.addEventListener('keydown', (event) => {
+      if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown'].includes(event.key)) return;
+      event.preventDefault();
+      if (event.key === 'PageUp') return scroll(-1);
+      if (event.key === 'PageDown') return scroll(1);
+      const next = isRtl() ? event.key === 'ArrowLeft' : event.key === 'ArrowRight';
+      scroll(next ? 1 : -1);
     });
+    ui.projectsTrack.scrollLeft = 0;
+    updateToggle();
   }
 
   function initSmoothScroll() {
@@ -426,7 +474,7 @@
     initSectionTracking();
     initReveal();
     initProjectFilters();
-    initProjectExpansion();
+    initProjectsCarousel();
     initSmoothScroll();
     initLanguagePreference();
     initContactForm();

@@ -4,6 +4,7 @@
 
 ## Products
 
+- [Rufoof (رفوف)](https://rafuf-2au.pages.dev/): A bilingual inventory ledger for materials, stock movements, stock counts, custom fields, and Google Sheets workbooks.
 - [Watt (واط)](https://subultech.top/watt/): Watt sizes your solar system from your real location using PVGIS and NASA climate data, designs PV layouts, and connects you to a solar store and company quotations.
 - [Baytraq](https://subultech.top/baytraq/): Manage sales, inventory, invoices, customer and supplier accounts and expenses in one app, with LAN or cloud device linking.
 - [MEAAD (ميعاد Meaad)](https://subultech.top/meaad/): A simple app for managing customers, installments, recurring payments, and subscriptions — locally first, with optional cloud features.
